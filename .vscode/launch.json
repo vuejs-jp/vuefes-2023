@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "vuefes-2023",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "vuefes-2023 (profile mode)",
+      "request": "launch",
+      "type": "node",
+      "flutterMode": "profile"
+    }
+  ]
+}

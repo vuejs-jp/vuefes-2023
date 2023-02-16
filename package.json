@@ -1,0 +1,42 @@
+{
+  "name": "vuefes-2023",
+  "version": "1.0.0",
+  "description": "Vue Fes Japan 2023",
+  "author": "jiyuujin <jiyuujinunite@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,vue,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .prettierignore",
+    "lint": "npm run eslint&& npm run htmllint",
+    "lint:fix": "npm run eslint:fix && npm run htmllint:fix",
+    "eslint": "eslint . --ext js,jsx,ts,tsx,vue",
+    "eslint:fix": "eslint . --ext js,jsx,ts,tsx,vue --fix",
+    "htmllint": "markuplint \"./app/**/*.vue\" --config .markuplintrc",
+    "htmllint:fix": "markuplint \"./app/**/*.vue\" --config .markuplintrc --format",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@markuplint/vue-parser": "3.2.0",
+    "@markuplint/vue-spec": "3.2.0",
+    "@types/node": "18.13.0",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
+    "eslint": "8.33.0",
+    "eslint-plugin-vue": "9.9.0",
+    "eslint-plugin-vuejs-accessibility": "2.1.0",
+    "markuplint": "3.2.0",
+    "nuxt": "3.2.0",
+    "prettier": "2.8.4",
+    "typescript": "4.9.5"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@markuplint/ml-core"
+      ]
+    }
+  }
+}

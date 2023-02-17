@@ -14,6 +14,7 @@ specifiers:
   pinceau: 0.15.4
   prettier: 2.8.4
   typescript: 4.9.5
+  vue-gtag: 2.0.2-beta.0
 
 devDependencies:
   '@markuplint/vue-parser': 3.2.0_eslint@8.33.0
@@ -29,6 +30,7 @@ devDependencies:
   pinceau: 0.15.4
   prettier: 2.8.4
   typescript: 4.9.5
+  vue-gtag: 2.0.2-beta.0
 
 packages:
 
@@ -1238,6 +1240,9 @@ packages:
     engines: {node: ^14.16.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     peerDependencies:
       vue: ^3.2.47
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       '@nuxt/kit': 3.2.0_rollup@3.15.0
       '@rollup/plugin-replace': 5.0.2_rollup@3.15.0
@@ -1651,6 +1656,9 @@ packages:
     resolution: {integrity: sha512-v6PdiDYKuRXZYFPB11QvoiFjP7Pw+U59MmA0V4yvRZQSz9KAx4KUefgxi3f6JnLeyyUX1xPEZ1Zv6z6Pm8nyOg==}
     peerDependencies:
       vue: '>=2.7 || >=3'
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       '@unhead/schema': 1.0.22
       '@unhead/shared': 1.0.22
@@ -1690,6 +1698,9 @@ packages:
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.0.0
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       '@babel/core': 7.20.12
       '@babel/plugin-transform-typescript': 7.20.13_@babel+core@7.20.12
@@ -1706,6 +1717,9 @@ packages:
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       vite: 4.1.1_@types+node@18.13.0
       vue: 3.2.47
@@ -1835,6 +1849,9 @@ packages:
     resolution: {integrity: sha512-dN9gc1i8EvmP9RCzvneONXsKfBRgqFeFZLurmHOveL7oH6HiFXJw5OGu294n1nHc/HMgTy6LulU/tv5/A7f/LA==}
     peerDependencies:
       vue: 3.2.47
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       '@vue/compiler-ssr': 3.2.47
       '@vue/shared': 3.2.47
@@ -1849,6 +1866,9 @@ packages:
     resolution: {integrity: sha512-Dg51HTkGNS3XCDk5ZMKrF+zhrd0iDLhl7YPpsiSUGR8MFQrulu62BhTOh6gDXic/xNNPB3PLstKtVl49S7CbEQ==}
     peerDependencies:
       vue: '>=2.7 || >=3'
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       '@unhead/dom': 1.0.22
       '@unhead/schema': 1.0.22
@@ -7182,10 +7202,22 @@ packages:
       - supports-color
     dev: true
 
+  /vue-gtag/2.0.2-beta.0:
+    resolution: {integrity: sha512-LUu+vca26MtdCDlXDwNrDpJTt1/WFW/YV+za2GD80u6wTQr0X5ES5XdEZprD+AsbvujbTqGIxDv5ezmivDn98g==}
+    peerDependencies:
+      vue: ^3.0.0
+    peerDependenciesMeta:
+      vue:
+        optional: true
+    dev: true
+
   /vue-router/4.1.6_vue@3.2.47:
     resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
     peerDependencies:
       vue: ^3.2.0
+    peerDependenciesMeta:
+      vue:
+        optional: true
     dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.2.47

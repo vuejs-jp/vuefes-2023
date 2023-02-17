@@ -31,13 +31,15 @@
     "nuxt": "3.2.0",
     "pinceau": "0.15.4",
     "prettier": "2.8.4",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "vue-gtag": "2.0.2-beta.0"
   },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "@markuplint/ml-core",
-        "postcss"
+        "postcss",
+        "vue"
       ]
     }
   }

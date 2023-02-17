@@ -5,4 +5,10 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/',
   },
   css: ['~/assets/main.css'],
+  modules: ['pinceau/nuxt'],
+  pinceau: {
+    configFileName: 'tokens.config',
+    debug: false,
+    runtime: true,
+  },
 })

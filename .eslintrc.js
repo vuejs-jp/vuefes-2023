@@ -17,5 +17,6 @@ module.exports = {
         ignores: ['index', 'default', 'error'],
       },
     ],
+    'vue/max-attributes-per-line': 'off',
   },
 }

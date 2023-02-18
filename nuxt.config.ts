@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     debug: false,
     runtime: true,
   },
+  typescript: {
+    strict: true,
+  },
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_GTAG_ID,

@@ -6,5 +6,19 @@
   "specs": {
     ".vue$": "@markuplint/vue-spec"
   },
+  "rules": {
+    "invalid-attr": {
+      "option": {
+        "attrs": {
+          "placeholder": {
+            "disallowed": false
+          },
+          "required": {
+            "disallowed": false
+          }
+        }
+      }
+    }
+  },
   "excludeFiles": []
 }

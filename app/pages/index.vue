@@ -1,3 +1,6 @@
 <template>
-  <main>Landing Top</main>
+  <main>
+    Landing Top
+    <FormPageSection />
+  </main>
 </template>

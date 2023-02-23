@@ -17,6 +17,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_GTAG_ID,
+      newtSpaceUid: process.env.NUXT_NEWT_SPACE_UID,
+      newtFormUid: process.env.NUXT_NEWT_FORM_UID,
     },
   },
 })

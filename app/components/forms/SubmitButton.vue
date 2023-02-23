@@ -15,13 +15,9 @@ const handleClick = () => {
 </script>
 
 <template>
-  <div class="">
-    <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">
-      <button type="submit" class="form-button" @click="handleClick">
-        {{ titleLabel }}
-      </button>
-    </div>
-  </div>
+  <button type="submit" class="form-button" @click="handleClick">
+    {{ titleLabel }}
+  </button>
 </template>
 
 <style lang="ts" scoped>

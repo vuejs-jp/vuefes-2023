@@ -1,4 +1,8 @@
 <script setup lang="ts">
+interface TextareaFieldEmit {
+  (e: 'input', value: string): void
+  (e: 'blur', value: string): void
+}
 const props = defineProps({
   name: {
     type: String,
@@ -25,6 +29,19 @@ const props = defineProps({
     default: false,
   },
 })
+const emit = defineEmits<TextareaFieldEmit>()
+const handleInput = (e: Event) => {
+  if (!(e.target instanceof HTMLTextAreaElement)) {
+    return
+  }
+  emit('input', e.target.value)
+}
+const handleFocusOut = (e: Event) => {
+  if (!(e.target instanceof HTMLTextAreaElement)) {
+    return
+  }
+  emit('blur', e.target.value)
+}
 </script>
 
 <template>
@@ -37,6 +54,8 @@ const props = defineProps({
       :rows="rows"
       :placeholder="placeholder"
       :required="required"
+      @input="handleInput"
+      @blur="handleFocusOut"
     />
   </label>
 </template>

@@ -6,8 +6,9 @@ export function useForm() {
   const config = useRuntimeConfig()
 
   const endpoint = `https://${config.newtSpaceUid}.form.newt.so/v1/${config.newtFormUid}`
+  const isSent = ref(false)
 
-  const onSubmit = handleSubmit(async (values) => {
+  const onSubmit = handleSubmit(async function (values) {
     const formData = new FormData()
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value)
@@ -19,7 +20,9 @@ export function useForm() {
         Accept: 'application/json',
       },
     })
+      .then(() => (isSent.value = true))
+      .catch(console.error)
   })
 
-  return { name, email, detail, onSubmit }
+  return { name, email, detail, isSent, onSubmit }
 }

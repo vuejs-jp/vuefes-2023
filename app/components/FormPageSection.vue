@@ -5,7 +5,7 @@ import SubmitButton from '~/components/forms/SubmitButton.vue'
 
 import { useForm } from '~/composables/useForm'
 
-const { name, email, detail, onSubmit } = useForm()
+const { name, email, detail, isSent, onSubmit } = useForm()
 
 const updateName = (value: string) => {
   name.value = value
@@ -49,6 +49,7 @@ const updateDetail = (value: string) => {
         @blue="updateDetail"
       />
       <SubmitButton title-label="送信" />
+      <div v-if="isSent">メッセージ送信に成功しました。</div>
     </form>
   </section>
 </template>

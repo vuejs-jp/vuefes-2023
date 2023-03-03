@@ -1,3 +1,5 @@
+import svgLoader from 'vite-svg-loader'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'app/',
@@ -10,6 +12,13 @@ export default defineNuxtConfig({
     configFileName: 'tokens.config',
     debug: false,
     runtime: true,
+  },
+  vite: {
+    plugins: [
+      svgLoader({
+        svgo: false,
+      }),
+    ],
   },
   typescript: {
     strict: true,

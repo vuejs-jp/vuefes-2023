@@ -1,5 +1,6 @@
 <template>
   <main>
+    <NavPageSection />
     <TopPageSection />
     <FormPageSection />
     <FooterPageSection />

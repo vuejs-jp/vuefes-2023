@@ -1,6 +1,6 @@
 <template>
   <main>
-    Landing Top
+    <TopPageSection />
     <FormPageSection />
   </main>
 </template>

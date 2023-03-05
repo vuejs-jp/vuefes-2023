@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   srcDir: 'app/',
   app: {
     buildAssetsDir: '/_nuxt/',
+    head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
+      ],
+    },
   },
   css: ['~/assets/main.css'],
   modules: ['pinceau/nuxt'],

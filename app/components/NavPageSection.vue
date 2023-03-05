@@ -6,7 +6,7 @@ import { navLinks } from '~/utils/constants'
 
 <template>
   <nav>
-    <div class="root">
+    <div class="nav-root">
       <a href="/" aria-label="top">
         <VueFesLogo />
       </a>
@@ -27,7 +27,7 @@ css({
   'nav': {
     background: '#35495E', // {color.vue-blue}
   },
-  '.root': {
+  '.nav-root': {
     padding: '24px 32px',
     display: 'flex',
     alignItems: 'center',

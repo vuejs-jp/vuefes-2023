@@ -45,7 +45,7 @@ const handleFocusOut = (e: Event) => {
 </script>
 
 <template>
-  <label :for="idLabel" class="root">
+  <label :for="idLabel" class="textarea-root">
     {{ titleLabel }}
     <textarea
       :id="idLabel"
@@ -62,7 +62,7 @@ const handleFocusOut = (e: Event) => {
 
 <style lang="ts" scoped>
 css({
-  '.root': {
+  '.textarea-root': {
     //
   },
   '.form-textarea': {

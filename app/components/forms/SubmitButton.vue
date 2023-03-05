@@ -22,9 +22,6 @@ const handleClick = () => {
 
 <style lang="ts" scoped>
 css({
-  '.root': {
-    //
-  },
   '.form-button': {
     //
   },

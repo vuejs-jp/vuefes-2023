@@ -45,7 +45,7 @@ function handleFocusOut(e: Event) {
 </script>
 
 <template>
-  <label :for="idLabel" class="root">
+  <label :for="idLabel" class="input-root">
     {{ titleLabel }}
     <input
       :id="idLabel"
@@ -62,7 +62,7 @@ function handleFocusOut(e: Event) {
 
 <style lang="ts" scoped>
 css({
-  '.root': {
+  '.input-root': {
     //
   },
   '.form-input': {

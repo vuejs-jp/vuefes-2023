@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css'],
-  modules: ['pinceau/nuxt'],
+  modules: ['pinceau/nuxt', '@nuxtjs/device'],
   pinceau: {
     configFileName: 'tokens.config',
     debug: false,

@@ -23,10 +23,7 @@ export const createOg = (oGProp: OGProp): Meta[] => {
 
 /**
  * OG情報を生成
- * @param title タイトル
- * @param description 説明文
- * @param url URL
- * @param image 画像
+ * @param oGProp
  * @returns
  */
 export const generalOg = (oGProp: OGProp): Meta[] => {
@@ -77,9 +74,7 @@ export const generalOg = (oGProp: OGProp): Meta[] => {
 
 /**
  * TwitterOG情報を生成
- * @param title タイトル
- * @param description 説明文
- * @param image 画像
+ * @param oGProp
  * @returns
  */
 export const twitterOg = (oGProp: OGProp): Meta[] => {

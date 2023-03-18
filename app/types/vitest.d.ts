@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
 
-interface ImportMetaEnv {
+interface ImportMetaVitest {
   readonly it: Function
   readonly expect: Function
 }
 
 interface ImportMeta {
-  readonly vitest: ImportMetaEnv
+  readonly vitest: ImportMetaVitest
 }

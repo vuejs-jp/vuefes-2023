@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
+    "test": "vitest",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,vue,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .prettierignore",
@@ -36,6 +37,7 @@
     "typescript": "4.9.5",
     "vee-validate": "4.7.4",
     "vite-svg-loader": "4.0.0",
+    "vitest": "^0.29.3",
     "vue-gtag": "2.0.2-beta.0",
     "vue-tsc": "1.2.0"
   },

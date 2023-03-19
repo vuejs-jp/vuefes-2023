@@ -17,7 +17,7 @@ export type Meta = {
  * @param oGProp
  * @returns
  */
-export const createOg = (oGProp: OGProp): Meta[] => {
+export const createOg = (oGProp: OGProp = {}): Meta[] => {
   return [...generalOg(oGProp), ...twitterOg(oGProp)]
 }
 
@@ -26,7 +26,7 @@ export const createOg = (oGProp: OGProp): Meta[] => {
  * @param oGProp
  * @returns
  */
-export const generalOg = (oGProp: OGProp): Meta[] => {
+export const generalOg = (oGProp: OGProp = {}): Meta[] => {
   const { description, title, url, image } = oGProp
   return [
     {
@@ -77,7 +77,7 @@ export const generalOg = (oGProp: OGProp): Meta[] => {
  * @param oGProp
  * @returns
  */
-export const twitterOg = (oGProp: OGProp): Meta[] => {
+export const twitterOg = (oGProp: OGProp = {}): Meta[] => {
   const { description, title, image } = oGProp
   return [
     {

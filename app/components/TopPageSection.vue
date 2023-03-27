@@ -9,6 +9,7 @@ import MdBg from '@/assets/top/md/wave.svg'
 import SpBlock from '@/assets/top/sp/block.svg'
 import SpTitle from '@/assets/top/sp/title.svg'
 import SpBg from '@/assets/top/sp/wave.svg'
+import TwitterButton from '~/components/social/TwitterButton.vue'
 
 type Device = 'pc' | 'md' | 'sp'
 type ImageList = {
@@ -76,6 +77,9 @@ const components = computed<ImageList>(() => getImageListByDevice(device.value))
         <component :is="components.title" class="title" />
       </div>
     </div>
+    <div class="twitter-wrapper">
+      <TwitterButton />
+    </div>
   </div>
 </template>
 
@@ -112,6 +116,15 @@ css({
     width: '80%',
     height: 'auto',
   },
+  '.twitter-wrapper': {
+    bottom: '80px',
+    right: 0,
+    left: 0,
+    width: '100%',
+    padding: '0 120px',
+    position: 'absolute',
+    zIndex: 3,
+  },
   '@media(min-width: 1024px)': {
     '.title-wrapper': {
       left: '45%',
@@ -120,7 +133,7 @@ css({
   '@media(min-width: 768px) and (max-width: 1023px)': {
     '.title': {
       width: '90vw',
-    }
+    },
   },
   '@media(max-width: 767px)': {
     '.title': {
@@ -131,6 +144,10 @@ css({
     },
     '.components': {
       height: '100%',
+    },
+    '.twitter-wrapper': {
+      bottom: '80px',
+      padding: '0 30px',
     },
   },
 })

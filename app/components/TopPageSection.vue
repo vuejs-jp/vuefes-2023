@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import PcBlock from '@/assets/top/pc/block.svg'
 import PcTitle from '@/assets/top/pc/title.svg'
-import PcWave from '@/assets/top/pc/wave.svg'
+import PcBg from '@/assets/top/pc/wave.svg'
 import MdBlock from '@/assets/top/md/block.svg'
 import MdTitle from '@/assets/top/md/title.svg'
 import MdBg from '@/assets/top/md/wave.svg'
@@ -12,7 +12,7 @@ import SpBg from '@/assets/top/sp/wave.svg'
 
 type Device = 'pc' | 'md' | 'sp'
 type ImageList = {
-  wave: typeof PcWave | typeof MdBg | typeof SpBg
+  wave: typeof PcBg | typeof MdBg | typeof SpBg
   block: typeof PcBlock | typeof MdBlock | typeof SpBlock
   title: typeof PcTitle | typeof MdTitle | typeof SpTitle
 }
@@ -22,7 +22,7 @@ const device = ref<Device>('pc')
 const getImageListByDevice = (device: Device): ImageList => {
   const imageListMap: Record<Device, ImageList> = {
     pc: {
-      wave: PcWave,
+      wave: PcBg,
       block: PcBlock,
       title: PcTitle,
     },

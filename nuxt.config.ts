@@ -1,10 +1,12 @@
 import svgLoader from 'vite-svg-loader'
+import { isProd } from './app/utils/environment.constants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'app/',
   app: {
     buildAssetsDir: '/_nuxt/',
+    baseURL: isProd ? '/2023/' : '/',
     head: {
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },

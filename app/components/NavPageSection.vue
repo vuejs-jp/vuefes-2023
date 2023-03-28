@@ -130,6 +130,12 @@ css({
       '&:hover': {
         color: '#42B983', // {color.vue-green}
       },
+      'svg': {
+        fill: '#fff',
+        '&:hover': {
+          fill: '#42B983', // {color.vue-green}
+        },
+      },
     },
   },
 })

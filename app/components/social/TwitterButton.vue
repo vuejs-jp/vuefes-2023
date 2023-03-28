@@ -35,6 +35,9 @@ css({
       gap: '16px',
       whiteSpace: 'nowrap',
       fontWeight: 700,
+      'svg': {
+        fill: '#fff',
+      },
       'span': {
         color: '#fff',
       },

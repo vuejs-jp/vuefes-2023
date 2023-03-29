@@ -14,11 +14,15 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css'],
-  modules: ['pinceau/nuxt', '@nuxtjs/device'],
+  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device'],
   pinceau: {
     configFileName: 'tokens.config',
     debug: false,
     runtime: true,
+  },
+  devtools: {
+    enabled: true,
+    vscode: {},
   },
   vite: {
     plugins: [

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import VueFesLogo from '~/assets/logo/header_logo.svg'
+import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MenuLogo from '~/assets/logo/menu_logo.svg'
 import CrossLogo from '~/assets/logo/cross_logo.svg'

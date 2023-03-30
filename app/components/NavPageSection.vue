@@ -98,7 +98,7 @@ css({
     height: '100vh',
     zIndex: 10,
     background: '{color.vue.blue}',
-    color: '#fff',
+    color: '{color.white}',
     'ul': {
       paddingTop: '15vh',
       margin: '0 3vw',
@@ -126,12 +126,12 @@ css({
     display: 'flex',
     columnGap: '40px',
     'a': {
-      color: '#fff',
+      color: '{color.white}',
       '&:hover': {
         color: '{color.vue.green}',
       },
       'svg': {
-        fill: '#fff',
+        fill: '{color.white}',
         '&:hover': {
           fill: '{color.vue.green}',
         },

@@ -87,7 +87,7 @@ const components = computed<ImageList>(() => getImageListByDevice(device.value))
 css({
   '.top-content': {
     position: 'relative',
-    backgroundColor: '#35495E',
+    backgroundColor: '{color.vue.blue}',
   },
   '.components': {
     width: '100%',

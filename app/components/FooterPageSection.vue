@@ -13,13 +13,12 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 <style lang="ts" scoped>
 css({
   '.footer-section': {
-    position: 'relative',
-    background: '{color.vue-blue}',
     padding: '80px 32px',
-    color: '{color.white}',
-    textAlign: 'center',
+    background: '{color.vue-blue}',
     backgroundImage: 'url("~/assets/footer/background.svg")',
     backgroundPosition: '50% 100%',
+    textAlign: 'center',
+    color: '{color.white}',
   },
   '.footer-vuefes-logo': {
     margin: '0 auto 32px'

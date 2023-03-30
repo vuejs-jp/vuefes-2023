@@ -21,7 +21,9 @@ css({
     color: '{color.white}',
   },
   '.footer-vuefes-logo': {
-    margin: '0 auto 32px'
+    margin: '0 auto 32px',
+    width: '246px',
+    height: '44px',
   }
 })
 </style>

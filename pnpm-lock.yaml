@@ -11,6 +11,7 @@ specifiers:
   eslint: 8.33.0
   eslint-plugin-vue: 9.9.0
   eslint-plugin-vuejs-accessibility: 2.1.0
+  husky: 8.0.3
   markuplint: 3.2.0
   nuxt: 3.2.3
   pinceau: 0.18.0
@@ -33,6 +34,7 @@ devDependencies:
   eslint: 8.33.0
   eslint-plugin-vue: 9.9.0_eslint@8.33.0
   eslint-plugin-vuejs-accessibility: 2.1.0_eslint@8.33.0
+  husky: 8.0.3
   markuplint: 3.2.0
   nuxt: 3.2.3_s5jcz4qwee3smbpb5ui73hd3pq
   pinceau: 0.18.0
@@ -5040,6 +5042,12 @@ packages:
     resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
     dependencies:
       ms: 2.1.3
+    dev: true
+
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.4.24:

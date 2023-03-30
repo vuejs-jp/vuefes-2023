@@ -11,12 +11,28 @@ module.exports = {
     semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'keyword-spacing': 'error',
+    'vue/html-closing-bracket-newline': 'off',
+    'vue/html-indent': 'off',
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always',
+          normal: 'always',
+          component: 'always',
+        },
+        svg: 'always',
+        math: 'always',
+      },
+    ],
+    'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': [
       'error',
       {
         ignores: ['index', 'default', 'error'],
       },
     ],
-    'vue/max-attributes-per-line': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
   },
 }

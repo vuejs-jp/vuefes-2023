@@ -8,16 +8,16 @@ export default defineTheme({
     desktop: '(min-width: 1280px)',
   },
   color: {
-    'white': '#FFF',
-    'vue': {
-      'blue': '#35495E',
-      'green': '#42B983',
+    white: '#FFF',
+    vue: {
+      blue: '#35495E',
+      green: '#42B983',
     },
-    'typescript': {
-      'blue': '#3178C6',
+    typescript: {
+      blue: '#3178C6',
     },
   },
   fontSize: {
-    'base': '0.0625rem',
+    base: '0.0625rem',
   },
 })

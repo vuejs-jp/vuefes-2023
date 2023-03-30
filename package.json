@@ -5,6 +5,7 @@
   "author": "jiyuujin <jiyuujinunite@gmail.com>",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "nuxt dev",
     "build": "nuxt build",
     "test": "vitest",
@@ -33,6 +34,7 @@
     "eslint": "8.33.0",
     "eslint-plugin-vue": "9.9.0",
     "eslint-plugin-vuejs-accessibility": "2.1.0",
+    "husky": "8.0.3",
     "markuplint": "3.2.0",
     "nuxt": "3.2.3",
     "pinceau": "0.18.0",

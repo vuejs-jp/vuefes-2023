@@ -27,7 +27,7 @@ css({
     '.title': {
       whiteSpace: 'nowrap',
       fontWeight: 700,
-      color: '#fff',
+      color: '{color.white}',
     },
     '.explain': {
       display: 'flex',
@@ -36,10 +36,10 @@ css({
       whiteSpace: 'nowrap',
       fontWeight: 700,
       'svg': {
-        fill: '#fff',
+        fill: '{color.white}',
       },
       'span': {
-        color: '#fff',
+        color: '{color.white}',
       },
     },
   },

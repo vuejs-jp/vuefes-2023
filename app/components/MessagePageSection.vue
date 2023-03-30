@@ -1,14 +1,12 @@
-<script setup lang="ts"></script>
-
 <template>
   <section class="message">
     <div class="message-body">
       <h2 id="message" class="title">
-        <span class="mainTitle">
+        <span class="title-main">
           Message
         </span>
         <br>
-        <span class="subTitle">
+        <span class="title-sub">
           想い
         </span>
       </h2>
@@ -69,12 +67,12 @@ css({
     textAlign: 'center',
     lineHeight: '1',
   },
-  '.mainTitle': {
+  '.title-main': {
     fontSize: 'calc(40*{fontSize.base})',
     fontWeight: 'bold',
     lineHeight: '1',
   },
-  '.subTitle': {
+  '.title-sub': {
     textAlign: 'center',
     fontSize: 'calc(20*{fontSize.base})',
     lineHeight: '1',
@@ -85,7 +83,7 @@ css({
     placeItems: 'center',
     columnGap: '16px',
     
-    '&::before,&::after': {
+    '&::before, &::after': {
       content: '""',
       display: 'inline-block',
       background: '{color.white}',

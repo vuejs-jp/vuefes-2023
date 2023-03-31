@@ -1,4 +1,5 @@
 import svgLoader from 'vite-svg-loader'
+import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -8,6 +9,7 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/',
     baseURL: isProd ? '/2023/' : '/',
     head: {
+      title: conferenceTitle,
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
       ],

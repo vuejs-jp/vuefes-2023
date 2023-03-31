@@ -26,7 +26,7 @@ useHead({
   <main>
     <NavPageSection />
     <div class="coc-root">
-      <PageTitle id="coc" title="Code of Conduct" yamato-title="行動規範" />
+      <PageTitle id="coc" color="vue.blue" title="Code of Conduct" yamato-title="行動規範" />
       <div class="explain">
         <p>
           Vue Fes Japan 2023

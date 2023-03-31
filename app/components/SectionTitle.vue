@@ -22,11 +22,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <h1 :id="id" class="title">
+  <h2 :id="id" class="title">
     <span class="title-main">{{ title }}</span>
     <br />
     <span class="title-sub">{{ yamatoTitle }}</span>
-  </h1>
+  </h2>
 </template>
 
 <style lang="ts" scoped>

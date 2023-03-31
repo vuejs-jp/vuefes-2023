@@ -8,6 +8,8 @@ export const ogDescription =
 export const ogCoCDescription =
   'Vue Fes Japan 2023 のすべての参加者、スピーカー、スポンサー、スタッフは、オープンかつ友好的な環境を育むため、以下の行動規範に同意していただく必要があります。'
 
+export const ogPrivacyDescription = 'Vue Fes Japan 2023 のプライバシーポリシーです。'
+
 export const linkUrl = 'https://vuefes.jp/2023/'
 
 export const vuefesTwitterID = '@vuefes'

@@ -1,4 +1,7 @@
-export const navLinks = [{ text: 'Contact', link: '/#contact' }]
+export const navLinks = [
+  { text: 'Message', link: '#message' },
+  { text: 'Contact', link: '#contact' },
+]
 
 export const conferenceTitle = 'Vue Fes Japan 2023'
 

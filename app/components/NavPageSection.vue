@@ -41,7 +41,9 @@ const toggleMenu = () => (showMenu.value = !showMenu.value)
           <div v-if="showMenu" class="mobile-menu">
             <ul v-for="l in navLinks" :key="l.link">
               <li>
-                <a :href="l.link" @click="toggleMenu">{{ l.text }}</a>
+                <nuxt-link :to="`/${l.link}`" @click="toggleMenu">
+                  {{ l.text }}
+                </nuxt-link>
               </li>
               <li>
                 <a

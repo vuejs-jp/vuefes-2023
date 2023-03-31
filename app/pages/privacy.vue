@@ -26,7 +26,12 @@ useHead({
   <main>
     <NavPageSection />
     <div class="privacy-root">
-      <PageTitle id="privacy" title="Privacy Policy" yamato-title="プライバシーポリシー" />
+      <PageTitle
+        id="privacy"
+        color="vue.blue"
+        title="Privacy Policy"
+        yamato-title="プライバシーポリシー"
+      />
       <div class="explain">
         <p>
           Vue Fes Japan 2023（以下、

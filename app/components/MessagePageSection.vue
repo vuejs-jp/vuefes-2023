@@ -1,11 +1,11 @@
+<script setup lang="ts">
+import SectionTitle from '~/components/SectionTitle.vue'
+</script>
+
 <template>
   <section class="message">
     <div class="message-body">
-      <h2 id="message" class="title">
-        <span class="title-main">Message</span>
-        <br />
-        <span class="title-sub">想い</span>
-      </h2>
+      <SectionTitle id="message" color="white" title="Message" yamato-title="想い" />
       <div class="text">
         <p>
           Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。

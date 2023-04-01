@@ -2,6 +2,7 @@
 import NavPageSection from '~/components/NavPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import PageTitle from '~/components/PageTitle.vue'
+import LinkButton from '~/components/forms/LinkButton.vue'
 import { conferenceTitle, linkUrl, ogCoCDescription } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
@@ -74,6 +75,10 @@ useHead({
           >よりお願いいたします。
         </p>
       </div>
+
+      <div class="back">
+        <LinkButton url="/">トップに戻る</LinkButton>
+      </div>
     </div>
     <FooterPageSection />
   </main>
@@ -109,6 +114,11 @@ css({
   },
   '.form-link': {
     color: '{color.vue.green}',
+  },
+  '.back': {
+    display: 'grid',
+    placeItems: 'center',
+    paddingTop: '52px',
   },
 })
 </style>

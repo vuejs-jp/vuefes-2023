@@ -2,6 +2,7 @@
 import NavPageSection from '~/components/NavPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import PageTitle from '~/components/PageTitle.vue'
+import LinkButton from '~/components/forms/LinkButton.vue'
 import { conferenceTitle, linkUrl, ogPrivacyDescription } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
@@ -230,6 +231,10 @@ useHead({
           <li class="disc">2023年4月13日 制定・施行</li>
         </ul>
       </div>
+
+      <div class="back">
+        <LinkButton url="/">トップに戻る</LinkButton>
+      </div>
     </div>
     <FooterPageSection />
   </main>
@@ -286,6 +291,11 @@ css({
   },
   '.policy-link, .email-link': {
     color: '{color.vue.green}',
+  },
+  '.back': {
+    display: 'grid',
+    placeItems: 'center',
+    paddingTop: '52px',
   },
 })
 </style>

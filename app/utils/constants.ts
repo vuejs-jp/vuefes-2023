@@ -21,3 +21,26 @@ export const copyrightDetail =
   '© 2018-2023 Vue.js Japan User Group some rights reserved.' +
   '<br>' +
   'Vue.js artworks by Evan You is licensed under a Creative Commons Attribution 4.0 International License .'
+
+export const networkLinks = [
+  {
+    value: 'twitter',
+    title: 'Twitter',
+    url: 'https://twitter.com/vuefes',
+  },
+  {
+    value: 'note',
+    title: 'note',
+    url: 'https://note.com/vuejs_jp',
+  },
+  {
+    value: 'youtube',
+    title: 'YouTube',
+    url: 'https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA',
+  },
+  {
+    value: 'github',
+    title: 'GitHub',
+    url: 'https://github.com/vuejs-jp',
+  },
+]

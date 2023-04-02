@@ -9,6 +9,7 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "test": "vitest",
+    "cypress": "cypress --env open",
     "generate:transpile": "nuxt generate",
     "generate:post-transpile": "node scripts/renameDir.js",
     "generate": "npm run generate:transpile && npm run generate:post-transpile",

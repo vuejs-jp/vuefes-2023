@@ -15,12 +15,13 @@ css({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '8px',
+    gap: '36px',
     'a': {
       fontSize: '18px',
     },
   },
   '@media(max-width: 1023px)': {
+    gap: '24px',
     '.past-root': {
       'a': {
         fontSize: '14px',

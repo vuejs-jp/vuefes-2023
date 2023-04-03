@@ -44,3 +44,26 @@ export const networkLinks = [
     url: 'https://github.com/vuejs-jp',
   },
 ]
+
+export const websiteLinks = [
+  {
+    value: 'vuefes2022',
+    title: 'Vue Fes Japan 2022',
+    url: 'https://vuefes.jp/2022',
+  },
+  {
+    value: 'vuefes2020',
+    title: 'Vue Fes Japan 2020',
+    url: 'https://vuefes.jp/2020',
+  },
+  {
+    value: 'vuefes2019',
+    title: 'Vue Fes Japan 2019',
+    url: 'https://vuefes.jp/2019',
+  },
+  {
+    value: 'vuefes2018',
+    title: 'Vue Fes Japan 2018',
+    url: 'https://vuefes.jp/2018',
+  },
+]

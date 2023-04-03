@@ -19,7 +19,7 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
           <PrivacyPolicyAndCoc />
         </div>
       </div>
-      <div class="footer-copyright">
+      <div v-if="!$device.isMobile" class="footer-copyright">
         <CopyrightText />
       </div>
     </div>

@@ -110,8 +110,9 @@ css({
       textAlign: 'center',
       'li': {
         padding: '1.5rem 0',
+        marginLeft: '40px',
         display: 'grid',
-        placeItems: 'center',
+        justifyContent: 'flex-start',
         'a': {
           padding: '6px',
           fontWeight: 700,

@@ -4,29 +4,22 @@ import { websiteLinks } from '~/utils/constants'
 </script>
 
 <template>
-  <div class="past-root">
+  <span class="past-root-mobile">
     <TextButton v-for="website in websiteLinks" :key="website.value" :url="website.url">
-      {{ website.title }}
+      {{ website.id }}
     </TextButton>
-  </div>
+  </span>
 </template>
 
 <style lang="ts" scoped>
 css({
-  '.past-root': {
+  '.past-root-mobile': {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    columnGap: '60px',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    gap: '24px',
     'a': {
-      fontSize: '18px',
-    },
-  },
-  '@media(max-width: 1023px)': {
-    '.past-root': {
-      'a': {
-        fontSize: '14px',
-      },
+      fontSize: '20px',
     },
   },
 })

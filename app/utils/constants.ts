@@ -47,21 +47,25 @@ export const networkLinks = [
 
 export const websiteLinks = [
   {
+    id: 2022,
     value: 'vuefes2022',
     title: 'Vue Fes Japan 2022',
     url: 'https://vuefes.jp/2022',
   },
   {
+    id: 2020,
     value: 'vuefes2020',
     title: 'Vue Fes Japan 2020',
     url: 'https://vuefes.jp/2020',
   },
   {
+    id: 2019,
     value: 'vuefes2019',
     title: 'Vue Fes Japan 2019',
     url: 'https://vuefes.jp/2019',
   },
   {
+    id: 2018,
     value: 'vuefes2018',
     title: 'Vue Fes Japan 2018',
     url: 'https://vuefes.jp/2018',

@@ -17,11 +17,6 @@ export const linkUrl = 'https://vuefes.jp/2023/'
 
 export const vuefesTwitterID = '@vuefes'
 
-export const copyrightDetail =
-  '© 2018-2023 Vue.js Japan User Group some rights reserved.' +
-  '<br>' +
-  'Vue.js artworks by Evan You is licensed under a Creative Commons Attribution 4.0 International License .'
-
 export const networkLinks = [
   {
     value: 'twitter',

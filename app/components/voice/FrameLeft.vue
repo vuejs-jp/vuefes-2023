@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VoiceL from '~/assets/voice/frame-left-l.svg'
-import VoiceS from '~/assets/voice/frame-left-s.svg'
+import VoiceL from '~/assets/voice/frame-l-left.svg'
+import VoiceS from '~/assets/voice/frame-s.svg'
 </script>
 
 <template>

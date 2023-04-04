@@ -3,6 +3,9 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MenuLogo from '~/assets/logo/menu_logo.svg'
 import CrossLogo from '~/assets/logo/cross_logo.svg'
+import ContactLinks from '~/components/footer/ContactLinks.vue'
+import PastEventsMobile from '~/components/footer/PastEventsMobile.vue'
+import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
 import { useNav } from '~/composables/useNav'
 import { navLinks } from '~/utils/constants'
 
@@ -39,23 +42,23 @@ const toggleMenu = () => (showMenu.value = !showMenu.value)
       <div v-if="$device.isMobile">
         <transition name="fade">
           <div v-if="showMenu" class="mobile-menu">
-            <ul v-for="l in navLinks" :key="l.link">
-              <li>
+            <ul>
+              <li v-for="l in navLinks" :key="l.link">
                 <nuxt-link :to="`/${l.link}`" @click="toggleMenu">
                   {{ l.text }}
                 </nuxt-link>
               </li>
-              <li>
-                <a
-                  href="https://twitter.com/vuefes"
-                  aria-label="twitter"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <TwitterLogo />
-                </a>
+              <li class="other-links">
+                Vue Fes Japan
+                <PastEventsMobile />
+              </li>
+              <li class="other-links">
+                <PrivacyPolicyAndCoc />
               </li>
             </ul>
+            <div class="mobile-menu-contacts">
+              <ContactLinks />
+            </div>
           </div>
         </transition>
         <button v-if="showMenu" class="close" @click="toggleMenu">
@@ -107,8 +110,9 @@ css({
       textAlign: 'center',
       'li': {
         padding: '1.5rem 0',
+        marginLeft: '40px',
         display: 'grid',
-        placeItems: 'center',
+        justifyContent: 'flex-start',
         'a': {
           padding: '6px',
           fontWeight: 700,
@@ -116,7 +120,20 @@ css({
           lineHeight: '31px',
         },
       },
+      '.other-links': {
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        flexDirection: 'column',
+        marginLeft: '40px',
+        fontSize: '20px',
+      },
     },
+  },
+  '.mobile-menu-contacts': {
+    position: 'absolute',
+    bottom: '60px',
+    left: '40px',
   },
   '.close': {
     position: 'fixed',

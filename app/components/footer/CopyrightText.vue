@@ -9,8 +9,13 @@ import { copyrightDetail } from '~/utils/constants'
 <style lang="ts" scoped>
 css({
   '.copy-right-detail': {
-    textAlign: 'center',
-    fontSize: '12px'
-  }
+    textAlign: 'right',
+    fontSize: '12px',
+  },
+  '@media(max-width: 767px)': {
+    '.copy-right-detail': {
+      textAlign: 'center',
+    },
+  },
 })
 </style>

@@ -1,13 +1,23 @@
 <script setup lang="ts">
+import { useHover } from '~/composables/useHover'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
+
+const hoverRef = ref(null)
+const isHovered = useHover(hoverRef)
 </script>
 
 <template>
-  <a href="https://twitter.com/vuefes" target="_blank" rel="noreferrer" class="twitter-root">
+  <a
+    ref="hoverRef"
+    href="https://twitter.com/vuefes"
+    target="_blank"
+    rel="noreferrer"
+    class="twitter-root"
+  >
     <span class="title">最新情報はTwitterでCheck!</span>
     <span class="explain">
-      <TwitterLogo />
-      <span>Twitter ー @vuefes #vuefes</span>
+      <TwitterLogo :style="isHovered ? { fill: '#42B983' } : {}" />
+      <span :style="isHovered ? { color: '#42B983' } : {}">Twitter ー @vuefes #vuefes</span>
     </span>
   </a>
 </template>

@@ -63,10 +63,18 @@ const handleFocusOut = (e: Event) => {
 <style lang="ts" scoped>
 css({
   '.textarea-root': {
-    //
+    fontWeight: 'bold',
+    color: '{color.vue.blue}',
   },
   '.form-textarea': {
-    //
+    padding: '14px 16px',
+    marginTop: '10px',
+    width: '100%',
+    height: '128px',
+    color: '{color.vue.blue}',
+    background: '#F2F7FF',
+    border: '1px solid {color.vue.blue}',
+    borderRadius: '8px',
   },
 })
 </style>

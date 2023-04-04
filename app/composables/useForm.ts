@@ -8,6 +8,12 @@ export function useForm() {
   const endpoint = `https://${config.newtSpaceUid}.form.newt.so/v1/${config.newtFormUid}`
   const isSent = ref(false)
 
+  const isSubmitting = computed(() => {
+    if (!name.value || !email.value || !detail.value) return false
+    if (name.value === '' || email.value === '' || detail.value === '') return false
+    return true
+  })
+
   const onSubmit = handleSubmit(async function (values) {
     const formData = new FormData()
     Object.entries(values).forEach(([key, value]) => {
@@ -24,5 +30,5 @@ export function useForm() {
       .catch(console.error)
   })
 
-  return { name, email, detail, isSent, onSubmit }
+  return { name, email, detail, isSent, isSubmitting, onSubmit }
 }

@@ -37,7 +37,7 @@ const updateDetail = (value: string) => {
           <InputField
             name="name"
             id-label="name"
-            title-label="お名前"
+            title-label="お名前／Name"
             placeholder="山田太郎"
             required
             @input="updateName"
@@ -45,15 +45,15 @@ const updateDetail = (value: string) => {
           <InputField
             name="email"
             id-label="email"
-            title-label="メールアドレス"
-            placeholder="山田太郎"
+            title-label="メールアドレス／Mail"
+            placeholder="hello@vuefes.jp"
             required
             @input="updateEmail"
           />
           <TextareaField
             name="detail"
             id-label="detail"
-            title-label="お問い合わせ内容"
+            title-label="お問い合わせ内容／Content"
             :rows="3"
             required
             @input="updateDetail"

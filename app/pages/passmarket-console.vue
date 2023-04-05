@@ -1,19 +1,69 @@
 <script setup lang="ts">
 /* eslint vuejs-accessibility/no-static-element-interactions: 0 */
 import { onMounted, ref } from 'vue'
+// import Encoding from 'encoding-japanese'
+import * as XLSX from 'xlsx'
 const isDragEnter = ref(false)
-const dropFile = (e: DragEvent) => {
-  const files = [...e.dataTransfer?.files]
+
+// list.xls colums data
+type ListRow = {
+  __EMPTY: string // "チケットID"
+  __EMPTY_1: string // "参加者名"
+  __EMPTY_10: string // "受付状況"
+  __EMPTY_11: string // "受付日"
+  __EMPTY_12: string // "受付時刻"
+  __EMPTY_2: string // "チケット名"
+  __EMPTY_3: string // "申込日"
+  __EMPTY_4: string // "申込時刻"
+  __EMPTY_5: string // "座席番号"
+  __EMPTY_6: string // "外部コード"
+  __EMPTY_7: string // "割引コード"
+  __EMPTY_8: string // "価格"
+  __EMPTY_9: string // "注文番号"
+}
+type ListMember = {
+  ticketId: string
+  ticketName: string
+  userName: string
+  applyDate: string
+  orderId: string
+}
+
+const createMemberListFromRowJson = (rows: ListRow[]): ListMember[] => {
+  return rows
+    .filter((row: ListRow) => {
+      return row.__EMPTY.match(/^[A-Z]-[0-9]+$/)
+    })
+    .map((row: ListRow) => {
+      return {
+        ticketId: row.__EMPTY,
+        ticketName: row.__EMPTY_2,
+        userName: row.__EMPTY_1,
+        applyDate: row.__EMPTY_3,
+        orderId: row.__EMPTY_9,
+      }
+    })
+}
+
+const onFileInputChange = (payload: Event) => {
+  checkFiles([...payload.target?.files])
+}
+const onDropFile = (e: DragEvent) => {
+  checkFiles([...e.dataTransfer?.files])
+}
+const checkFiles = async (files: File[]) => {
   if (files.length === 0) return
   const file = files[0]
 
+  console.log('file.name', file.name)
+
   if (!file.name.includes('.xls')) return
 
-  const reader = new FileReader()
-  reader.onload = (e: ProgressEvent<FileReader>) => {
-    const content = e.target?.result // ファイルの中身が取れます。
-  }
-  reader.readAsText(file)
+  const workbook = XLSX.read(await file.arrayBuffer())
+  const sheet = workbook.Sheets['Sheet1']
+  const rows = XLSX.utils.sheet_to_json(sheet) as ListRow[]
+  const members = createMemberListFromRowJson(rows)
+  console.log('members', members)
 }
 onMounted(() => {
   window.ondrop = (e) => {
@@ -35,14 +85,15 @@ onMounted(() => {
       @dragenter="() => (isDragEnter = true)"
       @dragleave="() => (isDragEnter = false)"
       @dragover.prevent
-      @drop.prevent="dropFile"
+      @drop.prevent="onDropFile"
     >
-      <span>アップロード</span>
+      <span>アップロード<br />（list.xls or addition.zip）</span>
       <input
         id="fileupload"
         type="file"
         name="passmarketdata"
         accept="application/vnd.ms-excel,application/zip"
+        @change="onFileInputChange"
       />
     </label>
   </main>
@@ -75,7 +126,7 @@ css({
   },
   '.uploadarea span': {
     position: 'absolute',
-    top: '50%',
+    top: '45%',
     left: '0',
     transform: 'tranlate(0,-50%)',
     fontSize: '20px',

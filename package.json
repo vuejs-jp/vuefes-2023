@@ -55,5 +55,9 @@
         "vue"
       ]
     }
+  },
+  "dependencies": {
+    "encoding-japanese": "^2.0.0",
+    "xlsx": "^0.18.5"
   }
 }

@@ -104,10 +104,15 @@ const createAdditionListFromRowJson = async (file: File): Promise<AdditionItem[]
 }
 
 const onFileInputChange = (payload: Event) => {
-  checkFiles([...payload.target?.files])
+  const t = payload.target as HTMLInputElement
+  if (t.files) {
+    checkFiles(Array.from(t.files))
+  }
 }
 const onDropFile = (e: DragEvent) => {
-  checkFiles([...e.dataTransfer?.files])
+  if (e.dataTransfer?.files) {
+    checkFiles(Array.from(e.dataTransfer?.files))
+  }
 }
 const checkFiles = async (files: File[]) => {
   if (files.length === 0) return

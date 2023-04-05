@@ -21,6 +21,7 @@ specifiers:
   vite-svg-loader: 4.0.0
   vitest: ^0.29.3
   vue-gtag: 2.0.2-beta.0
+  vue-recaptcha-v3: 2.0.1
   vue-tsc: 1.2.0
 
 devDependencies:
@@ -44,6 +45,7 @@ devDependencies:
   vite-svg-loader: 4.0.0
   vitest: 0.29.3
   vue-gtag: 2.0.2-beta.0
+  vue-recaptcha-v3: 2.0.1
   vue-tsc: 1.2.0_typescript@4.9.5
 
 packages:
@@ -7712,6 +7714,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /recaptcha-v3/1.10.0:
+    resolution: {integrity: sha512-aGTxYSk3FFNKnXeKDbLpgRDRyIHRZNBF5HyaXXAN1Aj4TSyyZvmoAn9CylvpqLV3pYpIQavwc+2rzhNFn5SsLQ==}
+    dev: true
+
   /recast/0.22.0:
     resolution: {integrity: sha512-5AAx+mujtXijsEavc5lWXBPQqrM4+Dl5qNH96N2aNeuJFUzpiiToKPsxQD/zAIJHspz7zz0maX0PCtCTFVlixQ==}
     engines: {node: '>= 4'}
@@ -9195,6 +9201,17 @@ packages:
     peerDependenciesMeta:
       vue:
         optional: true
+    dev: true
+
+  /vue-recaptcha-v3/2.0.1:
+    resolution: {integrity: sha512-isEDtOfHU4wWRrZZuxciAELtQmPOeEEdicPNa0f1AOyLPy3sCcBEcpFt+FOcO3RQv5unJ3Yn5NlsWtXv9rXqjg==}
+    peerDependencies:
+      vue: ^3.0.11
+    peerDependenciesMeta:
+      vue:
+        optional: true
+    dependencies:
+      recaptcha-v3: 1.10.0
     dev: true
 
   /vue-router/4.1.6_vue@3.2.47:

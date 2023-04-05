@@ -1,13 +1,11 @@
 <script setup lang="ts">
 /* eslint vuejs-accessibility/no-static-element-interactions: 0 */
 import { onMounted, ref } from 'vue'
-// import Encoding from 'encoding-japanese'
 import * as XLSX from 'xlsx'
 const isDragEnter = ref(false)
 
 enum FileName {
   ADDITION_CSV = 'addition.csv',
-  ADDITION_ZIP = 'addition.zip',
   LIST_XLS = 'list.xls',
 }
 
@@ -63,8 +61,6 @@ type AdditionItem = {
   password: string
 }
 const createAdditionListFromRowJson = async (file: File): Promise<AdditionItem[]> => {
-  console.log('file', file)
-
   return new Promise((resolve: (items: AdditionItem[]) => void) => {
     const valueFilter = (value: string) => {
       if (!value) return ''
@@ -110,14 +106,6 @@ const checkFiles = async (files: File[]) => {
   const file = files[0]
   const filename = file.name
 
-  if (
-    !([FileName.ADDITION_CSV, FileName.ADDITION_ZIP, FileName.LIST_XLS] as string[]).includes(
-      file.name,
-    )
-  ) {
-    alert(`this file is not acceptable -> ${file.name}`)
-    return
-  }
   if (filename === FileName.LIST_XLS) {
     const members = await createMemberListFromRowJson(file)
     console.log('members', members)
@@ -126,6 +114,7 @@ const checkFiles = async (files: File[]) => {
     const items = await createAdditionListFromRowJson(file)
     console.log('items', items)
   }
+  alert(`this file is not acceptable -> ${filename}`)
 }
 onMounted(() => {
   window.ondrop = (e) => {
@@ -152,8 +141,6 @@ onMounted(() => {
       <p>
         <b>Upload one of them</b><br />
         list.xls
-        <br />
-        addition.zip
         <br />
         addition.csv
       </p>

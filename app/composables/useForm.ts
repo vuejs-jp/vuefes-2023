@@ -1,8 +1,10 @@
 import { useForm as useValidateForm } from 'vee-validate'
+import { useFormError } from './useFormError'
 
 export function useForm() {
   const { useFieldModel, handleSubmit } = useValidateForm()
   const [name, email, detail] = useFieldModel(['name', 'email', 'detail'])
+  const { submitError, ...rest } = useFormError()
   const config = useRuntimeConfig()
 
   const endpoint = `https://${config.newtSpaceUid}.form.newt.so/v1/${config.newtFormUid}`
@@ -15,6 +17,8 @@ export function useForm() {
   })
 
   const onSubmit = handleSubmit(async function (values) {
+    submitError.value = ''
+
     const formData = new FormData()
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value)
@@ -27,8 +31,11 @@ export function useForm() {
       },
     })
       .then(() => (isSent.value = true))
-      .catch(console.error)
+      .catch((err) => {
+        console.error(err)
+        submitError.value = 'メッセージを送信できませんでした'
+      })
   })
 
-  return { name, email, detail, isSent, isSubmitting, onSubmit }
+  return { name, email, detail, isSent, isSubmitting, ...rest, onSubmit }
 }

@@ -6,7 +6,20 @@ import SectionTitle from '~/components/SectionTitle.vue'
 
 import { useForm } from '~/composables/useForm'
 
-const { name, email, detail, isSent, isSubmitting, onSubmit } = useForm()
+const {
+  name,
+  email,
+  detail,
+  isSent,
+  isSubmitting,
+  nameError,
+  emailError,
+  detailError,
+  validateName,
+  validateEmail,
+  validateDetail,
+  onSubmit,
+} = useForm()
 
 const updateName = (value: string) => {
   name.value = value
@@ -40,7 +53,9 @@ const updateDetail = (value: string) => {
             title-label="お名前／Name"
             placeholder="山田太郎"
             required
+            :error="nameError"
             @input="updateName"
+            @blur="validateName"
           />
           <InputField
             name="email"
@@ -48,7 +63,9 @@ const updateDetail = (value: string) => {
             title-label="メールアドレス／Mail"
             placeholder="hello@vuefes.jp"
             required
+            :error="emailError"
             @input="updateEmail"
+            @blur="validateEmail"
           />
           <TextareaField
             name="detail"
@@ -56,7 +73,9 @@ const updateDetail = (value: string) => {
             title-label="お問い合わせ内容／Content"
             :rows="3"
             required
+            :error="detailError"
             @input="updateDetail"
+            @blur="validateDetail"
           />
           <SubmitButton title-label="送信" :disabled="!isSubmitting" />
           <div v-if="isSent">メッセージ送信に成功しました。</div>

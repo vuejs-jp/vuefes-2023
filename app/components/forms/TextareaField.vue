@@ -28,6 +28,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  error: {
+    type: String,
+    default: '',
+  },
 })
 const emit = defineEmits<TextareaFieldEmit>()
 const handleInput = (e: Event) => {
@@ -57,6 +61,7 @@ const handleFocusOut = (e: Event) => {
       @input="handleInput"
       @blur="handleFocusOut"
     />
+    <p v-if="error" class="error">{{ error }}</p>
   </label>
 </template>
 
@@ -75,6 +80,11 @@ css({
     background: '#F2F7FF',
     border: '1px solid {color.vue.blue}',
     borderRadius: '8px',
+  },
+  '.error': {
+    marginTop: '10px',
+    fontSize: '14px',
+    color: '#F17C67',
   },
 })
 </style>

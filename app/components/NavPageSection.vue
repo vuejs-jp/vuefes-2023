@@ -25,13 +25,13 @@ const toggleMenu = () => (showMenu.value = !showMenu.value)
     "
   >
     <div class="nav-root">
-      <a href="/" aria-label="top">
+      <nuxt-link to="/" aria-label="top">
         <VueFesLogo />
-      </a>
+      </nuxt-link>
       <div v-if="$device.isDesktop || $device.isTablet" class="links">
         <ul v-for="l in navLinks" :key="l.link">
           <li>
-            <a :href="l.link">{{ l.text }}</a>
+            <nuxt-link :to="`/${l.link}`">{{ l.text }}</nuxt-link>
           </li>
         </ul>
         <a href="https://twitter.com/vuefes" aria-label="twitter" target="_blank" rel="noreferrer">

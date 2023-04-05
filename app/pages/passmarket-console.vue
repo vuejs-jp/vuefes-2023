@@ -9,7 +9,9 @@ enum FileName {
   LIST_XLS = 'list.xls',
 }
 
-// list.xls colums data
+/**
+ * list.xls colums
+ */
 type ListRow = {
   __EMPTY: string // "チケットID"
   __EMPTY_1: string // "参加者名"
@@ -25,6 +27,9 @@ type ListRow = {
   __EMPTY_8: string // "価格"
   __EMPTY_9: string // "注文番号"
 }
+/**
+ * list.xls data
+ */
 type ListMember = {
   ticketId: string
   ticketName: string
@@ -32,6 +37,18 @@ type ListMember = {
   applyDate: string
   orderId: string
 }
+/**
+ * addition.csv data
+ */
+type AdditionItem = {
+  orderId: string
+  applyTime: string
+  eventId: string
+  eventTitle: string
+  ticketId: string
+  password: string
+}
+
 const createMemberListFromRowJson = async (file: File): Promise<ListMember[]> => {
   const workbook = XLSX.read(await file.arrayBuffer())
   const sheet = workbook.Sheets['Sheet1']
@@ -51,15 +68,6 @@ const createMemberListFromRowJson = async (file: File): Promise<ListMember[]> =>
     })
 }
 
-// addition.csv colums data
-type AdditionItem = {
-  orderId: string
-  applyTime: string
-  eventId: string
-  eventTitle: string
-  ticketId: string
-  password: string
-}
 const createAdditionListFromRowJson = async (file: File): Promise<AdditionItem[]> => {
   return new Promise((resolve: (items: AdditionItem[]) => void) => {
     const valueFilter = (value: string) => {
@@ -68,7 +76,7 @@ const createAdditionListFromRowJson = async (file: File): Promise<AdditionItem[]
     }
     const reader = new FileReader()
     reader.onerror = () => {
-      alert('ファイル読み取りに失敗しました')
+      alert(`could not read file -> ${file.name}`)
     }
     // ファイル読み取りに成功したとき
     reader.onload = () => {
@@ -189,7 +197,6 @@ css({
     margin: '0',
     width: '100%',
     textAlign: 'center',
-    // pointerEvents: 'none'
   }
 
 })

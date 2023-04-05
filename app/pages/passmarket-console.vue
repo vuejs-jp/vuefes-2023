@@ -5,6 +5,12 @@ import { onMounted, ref } from 'vue'
 import * as XLSX from 'xlsx'
 const isDragEnter = ref(false)
 
+enum FileName {
+  ADDITION_CSV = 'addition.csv',
+  ADDITION_ZIP = 'addition.zip',
+  LIST_XLS = 'list.xls',
+}
+
 // list.xls colums data
 type ListRow = {
   __EMPTY: string // "チケットID"
@@ -28,8 +34,10 @@ type ListMember = {
   applyDate: string
   orderId: string
 }
-
-const createMemberListFromRowJson = (rows: ListRow[]): ListMember[] => {
+const createMemberListFromRowJson = async (file: File): Promise<ListMember[]> => {
+  const workbook = XLSX.read(await file.arrayBuffer())
+  const sheet = workbook.Sheets['Sheet1']
+  const rows = XLSX.utils.sheet_to_json(sheet) as ListRow[]
   return rows
     .filter((row: ListRow) => {
       return row.__EMPTY.match(/^[A-Z]-[0-9]+$/)
@@ -45,6 +53,52 @@ const createMemberListFromRowJson = (rows: ListRow[]): ListMember[] => {
     })
 }
 
+// addition.csv colums data
+type AdditionItem = {
+  orderId: string
+  applyTime: string
+  eventId: string
+  eventTitle: string
+  ticketId: string
+  password: string
+}
+const createAdditionListFromRowJson = async (file: File): Promise<AdditionItem[]> => {
+  console.log('file', file)
+
+  return new Promise((resolve: (items: AdditionItem[]) => void) => {
+    const valueFilter = (value: string) => {
+      if (!value) return ''
+      return value.replace(/^"(.+)"$/, '$1').replace(/'/g, '')
+    }
+    const reader = new FileReader()
+    reader.onerror = () => {
+      alert('ファイル読み取りに失敗しました')
+    }
+    // ファイル読み取りに成功したとき
+    reader.onload = () => {
+      const rows = (reader.result as string).split('\n')
+      const itemRows = rows.slice(1)
+      const items = itemRows
+        .map((row: string) => {
+          const tmp = row.split(',')
+          return {
+            orderId: valueFilter(tmp[0]),
+            applyTime: valueFilter(tmp[1]),
+            eventId: valueFilter(tmp[3]),
+            eventTitle: valueFilter(tmp[4]),
+            ticketId: valueFilter(tmp[5]),
+            password: valueFilter(tmp[6]),
+          }
+        })
+        .filter((item: AdditionItem) => {
+          return item.orderId
+        })
+      resolve(items)
+    }
+    reader.readAsText(file, 'Shift_JIS')
+  })
+}
+
 const onFileInputChange = (payload: Event) => {
   checkFiles([...payload.target?.files])
 }
@@ -54,16 +108,24 @@ const onDropFile = (e: DragEvent) => {
 const checkFiles = async (files: File[]) => {
   if (files.length === 0) return
   const file = files[0]
+  const filename = file.name
 
-  console.log('file.name', file.name)
-
-  if (!file.name.includes('.xls')) return
-
-  const workbook = XLSX.read(await file.arrayBuffer())
-  const sheet = workbook.Sheets['Sheet1']
-  const rows = XLSX.utils.sheet_to_json(sheet) as ListRow[]
-  const members = createMemberListFromRowJson(rows)
-  console.log('members', members)
+  if (
+    !([FileName.ADDITION_CSV, FileName.ADDITION_ZIP, FileName.LIST_XLS] as string[]).includes(
+      file.name,
+    )
+  ) {
+    alert(`this file is not acceptable -> ${file.name}`)
+    return
+  }
+  if (filename === FileName.LIST_XLS) {
+    const members = await createMemberListFromRowJson(file)
+    console.log('members', members)
+  }
+  if (filename === FileName.ADDITION_CSV) {
+    const items = await createAdditionListFromRowJson(file)
+    console.log('items', items)
+  }
 }
 onMounted(() => {
   window.ondrop = (e) => {
@@ -87,12 +149,19 @@ onMounted(() => {
       @dragover.prevent
       @drop.prevent="onDropFile"
     >
-      <span>アップロード<br />（list.xls or addition.zip）</span>
+      <p>
+        <b>Upload one of them</b><br />
+        list.xls
+        <br />
+        addition.zip
+        <br />
+        addition.csv
+      </p>
       <input
         id="fileupload"
         type="file"
         name="passmarketdata"
-        accept="application/vnd.ms-excel,application/zip"
+        accept="application/vnd.ms-excel,application/zip,text/csv"
         @change="onFileInputChange"
       />
     </label>
@@ -124,11 +193,11 @@ css({
   '.uploadarea input': {
     display: 'none',
   },
-  '.uploadarea span': {
+  '.uploadarea p': {
     position: 'absolute',
-    top: '45%',
+    top: '50%',
     left: '0',
-    transform: 'tranlate(0,-50%)',
+    transform: 'translate(0,-50%)',
     fontSize: '20px',
     margin: '0',
     width: '100%',

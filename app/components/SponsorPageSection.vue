@@ -1,0 +1,115 @@
+<script lang="ts" setup></script>
+
+<template>
+  <section>
+    <div class="sponsor-root">
+      <SectionTitle id="sponsor" color="vue.blue" title="Sponsors" yamato-title="スポンサー" />
+      <div class="subtitle">
+        <p>
+          Vue.js に関わる人々が集まる Vue Fes Japan 2023
+          をより良いカンファレンスにするため、スポンサー募集をします。募集スケジュールなどの詳しい内容は資料をご参照ください。
+        </p>
+      </div>
+      <div class="link-box">
+        <a class="contact-link"> 申し込みフォーム </a>
+        <a class="sponsor-link"> スポンサー資料 </a>
+      </div>
+      <p class="twitter-text">
+        詳細情報は、<a
+          class="twitter-link"
+          href="https://twitter.com/vuefes"
+          target="_blank"
+          rel="noreferrer"
+          >Vue Fes Japan の Twitter </a
+        >をご確認ください。
+      </p>
+    </div>
+  </section>
+  <VoiceAudioSpectrum />
+</template>
+
+<style lang="ts" scoped>
+css({
+  'section': {
+    marginTop: '-90px',
+    padding: '120px 0',
+    background: '#EEEEEE'
+  },
+  '.sponsor-root': {
+    display: 'grid',
+    gap: '40px',
+    maxWidth: '768px',
+    margin: '0 auto',
+    width: '100%',
+  },
+  '.subtitle': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: '40px',
+    'p': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '180%'
+    },
+  },
+  '.link-box': {
+    display: 'flex',
+    gap: '40px'
+  },
+  '.contact-link': {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: '{color.vue.green}',
+    boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.24)',
+    color: '{color.white}',
+    maxWidth: '344px',
+    width: '100%',
+    margin: '0 auto',
+    height: '88px',
+    borderRadius: '50px',
+    fontWeight: 'bold',
+    fontSize: '24px',
+    cursor: 'pointer',
+    '&:hover': {
+      background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)), {color.vue.green}',
+    },
+  },
+  '.sponsor-link': {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '{color.vue.blue}',
+    border: '2px solid {color.vue.blue}',
+    maxWidth: '344px',
+    width: '100%',
+    margin: '0 auto',
+    height: '88px',
+    borderRadius: '50px',
+    fontWeight: 'bold',
+    fontSize: '24px',
+    cursor: 'pointer',
+    '&:hover': {
+      background: 'rgba(53, 73, 94, 0.2)'
+    }
+  },
+  '.twitter-text': {
+    fontSize: '18px'
+  },
+  '.twitter-link': {
+    color: '{color.vue.green}',
+    textDecoration: 'underline',
+  },
+  '@media(max-width: 1023px)': {
+    'section': {
+      padding: '120px 40px',
+    },
+    '.link-box': {
+      flexDirection: 'column'
+    },
+  },
+})
+</style>

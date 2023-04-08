@@ -94,6 +94,7 @@ css({
     },
   },
   '.sponsor-link': {
+    background: '{color.white}',
     color: '{color.vue.blue}',
     border: '2px solid {color.vue.blue}',
     '&:hover': {

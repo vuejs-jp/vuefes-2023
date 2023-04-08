@@ -11,8 +11,22 @@
         </p>
       </div>
       <div class="link-box">
-        <a class="contact-link"> 申し込みフォーム </a>
-        <a class="sponsor-link"> スポンサー資料 </a>
+        <a
+          class="contact-link"
+          href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          申し込みフォーム
+        </a>
+        <a
+          class="sponsor-link"
+          href="https://forms.gle/vnunuiVzZATaZZ3A6s"
+          target="_blank"
+          rel="noreferrer"
+        >
+          スポンサー資料
+        </a>
       </div>
       <p class="twitter-text">
         詳細情報は、<a

@@ -44,7 +44,7 @@ export const websiteLinks = [
   {
     id: 2022,
     value: 'vuefes2022',
-    title: 'Vue Fes Japan 2022',
+    title: 'Vue Fes Japan Online 2022',
     url: 'https://vuefes.jp/2022',
   },
   {

@@ -13,7 +13,7 @@
       <div class="link-box">
         <a
           class="base-link contact-link"
-          href="https://forms.gle/vnunuiVzZATaZZ3A6s"
+          href="https://forms.gle/rxHNdjFDnFGxzf5SA"
           target="_blank"
           rel="noreferrer"
         >

@@ -1,5 +1,6 @@
 export const navLinks = [
   { text: 'Message', link: '#message' },
+  { text: 'Sponsor', link: '#sponsor' },
   { text: 'Contact', link: '#form' },
 ]
 

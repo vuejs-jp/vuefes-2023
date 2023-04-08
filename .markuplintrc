@@ -17,12 +17,6 @@
           },
           "required": {
             "disallowed": false
-          },
-          "@dragover.prevent": {
-            "disallowed": false
-          },
-          "@drop.prevent": {
-            "disallowed": false
           }
         }
       }

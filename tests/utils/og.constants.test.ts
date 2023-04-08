@@ -8,12 +8,12 @@ describe('generalOg', () => {
         hid: 'description',
         name: 'description',
         content:
-          '2023年10月28日（土）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+          '2023年10月28日（土）に開催される日本最大級の Vue.js カンファレンスです。国内外の著名スピーカーによるセッションの他、LT、初心者向けハンズオン、グッズ販売などのイベントも企画しています。ぜひ一緒に Vue.js を楽しみ、盛り上げていきましょう！',
       },
       {
         hid: 'og:site_name',
         name: 'og:site_name',
-        content: 'Vue Fes Japan Online 2023',
+        content: 'Vue Fes Japan 2023',
       },
       {
         hid: 'og:type',
@@ -24,12 +24,12 @@ describe('generalOg', () => {
         hid: 'og:description',
         name: 'og:description',
         content:
-          '2023年10月28日（土）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+          '2023年10月28日（土）に開催される日本最大級の Vue.js カンファレンスです。国内外の著名スピーカーによるセッションの他、LT、初心者向けハンズオン、グッズ販売などのイベントも企画しています。ぜひ一緒に Vue.js を楽しみ、盛り上げていきましょう！',
       },
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'Vue Fes Japan Online 2023',
+        content: 'Vue Fes Japan 2023',
       },
       {
         hid: 'og:url',
@@ -99,12 +99,12 @@ describe('twitterOg', () => {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          '2023年10月28日（土）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+          '2023年10月28日（土）に開催される日本最大級の Vue.js カンファレンスです。国内外の著名スピーカーによるセッションの他、LT、初心者向けハンズオン、グッズ販売などのイベントも企画しています。ぜひ一緒に Vue.js を楽しみ、盛り上げていきましょう！',
       },
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Vue Fes Japan Online 2023',
+        content: 'Vue Fes Japan 2023',
       },
       {
         hid: 'twitter:card',
@@ -168,12 +168,12 @@ describe('createOg', () => {
         hid: 'description',
         name: 'description',
         content:
-          '2023年10月28日（土）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+          '2023年10月28日（土）に開催される日本最大級の Vue.js カンファレンスです。国内外の著名スピーカーによるセッションの他、LT、初心者向けハンズオン、グッズ販売などのイベントも企画しています。ぜひ一緒に Vue.js を楽しみ、盛り上げていきましょう！',
       },
       {
         hid: 'og:site_name',
         name: 'og:site_name',
-        content: 'Vue Fes Japan Online 2023',
+        content: 'Vue Fes Japan 2023',
       },
       {
         hid: 'og:type',
@@ -184,12 +184,12 @@ describe('createOg', () => {
         hid: 'og:description',
         name: 'og:description',
         content:
-          '2023年10月28日（土）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+          '2023年10月28日（土）に開催される日本最大級の Vue.js カンファレンスです。国内外の著名スピーカーによるセッションの他、LT、初心者向けハンズオン、グッズ販売などのイベントも企画しています。ぜひ一緒に Vue.js を楽しみ、盛り上げていきましょう！',
       },
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'Vue Fes Japan Online 2023',
+        content: 'Vue Fes Japan 2023',
       },
       {
         hid: 'og:url',
@@ -210,12 +210,12 @@ describe('createOg', () => {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          '2023年10月28日（土）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+          '2023年10月28日（土）に開催される日本最大級の Vue.js カンファレンスです。国内外の著名スピーカーによるセッションの他、LT、初心者向けハンズオン、グッズ販売などのイベントも企画しています。ぜひ一緒に Vue.js を楽しみ、盛り上げていきましょう！',
       },
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Vue Fes Japan Online 2023',
+        content: 'Vue Fes Japan 2023',
       },
       {
         hid: 'twitter:card',

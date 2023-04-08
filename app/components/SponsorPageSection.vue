@@ -13,7 +13,7 @@
       <div class="link-box">
         <a
           class="base-link contact-link"
-          href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
+          href="https://forms.gle/vnunuiVzZATaZZ3A6s"
           target="_blank"
           rel="noreferrer"
         >
@@ -21,7 +21,7 @@
         </a>
         <a
           class="base-link sponsor-link"
-          href="https://forms.gle/vnunuiVzZATaZZ3A6s"
+          href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >

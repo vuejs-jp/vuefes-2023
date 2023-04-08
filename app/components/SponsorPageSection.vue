@@ -12,7 +12,7 @@
       </div>
       <div class="link-box">
         <a
-          class="contact-link"
+          class="base-link contact-link"
           href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
@@ -20,7 +20,7 @@
           申し込みフォーム
         </a>
         <a
-          class="sponsor-link"
+          class="base-link sponsor-link"
           href="https://forms.gle/vnunuiVzZATaZZ3A6s"
           target="_blank"
           rel="noreferrer"
@@ -71,41 +71,31 @@ css({
     display: 'flex',
     gap: '40px'
   },
-  '.contact-link': {
+  '.base-link': {
+    margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    background: '{color.vue.green}',
-    boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.24)',
-    color: '{color.white}',
     maxWidth: '344px',
     width: '100%',
-    margin: '0 auto',
     height: '88px',
     borderRadius: '50px',
     fontWeight: 'bold',
     fontSize: '24px',
     cursor: 'pointer',
+  },
+  '.contact-link': {
+    background: '{color.vue.green}',
+    boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.24)',
+    color: '{color.white}',
     '&:hover': {
       background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)), {color.vue.green}',
     },
   },
   '.sponsor-link': {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
     color: '{color.vue.blue}',
     border: '2px solid {color.vue.blue}',
-    maxWidth: '344px',
-    width: '100%',
-    margin: '0 auto',
-    height: '88px',
-    borderRadius: '50px',
-    fontWeight: 'bold',
-    fontSize: '24px',
-    cursor: 'pointer',
     '&:hover': {
       background: 'rgba(53, 73, 94, 0.2)'
     }

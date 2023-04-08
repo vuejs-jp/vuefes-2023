@@ -88,7 +88,7 @@ const updateDetail = (value: string) => {
 <style lang="ts" scoped>
 css({
   'section': {
-    padding: '160px 20px',
+    padding: '30px 20px 120px',
   },
   '.form-root': {
     display: 'grid',
@@ -111,11 +111,6 @@ css({
     'form': {
       display: 'grid',
       gap: '40px',
-    },
-  },
-  '@media(min-width: 1024px)': {
-    'section': {
-      padding: '80px 20px',
     },
   },
 })

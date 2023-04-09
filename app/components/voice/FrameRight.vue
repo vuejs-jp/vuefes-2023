@@ -12,23 +12,6 @@ import VoiceS from '~/assets/voice/frame-s.svg'
 
 <style lang="ts" scoped>
 css({
-  // '@keyframes beats': {
-  //   '0%': {
-  //     transform: 'scaleY(1)',
-  //   },
-  //   '25%': {
-  //     transform: 'scaleY(0.6)',
-  //   },
-  //   '50%': {
-  //     transform: 'scaleY(1)',
-  //   },
-  //   '75%': {
-  //     transform: 'scaleY(0.3)',
-  //   },
-  //   '100%': {
-  //     transform: 'scaleY(1)',
-  //   },
-  // },
   '.frame-l': {
     // animation: 'beats 0.5s ease-out infinite',
   },
@@ -37,6 +20,23 @@ css({
     marginLeft: 'auto',
     marginRight: '7.7%',
     // animation: 'beats 0.5s ease-out infinite',
+  },
+  '@keyframes beats': {
+    // '0%': {
+    //   transform: 'scaleY(1)',
+    // },
+    // '25%': {
+    //   transform: 'scaleY(0.6)',
+    // },
+    // '50%': {
+    //   transform: 'scaleY(1)',
+    // },
+    // '75%': {
+    //   transform: 'scaleY(0.3)',
+    // },
+    // '100%': {
+    //   transform: 'scaleY(1)',
+    // },
   },
 })
 </style>

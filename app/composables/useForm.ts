@@ -14,8 +14,9 @@ export function useForm() {
 
   const isSubmitting = computed(() => {
     if (!name.value || !email.value || !detail.value) return false
-    if (name.value === '' || email.value === '' || detail.value === '') return false
-    return true
+    return (
+      rest.nameError.value === '' && rest.emailError.value === '' && rest.detailError.value === ''
+    )
   })
 
   const onSubmit = handleSubmit(async function (values) {

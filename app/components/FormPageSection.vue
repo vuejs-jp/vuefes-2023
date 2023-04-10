@@ -48,8 +48,8 @@ const updateDetail = (value: string) => {
       <div class="form">
         <form @submit="onSubmit">
           <InputField
+            id="name"
             name="name"
-            id-label="name"
             title-label="お名前／Name"
             placeholder="山田太郎"
             required
@@ -58,8 +58,8 @@ const updateDetail = (value: string) => {
             @blur="validateName"
           />
           <InputField
+            id="email"
             name="email"
-            id-label="email"
             title-label="メールアドレス／Mail"
             placeholder="hello@vuefes.jp"
             required
@@ -68,8 +68,8 @@ const updateDetail = (value: string) => {
             @blur="validateEmail"
           />
           <TextareaField
+            id="detail"
             name="detail"
-            id-label="detail"
             title-label="お問い合わせ内容／Content"
             :rows="3"
             required

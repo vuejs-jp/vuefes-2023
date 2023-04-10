@@ -1,38 +1,21 @@
 <script setup lang="ts">
+import { InputHTMLAttributes } from 'vue'
+
+type _InputFieldProps = Omit<InputHTMLAttributes, 'onInput' | 'onBlur'>
+interface InputFieldProps extends _InputFieldProps {
+  titleLabel: string
+  error: string
+  /**
+   * FIXME 削除したい (削除できなさそう)
+   */
+  placeholder?: string
+}
 interface InputFieldEmit {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void
 }
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  idLabel: {
-    type: String,
-    required: true,
-  },
-  titleLabel: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
-    default: 'text',
-  },
-  placeholder: {
-    type: String,
-    default: '',
-  },
-  required: {
-    type: Boolean,
-    default: false,
-  },
-  error: {
-    type: String,
-    default: '',
-  },
-})
+const props = defineProps<InputFieldProps>()
+const { id, name, placeholder = '', type, required = false, titleLabel, error = '' } = toRefs(props)
 const emit = defineEmits<InputFieldEmit>()
 function handleInput(e: Event) {
   if (!(e.target instanceof HTMLInputElement)) {
@@ -49,10 +32,10 @@ function handleFocusOut(e: Event) {
 </script>
 
 <template>
-  <label :for="idLabel" class="input-root">
+  <label :for="id" class="input-root">
     {{ titleLabel }}
     <input
-      :id="idLabel"
+      :id="id"
       :name="name"
       :type="type"
       class="form-input"

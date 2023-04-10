@@ -1,18 +1,20 @@
 <script setup lang="ts">
-interface IButtonFieldEmit {
+import { ButtonHTMLAttributes } from 'vue'
+
+type _SubmitButtonProps = Omit<ButtonHTMLAttributes, 'disabled' | 'onClick'>
+interface SubmitButtonProps extends _SubmitButtonProps {
+  titleLabel: string
+  /**
+   * Booleanish ではなく boolean として型定義をしなおす
+   */
+  disabled?: boolean
+}
+interface SubmitButtonEmit {
   (e: 'on-click'): void
 }
-const props = defineProps({
-  titleLabel: {
-    type: String,
-    required: true,
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-})
-const emit = defineEmits<IButtonFieldEmit>()
+const props = defineProps<SubmitButtonProps>()
+const { titleLabel, disabled = false } = toRefs(props)
+const emit = defineEmits<SubmitButtonEmit>()
 const handleClick = () => {
   emit('on-click')
 }

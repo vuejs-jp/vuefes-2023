@@ -1,38 +1,21 @@
 <script setup lang="ts">
+import { TextareaHTMLAttributes } from 'vue'
+
+type _TextareaFieldProps = Omit<TextareaHTMLAttributes, 'onInput' | 'onBlur'>
+interface TextareaFieldProps extends _TextareaFieldProps {
+  titleLabel: string
+  error: string
+  /**
+   * FIXME 削除したい (削除できなさそう)
+   */
+  placeholder?: string
+}
 interface TextareaFieldEmit {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void
 }
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  idLabel: {
-    type: String,
-    required: true,
-  },
-  titleLabel: {
-    type: String,
-    required: true,
-  },
-  rows: {
-    type: Number,
-    required: true,
-  },
-  placeholder: {
-    type: String,
-    default: '',
-  },
-  required: {
-    type: Boolean,
-    default: false,
-  },
-  error: {
-    type: String,
-    default: '',
-  },
-})
+const props = defineProps<TextareaFieldProps>()
+const { id, name, placeholder = '', rows, required = false, titleLabel, error = '' } = toRefs(props)
 const emit = defineEmits<TextareaFieldEmit>()
 const handleInput = (e: Event) => {
   if (!(e.target instanceof HTMLTextAreaElement)) {
@@ -49,10 +32,10 @@ const handleFocusOut = (e: Event) => {
 </script>
 
 <template>
-  <label :for="idLabel" class="textarea-root">
+  <label :for="id" class="textarea-root">
     {{ titleLabel }}
     <textarea
-      :id="idLabel"
+      :id="id"
       :name="name"
       class="form-textarea"
       :rows="rows"

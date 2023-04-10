@@ -82,7 +82,7 @@ css({
     height: '88px',
     borderRadius: '50px',
     fontWeight: 'bold',
-    fontSize: '24px',
+    fontSize: '20px',
     cursor: 'pointer',
   },
   '.contact-link': {
@@ -91,6 +91,7 @@ css({
     color: '{color.white}',
     '&:hover': {
       background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)), {color.vue.green}',
+      transition: '.2s',
     },
   },
   '.sponsor-link': {
@@ -98,15 +99,20 @@ css({
     color: '{color.vue.blue}',
     border: '2px solid {color.vue.blue}',
     '&:hover': {
-      background: 'rgba(53, 73, 94, 0.2)'
+      background: 'rgba(53, 73, 94, 0.2)',
+      transition: '.2s',
     }
   },
   '.twitter-text': {
-    fontSize: '18px'
+    fontSize: '18px',
+    color: '{color.vue.blue}',
   },
   '.twitter-link': {
     color: '{color.vue.green}',
     textDecoration: 'underline',
+    '&:hover': {
+      transition: '.2s',
+    },
   },
   '@media(max-width: 1023px)': {
     'section': {

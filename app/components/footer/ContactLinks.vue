@@ -46,11 +46,11 @@ css({
     alignItems: 'center',
     justifyContent: 'center',
     columnGap: '40px',
-    margin: '8px 0',
     'a': {
       '&:hover': {
         'svg': {
           fill: '{color.vue.green}',
+          transition: '.2s',
         },
       },
     },

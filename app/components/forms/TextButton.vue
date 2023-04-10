@@ -21,13 +21,12 @@ const isExternal = computed(() => props.url.match(/^https?:\/\//) !== null)
 <style lang="ts" scoped>
 css({
   '.anchor-root': {
-    padding: '4px 0',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    textDecoration: 'underline',
     '&:hover': {
       color: '{color.vue.green}',
+      transition: '.2s',
     },
   },
 })

@@ -105,12 +105,25 @@ css({
       color: '{color.vue.blue}',
       fontWeight: 500,
       fontSize: '20px',
+      'a': {
+        color: '{color.vue.green}',
+        '&:hover': {
+          transition: '.2s',
+        },
+      },
     },
   },
   '.form': {
     'form': {
       display: 'grid',
       gap: '40px',
+    },
+  },
+  '@media(min-width: 768px)': {
+    '.subtitle': {
+      'p': {
+        fontSize: '18px',
+      },
     },
   },
 })

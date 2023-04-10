@@ -32,7 +32,7 @@ css({
     background: 'rgba(35, 52, 69, 0.8)',
     borderRadius: '70px',
     '&:hover': {
-      background: 'rgba(35, 52, 69, 0.4)',
+      transition: '.2s',
     },
     '.title': {
       whiteSpace: 'nowrap',
@@ -54,6 +54,11 @@ css({
     },
   },
   '@media(min-width: 768px)': {
+    '.twitter-root': {
+      '&:hover': {
+        transition: 'none',
+      },
+    },
     '.title': {
       fontSize: '20px',
     },

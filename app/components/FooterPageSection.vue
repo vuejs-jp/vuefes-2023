@@ -13,11 +13,13 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
     </div>
     <div class="footer-info">
       <div v-if="!$device.isMobile" class="footer-info-links">
-        <ContactLinks />
-        <PastEvents />
-        <div class="footer-docs">
-          <PrivacyPolicyAndCoc />
+        <div class="contacts">
+          <ContactLinks />
         </div>
+        <div class="events">
+          <PastEvents />
+        </div>
+        <PrivacyPolicyAndCoc />
       </div>
       <div v-if="!$device.isMobile" class="footer-copyright">
         <CopyrightText />
@@ -38,16 +40,12 @@ css({
     backgroundPosition: '50% 100%',
     display: 'grid',
     placeItems: 'center',
-    color: '{color.white}',
   },
   '.footer-vuefes-logo': {
     margin: 0,
   },
   '.footer-info-links': {
     display: 'none',
-  },
-  '.footer-docs': {
-    marginTop: '6px',
   },
   '.footer-copyright': {
     marginTop: '56px',
@@ -62,11 +60,20 @@ css({
       display: 'flex',
       alignItems: 'flex-end',
       flexDirection: 'column',
-      gap: '36px',
-      marginBottom: '32px',
+      '.contacts': {
+        marginBottom: '32px',
+      },
+      '.events': {
+        marginBottom: '16px',
+      },
     },
     '.footer-copyright': {
-      marginTop: '56px',
+      marginTop: '32px',
+    },
+  },
+  '@media(max-width: 767px)': {
+    '.footer-section': {
+      padding: '80px 40px',
     },
   },
 })

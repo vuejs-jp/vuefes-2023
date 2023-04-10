@@ -18,11 +18,13 @@
 css({
   '.copy-right-detail': {
     textAlign: 'right',
+    color: '{color.white}',
     fontSize: '12px',
     'a': {
       textDecoration: 'underline',
       '&:hover': {
         opacity: 0.4,
+        transition: '.2s',
       },
     },
   },

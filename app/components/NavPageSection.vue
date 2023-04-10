@@ -65,14 +65,6 @@ const toggleMenu = () => (showMenu.value = !showMenu.value)
           <CrossLogo />
         </button>
         <div class="links">
-          <a
-            href="https://twitter.com/vuefes"
-            aria-label="twitter"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <TwitterLogo />
-          </a>
           <button v-if="!showMenu" @click="toggleMenu">
             <MenuLogo />
           </button>
@@ -105,7 +97,7 @@ css({
     background: '{color.vue.blue}',
     color: '{color.white}',
     'ul': {
-      paddingTop: '15vh',
+      paddingTop: '80px',
       margin: '0 3vw',
       textAlign: 'center',
       'li': {
@@ -114,7 +106,6 @@ css({
         display: 'grid',
         justifyContent: 'flex-start',
         'a': {
-          padding: '6px',
           fontWeight: 700,
           fontSize: '24px',
           lineHeight: '31px',
@@ -137,8 +128,8 @@ css({
   },
   '.close': {
     position: 'fixed',
-    top: 32,
-    right: 32,
+    top: '32px',
+    right: '32px',
     zIndex: 10,
   },
   '.links': {
@@ -148,12 +139,24 @@ css({
       color: '{color.white}',
       '&:hover': {
         color: '{color.vue.green}',
+        transition: '.2s',
       },
       'svg': {
         fill: '{color.white}',
         '&:hover': {
           fill: '{color.vue.green}',
+          transition: '.2s',
         },
+      },
+    },
+  },
+  '@media(min-width: 768px)': {
+    '.nav-root': {
+      padding: '16px 24px',
+    },
+    '.links': {
+      'a': {
+        padding: 0,
       },
     },
   },

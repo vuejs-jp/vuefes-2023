@@ -70,7 +70,7 @@ css({
     gridColumn: '2',
     color: '{color.white}',
     background: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: '60px',
+    borderRadius: '40px',
   },
   '.title': {
     textAlign: 'center',
@@ -120,6 +120,11 @@ css({
     'span + span': {
       marginLeft: '0.5em',
     }
+  },
+  '@media(min-width: 768px)': {
+    '.message-body': {
+      borderRadius: '60px',
+    },
   },
 })
 </style>

@@ -1,5 +1,8 @@
 export function useHover(el: Ref<null | HTMLElement>) {
+  const { isMobile } = useDevice()
   const isHovered = ref(false)
+
+  if (isMobile) return
 
   function mouseEnter() {
     isHovered.value = true

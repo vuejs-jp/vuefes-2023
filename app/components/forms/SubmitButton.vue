@@ -35,13 +35,15 @@ css({
     width: '342px',
     margin: '0 auto',
     borderRadius: '50px',
-    background: (props) => props.disabled ? '#C9DAEA' : '{color.vue.blue}',
+    background: (props) => props.disabled ? '#C9DAEA' : '{color.vue.green}',
     color: '#fff',
     fontWeight: 'bold',
     fontSize: '1.25rem',
     lineHeight: '1.75rem',
     '&:hover': {
-      background: (props) => props.disabled ? '#C9DAEA' : '{color.vue.green}',
+      background: (props) => props.disabled ? '#C9DAEA' : 'linear-gradient(0deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)), {color.vue.green}',
+      boxShadow: (props) => props.disabled ? 'none' : '0px 8px 24px rgba(0, 0, 0, 0.24)',
+      transition: (props) => props.disabled ? 'none' : '.2s',
     },
   },
 })

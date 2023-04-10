@@ -19,6 +19,9 @@ css({
     justifyContent: 'flex-start',
     gap: '24px',
     'a': {
+      padding: 0,
+      margin: 0,
+      color: '{color.white}',
       fontSize: '20px',
     },
   },

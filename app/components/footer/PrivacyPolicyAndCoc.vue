@@ -17,14 +17,24 @@ css({
     justifyContent: 'center',
     gap: '36px',
     'a': {
+      padding: '4px 0',
+      textDecoration: 'none',
+      color: '{color.white}',
       fontSize: '18px',
     },
   },
   '@media(max-width: 1023px)': {
     gap: '24px',
-    '.past-root': {
+    '.doc-root': {
       'a': {
         fontSize: '14px',
+      },
+    },
+  },
+  '@media(min-width: 768px)': {
+    '.doc-root': {
+      'a': {
+        textDecoration: 'underline',
       },
     },
   },

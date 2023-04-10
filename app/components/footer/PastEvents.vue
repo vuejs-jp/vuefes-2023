@@ -19,6 +19,9 @@ css({
     justifyContent: 'center',
     columnGap: '60px',
     'a': {
+      padding: '4px 0',
+      textDecoration: 'underline',
+      color: '{color.white}',
       fontSize: '18px',
     },
   },

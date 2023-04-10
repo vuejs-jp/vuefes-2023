@@ -61,8 +61,10 @@ css({
     height: '128px',
     color: '{color.vue.blue}',
     background: '#F2F7FF',
-    border: '1px solid {color.vue.blue}',
     borderRadius: '8px',
+    '&::placeholder': {
+      fontWeight: 500,
+    },
   },
   '.error': {
     marginTop: '10px',

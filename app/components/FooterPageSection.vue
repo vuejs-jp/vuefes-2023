@@ -40,6 +40,7 @@ css({
     backgroundPosition: '50% 100%',
     display: 'grid',
     placeItems: 'center',
+    overflow: 'hidden',
   },
   '.footer-vuefes-logo': {
     margin: 0,

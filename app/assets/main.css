@@ -22,6 +22,10 @@ body {
   font-family: 'din-2014', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 main {
   padding: 0;
   margin: 0;

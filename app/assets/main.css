@@ -2,6 +2,19 @@
 
 @import './fonts.css';
 
+:root {
+  --header-height: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 body {
   padding: 0;
   margin: 0;

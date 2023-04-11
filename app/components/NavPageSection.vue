@@ -7,7 +7,7 @@ import ContactLinks from '~/components/footer/ContactLinks.vue'
 import PastEventsMobile from '~/components/footer/PastEventsMobile.vue'
 import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
 import { useNav } from '~/composables/useNav'
-import { navLinks } from '~/utils/constants'
+import { conferenceTitle, navLinks } from '~/utils/constants'
 
 const { navRef, showNav } = useNav()
 
@@ -25,9 +25,12 @@ const toggleMenu = () => (showMenu.value = !showMenu.value)
     "
   >
     <div class="nav-root">
-      <nuxt-link to="/" aria-label="top">
-        <VueFesLogo />
-      </nuxt-link>
+      <h1>
+        <nuxt-link to="/" aria-label="top">
+          <VueFesLogo />
+        </nuxt-link>
+        <span class="sr-only">{{ conferenceTitle }}</span>
+      </h1>
       <div v-if="$device.isDesktop || $device.isTablet" class="links">
         <ul v-for="l in navLinks" :key="l.link">
           <li>
@@ -149,6 +152,14 @@ css({
         },
       },
     },
+  },
+  '.sr-only': {
+    position: 'absolute',
+    left: '-10000px',
+    top: 'auto',
+    width: '1px',
+    height: '1px',
+    overflow: 'hidden',
   },
   '@media(min-width: 768px)': {
     '.nav-root': {

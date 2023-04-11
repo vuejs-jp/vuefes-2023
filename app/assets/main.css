@@ -3,5 +3,13 @@
 @import './fonts.css';
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: 'din-2014', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  border: none;
 }

@@ -306,9 +306,11 @@ css({
     paddingTop: '52px',
   },
   '@media(max-width: 767px)': {
-    'ul': {
+    '.explain': {
       'ul': {
-        paddingLeft: '18px',
+        'ul': {
+          paddingLeft: '18px',
+        },
       },
     },
   },

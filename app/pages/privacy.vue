@@ -231,7 +231,7 @@ useHead({
         <p style="margin-bottom: 60px">
           当カンファレンスは、収集した個人情報を個人情報保護法に基づき業務委託先以外の第三者に対して開示又は提供しないものとします。ただし、以下に該当する場合は、この限りではありません。
         </p>
-        <ul style="margin-bottom: 30px">
+        <ul>
           <li class="disc">2023年4月13日 制定・施行</li>
         </ul>
       </div>
@@ -259,7 +259,7 @@ css({
   '.explain': {
     display: 'grid',
     placeItems: 'flex-start',
-    margin: '60px 0 80px',
+    margin: '80px 0',
     'h2': {
       color: '{color.vue.blue}',
       fontWeight: 700,
@@ -303,7 +303,6 @@ css({
   '.back': {
     display: 'grid',
     placeItems: 'center',
-    paddingTop: '52px',
   },
   '@media(max-width: 767px)': {
     '.explain': {

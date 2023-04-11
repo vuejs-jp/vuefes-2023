@@ -99,7 +99,7 @@ css({
   '.explain': {
     display: 'grid',
     placeItems: 'flex-start',
-    margin: '60px 0 80px',
+    margin: '80px 0',
     'h2': {
       color: '{color.vue.blue}',
       fontWeight: 700,
@@ -117,7 +117,6 @@ css({
   '.back': {
     display: 'grid',
     placeItems: 'center',
-    paddingTop: '52px',
   },
 })
 </style>

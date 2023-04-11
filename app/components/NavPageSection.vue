@@ -11,8 +11,17 @@ import { conferenceTitle, navLinks } from '~/utils/constants'
 
 const { navRef, showNav } = useNav()
 
+const htmlRef = ref()
 const showMenu = ref(false)
-const toggleMenu = () => (showMenu.value = !showMenu.value)
+
+const toggleMenu = () => {
+  showMenu.value = !showMenu.value
+  htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
+}
+
+onMounted(function () {
+  htmlRef.value = document.querySelector('html')
+})
 </script>
 
 <template>

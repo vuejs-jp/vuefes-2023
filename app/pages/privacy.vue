@@ -253,7 +253,7 @@ css({
     'p': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '18px',
+      fontSize: '16px',
     },
   },
   '.explain': {
@@ -310,6 +310,13 @@ css({
         'ul': {
           paddingLeft: '18px',
         },
+      },
+    },
+  },
+  '@media(min-width: 768px)': {
+    '.privacy-root': {
+      'p': {
+        fontSize: '18px',
       },
     },
   },

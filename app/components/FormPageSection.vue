@@ -104,7 +104,7 @@ css({
     'p': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '20px',
+      fontSize: '16px',
       'a': {
         color: '{color.vue.green}',
         '&:hover': {

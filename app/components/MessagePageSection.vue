@@ -102,12 +102,12 @@ css({
   '.text': {
     marginTop: '32px',
     'p': {
-      fontSize: 'calc(18*{fontSize.base})',
+      fontSize: '18px',
       lineHeight: '1.8',
       '& + &': {
         marginTop: '1.8em',
       },
-    }
+    },
   },
   '.representative': {
     marginTop: '24px',
@@ -125,6 +125,9 @@ css({
     '.message-body': {
       borderRadius: '60px',
     },
+    'p': {
+      fontSize: '16px',
+    }
   },
 })
 </style>

@@ -22,11 +22,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <h1 :id="id" class="title">
+  <h2 :id="id" class="title">
     <span class="title-main">{{ title }}</span>
     <br />
     <span class="title-sub">{{ yamatoTitle }}</span>
-  </h1>
+  </h2>
 </template>
 
 <style lang="ts" scoped>
@@ -37,14 +37,14 @@ css({
   },
   '.title-main': {
     color: (props) => `{color.${props.color}}`,
-    fontSize: 'calc(40*{fontSize.base})',
+    fontSize: '40px',
     fontWeight: 'bold',
     lineHeight: '1',
   },
   '.title-sub': {
     textAlign: 'center',
     color: (props) => `{color.${props.color}}`,
-    fontSize: 'calc(20*{fontSize.base})',
+    fontSize: '20px',
     lineHeight: '1',
     marginTop: '18px',
     display: 'grid',
@@ -58,6 +58,14 @@ css({
       background: (props) => `{color.${props.color}}`,
       width: '96px',
       height: '1px',
+    },
+  },
+  '@media(min-width: 768px)': {
+    '.title-main': {
+      fontSize: 'calc(40*{fontSize.base})',
+    },
+    '.title-sub': {
+      fontSize: 'calc(20*{fontSize.base})',
     },
   },
 })

@@ -63,7 +63,7 @@ css({
     'p': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '18px',
+      fontSize: '16px',
       lineHeight: '180%'
     },
   },
@@ -120,6 +120,13 @@ css({
     },
     '.link-box': {
       flexDirection: 'column'
+    },
+  },
+  '@media(min-width: 768px)': {
+    '.subtitle': {
+      'p': {
+        fontSize: '18px',
+      },
     },
   },
 })

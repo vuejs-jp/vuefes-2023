@@ -93,7 +93,7 @@ css({
     'p': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '18px',
+      fontSize: '16px',
     },
   },
   '.explain': {
@@ -117,6 +117,13 @@ css({
   '.back': {
     display: 'grid',
     placeItems: 'center',
+  },
+  '@media(min-width: 768px)': {
+    '.coc-root': {
+      'p': {
+        fontSize: '18px',
+      },
+    },
   },
 })
 </style>

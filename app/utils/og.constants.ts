@@ -62,12 +62,12 @@ export const generalOg = (oGProp: OGProp = {}): Meta[] => {
     {
       hid: 'og:image',
       name: 'og:image',
-      content: image ? image : `${linkUrl}img/og-image.png`,
+      content: image ? image : `${linkUrl}og/top.png`,
     },
     {
       hid: 'og:image:secure_url',
       name: 'og:image:secure_url',
-      content: image ? image : `${linkUrl}img/og-image.png`,
+      content: image ? image : `${linkUrl}og/top.png`,
     },
   ]
 }
@@ -113,7 +113,7 @@ export const twitterOg = (oGProp: OGProp = {}): Meta[] => {
     {
       hid: 'twitter:image',
       name: 'twitter:image',
-      content: image ? image : `${linkUrl}img/og-image.png`,
+      content: image ? image : `${linkUrl}og/top.png`,
     },
   ]
 }

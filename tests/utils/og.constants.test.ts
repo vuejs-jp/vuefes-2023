@@ -39,12 +39,12 @@ describe('generalOg', () => {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://vuefes.jp/2023/img/og-image.png',
+        content: 'https://vuefes.jp/2023/og/top.png',
       },
       {
         hid: 'og:image:secure_url',
         name: 'og:image:secure_url',
-        content: 'https://vuefes.jp/2023/img/og-image.png',
+        content: 'https://vuefes.jp/2023/og/top.png',
       },
     ])
   })
@@ -129,7 +129,7 @@ describe('twitterOg', () => {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://vuefes.jp/2023/img/og-image.png',
+        content: 'https://vuefes.jp/2023/og/top.png',
       },
     ])
   })
@@ -199,12 +199,12 @@ describe('createOg', () => {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://vuefes.jp/2023/img/og-image.png',
+        content: 'https://vuefes.jp/2023/og/top.png',
       },
       {
         hid: 'og:image:secure_url',
         name: 'og:image:secure_url',
-        content: 'https://vuefes.jp/2023/img/og-image.png',
+        content: 'https://vuefes.jp/2023/og/top.png',
       },
       {
         hid: 'twitter:description',
@@ -240,7 +240,7 @@ describe('createOg', () => {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://vuefes.jp/2023/img/og-image.png',
+        content: 'https://vuefes.jp/2023/og/top.png',
       },
     ])
   })

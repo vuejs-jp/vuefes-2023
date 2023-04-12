@@ -108,6 +108,7 @@ css({
       lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
+        textDecoration: 'underline',
         '&:hover': {
           transition: '.2s',
         },

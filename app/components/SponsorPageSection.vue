@@ -2,8 +2,8 @@
 
 <template>
   <section>
-    <div class="sponsor-root">
-      <SectionTitle id="sponsor" color="vue.blue" title="Sponsors" yamato-title="スポンサー" />
+    <div class="sponsors-root">
+      <SectionTitle id="sponsors" color="vue.blue" title="Sponsors" yamato-title="スポンサー" />
       <div class="subtitle">
         <p>
           Vue.js に関わる人々が集まる Vue Fes Japan 2023
@@ -20,7 +20,7 @@
           申し込みフォーム
         </a>
         <a
-          class="base-link sponsor-link"
+          class="base-link sponsors-link"
           href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
@@ -49,7 +49,7 @@ css({
     padding: '120px 0',
     background: '#EEEEEE'
   },
-  '.sponsor-root': {
+  '.sponsors-root': {
     display: 'grid',
     gap: '40px',
     maxWidth: '768px',
@@ -94,7 +94,7 @@ css({
       transition: '.2s',
     },
   },
-  '.sponsor-link': {
+  '.sponsors-link': {
     background: '{color.white}',
     color: '{color.vue.blue}',
     border: '2px solid {color.vue.blue}',

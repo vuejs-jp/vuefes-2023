@@ -105,6 +105,7 @@ css({
       color: '{color.vue.blue}',
       fontWeight: 500,
       fontSize: '16px',
+      lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
         '&:hover': {

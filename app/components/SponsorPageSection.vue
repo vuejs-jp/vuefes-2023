@@ -39,7 +39,7 @@
       </p>
     </div>
   </section>
-  <VoiceAudioSpectrum />
+  <VoiceAudioSpectrum is-wave />
 </template>
 
 <style lang="ts" scoped>

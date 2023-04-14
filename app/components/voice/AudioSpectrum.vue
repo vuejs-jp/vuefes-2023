@@ -1,19 +1,40 @@
 <script lang="ts" setup>
-const max = 140
-const barsList = Array.from(Array(max)).map((_, index) => {
-  return {
-    id: index,
-    animationDelay: `${Math.random() * 1}s`,
-    animationDuration: `${2 + Math.random() * 1}s`,
-    height: `${Math.random() * 50}px`,
-  }
+import { computed, ref } from 'vue'
+const props = defineProps({
+  isWave: {
+    type: Boolean,
+    default: false,
+  },
+})
+const max = 120
+const isWave = ref(props.isWave)
+const barsList = computed(() => {
+  return Array.from(Array(max)).map((_, index) => {
+    const animationDelay: string = isWave.value ? `${index * 0.05}s` : `${Math.random() * 1}s`
+    const animationDuration: string = isWave.value ? '4.0s' : `${2 + Math.random() * 1}s`
+    return {
+      id: index,
+      animationDelay,
+      animationDuration,
+      height: `${Math.random() * 50}px`,
+      peakWave: `${60 + Math.random() * 60}px`,
+    }
+  })
 })
 </script>
 
 <template>
-  <div class="voice">
+  <div class="voice" :class="{ '-wave': isWave }">
     <ul class="bars">
-      <li v-for="b in barsList" :key="`bar-${b.id}`" class="bar" :style="{ height: b.height }">
+      <li
+        v-for="b in barsList"
+        :key="`bar-${b.id}`"
+        class="bar"
+        :style="{
+          height: b.height,
+          '--height-peakwave': b.peakWave,
+        }"
+      >
         <p
           :style="{
             'animation-delay': `${b.animationDelay}`,
@@ -28,9 +49,16 @@ const barsList = Array.from(Array(max)).map((_, index) => {
 <style lang="ts" scoped>
 css({
   '.voice': {
+    '--height-peak1': '120%',
+    '--height-peak2': '140%',
+    '--height-peakwave': '0%',
+
     position: 'relative',
     zIndex: 2,
     mixBlendMode: 'multiply',
+  },
+  '.voice.-wave .bar p': {
+    animation: 'wave ease-out infinite',
   },
   '.bars': {
     display: 'flex',
@@ -54,25 +82,39 @@ css({
     height: '100%',
     backgroundColor: '#eee',
     animation: 'beats infinite alternate',
+    // transition: 'all 0.5s ease',
     position: 'absolute',
     bottom: 0,
     transform: 'translateY(50%)',
-
   },
   '@keyframes beats': {
     '0%': {
       height: '100%',
     },
     '30%': {
-      height: '120%',
+      height: '{height.peak1}',
     },
     '70%': {
       height: '80%',
 
     },
     '90%': {
-      height: '140%',
+      height: '{height.peak2}',
 
+    },
+    '100%': {
+      height: '100%',
+    },
+  },
+  '@keyframes wave': {
+    '0%': {
+      height: '100%',
+    },
+    '10%': {
+      height: '{height.peakwave}',
+    },
+    '20%': {
+      height: '100%',
     },
     '100%': {
       height: '100%',

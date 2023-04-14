@@ -11,7 +11,7 @@ const isWave = ref(props.isWave)
 const barsList = computed(() => {
   return Array.from(Array(max)).map((_, index) => {
     const animationDelay: string = isWave.value ? `${index * 0.05}s` : `${Math.random() * 1}s`
-    const animationDuration: string = isWave.value ? '4.0s' : `${2 + Math.random() * 1}s`
+    const animationDuration: string = isWave.value ? '8.0s' : `${2 + Math.random() * 1}s`
     return {
       id: index,
       animationDelay,
@@ -59,6 +59,7 @@ css({
   },
   '.voice.-wave .bar p': {
     animation: 'wave ease-out infinite',
+    height: '0px',
   },
   '.bars': {
     display: 'flex',
@@ -108,16 +109,16 @@ css({
   },
   '@keyframes wave': {
     '0%': {
-      height: '100%',
+      height: '0%',
     },
     '10%': {
       height: '{height.peakwave}',
     },
-    '20%': {
-      height: '100%',
+    '40%': {
+      height: '0%',
     },
     '100%': {
-      height: '100%',
+      height: '0%',
     },
   }
 })

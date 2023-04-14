@@ -1,13 +1,12 @@
 <script lang="ts" setup>
+import { computed, ref } from 'vue'
 const max = 120
 const barsList = Array.from(Array(max)).map((_, index) => {
-  const num = Math.ceil(Math.random() * max)
   return {
     id: index,
-    cls: `-type--${num}`,
-    animationDelay: `${Math.random() * 3}s`,
-    animationDuration: `${2 + Math.random() * 9}s`,
-    height: `${10 + Math.random() * 100}px`,
+    animationDelay: `${Math.random() * 1}s`,
+    animationDuration: `${2 + Math.random() * 5}s`,
+    height: `${Math.random() * 60}px`,
   }
 })
 </script>
@@ -15,13 +14,7 @@ const barsList = Array.from(Array(max)).map((_, index) => {
 <template>
   <div class="voice">
     <ul class="bars">
-      <li
-        v-for="b in barsList"
-        class="bar"
-        :class="{ [b.cls]: true }"
-        :style="{ height: b.height }"
-        :key="`bar-${b.id}`"
-      >
+      <li v-for="b in barsList" :key="`bar-${b.id}`" class="bar" :style="{ height: b.height }">
         <p
           :style="{
             'animation-delay': `${b.animationDelay}`,
@@ -38,7 +31,7 @@ css({
   '.voice': {
     position: 'relative',
     zIndex: 2,
-    mixBlendMode: 'multiply'
+    mixBlendMode: 'multiply',
   },
   '.bars': {
     display: 'flex',
@@ -52,12 +45,13 @@ css({
   '.bar': {
     margin: '0 6px',
     height: '0px',
+    width: '5px',
   },
   '.bar p': {
     width: '5px',
-    height: '0%',
+    height: '100%',
     backgroundColor: '#eee',
-    animation: 'beats infinite ease-in-out alternate',
+    animation: 'beats infinite alternate',
     position: 'absolute',
     bottom: 0,
     transform: 'translateY(50%)',
@@ -65,17 +59,21 @@ css({
   },
   '@keyframes beats': {
     '0%': {
-      height: '0%',
+      height: '100%',
     },
-    '60%': {
-      height: '90%',
+    '30%': {
+      height: '200%',
     },
-    '80%': {
-      height: '30%',
+    '70%': {
+      height: '60%',
+
+    },
+    '90%': {
+      height: '180%',
 
     },
     '100%': {
-      height: '0%',
+      height: '100%',
     },
   }
 })

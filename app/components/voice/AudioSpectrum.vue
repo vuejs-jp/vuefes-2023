@@ -5,8 +5,8 @@ const barsList = Array.from(Array(max)).map((_, index) => {
   return {
     id: index,
     animationDelay: `${Math.random() * 1}s`,
-    animationDuration: `${2 + Math.random() * 5}s`,
-    height: `${Math.random() * 60}px`,
+    animationDuration: `${2 + Math.random() * 1}s`,
+    height: `${Math.random() * 50}px`,
   }
 })
 </script>
@@ -62,14 +62,14 @@ css({
       height: '100%',
     },
     '30%': {
-      height: '200%',
+      height: '120%',
     },
     '70%': {
-      height: '60%',
+      height: '80%',
 
     },
     '90%': {
-      height: '180%',
+      height: '140%',
 
     },
     '100%': {

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-const max = 120
+const max = 140
 const barsList = Array.from(Array(max)).map((_, index) => {
   return {
     id: index,
@@ -43,9 +42,12 @@ css({
 
   },
   '.bar': {
-    margin: '0 6px',
+    display: 'block',
+    margin: '0 3px',
     height: '0px',
     width: '5px',
+    mixBlendMode: 'multiply', // for Safari
+    flex: '0 0 auto'
   },
   '.bar p': {
     width: '5px',

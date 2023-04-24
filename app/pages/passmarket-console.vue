@@ -1,112 +1,25 @@
 <script setup lang="ts">
-/* eslint vuejs-accessibility/no-static-element-interactions: 0 */
-import { onMounted, ref } from 'vue'
-import * as XLSX from 'xlsx'
+import { usePassMarketUpload } from '~/composables/usePassMarketUpload'
+import { AdditionItem, ListMember } from '~/types/app'
+
+const memberData = ref<ListMember[]>()
+const members = ref<AdditionItem[]>()
+
 const isDragEnter = ref(false)
+
+const { convertMembers, fetchSheet } = usePassMarketUpload()
 
 enum FileName {
   ADDITION_CSV = 'addition.csv',
   LIST_XLS = 'list.xls',
 }
 
-/**
- * list.xls colums
- */
-type ListRow = {
-  __EMPTY: string // "チケットID"
-  __EMPTY_1: string // "参加者名"
-  __EMPTY_10: string // "受付状況"
-  __EMPTY_11: string // "受付日"
-  __EMPTY_12: string // "受付時刻"
-  __EMPTY_2: string // "チケット名"
-  __EMPTY_3: string // "申込日"
-  __EMPTY_4: string // "申込時刻"
-  __EMPTY_5: string // "座席番号"
-  __EMPTY_6: string // "外部コード"
-  __EMPTY_7: string // "割引コード"
-  __EMPTY_8: string // "価格"
-  __EMPTY_9: string // "注文番号"
-}
-/**
- * list.xls data
- */
-type ListMember = {
-  ticketId: string
-  ticketName: string
-  userName: string
-  applyDate: string
-  orderId: string
-}
-/**
- * addition.csv data
- */
-type AdditionItem = {
-  orderId: string
-  applyTime: string
-  eventId: string
-  eventTitle: string
-  ticketId: string
-  password: string
-}
+const onFileInputChange = (event: Event) => {
+  const { target } = event
+  if (!(target instanceof HTMLInputElement)) return
 
-const createMemberListFromRowJson = async (file: File): Promise<ListMember[]> => {
-  const workbook = XLSX.read(await file.arrayBuffer())
-  const sheet = workbook.Sheets['Sheet1']
-  const rows = XLSX.utils.sheet_to_json(sheet) as ListRow[]
-  return rows
-    .filter((row: ListRow) => {
-      return row.__EMPTY.match(/^[A-Z]-[0-9]+$/)
-    })
-    .map((row: ListRow) => {
-      return {
-        ticketId: row.__EMPTY,
-        ticketName: row.__EMPTY_2,
-        userName: row.__EMPTY_1,
-        applyDate: row.__EMPTY_3,
-        orderId: row.__EMPTY_9,
-      }
-    })
-}
-
-const createAdditionListFromRowJson = async (file: File): Promise<AdditionItem[]> => {
-  return new Promise((resolve: (items: AdditionItem[]) => void) => {
-    const valueFilter = (value: string) => {
-      if (!value) return ''
-      return value.replace(/^"(.+)"$/, '$1').replace(/'/g, '')
-    }
-    const reader = new FileReader()
-    reader.onerror = () => {
-      alert(`could not read file -> ${file.name}`)
-    }
-    // ファイル読み取りに成功したとき
-    reader.onload = () => {
-      const rows = (reader.result as string).split('\n')
-      const itemRows = rows.slice(1)
-      const items = itemRows
-        .map((row: string) => {
-          const tmp = row.split(',')
-          return {
-            orderId: valueFilter(tmp[0]),
-            applyTime: valueFilter(tmp[1]),
-            eventId: valueFilter(tmp[3]),
-            eventTitle: valueFilter(tmp[4]),
-            ticketId: valueFilter(tmp[5]),
-            password: valueFilter(tmp[6]),
-          }
-        })
-        .filter((item: AdditionItem) => {
-          return item.orderId
-        })
-      resolve(items)
-    }
-    reader.readAsText(file, 'Shift_JIS')
-  })
-}
-
-const onFileInputChange = (payload: Event) => {
-  const t = payload.target as HTMLInputElement
-  if (t.files) {
-    checkFiles(Array.from(t.files))
+  if (target.files) {
+    checkFiles(Array.from(target.files))
   }
 }
 const onDropFile = (e: DragEvent) => {
@@ -116,16 +29,17 @@ const onDropFile = (e: DragEvent) => {
 }
 const checkFiles = async (files: File[]) => {
   if (files.length === 0) return
+
   const file = files[0]
   const filename = file.name
 
   if (filename === FileName.LIST_XLS) {
-    const members = await createMemberListFromRowJson(file)
-    console.log('members', members)
+    memberData.value = await fetchSheet(file)
+    console.log('memberData', memberData.value)
   }
   if (filename === FileName.ADDITION_CSV) {
-    const items = await createAdditionListFromRowJson(file)
-    console.log('items', items)
+    members.value = await convertMembers(file)
+    console.log('members', members.value)
   }
   alert(`this file is not acceptable -> ${filename}`)
 }
@@ -144,6 +58,8 @@ onMounted(() => {
     <label
       for="fileupload"
       draggable="true"
+      role="button"
+      tabindex="0"
       class="uploadarea"
       :class="{ '-isDragEnter': isDragEnter }"
       @dragenter="() => (isDragEnter = true)"
@@ -165,29 +81,53 @@ onMounted(() => {
         @change="onFileInputChange"
       />
     </label>
+    <div class="resultarea">
+      <div v-if="memberData">
+        <ul>
+          <li v-for="(member, index) in memberData" :key="index">
+            {{ member }}
+          </li>
+        </ul>
+      </div>
+      <div v-if="members">
+        <ul>
+          <li v-for="(member, index) in members" :key="index">
+            {{ member }}
+          </li>
+        </ul>
+      </div>
+      <div v-if="!memberData && !members" class="noresult">Upload your CSV file from the left</div>
+    </div>
   </main>
 </template>
 
 <style lang="ts" scoped>
 css({
+  'main': {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    verticalAlign: 'middle',
+    height: '100vh',
+  },
   '.uploadarea': {
     position: 'relative',
     display: 'block',
     margin: '40px auto',
     textAlign: 'center',
-    width: '400px',
-    height: '400px',
+    width: '40%',
+    height: '100vh',
     borderRadius: '12px',
     border: 'dotted 4px #ccc',
     cursor: 'pointer',
     color: '#ccc',
     '&:hover': {
-      border: 'dotted 4px var(--color-vue-blue)',
-      color: 'var(--color-vue-blue)'
+      border: 'dotted 4px {color.vue.blue}',
+      color: '{color.vue.blue}'
     },
     '&.-isDragEnter': {
-      border: 'dotted 4px var(--color-vue-blue)',
-      color: 'var(--color-vue-blue)'
+      border: 'dotted 4px {color.vue.blue}',
+      color: '{color.vue.blue}'
     }
   },
   '.uploadarea input': {
@@ -202,7 +142,22 @@ css({
     margin: '0',
     width: '100%',
     textAlign: 'center',
-  }
-
+  },
+  '.resultarea': {
+    width: '60%',
+    height: '100vh',
+  },
+  '.resultarea ul ul': {
+    display: 'flex',
+    gap: '16px',
+  },
+  '.resultarea .noresult': {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    verticalAlign: 'middle',
+    height: '100vh',
+    color: '{color.vue.blue}',
+  },
 })
 </style>

@@ -81,29 +81,43 @@ onMounted(() => {
         @change="onFileInputChange"
       />
     </label>
+    <div class="resultarea">
+      <div v-if="memberData">{{ memberData }}</div>
+      <div v-if="members">{{ members }}</div>
+      <div v-if="!memberData && !members" class="noresult">
+        Upload your CSV file from the left
+      </div>
+    </div>
   </main>
 </template>
 
 <style lang="ts" scoped>
 css({
+  'main': {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    verticalAlign: 'middle',
+    height: '100vh',
+  },
   '.uploadarea': {
     position: 'relative',
     display: 'block',
     margin: '40px auto',
     textAlign: 'center',
-    width: '400px',
-    height: '400px',
+    width: '40%',
+    height: '100vh',
     borderRadius: '12px',
     border: 'dotted 4px #ccc',
     cursor: 'pointer',
     color: '#ccc',
     '&:hover': {
-      border: 'dotted 4px var(--color-vue-blue)',
-      color: 'var(--color-vue-blue)'
+      border: 'dotted 4px {color.vue.blue}',
+      color: '{color.vue.blue}'
     },
     '&.-isDragEnter': {
-      border: 'dotted 4px var(--color-vue-blue)',
-      color: 'var(--color-vue-blue)'
+      border: 'dotted 4px {color.vue.blue}',
+      color: '{color.vue.blue}'
     }
   },
   '.uploadarea input': {
@@ -118,7 +132,18 @@ css({
     margin: '0',
     width: '100%',
     textAlign: 'center',
-  }
-
+  },
+  '.resultarea': {
+    width: '60%',
+    height: '100vh',
+  },
+  '.resultarea .noresult': {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    verticalAlign: 'middle',
+    height: '100vh',
+    color: '{color.vue.blue}',
+  },
 })
 </style>

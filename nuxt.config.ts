@@ -46,6 +46,8 @@ export default defineNuxtConfig({
       newtSpaceUid: process.env.NUXT_NEWT_SPACE_UID,
       newtFormUid: process.env.NUXT_NEWT_FORM_UID,
       reCaptchaWebsiteKey: process.env.NUXT_RECAPTCHA_WEBSITE_KEY,
+      // feature flags
+      sampleFeature: process.env.NUXT_SAMPLE_FEATURE,
     },
   },
 })

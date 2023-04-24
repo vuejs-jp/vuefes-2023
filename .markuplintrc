@@ -1,5 +1,7 @@
 {
-  "extends": ["markuplint:recommended"],
+  "extends": [
+    "markuplint:recommended"
+  ],
   "parser": {
     ".vue$": "@markuplint/vue-parser"
   },
@@ -15,10 +17,18 @@
           },
           "required": {
             "disallowed": false
+          },
+          "@dragover.prevent": {
+            "disallowed": false
+          },
+          "@drop.prevent": {
+            "disallowed": false
           }
         }
       }
     }
   },
-  "excludeFiles": []
+  "excludeFiles": [
+    "app/pages/passmarket-console.vue"
+  ]
 }

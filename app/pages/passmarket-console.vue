@@ -82,11 +82,21 @@ onMounted(() => {
       />
     </label>
     <div class="resultarea">
-      <div v-if="memberData">{{ memberData }}</div>
-      <div v-if="members">{{ members }}</div>
-      <div v-if="!memberData && !members" class="noresult">
-        Upload your CSV file from the left
+      <div v-if="memberData">
+        <ul>
+          <li v-for="(member, index) in memberData" :key="index">
+            {{ member }}
+          </li>
+        </ul>
       </div>
+      <div v-if="members">
+        <ul>
+          <li v-for="(member, index) in members" :key="index">
+            {{ member }}
+          </li>
+        </ul>
+      </div>
+      <div v-if="!memberData && !members" class="noresult">Upload your CSV file from the left</div>
     </div>
   </main>
 </template>
@@ -136,6 +146,10 @@ css({
   '.resultarea': {
     width: '60%',
     height: '100vh',
+  },
+  '.resultarea ul ul': {
+    display: 'flex',
+    gap: '16px',
   },
   '.resultarea .noresult': {
     display: 'flex',

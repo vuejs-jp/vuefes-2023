@@ -18,3 +18,11 @@ useHead({
     <FooterPageSection />
   </main>
 </template>
+
+<style lang="ts" scoped>
+css({
+  'main': {
+    overflow: 'hidden',
+  },
+});
+</style>

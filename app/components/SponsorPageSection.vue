@@ -45,7 +45,6 @@
 <style lang="ts" scoped>
 css({
   'section': {
-    marginTop: '-90px',
     padding: '120px 0',
     background: '#EEEEEE'
   },

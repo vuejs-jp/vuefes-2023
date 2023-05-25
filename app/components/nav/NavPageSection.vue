@@ -33,7 +33,13 @@ onMounted(function () {
             <nuxt-link :to="`/${l.link}`">{{ l.text }}</nuxt-link>
           </li>
         </ul>
-        <a href="https://twitter.com/vuefes" aria-label="twitter" target="_blank" rel="noreferrer">
+        <a
+          class="twitter"
+          href="https://twitter.com/vuefes"
+          aria-label="twitter"
+          target="_blank"
+          rel="noreferrer"
+        >
           <TwitterLogo />
         </a>
         <NavView :visible="showMenu" @toggle="toggleMenu" />
@@ -78,6 +84,9 @@ css({
       },
     },
   },
+  '.twitter':{
+    display: 'none',
+  },
   '.sr-only': {
     position: 'absolute',
     left: '-10000px',
@@ -97,6 +106,9 @@ css({
       'a': {
         padding: 0,
       },
+    },
+    '.twitter':{
+      display: 'block',
     },
   }
 })

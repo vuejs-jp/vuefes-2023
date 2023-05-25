@@ -1,0 +1,103 @@
+<script lang="ts" setup>
+import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
+import TwitterLogo from '~/assets/logo/twitter_logo.svg'
+import NavView from './NavView.vue'
+import { useNav } from '~/composables/useNav'
+import { conferenceTitle, navLinks } from '~/utils/constants'
+
+const { navRef } = useNav()
+const htmlRef = ref()
+const showMenu = ref(false)
+const toggleMenu = () => {
+  showMenu.value = !showMenu.value
+  htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
+}
+
+onMounted(function () {
+  htmlRef.value = document.querySelector('html')
+})
+</script>
+
+<template>
+  <nav ref="navRef">
+    <div class="nav-root">
+      <h1>
+        <nuxt-link to="/" aria-label="top">
+          <VueFesLogo />
+        </nuxt-link>
+        <span class="sr-only">{{ conferenceTitle }}</span>
+      </h1>
+      <div class="links">
+        <ul v-for="l in navLinks" :key="l.link">
+          <li>
+            <nuxt-link :to="`/${l.link}`">{{ l.text }}</nuxt-link>
+          </li>
+        </ul>
+        <a href="https://twitter.com/vuefes" aria-label="twitter" target="_blank" rel="noreferrer">
+          <TwitterLogo />
+        </a>
+        <NavView :visible="showMenu" @toggle="toggleMenu" />
+      </div>
+    </div>
+  </nav>
+</template>
+
+<style lang="ts" scoped>
+css({
+  'nav': {
+    position: 'fixed',
+    top: 0,
+    zIndex: 10,
+    width: '100%',
+    backgroundColor: 'rgba(53, 73, 94, 0.9)',
+  },
+  '.nav-root': {
+    padding: '24px 32px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  '.links': {
+    display: 'flex',
+    columnGap: '40px',
+    'ul': {
+      display: 'none',
+    },
+    'a': {
+      color: '{color.white}',
+      '&:hover': {
+        color: '{color.vue.green}',
+        transition: '.2s',
+      },
+      'svg': {
+        fill: '{color.white}',
+        '&:hover': {
+          fill: '{color.vue.green}',
+          transition: '.2s',
+        },
+      },
+    },
+  },
+  '.sr-only': {
+    position: 'absolute',
+    left: '-10000px',
+    top: 'auto',
+    width: '1px',
+    height: '1px',
+    overflow: 'hidden',
+  },
+  '@tablet': {
+     '.nav-root': {
+      padding: '16px 24px',
+    },
+    '.links': {
+       'ul': {
+        display: 'block',
+      },
+      'a': {
+        padding: 0,
+      },
+    },
+  }
+})
+</style>

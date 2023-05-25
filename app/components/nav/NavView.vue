@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import MenuLogo from '~/assets/logo/menu_logo.svg'
 import CrossLogo from '~/assets/logo/cross_logo.svg'
 import ContactLinks from '~/components/footer/ContactLinks.vue'
 import PastEventsMobile from '~/components/footer/PastEventsMobile.vue'
@@ -45,12 +44,6 @@ const emitToggle = () => {
       </button>
     </div>
   </transition>
-
-  <div class="links">
-    <button v-if="!props.visible" @click="emitToggle">
-      <MenuLogo />
-    </button>
-  </div>
 </template>
 
 <style lang="ts" scoped>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import MenuLogo from '~/assets/logo/menu_logo.svg'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import NavView from './NavView.vue'
@@ -42,6 +43,10 @@ onMounted(function () {
         >
           <TwitterLogo />
         </a>
+        <!-- hamburger-menu -->
+        <button v-if="!showMenu" class="hamburger-menu" @click="toggleMenu">
+          <MenuLogo />
+        </button>
         <NavView :visible="showMenu" @toggle="toggleMenu" />
       </div>
     </div>
@@ -109,6 +114,11 @@ css({
     },
     '.twitter':{
       display: 'block',
+    },
+  },
+  '@desktop': {
+    '.hamburger-menu':{
+      display: 'none',
     },
   }
 })

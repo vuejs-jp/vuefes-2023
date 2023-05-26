@@ -89,9 +89,6 @@ css({
       },
     },
   },
-  '.twitter':{
-    display: 'none',
-  },
   '.sr-only': {
     position: 'absolute',
     left: '-10000px',

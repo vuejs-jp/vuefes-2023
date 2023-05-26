@@ -19,20 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install packages
+        uses: ./.github/actions/install-packages
 
       - name: Lint check
         run: pnpm run lint
@@ -47,20 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install packages
+        uses: ./.github/actions/install-packages
 
       - name: Type check
         run: pnpm run typecheck
@@ -75,20 +51,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install packages
+        uses: ./.github/actions/install-packages
 
       - name: Unit test
         run: pnpm run test

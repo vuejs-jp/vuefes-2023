@@ -1,0 +1,18 @@
+runs:
+  using: 'Composite'
+  steps:
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 7
+        run_install: false
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash

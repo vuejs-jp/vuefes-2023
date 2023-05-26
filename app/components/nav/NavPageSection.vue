@@ -104,6 +104,11 @@ css({
      '.nav-root': {
       padding: '16px 24px',
     },
+  },
+  '@desktop': {
+    '.twitter':{
+      display: 'block',
+    },
     '.links': {
        'ul': {
         display: 'block',
@@ -112,11 +117,6 @@ css({
         padding: 0,
       },
     },
-    '.twitter':{
-      display: 'block',
-    },
-  },
-  '@desktop': {
     '.hamburger-menu':{
       display: 'none',
     },

@@ -93,23 +93,5 @@ css({
     right: '32px',
     zIndex: 10,
   },
-  '.links': {
-    display: 'flex',
-    columnGap: '40px',
-    'a': {
-      color: '{color.white}',
-      '&:hover': {
-        color: '{color.vue.green}',
-        transition: '.2s',
-      },
-      'svg': {
-        fill: '{color.white}',
-        '&:hover': {
-          fill: '{color.vue.green}',
-          transition: '.2s',
-        },
-      },
-    },
-  },
 })
 </style>

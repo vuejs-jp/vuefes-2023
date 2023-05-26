@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavPageSection from '~/components/NavPageSection.vue'
+import NavPageSection from '~/components/nav/NavPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import PageTitle from '~/components/PageTitle.vue'
 import LinkButton from '~/components/forms/LinkButton.vue'

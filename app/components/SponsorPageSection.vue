@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import RoundButton from '@/components/button/RoundButton.vue'
+</script>
 
 <template>
   <section>
@@ -11,22 +13,16 @@
         </p>
       </div>
       <div class="link-box">
-        <a
-          class="base-link contact-link"
-          href="https://forms.gle/rxHNdjFDnFGxzf5SA"
-          target="_blank"
-          rel="noreferrer"
+        <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer"
+          >申し込みフォーム</RoundButton
         >
-          申し込みフォーム
-        </a>
-        <a
-          class="base-link sponsors-link"
+        <RoundButton
           href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
+          is-secondry
+          >スポンサー資料</RoundButton
         >
-          スポンサー資料
-        </a>
       </div>
       <p class="twitter-text">
         詳細情報は、<a
@@ -45,7 +41,7 @@
 <style lang="ts" scoped>
 css({
   'section': {
-    padding: '120px 0',
+    padding: '120px 40px',
     background: '#EEEEEE'
   },
   '.sponsors-root': {
@@ -68,39 +64,10 @@ css({
   },
   '.link-box': {
     display: 'flex',
-    gap: '40px'
-  },
-  '.base-link': {
-    margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
+    flexWrap: 'wrap',
+    padding: '0 16px',
     justifyContent: 'center',
-    alignItems: 'center',
-    maxWidth: '344px',
-    width: '100%',
-    height: '88px',
-    borderRadius: '50px',
-    fontWeight: 'bold',
-    fontSize: '20px',
-    cursor: 'pointer',
-  },
-  '.contact-link': {
-    background: '{color.vue.green}',
-    boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.24)',
-    color: '{color.white}',
-    '&:hover': {
-      background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)), {color.vue.green}',
-      transition: '.2s',
-    },
-  },
-  '.sponsors-link': {
-    background: '{color.white}',
-    color: '{color.vue.blue}',
-    border: '2px solid {color.vue.blue}',
-    '&:hover': {
-      background: 'rgba(53, 73, 94, 0.2)',
-      transition: '.2s',
-    }
+    gap: '40px'
   },
   '.twitter-text': {
     fontSize: '18px',
@@ -113,15 +80,7 @@ css({
       transition: '.2s',
     },
   },
-  '@media(max-width: 1023px)': {
-    'section': {
-      padding: '120px 40px',
-    },
-    '.link-box': {
-      flexDirection: 'column'
-    },
-  },
-  '@media(min-width: 768px)': {
+  '@tablet': {
     '.subtitle': {
       'p': {
         fontSize: '18px',

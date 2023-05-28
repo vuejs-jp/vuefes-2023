@@ -47,7 +47,7 @@ const onClick = (e: Event) => {
     /></a>
   </template>
   <template v-else>
-    <button :class="myclass" :type="props.type" @click="onClick"><slot /></button>
+    <button :class="myclass.join(' ')" :type="props.type" @click="onClick"><slot /></button>
   </template>
 </template>
 

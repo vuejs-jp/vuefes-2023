@@ -37,10 +37,8 @@ describe('top', () => {
     })
   })
   describe('content', () => {
-    beforeEach(() => {
-      cy.visit('/')
-    })
     it('main visual', () => {
+      cy.visit('/')
       cy.contains('a', '最新情報はTwitterでCheck!').should(
         'have.attr',
         'href',
@@ -49,6 +47,7 @@ describe('top', () => {
       cy.contains('Twitter ー @vuefes #vuefes')
     })
     it('message', () => {
+      cy.visit('/')
       cy.contains('h2', 'Message')
         .contains('想い')
         .closest('section')
@@ -57,6 +56,7 @@ describe('top', () => {
         })
     })
     it('sponsors', () => {
+      cy.visit('/')
       cy.contains('h2', 'Sponsors')
         .contains('スポンサー')
         .closest('section')

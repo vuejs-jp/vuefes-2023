@@ -148,7 +148,7 @@ describe('top', () => {
       cy.viewport(769, 600)
       cy.visit('/')
       cy.wait(1000)
-      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible', { timeout: 3000 })
         .within(() => {

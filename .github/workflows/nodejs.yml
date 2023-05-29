@@ -41,7 +41,7 @@ jobs:
       - name: Type check
         run: pnpm typecheck
 
-  test:
+  unit-test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -56,6 +56,19 @@ jobs:
 
       - name: Unit test
         run: pnpm test
+
+  integration-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.18.1]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install packages
+        uses: ./.github/actions/install-packages
 
       - name: Integration test
         run: pnpm cypress:ci

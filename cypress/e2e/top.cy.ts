@@ -149,6 +149,7 @@ describe('top', () => {
       cy.visit('/')
       cy.wait(1000)
       cy.get('.hamburger-menu').should('be.visible').click()
+      cy.wait(500)
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

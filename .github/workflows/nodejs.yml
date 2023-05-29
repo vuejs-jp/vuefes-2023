@@ -72,3 +72,6 @@ jobs:
 
       - name: Integration test
         run: pnpm cypress:ci
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3

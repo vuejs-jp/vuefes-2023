@@ -22,8 +22,10 @@
     "htmllint:fix": "markuplint \"./app/**/*.vue\" --config .markuplintrc --format",
     "typecheck": "vue-tsc --noEmit",
     "postinstall": "nuxt prepare",
-    "cypress:open": "start-server-and-test dev 3000 cypress open",
-    "cypress:ci": "start-server-and-test dev http://localhost:3000 cypress:run"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:dev": "start-test dev 3000 cypress:open",
+    "cypress:ci": "start-test dev 3000 cypress:run"
   },
   "devDependencies": {
     "@markuplint/vue-parser": "3.2.0",

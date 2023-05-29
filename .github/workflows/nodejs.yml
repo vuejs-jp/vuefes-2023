@@ -73,5 +73,8 @@ jobs:
       - name: Integration test
         run: pnpm cypress:ci
 
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v3
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress videos
+          path: ./cypress/videos

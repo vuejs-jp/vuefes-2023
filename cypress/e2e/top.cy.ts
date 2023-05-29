@@ -77,6 +77,7 @@ describe('top', () => {
   describe('form', () => {
     it('contact', () => {
       cy.visit('/')
+      cy.wait(2000)
       cy.contains('h2', 'Contact')
         .contains('お問い合わせ')
         .closest('section')

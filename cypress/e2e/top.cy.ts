@@ -149,9 +149,8 @@ describe('top', () => {
       cy.visit('/')
       cy.wait(1000)
       cy.get('.hamburger-menu').should('be.visible').click()
-      cy.wait(500)
       cy.get('.mobile-menu')
-        .should('be.visible')
+        .should('be.visible', { timeout: 3000 })
         .within(() => {
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')

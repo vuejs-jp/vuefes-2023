@@ -25,16 +25,26 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const isLink = Boolean(props.href)
-const myclass = ['button']
-if (props.isSecondry) {
-  myclass.push('-isSecondry')
-}
-if (props.class) {
-  myclass.push(props.class)
-}
+const myclass = computed(() => {
+  const cls = ['button']
+  if (props.isSecondry) {
+    cls.push('-isSecondry')
+  }
+  if (props.class) {
+    cls.push(props.class)
+  }
+  if (props.disabled) {
+    cls.push('-disabled')
+  }
+  return cls
+})
 const onClick = (e: Event) => {
   emit('click', e)
 }
@@ -42,12 +52,24 @@ const onClick = (e: Event) => {
 
 <template>
   <template v-if="isLink">
-    <a :class="myclass.join(' ')" :href="props.href" :rel="props.rel" :target="props.target"
+    <a
+      :class="myclass.join(' ')"
+      :href="props.href"
+      :rel="props.rel"
+      :target="props.target"
+      :aria-disabled="props.disabled"
       ><slot
     /></a>
   </template>
   <template v-else>
-    <button :class="myclass.join(' ')" :type="props.type" @click="onClick"><slot /></button>
+    <button
+      :class="myclass.join(' ')"
+      :type="props.type"
+      :disabled="props.disabled"
+      @click="onClick"
+    >
+      <slot />
+    </button>
   </template>
 </template>
 
@@ -69,7 +91,7 @@ css({
     '&:hover': {
       backgroundColor: '#64C397',
     },
-    '&[disabled]': {
+    '&[disabled],&.-disabled': {
       pointerEvents: 'none',
       boxShadow: 'none',
       backgroundColor: '#C9DAEA',
@@ -82,12 +104,12 @@ css({
         background: 'rgba(53, 73, 94, 0.2)',
         transition: '.2s',
       },
-      '&[disabled]': {
+      '&[disabled],&.-disabled': {
         backgroundColor: '#C9DAEA',
-        color: '#8fa6bf',
+        color: '{color.white}',
         border: 'none',
       },
-    }
+    },
   }
 })
 </style>

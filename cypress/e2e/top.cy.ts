@@ -77,7 +77,6 @@ describe('top', () => {
   describe('form', () => {
     it('contact', () => {
       cy.visit('/')
-      cy.wait(2000)
       cy.contains('h2', 'Contact')
         .contains('お問い合わせ')
         .closest('section')
@@ -97,24 +96,22 @@ describe('top', () => {
       // check validation errors
 
       cy.get('@input-name').type('a')
-      cy.wait(1000)
+      cy.wait(800)
       cy.get('@input-name').type('{backspace}').blur()
       cy.contains('名前を入力してください')
       cy.get('@input-mail').type('a').type('{backspace}').blur()
-      cy.wait(1000)
+      cy.wait(800)
       cy.contains('メールアドレスを入力してください')
       cy.get('@input-text').type('t').type('{backspace}').blur()
-      cy.wait(1000)
+      cy.wait(800)
       cy.contains('問い合わせ内容を入力してください')
       cy.get('@btn-submit').should('have.attr', 'disabled')
 
       // check activated
 
-      cy.wait(1000)
       cy.get('@input-name').type('やまだ')
       cy.get('@input-mail').type('mymail@vue.com')
       cy.get('@input-text').type('こめんと').blur()
-      cy.wait(1000)
       cy.get('@btn-submit').should('not.have.attr', 'disabled')
     })
   })
@@ -148,10 +145,9 @@ describe('top', () => {
     it('render', () => {
       cy.viewport(769, 600)
       cy.visit('/')
-      cy.wait(2000)
       cy.get('.hamburger-menu').should('be.visible').click()
       cy.get('.mobile-menu')
-        .should('be.visible', { timeout: 3000 })
+        .should('be.visible')
         .within(() => {
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')

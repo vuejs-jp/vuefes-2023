@@ -77,7 +77,9 @@ const updateDetail = (value: string) => {
             @input="updateDetail"
             @blur="validateDetail"
           />
-          <SubmitButton title-label="送信" :disabled="!isSubmitting" />
+          <div class="form-button">
+            <SubmitButton :disabled="!isSubmitting"> 送信 </SubmitButton>
+          </div>
           <div v-if="isSent">メッセージ送信に成功しました。</div>
         </form>
       </div>
@@ -114,6 +116,9 @@ css({
         },
       },
     },
+  },
+  '.form-button': {
+    margin: '0 auto',
   },
   '.form': {
     'form': {

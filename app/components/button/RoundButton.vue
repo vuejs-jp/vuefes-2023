@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const emit = defineEmits(['click'])
 const props = defineProps({
-  isSecondry: {
+  outline: {
     type: Boolean,
     default: false,
   },
@@ -21,10 +21,6 @@ const props = defineProps({
     type: String as PropType<'button' | 'submit' | 'reset' | undefined>,
     default: 'button',
   },
-  class: {
-    type: String,
-    default: '',
-  },
   disabled: {
     type: Boolean,
     default: false,
@@ -34,11 +30,8 @@ const props = defineProps({
 const isLink = Boolean(props.href)
 const myclass = computed(() => {
   const cls = ['button']
-  if (props.isSecondry) {
-    cls.push('-isSecondry')
-  }
-  if (props.class) {
-    cls.push(props.class)
+  if (props.outline) {
+    cls.push('-outline')
   }
   if (props.disabled) {
     cls.push('-disabled')
@@ -58,8 +51,9 @@ const onClick = (e: Event) => {
       :rel="props.rel"
       :target="props.target"
       :aria-disabled="props.disabled"
-      ><slot
-    /></a>
+    >
+      <slot />
+    </a>
   </template>
   <template v-else>
     <button
@@ -96,7 +90,7 @@ css({
       boxShadow: 'none',
       backgroundColor: '#C9DAEA',
     },
-    '&.-isSecondry': {
+    '&.-outline': {
       backgroundColor: '{color.white}',
       color: '{color.vue.blue}',
       border: '2px solid {color.vue.blue}',

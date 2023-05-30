@@ -13,16 +13,17 @@ import RoundButton from '@/components/button/RoundButton.vue'
         </p>
       </div>
       <div class="link-box">
-        <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer"
-          >申し込みフォーム</RoundButton
-        >
+        <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
+          申し込みフォーム
+        </RoundButton>
         <RoundButton
           href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
-          is-secondry
-          >スポンサー資料</RoundButton
+          outline
         >
+          スポンサー資料
+        </RoundButton>
       </div>
       <p class="twitter-text">
         詳細情報は、<a

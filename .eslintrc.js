@@ -29,7 +29,7 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['index', 'default', 'error', 'privacy'],
+        ignores: ['index', 'default', 'error', 'privacy', 'register'],
       },
     ],
     'vue/multiline-html-element-content-newline': 'off',

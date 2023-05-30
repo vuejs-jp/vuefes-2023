@@ -36,7 +36,7 @@ css({
       left: 0,
       width: '100%',
       height: 'auto',
-      backgroundImage: 'url(og/top.png)',
+      backgroundImage: 'url(/og/top.png)',
       backgroundColor: 'rgba(255, 255, 255, 0.6)',
       backgroundBlendMode: 'lighten',
       backgroundSize: 'cover',

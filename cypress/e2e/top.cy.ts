@@ -82,7 +82,6 @@ describe('top', () => {
   describe('form', () => {
     it('contact', () => {
       loadPage()
-      // cy.wait(2000)
       cy.contains('h2', 'Contact')
         .contains('お問い合わせ')
         .closest('section')
@@ -153,7 +152,7 @@ describe('top', () => {
     it('render', () => {
       cy.viewport(769, 600)
       loadPage()
-      // cy.wait(2000)
+      cy.wait(1000)
       cy.get('.hamburger-menu').should('be.visible').click()
       cy.get('.mobile-menu')
         .should('be.visible')

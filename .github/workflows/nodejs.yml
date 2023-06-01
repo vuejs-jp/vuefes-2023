@@ -1,12 +1,14 @@
 name: Node.js CI
 
 on:
+  push
   # push:
   #   branches:
   #     - main
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   types:
+  #     - opened
+  #     - edited
 
 jobs:
   lint:
@@ -23,7 +25,7 @@ jobs:
         uses: ./.github/actions/install-packages
 
       - name: Lint check
-        run: pnpm run lint
+        run: pnpm lint
 
   typecheck:
     runs-on: ubuntu-latest
@@ -39,9 +41,9 @@ jobs:
         uses: ./.github/actions/install-packages
 
       - name: Type check
-        run: pnpm run typecheck
+        run: pnpm typecheck
 
-  test:
+  unit-test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -55,4 +57,26 @@ jobs:
         uses: ./.github/actions/install-packages
 
       - name: Unit test
-        run: pnpm run test
+        run: pnpm vitest
+
+  integration-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.18.1]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install packages
+        uses: ./.github/actions/install-packages
+
+      - name: Integration test
+        run: pnpm cypress:ci
+
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress videos
+          path: ./tests/cypress/videos

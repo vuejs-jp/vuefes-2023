@@ -8,7 +8,6 @@
     "prepare": "husky install",
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "test": "vitest",
     "generate:transpile": "nuxt generate",
     "generate:post-transpile": "node scripts/renameDir.js",
     "generate": "npm run generate:transpile && npm run generate:post-transpile",
@@ -21,7 +20,12 @@
     "htmllint": "markuplint \"./app/**/*.vue\" --config .markuplintrc",
     "htmllint:fix": "markuplint \"./app/**/*.vue\" --config .markuplintrc --format",
     "typecheck": "vue-tsc --noEmit",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "vitest": "vitest",
+    "cypress:open": "cypress open --project tests",
+    "cypress:run": "cypress run --project tests --browser chrome",
+    "cypress:dev": "start-test dev 3000 cypress:open",
+    "cypress:ci": "start-test dev 3000 cypress:run"
   },
   "devDependencies": {
     "@markuplint/vue-parser": "3.2.0",
@@ -31,6 +35,7 @@
     "@types/node": "18.13.0",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
+    "cypress": "^12.13.0",
     "eslint": "8.33.0",
     "eslint-plugin-vue": "9.9.0",
     "eslint-plugin-vuejs-accessibility": "2.1.0",
@@ -39,6 +44,7 @@
     "nuxt": "3.2.3",
     "pinceau": "0.18.0",
     "prettier": "2.8.4",
+    "start-server-and-test": "^2.0.0",
     "typescript": "4.9.5",
     "vee-validate": "4.7.4",
     "vite-svg-loader": "4.0.0",

@@ -1,14 +1,12 @@
 name: Node.js CI
 
 on:
-  push
   # push:
   #   branches:
   #     - main
-  # pull_request:
-  #   types:
-  #     - opened
-  #     - edited
+  pull_request:
+    branches:
+      - main
 
 jobs:
   lint:

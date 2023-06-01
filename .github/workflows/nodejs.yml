@@ -57,7 +57,7 @@ jobs:
         uses: ./.github/actions/install-packages
 
       - name: Unit test
-        run: pnpm test
+        run: pnpm vitest
 
   integration-test:
     runs-on: ubuntu-latest
@@ -79,4 +79,4 @@ jobs:
         if: failure()
         with:
           name: cypress videos
-          path: ./cypress/videos
+          path: ./tests/cypress/videos

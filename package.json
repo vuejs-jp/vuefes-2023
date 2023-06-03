@@ -64,6 +64,7 @@
     }
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.24.0",
     "xlsx": "^0.18.5"
   }
 }

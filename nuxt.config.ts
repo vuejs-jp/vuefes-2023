@@ -48,6 +48,7 @@ export default defineNuxtConfig({
       reCaptchaWebsiteKey: process.env.NUXT_RECAPTCHA_WEBSITE_KEY,
       // feature flags
       sampleFeature: process.env.NUXT_SAMPLE_FEATURE,
+      registerNameCardFeature: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
       // supabase
       supabaseProjectUrl: process.env.NUXT_SUPABASE_PROJECT_URL,
       supabaseApiKey: process.env.NUXT_SUPABASE_API_KEY,

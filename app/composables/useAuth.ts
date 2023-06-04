@@ -17,7 +17,7 @@ const initialUser = {
 export type LoginUser = typeof initialUser
 
 const useAuth = async () => {
-  let loginUser = reactive<LoginUser>({ ...initialUser })
+  let signedUser = reactive<LoginUser>({ ...initialUser })
 
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
@@ -25,16 +25,17 @@ const useAuth = async () => {
 
     switch (evt) {
       case EventType.SIGNED_OUT:
-        loginUser = { ...initialUser }
+        signedUser = { ...initialUser }
         break
+      case EventType.INITIAL_SESSION:
       case EventType.SIGNED_IN:
         if (session?.user) {
           const { user } = session
-          loginUser.id = user.id || ''
-          loginUser.name = user?.user_metadata.preferred_username || user?.user_metadata.name || ''
-          loginUser.avatarUrl = user?.user_metadata.avatar_url || ''
-          loginUser.email = user?.email || ''
-          loginUser.createdAt = user?.created_at || ''
+          signedUser.id = user.id || ''
+          signedUser.name = user?.user_metadata.preferred_username || user?.user_metadata.name || ''
+          signedUser.avatarUrl = user?.user_metadata.avatar_url || ''
+          signedUser.email = user?.email || ''
+          signedUser.createdAt = user?.created_at || ''
         }
         break
       default:
@@ -63,8 +64,11 @@ const useAuth = async () => {
       throw new Error('can not signout')
     }
   }
+  const hasAuth = computed(() => {
+    return Boolean(signedUser.id)
+  })
 
-  return { logout, signInWithGoogle, signInWithGitHub, loginUser }
+  return { logout, signInWithGoogle, signInWithGitHub, signedUser, hasAuth }
 }
 
 function getClient() {

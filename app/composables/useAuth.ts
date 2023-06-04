@@ -91,8 +91,15 @@ const useAuth = async () => {
 
 export function getClient() {
   const config = useRuntimeConfig()
-  const { supabaseProjectUrl, supabaseApiKey } = config.public
-  const supabase = createClient(supabaseProjectUrl, supabaseApiKey)
+  const { supabaseProjectUrl, supabaseApiKey, inCypress } = config.public
+  const option = inCypress
+    ? {
+        auth: {
+          persistSession: false,
+        },
+      }
+    : {}
+  const supabase = createClient(supabaseProjectUrl, supabaseApiKey, option)
   return supabase
 }
 

@@ -6,7 +6,7 @@ import UserForDev from '~/components/UserForDev.vue'
 definePageMeta({
   middleware: ['error'],
 })
-const { logout, signIn, signedUser } = await useAuth()
+const { signIn, signedUser } = await useAuth()
 </script>
 
 <template>

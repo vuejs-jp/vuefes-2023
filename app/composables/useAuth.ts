@@ -83,13 +83,13 @@ const useAuth = async () => {
     }
   }
   const hasAuth = computed(() => {
-    return Boolean(signedUser.id)
+    return signedUser.id !== ''
   })
 
   return { logout, signIn, signedUser, hasAuth }
 }
 
-function getClient() {
+export function getClient() {
   const config = useRuntimeConfig()
   const { supabaseProjectUrl, supabaseApiKey } = config.public
   const supabase = createClient(supabaseProjectUrl, supabaseApiKey)

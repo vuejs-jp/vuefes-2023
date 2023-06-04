@@ -1,3 +1,6 @@
+import { navLinks, NavLink } from '~/utils/constants'
+import useAuth from '~/composables/useAuth'
+
 export function useNav() {
   const navRef = ref<HTMLElement | null>(null)
   const showNav = ref(false)
@@ -16,4 +19,19 @@ export function useNav() {
   })
 
   return { navRef, showNav }
+}
+
+export async function getNavLinks(): Promise<ComputedRef<NavLink[]>> {
+  const { hasAuth } = await useAuth()
+  const myNavLinks = computed(() => {
+    const links = [...navLinks]
+    if (hasAuth.value) {
+      links.unshift({
+        text: 'MyPage',
+        link: '/mypage',
+      })
+    }
+    return links
+  })
+  return myNavLinks
 }

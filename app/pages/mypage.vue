@@ -10,6 +10,7 @@ const { logout, signedUser, hasAuth } = await useAuth()
 
 <template>
   <main>
+    <nuxt-link to="/">back to top</nuxt-link>
     <h1>Mypage</h1>
     <div class="user">
       <UserForDev :signed-user="signedUser" />

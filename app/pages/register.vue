@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import RoundButton from '~/components/button/RoundButton.vue'
-import useAuth from '~/composables/useAuth'
+import useAuth, { AuthProvider } from '~/composables/useAuth'
 import UserForDev from '~/components/UserForDev.vue'
 
 definePageMeta({
   middleware: ['error'],
 })
-const { signInWithGoogle, signInWithGitHub, signedUser } = await useAuth()
+const { logout, signIn, signedUser } = await useAuth()
 </script>
 
 <template>
@@ -18,13 +18,10 @@ const { signInWithGoogle, signInWithGitHub, signedUser } = await useAuth()
 
     <ul>
       <li>
-        <RoundButton @click="signInWithGoogle">signIn with Google</RoundButton>
+        <RoundButton @click="() => signIn(AuthProvider.GOOGLE)">signIn with Google</RoundButton>
       </li>
       <li>
-        <RoundButton @click="signInWithGitHub">signIn with GitHub</RoundButton>
-      </li>
-      <li>
-        <RoundButton outline @click="signInWithGoogle">logout</RoundButton>
+        <RoundButton @click="() => signIn(AuthProvider.GITHUB)">signIn with GitHub</RoundButton>
       </li>
     </ul>
   </main>

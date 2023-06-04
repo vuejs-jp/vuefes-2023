@@ -6,6 +6,11 @@ enum EventType {
   SIGNED_OUT = 'SIGNED_OUT',
 }
 
+export enum AuthProvider {
+  GITHUB = 'github',
+  GOOGLE = 'google',
+}
+
 const initialUser = {
   id: '',
   name: '',
@@ -26,6 +31,7 @@ const useAuth = async () => {
     switch (evt) {
       case EventType.SIGNED_OUT:
         signedUser = { ...initialUser }
+        location.href = '/'
         break
       case EventType.INITIAL_SESSION:
       case EventType.SIGNED_IN:
@@ -58,6 +64,18 @@ const useAuth = async () => {
       throw new Error('can not signin with GitHub')
     }
   }
+  const signIn = async (provider: AuthProvider) => {
+    switch (provider) {
+      case AuthProvider.GITHUB:
+        signInWithGitHub()
+        break
+      case AuthProvider.GOOGLE:
+        signInWithGoogle()
+        break
+      default:
+        break
+    }
+  }
   const logout = async () => {
     const { error } = await supabase.auth.signOut()
     if (error) {
@@ -68,7 +86,7 @@ const useAuth = async () => {
     return Boolean(signedUser.id)
   })
 
-  return { logout, signInWithGoogle, signInWithGitHub, signedUser, hasAuth }
+  return { logout, signIn, signedUser, hasAuth }
 }
 
 function getClient() {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi'
-import { LoginUser } from '~~/app/composables/useAuth'
+import { PropType } from 'vue'
+import { LoginUser } from '~/composables/useAuth'
 
 const props = defineProps({
   signedUser: {

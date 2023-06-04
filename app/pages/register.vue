@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import RoundButton from '@/components/button/RoundButton.vue'
-import useAuth from '~~/app/composables/useAuth'
-import UserForDev from '@/components/UserForDev.vue'
+import RoundButton from '~/components/button/RoundButton.vue'
+import useAuth from '~/composables/useAuth'
+import UserForDev from '~/components/UserForDev.vue'
+
 definePageMeta({
   middleware: ['error'],
 })

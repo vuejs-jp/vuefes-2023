@@ -1,8 +1,6 @@
-import { useFeature } from '~/composables/useFeature'
-
 export function useNamecard() {
-  const feature = useFeature()
-  const canRegister = feature.registerNamecard
+  const config = useRuntimeConfig()
+  const canRegister = config.public.registerNameCardFeature === 'true'
 
   return { canRegister }
 }

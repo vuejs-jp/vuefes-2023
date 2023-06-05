@@ -1,1 +1,1 @@
-// useFeature を使ってください
+export const REGISTER_NAMECARD = false

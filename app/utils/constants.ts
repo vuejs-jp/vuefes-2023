@@ -1,4 +1,9 @@
-export const navLinks = [
+export type NavLink = {
+  text: string
+  link: string
+}
+
+export const navLinks: NavLink[] = [
   { text: 'Message', link: '#message' },
   { text: 'Sponsors', link: '#sponsors' },
   { text: 'Contact', link: '#form' },

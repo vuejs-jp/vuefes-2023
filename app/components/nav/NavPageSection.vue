@@ -3,8 +3,8 @@ import MenuLogo from '~/assets/logo/menu_logo.svg'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import NavView from './NavView.vue'
-import { useNav } from '~/composables/useNav'
-import { conferenceTitle, navLinks } from '~/utils/constants'
+import { useNav, getNavLinks } from '~/composables/useNav'
+import { conferenceTitle } from '~/utils/constants'
 
 const { navRef } = useNav()
 const htmlRef = ref()
@@ -13,6 +13,7 @@ const toggleMenu = () => {
   showMenu.value = !showMenu.value
   htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
 }
+const navLinks = await getNavLinks()
 
 onMounted(function () {
   htmlRef.value = document.querySelector('html')
@@ -31,7 +32,7 @@ onMounted(function () {
       <div class="links">
         <ul v-for="l in navLinks" :key="l.link">
           <li>
-            <nuxt-link :to="`/${l.link}`">{{ l.text }}</nuxt-link>
+            <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>
           </li>
         </ul>
         <a

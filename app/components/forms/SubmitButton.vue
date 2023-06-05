@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ButtonHTMLAttributes } from 'vue'
-import RoundButton from '@/components/button/RoundButton.vue'
+import RoundButton from '~/components/button/RoundButton.vue'
 
 type _SubmitButtonProps = Omit<ButtonHTMLAttributes, 'disabled' | 'onClick'>
 interface SubmitButtonProps extends _SubmitButtonProps {

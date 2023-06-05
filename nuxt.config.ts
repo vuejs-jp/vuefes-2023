@@ -46,8 +46,13 @@ export default defineNuxtConfig({
       newtSpaceUid: process.env.NUXT_NEWT_SPACE_UID,
       newtFormUid: process.env.NUXT_NEWT_FORM_UID,
       reCaptchaWebsiteKey: process.env.NUXT_RECAPTCHA_WEBSITE_KEY,
+      inCypress: process.env.IN_CYPRESS === 'true',
       // feature flags
       sampleFeature: process.env.NUXT_SAMPLE_FEATURE,
+      registerNameCardFeature: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
+      // supabase
+      supabaseProjectUrl: process.env.NUXT_SUPABASE_PROJECT_URL,
+      supabaseApiKey: process.env.NUXT_SUPABASE_API_KEY,
     },
   },
 })

@@ -3,7 +3,7 @@ import CrossLogo from '~/assets/logo/cross_logo.svg'
 import ContactLinks from '~/components/footer/ContactLinks.vue'
 import PastEventsMobile from '~/components/footer/PastEventsMobile.vue'
 import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
-import { navLinks } from '~/utils/constants'
+import { getNavLinks } from '~/composables/useNav'
 
 const emit = defineEmits(['toggle'])
 const props = defineProps({
@@ -15,6 +15,7 @@ const props = defineProps({
 const emitToggle = () => {
   emit('toggle')
 }
+const navLinks = await getNavLinks()
 </script>
 
 <template>
@@ -22,7 +23,7 @@ const emitToggle = () => {
     <div v-if="props.visible" class="mobile-menu">
       <ul>
         <li v-for="l in navLinks" :key="l.link">
-          <nuxt-link :to="`/${l.link}`" @click="emitToggle">
+          <nuxt-link :to="`${l.link}`" @click="emitToggle">
             {{ l.text }}
           </nuxt-link>
         </li>

@@ -1,7 +1,6 @@
-import { REGISTER_NAMECARD } from '~/utils/feature.constants'
-
 export function useNamecard() {
-  const canRegister = REGISTER_NAMECARD
+  const config = useRuntimeConfig()
+  const canRegister = config.public.registerNameCardFeature === 'true'
 
   return { canRegister }
 }

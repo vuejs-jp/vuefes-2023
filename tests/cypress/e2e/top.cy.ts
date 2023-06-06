@@ -4,11 +4,17 @@ describe('top', () => {
     cy.checkPageIdle()
     cy.wait(500)
   }
+  function loadPageWithAuth() {
+    cy.visit('/?forcelogin=true')
+    cy.checkPageIdle()
+    cy.wait(500)
+  }
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
+        cy.contains('a', 'MyPage').should('not.exist')
         cy.contains('a', 'Message').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
@@ -38,6 +44,18 @@ describe('top', () => {
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
         cy.get('.hamburger-menu').should('be.visible')
+      })
+    })
+    it('header with auth', () => {
+      loadPageWithAuth()
+      cy.get('nav').within(() => {
+        cy.contains('h1', 'Vue Fes Japan 2023')
+        cy.contains('a', 'MyPage').should('be.visible')
+        cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Sponsors').should('be.visible')
+        cy.contains('a', 'Contact').should('be.visible')
+        cy.get('a[aria-label="twitter"]').should('be.visible')
+        cy.get('.hamburger-menu').should('not.be.visible')
       })
     })
   })
@@ -157,6 +175,29 @@ describe('top', () => {
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
+          cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
+          cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
+          cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')
+          cy.contains('Vue Fes Japan')
+          cy.contains('a', '2022').should('have.attr', 'href', 'https://vuefes.jp/2022')
+          cy.contains('a', '2020').should('have.attr', 'href', 'https://vuefes.jp/2020')
+          cy.contains('a', '2019').should('have.attr', 'href', 'https://vuefes.jp/2019')
+          cy.contains('a', '2018').should('have.attr', 'href', 'https://vuefes.jp/2018')
+          cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/privacy')
+          cy.contains('a', '行動規範').should('have.attr', 'href', '/code-of-conduct')
+          cy.get('button.close').click()
+        })
+      cy.get('.mobile-menu').should('not.exist')
+    })
+    it('render with Auth', () => {
+      cy.viewport(769, 600)
+      loadPageWithAuth()
+      cy.wait(1000)
+      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.get('.mobile-menu')
+        .should('be.visible')
+        .within(() => {
+          cy.contains('a', 'MyPage').should('have.attr', 'href', '/mypage')
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
           cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')

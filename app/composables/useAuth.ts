@@ -1,3 +1,4 @@
+import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
 
 enum EventType {
@@ -21,16 +22,33 @@ const initialUser = {
 
 export type LoginUser = typeof initialUser
 
+const dummyUser = {
+  id: 'dummy-user',
+  name: 'ダミーユーザ',
+  avatarUrl: 'https://vuefes.jp/2022/speaker/evan.jpeg',
+  email: 'dummy@cy.com',
+  createdAt: '2023-06-02T15:12:03.369752Z',
+} as LoginUser
+
+let signedUser = reactive<LoginUser>({ ...initialUser })
+
 const useAuth = async () => {
-  let signedUser = reactive<LoginUser>({ ...initialUser })
+  // for dev
+  onMounted(() => {
+    if (shouldDevLogin()) {
+      Object.entries(dummyUser).forEach(([key, value]) => {
+        signedUser[key as keyof LoginUser] = value
+      })
+    }
+  })
 
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
-    console.log('onAuthStateChange', evt, session)
-
     switch (evt) {
       case EventType.SIGNED_OUT:
-        signedUser = { ...initialUser }
+        Object.entries(initialUser).forEach(([key, value]) => {
+          signedUser[key as keyof LoginUser] = value
+        })
         location.href = '/'
         break
       case EventType.INITIAL_SESSION:
@@ -101,6 +119,10 @@ export function getClient() {
     : {}
   const supabase = createClient(supabaseProjectUrl, supabaseApiKey, option)
   return supabase
+}
+
+function shouldDevLogin(): boolean {
+  return window.location.search.includes('forcelogin=true') && !signedUser.id
 }
 
 export default useAuth

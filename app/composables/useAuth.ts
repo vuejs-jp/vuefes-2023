@@ -22,11 +22,11 @@ const initialUser = {
 
 export type LoginUser = typeof initialUser
 
-const cypressUser = {
-  id: 'CYPRESS',
-  name: 'サイプレス',
-  avatarUrl: 'https://www.cypress.io/images/layouts/navbar-brand.svg',
-  email: 'cypress@cy.com',
+const dummyUser = {
+  id: 'dummy-user',
+  name: 'ダミーユーザ',
+  avatarUrl: 'https://vuefes.jp/2022/speaker/evan.jpeg',
+  email: 'dummy@cy.com',
   createdAt: '2023-06-02T15:12:03.369752Z',
 } as LoginUser
 
@@ -36,7 +36,7 @@ const useAuth = async () => {
   // for dev
   onMounted(() => {
     if (shouldDevLogin()) {
-      Object.entries(cypressUser).forEach(([key, value]) => {
+      Object.entries(dummyUser).forEach(([key, value]) => {
         signedUser[key as keyof LoginUser] = value
       })
     }

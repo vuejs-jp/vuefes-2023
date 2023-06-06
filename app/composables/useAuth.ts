@@ -35,7 +35,7 @@ let signedUser = reactive<LoginUser>({ ...initialUser })
 const useAuth = async () => {
   // for dev
   onMounted(() => {
-    if (checkDevLogin() && !signedUser.id) {
+    if (shouldDevLogin()) {
       Object.entries(cypressUser).forEach(([key, value]) => {
         signedUser[key as keyof LoginUser] = value
       })
@@ -121,8 +121,8 @@ export function getClient() {
   return supabase
 }
 
-function checkDevLogin(): boolean {
-  return window.location.search.includes('forcelogin=true')
+function shouldDevLogin(): boolean {
+  return window.location.search.includes('forcelogin=true') && !signedUser.id
 }
 
 export default useAuth

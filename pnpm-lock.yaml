@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@markuplint/vue-parser': 3.2.0
   '@markuplint/vue-spec': 3.2.0
+  '@modyfi/vite-plugin-yaml': ^1.0.4
   '@nuxt/devtools': 0.2.5
   '@nuxtjs/device': 3.1.0
 <<<<<<< HEAD
@@ -41,6 +42,7 @@ dependencies:
 devDependencies:
   '@markuplint/vue-parser': 3.2.0_eslint@8.33.0
   '@markuplint/vue-spec': 3.2.0
+  '@modyfi/vite-plugin-yaml': 1.0.4
   '@nuxt/devtools': 0.2.5_nuxt@3.2.3
   '@nuxtjs/device': 3.1.0
 <<<<<<< HEAD
@@ -1873,6 +1875,21 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       lines-and-columns: 1.2.4
+    dev: true
+
+  /@modyfi/vite-plugin-yaml/1.0.4:
+    resolution: {integrity: sha512-qkT0KiR3AQQRfUvDzLv4+1rYAzXj+QmGhAbyUd0Ordf9xynK76i758lk5GiEfxuQxbvdqDaJ9oXkH/KacbSjQQ==}
+    peerDependencies:
+      vite: ^2.6.0 || ^3.0.0 || ^4.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.2
+      js-yaml: 4.1.0
+      tosource: 2.0.0-alpha.3
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /@netlify/functions/1.4.0:
@@ -10035,6 +10052,11 @@ packages:
   /toidentifier/1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
+    dev: true
+
+  /tosource/2.0.0-alpha.3:
+    resolution: {integrity: sha512-KAB2lrSS48y91MzFPFuDg4hLbvDiyTjOVgaK7Erw+5AmZXNq4sFRVn8r6yxSLuNs15PaokrDRpS61ERY9uZOug==}
+    engines: {node: '>=10'}
     dev: true
 
   /totalist/3.0.0:

@@ -1,3 +1,4 @@
+import viteYaml from '@modyfi/vite-plugin-yaml'
 import svgLoader from 'vite-svg-loader'
 import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
@@ -35,6 +36,7 @@ export default defineNuxtConfig({
       svgLoader({
         svgo: false,
       }),
+      viteYaml(),
     ],
   },
   typescript: {

@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css'],
-  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device', '@nuxtjs/supabase'],
+  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device', '@nuxtjs/supabase', '@nuxtjs/i18n'],
   pinceau: {
     configFileName: 'tokens.config',
     debug: false,
@@ -39,6 +39,10 @@ export default defineNuxtConfig({
   },
   typescript: {
     strict: true,
+  },
+  i18n: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'ja',
   },
   runtimeConfig: {
     public: {

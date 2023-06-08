@@ -15,9 +15,9 @@ export default defineI18nConfig(() => ({
     },
     en: {
       words: {
-        submit: 'submit',
-        application_form: 'Application form',
-        sponsordoc: '',
+        submit: 'Submit',
+        application_form: 'Application Form',
+        sponsordoc: 'Sponsor Document',
       },
       top: top.en,
     },

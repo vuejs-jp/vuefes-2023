@@ -6,6 +6,7 @@ import NavView from './NavView.vue'
 import { useNav, getNavLinks } from '~/composables/useNav'
 import { conferenceTitle } from '~/utils/constants'
 
+const switchLocalePath = useSwitchLocalePath()
 const { navRef } = useNav()
 const htmlRef = ref()
 const showMenu = ref(false)
@@ -30,6 +31,8 @@ onMounted(function () {
         <span class="sr-only">{{ conferenceTitle }}</span>
       </h1>
       <div class="links">
+        <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
+        <NuxtLink :to="switchLocalePath('ja')">Japanese</NuxtLink>
         <ul v-for="l in navLinks" :key="l.link">
           <li>
             <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>

@@ -35,42 +35,49 @@ const updateDetail = (value: string) => {
 <template>
   <section>
     <div class="form-root">
-      <SectionTitle id="form" color="vue.blue" title="Contact" yamato-title="お問い合わせ" />
+      <SectionTitle
+        id="form"
+        color="vue.blue"
+        title="Contact"
+        :yamato-title="$t('top.contact_subtitle')"
+      />
+      <!-- タイトル下テキスト -->
       <div class="subtitle">
-        <p>
-          Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan
-          へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3
-          営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが
-          <a href="https://twitter.com/vuefes" target="_blank" rel="noreferrer">Twitter</a>
-          のDMよりご連絡ください。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。
-        </p>
+        <i18n-t keypath="top.contact_toptext" tag="p">
+          <a href="https://twitter.com/vuefes" target="_blank" rel="noreferrer">{{
+            $t('top.contact_toptext_linklabel')
+          }}</a>
+        </i18n-t>
       </div>
       <div class="form">
         <form @submit="onSubmit">
+          <!-- お名前／Name  -->
           <InputField
             id="name"
             name="name"
-            title-label="お名前／Name"
-            placeholder="山田太郎"
+            :title-label="$t('top.contact_form_name_label')"
+            :placeholder="$t('top.contact_form_name_placeholder')"
             required
             :error="nameError"
             @input="updateName"
             @blur="validateName"
           />
+          <!-- メールアドレス／Mail  -->
           <InputField
             id="email"
             name="email"
-            title-label="メールアドレス／Mail"
-            placeholder="hello@vuefes.jp"
+            :title-label="$t('top.contact_form_mail_label')"
+            :placeholder="$t('top.contact_form_mail_placeholder')"
             required
             :error="emailError"
             @input="updateEmail"
             @blur="validateEmail"
           />
+          <!-- お問い合わせ内容／Content  -->
           <TextareaField
             id="detail"
             name="detail"
-            title-label="お問い合わせ内容／Content"
+            :title-label="$t('top.contact_form_text_label')"
             :rows="3"
             required
             :error="detailError"
@@ -78,9 +85,11 @@ const updateDetail = (value: string) => {
             @blur="validateDetail"
           />
           <div class="form-button">
-            <SubmitButton :disabled="!isSubmitting"> 送信 </SubmitButton>
+            <!-- 送信 -->
+            <SubmitButton :disabled="!isSubmitting"> {{ $t('words.submit') }} </SubmitButton>
           </div>
-          <div v-if="isSent">メッセージ送信に成功しました。</div>
+          <!-- メッセージ送信に成功しました -->
+          <div v-if="isSent">{{ $t('top.contact_submit_done') }}</div>
         </form>
       </div>
     </div>

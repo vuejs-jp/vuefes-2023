@@ -1,7 +1,5 @@
 ja:
   check_twitter: 最新情報はTwitterでCheck!
-  placeholder_name: 山田太郎
-  placeholder_mail: hello{'@'}vuefes.jp
   # messageセクション
   message_subtitle: 想い
   message_text1: Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。\n文字通り Fes = お祭りのように Vue.js を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。
@@ -15,12 +13,18 @@ ja:
   # sponsorsセクション
   sponsors_subtitle: スポンサー
   sponsors_toptext: Vue.js に関わる人々が集まる Vue Fes Japan 2023 をより良いカンファレンスにするため、スポンサー募集をします。募集スケジュールなどの詳しい内容は資料をご参照ください。
-  sponsors_infolink1: 詳細情報は、
-  sponsors_infolink2: Vue Fes Japan の Twitter
-  sponsors_infolink3: をご確認ください。
+  sponsors_infolink: 詳細情報は、{0}をご確認ください
+  sponsors_infolink_label: Vue Fes Japan の Twitter
   # contactセクション
   contact_subtitle: お問い合わせ
-  contact_toptext: Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが Twitter のDMよりご連絡ください。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。
+  contact_toptext: Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが {0} のDMよりご連絡ください。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。
+  contact_toptext_linklabel: Twitter
+  contact_form_name_label: お名前／Name
+  contact_form_name_placeholder: 山田太郎
+  contact_form_mail_label: メールアドレス／Mail
+  contact_form_mail_placeholder: hello{'@'}vuefes.jp
+  contact_form_text_label: お問い合わせ内容／Content
+  contact_submit_done: メッセージ送信に成功しました。
 
 en:
   check_twitter: Check information on Twitter!
@@ -39,6 +43,15 @@ en:
   # sponsorsセクション
   sponsors_subtitle: Sponsors
   sponsors_toptext: We are looking for sponsors to make Vue Fes Japan 2023, where people related to Vue.js gather, a better conference. Please refer to the document for details such as the application schedule.
-  sponsors_infolink1: For more information
-  sponsors_infolink2: please check Vue Fes Japan's Twitter.
-  sponsors_infolink3: '&ensp;'
+  sponsors_infolink: For more information, please check {0}
+  sponsors_infolink_label: Vue Fes Japan's Twitter.
+  # contactセクション
+  contact_subtitle: Inquiry
+  contact_toptext: Thank you for your interest in Vue Fes Japan. For questions and inquiries to Vue Fes Japan, please use the form below. A representative will usually respond within 3 business days. If you do not receive a reply within 3 business days, please contact us via DM at {0}. Sponsors, speakers, and participation tickets will be announced on the official website as soon as they are confirmed.
+  contact_toptext_linklabel: Twitter
+  contact_form_name_label: Name
+  contact_form_name_placeholder: Yamada Taro
+  contact_form_mail_label: Mail
+  contact_form_mail_placeholder: hello{'@'}vuefes.jp
+  contact_form_text_label: Content
+  contact_submit_done: Message sent successfully.

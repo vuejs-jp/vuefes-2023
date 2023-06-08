@@ -11,8 +11,8 @@ import RoundButton from '~/components/button/RoundButton.vue'
         title="Sponsors"
         :yamato-title="$t('top.sponsors_subtitle')"
       />
+      <!-- タイトル下テキスト -->
       <div class="subtitle">
-        <!-- タイトル下テキスト -->
         <p>{{ $t('top.sponsors_toptext') }}</p>
       </div>
       <div class="link-box">
@@ -31,16 +31,15 @@ import RoundButton from '~/components/button/RoundButton.vue'
         </RoundButton>
       </div>
       <!-- 詳細情報は、Vue Fes Japan の Twitterをご確認ください。 -->
-      <p class="twitter-text">
-        {{ $t('top.sponsors_infolink1')
-        }}<a
-          class="twitter-link"
+      <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
+        <a
           href="https://twitter.com/vuefes"
           target="_blank"
+          class="twitter-link"
           rel="noreferrer"
-          >{{ $t('top.sponsors_infolink2') }}</a
-        >{{ $t('top.sponsors_infolink3') }}
-      </p>
+          >{{ $t('top.sponsors_infolink_label') }}</a
+        >
+      </i18n-t>
     </div>
   </section>
   <VoiceAudioSpectrum />

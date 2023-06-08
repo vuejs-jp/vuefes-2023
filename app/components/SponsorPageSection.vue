@@ -5,34 +5,41 @@ import RoundButton from '~/components/button/RoundButton.vue'
 <template>
   <section>
     <div class="sponsors-root">
-      <SectionTitle id="sponsors" color="vue.blue" title="Sponsors" yamato-title="スポンサー" />
+      <SectionTitle
+        id="sponsors"
+        color="vue.blue"
+        title="Sponsors"
+        :yamato-title="$t('top.sponsors_subtitle')"
+      />
       <div class="subtitle">
-        <p>
-          Vue.js に関わる人々が集まる Vue Fes Japan 2023
-          をより良いカンファレンスにするため、スポンサー募集をします。募集スケジュールなどの詳しい内容は資料をご参照ください。
-        </p>
+        <!-- タイトル下テキスト -->
+        <p>{{ $t('top.sponsors_toptext') }}</p>
       </div>
       <div class="link-box">
+        <!-- 申し込みフォーム -->
         <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
-          申し込みフォーム
+          {{ $t('words.application_form') }}
         </RoundButton>
+        <!-- スポンサー資料 -->
         <RoundButton
           href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
           outline
         >
-          スポンサー資料
+          {{ $t('words.sponsordoc') }}
         </RoundButton>
       </div>
+      <!-- 詳細情報は、Vue Fes Japan の Twitterをご確認ください。 -->
       <p class="twitter-text">
-        詳細情報は、<a
+        {{ $t('top.sponsors_infolink1')
+        }}<a
           class="twitter-link"
           href="https://twitter.com/vuefes"
           target="_blank"
           rel="noreferrer"
-          >Vue Fes Japan の Twitter </a
-        >をご確認ください。
+          >{{ $t('top.sponsors_infolink2') }}</a
+        >{{ $t('top.sponsors_infolink3') }}
       </p>
     </div>
   </section>

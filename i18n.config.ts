@@ -1,7 +1,5 @@
 import { defineI18nConfig } from '#imports'
-import top from '~~/locales/top.json'
-
-console.log('top', top.ja)
+import top from '~~/locales/top.yaml'
 
 export default defineI18nConfig(() => ({
   legacy: false,

@@ -1,0 +1,44 @@
+ja:
+  check_twitter: 最新情報はTwitterでCheck!
+  placeholder_name: 山田太郎
+  placeholder_mail: hello{'@'}vuefes.jp
+  # messageセクション
+  message_subtitle: 想い
+  message_text1: Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。\n文字通り Fes = お祭りのように Vue.js を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。
+  message_text2: 昨年 2022 年は長引くコロナ禍においてオンラインでの開催を実現し、650名以上の事前登録、10,000 回以上の再生回数を記録し、大変盛り上がりました。特に、Vue 2から Vue 3 への移行に関する内容が多かったことが印象的でした。
+  message_text3: 2022 年 1 月、Vue.js は最新バージョンである Vue 3 をデフォルトにしました。その結果、npmでのダウンロード数が 200% 以上増加しており、Vue 3の利用が加速しています。エコシステムにおいても、2022 年 11 月に Vue 3 へ対応した Nuxt 3や Vuetify 3 がリリースされました。
+  message_text4: こうして Vue 3 の利用が本格化する中、Vue.js の作者 Evan You 氏は次の Vue.jsに向けた取り組みも開始しています。同氏の開発した Vite が Vue.jsコミュニティだけに留まらず、他の JavaScript コミュニティへも放たれたのと同様に、Nuxt やVolar といったエコシステムにおいても新しい展開を見せようとしています。
+  message_text5: Vue.js とエコシステムがさらに発展しつつある中、この度 2023年はオフラインカンファレンスとしての Vue Fes Japan をリブートすることを決意しました。\nぜひ、一緒にカンファレンスに参加し、リアルでしか味わえない体験を楽しみましょう！
+  message_from_1: 日本ユーザーグループ
+  message_from_2: 代表
+  message_from_3: 川口 和也
+  # sponsorsセクション
+  sponsors_subtitle: スポンサー
+  sponsors_toptext: Vue.js に関わる人々が集まる Vue Fes Japan 2023 をより良いカンファレンスにするため、スポンサー募集をします。募集スケジュールなどの詳しい内容は資料をご参照ください。
+  sponsors_infolink1: 詳細情報は、
+  sponsors_infolink2: Vue Fes Japan の Twitter
+  sponsors_infolink3: をご確認ください。
+  # contactセクション
+  contact_subtitle: お問い合わせ
+  contact_toptext: Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが Twitter のDMよりご連絡ください。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。
+
+en:
+  check_twitter: Check information on Twitter!
+  placeholder_name: yamada taro
+  placeholder_mail: hello{'@'}vuefes.jp
+  # messageセクション
+  message_subtitle: Thought
+  message_text1: Vue Fes Japan is Japan's largest Vue.js conference, born in 2018.\nLiterally Fes = Festive Vue.js was born to celebrate together, learn together, and above all, have fun together.
+  message_text2: Last year, in 2022, it was held online due to the prolonged corona disaster, and it was a lot of fun with over 650 pre-registrations and over 10,000 views. In particular, it was impressive that there were many contents related to migration from Vue 2 to Vue 3.
+  message_text3: In January 2022, Vue.js defaulted to its latest version, Vue 3. As a result, the number of downloads on npm has increased by over 200%, accelerating the adoption of Vue 3. In the ecosystem, Nuxt 3 and Vuetify 3, which support Vue 3, were released in November 2022.
+  message_text4: While the use of Vue 3 is gaining momentum, Evan You, the creator of Vue.js, is also working on the next Vue.js. Just as Vite, which he developed, was released not only to the Vue.js community but also to other JavaScript communities, he is also trying to show new developments in the ecosystem such as Nuxt and Volar.
+  message_text5: As Vue.js and the ecosystem continue to develop, we have decided to reboot Vue Fes Japan as an offline conference in 2023.\nBy all means, let's participate in the conference together and enjoy an experience that can only be experienced in real life!
+  message_from_1: Japan User Group
+  message_from_2: representative
+  message_from_3: Kawaguchi Kazuya
+  # sponsorsセクション
+  sponsors_subtitle: Sponsors
+  sponsors_toptext: We are looking for sponsors to make Vue Fes Japan 2023, where people related to Vue.js gather, a better conference. Please refer to the document for details such as the application schedule.
+  sponsors_infolink1: For more information
+  sponsors_infolink2: please check Vue Fes Japan's Twitter.
+  sponsors_infolink3: '&ensp;'

@@ -14,7 +14,8 @@ const isHovered = useHover(hoverRef)
     rel="noreferrer"
     class="twitter-root"
   >
-    <span class="title">最新情報はTwitterでCheck!</span>
+    <!-- 最新情報はTwitterでCheck -->
+    <span class="title">{{ $t('top.check_twitter') }}</span>
     <span class="explain">
       <TwitterLogo :style="isHovered ? { fill: '#42B983' } : {}" />
       <span :style="isHovered ? { color: '#42B983' } : {}">Twitter ー @vuefes #vuefes</span>

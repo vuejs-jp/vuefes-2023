@@ -33,6 +33,7 @@ onMounted(function () {
       <div class="links">
         <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
         <NuxtLink :to="switchLocalePath('ja')">Japanese</NuxtLink>
+        <NuxtLink :to="switchLocalePath('ja-basic')">やさしいにほんご</NuxtLink>
         <ul v-for="l in navLinks" :key="l.link">
           <li>
             <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>

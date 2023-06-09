@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     strict: true,
   },
   i18n: {
-    locales: ['en', 'ja'],
+    locales: ['en', 'ja', 'ja-basic'],
     defaultLocale: 'ja',
   },
   runtimeConfig: {

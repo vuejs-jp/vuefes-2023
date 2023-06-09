@@ -15,6 +15,16 @@ export default defineI18nConfig(() => ({
       },
       top: top.ja,
     },
+    'ja-basic': {
+      words: {
+        submit: 'そうしん',
+        application_form: 'もうしこみフォーム',
+        sponsordoc: 'スポンサーしりょう',
+        privacypolicy: 'プライバシーポリシー',
+        codeofconduct: 'こうどうきはん',
+      },
+      top: top['ja-basic'],
+    },
     en: {
       words: {
         submit: 'Submit',

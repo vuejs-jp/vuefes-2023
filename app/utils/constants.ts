@@ -7,6 +7,7 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { text: 'Message', link: '#message' },
+  { text: 'Speakers', link: '#speakers' },
   { text: 'Sponsors', link: '#sponsors' },
   { text: 'Contact', link: '#form' },
 ]

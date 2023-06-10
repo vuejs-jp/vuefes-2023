@@ -1,12 +1,7 @@
 import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
+import { match } from 'ts-pattern'
 import { AuthProvider, FormUser } from '~/types/app'
-
-enum EventType {
-  INITIAL_SESSION = 'INITIAL_SESSION',
-  SIGNED_IN = 'SIGNED_IN',
-  SIGNED_OUT = 'SIGNED_OUT',
-}
 
 const initialUser = {
   id: '',
@@ -38,15 +33,8 @@ const useAuth = async () => {
 
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
-    switch (evt) {
-      case EventType.SIGNED_OUT:
-        Object.entries(initialUser).forEach(([key, value]) => {
-          signedUser[key as keyof FormUser] = value
-        })
-        location.href = '/'
-        break
-      case EventType.INITIAL_SESSION:
-      case EventType.SIGNED_IN:
+    match(evt)
+      .with('INITIAL_SESSION', 'SIGNED_IN', () => {
         if (session?.user) {
           const { user } = session
           signedUser.id = user.id || ''
@@ -55,10 +43,21 @@ const useAuth = async () => {
           signedUser.email = user?.email || ''
           signedUser.createdAt = user?.created_at || ''
         }
-        break
-      default:
-        break
-    }
+      })
+      .with('SIGNED_OUT', () => {
+        Object.entries(initialUser).forEach(([key, value]) => {
+          signedUser[key as keyof FormUser] = value
+        })
+        location.href = '/'
+      })
+      .with(
+        'MFA_CHALLENGE_VERIFIED',
+        'PASSWORD_RECOVERY',
+        'TOKEN_REFRESHED',
+        'USER_UPDATED',
+        () => {},
+      )
+      .exhaustive()
   })
   const signIn = async (provider: AuthProvider) => {
     const { error } = await supabase.auth.signInWithOAuth({ provider })

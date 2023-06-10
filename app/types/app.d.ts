@@ -5,7 +5,6 @@
 export type Color = 'white' | 'vue.blue' | 'vue.green' | 'typescript.blue'
 
 export type AuthProvider = 'github' | 'google'
-export type EventType = 'INITIAL_SESSION' | 'SIGNED_IN' | 'SIGNED_OUT'
 
 export interface FormUser {
   id: string

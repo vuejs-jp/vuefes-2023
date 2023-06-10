@@ -5,34 +5,55 @@ import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
 import { Speaker } from '~/types/app'
 
 const props = defineProps({
-    speaker: {
-        type: Object as PropType<Speaker>,
-        required: true,
-    }
+  speaker: {
+    type: Object as PropType<Speaker>,
+    required: true,
+  },
 })
 </script>
 
 <template>
-    <div class="speaker-card">
-        <img width="208" height="208" :alt="`${speaker.profile.name}の写真`" :src="`${urlBasePath}${speaker.profile.image}`"
-            loading="lazy" decoding="async" />
-        <p class="speaker-title">{{ speaker.profile.title }}</p>
-        <p class="speaker-name">{{ speaker.profile.name }}</p>
-        <div class="speaker-sns">
-            <a v-if="speaker.profile.githubId" :href="`https://github.com/${speaker.profile.githubId}`" aria-label="github"
-                target="_blank" rel="noreferrer">
-                <GithubLogo class="flip-horizontal" width="1.5em" height="1.5em" />
-            </a>
-            <a v-if="speaker.profile.twitterId" :href="`https://twitter.com/${speaker.profile.twitterId}`"
-                aria-label="twitter" target="_blank" rel="noreferrer">
-                <TwitterLogo width="1.5em" height="1.5em" />
-            </a>
-            <a v-if="speaker.profile.mastodonUrl" :href="speaker.profile.mastodonUrl" aria-label="mastodon" target="_blank"
-                rel="noreferrer">
-                <MastodonLogo width="1.5em" height="1.5em" />
-            </a>
-        </div>
+  <div class="speaker-card">
+    <img
+      width="208"
+      height="208"
+      :alt="`${speaker.profile.name}の写真`"
+      :src="`${urlBasePath}${speaker.profile.image}`"
+      loading="lazy"
+      decoding="async"
+    />
+    <p class="speaker-title">{{ speaker.profile.title }}</p>
+    <p class="speaker-name">{{ speaker.profile.name }}</p>
+    <div class="speaker-sns">
+      <a
+        v-if="speaker.profile.githubId"
+        :href="`https://github.com/${speaker.profile.githubId}`"
+        aria-label="github"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <GithubLogo class="flip-horizontal" width="1.5em" height="1.5em" />
+      </a>
+      <a
+        v-if="speaker.profile.twitterId"
+        :href="`https://twitter.com/${speaker.profile.twitterId}`"
+        aria-label="twitter"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <TwitterLogo width="1.5em" height="1.5em" />
+      </a>
+      <a
+        v-if="speaker.profile.mastodonUrl"
+        :href="speaker.profile.mastodonUrl"
+        aria-label="mastodon"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <MastodonLogo width="1.5em" height="1.5em" />
+      </a>
     </div>
+  </div>
 </template>
 
 <style lang="ts" scoped>

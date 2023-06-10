@@ -7,19 +7,19 @@ import { speakers } from '~/utils/speakers.constants'
 </script>
 
 <template>
-    <section class="speaker-root">
-        <SectionTitle id="speakers" color="vue.blue" title="Speakers" yamato-title="スピーカー" />
-        <SpeakerCFP />
+  <section class="speaker-root">
+    <SectionTitle id="speakers" color="vue.blue" title="Speakers" yamato-title="スピーカー" />
+    <SpeakerCFP />
 
-        <div class="speaker-session">
-            <h3>Session</h3>
+    <div class="speaker-session">
+      <h3>Session</h3>
 
-            <div class="speakers">
-                <SpeakerCard v-for="speaker in speakers" :key="speaker.id" :speaker="speaker" />
-            </div>
-        </div>
-    </section>
-    <VoiceAudioSpectrum />
+      <div class="speakers">
+        <SpeakerCard v-for="speaker in speakers" :key="speaker.id" :speaker="speaker" />
+      </div>
+    </div>
+  </section>
+  <VoiceAudioSpectrum />
 </template>
 
 <style lang="ts" scoped>

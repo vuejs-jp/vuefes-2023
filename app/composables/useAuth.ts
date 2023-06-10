@@ -1,15 +1,11 @@
 import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
+import { AuthProvider } from '~/types/app'
 
 enum EventType {
   INITIAL_SESSION = 'INITIAL_SESSION',
   SIGNED_IN = 'SIGNED_IN',
   SIGNED_OUT = 'SIGNED_OUT',
-}
-
-export enum AuthProvider {
-  GITHUB = 'github',
-  GOOGLE = 'google',
 }
 
 const initialUser = {
@@ -66,35 +62,13 @@ const useAuth = async () => {
         break
     }
   })
-  const signInWithGoogle = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-    })
-    if (error) {
-      throw new Error('can not signin with Google')
-    }
-  }
-  const signInWithGitHub = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'github',
-    })
-    if (error) {
-      throw new Error('can not signin with GitHub')
-    }
-  }
   const signIn = async (provider: AuthProvider) => {
-    switch (provider) {
-      case AuthProvider.GITHUB:
-        signInWithGitHub()
-        break
-      case AuthProvider.GOOGLE:
-        signInWithGoogle()
-        break
-      default:
-        break
+    const { error } = await supabase.auth.signInWithOAuth({ provider })
+    if (error) {
+      throw new Error(`can not signin with ${provider === 'github' ? 'GitHub' : 'Google'}`)
     }
   }
-  const logout = async () => {
+  const signOut = async () => {
     const { error } = await supabase.auth.signOut()
     if (error) {
       throw new Error('can not signout')
@@ -104,7 +78,7 @@ const useAuth = async () => {
     return signedUser.id !== ''
   })
 
-  return { logout, signIn, signedUser, hasAuth }
+  return { signOut, signIn, signedUser, hasAuth }
 }
 
 export function getClient() {

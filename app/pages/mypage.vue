@@ -5,7 +5,7 @@ import useAuth from '~/composables/useAuth'
 definePageMeta({
   middleware: ['error'],
 })
-const { logout, signedUser, hasAuth } = await useAuth()
+const { signOut, signedUser, hasAuth } = await useAuth()
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { logout, signedUser, hasAuth } = await useAuth()
     <div class="user">
       <UserForDev :signed-user="signedUser" />
     </div>
-    <RoundButton v-if="hasAuth" class="btn-logout" outline @click="logout">logout</RoundButton>
+    <RoundButton v-if="hasAuth" class="btn-logout" outline @click="signOut">logout</RoundButton>
     <RoundButton v-else class="btn-logout" outline href="/register" target="_self"
       >login</RoundButton
     >

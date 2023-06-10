@@ -4,6 +4,8 @@
 
 export type Color = 'white' | 'vue.blue' | 'vue.green' | 'typescript.blue'
 
+export type AuthProvider = 'github' | 'google'
+
 /**
  * below
  * experimental

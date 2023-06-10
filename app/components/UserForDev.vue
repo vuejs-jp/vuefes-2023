@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { LoginUser } from '~/composables/useAuth'
+import { FormUser } from '~/types/app'
 
 const props = defineProps({
   signedUser: {
-    type: Object as PropType<LoginUser>,
+    type: Object as PropType<FormUser>,
     required: true,
   },
 })

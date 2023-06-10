@@ -1,12 +1,7 @@
 import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
-import { AuthProvider } from '~/types/app'
-
-enum EventType {
-  INITIAL_SESSION = 'INITIAL_SESSION',
-  SIGNED_IN = 'SIGNED_IN',
-  SIGNED_OUT = 'SIGNED_OUT',
-}
+import { match } from 'ts-pattern'
+import { AuthProvider, FormUser } from '~/types/app'
 
 const initialUser = {
   id: '',
@@ -16,39 +11,30 @@ const initialUser = {
   createdAt: '',
 }
 
-export type LoginUser = typeof initialUser
-
 const dummyUser = {
   id: 'dummy-user',
   name: 'ダミーユーザ',
   avatarUrl: 'https://vuefes.jp/2022/speaker/evan.jpeg',
   email: 'dummy@cy.com',
   createdAt: '2023-06-02T15:12:03.369752Z',
-} as LoginUser
+}
 
-let signedUser = reactive<LoginUser>({ ...initialUser })
+let signedUser = reactive<FormUser>({ ...initialUser })
 
 const useAuth = async () => {
   // for dev
   onMounted(() => {
     if (shouldDevLogin()) {
       Object.entries(dummyUser).forEach(([key, value]) => {
-        signedUser[key as keyof LoginUser] = value
+        signedUser[key as keyof FormUser] = value
       })
     }
   })
 
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
-    switch (evt) {
-      case EventType.SIGNED_OUT:
-        Object.entries(initialUser).forEach(([key, value]) => {
-          signedUser[key as keyof LoginUser] = value
-        })
-        location.href = '/'
-        break
-      case EventType.INITIAL_SESSION:
-      case EventType.SIGNED_IN:
+    match(evt)
+      .with('INITIAL_SESSION', 'SIGNED_IN', () => {
         if (session?.user) {
           const { user } = session
           signedUser.id = user.id || ''
@@ -57,10 +43,21 @@ const useAuth = async () => {
           signedUser.email = user?.email || ''
           signedUser.createdAt = user?.created_at || ''
         }
-        break
-      default:
-        break
-    }
+      })
+      .with('SIGNED_OUT', () => {
+        Object.entries(initialUser).forEach(([key, value]) => {
+          signedUser[key as keyof FormUser] = value
+        })
+        location.href = '/'
+      })
+      .with(
+        'MFA_CHALLENGE_VERIFIED',
+        'PASSWORD_RECOVERY',
+        'TOKEN_REFRESHED',
+        'USER_UPDATED',
+        () => {},
+      )
+      .exhaustive()
   })
   const signIn = async (provider: AuthProvider) => {
     const { error } = await supabase.auth.signInWithOAuth({ provider })

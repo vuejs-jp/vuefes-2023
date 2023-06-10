@@ -13,6 +13,7 @@ useHead({
     <NavPageSection />
     <TopPageSection />
     <MessagePageSection />
+    <SpeakerPageSection />
     <SponsorPageSection />
     <FormPageSection />
     <FooterPageSection />

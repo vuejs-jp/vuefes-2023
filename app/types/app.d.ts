@@ -44,3 +44,27 @@ type ListMember = {
   applyDate: string
   orderId: string
 }
+
+type Speaker = {
+  id: string
+  type: 'evan' | 'foreign' | 'domestic'
+  session: Session
+  profile: SpeakerProfile
+}
+
+type Session = {
+  title: string
+  description: string
+  type: 'main' | 'lt'
+  time: number
+}
+
+type SpeakerProfile = {
+  image: string
+  title: string
+  name: string
+  description: string
+  githubId?: string
+  twitterId?: string
+  mastodonUrl?: string
+}

@@ -1,6 +1,6 @@
 import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
-import { AuthProvider } from '~/types/app'
+import { AuthProvider, FormUser } from '~/types/app'
 
 enum EventType {
   INITIAL_SESSION = 'INITIAL_SESSION',
@@ -16,24 +16,22 @@ const initialUser = {
   createdAt: '',
 }
 
-export type LoginUser = typeof initialUser
-
 const dummyUser = {
   id: 'dummy-user',
   name: 'ダミーユーザ',
   avatarUrl: 'https://vuefes.jp/2022/speaker/evan.jpeg',
   email: 'dummy@cy.com',
   createdAt: '2023-06-02T15:12:03.369752Z',
-} as LoginUser
+}
 
-let signedUser = reactive<LoginUser>({ ...initialUser })
+let signedUser = reactive<FormUser>({ ...initialUser })
 
 const useAuth = async () => {
   // for dev
   onMounted(() => {
     if (shouldDevLogin()) {
       Object.entries(dummyUser).forEach(([key, value]) => {
-        signedUser[key as keyof LoginUser] = value
+        signedUser[key as keyof FormUser] = value
       })
     }
   })
@@ -43,7 +41,7 @@ const useAuth = async () => {
     switch (evt) {
       case EventType.SIGNED_OUT:
         Object.entries(initialUser).forEach(([key, value]) => {
-          signedUser[key as keyof LoginUser] = value
+          signedUser[key as keyof FormUser] = value
         })
         location.href = '/'
         break

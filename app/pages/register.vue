@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import RoundButton from '~/components/button/RoundButton.vue'
-import useAuth, { AuthProvider } from '~/composables/useAuth'
+import useAuth from '~/composables/useAuth'
 import UserForDev from '~/components/UserForDev.vue'
 
 definePageMeta({
@@ -18,10 +18,10 @@ const { signIn, signedUser } = await useAuth()
 
     <ul>
       <li>
-        <RoundButton @click="() => signIn(AuthProvider.GOOGLE)">signIn with Google</RoundButton>
+        <RoundButton @click="() => signIn('google')">signIn with Google</RoundButton>
       </li>
       <li>
-        <RoundButton @click="() => signIn(AuthProvider.GITHUB)">signIn with GitHub</RoundButton>
+        <RoundButton @click="() => signIn('github')">signIn with GitHub</RoundButton>
       </li>
     </ul>
   </main>

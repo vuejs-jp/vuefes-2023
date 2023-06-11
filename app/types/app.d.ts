@@ -4,6 +4,17 @@
 
 export type Color = 'white' | 'vue.blue' | 'vue.green' | 'typescript.blue'
 
+export type AuthProvider = 'github' | 'google'
+
+export interface FormUser {
+  user_id: string
+  full_name: string
+  avatar_url: string
+  provider: string
+  email: string
+  created_at: string
+}
+
 /**
  * below
  * experimental

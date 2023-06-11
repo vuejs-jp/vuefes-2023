@@ -12,16 +12,16 @@ const props = defineProps({
 
 <template>
   <article>
-    <div v-if="props.signedUser.avatarUrl" class="user-info">
+    <div v-if="props.signedUser.avatar_url" class="user-info">
       <img
         class="user-icon"
         width="100"
         height="100"
         decoding="async"
-        :src="props.signedUser.avatarUrl"
-        :alt="props.signedUser.name"
+        :src="props.signedUser.avatar_url"
+        :alt="props.signedUser.full_name"
       />
-      Hello「{{ props.signedUser.name }}」
+      Hello「{{ props.signedUser.full_name }}」
     </div>
     <div v-else class="user">NO AUTH</div>
     <p class="user-debug">{{ signedUser }}</p>

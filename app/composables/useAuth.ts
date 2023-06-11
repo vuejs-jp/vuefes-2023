@@ -13,7 +13,7 @@ const initialUser = {
 }
 
 const dummyUser = {
-  userId: 'dummy-user',
+  user_id: 'dummy-user',
   full_name: 'ダミーユーザ',
   avatar_url: 'https://vuefes.jp/2022/speaker/evan.jpeg',
   provider: 'google',

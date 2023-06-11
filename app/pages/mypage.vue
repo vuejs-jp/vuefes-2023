@@ -23,10 +23,10 @@ function onPurchase() {
       <UserForDev :signed-user="signedUser" />
     </div>
     <RoundButton v-if="hasAuth" class="btn-logout" outline @click="signOut">logout</RoundButton>
-    <RoundButton v-else class="btn-logout" outline href="/register" target="_self"
+    <RoundButton v-else class="btn-login" outline href="/register" target="_self"
       >login</RoundButton
     >
-    <RoundButton v-if="hasAuth" class="btn-logout" @click="onPurchase">purchase</RoundButton>
+    <RoundButton v-if="hasAuth" class="btn-purchase" @click="onPurchase">purchase</RoundButton>
   </main>
 </template>
 
@@ -41,7 +41,12 @@ css({
   },
   '.btn-logout': {
     marginTop: '64px'
+  },
+  '.btn-login': {
+    marginTop: '64px'
+  },
+  '.btn-purchase': {
+    marginTop: '64px'
   }
-
 })
 </style>

@@ -2,10 +2,17 @@
 import RoundButton from '~/components/button/RoundButton.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
+import { useSupabase } from '~/composables/useSupabase'
 definePageMeta({
   middleware: ['error'],
 })
 const { signOut, signedUser, hasAuth } = await useAuth()
+const { addEventUser } = useSupabase({ user: signedUser })
+const secretWord = ref('')
+const receiptId = ref('')
+function onPurchase() {
+  addEventUser(secretWord.value, receiptId.value)
+}
 </script>
 
 <template>
@@ -16,9 +23,10 @@ const { signOut, signedUser, hasAuth } = await useAuth()
       <UserForDev :signed-user="signedUser" />
     </div>
     <RoundButton v-if="hasAuth" class="btn-logout" outline @click="signOut">logout</RoundButton>
-    <RoundButton v-else class="btn-logout" outline href="/register" target="_self"
+    <RoundButton v-else class="btn-login" outline href="/register" target="_self"
       >login</RoundButton
     >
+    <RoundButton v-if="hasAuth" class="btn-purchase" @click="onPurchase">purchase</RoundButton>
   </main>
 </template>
 
@@ -33,7 +41,12 @@ css({
   },
   '.btn-logout': {
     marginTop: '64px'
+  },
+  '.btn-login': {
+    marginTop: '64px'
+  },
+  '.btn-purchase': {
+    marginTop: '64px'
   }
-
 })
 </style>

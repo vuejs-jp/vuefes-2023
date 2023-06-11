@@ -73,8 +73,8 @@ jobs:
       - name: Integration test
         run: pnpm cypress:ci
         env:
-          NUXT_SUPABASE_PROJECT_URL: ${{ secrets.NUXT_SUPABASE_PROJECT_URL }}
-          NUXT_SUPABASE_API_KEY: ${{ secrets.NUXT_SUPABASE_API_KEY }}
+          SUPABASE_URL: ${{ secrets.NUXT_SUPABASE_PROJECT_URL }}
+          SUPABASE_KEY: ${{ secrets.NUXT_SUPABASE_API_KEY }}
 
       - uses: actions/upload-artifact@v3
         if: failure()

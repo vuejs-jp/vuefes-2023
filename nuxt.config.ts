@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css'],
-  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device'],
+  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device', '@nuxtjs/supabase'],
   pinceau: {
     configFileName: 'tokens.config',
     debug: false,
@@ -50,8 +50,8 @@ export default defineNuxtConfig({
       // feature flags
       registerNamecard: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
       // supabase
-      supabaseProjectUrl: process.env.NUXT_SUPABASE_PROJECT_URL,
-      supabaseApiKey: process.env.NUXT_SUPABASE_API_KEY,
+      supabaseProjectUrl: process.env.SUPABASE_URL,
+      supabaseApiKey: process.env.SUPABASE_KEY,
     },
   },
 })

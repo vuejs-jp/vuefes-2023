@@ -5,6 +5,7 @@ specifiers:
   '@markuplint/vue-spec': 3.2.0
   '@nuxt/devtools': 0.2.5
   '@nuxtjs/device': 3.1.0
+  '@nuxtjs/supabase': 0.3.6
   '@supabase/supabase-js': ^2.24.0
   '@types/node': 18.13.0
   '@typescript-eslint/eslint-plugin': 5.51.0
@@ -38,6 +39,7 @@ devDependencies:
   '@markuplint/vue-spec': 3.2.0
   '@nuxt/devtools': 0.2.5_nuxt@3.2.3
   '@nuxtjs/device': 3.1.0
+  '@nuxtjs/supabase': 0.3.6
   '@types/node': 18.13.0
   '@typescript-eslint/eslint-plugin': 5.51.0_b635kmla6dsb4frxfihkw4m47e
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64
@@ -2063,7 +2065,7 @@ packages:
       defu: 6.1.2
       hookable: 5.5.2
       jiti: 1.18.2
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.2
       postcss-import-resolver: 2.0.0
       scule: 1.0.0
@@ -2195,6 +2197,19 @@ packages:
       '@nuxt/kit': 3.2.2
       defu: 6.1.2
     transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@nuxtjs/supabase/0.3.6:
+    resolution: {integrity: sha512-LhBGyZ+ySEH3kxUwocMm+AaGVd7kIz//rEgOTdpTtnNPiogt5/3ZalJvt0XqZoPbk8KTf+yyOq+9SbDjup661A==}
+    dependencies:
+      '@nuxt/kit': 3.5.3
+      '@supabase/supabase-js': 2.24.0
+      defu: 6.1.2
+      pathe: 1.1.1
+    transitivePeerDependencies:
+      - encoding
       - rollup
       - supports-color
     dev: true
@@ -2474,7 +2489,6 @@ packages:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
       - encoding
-    dev: false
 
   /@supabase/gotrue-js/2.28.1:
     resolution: {integrity: sha512-i2IR8IRDhcrWfBjC7o5T0F8liOA1X6+moqCam6F5pIURI5PM+087hH+tDZ9dKu0AqAFgT0TpLmWK82fKWQlkfg==}
@@ -2482,7 +2496,6 @@ packages:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
       - encoding
-    dev: false
 
   /@supabase/postgrest-js/1.7.0:
     resolution: {integrity: sha512-wLADHZ5jm7LljF4GigK0H2vc1wGupBY2hGYfb4fVo0UuyMftmA6tOYy+ZpMH/vPq01CUFwXGwvIke6kyqh/QDg==}
@@ -2490,7 +2503,6 @@ packages:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
       - encoding
-    dev: false
 
   /@supabase/realtime-js/2.7.2:
     resolution: {integrity: sha512-Fi6xAl5PUkqnjl3wo4rdcQIbMG3+yTRX1aUZe/yfvTG84RMvmCXJ1yN6MmafVLeZpU1xkaz5Vx4L0tnHcLiy6w==}
@@ -2500,7 +2512,6 @@ packages:
       websocket: 1.0.34
     transitivePeerDependencies:
       - supports-color
-    dev: false
 
   /@supabase/storage-js/2.5.1:
     resolution: {integrity: sha512-nkR0fQA9ScAtIKA3vNoPEqbZv1k5B5HVRYEvRWdlP6mUpFphM9TwPL2jZ/ztNGMTG5xT6SrHr+H7Ykz8qzbhjw==}
@@ -2508,7 +2519,6 @@ packages:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
       - encoding
-    dev: false
 
   /@supabase/supabase-js/2.24.0:
     resolution: {integrity: sha512-zrAm+hp6DBICqZ7xVPk+KofmlfjJWQzXuf2sHAyPz8XVjpha84z2OVWcow2aI10YkMOrPwhRtBBQYJOnh/fx2w==}
@@ -2522,7 +2532,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: false
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -2582,7 +2591,6 @@ packages:
 
   /@types/phoenix/1.6.0:
     resolution: {integrity: sha512-qwfpsHmFuhAS/dVd4uBIraMxRd56vwBUYQGZ6GpXnFuM2XMRFJbIyruFKKlW2daQliuYZwe0qfn/UjFCDKic5g==}
-    dev: false
 
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -2604,7 +2612,6 @@ packages:
     resolution: {integrity: sha512-NbsqiNX9CnEfC1Z0Vf4mE1SgAJ07JnRYcNex7AJ9zAVzmiGHmjKFEk7O4TJIsgv2B1sLEb6owKFZrACwdYngsQ==}
     dependencies:
       '@types/node': 18.13.0
-    dev: false
 
   /@types/yauzl/2.10.0:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
@@ -2865,7 +2872,7 @@ packages:
     dependencies:
       '@vitest/utils': 0.29.3
       p-limit: 4.0.0
-      pathe: 1.1.0
+      pathe: 1.1.1
     dev: true
 
   /@vitest/spy/0.29.3:
@@ -3463,7 +3470,6 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.6.0
-    dev: false
 
   /builtin-modules/3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
@@ -3506,7 +3512,7 @@ packages:
       giget: 1.1.2
       jiti: 1.18.2
       mlly: 1.2.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.2
       rc9: 2.0.1
     transitivePeerDependencies:
@@ -4019,7 +4025,6 @@ packages:
       node-fetch: 2.6.11
     transitivePeerDependencies:
       - encoding
-    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -7180,7 +7185,7 @@ packages:
     resolution: {integrity: sha512-+c7A3CV0KGdKcylsI6khWyts/CYrGTrRVo4R/I7u/cUsy0Conxa6LUhiEzVKIw14lc2L5aiO4+SeVe4TeGRKww==}
     dependencies:
       acorn: 8.8.2
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.2
       ufo: 1.1.1
     dev: true
@@ -9828,7 +9833,6 @@ packages:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
     dependencies:
       is-typedarray: 1.0.0
-    dev: false
 
   /typescript/4.9.5:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
@@ -9865,7 +9869,7 @@ packages:
       mkdist: 1.1.1_typescript@4.9.5
       mlly: 1.1.1
       mri: 1.2.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.2
       pretty-bytes: 6.1.0
       rollup: 3.17.2
@@ -9971,7 +9975,7 @@ packages:
       local-pkg: 0.4.3
       magic-string: 0.30.0
       mlly: 1.2.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.2
       scule: 1.0.0
       strip-literal: 1.0.1
@@ -10180,7 +10184,6 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.6.0
-    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -10248,7 +10251,7 @@ packages:
       cac: 6.7.14
       debug: 4.3.4
       mlly: 1.1.1
-      pathe: 1.1.0
+      pathe: 1.1.1
       picocolors: 1.0.0
       vite: 4.1.4_@types+node@18.13.0
     transitivePeerDependencies:
@@ -10631,7 +10634,6 @@ packages:
       yaeti: 0.0.6
     transitivePeerDependencies:
       - supports-color
-    dev: false
 
   /whatwg-mimetype/2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
@@ -10782,7 +10784,6 @@ packages:
   /yaeti/0.0.6:
     resolution: {integrity: sha512-MvQa//+KcZCUkBTIC9blM+CU9J2GzuTytsOUwf2lidtvkx/6gnEp1QvJv34t9vdjhFmha/mUiNDbN0D0mJWdug==}
     engines: {node: '>=0.10.32'}
-    dev: false
 
   /yallist/3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}

@@ -4,19 +4,21 @@ import { match } from 'ts-pattern'
 import { AuthProvider, FormUser } from '~/types/app'
 
 const initialUser = {
-  id: '',
-  name: '',
-  avatarUrl: '',
+  user_id: '',
+  full_name: '',
+  avatar_url: '',
+  provider: '',
   email: '',
-  createdAt: '',
+  created_at: '',
 }
 
 const dummyUser = {
-  id: 'dummy-user',
-  name: 'ダミーユーザ',
-  avatarUrl: 'https://vuefes.jp/2022/speaker/evan.jpeg',
+  userId: 'dummy-user',
+  full_name: 'ダミーユーザ',
+  avatar_url: 'https://vuefes.jp/2022/speaker/evan.jpeg',
+  provider: 'google',
   email: 'dummy@cy.com',
-  createdAt: '2023-06-02T15:12:03.369752Z',
+  created_at: '2023-06-02T15:12:03.369752Z',
 }
 
 let signedUser = reactive<FormUser>({ ...initialUser })
@@ -37,11 +39,13 @@ const useAuth = async () => {
       .with('INITIAL_SESSION', 'SIGNED_IN', () => {
         if (session?.user) {
           const { user } = session
-          signedUser.id = user.id || ''
-          signedUser.name = user?.user_metadata.preferred_username || user?.user_metadata.name || ''
-          signedUser.avatarUrl = user?.user_metadata.avatar_url || ''
+          signedUser.user_id = user.id || ''
+          signedUser.full_name =
+            user?.user_metadata.preferred_username || user?.user_metadata.name || ''
+          signedUser.avatar_url = user?.user_metadata.avatar_url || ''
+          signedUser.provider = user?.app_metadata.provider as AuthProvider
           signedUser.email = user?.email || ''
-          signedUser.createdAt = user?.created_at || ''
+          signedUser.created_at = user?.created_at || ''
         }
       })
       .with('SIGNED_OUT', () => {
@@ -72,7 +76,7 @@ const useAuth = async () => {
     }
   }
   const hasAuth = computed(() => {
-    return signedUser.id !== ''
+    return signedUser.user_id !== ''
   })
 
   return { signOut, signIn, signedUser, hasAuth }
@@ -93,7 +97,7 @@ export function getClient() {
 }
 
 function shouldDevLogin(): boolean {
-  return window.location.search.includes('forcelogin=true') && !signedUser.id
+  return window.location.search.includes('forcelogin=true') && !signedUser.user_id
 }
 
 export default useAuth

@@ -32,6 +32,7 @@
     "@markuplint/vue-spec": "3.2.0",
     "@nuxt/devtools": "0.2.5",
     "@nuxtjs/device": "3.1.0",
+    "@nuxtjs/supabase": "0.3.6",
     "@types/node": "18.13.0",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",

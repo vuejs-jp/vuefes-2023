@@ -22,7 +22,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
     </div>
     <div class="speaker-cfp-schedule">
       <h3>募集スケジュール</h3>
-      <p class="deadline">応募期限: <em>2022/6/30（木）23:59:59</em>まで</p>
+      <p class="deadline">応募期限: <em>2023/7/15（土）23:59:59</em>まで</p>
       <p class="apply-button">
         <RoundButton
           href="https://docs.google.com/forms/d/e/1FAIpQLScdrdrV8qOhMrSfExUzt_mYXahyGQGtXZE5G69JkFflunuj-A/viewform"

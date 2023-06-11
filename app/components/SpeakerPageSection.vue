@@ -25,7 +25,7 @@ import { speakers } from '~/utils/speakers.constants'
 <style lang="ts" scoped>
 css({
     'section': {
-        padding: '120px 46px',
+        padding: '120px 20px',
     },
     '.speaker-root': {
         display: 'flex',
@@ -50,7 +50,7 @@ css({
         gap: '2em',
         margin: '0 auto',
     },
-    '@media(min-width: 770px)': {
+    '@tablet': {
         'section': {
             padding: '120px 40px',
         },

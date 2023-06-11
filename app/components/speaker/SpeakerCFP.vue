@@ -55,7 +55,7 @@ css({
         'p': {
             color: '{color.vue.blue}',
             fontWeight: 500,
-            fontSize: '18px',
+            fontSize: '16px',
             lineHeight: '1.8',
             'a': {
                 color: '{color.vue.green}',
@@ -102,7 +102,13 @@ css({
                 transition: '.2s',
             },
         },
-
+    },
+    '@mobile': {
+        '.speaker-cfp-description': {
+            'p': {
+                fontSize: '18px',
+            },
+        },
     },
 })
 </style>

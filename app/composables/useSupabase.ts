@@ -5,7 +5,7 @@ export interface UseSupabaseProps {
   user: FormUser
 }
 
-export async function useSupabase({ user }: UseSupabaseProps) {
+export function useSupabase({ user }: UseSupabaseProps) {
   const client = useSupabaseClient<Database>()
 
   async function addEventUser(secretWord: string, receiptId: string) {

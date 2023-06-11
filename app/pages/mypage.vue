@@ -7,7 +7,7 @@ definePageMeta({
   middleware: ['error'],
 })
 const { signOut, signedUser, hasAuth } = await useAuth()
-const { addEventUser } = await useSupabase({ user: signedUser })
+const { addEventUser } = useSupabase({ user: signedUser })
 const secretWord = ref('')
 const receiptId = ref('')
 function onPurchase() {

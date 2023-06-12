@@ -1,14 +1,9 @@
 import { words } from '~~/locales/words.yaml'
 import { DefineLocaleMessage } from 'vue-i18n'
-import words from '@/assets/locales/words'
-import top from '@/assets/locales/top'
+import global from '@/assets/locales/global'
 
-type TopSchema = typeof top.ja
-type WordsSchema = typeof words.ja
+type GlobalSchema = typeof global
 
 declare module 'vue-i18n' {
-  export interface DefineLocaleMessage {
-    words: WordsSchema
-    top: TopSchema
-  }
+  export interface DefineLocaleMessage extends GlobalSchema {}
 }

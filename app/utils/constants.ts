@@ -1,3 +1,5 @@
+import { isProd } from './environment.constants'
+
 export type NavLink = {
   text: string
   link: string
@@ -5,6 +7,7 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { text: 'Message', link: '#message' },
+  { text: 'Speakers', link: '#speakers' },
   { text: 'Sponsors', link: '#sponsors' },
   { text: 'Contact', link: '#form' },
 ]
@@ -20,6 +23,8 @@ export const ogCoCDescription =
 export const ogPrivacyDescription = 'Vue Fes Japan 2023 のプライバシーポリシーです。'
 
 export const linkUrl = 'https://vuefes.jp/2023/'
+
+export const urlBasePath = isProd ? '/2023' : ''
 
 export const vuefesTwitterID = '@vuefes'
 

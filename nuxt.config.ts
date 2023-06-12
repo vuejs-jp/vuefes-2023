@@ -1,4 +1,3 @@
-import viteYaml from '@modyfi/vite-plugin-yaml'
 import svgLoader from 'vite-svg-loader'
 import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
@@ -36,15 +35,23 @@ export default defineNuxtConfig({
       svgLoader({
         svgo: false,
       }),
-      viteYaml(),
     ],
   },
   typescript: {
     strict: true,
   },
   i18n: {
-    locales: ['en', 'ja', 'ja-basic'],
+    locales: [
+      { code: 'ja', iso: 'ja_JP', file: 'ja.ts' },
+      { code: 'ja-basic', iso: 'ja_JP', file: 'ja-basic.ts' },
+      { code: 'en', iso: 'en-US', file: 'en.ts' },
+    ],
+    lazy: true,
     defaultLocale: 'ja',
+    langDir: 'locales/',
+    experimental: {
+      jsTsFormatResource: true,
+    },
   },
   runtimeConfig: {
     public: {

@@ -31,6 +31,7 @@
     "@markuplint/vue-parser": "3.2.0",
     "@markuplint/vue-spec": "3.2.0",
     "@nuxt/devtools": "0.2.5",
+    "@nuxt/types": "^2.17.0",
     "@nuxtjs/device": "3.1.0",
     "@nuxtjs/supabase": "0.3.6",
     "@nuxtjs/i18n": "8.0.0-beta.12",

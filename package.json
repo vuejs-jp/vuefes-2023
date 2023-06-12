@@ -30,7 +30,6 @@
   "devDependencies": {
     "@markuplint/vue-parser": "3.2.0",
     "@markuplint/vue-spec": "3.2.0",
-    "@modyfi/vite-plugin-yaml": "^1.0.4",
     "@nuxt/devtools": "0.2.5",
     "@nuxtjs/device": "3.1.0",
     "@nuxtjs/supabase": "0.3.6",

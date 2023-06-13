@@ -1,3 +1,10 @@
+<script setup lang="ts">
+const { locale } = useI18n()
+const docPath = computed(() => {
+  return `/${locale.value}/top/message`
+})
+</script>
+
 <template>
   <VoiceFrame class="message-root">
     <section class="message">
@@ -8,28 +15,9 @@
           title="Message"
           :yamato-title="$t('top.message_subtitle')"
         />
-        <div class="text">
-          <p>{{ $t('top.message_text1') }}</p>
-          <p>{{ $t('top.message_text2') }}</p>
-          <p>{{ $t('top.message_text3') }}</p>
-          <p>{{ $t('top.message_text4') }}</p>
-          <p>{{ $t('top.message_text5') }}</p>
-        </div>
-        <div class="representative">
-          <p>
-            <span>Vue.js</span>
-            <span>{{ $t('top.message_from_1') }}</span>
-            <span>{{ $t('top.message_from_2') }}</span>
-            <span>{{ $t('top.message_from_3') }}</span>
-            <span
-              >(
-              <a href="https://twitter.com/kazu_pon" target="_blank" rel="noreferrer">
-                @kazu_pon
-              </a>
-              )</span
-            >
-          </p>
-        </div>
+        <ContentDoc :path="docPath" v-slot="{ doc }">
+          <ContentRenderer class="text" :value="doc" />
+        </ContentDoc>
       </div>
     </section>
   </VoiceFrame>
@@ -60,25 +48,19 @@ css({
   '.text': {
     marginTop: '32px',
     whiteSpace: 'pre-line',
-    'p': {
+    '::v-deep(p)': {
       fontSize: '18px',
       lineHeight: '1.8',
-      '& + &': {
-        marginTop: '1.8em',
-      },
+    },
+    '::v-deep(p + p)': {
+      marginTop: '1.8em',
     },
   },
-  '.representative': {
+  '::v-deep(.representative)': {
     marginTop: '24px',
     textAlign: 'right',
     fontSize: 'calc(18*{fontSize.base})',
     lineHeight: '1.8',
-    'span': {
-      display: 'inline-block',
-    },
-    'span + span': {
-      marginLeft: '0.5em',
-    }
   },
 })
 </style>

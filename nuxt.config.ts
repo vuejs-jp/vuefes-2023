@@ -20,7 +20,14 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css'],
-  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device', '@nuxtjs/supabase', '@nuxtjs/i18n'],
+  modules: [
+    'pinceau/nuxt',
+    '@nuxt/devtools',
+    '@nuxtjs/device',
+    '@nuxtjs/supabase',
+    '@nuxtjs/i18n',
+    '@nuxt/content',
+  ],
   pinceau: {
     configFileName: 'tokens.config',
     debug: false,

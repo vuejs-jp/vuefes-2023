@@ -25,10 +25,11 @@ const isHovered = useHover(hoverRef)
 <style lang="ts" scoped>
 css({
   '.twitter-root': {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '24px 72px',
+    display: 'grid',
+    placeItems: 'center',
+    gridTemplateColumns: '100%',
+    gap: '8px',
+    padding: '12px 36px',
     background: 'rgba(35, 52, 69, 0.8)',
     borderRadius: '70px',
     '&:hover': {
@@ -53,27 +54,27 @@ css({
       },
     },
   },
-  '@media(min-width: 768px)': {
+  '@desktop': {
+    '.twitter-root': {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '24px 72px',
+      background: 'rgba(35, 52, 69, 0.8)',
+      borderRadius: '70px',
+    },
+  },
+  '@tablet': {
     '.twitter-root': {
       '&:hover': {
         transition: 'none',
       },
     },
     '.title': {
-      fontSize: '20px',
+      fontSize: 'calc(20*{fontSize.base})',
     },
     '.explain': {
-      fontSize: '24px',
-    },
-  },
-  '@media(max-width: 1023px)': {
-    '.twitter-root': {
-      display: 'grid',
-      placeItems: 'center',
-      gridTemplateColumns: '100%',
-      gap: '8px',
-      padding: '12px 36px',
-      borderRadius: '70px',
+      fontSize: 'calc(24*{fontSize.base})',
     },
   },
 })

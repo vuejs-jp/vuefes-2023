@@ -17,7 +17,7 @@
 <style lang="ts" scoped>
 css({
   '.copy-right-detail': {
-    textAlign: 'right',
+    textAlign: 'center',
     color: '{color.white}',
     fontSize: '12px',
     'a': {
@@ -28,9 +28,9 @@ css({
       },
     },
   },
-  '@media(max-width: 767px)': {
+  '@mobile': {
     '.copy-right-detail': {
-      textAlign: 'center',
+      textAlign: 'right',
     },
   },
 })

@@ -36,7 +36,7 @@ css({
       transition: '.2s',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@mobile': {
     '.anchor-root': {
       padding: '18px 72px',
     },

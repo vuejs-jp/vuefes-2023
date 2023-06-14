@@ -51,7 +51,7 @@ css({
   '.footer-copyright': {
     marginTop: '56px',
   },
-  '@media(min-width: 768px)': {
+  '@tablet': {
     '.footer-section': {
       display: 'flex',
       alignItems: 'flex-start',
@@ -72,7 +72,7 @@ css({
       marginTop: '32px',
     },
   },
-  '@media(max-width: 767px)': {
+  '@mobile': {
     '.footer-section': {
       padding: '80px 40px',
     },

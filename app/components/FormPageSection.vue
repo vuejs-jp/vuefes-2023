@@ -126,7 +126,7 @@ css({
       gap: '40px',
     },
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.subtitle': {
       'p': {
         fontSize: '18px',

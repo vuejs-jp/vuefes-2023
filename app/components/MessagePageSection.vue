@@ -67,7 +67,6 @@ css({
   },
   '.message-body': {
     padding: '68px 11.53% 72px',
-    gridColumn: '2',
     color: '{color.white}',
     background: 'rgba(255, 255, 255, 0.05)',
     borderRadius: '40px',
@@ -121,12 +120,15 @@ css({
       marginLeft: '0.5em',
     }
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.message-body': {
+      gridColumn: '2',
       borderRadius: '60px',
     },
-    'p': {
-      fontSize: '16px',
+    '.text': {
+      'p': {
+        fontSize: '16px',
+      }
     }
   },
 })

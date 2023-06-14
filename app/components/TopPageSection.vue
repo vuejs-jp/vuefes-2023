@@ -95,7 +95,6 @@ css({
   '.components-wrapper': {
     display: 'inline-block',
     width: '100%',
-    height: '100%',
     position: 'relative',
   },
   '.bg': {
@@ -113,41 +112,34 @@ css({
     transform: 'translate(-50%, -50%)',
   },
   '.title': {
-    width: '80%',
-    height: 'auto',
+    width: '90vw',
   },
   '.twitter-wrapper': {
     bottom: '80px',
     right: 0,
     left: 0,
     width: '100%',
-    padding: '0 120px',
+    padding: '0 30px',
     position: 'absolute',
     zIndex: 3,
   },
-  '@media(min-width: 1024px)': {
+  '@desktop': {
     '.title-wrapper': {
       left: '45%',
-    }
-  },
-  '@media(min-width: 768px) and (max-width: 1023px)': {
+    },
     '.title': {
-      width: '90vw',
-    },
-  },
-  '@media(max-width: 767px)': {
-    '.title': {
-      width: '90vw',
-    },
-    '.components-wrapper': {
-      height: '70vh',
-    },
-    '.components': {
-      height: '100%',
+      width: '80%',
+      height: 'auto',
     },
     '.twitter-wrapper': {
       bottom: '80px',
-      padding: '0 30px',
+      padding: '0 120px',
+    },
+  },
+  '@mobile': {
+    '.components': {
+      paddingTop: '80px',
+      height: '90%',
     },
   },
 })

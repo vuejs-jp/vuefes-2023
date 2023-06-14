@@ -23,7 +23,7 @@ css({
       fontSize: '18px',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@mobile': {
     gap: '24px',
     '.doc-root': {
       'a': {
@@ -31,7 +31,7 @@ css({
       },
     },
   },
-  '@media(min-width: 768px)': {
+  '@tablet': {
     '.doc-root': {
       'a': {
         textDecoration: 'underline',

@@ -304,16 +304,15 @@ css({
     display: 'grid',
     placeItems: 'center',
   },
-  '@media(max-width: 767px)': {
+  '@mobile': {
     '.explain': {
       'ul': {
+        paddingLeft: '18px',
         'ul': {
           paddingLeft: '18px',
         },
       },
     },
-  },
-  '@media(min-width: 768px)': {
     '.privacy-root': {
       'p': {
         fontSize: '18px',

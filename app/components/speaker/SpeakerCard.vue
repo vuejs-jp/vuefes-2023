@@ -163,7 +163,7 @@ css({
             },
         },
     },
-    '@media(min-width: 770px)': {
+    '@mobile': {
         '.speaker-card': {
             'img': {
                 borderRadius: '0.5em',
@@ -172,7 +172,7 @@ css({
             },
         },
     },
-    '@media(min-width: 980px)': {
+    '@tablet': {
         '.speaker-card': {
             'img': {
                 borderRadius: '0.5em',

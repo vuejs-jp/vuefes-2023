@@ -118,7 +118,7 @@ css({
     display: 'grid',
     placeItems: 'center',
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.coc-root': {
       'p': {
         fontSize: '18px',

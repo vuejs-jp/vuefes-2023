@@ -22,13 +22,13 @@ css({
       padding: '4px 0',
       textDecoration: 'underline',
       color: '{color.white}',
-      fontSize: '18px',
+      fontSize: '14px',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@mobile': {
     '.past-root': {
       'a': {
-        fontSize: '14px',
+        fontSize: '18px',
       },
     },
   },

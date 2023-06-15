@@ -34,7 +34,7 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 <style lang="ts" scoped>
 css({
   '.footer-section': {
-    padding: '80px 32px',
+    padding: '80px 40px',
     background: '{color.vue-blue}',
     backgroundImage: 'url("~/assets/footer/background.svg")',
     backgroundPosition: '50% 100%',
@@ -53,6 +53,7 @@ css({
   },
   '@tablet': {
     '.footer-section': {
+      padding: '80px 32px',
       display: 'flex',
       alignItems: 'flex-start',
       justifyContent: 'space-around',
@@ -70,11 +71,6 @@ css({
     },
     '.footer-copyright': {
       marginTop: '32px',
-    },
-  },
-  '@mobile': {
-    '.footer-section': {
-      padding: '80px 40px',
     },
   },
 })

@@ -28,7 +28,7 @@ css({
       },
     },
   },
-  '@mobile': {
+  '@desktop': {
     '.copy-right-detail': {
       textAlign: 'right',
     },

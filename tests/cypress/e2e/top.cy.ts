@@ -78,6 +78,19 @@ describe('top', () => {
           cy.contains('Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。')
         })
     })
+    it('speakers', () => {
+      loadPage()
+      cy.contains('h2', 'Speakers')
+        .contains('スピーカー')
+        .closest('section')
+        .within(() => {
+          cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
+          cy.contains('h3', '募集スケジュール')
+          cy.contains('応募期限: 2023/7/15（土）23:59:59まで')
+          cy.contains('a', '申し込みフォーム')
+          cy.contains('最新情報は、Vue Fes Japan の Twitter をご確認ください。')
+        })
+    })
     it('sponsors', () => {
       loadPage()
       cy.contains('h2', 'Sponsors')

@@ -15,7 +15,7 @@ const docPath = computed(() => {
           title="Message"
           :yamato-title="$t('top.message_subtitle')"
         />
-        <ContentDoc :path="docPath" v-slot="{ doc }">
+        <ContentDoc v-slot="{ doc }" :path="docPath">
           <ContentRenderer class="text" :value="doc" />
         </ContentDoc>
       </div>
@@ -61,6 +61,11 @@ css({
     textAlign: 'right',
     fontSize: 'calc(18*{fontSize.base})',
     lineHeight: '1.8',
+  },
+  '@mobile': {
+    '.text ::v-deep(p)': {
+      fontSize: '16px',
+    }
   },
 })
 </style>

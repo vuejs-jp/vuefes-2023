@@ -30,6 +30,11 @@ const updateEmail = (value: string) => {
 const updateDetail = (value: string) => {
   detail.value = value
 }
+
+const { locale } = useI18n()
+const docPath = computed(() => {
+  return `/${locale.value}/top/contact`
+})
 </script>
 
 <template>
@@ -42,13 +47,17 @@ const updateDetail = (value: string) => {
         :yamato-title="$t('top.contact_subtitle')"
       />
       <!-- タイトル下テキスト -->
-      <div class="subtitle">
+      <!-- <div class="subtitle">
         <i18n-t keypath="top.contact_toptext" tag="p">
           <a href="https://twitter.com/vuefes" target="_blank" rel="noreferrer">{{
             $t('top.contact_toptext_linklabel')
           }}</a>
         </i18n-t>
-      </div>
+      </div> -->
+      <!-- タイトル下テキスト -->
+      <ContentDoc v-slot="{ doc }" :path="docPath">
+        <ContentRenderer class="subtitle" :value="doc" />
+      </ContentDoc>
       <div class="form">
         <form @submit="onSubmit">
           <!-- お名前／Name  -->
@@ -112,7 +121,7 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
-    'p': {
+    '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
       fontSize: '18px',
@@ -137,7 +146,7 @@ css({
   },
   '@mobile': {
     '.subtitle': {
-      'p': {
+      '::v-deep(p)': {
         fontSize: '16px',
       },
     },

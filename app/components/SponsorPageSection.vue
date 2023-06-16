@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
+const { locale } = useI18n()
+const docPath = computed(() => {
+  return `/${locale.value}/top/sponsors`
+})
 </script>
 
 <template>
@@ -12,9 +16,9 @@ import RoundButton from '~/components/button/RoundButton.vue'
         :yamato-title="$t('top.sponsors_subtitle')"
       />
       <!-- タイトル下テキスト -->
-      <div class="subtitle">
-        <p>{{ $t('top.sponsors_toptext') }}</p>
-      </div>
+      <ContentDoc v-slot="{ doc }" :path="docPath">
+        <ContentRenderer class="subtitle" :value="doc" />
+      </ContentDoc>
       <div class="link-box">
         <!-- 申し込みフォーム -->
         <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
@@ -37,7 +41,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
           target="_blank"
           class="twitter-link"
           rel="noreferrer"
-          >{{ $t('top.sponsors_infolink_label') }}</a
+          >{{ $t('words.vuefes_twitter') }}</a
         >
       </i18n-t>
     </div>
@@ -62,7 +66,7 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
-    'p': {
+    '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
       fontSize: '16px',
@@ -90,12 +94,18 @@ css({
   '@mobile': {
     'section': {
       padding: '120px 20px',
-    },
     '.subtitle': {
-      'p': {
+      '::v-deep(p)': {
         fontSize: '18px',
       },
     },
   },
+  // '@mobile': {
+  //   '.subtitle': {
+  //     '::v-deep(p)': {
+  //       fontSize: '16px',
+  //     },
+  //   },
+  // },
 })
 </style>

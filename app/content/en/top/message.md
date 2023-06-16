@@ -13,4 +13,3 @@ By all means, let's participate in the conference together and enjoy an experien
 <div class="representative">
   Japan User Group&ensp;representative&ensp;Kawaguchi Kazuya&ensp;( <a href="https://twitter.com/kazu_pon" target="_blank" rel="noreferrer">@kazu_pon</a> )
 </div>
-

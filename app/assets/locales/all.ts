@@ -37,7 +37,8 @@ export default {
       contact_form_name_label: 'お名前／Name',
       contact_form_name_placeholder: '山田太郎',
       contact_form_mail_label: 'メールアドレス／Mail',
-      contact_form_mail_placeholder: "hello{'@'}vuefes.jp",
+      /* prettier-ignore */
+      contact_form_mail_placeholder: 'hello{\'@\'}vuefes.jp',
       contact_form_text_label: 'お問い合わせ内容／Content',
       contact_submit_done: 'メッセージ送信に成功しました。',
     },
@@ -49,7 +50,8 @@ export default {
       sponsordoc: 'Sponsor Document',
       privacypolicy: 'Privacy Policy',
       codeofconduct: 'Code of Conduct',
-      vuefes_twitter: "Vue Fes Japan's Twitter",
+      /* prettier-ignore */
+      vuefes_twitter: 'Vue Fes Japan\'s Twitter',
       application_deadline_date: '2023/7/15 (Sat) 23:59:59',
     },
     top: {
@@ -80,10 +82,14 @@ export default {
       contact_form_name_label: 'Name',
       contact_form_name_placeholder: 'Yamada Taro',
       contact_form_mail_label: 'Mail',
-      contact_form_mail_placeholder: "hello{'@'}vuefes.jp",
+      /* prettier-ignore */
+      contact_form_mail_placeholder: 'hello{\'@\'}vuefes.jp',
       contact_form_text_label: 'Content',
       contact_submit_done: 'Message sent successfully.',
     },
   },
-  'ja-basic': {},
-}
+  ja_basic: {
+    words: {},
+    top: {},
+  },
+} as const

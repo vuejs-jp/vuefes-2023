@@ -47,14 +47,6 @@ const docPath = computed(() => {
         :yamato-title="$t('top.contact_subtitle')"
       />
       <!-- タイトル下テキスト -->
-      <!-- <div class="subtitle">
-        <i18n-t keypath="top.contact_toptext" tag="p">
-          <a href="https://twitter.com/vuefes" target="_blank" rel="noreferrer">{{
-            $t('top.contact_toptext_linklabel')
-          }}</a>
-        </i18n-t>
-      </div> -->
-      <!-- タイトル下テキスト -->
       <ContentDoc v-slot="{ doc }" :path="docPath">
         <ContentRenderer class="subtitle" :value="doc" />
       </ContentDoc>

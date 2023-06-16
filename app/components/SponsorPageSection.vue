@@ -100,12 +100,5 @@ css({
       },
     },
   },
-  // '@mobile': {
-  //   '.subtitle': {
-  //     '::v-deep(p)': {
-  //       fontSize: '16px',
-  //     },
-  //   },
-  // },
 })
 </style>

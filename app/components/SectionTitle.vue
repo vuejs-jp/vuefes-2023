@@ -60,7 +60,7 @@ css({
       height: '1px',
     },
   },
-  '@desktop': {
+  '@mobile': {
     '.title-main': {
       fontSize: 'calc(40*{fontSize.base})',
     },

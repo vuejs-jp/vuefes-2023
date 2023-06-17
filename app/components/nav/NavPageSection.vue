@@ -101,7 +101,7 @@ css({
     height: '1px',
     overflow: 'hidden',
   },
-  '@desktop': {
+  '@tablet': {
      '.nav-root': {
       padding: '16px 24px',
     },

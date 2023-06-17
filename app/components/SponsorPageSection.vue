@@ -42,7 +42,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 <style lang="ts" scoped>
 css({
   'section': {
-    padding: '120px 20px',
+    padding: '120px 40px',
     background: '#EEEEEE'
   },
   '.sponsors-root': {
@@ -83,7 +83,7 @@ css({
   },
   '@tablet': {
     'section': {
-      padding: '120px 40px',
+      padding: '120px 20px',
     },
   },
   '@mobile': {

@@ -126,7 +126,7 @@ css({
       gap: '40px',
     },
   },
-  '@media(min-width: 768px)': {
+  '@desktop': {
     '.subtitle': {
       'p': {
         fontSize: '18px',

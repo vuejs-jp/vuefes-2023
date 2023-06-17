@@ -36,7 +36,7 @@ css({
       transition: '.2s',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@tablet': {
     '.anchor-root': {
       padding: '18px 72px',
     },

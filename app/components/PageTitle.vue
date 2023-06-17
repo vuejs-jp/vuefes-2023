@@ -60,7 +60,7 @@ css({
       height: '1px',
     },
   },
-  '@media(min-width: 768px)': {
+  '@desktop': {
     '.title-main': {
       fontSize: 'calc(40*{fontSize.base})',
     },

@@ -107,8 +107,8 @@ css({
     },
     'p': {
       color: '{color.vue.blue}',
+      fontSize: 'calc(18*{fontSize.base})',
       fontWeight: 500,
-      fontSize: '18px',
     },
   },
   '.form-link': {
@@ -117,13 +117,6 @@ css({
   '.back': {
     display: 'grid',
     placeItems: 'center',
-  },
-  '@media(min-width: 768px)': {
-    '.coc-root': {
-      'p': {
-        fontSize: '18px',
-      },
-    },
   },
 })
 </style>

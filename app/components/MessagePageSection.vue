@@ -121,7 +121,7 @@ css({
       marginLeft: '0.5em',
     }
   },
-  '@media(min-width: 768px)': {
+  '@desktop': {
     '.message-body': {
       borderRadius: '60px',
     },

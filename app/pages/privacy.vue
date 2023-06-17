@@ -267,8 +267,8 @@ css({
     },
     'p': {
       color: '{color.vue.blue}',
+      fontSize: 'calc(18*{fontSize.base})',
       fontWeight: 500,
-      fontSize: '18px',
     },
     'ul': {
       paddingLeft: '48px',
@@ -304,19 +304,12 @@ css({
     display: 'grid',
     placeItems: 'center',
   },
-  '@media(max-width: 767px)': {
+  '@mobile': {
     '.explain': {
       'ul': {
         'ul': {
           paddingLeft: '18px',
         },
-      },
-    },
-  },
-  '@media(min-width: 768px)': {
-    '.privacy-root': {
-      'p': {
-        fontSize: '18px',
       },
     },
   },

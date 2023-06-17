@@ -95,8 +95,8 @@ css({
         gap: '0.5em',
         'img': {
             borderRadius: '0.5em',
-            width: '208px',
-            height: '208px',
+            width: '308px',
+            height: '308px',
         },
     },
     '.speaker-title': {
@@ -163,21 +163,21 @@ css({
             },
         },
     },
-    '@media(min-width: 770px)': {
+    '@mobile': {
+        '.speaker-card': {
+            'img': {
+                borderRadius: '0.5em',
+                width: '208px',
+                height: '208px',
+            },
+        },
+    },
+    '@tablet': {
         '.speaker-card': {
             'img': {
                 borderRadius: '0.5em',
                 width: '274px',
                 height: '274px',
-            },
-        },
-    },
-    '@media(min-width: 980px)': {
-        '.speaker-card': {
-            'img': {
-                borderRadius: '0.5em',
-                width: '308px',
-                height: '308px',
             },
         },
     },

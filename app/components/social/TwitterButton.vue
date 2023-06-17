@@ -29,13 +29,14 @@ css({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '24px 72px',
-    background: 'rgba(35, 52, 69, 0.8)',
-    borderRadius: '70px',
+      background: 'rgba(35, 52, 69, 0.8)',
+      borderRadius: '70px',
     '&:hover': {
       transition: '.2s',
     },
     '.title': {
       whiteSpace: 'nowrap',
+      fontSize: 'calc(20*{fontSize.base})',
       fontWeight: 700,
       color: '{color.white}',
     },
@@ -44,6 +45,7 @@ css({
       alignItems: 'center',
       gap: '16px',
       whiteSpace: 'nowrap',
+      fontSize: 'calc(24*{fontSize.base})',
       fontWeight: 700,
       'svg': {
         fill: '{color.white}',
@@ -53,27 +55,20 @@ css({
       },
     },
   },
-  '@media(min-width: 768px)': {
-    '.twitter-root': {
-      '&:hover': {
-        transition: 'none',
-      },
-    },
-    '.title': {
-      fontSize: '20px',
-    },
-    '.explain': {
-      fontSize: '24px',
-    },
-  },
-  '@media(max-width: 1023px)': {
+  '@tablet': {
     '.twitter-root': {
       display: 'grid',
       placeItems: 'center',
       gridTemplateColumns: '100%',
       gap: '8px',
       padding: '12px 36px',
-      borderRadius: '70px',
+    },
+  },
+  '@mobile': {
+    '.twitter-root': {
+      '&:hover': {
+        transition: 'none',
+      },
     },
   },
 })

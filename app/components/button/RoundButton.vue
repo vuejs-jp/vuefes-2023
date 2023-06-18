@@ -9,6 +9,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  to: {
+    type: String,
+    default: '',
+  },
   target: {
     type: String,
     default: '_blank',
@@ -28,6 +32,7 @@ const props = defineProps({
 })
 
 const isLink = Boolean(props.href)
+const isRouterLink = Boolean(props.to)
 const myclass = computed(() => {
   const cls = ['button']
   if (props.outline) {
@@ -44,7 +49,19 @@ const onClick = (e: Event) => {
 </script>
 
 <template>
-  <template v-if="isLink">
+  <!-- nuxt link -->
+  <template v-if="isRouterLink">
+    <nuxt-link
+      :to="url"
+      :class="myclass.join(' ')"
+      :disabled="props.disabled"
+      :aria-disabled="props.disabled"
+    >
+      <slot />
+    </nuxt-link>
+  </template>
+  <!-- html link -->
+  <template v-else-if="isLink">
     <a
       :class="myclass.join(' ')"
       :href="props.href"
@@ -55,6 +72,7 @@ const onClick = (e: Event) => {
       <slot />
     </a>
   </template>
+  <!-- button -->
   <template v-else>
     <button
       :class="myclass.join(' ')"

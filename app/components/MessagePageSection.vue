@@ -98,13 +98,5 @@ css({
       marginLeft: '0.5em',
     }
   },
-  '@mobile': {
-    '.message-body': {
-      borderRadius: '40px',
-    },
-    'p': {
-      fontSize: '16px',
-    }
-  },
 })
 </style>

@@ -81,12 +81,10 @@ css({
       transition: '.2s',
     },
   },
-  '@tablet': {
+  '@mobile': {
     'section': {
       padding: '120px 20px',
     },
-  },
-  '@mobile': {
     '.subtitle': {
       'p': {
         fontSize: '18px',

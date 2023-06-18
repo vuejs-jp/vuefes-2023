@@ -29,8 +29,8 @@ css({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '24px 72px',
-      background: 'rgba(35, 52, 69, 0.8)',
-      borderRadius: '70px',
+    background: 'rgba(35, 52, 69, 0.8)',
+    borderRadius: '70px',
     '&:hover': {
       transition: '.2s',
     },
@@ -68,6 +68,12 @@ css({
     '.twitter-root': {
       '&:hover': {
         transition: 'none',
+      },
+      '.title': {
+        fontSize: 'calc(18*{fontSize.base})',
+      },
+      '.explain': {
+        fontSize: 'calc(20*{fontSize.base})',
       },
     },
   },

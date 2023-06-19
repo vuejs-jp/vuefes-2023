@@ -25,7 +25,7 @@ css({
       fontSize: '18px',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@mobile': {
     '.past-root': {
       'a': {
         fontSize: '14px',

@@ -18,12 +18,12 @@ css({
     gap: '36px',
     'a': {
       padding: '4px 0',
-      textDecoration: 'none',
+      textDecoration: 'underline',
       color: '{color.white}',
       fontSize: '18px',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@tablet': {
     gap: '24px',
     '.doc-root': {
       'a': {
@@ -31,10 +31,10 @@ css({
       },
     },
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.doc-root': {
       'a': {
-        textDecoration: 'underline',
+        textDecoration: 'none',
       },
     },
   },

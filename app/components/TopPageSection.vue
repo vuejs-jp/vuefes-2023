@@ -109,7 +109,7 @@ css({
   '.title-wrapper': {
     position: 'absolute',
     top: '50%',
-    left: '50%',
+    left: '40%',
     transform: 'translate(-50%, -50%)',
   },
   '.title': {
@@ -125,19 +125,17 @@ css({
     position: 'absolute',
     zIndex: 3,
   },
-  '@media(min-width: 1024px)': {
+  '@tablet': {
     '.title-wrapper': {
-      left: '45%',
-    }
-  },
-  '@media(min-width: 768px) and (max-width: 1023px)': {
+      left: '50%',
+    },
     '.title': {
       width: '90vw',
     },
   },
-  '@media(max-width: 767px)': {
-    '.title': {
-      width: '90vw',
+  '@mobile': {
+    '.title-wrapper': {
+      left: '50%',
     },
     '.components-wrapper': {
       height: '70vh',

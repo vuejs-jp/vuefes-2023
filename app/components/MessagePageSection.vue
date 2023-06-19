@@ -70,34 +70,11 @@ css({
     gridColumn: '2',
     color: '{color.white}',
     background: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: '40px',
+    borderRadius: '60px',
   },
   '.title': {
     textAlign: 'center',
     lineHeight: '1',
-  },
-  '.title-main': {
-    fontSize: 'calc(40*{fontSize.base})',
-    fontWeight: 'bold',
-    lineHeight: '1',
-  },
-  '.title-sub': {
-    textAlign: 'center',
-    fontSize: 'calc(20*{fontSize.base})',
-    lineHeight: '1',
-    marginTop: '18px',
-    display: 'grid',
-    gridTemplateColumns: '96px max-content 96px',
-    justifyContent: 'center',
-    placeItems: 'center',
-    columnGap: '16px',
-    '&::before, &::after': {
-      content: '""',
-      display: 'inline-block',
-      background: '{color.white}',
-      width: '96px',
-      height: '1px',
-    },
   },
   '.text': {
     marginTop: '32px',
@@ -119,14 +96,6 @@ css({
     },
     'span + span': {
       marginLeft: '0.5em',
-    }
-  },
-  '@media(min-width: 768px)': {
-    '.message-body': {
-      borderRadius: '60px',
-    },
-    'p': {
-      fontSize: '16px',
     }
   },
 })

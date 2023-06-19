@@ -3,9 +3,9 @@ import { defineTheme } from 'pinceau'
 // https://pinceau.dev/configuration/tokens-config
 export default defineTheme({
   media: {
-    mobile: '(min-width: 320px)',
-    tablet: '(min-width: 768px)',
-    desktop: '(min-width: 1280px)',
+    mobile: '(max-width: 771px)',
+    tablet: '(max-width: 981px)',
+    desktop: '(max-width: 1920px)',
   },
   color: {
     white: '#FFF',

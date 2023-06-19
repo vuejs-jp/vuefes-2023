@@ -106,7 +106,7 @@ css({
     'p': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
@@ -126,10 +126,10 @@ css({
       gap: '40px',
     },
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.subtitle': {
       'p': {
-        fontSize: '18px',
+        fontSize: '16px',
       },
     },
   },

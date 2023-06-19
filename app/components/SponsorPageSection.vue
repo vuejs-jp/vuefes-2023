@@ -69,7 +69,7 @@ css({
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '180%'
     },
   },
@@ -94,11 +94,7 @@ css({
   '@mobile': {
     'section': {
       padding: '120px 20px',
-    '.subtitle': {
-      '::v-deep(p)': {
-        fontSize: '18px',
-      },
     },
-  },
+  }
 })
 </style>

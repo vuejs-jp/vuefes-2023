@@ -136,12 +136,5 @@ css({
       gap: '40px',
     },
   },
-  '@mobile': {
-    '.subtitle': {
-      '::v-deep(p)': {
-        fontSize: '16px',
-      },
-    },
-  },
 })
 </style>

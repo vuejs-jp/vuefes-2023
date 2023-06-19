@@ -47,7 +47,7 @@ css({
         '::v-deep(p)': {
             color: '{color.vue.blue}',
             fontWeight: 500,
-            fontSize: '16px',
+            fontSize: '18px',
             lineHeight: '1.8',
 
             'a': {
@@ -96,13 +96,6 @@ css({
 
             '&:hover': {
                 transition: '.2s',
-            },
-        },
-    },
-    '@tablet': {
-        '.speaker-cfp-description': {
-            '::v-deep(p)': {
-                fontSize: '18px',
             },
         },
     },

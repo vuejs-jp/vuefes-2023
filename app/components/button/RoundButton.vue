@@ -52,7 +52,7 @@ const onClick = (e: Event) => {
   <!-- nuxt link -->
   <template v-if="isRouterLink">
     <nuxt-link
-      :to="url"
+      :to="props.to"
       :class="myclass.join(' ')"
       :disabled="props.disabled"
       :aria-disabled="props.disabled"
@@ -103,7 +103,7 @@ css({
     '&:hover': {
       backgroundColor: '#64C397',
     },
-    '&[disabled],&.-disabled': {
+    '&[disabled="true"],&.-disabled': {
       pointerEvents: 'none',
       boxShadow: 'none',
       backgroundColor: '#C9DAEA',
@@ -116,7 +116,7 @@ css({
         background: 'rgba(53, 73, 94, 0.2)',
         transition: '.2s',
       },
-      '&[disabled],&.-disabled': {
+      '&[disabled="true"],&.-disabled': {
         backgroundColor: '#C9DAEA',
         color: '{color.white}',
         border: 'none',

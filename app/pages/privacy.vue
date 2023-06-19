@@ -38,7 +38,7 @@ useHead({
       <MarkDownText path="privacy" class="explain" />
 
       <div class="back">
-        <RoundButton to="/" outline> トップに戻る </RoundButton>
+        <RoundButton to="../" outline> トップに戻る </RoundButton>
       </div>
     </div>
     <FooterPageSection />
@@ -48,6 +48,8 @@ useHead({
 <style lang="ts" scoped>
 css({
   '.privacy-root': {
+    '--list-margin-left': '48px',
+
     padding: '80px 11.53%',
     color: '{color.vue.blue}',
     background: '{color.white}',
@@ -60,13 +62,13 @@ css({
       marginBottom: '1.5em',
     },
     '::v-deep(h2)': {
-        fontWeight: 700,
-        fontSize: '32px',
-        marginTop: '2em',
-        marginBottom: '.7em',
+      fontWeight: 700,
+      fontSize: '32px',
+      marginTop: '2em',
+      marginBottom: '.7em',
     },
-   '::v-deep(ul)': {
-      paddingLeft: '48px',
+    '::v-deep(ul)': {
+      paddingLeft: '{list.margin.left}',
       margin: '0 0 2em',
       fontWeight: 500,
       fontSize: '18px',
@@ -82,9 +84,9 @@ css({
         marginBottom: '.5em',
       },
       'ul': {
-        paddingLeft: '48px',
+        paddingLeft: '{list.margin.left}',
         margin: 0,
-       },
+      },
 
     },
     '::v-deep(li),::v-deep(p)': {
@@ -93,7 +95,7 @@ css({
       },
     },
     '::v-deep(ol)': {
-      paddingLeft: '48px',
+      paddingLeft: '{list.margin.left}',
       listStyleType: 'decimal',
       fontSize: '18px',
       marginBottom: '.5em',
@@ -107,14 +109,15 @@ css({
     justifyContent: 'center',
     marginTop: '80px'
   },
-  // '@media(max-width: 767px)': {
-  //   '.explain': {
-  //     'ul': {
-  //       'ul': {
-  //         paddingLeft: '18px',
-  //       },
-  //     },
-  //   },
-  // },
+  '@mobile': {
+    '.privacy-root': {
+      '--list-margin-left': '28px',
+
+      padding: '80px 20px',
+      '::v-deep(h2)': {
+        fontSize: '24px',
+      }
+    },
+  }
 })
 </style>

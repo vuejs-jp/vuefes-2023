@@ -21,13 +21,13 @@ export default {
       speakers_subtitle: 'スピーカー',
       speakers_schedule_title: '募集スケジュール',
       speakers_schedule_limit: '応募期限: {0} まで',
-      speakers_schedule_update: '詳細情報は、{0} をご確認ください',
+      speakers_schedule_update: '詳細情報は、{0} をご確認ください。',
       /**
        * sponsors section
        */
       sponsors_subtitle: 'スポンサー',
       sponsors_toptext: '',
-      sponsors_infolink: '詳細情報は、{0} をご確認ください',
+      sponsors_infolink: '詳細情報は、{0} をご確認ください。',
       /**
        * contact section
        */

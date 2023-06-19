@@ -61,7 +61,7 @@ css({
       height: '1px',
     },
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.title-main': {
       fontSize: 'calc(40*{fontSize.base})',
     },

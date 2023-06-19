@@ -116,7 +116,7 @@ css({
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
@@ -134,13 +134,6 @@ css({
     'form': {
       display: 'grid',
       gap: '40px',
-    },
-  },
-  '@tablet': {
-    '.subtitle': {
-      '::v-deep(p)': {
-        fontSize: '18px',
-      },
     },
   },
 })

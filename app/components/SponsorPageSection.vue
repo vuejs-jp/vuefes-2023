@@ -52,7 +52,7 @@ const docPath = computed(() => {
 <style lang="ts" scoped>
 css({
   'section': {
-    padding: '120px 20px',
+    padding: '120px 40px',
     background: '#EEEEEE'
   },
   '.sponsors-root': {
@@ -69,7 +69,7 @@ css({
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '180%'
     },
   },
@@ -91,15 +91,10 @@ css({
       transition: '.2s',
     },
   },
-  '@tablet': {
+  '@mobile': {
     'section': {
-      padding: '120px 40px',
+      padding: '120px 20px',
     },
-    '.subtitle': {
-      '::v-deep(p)': {
-        fontSize: '18px',
-      },
-    },
-  },
+  }
 })
 </style>

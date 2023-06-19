@@ -28,7 +28,7 @@ css({
       },
     },
   },
-  '@media(max-width: 767px)': {
+  '@mobile': {
     '.copy-right-detail': {
       textAlign: 'center',
     },

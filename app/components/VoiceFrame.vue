@@ -23,15 +23,15 @@ css({
     top: '72px',
     right: 0,
     zIndex: 0,
-    transform: 'scale(0.5)',
+    transform: 'scale(1)',
     transformOrigin: 'top right',
 
     '@tablet': {
       transform: 'scale(0.75)',
     },
 
-    '@desktop': {
-      transform: 'scale(1)',
+    '@mobile': {
+      transform: 'scale(0.5)',
     },
   },
   '.bottom': {
@@ -39,15 +39,15 @@ css({
     bottom: '352px',
     left: 0,
     zIndex: 0,
-    transform: 'scale(0.5)',
+    transform: 'scale(1)',
     transformOrigin: 'bottom left',
 
     '@tablet': {
       transform: 'scale(0.75)',
     },
 
-    '@desktop': {
-      transform: 'scale(1)',
+    '@mobile': {
+      transform: 'scale(0.5)',
     },
   },
 })

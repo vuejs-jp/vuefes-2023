@@ -88,10 +88,11 @@ const onClick = (e: Event) => {
 <style lang="ts" scoped>
 css({
   '.button': {
-    display: 'flex',
+    display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '344px',
+    width: '100%',
+    maxWidth: '344px',
     height: '88px',
     borderRadius: '50px',
     fontWeight: 'bold',

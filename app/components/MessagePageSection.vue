@@ -62,5 +62,11 @@ css({
     fontSize: 'calc(18*{fontSize.base})',
     lineHeight: '1.8',
   },
+  '@mobile': {
+    '.message-body': {
+      paddingLeft: '20px',
+      paddingRight: '20px',
+    }
+  }
 })
 </style>

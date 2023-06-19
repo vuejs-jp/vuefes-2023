@@ -64,6 +64,7 @@ css({
     },
     '.speaker-cfp-schedule': {
         display: 'flex',
+        justifyContent: 'center',
         flexDirection: 'column',
         gap: '1.5em',
         textAlign: 'center',
@@ -75,7 +76,6 @@ css({
         '.deadline': {
             color: '{color.vue.blue}',
             fontSize: '24px',
-            margin: '0 auto',
 
             'em': {
                 fontStyle: 'normal',
@@ -83,7 +83,7 @@ css({
             }
         },
         '.apply-button': {
-            margin: '0 auto',
+            margin: '0',
         },
         '.twitter-text': {
             fontSize: '18px',

@@ -4,8 +4,10 @@ import TextButton from '~/components/forms/TextButton.vue'
 
 <template>
   <div class="doc-root">
-    <TextButton url="/privacy">{{ $t('words.privacypolicy') }}</TextButton>
-    <TextButton url="/code-of-conduct">{{ $t('words.codeofconduct') }}</TextButton>
+    <TextButton url="/privacy" @click="$emit('click')">{{ $t('words.privacypolicy') }}</TextButton>
+    <TextButton url="/code-of-conduct" @click="$emit('click')">{{
+      $t('words.codeofconduct')
+    }}</TextButton>
   </div>
 </template>
 

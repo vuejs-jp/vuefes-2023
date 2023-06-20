@@ -4,6 +4,8 @@
 
 export type Color = 'white' | 'vue.blue' | 'vue.green' | 'typescript.blue'
 
+export type Path = 'message' | 'form' | 'sponsor' | 'speaker'
+
 export type AuthProvider = 'github' | 'google'
 
 export interface FormUser {

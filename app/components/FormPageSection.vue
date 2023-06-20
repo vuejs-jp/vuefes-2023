@@ -5,6 +5,7 @@ import SubmitButton from '~/components/forms/SubmitButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 
 import { useForm } from '~/composables/useForm'
+import { useLocale } from '~/composables/useLocale'
 
 const {
   name,
@@ -20,6 +21,7 @@ const {
   validateDetail,
   onSubmit,
 } = useForm()
+const { docPath } = useLocale('form')
 
 const updateName = (value: string) => {
   name.value = value
@@ -30,11 +32,6 @@ const updateEmail = (value: string) => {
 const updateDetail = (value: string) => {
   detail.value = value
 }
-
-const { locale } = useI18n()
-const docPath = computed(() => {
-  return `/${locale.value}/top/contact`
-})
 </script>
 
 <template>

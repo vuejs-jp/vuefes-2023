@@ -20,4 +20,7 @@ export default defineTheme({
   fontSize: {
     base: '0.0625rem',
   },
+  space: {
+    8: '8px',
+  },
 })

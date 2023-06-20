@@ -47,18 +47,19 @@ useHead({
 <style lang="ts" scoped>
 css({
   '.coc-root': {
-    padding: '80px 11.53%',
+    padding: 'calc({space.8} * 10) 11.53%',
     color: '{color.vue.blue}',
     background: '{color.white}',
     '::v-deep(a)': {
       color: '{color.vue.green}',
     },
     '::v-deep(.title)': {
-      marginBottom: '80px',
+      marginBottom: 'calc({space.8} * 10)',
     },
     '::v-deep(p)': {
       fontWeight: 500,
       fontSize: '18px',
+      lineHeight: '1.8',
       marginBottom: '1.5em',
     },
     '::v-deep(h2)': {
@@ -71,11 +72,11 @@ css({
   '.back': {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '80px'
+    marginTop: 'calc({space.8} * 10)'
   },
   '@mobile': {
     '.coc-root': {
-      padding: '80px 20px',
+      padding: 'calc({space.8} * 10) calc({space.8} * 3)',
       '::v-deep(h2)': {
         fontSize: '24px',
       }

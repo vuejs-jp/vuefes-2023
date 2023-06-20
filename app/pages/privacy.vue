@@ -48,24 +48,25 @@ useHead({
 <style lang="ts" scoped>
 css({
   '.privacy-root': {
-    '--list-margin-left': '48px',
+    '--list-margin-left': 'calc({space.8} * 6)',
 
-    padding: '80px 11.53%',
+    padding: 'calc({space.8} * 10) 11.53%',
     color: '{color.vue.blue}',
     background: '{color.white}',
     '::v-deep(.title)': {
-      marginBottom: '80px',
+      marginBottom: 'calc({space.8} * 10)',
     },
     '::v-deep(p)': {
       fontWeight: 500,
       fontSize: '18px',
+      lineHeight: '1.8',
       marginBottom: '1.5em',
     },
     '::v-deep(h2)': {
       fontWeight: 700,
       fontSize: '32px',
-      marginTop: '2em',
-      marginBottom: '.7em',
+      marginTop: 'calc({space.8} * 6)',
+      marginBottom: 'calc({space.8} * 2)',
     },
     '::v-deep(ul)': {
       paddingLeft: '{list.margin.left}',
@@ -107,13 +108,13 @@ css({
   '.back': {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '80px'
+    marginTop: 'calc({space.8} * 10)'
   },
   '@mobile': {
     '.privacy-root': {
       '--list-margin-left': '28px',
 
-      padding: '80px 20px',
+      padding: 'calc({space.8} * 10) calc({space.8} * 3)',
       '::v-deep(h2)': {
         fontSize: '24px',
       }

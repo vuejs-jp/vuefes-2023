@@ -38,7 +38,6 @@ export default {
       contact_form_name_placeholder: '山田太郎',
       contact_form_mail_label: 'メールアドレス／Mail',
       /* prettier-ignore */
-      contact_form_mail_placeholder: 'hello{\'@\'}vuefes.jp',
       contact_form_text_label: 'お問い合わせ内容／Content',
       contact_submit_done: 'メッセージ送信に成功しました。',
     },
@@ -83,7 +82,6 @@ export default {
       contact_form_name_placeholder: 'Yamada Taro',
       contact_form_mail_label: 'Mail',
       /* prettier-ignore */
-      contact_form_mail_placeholder: 'hello{\'@\'}vuefes.jp',
       contact_form_text_label: 'Content',
       contact_submit_done: 'Message sent successfully.',
     },

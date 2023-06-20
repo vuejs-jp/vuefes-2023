@@ -68,7 +68,7 @@ const docPath = computed(() => {
             id="email"
             name="email"
             :title-label="$t('top.contact_form_mail_label')"
-            :placeholder="$t('top.contact_form_mail_placeholder')"
+            placeholder="hello@vuefes.jp"
             required
             :error="emailError"
             @input="updateEmail"

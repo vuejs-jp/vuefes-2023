@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['~/assets/main.css'],
+  css: ['~/assets/main.css', 'vue-toastification/dist/index.css'],
   modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device', '@nuxtjs/supabase'],
   pinceau: {
     configFileName: 'tokens.config',

@@ -20,7 +20,14 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css', 'vue-toastification/dist/index.css'],
-  modules: ['pinceau/nuxt', '@nuxt/devtools', '@nuxtjs/device', '@nuxtjs/supabase'],
+  modules: [
+    'pinceau/nuxt',
+    '@nuxt/devtools',
+    '@nuxtjs/device',
+    '@nuxtjs/supabase',
+    '@nuxtjs/i18n',
+    '@nuxt/content',
+  ],
   pinceau: {
     configFileName: 'tokens.config',
     debug: false,
@@ -39,6 +46,19 @@ export default defineNuxtConfig({
   },
   typescript: {
     strict: true,
+  },
+  i18n: {
+    locales: [
+      { code: 'ja', iso: 'ja_JP', file: 'ja.ts' },
+      { code: 'ja-basic', iso: 'ja_JP', file: 'ja-basic.ts' },
+      { code: 'en', iso: 'en-US', file: 'en.ts' },
+    ],
+    lazy: true,
+    defaultLocale: 'ja',
+    langDir: 'locales/',
+    experimental: {
+      jsTsFormatResource: true,
+    },
   },
   runtimeConfig: {
     public: {

@@ -7,7 +7,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
   },
   rules: {
-    quotes: ['error', 'single'],
+    quotes: ['error', 'single', { avoidEscape: true }],
     semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'keyword-spacing': 'error',

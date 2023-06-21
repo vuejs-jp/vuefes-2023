@@ -8,7 +8,12 @@ import { speakers } from '~/utils/speakers.constants'
 
 <template>
   <section class="speaker-root">
-    <SectionTitle id="speakers" color="vue.blue" title="Speakers" yamato-title="スピーカー" />
+    <SectionTitle
+      id="speakers"
+      color="vue.blue"
+      title="Speakers"
+      :yamato-title="$t('top.speakers_subtitle')"
+    />
     <SpeakerCFP />
 
     <div class="speaker-session">

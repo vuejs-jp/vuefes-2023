@@ -79,6 +79,26 @@ export const speakers: Speaker[] = [
         'Anthony is a fanatical open sourceror. DX and ecosystem for Vue, Vite and Nuxt.',
     },
   },
+  {
+    id: 'daniel-roe',
+    type: 'foreign',
+    session: {
+      title: '＜未定＞',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speaker/daniel_roe.jpg',
+      title: 'Nuxt Core Team Member',
+      name: 'Daniel Roe',
+      twitterId: 'danielcroe',
+      githubId: 'danielroe',
+      mastodonUrl: 'https://mastodon.roe.dev/@daniel',
+      description:
+        "Daniel leads the Nuxt core team - previously CTO of SaaS startup and founder of a creative agency focusing on clarity of vision and message. His open-source work has a focus in the Vue.js and Nuxt ecosystems and he's involved in consultancy with companies around the world, particularly around JAMstack, serverless and software architecture. He's based in the North East of England where he lives with his family, three cats, and a dog.",
+    },
+  },
 
   // 国内スピーカー
   {

@@ -86,9 +86,9 @@ describe('top', () => {
         .within(() => {
           cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
           cy.contains('h3', '募集スケジュール')
-          cy.contains('応募期限: 2023/7/15（土）23:59:59まで')
+          cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
           cy.contains('a', '申し込みフォーム')
-          cy.contains('最新情報は、Vue Fes Japan の Twitter をご確認ください。')
+          cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })
     })
     it('sponsors', () => {
@@ -107,6 +107,7 @@ describe('top', () => {
             'href',
             'https://twitter.com/vuefes',
           )
+          cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })
     })
   })

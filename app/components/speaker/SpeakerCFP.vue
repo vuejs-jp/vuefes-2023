@@ -1,42 +1,35 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
+import { useLocale } from '~/composables/useLocale'
+const { docPath } = useLocale('speaker')
 </script>
 
 <template>
   <div class="speaker-cfp">
-    <div class="speaker-cfp-description">
-      <p>
-        Vue Fes Japan 2023 に登壇してみませんか？<br />
-        <br />
-        Vueとそのエコシステムについて、あなただけが持つ知見と経験を、日本最大級の Vue.js
-        カンファレンスでぜひ日本中に共有してください。<br />
-        <br />
-        Vue Fes Japan 2023 では、スピーカー発表を広く一般から募集するため、CFP（Call for
-        Papers）の仕組みを利用し、ご応募に対して Vue Fes Japan 2023
-        実行委員会が選考の上、正式なセッションとして採用します。<br />
-        <br />
-        30分間の発表となる「セッション」と5分間の「ライトニングトーク（LT）」の2つの発表方式を用意しています。<br />
-        <br />
-        Vueが大好きでたまらない、そんな皆さんならではのアツい発表をお待ちしています！
-      </p>
-    </div>
+    <ContentDoc v-slot="{ doc }" :path="docPath">
+      <ContentRenderer class="speaker-cfp-description" :value="doc" />
+    </ContentDoc>
     <div class="speaker-cfp-schedule">
-      <h3>募集スケジュール</h3>
-      <p class="deadline">応募期限: <em>2023/7/15（土）23:59:59</em>まで</p>
+      <h3>{{ $t('top.speakers_schedule_title') }}</h3>
+      <!-- 応募期限 -->
+      <i18n-t keypath="top.speakers_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.application_deadline_date') }}</em>
+      </i18n-t>
       <p class="apply-button">
         <RoundButton href="https://forms.gle/Yd5ugvzBBkCMMHa58" target="_blank" rel="noreferrer"
-          >申し込みフォーム
+          >{{ $t('words.application_form') }}
         </RoundButton>
       </p>
-      <p class="twitter-text">
-        最新情報は、<a
-          class="twitter-link"
+      <!-- 詳細情報は、Vue Fes Japan の Twitter をご確認ください -->
+      <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
+        <a
           href="https://twitter.com/vuefes"
           target="_blank"
+          class="twitter-link"
           rel="noreferrer"
-          >Vue Fes Japan の Twitter </a
-        >をご確認ください。
-      </p>
+          >{{ $t('words.vuefes_twitter') }}</a
+        >
+      </i18n-t>
     </div>
   </div>
 </template>
@@ -49,11 +42,12 @@ css({
         gap: '2.5em',
     },
     '.speaker-cfp-description': {
-        'p': {
+        '::v-deep(p)': {
             color: '{color.vue.blue}',
             fontWeight: 500,
-            fontSize: '16px',
+            fontSize: '18px',
             lineHeight: '1.8',
+
             'a': {
                 color: '{color.vue.green}',
                 textDecoration: 'underline',
@@ -62,6 +56,9 @@ css({
                 },
             },
         },
+        '::v-deep(p + p)': {
+          marginTop: '2em',
+        }
     },
     '.speaker-cfp-schedule': {
         display: 'flex',
@@ -97,13 +94,6 @@ css({
 
             '&:hover': {
                 transition: '.2s',
-            },
-        },
-    },
-    '@mobile': {
-        '.speaker-cfp-description': {
-            'p': {
-                fontSize: '18px',
             },
         },
     },

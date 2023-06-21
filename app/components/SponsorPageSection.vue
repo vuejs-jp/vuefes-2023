@@ -1,39 +1,47 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
+import { useLocale } from '~/composables/useLocale'
+const { docPath } = useLocale('sponsor')
 </script>
 
 <template>
   <section>
     <div class="sponsors-root">
-      <SectionTitle id="sponsors" color="vue.blue" title="Sponsors" yamato-title="スポンサー" />
-      <div class="subtitle">
-        <p>
-          Vue.js に関わる人々が集まる Vue Fes Japan 2023
-          をより良いカンファレンスにするため、スポンサー募集をします。募集スケジュールなどの詳しい内容は資料をご参照ください。
-        </p>
-      </div>
+      <SectionTitle
+        id="sponsors"
+        color="vue.blue"
+        title="Sponsors"
+        :yamato-title="$t('top.sponsors_subtitle')"
+      />
+      <!-- タイトル下テキスト -->
+      <ContentDoc v-slot="{ doc }" :path="docPath">
+        <ContentRenderer class="subtitle" :value="doc" />
+      </ContentDoc>
       <div class="link-box">
+        <!-- 申し込みフォーム -->
         <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
-          申し込みフォーム
+          {{ $t('words.application_form') }}
         </RoundButton>
+        <!-- スポンサー資料 -->
         <RoundButton
           href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
           outline
         >
-          スポンサー資料
+          {{ $t('words.sponsordoc') }}
         </RoundButton>
       </div>
-      <p class="twitter-text">
-        詳細情報は、<a
-          class="twitter-link"
+      <!-- 詳細情報は、Vue Fes Japan の Twitterをご確認ください。 -->
+      <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
+        <a
           href="https://twitter.com/vuefes"
           target="_blank"
+          class="twitter-link"
           rel="noreferrer"
-          >Vue Fes Japan の Twitter </a
-        >をご確認ください。
-      </p>
+          >{{ $t('words.vuefes_twitter') }}</a
+        >
+      </i18n-t>
     </div>
   </section>
   <VoiceAudioSpectrum />
@@ -56,10 +64,10 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
-    'p': {
+    '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '180%'
     },
   },
@@ -85,11 +93,6 @@ css({
     'section': {
       padding: '120px 20px',
     },
-    '.subtitle': {
-      'p': {
-        fontSize: '18px',
-      },
-    },
-  },
+  }
 })
 </style>

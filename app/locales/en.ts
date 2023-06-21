@@ -1,4 +1,4 @@
-import all from '~/locales/data/all'
+import all from '~/assets/locale/all'
 
 export default defineI18nLocale(async (locale) => {
   return {

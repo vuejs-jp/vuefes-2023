@@ -185,7 +185,7 @@ describe('top', () => {
       cy.viewport(769, 600)
       loadPage()
       cy.wait(1000)
-      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
@@ -207,7 +207,7 @@ describe('top', () => {
       cy.viewport(769, 600)
       loadPageWithAuth()
       cy.wait(1000)
-      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

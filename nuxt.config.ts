@@ -44,6 +44,9 @@ export default defineNuxtConfig({
       }),
     ],
   },
+  build: {
+    transpile: ['vue-toastification'],
+  },
   typescript: {
     strict: true,
   },

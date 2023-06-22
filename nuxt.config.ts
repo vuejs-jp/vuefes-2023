@@ -62,7 +62,10 @@ export default defineNuxtConfig({
   },
   content: {
     markdown: {
-      anchorLinks: false,
+      anchorLinks: {
+        depth: 0,
+        exclude: [1, 2, 3, 4, 5, 6],
+      },
     },
   },
   runtimeConfig: {

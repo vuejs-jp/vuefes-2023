@@ -10,7 +10,7 @@ const props = defineProps({
   },
 })
 
-const { locale } = useI18n()
+const { locale } = useI18n({ useScope: 'global' })
 const docPath = computed(() => {
   return `/${locale.value}/${props.path}`
 })

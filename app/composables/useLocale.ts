@@ -2,7 +2,7 @@ import { match } from 'ts-pattern'
 import { Path } from '~/types/app'
 
 export function useLocale(path: Path) {
-  const { locale } = useI18n()
+  const { locale } = useI18n({ useScope: 'global' })
 
   const docPath = computed(() => {
     return match(path)

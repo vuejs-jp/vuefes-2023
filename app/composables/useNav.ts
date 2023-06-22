@@ -28,7 +28,7 @@ export async function getNavLinks(): Promise<ComputedRef<NavLink[]>> {
     if (hasAuth.value) {
       links.unshift({
         text: 'MyPage',
-        link: '/mypage',
+        link: 'mypage',
       })
     }
     return links

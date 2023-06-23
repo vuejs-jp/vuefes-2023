@@ -11,6 +11,7 @@ export function useLocale(path: Path) {
       .with('sponsor', () => `/${locale.value}/top/sponsors`)
       .with('speaker', () => `/${locale.value}/top/speakers`)
       .with('privacy', () => `/${locale.value}/privacy`)
+      .with('code-of-conduct', () => `/${locale.value}/code-of-conduct`)
       .exhaustive()
   })
 

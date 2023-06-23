@@ -45,6 +45,7 @@ css({
     textAlign: 'center',
     color: (props) => `{color.${props.color}}`,
     fontSize: '20px',
+    fontWeight: 'normal',
     lineHeight: '1',
     marginTop: '18px',
     display: 'grid',

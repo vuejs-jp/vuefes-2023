@@ -61,9 +61,10 @@ css({
     lineHeight: '1.8',
   },
   '@mobile': {
-    '.text ::v-deep(p)': {
-      fontSize: '16px',
+    '.message-body': {
+      paddingLeft: '20px',
+      paddingRight: '20px',
     }
-  },
+  }
 })
 </style>

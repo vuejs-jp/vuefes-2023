@@ -125,7 +125,7 @@ css({
     },
   },
   '.form-button': {
-    margin: '0 auto',
+    textAlign: 'center'
   },
   '.form': {
     'form': {

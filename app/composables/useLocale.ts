@@ -2,7 +2,7 @@ import { match } from 'ts-pattern'
 import { Path } from '~/types/app'
 
 export function useLocale(path: Path) {
-  const { locale } = useI18n()
+  const { locale } = useI18n({ useScope: 'global' })
 
   const docPath = computed(() => {
     return match(path)
@@ -10,6 +10,7 @@ export function useLocale(path: Path) {
       .with('form', () => `/${locale.value}/top/contact`)
       .with('sponsor', () => `/${locale.value}/top/sponsors`)
       .with('speaker', () => `/${locale.value}/top/speakers`)
+      .with('privacy', () => `/${locale.value}/privacy`)
       .exhaustive()
   })
 

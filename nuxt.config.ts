@@ -63,6 +63,14 @@ export default defineNuxtConfig({
       jsTsFormatResource: true,
     },
   },
+  content: {
+    markdown: {
+      anchorLinks: {
+        depth: 0,
+        exclude: [1, 2, 3, 4, 5, 6],
+      },
+    },
+  },
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_GTAG_ID,

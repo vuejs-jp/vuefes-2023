@@ -9,6 +9,12 @@ describe('top', () => {
     cy.checkPageIdle()
     cy.wait(500)
   }
+  function loadPagePrivacy() {
+    cy.visit('/privacy')
+  }
+  function loadPageCodeOfConduct() {
+    cy.visit('/code-of-conduct')
+  }
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
@@ -59,6 +65,65 @@ describe('top', () => {
       })
     })
   })
+  describe('header links', () => {
+    it('logo', () => {
+      cy.visit('/')
+      cy.contains('h1', 'Vue Fes Japan 2023').find('a').click()
+      cy.url().should('eq', 'http://localhost:3000/')
+    })
+    it('at top', () => {
+      cy.visit('/')
+      cy.contains('nav a', 'Message').click()
+      cy.url().should('eq', 'http://localhost:3000/#message')
+
+      cy.visit('/')
+      cy.contains('nav a', 'Speakers').click()
+      cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      cy.visit('/')
+      cy.contains('nav a', 'Sponsors').click()
+      cy.url().should('eq', 'http://localhost:3000/#sponsors')
+
+      cy.visit('/')
+      cy.contains('nav a', 'Contact').click()
+      cy.url().should('eq', 'http://localhost:3000/#form')
+    })
+    it('at privacy', () => {
+      loadPagePrivacy()
+      cy.contains('nav a', 'Message').click()
+      cy.url().should('eq', 'http://localhost:3000/#message')
+
+      loadPagePrivacy()
+      cy.contains('nav a', 'Speakers').click()
+      cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      loadPagePrivacy()
+      cy.contains('nav a', 'Sponsors').click()
+      cy.url().should('eq', 'http://localhost:3000/#sponsors')
+
+      loadPagePrivacy()
+      cy.contains('nav a', 'Contact').click()
+      cy.url().should('eq', 'http://localhost:3000/#form')
+    })
+    it('at code of conduct', () => {
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Message').click()
+      cy.url().should('eq', 'http://localhost:3000/#message')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Speakers').click()
+      cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Sponsors').click()
+      cy.url().should('eq', 'http://localhost:3000/#sponsors')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Contact').click()
+      cy.url().should('eq', 'http://localhost:3000/#form')
+    })
+  })
+
   describe('content', () => {
     it('main visual', () => {
       loadPage()

@@ -23,7 +23,7 @@ const navLinks = await getNavLinks()
     <div v-if="props.visible" class="mobile-menu">
       <ul>
         <li v-for="l in navLinks" :key="l.link">
-          <nuxt-link :to="`./${l.link}`" @click="emitToggle">
+          <nuxt-link :to="`${l.link}`" @click="emitToggle">
             {{ l.text }}
           </nuxt-link>
         </li>

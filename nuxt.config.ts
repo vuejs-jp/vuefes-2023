@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['~/assets/main.css'],
+  css: ['~/assets/main.css', 'vue-toastification/dist/index.css'],
   modules: [
     'pinceau/nuxt',
     '@nuxt/devtools',
@@ -44,6 +44,9 @@ export default defineNuxtConfig({
       }),
     ],
   },
+  build: {
+    transpile: ['vue-toastification'],
+  },
   typescript: {
     strict: true,
   },
@@ -62,7 +65,10 @@ export default defineNuxtConfig({
   },
   content: {
     markdown: {
-      anchorLinks: false,
+      anchorLinks: {
+        depth: 0,
+        exclude: [1, 2, 3, 4, 5, 6],
+      },
     },
   },
   runtimeConfig: {

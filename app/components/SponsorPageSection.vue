@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
-const { locale } = useI18n()
-const docPath = computed(() => {
-  return `/${locale.value}/top/sponsors`
-})
+import { useLocale } from '~/composables/useLocale'
+const { docPath } = useLocale('sponsor')
 </script>
 
 <template>

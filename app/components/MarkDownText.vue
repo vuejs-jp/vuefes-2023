@@ -1,7 +1,10 @@
 <script lang="ts" setup>
+import { useLocale } from '~/composables/useLocale'
+import { Path } from '~/types/app'
+
 const props = defineProps({
   path: {
-    type: String,
+    type: String as PropType<Path>,
     required: true,
   },
   class: {
@@ -10,10 +13,7 @@ const props = defineProps({
   },
 })
 
-const { locale } = useI18n()
-const docPath = computed(() => {
-  return `/${locale.value}/${props.path}`
-})
+const { docPath } = useLocale(props.path)
 </script>
 
 <template>

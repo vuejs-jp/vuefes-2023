@@ -4,12 +4,13 @@
   "description": "Vue Fes Japan 2023",
   "author": "jiyuujin <jiyuujinunite@gmail.com>",
   "private": true,
+  "type": "module",
   "scripts": {
     "prepare": "husky install",
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate:transpile": "nuxt generate",
-    "generate:post-transpile": "node scripts/renameDir.js",
+    "generate:post-transpile": "node scripts/renameDir.cjs",
     "generate": "npm run generate:transpile && npm run generate:post-transpile",
     "preview": "nuxt preview",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,vue,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .prettierignore",
@@ -39,6 +40,7 @@
     "@types/node": "18.13.0",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
+    "consola": "3.1.0",
     "cypress": "^12.13.0",
     "eslint": "8.33.0",
     "eslint-plugin-vue": "9.9.0",
@@ -56,6 +58,7 @@
     "vitest": "^0.29.3",
     "vue-gtag": "2.0.2-beta.0",
     "vue-recaptcha-v3": "2.0.1",
+    "vue-toastification": "2.0.0-rc.5",
     "vue-tsc": "1.2.0"
   },
   "pnpm": {

@@ -1,12 +1,14 @@
 import { useForm as useValidateForm } from 'vee-validate'
 import { useFormError } from './useFormError'
 import { useFormReCaptcha } from './useFormReCaptcha'
+import { useToast } from './useToast'
 
 export function useForm() {
   const { useFieldModel, handleSubmit } = useValidateForm()
   const [name, email, detail] = useFieldModel(['name', 'email', 'detail'])
-  const { submitError, ...rest } = useFormError()
+  const { ...rest } = useFormError()
   const { hasSiteKey, execute } = useFormReCaptcha()
+  const { onError, onSuccess } = useToast()
   const config = useRuntimeConfig()
 
   const endpoint = `https://${config.newtSpaceUid}.form.newt.so/v1/${config.newtFormUid}`
@@ -20,7 +22,6 @@ export function useForm() {
   })
 
   const onSubmit = handleSubmit(async function (values) {
-    submitError.value = ''
     hasSiteKey && (values.googleReCaptchaToken = await execute())
 
     const formData = new FormData()
@@ -34,10 +35,13 @@ export function useForm() {
         Accept: 'application/json',
       },
     })
-      .then(() => (isSent.value = true))
+      .then(() => {
+        isSent.value = true
+        onSuccess('メッセージを送信しました', 3000)
+      })
       .catch((err) => {
         console.error(err)
-        submitError.value = 'メッセージを送信できませんでした'
+        onError('メッセージを送信できませんでした', 3000)
       })
   })
 

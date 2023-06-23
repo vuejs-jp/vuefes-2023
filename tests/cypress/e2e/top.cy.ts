@@ -9,6 +9,12 @@ describe('top', () => {
     cy.checkPageIdle()
     cy.wait(500)
   }
+  function loadPagePrivacy() {
+    cy.visit('/privacy')
+  }
+  function loadPageCodeOfConduct() {
+    cy.visit('/code-of-conduct')
+  }
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
@@ -59,6 +65,65 @@ describe('top', () => {
       })
     })
   })
+  describe('header links', () => {
+    it('logo', () => {
+      cy.visit('/')
+      cy.contains('h1', 'Vue Fes Japan 2023').find('a').click()
+      cy.url().should('eq', 'http://localhost:3000/')
+    })
+    it('at top', () => {
+      cy.visit('/')
+      cy.contains('nav a', 'Message').click()
+      cy.url().should('eq', 'http://localhost:3000/#message')
+
+      cy.visit('/')
+      cy.contains('nav a', 'Speakers').click()
+      cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      cy.visit('/')
+      cy.contains('nav a', 'Sponsors').click()
+      cy.url().should('eq', 'http://localhost:3000/#sponsors')
+
+      cy.visit('/')
+      cy.contains('nav a', 'Contact').click()
+      cy.url().should('eq', 'http://localhost:3000/#form')
+    })
+    it('at privacy', () => {
+      loadPagePrivacy()
+      cy.contains('nav a', 'Message').click()
+      cy.url().should('eq', 'http://localhost:3000/#message')
+
+      loadPagePrivacy()
+      cy.contains('nav a', 'Speakers').click()
+      cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      loadPagePrivacy()
+      cy.contains('nav a', 'Sponsors').click()
+      cy.url().should('eq', 'http://localhost:3000/#sponsors')
+
+      loadPagePrivacy()
+      cy.contains('nav a', 'Contact').click()
+      cy.url().should('eq', 'http://localhost:3000/#form')
+    })
+    it('at code of conduct', () => {
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Message').click()
+      cy.url().should('eq', 'http://localhost:3000/#message')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Speakers').click()
+      cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Sponsors').click()
+      cy.url().should('eq', 'http://localhost:3000/#sponsors')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Contact').click()
+      cy.url().should('eq', 'http://localhost:3000/#form')
+    })
+  })
+
   describe('content', () => {
     it('main visual', () => {
       loadPage()
@@ -86,9 +151,9 @@ describe('top', () => {
         .within(() => {
           cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
           cy.contains('h3', '募集スケジュール')
-          cy.contains('応募期限: 2023/7/15（土）23:59:59まで')
+          cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
           cy.contains('a', '申し込みフォーム')
-          cy.contains('最新情報は、Vue Fes Japan の Twitter をご確認ください。')
+          cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })
     })
     it('sponsors', () => {
@@ -107,6 +172,7 @@ describe('top', () => {
             'href',
             'https://twitter.com/vuefes',
           )
+          cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })
     })
   })
@@ -184,7 +250,7 @@ describe('top', () => {
       cy.viewport(769, 600)
       loadPage()
       cy.wait(1000)
-      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
@@ -206,7 +272,7 @@ describe('top', () => {
       cy.viewport(769, 600)
       loadPageWithAuth()
       cy.wait(1000)
-      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

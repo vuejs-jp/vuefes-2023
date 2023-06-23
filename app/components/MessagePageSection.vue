@@ -1,8 +1,6 @@
 <script setup lang="ts">
-const { locale } = useI18n()
-const docPath = computed(() => {
-  return `/${locale.value}/top/message`
-})
+import { useLocale } from '~/composables/useLocale'
+const { docPath } = useLocale('message')
 </script>
 
 <template>

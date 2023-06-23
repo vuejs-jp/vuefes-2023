@@ -1,5 +1,6 @@
 import { FormUser } from '~/types/app'
 import { Database } from '~/types/supabase'
+import { useToast } from './useToast'
 
 export interface UseSupabaseProps {
   user: FormUser
@@ -7,6 +8,7 @@ export interface UseSupabaseProps {
 
 export function useSupabase({ user }: UseSupabaseProps) {
   const client = useSupabaseClient<Database>()
+  const { onError, onSuccess } = useToast()
 
   async function addEventUser(secretWord: string, receiptId: string) {
     const userData = {
@@ -16,7 +18,12 @@ export function useSupabase({ user }: UseSupabaseProps) {
     }
 
     const { error } = await client.from('event_users').insert(userData)
-    if (error) throw error
+    if (error) {
+      onError('購入できませんでした', 3000)
+      return
+    }
+
+    onSuccess('購入しました', 3000)
   }
 
   return { addEventUser }

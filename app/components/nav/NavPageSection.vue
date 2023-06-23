@@ -32,7 +32,7 @@ onMounted(function () {
       <div class="links">
         <ul v-for="l in navLinks" :key="l.link">
           <li>
-            <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>
+            <nuxt-link :to="`./${l.link}`">{{ l.text }}</nuxt-link>
           </li>
         </ul>
         <a

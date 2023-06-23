@@ -4,7 +4,7 @@
 
 export type Color = 'white' | 'vue.blue' | 'vue.green' | 'typescript.blue'
 
-export type Path = 'message' | 'form' | 'sponsor' | 'speaker' | 'privacy'
+export type Path = 'message' | 'form' | 'sponsor' | 'speaker' | 'privacy' | 'code-of-conduct'
 
 export type AuthProvider = 'github' | 'google'
 

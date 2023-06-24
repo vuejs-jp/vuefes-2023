@@ -81,3 +81,9 @@ type SpeakerProfile = {
 }
 
 type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'
+
+type Sponsor = {
+  name: string
+  image: string
+  category: SponsorCategory
+}

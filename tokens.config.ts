@@ -16,6 +16,12 @@ export default defineTheme({
     typescript: {
       blue: '#3178C6',
     },
+    sponsor: {
+      platinum: '#93AF5E',
+      gold: '#FFC408',
+      silver: '#ADBFD4',
+      bronze: '#F17C67',
+    },
   },
   fontSize: {
     base: '0.0625rem',

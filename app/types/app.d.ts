@@ -79,3 +79,5 @@ type SpeakerProfile = {
   twitterId?: string
   mastodonUrl?: string
 }
+
+type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'

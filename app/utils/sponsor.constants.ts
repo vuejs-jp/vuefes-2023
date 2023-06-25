@@ -1,4 +1,6 @@
-export const platinumSponsors = [
+import { Sponsor } from '~/types/app'
+
+export const platinumSponsors: Sponsor[] = [
   {
     name: 'クラウドサイン（弁護士ドットコム株式会社）',
     image: '/sponsors/cloudsign.png',
@@ -16,7 +18,7 @@ export const platinumSponsors = [
   },
 ]
 
-export const goldSponsors = [
+export const goldSponsors: Sponsor[] = [
   {
     name: '株式会社ヤプリ',
     image: '/sponsors/yappli.png',
@@ -49,7 +51,7 @@ export const goldSponsors = [
   },
 ]
 
-export const silverSponsors = [
+export const silverSponsors: Sponsor[] = [
   {
     name: 'BASE株式会社',
     image: '/sponsors/hacomono.png', //TODO: 画像変更
@@ -102,7 +104,7 @@ export const silverSponsors = [
   },
 ]
 
-export const bronzeSponsors = [
+export const bronzeSponsors: Sponsor[] = [
   {
     name: '株式会社タノム',
     image: '/sponsors/hacomono.png', //TODO: 画像変更

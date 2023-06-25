@@ -4,7 +4,7 @@ import { Sponsor } from '~/types/app'
 
 const props = defineProps({
   sponsor: {
-    type: Object as Sponsor,
+    type: Object as PropType<Sponsor>,
     required: true,
   },
 })

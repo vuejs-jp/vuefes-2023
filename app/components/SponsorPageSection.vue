@@ -35,6 +35,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
         >をご確認ください。
       </p>
     </div>
+    <SponsorList />
   </section>
   <VoiceAudioSpectrum />
 </template>

@@ -105,6 +105,7 @@ css({
     maxWidth: '768px',
     margin: '0 auto',
     width: '100%',
+    'grid-template-columns': 'minmax(0, 1fr)'
   },
   '.subtitle': {
     display: 'grid',

@@ -7,7 +7,7 @@ import { conferenceTitle, linkUrl, ogCoCDescription } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
 useHead({
-  title: `行動規範 | ${conferenceTitle}`,
+  titleTemplate: (titleChunk) => `行動規範 | ${conferenceTitle}`,
   meta: [
     ...generalOg({
       title: `行動規範 | ${conferenceTitle}`,

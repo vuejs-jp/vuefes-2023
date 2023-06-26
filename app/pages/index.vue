@@ -3,7 +3,7 @@ import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
 useHead({
-  title: conferenceTitle,
+  titleTemplate: (titleChunk) => `${conferenceTitle}`,
   meta: [...generalOg(), ...twitterOg()],
 })
 </script>

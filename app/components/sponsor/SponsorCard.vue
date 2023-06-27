@@ -71,7 +71,7 @@ css({
     margin: 'auto',
     objectFit: 'cover',
   },
-  '@media(max-width: 980px)': {
+  '@tablet': {
     '.sponsor-card': {
       '&.platinum': {
         maxWidth: '368px',

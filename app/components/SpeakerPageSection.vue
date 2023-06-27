@@ -8,8 +8,13 @@ import { speakers } from '~/utils/speakers.constants'
 
 <template>
   <section class="speaker-root">
-    <SectionTitle id="speakers" color="vue.blue" title="Speakers" yamato-title="スピーカー" />
-    <SpeakerCFP />
+    <SectionTitle
+      id="speakers"
+      color="vue.blue"
+      title="Speakers"
+      :yamato-title="$t('top.speakers_subtitle')"
+    />
+    <SpeakerCFP class="cfp" />
 
     <div class="speaker-session">
       <h3>Session</h3>
@@ -34,10 +39,14 @@ css({
         maxWidth: '1080px',
         margin: '0 auto',
     },
+    '.cfp': {
+      padding: '0 20px',
+    },
     '.speaker-session': {
         color: '{color.vue.blue}',
         maxWidth: '1080px',
         margin: '0 auto',
+        padding: '0 20px',
         'h3': {
             fontWeight: 700,
             fontSize: '32px',
@@ -52,7 +61,7 @@ css({
     },
     '@tablet': {
         'section': {
-            padding: '120px 40px',
+            padding: '120px 0',
         },
     },
 })

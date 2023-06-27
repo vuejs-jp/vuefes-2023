@@ -4,8 +4,12 @@ import TextButton from '~/components/forms/TextButton.vue'
 
 <template>
   <div class="doc-root">
-    <TextButton url="/privacy">プライバシーポリシー</TextButton>
-    <TextButton url="/code-of-conduct">行動規範</TextButton>
+    <TextButton url="/privacy" @click.stop="$emit('click')">{{
+      $t('words.privacypolicy')
+    }}</TextButton>
+    <TextButton url="/code-of-conduct" @click.stop="$emit('click')">{{
+      $t('words.codeofconduct')
+    }}</TextButton>
   </div>
 </template>
 
@@ -18,12 +22,12 @@ css({
     gap: '36px',
     'a': {
       padding: '4px 0',
-      textDecoration: 'none',
+      textDecoration: 'underline',
       color: '{color.white}',
       fontSize: '18px',
     },
   },
-  '@media(max-width: 1023px)': {
+  '@tablet': {
     gap: '24px',
     '.doc-root': {
       'a': {
@@ -31,10 +35,10 @@ css({
       },
     },
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.doc-root': {
       'a': {
-        textDecoration: 'underline',
+        textDecoration: 'none',
       },
     },
   },

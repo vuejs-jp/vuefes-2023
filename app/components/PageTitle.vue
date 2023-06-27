@@ -45,6 +45,7 @@ css({
     textAlign: 'center',
     color: (props) => `{color.${props.color}}`,
     fontSize: '20px',
+    fontWeight: 'normal',
     lineHeight: '1',
     marginTop: '18px',
     display: 'grid',
@@ -60,7 +61,7 @@ css({
       height: '1px',
     },
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.title-main': {
       fontSize: 'calc(40*{fontSize.base})',
     },

@@ -14,7 +14,8 @@ const isHovered = useHover(hoverRef)
     rel="noreferrer"
     class="twitter-root"
   >
-    <span class="title">最新情報はTwitterでCheck!</span>
+    <!-- 最新情報はTwitterでCheck -->
+    <span class="title">{{ $t('top.check_twitter') }}</span>
     <span class="explain">
       <TwitterLogo :style="isHovered ? { fill: '#42B983' } : {}" />
       <span :style="isHovered ? { color: '#42B983' } : {}">Twitter ー @vuefes #vuefes</span>
@@ -36,6 +37,7 @@ css({
     },
     '.title': {
       whiteSpace: 'nowrap',
+      fontSize: 'calc(20*{fontSize.base})',
       fontWeight: 700,
       color: '{color.white}',
     },
@@ -44,6 +46,7 @@ css({
       alignItems: 'center',
       gap: '16px',
       whiteSpace: 'nowrap',
+      fontSize: 'calc(24*{fontSize.base})',
       fontWeight: 700,
       'svg': {
         fill: '{color.white}',
@@ -53,27 +56,26 @@ css({
       },
     },
   },
-  '@media(min-width: 768px)': {
-    '.twitter-root': {
-      '&:hover': {
-        transition: 'none',
-      },
-    },
-    '.title': {
-      fontSize: '20px',
-    },
-    '.explain': {
-      fontSize: '24px',
-    },
-  },
-  '@media(max-width: 1023px)': {
+  '@tablet': {
     '.twitter-root': {
       display: 'grid',
       placeItems: 'center',
       gridTemplateColumns: '100%',
       gap: '8px',
       padding: '12px 36px',
-      borderRadius: '70px',
+    },
+  },
+  '@mobile': {
+    '.twitter-root': {
+      '&:hover': {
+        transition: 'none',
+      },
+      '.title': {
+        fontSize: 'calc(18*{fontSize.base})',
+      },
+      '.explain': {
+        fontSize: 'calc(20*{fontSize.base})',
+      },
     },
   },
 })

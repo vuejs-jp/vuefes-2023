@@ -5,6 +5,7 @@ import SubmitButton from '~/components/forms/SubmitButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 
 import { useForm } from '~/composables/useForm'
+import { useLocale } from '~/composables/useLocale'
 
 const {
   name,
@@ -20,6 +21,7 @@ const {
   validateDetail,
   onSubmit,
 } = useForm()
+const { docPath } = useLocale('form')
 
 const updateName = (value: string) => {
   name.value = value
@@ -35,42 +37,45 @@ const updateDetail = (value: string) => {
 <template>
   <section>
     <div class="form-root">
-      <SectionTitle id="form" color="vue.blue" title="Contact" yamato-title="お問い合わせ" />
-      <div class="subtitle">
-        <p>
-          Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan
-          へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3
-          営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが
-          <a href="https://twitter.com/vuefes" target="_blank" rel="noreferrer">Twitter</a>
-          のDMよりご連絡ください。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。
-        </p>
-      </div>
+      <SectionTitle
+        id="form"
+        color="vue.blue"
+        title="Contact"
+        :yamato-title="$t('top.contact_subtitle')"
+      />
+      <!-- タイトル下テキスト -->
+      <ContentDoc v-slot="{ doc }" :path="docPath">
+        <ContentRenderer class="subtitle" :value="doc" />
+      </ContentDoc>
       <div class="form">
         <form @submit="onSubmit">
+          <!-- お名前／Name  -->
           <InputField
             id="name"
             name="name"
-            title-label="お名前／Name"
-            placeholder="山田太郎"
+            :title-label="$t('top.contact_form_name_label')"
+            :placeholder="$t('top.contact_form_name_placeholder')"
             required
             :error="nameError"
             @input="updateName"
             @blur="validateName"
           />
+          <!-- メールアドレス／Mail  -->
           <InputField
             id="email"
             name="email"
-            title-label="メールアドレス／Mail"
+            :title-label="$t('top.contact_form_mail_label')"
             placeholder="hello@vuefes.jp"
             required
             :error="emailError"
             @input="updateEmail"
             @blur="validateEmail"
           />
+          <!-- お問い合わせ内容／Content  -->
           <TextareaField
             id="detail"
             name="detail"
-            title-label="お問い合わせ内容／Content"
+            :title-label="$t('top.contact_form_text_label')"
             :rows="3"
             required
             :error="detailError"
@@ -78,9 +83,11 @@ const updateDetail = (value: string) => {
             @blur="validateDetail"
           />
           <div class="form-button">
-            <SubmitButton :disabled="!isSubmitting"> 送信 </SubmitButton>
+            <!-- 送信 -->
+            <SubmitButton :disabled="!isSubmitting"> {{ $t('words.submit') }} </SubmitButton>
           </div>
-          <div v-if="isSent">メッセージ送信に成功しました。</div>
+          <!-- メッセージ送信に成功しました -->
+          <div v-if="isSent">{{ $t('top.contact_submit_done') }}</div>
         </form>
       </div>
     </div>
@@ -98,15 +105,16 @@ css({
     maxWidth: '768px',
     margin: '0 auto',
     width: '100%',
+    'grid-template-columns': 'minmax(0, 1fr)'
   },
   '.subtitle': {
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
-    'p': {
+    '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '16px',
+      fontSize: '18px',
       lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
@@ -118,19 +126,12 @@ css({
     },
   },
   '.form-button': {
-    margin: '0 auto',
+    textAlign: 'center'
   },
   '.form': {
     'form': {
       display: 'grid',
       gap: '40px',
-    },
-  },
-  '@media(min-width: 768px)': {
-    '.subtitle': {
-      'p': {
-        fontSize: '18px',
-      },
     },
   },
 })

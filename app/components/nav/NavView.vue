@@ -32,7 +32,7 @@ const navLinks = await getNavLinks()
           <PastEventsMobile />
         </li>
         <li class="other-links">
-          <PrivacyPolicyAndCoc />
+          <PrivacyPolicyAndCoc @click="emitToggle" />
         </li>
       </ul>
       <!-- contact links -->
@@ -58,6 +58,7 @@ css({
     zIndex: 10,
     background: '{color.vue.blue}',
     color: '{color.white}',
+    overflow: 'scroll',
     'ul': {
       paddingTop: '80px',
       margin: '0 3vw',

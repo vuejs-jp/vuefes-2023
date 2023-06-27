@@ -3,8 +3,6 @@ export function useFormError() {
   const emailError = ref('')
   const detailError = ref('')
 
-  const submitError = ref('')
-
   function validateName(value: string) {
     if (value === '') {
       nameError.value = '名前を入力してください'
@@ -36,7 +34,6 @@ export function useFormError() {
     nameError,
     emailError,
     detailError,
-    submitError,
     validateName,
     validateEmail,
     validateDetail,

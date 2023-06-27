@@ -34,47 +34,43 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 <style lang="ts" scoped>
 css({
   '.footer-section': {
-    padding: '80px 32px',
+    padding: '80px 40px',
     background: '{color.vue-blue}',
     backgroundImage: 'url("~/assets/footer/background.svg")',
     backgroundPosition: '50% 100%',
-    display: 'grid',
-    placeItems: 'center',
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
     overflow: 'hidden',
   },
-  '.footer-vuefes-logo': {
-    margin: 0,
-  },
   '.footer-info-links': {
-    display: 'none',
+    display: 'flex',
+    alignItems: 'flex-end',
+    flexDirection: 'column',
+    '.contacts': {
+      marginBottom: '32px',
+    },
+    '.events': {
+      marginBottom: '16px',
+    },
   },
   '.footer-copyright': {
-    marginTop: '56px',
+    marginTop: '32px',
   },
-  '@media(min-width: 768px)': {
+  '@mobile': {
     '.footer-section': {
-      display: 'flex',
-      alignItems: 'flex-start',
-      justifyContent: 'space-around',
+      padding: '80px 32px',
+      display: 'grid',
+      placeItems: 'center',
+    },
+    '.footer-vuefes-logo': {
+      margin: 0,
     },
     '.footer-info-links': {
-      display: 'flex',
-      alignItems: 'flex-end',
-      flexDirection: 'column',
-      '.contacts': {
-        marginBottom: '32px',
-      },
-      '.events': {
-        marginBottom: '16px',
-      },
+      display: 'none',
     },
     '.footer-copyright': {
-      marginTop: '32px',
-    },
-  },
-  '@media(max-width: 767px)': {
-    '.footer-section': {
-      padding: '80px 40px',
+      marginTop: '56px',
     },
   },
 })

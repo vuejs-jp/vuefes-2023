@@ -73,7 +73,7 @@ css({
     display: 'flex',
     columnGap: '40px',
     'ul': {
-      display: 'none',
+      display: 'block',
     },
     'a': {
       color: '{color.white}',
@@ -90,6 +90,9 @@ css({
       },
     },
   },
+  '.hamburger-menu':{
+    display: 'none',
+  },
   '.sr-only': {
     position: 'absolute',
     left: '-10000px',
@@ -103,20 +106,20 @@ css({
       padding: '16px 24px',
     },
   },
-  '@desktop': {
+  '@mobile': {
     '.twitter':{
       display: 'block',
     },
     '.links': {
        'ul': {
-        display: 'block',
+        display: 'none',
       },
       'a': {
         padding: 0,
       },
     },
     '.hamburger-menu':{
-      display: 'none',
+      display: 'block',
     },
   }
 })

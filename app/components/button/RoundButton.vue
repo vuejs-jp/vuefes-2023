@@ -9,6 +9,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  to: {
+    type: String,
+    default: '',
+  },
   target: {
     type: String,
     default: '_blank',
@@ -28,6 +32,7 @@ const props = defineProps({
 })
 
 const isLink = Boolean(props.href)
+const isRouterLink = Boolean(props.to)
 const myclass = computed(() => {
   const cls = ['button']
   if (props.outline) {
@@ -44,7 +49,19 @@ const onClick = (e: Event) => {
 </script>
 
 <template>
-  <template v-if="isLink">
+  <!-- nuxt link -->
+  <template v-if="isRouterLink">
+    <nuxt-link
+      :to="props.to"
+      :class="myclass.join(' ')"
+      :disabled="props.disabled"
+      :aria-disabled="props.disabled"
+    >
+      <slot />
+    </nuxt-link>
+  </template>
+  <!-- html link -->
+  <template v-else-if="isLink">
     <a
       :class="myclass.join(' ')"
       :href="props.href"
@@ -55,6 +72,7 @@ const onClick = (e: Event) => {
       <slot />
     </a>
   </template>
+  <!-- button -->
   <template v-else>
     <button
       :class="myclass.join(' ')"
@@ -70,10 +88,11 @@ const onClick = (e: Event) => {
 <style lang="ts" scoped>
 css({
   '.button': {
-    display: 'flex',
+    display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '344px',
+    width: '100%',
+    maxWidth: '344px',
     height: '88px',
     borderRadius: '50px',
     fontWeight: 'bold',
@@ -85,7 +104,7 @@ css({
     '&:hover': {
       backgroundColor: '#64C397',
     },
-    '&[disabled],&.-disabled': {
+    '&[disabled="true"],&.-disabled': {
       pointerEvents: 'none',
       boxShadow: 'none',
       backgroundColor: '#C9DAEA',
@@ -98,7 +117,7 @@ css({
         background: 'rgba(53, 73, 94, 0.2)',
         transition: '.2s',
       },
-      '&[disabled],&.-disabled': {
+      '&[disabled="true"],&.-disabled': {
         backgroundColor: '#C9DAEA',
         color: '{color.white}',
         border: 'none',

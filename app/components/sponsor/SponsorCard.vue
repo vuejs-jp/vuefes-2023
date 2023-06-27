@@ -107,7 +107,7 @@ css({
       }
     },
   },
-  '@media(max-width: 770px)': {
+  '@mobile': {
     '.sponsor-card': {
       '&.platinum': {
         maxWidth: '100%',

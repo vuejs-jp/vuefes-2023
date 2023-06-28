@@ -1,6 +1,6 @@
 import { Sponsor } from '~/types/app'
 
-export const platinumSponsors: Sponsor[] = [
+const platinumSponsors: Sponsor[] = [
   {
     name: 'クラウドサイン（弁護士ドットコム株式会社）',
     image: '/sponsors/cloudsign.png',
@@ -18,7 +18,7 @@ export const platinumSponsors: Sponsor[] = [
   },
 ]
 
-export const goldSponsors: Sponsor[] = [
+const goldSponsors: Sponsor[] = [
   {
     name: '株式会社ヤプリ',
     image: '/sponsors/yappli.png',
@@ -51,7 +51,7 @@ export const goldSponsors: Sponsor[] = [
   },
 ]
 
-export const silverSponsors: Sponsor[] = [
+const silverSponsors: Sponsor[] = [
   {
     name: 'BASE株式会社',
     image: '/sponsors/base.png',
@@ -104,7 +104,7 @@ export const silverSponsors: Sponsor[] = [
   },
 ]
 
-export const bronzeSponsors: Sponsor[] = [
+const bronzeSponsors: Sponsor[] = [
   {
     name: '株式会社タノム',
     image: '/sponsors/tanomu.png',
@@ -132,7 +132,7 @@ export const bronzeSponsors: Sponsor[] = [
   },
 ]
 
-export const namingRightSponsors: Sponsor[] = [
+const namingRightSponsors: Sponsor[] = [
   {
     name: 'クラウドサイン（弁護士ドットコム株式会社）',
     image: '/sponsors/cloudsign.png',
@@ -150,7 +150,7 @@ export const namingRightSponsors: Sponsor[] = [
   },
 ]
 
-export const specialLunchSponsors: Sponsor[] = [
+const specialLunchSponsors: Sponsor[] = [
   {
     name: 'MNTSQ株式会社',
     image: '/sponsors/mntsq.png',
@@ -168,7 +168,7 @@ export const specialLunchSponsors: Sponsor[] = [
   },
 ]
 
-export const lunchSponsors: Sponsor[] = [
+const lunchSponsors: Sponsor[] = [
   {
     name: '株式会社ココナラ',
     image: '/sponsors/coconala.png',
@@ -176,7 +176,7 @@ export const lunchSponsors: Sponsor[] = [
   },
 ]
 
-export const afterPartySponsors: Sponsor[] = [
+const afterPartySponsors: Sponsor[] = [
   {
     name: 'GMOインターネットグループ株式会社',
     image: '/sponsors/gmo-internet-group.svg',
@@ -184,7 +184,7 @@ export const afterPartySponsors: Sponsor[] = [
   },
 ]
 
-export const namecardSponsors: Sponsor[] = [
+const namecardSponsors: Sponsor[] = [
   {
     name: '株式会社タノム',
     image: '/sponsors/tanomu.png',
@@ -192,7 +192,7 @@ export const namecardSponsors: Sponsor[] = [
   },
 ]
 
-export const refreshmentSponsors: Sponsor[] = [
+const refreshmentSponsors: Sponsor[] = [
   {
     name: '株式会社ギフティ',
     image: '/sponsors/gifee.png',
@@ -200,7 +200,7 @@ export const refreshmentSponsors: Sponsor[] = [
   },
 ]
 
-export const interpretationSponsors: Sponsor[] = [
+const interpretationSponsors: Sponsor[] = [
   {
     name: '株式会社クラウドワークス',
     image: '/sponsors/crowdworks.svg',
@@ -208,10 +208,25 @@ export const interpretationSponsors: Sponsor[] = [
   },
 ]
 
-export const mediaSponsors: Sponsor[] = [
+const mediaSponsors: Sponsor[] = [
   {
     name: '株式会社技術評論社',
     image: '/sponsors/gihyojp.svg',
     category: 'media',
   },
 ]
+
+export {
+  platinumSponsors,
+  goldSponsors,
+  silverSponsors,
+  bronzeSponsors,
+  namingRightSponsors,
+  specialLunchSponsors,
+  lunchSponsors,
+  afterPartySponsors,
+  namecardSponsors,
+  interpretationSponsors,
+  refreshmentSponsors,
+  mediaSponsors,
+}

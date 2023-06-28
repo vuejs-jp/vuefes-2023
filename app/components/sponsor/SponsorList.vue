@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import SponsorCategoryTitle from './SponsorCategoryTitle.vue'
 import SponsorCard from './SponsorCard.vue'
-import {
-  platinumSponsors,
-  goldSponsors,
-  silverSponsors,
-  bronzeSponsors,
-} from '~/utils/sponsor.constants'
+import * as sponsors from '~/utils/sponsor.constants'
 </script>
 
 <template>
@@ -15,7 +10,7 @@ import {
       <SponsorCategoryTitle category="platinum" />
       <div class="sponsors platinum-sponsors">
         <SponsorCard
-          v-for="platinumSponsor in platinumSponsors"
+          v-for="platinumSponsor in sponsors.platinumSponsors"
           :key="platinumSponsor.name"
           :sponsor="platinumSponsor"
         />
@@ -25,7 +20,7 @@ import {
       <SponsorCategoryTitle category="gold" />
       <div class="sponsors gold-sponsors">
         <SponsorCard
-          v-for="goldSponsor in goldSponsors"
+          v-for="goldSponsor in sponsors.goldSponsors"
           :key="goldSponsor.name"
           :sponsor="goldSponsor"
         />
@@ -35,7 +30,7 @@ import {
       <SponsorCategoryTitle category="silver" />
       <div class="sponsors silver-sponsors">
         <SponsorCard
-          v-for="silverSponsor in silverSponsors"
+          v-for="silverSponsor in sponsors.silverSponsors"
           :key="silverSponsor.name"
           :sponsor="silverSponsor"
         />
@@ -45,7 +40,7 @@ import {
       <SponsorCategoryTitle category="bronze" />
       <div class="sponsors bronze-sponsors">
         <SponsorCard
-          v-for="bronzeSponsor in bronzeSponsors"
+          v-for="bronzeSponsor in sponsors.bronzeSponsors"
           :key="bronzeSponsor.name"
           :sponsor="bronzeSponsor"
         />

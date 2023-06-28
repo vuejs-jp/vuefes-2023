@@ -33,6 +33,10 @@ css({
     backgroundColor: '{color.white}',
     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     borderRadius: '8px',
+    '&:hover': {
+      boxShadow: '0px 4px 4px rgba(238, 238, 238, 0.05)',
+      transition: '.2s',
+    },
     '&.platinum': {
       maxWidth: '475px',
       width: 'calc(50% - 19px)',

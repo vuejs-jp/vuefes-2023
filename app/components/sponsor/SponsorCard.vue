@@ -29,6 +29,7 @@ css({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    verticalAlign: 'middle',
     backgroundColor: '{color.white}',
     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     borderRadius: '8px',
@@ -37,6 +38,7 @@ css({
       width: 'calc(50% - 19px)',
       height: '267px',
       '> .sponsor-image': {
+        margin: '5% 10%',
         maxWidth: '288px',
       },
     },
@@ -45,6 +47,7 @@ css({
       width: 'calc(33% - 17.5px)',
       height: '172px',
       '> .sponsor-image': {
+        margin: '5% 10%',
         maxWidth: '183px',
       },
     },
@@ -53,6 +56,7 @@ css({
       width: 'calc(20% - 17px)',
       height: '94px',
       '> .sponsor-image': {
+        margin: '5% 10%',
         maxWidth: '102px',
       },
     },
@@ -61,6 +65,7 @@ css({
       width: 'calc(16% - 16px)',
       height: '77px',
       '> .sponsor-image': {
+        margin: '5% 10%',
         maxWidth: '84px',
       },
     }
@@ -78,6 +83,7 @@ css({
         width: 'calc(50% - 12px)',
         height: '207px',
         '> .sponsor-image': {
+          margin: '10% 20%',
           maxWidth: '220px',
         },
       },
@@ -86,6 +92,7 @@ css({
         width: 'calc(50% - 12px)',
         height: '207px',
         '> .sponsor-image': {
+          margin: '10% 20%',
           maxWidth: '220px',
         },
       },
@@ -94,6 +101,7 @@ css({
         width: 'calc(33% - 8px)',
         height: '137px',
         '> .sponsor-image': {
+          margin: '10% 20%',
           maxWidth: '145px',
         },
       },
@@ -102,6 +110,7 @@ css({
         width: 'calc(25% - 16px)',
         height: '99px',
         '> .sponsor-image': {
+          margin: '10% 20%',
           maxWidth: '105px',
         },
       }
@@ -112,9 +121,8 @@ css({
       '&.platinum': {
         maxWidth: '100%',
         width: '100%',
-        height: 'auto',
+        height: '414px',
         '> .sponsor-image': {
-          margin: '10% 20%',
           maxWidth: '414px',
           width: '80%'
         },
@@ -122,9 +130,8 @@ css({
       '&.gold': {
         maxWidth: '326px',
         width: 'calc(50% - 19px)',
-        height: 'auto',
+        height: '183px',
         '> .sponsor-image': {
-          margin: '10% 20%',
           maxWidth: '195px',
           width: 'calc(100% - 19px)',
         },
@@ -132,9 +139,8 @@ css({
       '&.silver': {
         maxWidth: '326px',
         width: 'calc(50% - 19px)',
-        height: 'auto',
+        height: '183px',
         '> .sponsor-image': {
-          margin: '10% 20%',
           maxWidth: '195px',
           width: 'calc(100% - 19px)',
         },
@@ -142,9 +148,8 @@ css({
       '&.bronze': {
         maxWidth: '216px',
         width: 'calc(33% - 16px)',
-        height: 'auto',
+        height: '122px',
         '> .sponsor-image': {
-          margin: '10% 20%',
           maxWidth: '129px',
           width: 'calc(100% - 16px)',
         },

@@ -76,7 +76,7 @@ css({
   '.bronze-sponsors': {
     gap: '29px 32px',
   },
-  '@media(max-width: 980px)': {
+  '@tablet': {
     '.sponsor-list': {
       maxWidth: '760px',
     },
@@ -93,7 +93,7 @@ css({
       gap: '32px 18px'
     },
   },
-  '@media(max-width: 770px)': {
+  '@mobile': {
     '.gold-sponsors': {
       gap: '32px 38px'
     },

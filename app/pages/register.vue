@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import RoundButton from '~/components/button/RoundButton.vue'
 import useAuth from '~/composables/useAuth'
+import RoundButton from '~/components/button/RoundButton.vue'
+import StatusCard from '~/components/namecard/StatusCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
 
 definePageMeta({
@@ -22,6 +23,18 @@ const { signIn, signedUser } = await useAuth()
       </li>
       <li>
         <RoundButton @click="() => signIn('github')">signIn with GitHub</RoundButton>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <StatusCard status="registered" />
+      </li>
+      <li>
+        <StatusCard status="activating" />
+      </li>
+      <li>
+        <StatusCard status="pending" />
       </li>
     </ul>
   </main>

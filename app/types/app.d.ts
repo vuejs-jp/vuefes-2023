@@ -8,6 +8,8 @@ export type Path = 'message' | 'form' | 'sponsor' | 'speaker' | 'privacy' | 'cod
 
 export type AuthProvider = 'github' | 'google'
 
+export type Status = 'registered' | 'activating' | 'pending'
+
 export interface FormUser {
   user_id: string
   full_name: string

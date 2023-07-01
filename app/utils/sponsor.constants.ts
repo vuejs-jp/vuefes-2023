@@ -126,7 +126,7 @@ const bronzeSponsors: Sponsor[] = [
     category: 'bronze',
   },
   {
-    name: '株式会社メルペイ',
+    name: '株式会社メルカリ',
     image: '/sponsors/merpay.png',
     category: 'bronze',
   },

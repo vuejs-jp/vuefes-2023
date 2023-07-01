@@ -7,11 +7,15 @@ const props = defineProps({
     type: Object as PropType<Sponsor>,
     required: true,
   },
+  useOptional: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
 <template>
-  <div :class="`sponsor-card ${sponsor.category}`">
+  <div :class="`sponsor-card ${useOptional ? 'options' : sponsor.category}`">
     <img
       width="100"
       height="100"
@@ -72,6 +76,15 @@ css({
         margin: '5% 10%',
         maxWidth: '84px',
       },
+    },
+    '&.options': {
+      maxWidth: '140px',
+      width: 'calc(32% - 16px)',
+      height: '77px',
+      '> .sponsor-image': {
+        margin: '5% 10%',
+        maxWidth: '84px',
+      },
     }
   },
   '.sponsor-image': {
@@ -117,6 +130,15 @@ css({
           margin: '10% 20%',
           maxWidth: '105px',
         },
+      },
+      '&.options': {
+        maxWidth: '176px',
+        width: 'calc(25% - 16px)',
+        height: '99px',
+        '> .sponsor-image': {
+          margin: '10% 20%',
+          maxWidth: '105px',
+        },
       }
     },
   },
@@ -150,6 +172,15 @@ css({
         },
       },
       '&.bronze': {
+        maxWidth: '216px',
+        width: 'calc(33% - 16px)',
+        height: '122px',
+        '> .sponsor-image': {
+          maxWidth: '129px',
+          width: 'calc(100% - 16px)',
+        },
+      },
+      '&.options': {
         maxWidth: '216px',
         width: 'calc(33% - 16px)',
         height: '122px',

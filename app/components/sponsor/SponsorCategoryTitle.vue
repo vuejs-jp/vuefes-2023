@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { SponsorCategory } from '~/types/app'
+import { SponsorCategory, OptionCategory } from '~/types/app'
+import { useSponsor } from '~/composables/useSponsor'
 
 const props = defineProps({
   category: {
-    type: String as PropType<SponsorCategory>,
+    type: String as PropType<SponsorCategory | OptionCategory>,
     required: true,
   },
 })
+
+const { existBasic } = useSponsor()
 </script>
 
 <template>
   <h3 class="sponsor-category-title">
-    {{ category }}
+    {{ category.replaceAll('-', ' ') }}
   </h3>
 </template>
 
@@ -20,8 +23,8 @@ const props = defineProps({
 css({
   '.sponsor-category-title': {
     width: '100%',
-    color: (props) => `{color.sponsor.${props.category}}`,
-    borderBottom: (props) => `5px solid {color.sponsor.${props.category}}`,
+    color: (props) => `{color.${existBasic(props.category) ? `sponsor.${props.category}` : 'vue.blue'}}`,
+    borderBottom: (props) => `5px solid {color.${existBasic(props.category) ? `sponsor.${props.category}` : 'vue.blue'}}`,
     fontWeight: 'bold',
     textTransform: 'capitalize'
   },

@@ -47,6 +47,100 @@ import * as sponsors from '~/utils/sponsor.constants'
       </div>
     </li>
   </ul>
+  <ul class="sponsor-list">
+    <li>
+      <SponsorCategoryTitle category="session-room-naming-rights" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="namingRightSponsor in sponsors.namingRightSponsors"
+          :key="namingRightSponsor.name"
+          :sponsor="namingRightSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+    <li>
+      <SponsorCategoryTitle category="special-lunch" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="specialLunchSponsor in sponsors.specialLunchSponsors"
+          :key="specialLunchSponsor.name"
+          :sponsor="specialLunchSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+    <li>
+      <SponsorCategoryTitle category="lunch" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="lunchSponsor in sponsors.lunchSponsors"
+          :key="lunchSponsor.name"
+          :sponsor="lunchSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+  </ul>
+  <ul class="sponsor-halflist">
+    <li>
+      <SponsorCategoryTitle category="after-party" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="afterPartySponsor in sponsors.afterPartySponsors"
+          :key="afterPartySponsor.name"
+          :sponsor="afterPartySponsor"
+          use-optional
+        />
+      </div>
+    </li>
+    <li>
+      <SponsorCategoryTitle category="name-card" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="namecardSponsor in sponsors.namecardSponsors"
+          :key="namecardSponsor.name"
+          :sponsor="namecardSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+    <li>
+      <SponsorCategoryTitle category="refreshment" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="refreshmentSponsor in sponsors.refreshmentSponsors"
+          :key="refreshmentSponsor.name"
+          :sponsor="refreshmentSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+    <li>
+      <SponsorCategoryTitle category="simultaneous-interpretation" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="interpretationSponsor in sponsors.interpretationSponsors"
+          :key="interpretationSponsor.name"
+          :sponsor="interpretationSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+  </ul>
+  <ul class="sponsor-list">
+    <li>
+      <SponsorCategoryTitle category="media" />
+      <div class="sponsors options-sponsors">
+        <SponsorCard
+          v-for="mediaSponsor in sponsors.mediaSponsors"
+          :key="mediaSponsor.name"
+          :sponsor="mediaSponsor"
+          use-optional
+        />
+      </div>
+    </li>
+  </ul>
 </template>
 
 <style lang="ts" scoped>
@@ -57,6 +151,16 @@ css({
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
+  },
+  '.sponsor-halflist': {
+    maxWidth: '988px',
+    margin: '40px auto 0',
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '40px',
+    'li': {
+      width: 'calc(50% - 20px)',
+    },
   },
   '.sponsors': {
     marginTop: '32px',
@@ -76,9 +180,19 @@ css({
   '.bronze-sponsors': {
     gap: '29px 32px',
   },
+  '.options-sponsors': {
+    gap: '29px 32px',
+  },
   '@tablet': {
     '.sponsor-list': {
       maxWidth: '760px',
+    },
+    '.sponsor-halflist': {
+      maxWidth: '760px',
+      flexDirection: 'column',
+      'li': {
+        width: '100%',
+      },
     },
     '.platinum-sponsors': {
       gap: '24px',
@@ -92,6 +206,9 @@ css({
     '.bronze-sponsors': {
       gap: '32px 18px'
     },
+    '.options-sponsors': {
+      gap: '32px 18px'
+    },
   },
   '@mobile': {
     '.gold-sponsors': {
@@ -101,6 +218,9 @@ css({
       gap: '32px 38px'
     },
     '.bronze-sponsors': {
+      gap: '32px 21px'
+    },
+    '.options-sponsors': {
       gap: '32px 21px'
     },
   }

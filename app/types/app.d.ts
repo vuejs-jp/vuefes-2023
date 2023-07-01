@@ -92,13 +92,13 @@ type SpeakerProfile = {
 type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'
 
 type OptionCategory =
-  | 'naming-right'
+  | 'session-room-naming-rights'
   | 'special-lunch'
   | 'lunch'
   | 'after-party'
-  | 'namecard'
+  | 'name-card'
   | 'refreshment'
-  | 'interpretation'
+  | 'simultaneous-interpretation'
   | 'media'
 
 type Sponsor = {

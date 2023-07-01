@@ -136,17 +136,17 @@ const namingRightSponsors: Sponsor[] = [
   {
     name: 'クラウドサイン（弁護士ドットコム株式会社）',
     image: '/sponsors/cloudsign.png',
-    category: 'naming-right',
+    category: 'session-room-naming-rights',
   },
   {
     name: 'メドピア株式会社',
     image: '/sponsors/medpeer.png',
-    category: 'naming-right',
+    category: 'session-room-naming-rights',
   },
   {
     name: 'エムスリー株式会社',
     image: '/sponsors/m3.svg',
-    category: 'naming-right',
+    category: 'session-room-naming-rights',
   },
 ]
 
@@ -188,7 +188,7 @@ const namecardSponsors: Sponsor[] = [
   {
     name: '株式会社タノム',
     image: '/sponsors/tanomu.png',
-    category: 'namecard',
+    category: 'name-card',
   },
 ]
 
@@ -204,7 +204,7 @@ const interpretationSponsors: Sponsor[] = [
   {
     name: '株式会社クラウドワークス',
     image: '/sponsors/crowdworks.svg',
-    category: 'interpretation',
+    category: 'simultaneous-interpretation',
   },
 ]
 

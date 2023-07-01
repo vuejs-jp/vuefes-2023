@@ -23,6 +23,6 @@
     }
   },
   "excludeFiles": [
-    "app/pages/passmarket-console.vue"
+    "app/components/DragDropArea.vue"
   ]
 }

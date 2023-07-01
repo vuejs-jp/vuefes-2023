@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import RoundButton from '~/components/button/RoundButton.vue'
-import NavPageSection from '~/components/nav/NavPageSection.vue'
+import NavPageSection from '~/components/NavPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import PageTitle from '~/components/PageTitle.vue'

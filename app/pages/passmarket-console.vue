@@ -5,8 +5,6 @@ import { AdditionItem, ListMember } from '~/types/app'
 const memberData = ref<ListMember[]>()
 const members = ref<AdditionItem[]>()
 
-const isDragEnter = ref(false)
-
 const { convertMembers, fetchSheet } = usePassMarketUpload()
 
 enum FileName {
@@ -14,19 +12,6 @@ enum FileName {
   LIST_XLS = 'list.xls',
 }
 
-const onFileInputChange = (event: Event) => {
-  const { target } = event
-  if (!(target instanceof HTMLInputElement)) return
-
-  if (target.files) {
-    checkFiles(Array.from(target.files))
-  }
-}
-const onDropFile = (e: DragEvent) => {
-  if (e.dataTransfer?.files) {
-    checkFiles(Array.from(e.dataTransfer?.files))
-  }
-}
 const checkFiles = async (files: File[]) => {
   if (files.length === 0) return
 
@@ -43,29 +28,14 @@ const checkFiles = async (files: File[]) => {
   }
   alert(`this file is not acceptable -> ${filename}`)
 }
-onMounted(() => {
-  window.ondrop = (e) => {
-    e.preventDefault()
-  }
-  window.ondragover = (e) => {
-    e.preventDefault()
-  }
-})
 </script>
 
 <template>
   <main>
-    <label
-      for="fileupload"
-      draggable="true"
-      role="button"
-      tabindex="0"
-      class="uploadarea"
-      :class="{ '-isDragEnter': isDragEnter }"
-      @dragenter="() => (isDragEnter = true)"
-      @dragleave="() => (isDragEnter = false)"
-      @dragover.prevent
-      @drop.prevent="onDropFile"
+    <DragDropArea
+      file-name="passmarketdata"
+      file-accept="application/vnd.ms-excel,application/zip,text/csv"
+      @check-files="checkFiles"
     >
       <p>
         <b>Upload one of them</b><br />
@@ -73,14 +43,7 @@ onMounted(() => {
         <br />
         addition.csv
       </p>
-      <input
-        id="fileupload"
-        type="file"
-        name="passmarketdata"
-        accept="application/vnd.ms-excel,application/zip,text/csv"
-        @change="onFileInputChange"
-      />
-    </label>
+    </DragDropArea>
     <div class="resultarea">
       <div v-if="memberData">
         <ul>
@@ -96,7 +59,7 @@ onMounted(() => {
           </li>
         </ul>
       </div>
-      <div v-if="!memberData && !members" class="noresult">Upload your CSV file from the left</div>
+      <div v-if="!memberData && !members" class="noresult">Upload your CSV file from the top</div>
     </div>
   </main>
 </template>
@@ -105,47 +68,13 @@ onMounted(() => {
 css({
   'main': {
     display: 'flex',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'center',
     verticalAlign: 'middle',
-    height: '100vh',
-  },
-  '.uploadarea': {
-    position: 'relative',
-    display: 'block',
-    margin: '40px auto',
-    textAlign: 'center',
-    width: '40%',
-    height: '100vh',
-    borderRadius: '12px',
-    border: 'dotted 4px #ccc',
-    cursor: 'pointer',
-    color: '#ccc',
-    '&:hover': {
-      border: 'dotted 4px {color.vue.blue}',
-      color: '{color.vue.blue}'
-    },
-    '&.-isDragEnter': {
-      border: 'dotted 4px {color.vue.blue}',
-      color: '{color.vue.blue}'
-    }
-  },
-  '.uploadarea input': {
-    display: 'none',
-  },
-  '.uploadarea p': {
-    position: 'absolute',
-    top: '50%',
-    left: '0',
-    transform: 'translate(0,-50%)',
-    fontSize: '20px',
-    margin: '0',
-    width: '100%',
-    textAlign: 'center',
   },
   '.resultarea': {
-    width: '60%',
-    height: '100vh',
+    width: '100%',
+    height: 'auto',
   },
   '.resultarea ul ul': {
     display: 'flex',

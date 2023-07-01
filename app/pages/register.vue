@@ -1,12 +1,30 @@
 <script setup lang="ts">
-import RoundButton from '~/components/button/RoundButton.vue'
+import UploadLogo from '~/assets/logo/upload_logo.svg'
 import useAuth from '~/composables/useAuth'
+import { useImage } from '~/composables/useImage'
+import RoundButton from '~/components/button/RoundButton.vue'
+import DragDropArea from '~/components/DragDropArea.vue'
+import StatusCard from '~/components/namecard/StatusCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
 
 definePageMeta({
   middleware: ['error'],
 })
 const { signIn, signedUser } = await useAuth()
+const { getBase64 } = useImage()
+
+const picture = ref()
+
+const checkFiles = async (files: File[]) => {
+  if (files.length === 0) return
+
+  const file = files[0]
+  const filename = file.name
+
+  picture.value = await getBase64(file)
+
+  alert(`this file is not acceptable -> ${filename}`)
+}
 </script>
 
 <template>
@@ -22,6 +40,36 @@ const { signIn, signedUser } = await useAuth()
       </li>
       <li>
         <RoundButton @click="() => signIn('github')">signIn with GitHub</RoundButton>
+      </li>
+    </ul>
+
+    <DragDropArea
+      file-name="profiledata"
+      file-accept="image/png,image/jpeg,image/gif"
+      @check-files="checkFiles"
+    >
+      <div class="upload">
+        <UploadLogo />
+        <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
+        <p>または</p>
+        <p class="action">ファイルを選択</p>
+      </div>
+    </DragDropArea>
+    <div class="resultarea">
+      <div v-if="picture">
+        <img alt="" :src="picture" width="100" height="100" decoding="async" />
+      </div>
+    </div>
+
+    <ul>
+      <li>
+        <StatusCard status="registered" />
+      </li>
+      <li>
+        <StatusCard status="activating" />
+      </li>
+      <li>
+        <StatusCard status="pending" />
       </li>
     </ul>
   </main>
@@ -48,6 +96,24 @@ css({
     'button': {
       margin: '80px auto 0'
     }
+  },
+  '.upload': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: 'calc({space.8} * 1)',
+    color: '{color.vue.blue}',
+    '.title': {
+      fontSize: 'calc(18*{fontSize.base})',
+      fontWeight: 700,
+    },
+    '.action': {
+      padding: 'calc({space.8} * 1.5) calc({space.8} * 5)',
+      color: '{color.white}',
+      background: '{color.vue.blue}',
+      borderRadius: 'calc({space.8} * 6.25)',
+      fontSize: 'calc(16*{fontSize.base})',
+      fontWeight: 500,
+    },
   },
 })
 </style>

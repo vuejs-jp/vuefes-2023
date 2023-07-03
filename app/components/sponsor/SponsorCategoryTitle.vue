@@ -23,8 +23,8 @@ const { existBasic } = useSponsor()
 css({
   '.sponsor-category-title': {
     width: '100%',
-    color: (props) => `{color.${existBasic(props.category) ? `sponsor.${props.category}` : 'vue.blue'}}`,
-    borderBottom: (props) => `5px solid {color.${existBasic(props.category) ? `sponsor.${props.category}` : 'vue.blue'}}`,
+    color: (props) => `{color.sponsor.${existBasic(props.category) ? props.category : 'options'}}`,
+    borderBottom: (props) => `5px solid {color.sponsor.${existBasic(props.category) ? props.category : 'options'}}`,
     fontWeight: 'bold',
     textTransform: 'capitalize'
   },

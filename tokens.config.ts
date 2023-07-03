@@ -21,6 +21,7 @@ export default defineTheme({
       gold: '#FFC408',
       silver: '#ADBFD4',
       bronze: '#F17C67',
+      options: '#546F89',
     },
   },
   fontSize: {

@@ -56,6 +56,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           :key="namingRightSponsor.name"
           :sponsor="namingRightSponsor"
           use-optional
+          use-column-layout
         />
       </div>
     </li>
@@ -67,6 +68,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           :key="specialLunchSponsor.name"
           :sponsor="specialLunchSponsor"
           use-optional
+          use-column-layout
         />
       </div>
     </li>
@@ -187,10 +189,6 @@ css({
     },
     '.sponsor-halflist': {
       maxWidth: '760px',
-      flexDirection: 'column',
-      'li': {
-        width: '100%',
-      },
     },
     '.platinum-sponsors': {
       gap: '24px',

@@ -23,9 +23,14 @@ const { existBasic } = useSponsor()
 css({
   '.sponsor-category-title': {
     width: '100%',
+    height: '60px',
+    display: 'inline-flex',
+    alignItems: 'flex-end',
     color: (props) => `{color.sponsor.${existBasic(props.category) ? props.category : 'options'}}`,
     borderBottom: (props) => `5px solid {color.sponsor.${existBasic(props.category) ? props.category : 'options'}}`,
-    fontWeight: 'bold',
+    fontSize: 'calc(24*{fontSize.base})',
+    fontWeight: 800,
+    lineHeight: 1,
     textTransform: 'capitalize'
   },
 })

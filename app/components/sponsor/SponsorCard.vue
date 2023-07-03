@@ -11,6 +11,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  useColumnLayout: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
@@ -147,7 +151,7 @@ css({
       '&.platinum': {
         maxWidth: '100%',
         width: '100%',
-        height: '414px',
+        height: '388px',
         '> .sponsor-image': {
           maxWidth: '414px',
           width: '80%'
@@ -156,7 +160,7 @@ css({
       '&.gold': {
         maxWidth: '326px',
         width: 'calc(50% - 19px)',
-        height: '183px',
+        height: '143px',
         '> .sponsor-image': {
           maxWidth: '195px',
           width: 'calc(100% - 19px)',
@@ -165,7 +169,7 @@ css({
       '&.silver': {
         maxWidth: '326px',
         width: 'calc(50% - 19px)',
-        height: '183px',
+        height: '143px',
         '> .sponsor-image': {
           maxWidth: '195px',
           width: 'calc(100% - 19px)',
@@ -174,7 +178,7 @@ css({
       '&.bronze': {
         maxWidth: '216px',
         width: 'calc(33% - 16px)',
-        height: '122px',
+        height: '92px',
         '> .sponsor-image': {
           maxWidth: '129px',
           width: 'calc(100% - 16px)',
@@ -182,10 +186,10 @@ css({
       },
       '&.options': {
         maxWidth: '216px',
-        width: 'calc(33% - 16px)',
-        height: '122px',
+        width: (props) => props.useColumnLayout ? 'calc(66% - 16px)' : 'calc(33% - 16px)',
+        height: '92px',
         '> .sponsor-image': {
-          maxWidth: '129px',
+          maxWidth: '89px',
           width: 'calc(100% - 16px)',
         },
       }

@@ -70,6 +70,8 @@ import * as sponsors from '~/utils/sponsor.constants'
         />
       </div>
     </li>
+  </ul>
+  <ul class="sponsor-halflist">
     <li>
       <SponsorCategoryTitle category="lunch" />
       <div class="sponsors options-sponsors">
@@ -81,8 +83,6 @@ import * as sponsors from '~/utils/sponsor.constants'
         />
       </div>
     </li>
-  </ul>
-  <ul class="sponsor-halflist">
     <li>
       <SponsorCategoryTitle category="after-party" />
       <div class="sponsors options-sponsors">
@@ -127,8 +127,6 @@ import * as sponsors from '~/utils/sponsor.constants'
         />
       </div>
     </li>
-  </ul>
-  <ul class="sponsor-list">
     <li>
       <SponsorCategoryTitle category="media" />
       <div class="sponsors options-sponsors">

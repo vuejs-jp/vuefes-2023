@@ -57,6 +57,7 @@ const onClick = (e: Event) => {
       :disabled="props.disabled"
       :aria-disabled="props.disabled"
     >
+      <slot name="icon" />
       <slot />
     </nuxt-link>
   </template>
@@ -69,6 +70,7 @@ const onClick = (e: Event) => {
       :target="props.target"
       :aria-disabled="props.disabled"
     >
+      <slot name="icon" />
       <slot />
     </a>
   </template>
@@ -80,6 +82,7 @@ const onClick = (e: Event) => {
       :disabled="props.disabled"
       @click="onClick"
     >
+      <slot name="icon" />
       <slot />
     </button>
   </template>

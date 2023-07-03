@@ -3,15 +3,18 @@ import UploadLogo from '~/assets/logo/upload_logo.svg'
 import useAuth from '~/composables/useAuth'
 import { useImage } from '~/composables/useImage'
 import RoundButton from '~/components/button/RoundButton.vue'
+import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import StatusCard from '~/components/namecard/StatusCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
+import { useDialog } from '~/composables/useDialog'
 
 definePageMeta({
   middleware: ['error'],
 })
-const { signIn, signedUser } = await useAuth()
+const { signedUser } = await useAuth()
 const { getBase64 } = useImage()
+const { handle, isShow } = useDialog()
 
 const picture = ref()
 
@@ -34,14 +37,10 @@ const checkFiles = async (files: File[]) => {
       <UserForDev :signed-user="signedUser" />
     </div>
 
-    <ul>
-      <li>
-        <RoundButton @click="() => signIn('google')">signIn with Google</RoundButton>
-      </li>
-      <li>
-        <RoundButton @click="() => signIn('github')">signIn with GitHub</RoundButton>
-      </li>
-    </ul>
+    <RoundButton @click="() => handle(true)">ネームカードを作成</RoundButton>
+    <div v-if="isShow">
+      <IntegrationCard @on-close="() => handle(false)" />
+    </div>
 
     <DragDropArea
       file-name="profiledata"

@@ -15,7 +15,7 @@ const initialUser = {
 const dummyUser = {
   user_id: 'dummy-user',
   full_name: 'ダミーユーザ',
-  avatar_url: 'https://vuefes.jp/2022/speaker/evan.jpeg',
+  avatar_url: 'https://vuefes.jp/2022/speakers/evan.jpeg',
   provider: 'google',
   email: 'dummy@cy.com',
   created_at: '2023-06-02T15:12:03.369752Z',

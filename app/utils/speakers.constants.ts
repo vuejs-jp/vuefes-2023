@@ -12,7 +12,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: '/speaker/evan.jpg',
+      image: '/speakers/evan.jpg',
       title: 'Creator of Vue / Vite',
       name: 'Evan You',
       twitterId: 'youyuxi',
@@ -33,7 +33,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: '/speaker/sebastien.jpg',
+      image: '/speakers/sebastien.jpg',
       title: 'NuxtLabs CEO',
       name: 'Sebastien Chopin',
       twitterId: 'Atinux',
@@ -52,7 +52,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: '/speaker/matias.jpg',
+      image: '/speakers/matias.jpg',
       title: 'Vite Core team Member',
       name: 'Matias Capeletto',
       twitterId: 'patak_dev',
@@ -70,7 +70,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: '/speaker/antfu.png',
+      image: '/speakers/antfu.png',
       title: 'Vue/Vite/Nuxt Core team Member',
       name: 'Anthony Fu',
       twitterId: 'antfu7',
@@ -89,7 +89,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: '/speaker/daniel_roe.jpg',
+      image: '/speakers/daniel_roe.jpg',
       title: 'Nuxt Core Team Member',
       name: 'Daniel Roe',
       twitterId: 'danielcroe',
@@ -111,7 +111,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: '/speaker/sapphi_red.png',
+      image: '/speakers/sapphi_red.png',
       title: 'Vite Core team Member',
       name: '翠 / sapphi-red',
       twitterId: 'sapphi_red',

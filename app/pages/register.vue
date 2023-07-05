@@ -6,6 +6,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import StatusCard from '~/components/namecard/StatusCard.vue'
+import AvatarCard from '~/components/namecard/AvatarCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import { useDialog } from '~/composables/useDialog'
 
@@ -28,6 +29,13 @@ const checkFiles = async (files: File[]) => {
 
   alert(`this file is not acceptable -> ${filename}`)
 }
+
+// mock
+const avatar = {
+  name: 'jiyuujin',
+  avatarUrl: 'https://avatars.githubusercontent.com/u/9650581',
+  role: 'attendee',
+} as const
 </script>
 
 <template>
@@ -40,6 +48,11 @@ const checkFiles = async (files: File[]) => {
     <RoundButton @click="() => handle(true)">ネームカードを作成</RoundButton>
     <div v-if="isShow">
       <IntegrationCard @on-close="() => handle(false)" />
+    </div>
+
+    <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
+      <AvatarCard v-bind="{ ...avatar }" />
+      <AvatarCard v-bind="{ ...avatar }" :opacity="0.6" />
     </div>
 
     <DragDropArea

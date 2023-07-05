@@ -15,7 +15,7 @@ const props = defineProps({
   },
   target: {
     type: String,
-    default: '_blank',
+    default: '',
   },
   rel: {
     type: String,
@@ -43,49 +43,40 @@ const myclass = computed(() => {
   }
   return cls
 })
+
 const onClick = (e: Event) => {
   emit('click', e)
+}
+
+const routerLinkProps = {
+  to: props.to,
+}
+const linkProps = {
+  href: props.href,
+  rel: props.rel,
+  target: props.target,
+}
+const buttonProps = {
+  type: props.type,
+  onClick,
 }
 </script>
 
 <template>
-  <!-- nuxt link -->
-  <template v-if="isRouterLink">
-    <nuxt-link
-      :to="props.to"
-      :class="myclass.join(' ')"
-      :disabled="props.disabled"
-      :aria-disabled="props.disabled"
-    >
-      <slot name="icon" />
-      <slot />
-    </nuxt-link>
-  </template>
-  <!-- html link -->
-  <template v-else-if="isLink">
-    <a
-      :class="myclass.join(' ')"
-      :href="props.href"
-      :rel="props.rel"
-      :target="props.target"
-      :aria-disabled="props.disabled"
-    >
-      <slot name="icon" />
-      <slot />
-    </a>
-  </template>
-  <!-- button -->
-  <template v-else>
-    <button
-      :class="myclass.join(' ')"
-      :type="props.type"
-      :disabled="props.disabled"
-      @click="onClick"
-    >
-      <slot name="icon" />
-      <slot />
-    </button>
-  </template>
+  <component
+    :is="isRouterLink ? 'NuxtLink' : isLink ? 'a' : 'button'"
+    v-bind="{
+      ...(isRouterLink && routerLinkProps),
+      ...(isLink && linkProps),
+      ...((!isRouterLink || !isLink) && buttonProps),
+    }"
+    :class="myclass.join(' ')"
+    :disabled="props.disabled"
+    :aria-disabled="props.disabled"
+  >
+    <slot name="icon" />
+    <slot />
+  </component>
 </template>
 
 <style lang="ts" scoped>

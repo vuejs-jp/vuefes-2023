@@ -27,6 +27,12 @@ const props = defineProps({
     default: 1,
   },
 })
+const { opacity, ...rest } = toRefs(props)
+const avatar = {
+  name: rest.name.value,
+  avatarUrl: rest.avatarUrl.value,
+  role: rest.role.value,
+}
 </script>
 
 <template>
@@ -42,7 +48,7 @@ const props = defineProps({
     </div>
     <div class="avatar-wrapper">
       <h2>Hello!! I am</h2>
-      <AvatarInfo v-bind="{ ...props }" />
+      <AvatarInfo v-bind="{ ...avatar }" />
     </div>
   </div>
 </template>

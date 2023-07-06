@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import UploadLogo from '~/assets/logo/upload_logo.svg'
+import Ticket from '~/assets/namecard/ticket.svg'
+import Namecard from '~/assets/namecard/namecard.svg'
 import useAuth from '~/composables/useAuth'
 import { useImage } from '~/composables/useImage'
 import RoundButton from '~/components/button/RoundButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
+import ProcessCard from '~/components/namecard/ProcessCard.vue'
 import StatusCard from '~/components/namecard/StatusCard.vue'
 import AvatarCard from '~/components/namecard/AvatarCard.vue'
 import ShareAvatarCard from '~/components/namecard/ShareAvatarCard.vue'
@@ -49,6 +52,27 @@ const avatar = {
     <RoundButton @click="() => handle(true)">ネームカードを作成</RoundButton>
     <div v-if="isShow">
       <IntegrationCard @on-close="() => handle(false)" />
+    </div>
+
+    <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
+      <ProcessCard color="vue.green">
+        <template #icon>
+          <Ticket />
+        </template>
+        <template #default>
+          <h3>チケットのご購入</h3>
+          <p>Ticket</p>
+        </template>
+      </ProcessCard>
+      <ProcessCard color="typescript.blue">
+        <template #icon>
+          <Namecard />
+        </template>
+        <template #default>
+          <h3>ネームカードの作成</h3>
+          <p>Namecard</p>
+        </template>
+      </ProcessCard>
     </div>
 
     <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">

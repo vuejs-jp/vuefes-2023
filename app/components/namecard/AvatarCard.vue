@@ -88,6 +88,7 @@ css({
     width: '100%',
     height: '100%',
     zIndex: 2,
+    opacity: 0.6,
   },
   '.title-bg1': {
     position: 'absolute',

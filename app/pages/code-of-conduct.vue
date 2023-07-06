@@ -37,7 +37,7 @@ useHead({
       <MarkDownText path="code-of-conduct" class="explain" />
 
       <div class="back">
-        <RoundButton to="../" outline> トップに戻る </RoundButton>
+        <RoundButton href="../" outline> トップに戻る </RoundButton>
       </div>
     </div>
     <FooterPageSection />

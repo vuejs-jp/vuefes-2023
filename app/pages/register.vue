@@ -1,17 +1,25 @@
 <script setup lang="ts">
 import UploadLogo from '~/assets/logo/upload_logo.svg'
+import Ticket from '~/assets/namecard/ticket.svg'
+import Namecard from '~/assets/namecard/namecard.svg'
 import useAuth from '~/composables/useAuth'
 import { useImage } from '~/composables/useImage'
 import RoundButton from '~/components/button/RoundButton.vue'
+import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
+import ProcessCard from '~/components/namecard/ProcessCard.vue'
 import StatusCard from '~/components/namecard/StatusCard.vue'
+import AvatarCard from '~/components/namecard/AvatarCard.vue'
+import ShareAvatarCard from '~/components/namecard/ShareAvatarCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
+import { useDialog } from '~/composables/useDialog'
 
 definePageMeta({
   middleware: ['error'],
 })
-const { signIn, signedUser } = await useAuth()
+const { signedUser } = await useAuth()
 const { getBase64 } = useImage()
+const { handle, isShow } = useDialog()
 
 const picture = ref()
 
@@ -25,6 +33,13 @@ const checkFiles = async (files: File[]) => {
 
   alert(`this file is not acceptable -> ${filename}`)
 }
+
+// mock
+const avatar = {
+  name: 'jiyuujin',
+  avatarUrl: 'https://avatars.githubusercontent.com/u/9650581',
+  role: 'attendee',
+} as const
 </script>
 
 <template>
@@ -34,14 +49,40 @@ const checkFiles = async (files: File[]) => {
       <UserForDev :signed-user="signedUser" />
     </div>
 
-    <ul>
-      <li>
-        <RoundButton @click="() => signIn('google')">signIn with Google</RoundButton>
-      </li>
-      <li>
-        <RoundButton @click="() => signIn('github')">signIn with GitHub</RoundButton>
-      </li>
-    </ul>
+    <RoundButton @click="() => handle(true)">ネームカードを作成</RoundButton>
+    <div v-if="isShow">
+      <IntegrationCard @on-close="() => handle(false)" />
+    </div>
+
+    <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
+      <ProcessCard color="vue.green">
+        <template #icon>
+          <Ticket />
+        </template>
+        <template #default>
+          <h3>チケットのご購入</h3>
+          <p>Ticket</p>
+        </template>
+      </ProcessCard>
+      <ProcessCard color="typescript.blue">
+        <template #icon>
+          <Namecard />
+        </template>
+        <template #default>
+          <h3>ネームカードの作成</h3>
+          <p>Namecard</p>
+        </template>
+      </ProcessCard>
+    </div>
+
+    <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
+      <AvatarCard v-bind="{ ...avatar }" />
+      <AvatarCard v-bind="{ ...avatar }" :opacity="0.6" />
+    </div>
+
+    <div :style="{ display: 'flex', justifyContent: 'center', padding: '8px 0' }">
+      <ShareAvatarCard v-bind="{ ...avatar }" />
+    </div>
 
     <DragDropArea
       file-name="profiledata"

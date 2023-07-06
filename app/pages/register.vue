@@ -7,6 +7,7 @@ import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import StatusCard from '~/components/namecard/StatusCard.vue'
 import AvatarCard from '~/components/namecard/AvatarCard.vue'
+import ShareAvatarCard from '~/components/namecard/ShareAvatarCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import { useDialog } from '~/composables/useDialog'
 
@@ -53,6 +54,10 @@ const avatar = {
     <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
       <AvatarCard v-bind="{ ...avatar }" />
       <AvatarCard v-bind="{ ...avatar }" :opacity="0.6" />
+    </div>
+
+    <div :style="{ display: 'flex', justifyContent: 'center', padding: '8px 0' }">
+      <ShareAvatarCard v-bind="{ ...avatar }" />
     </div>
 
     <DragDropArea

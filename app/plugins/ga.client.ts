@@ -9,6 +9,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         id: config.gtagId,
       },
     },
+    // @ts-expect-error
     nuxtApp.$router,
   )
 })

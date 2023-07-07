@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes } from 'vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 
 type _SubmitButtonProps = Omit<ButtonHTMLAttributes, 'disabled' | 'onClick'>
-interface SubmitButtonProps extends _SubmitButtonProps {
+interface SubmitButtonProps extends /* @vue-ignore */ _SubmitButtonProps {
   /**
    * Booleanish ではなく boolean として型定義をしなおす
    */

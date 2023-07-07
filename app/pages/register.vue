@@ -8,6 +8,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import ProcessCard from '~/components/namecard/ProcessCard.vue'
+import CommentTitle from '~/components/CommentTitle.vue'
 import StatusCard from '~/components/namecard/StatusCard.vue'
 import AvatarCard from '~/components/namecard/AvatarCard.vue'
 import ShareAvatarCard from '~/components/namecard/ShareAvatarCard.vue'
@@ -83,6 +84,8 @@ const avatar = {
     <div :style="{ display: 'flex', justifyContent: 'center', padding: '8px 0' }">
       <ShareAvatarCard v-bind="{ ...avatar }" />
     </div>
+
+    <CommentTitle color="vue.green" title="お早めにご購入を！" />
 
     <DragDropArea
       file-name="profiledata"

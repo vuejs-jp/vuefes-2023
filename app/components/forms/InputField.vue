@@ -2,7 +2,7 @@
 import { InputHTMLAttributes } from 'vue'
 
 type _InputFieldProps = Omit<InputHTMLAttributes, 'onInput' | 'onBlur'>
-interface InputFieldProps extends _InputFieldProps {
+interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
   titleLabel: string
   error: string
   /**

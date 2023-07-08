@@ -2,7 +2,7 @@
 import { TextareaHTMLAttributes } from 'vue'
 
 type _TextareaFieldProps = Omit<TextareaHTMLAttributes, 'onInput' | 'onBlur'>
-interface TextareaFieldProps extends _TextareaFieldProps {
+interface TextareaFieldProps extends /* @vue-ignore */ _TextareaFieldProps {
   titleLabel: string
   error: string
   /**

@@ -276,7 +276,7 @@ describe('top', () => {
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
-          cy.contains('a', 'MyPage').should('have.attr', 'href', '/mypage')
+          cy.contains('a', 'MyPage').should('have.attr', 'href', '/users/dummy-user')
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
           cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')

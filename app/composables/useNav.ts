@@ -22,13 +22,13 @@ export function useNav() {
 }
 
 export async function getNavLinks(): Promise<ComputedRef<NavLink[]>> {
-  const { hasAuth } = await useAuth()
+  const { hasAuth, signedUser } = await useAuth()
   const myNavLinks = computed(() => {
     const links = [...navLinks]
     if (hasAuth.value) {
       links.unshift({
         text: 'MyPage',
-        link: 'mypage',
+        link: `users/${signedUser.user_id}`,
       })
     }
     return links

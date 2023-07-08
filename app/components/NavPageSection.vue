@@ -6,6 +6,13 @@ import NavView from '~/components/nav/NavView.vue'
 import { useNav, getNavLinks } from '~/composables/useNav'
 import { conferenceTitle } from '~/utils/constants'
 
+const props = defineProps({
+  hasAuth: {
+    type: Boolean,
+    required: false,
+  },
+})
+
 const { navRef } = useNav()
 const htmlRef = ref()
 const showMenu = ref(false)
@@ -29,7 +36,7 @@ onMounted(function () {
         </nuxt-link>
         <span class="sr-only">{{ conferenceTitle }}</span>
       </h1>
-      <div class="links">
+      <div v-if="!hasAuth" class="links">
         <ul v-for="l in navLinks" :key="l.link">
           <li>
             <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>
@@ -49,6 +56,9 @@ onMounted(function () {
           <MenuLogo />
         </button>
         <NavView :visible="showMenu" @toggle="toggleMenu" />
+      </div>
+      <div v-if="hasAuth">
+        <slot name="auth" />
       </div>
     </div>
   </nav>

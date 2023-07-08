@@ -10,7 +10,7 @@ export type AuthProvider = 'github' | 'google'
 
 export type Role = 'staff' | 'speaker' | 'sponsor' | 'attendee' | 'attendee + party'
 
-export type Status = 'registered' | 'activating' | 'pending'
+export type Status = 'registered' | 'failed'
 
 export interface FormUser {
   user_id: string

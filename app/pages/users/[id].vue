@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import StatusCard from '~/components/namecard/StatusCard.vue'
 import AvatarCard from '~/components/namecard/AvatarCard.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
+import TextButton from '~/components/button/TextButton.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
 import { useSupabase } from '~/composables/useSupabase'
@@ -23,7 +25,7 @@ function onPurchase() {
 
 const avatar = {
   name: signedUser.full_name,
-  avatarUrl: signedUser.avatar_url,
+  avatarUrl: signedUser.avatar_url ?? '',
   role: 'attendee',
 } as const
 
@@ -39,7 +41,12 @@ const avatar = {
   <main>
     <NavPageSection has-auth>
       <template #auth>
-        <RoundButton class="btn-logout" outline @click="signOut">Logout</RoundButton>
+        <TextButton v-if="hasAuth" @click="signOut">
+          <template #icon>
+            <LogoutLogo />
+          </template>
+          <template #default> Logout </template>
+        </TextButton>
       </template>
     </NavPageSection>
 
@@ -71,10 +78,6 @@ css({
     color: '{color.vue.blue}',
     fontSize: 'calc(32*{fontSize.base})',
     fontWeight: 900,
-  },
-  '.btn-logout': {
-    width: '120px',
-    height: '32px',
   },
   '.btn-purchase': {
     marginTop: '64px'

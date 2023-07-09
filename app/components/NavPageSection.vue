@@ -16,6 +16,7 @@ const props = defineProps({
 const { navRef } = useNav()
 const htmlRef = ref()
 const showMenu = ref(false)
+
 const toggleMenu = () => {
   showMenu.value = !showMenu.value
   htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
@@ -51,6 +52,7 @@ onMounted(function () {
         >
           <TwitterLogo />
         </a>
+        <slot name="avatar" />
         <!-- hamburger-menu -->
         <button v-if="!showMenu" class="hamburger-menu" @click="toggleMenu">
           <MenuLogo />
@@ -81,12 +83,14 @@ css({
   },
   '.links': {
     display: 'flex',
+    alignItems: 'center',
     columnGap: '40px',
-    'ul': {
+    '::v-deep(ul)': {
       display: 'block',
     },
-    'a': {
+    '::v-deep(a)': {
       color: '{color.white}',
+      fontSize: 'calc(16*{fontSize.base})',
       '&:hover': {
         color: '{color.vue.green}',
         transition: '.2s',

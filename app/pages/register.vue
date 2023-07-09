@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import UploadLogo from '~/assets/logo/upload_logo.svg'
-import RoundButton from '~/components/button/RoundButton.vue'
+import TextButton from '~/components/button/TextButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
@@ -13,7 +14,7 @@ definePageMeta({
   middleware: ['error'],
 })
 
-const { hasAuth, signedUser } = await useAuth()
+const { hasAuth, signOut, signedUser } = await useAuth()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
 
@@ -39,7 +40,12 @@ onMounted(function () {
   <main>
     <NavPageSection has-auth>
       <template #auth>
-        <RoundButton v-if="hasAuth" class="btn-logout" outline @click="signOut">Logout</RoundButton>
+        <TextButton v-if="hasAuth" @click="signOut">
+          <template #icon>
+            <LogoutLogo />
+          </template>
+          <template #default> Logout </template>
+        </TextButton>
       </template>
     </NavPageSection>
 
@@ -88,10 +94,6 @@ css({
     color: '{color.vue.blue}',
     fontSize: 'calc(32*{fontSize.base})',
     fontWeight: 900,
-  },
-  '.btn-logout': {
-    width: '120px',
-    height: '32px',
   },
   '.upload': {
     display: 'grid',

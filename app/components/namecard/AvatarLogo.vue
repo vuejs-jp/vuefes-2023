@@ -1,0 +1,50 @@
+<script setup lang="ts">
+import VueFesLogo from '@/assets/namecard/vuefes_logo.svg'
+
+const props = defineProps({
+  url: {
+    type: String,
+    default: '',
+  },
+  size: {
+    type: String as PropType<'small' | 'large'>,
+    default: 'small',
+  },
+})
+</script>
+
+<template>
+  <template v-if="url">
+    <img
+      :alt="name"
+      :src="url"
+      :width="size === 'small' ? 40 : 120"
+      :height="size === 'small' ? 40 : 120"
+      class="avatar"
+      decoding="async"
+    />
+  </template>
+  <template v-else>
+    <div class="sample-avatar">
+      <VueFesLogo />
+    </div>
+  </template>
+</template>
+
+<style lang="ts" scoped>
+css({
+  '.avatar': {
+    borderRadius: '50%',
+    boxShadow: '0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
+  },
+  '.sample-avatar': {
+    display: 'grid',
+    placeItems: 'center',
+    width: '120px',
+    height: '120px',
+    background: 'linear-gradient(#90B44B, #42B983)',
+    borderRadius: '50%',
+    boxShadow: '0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
+  },
+})
+</style>

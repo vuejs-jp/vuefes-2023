@@ -30,8 +30,8 @@ css({
     width: '960px',
     height: '225px',
     background: '{color.white}',
-    color: (props) => props.status === 'registered' ? '{color.vue.green}' : props.status === 'activating' ? '#FFC408' : '#F17C67',
-    border: (props) => props.status === 'registered' ? '4px solid {color.vue.green}' : props.status === 'activating' ? '4px solid #FFC408' : '4px solid #F17C67',
+    color: (props) => props.status === 'registered' ? '{color.vue.green}' : '{color.sangosyo}',
+    border: (props) => props.status === 'registered' ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
     borderRadius: '8px',
   },
   '.title': {

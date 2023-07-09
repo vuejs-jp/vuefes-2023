@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AvatarLogo from '~/components/namecard/AvatarLogo.vue'
 import { useUserRole } from '~/composables/useUserRole'
 import { Role } from '~/types/app'
 
@@ -26,7 +27,7 @@ const { backgroundColor, textColor } = useUserRole()
 
 <template>
   <div class="avatar">
-    <img :alt="name" :src="avatarUrl" width="120" height="120" decoding="async" />
+    <AvatarLogo :url="avatarUrl" size="large" />
     <h3>{{ name }}</h3>
     <div
       class="role"
@@ -54,6 +55,10 @@ css({
     '::v-deep(img)': {
       borderRadius: '50%',
       boxShadow: '0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
+    },
+    '::v-deep(svg)': {
+      width: '42px',
+      height: '48px',
     },
   },
   '.role': {

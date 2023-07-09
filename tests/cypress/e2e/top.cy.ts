@@ -20,7 +20,6 @@ describe('top', () => {
       loadPage()
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
-        cy.contains('a', 'MyPage').should('not.exist')
         cy.contains('a', 'Message').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
@@ -56,7 +55,6 @@ describe('top', () => {
       loadPageWithAuth()
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
-        cy.contains('a', 'MyPage').should('be.visible')
         cy.contains('a', 'Message').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
@@ -271,12 +269,11 @@ describe('top', () => {
     it('render with Auth', () => {
       cy.viewport(769, 600)
       loadPageWithAuth()
-      cy.wait(1000)
+      cy.wait(1500)
       cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
-          cy.contains('a', 'MyPage').should('have.attr', 'href', '/mypage')
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
           cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')

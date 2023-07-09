@@ -16,6 +16,7 @@ export default defineTheme({
     typescript: {
       blue: '#3178C6',
     },
+    sangosyo: '#F17C67',
     sponsor: {
       platinum: '#93AF5E',
       gold: '#FFC408',

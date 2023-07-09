@@ -6,9 +6,17 @@ import NavView from '~/components/nav/NavView.vue'
 import { useNav, getNavLinks } from '~/composables/useNav'
 import { conferenceTitle } from '~/utils/constants'
 
+const props = defineProps({
+  hasAuth: {
+    type: Boolean,
+    required: false,
+  },
+})
+
 const { navRef } = useNav()
 const htmlRef = ref()
 const showMenu = ref(false)
+
 const toggleMenu = () => {
   showMenu.value = !showMenu.value
   htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
@@ -29,7 +37,7 @@ onMounted(function () {
         </nuxt-link>
         <span class="sr-only">{{ conferenceTitle }}</span>
       </h1>
-      <div class="links">
+      <div v-if="!hasAuth" class="links">
         <ul v-for="l in navLinks" :key="l.link">
           <li>
             <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>
@@ -44,11 +52,15 @@ onMounted(function () {
         >
           <TwitterLogo />
         </a>
+        <slot name="avatar" />
         <!-- hamburger-menu -->
         <button v-if="!showMenu" class="hamburger-menu" @click="toggleMenu">
           <MenuLogo />
         </button>
         <NavView :visible="showMenu" @toggle="toggleMenu" />
+      </div>
+      <div v-if="hasAuth">
+        <slot name="auth" />
       </div>
     </div>
   </nav>
@@ -71,12 +83,14 @@ css({
   },
   '.links': {
     display: 'flex',
+    alignItems: 'center',
     columnGap: '40px',
-    'ul': {
+    '::v-deep(ul)': {
       display: 'block',
     },
-    'a': {
+    '::v-deep(a)': {
       color: '{color.white}',
+      fontSize: 'calc(16*{fontSize.base})',
       '&:hover': {
         color: '{color.vue.green}',
         transition: '.2s',

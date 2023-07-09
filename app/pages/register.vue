@@ -1,24 +1,19 @@
 <script setup lang="ts">
 import UploadLogo from '~/assets/logo/upload_logo.svg'
-import Ticket from '~/assets/namecard/ticket.svg'
-import Namecard from '~/assets/namecard/namecard.svg'
-import useAuth from '~/composables/useAuth'
-import { useImage } from '~/composables/useImage'
 import RoundButton from '~/components/button/RoundButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
-import ProcessCard from '~/components/namecard/ProcessCard.vue'
-import CommentTitle from '~/components/CommentTitle.vue'
-import StatusCard from '~/components/namecard/StatusCard.vue'
-import AvatarCard from '~/components/namecard/AvatarCard.vue'
-import ShareAvatarCard from '~/components/namecard/ShareAvatarCard.vue'
 import UserForDev from '~/components/UserForDev.vue'
+import useAuth from '~/composables/useAuth'
+import { useImage } from '~/composables/useImage'
 import { useDialog } from '~/composables/useDialog'
+import { isProd } from '~/utils/environment.constants'
 
 definePageMeta({
   middleware: ['error'],
 })
-const { signedUser } = await useAuth()
+
+const { hasAuth, signedUser } = await useAuth()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
 
@@ -35,111 +30,68 @@ const checkFiles = async (files: File[]) => {
   alert(`this file is not acceptable -> ${filename}`)
 }
 
-// mock
-const avatar = {
-  name: 'jiyuujin',
-  avatarUrl: 'https://avatars.githubusercontent.com/u/9650581',
-  role: 'attendee',
-} as const
+onMounted(function () {
+  isShow.value = true
+})
 </script>
 
 <template>
   <main>
-    <h1>Register</h1>
-    <div class="user">
-      <UserForDev :signed-user="signedUser" />
-    </div>
+    <NavPageSection has-auth>
+      <template #auth>
+        <RoundButton v-if="hasAuth" class="btn-logout" outline @click="signOut">Logout</RoundButton>
+      </template>
+    </NavPageSection>
 
-    <RoundButton @click="() => handle(true)">ネームカードを作成</RoundButton>
+    <section>
+      <h2>ネームカードの編集</h2>
+      <DragDropArea
+        file-name="profiledata"
+        file-accept="image/png,image/jpeg,image/gif"
+        @check-files="checkFiles"
+      >
+        <div class="upload">
+          <UploadLogo />
+          <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
+          <p>または</p>
+          <p class="action">ファイルを選択</p>
+        </div>
+      </DragDropArea>
+      <div class="resultarea">
+        <div v-if="picture">
+          <img alt="" :src="picture" width="100" height="100" decoding="async" />
+        </div>
+      </div>
+    </section>
+
     <div v-if="isShow">
       <IntegrationCard @on-close="() => handle(false)" />
     </div>
 
-    <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
-      <ProcessCard color="vue.green">
-        <template #icon>
-          <Ticket />
-        </template>
-        <template #default>
-          <h3>チケットのご購入</h3>
-          <p>Ticket</p>
-        </template>
-      </ProcessCard>
-      <ProcessCard color="typescript.blue">
-        <template #icon>
-          <Namecard />
-        </template>
-        <template #default>
-          <h3>ネームカードの作成</h3>
-          <p>Namecard</p>
-        </template>
-      </ProcessCard>
+    <div v-if="!isProd" class="user">
+      <UserForDev :signed-user="signedUser" />
     </div>
 
-    <div :style="{ display: 'flex', justifyContent: 'center', gap: '8px' }">
-      <AvatarCard v-bind="{ ...avatar }" />
-      <AvatarCard v-bind="{ ...avatar }" :opacity="0.6" />
-    </div>
-
-    <div :style="{ display: 'flex', justifyContent: 'center', padding: '8px 0' }">
-      <ShareAvatarCard v-bind="{ ...avatar }" />
-    </div>
-
-    <CommentTitle color="vue.green" title="お早めにご購入を！" />
-
-    <DragDropArea
-      file-name="profiledata"
-      file-accept="image/png,image/jpeg,image/gif"
-      @check-files="checkFiles"
-    >
-      <div class="upload">
-        <UploadLogo />
-        <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
-        <p>または</p>
-        <p class="action">ファイルを選択</p>
-      </div>
-    </DragDropArea>
-    <div class="resultarea">
-      <div v-if="picture">
-        <img alt="" :src="picture" width="100" height="100" decoding="async" />
-      </div>
-    </div>
-
-    <ul>
-      <li>
-        <StatusCard status="registered" />
-      </li>
-      <li>
-        <StatusCard status="activating" />
-      </li>
-      <li>
-        <StatusCard status="pending" />
-      </li>
-    </ul>
+    <FooterPageSection />
   </main>
 </template>
 
 <style lang="ts" scoped>
 css({
-  'main': {
-    padding: '48px'
+  'section': {
+    marginTop: '120px',
+    display: 'grid',
+    placeItems: 'center',
+    gap: '40px',
   },
-  'h1': {
-    fontSize: '24px',
-    padding: '24px 0'
+  'h2': {
+    color: '{color.vue.blue}',
+    fontSize: 'calc(32*{fontSize.base})',
+    fontWeight: 900,
   },
-  'ul': {
-    display: 'flex',
-    margin: '40px',
-    flexWrap: 'wrap'
-  },
-  'li': {
-    margin: '24px'
-  },
-  '.logout': {
-    'button': {
-      margin: '80px auto 0'
-    }
+  '.btn-logout': {
+    width: '120px',
+    height: '32px',
   },
   '.upload': {
     display: 'grid',

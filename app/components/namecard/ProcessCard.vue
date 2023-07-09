@@ -28,7 +28,7 @@ css({
     padding: 'calc({space.8} * 3) 0',
     border: (props) => `calc({space.8} * 0.5) solid {color.${props.color}}`,
     borderRadius: 'calc({space.8} * 2)',
-    '::v-deep(h3)': {
+    '::v-deep(h4)': {
       color: (props) => `{color.${props.color}}`,
       fontSize: 'calc(24*{fontSize.base})',
       fontWeight: 700,

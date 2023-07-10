@@ -210,6 +210,11 @@ const interpretationSponsors: Sponsor[] = [
 
 const mediaSponsors: Sponsor[] = [
   {
+    name: 'Newt',
+    image: '/sponsors/newt.png',
+    category: 'media',
+  },
+  {
     name: '株式会社技術評論社',
     image: '/sponsors/gihyojp.svg',
     category: 'media',

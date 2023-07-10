@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import TextButton from '~/components/forms/TextButton.vue'
+import TextButton from '~/components/button/TextButton.vue'
 </script>
 
 <template>
   <div class="doc-root">
-    <TextButton url="/privacy" @click.stop="$emit('click')">{{
+    <TextButton href="/privacy" underline @click.stop="$emit('click')">{{
       $t('words.privacypolicy')
     }}</TextButton>
-    <TextButton url="/code-of-conduct" @click.stop="$emit('click')">{{
+    <TextButton href="/code-of-conduct" underline @click.stop="$emit('click')">{{
       $t('words.codeofconduct')
     }}</TextButton>
   </div>

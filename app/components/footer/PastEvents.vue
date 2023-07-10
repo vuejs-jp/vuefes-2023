@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import TextButton from '~/components/forms/TextButton.vue'
+import TextButton from '~/components/button/TextButton.vue'
 import { websiteLinks } from '~/utils/constants'
 </script>
 
 <template>
   <div class="past-root">
-    <TextButton v-for="website in websiteLinks" :key="website.value" :url="website.url">
+    <TextButton
+      v-for="website in websiteLinks"
+      :key="website.value"
+      :href="website.url"
+      target="_blank"
+      underline
+    >
       {{ website.title }}
     </TextButton>
   </div>

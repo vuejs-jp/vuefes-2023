@@ -23,6 +23,10 @@ const props = defineProps({
     type: String as PropType<'button' | 'submit' | 'reset' | undefined>,
     default: 'button',
   },
+  underline: {
+    type: Boolean,
+    default: false,
+  },
   disabled: {
     type: Boolean,
     default: false,
@@ -88,6 +92,7 @@ css({
     gap: 'calc({space.8} * 1)',
     fontSize: 'calc(16*{fontSize.base})',
     cursor: 'pointer',
+    textDecoration: (props) => props.underline ? 'underline' : 'none',
     color: '{color.white}',
     '&:hover': {
       color: '{color.vue.green}',

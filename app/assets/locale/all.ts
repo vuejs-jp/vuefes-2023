@@ -7,7 +7,8 @@ export default {
       privacypolicy: 'プライバシーポリシー',
       codeofconduct: '行動規範',
       vuefes_twitter: 'Vue Fes Japan の Twitter',
-      application_deadline_date: '2023/7/15（土）23:59:59',
+      speakers_deadline_date: '2023/7/15（土）23:59:59',
+      sponsors_deadline_date: '2023/7/28（金）23:59:59',
     },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
@@ -26,6 +27,7 @@ export default {
        * sponsors section
        */
       sponsors_subtitle: 'スポンサー',
+      sponsors_schedule_limit: '応募期限: {0} まで',
       sponsors_toptext: '',
       sponsors_infolink: '詳細情報は、{0} をご確認ください。',
       /**
@@ -51,7 +53,8 @@ export default {
       codeofconduct: 'Code of Conduct',
       /* prettier-ignore */
       vuefes_twitter: 'Vue Fes Japan\'s Twitter',
-      application_deadline_date: '2023/7/15 (Sat) 23:59:59',
+      speakers_deadline_date: '2023/7/15 (Sat) 23:59:59',
+      sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
     },
     top: {
       check_twitter: 'Check information on Twitter!',
@@ -70,6 +73,7 @@ export default {
        * sponsors section
        */
       sponsors_subtitle: 'Sponsors',
+      sponsors_schedule_limit: 'Application Deadline: Until {0}',
       sponsors_toptext: '',
       sponsors_infolink: 'For more information, please check {0}',
       /**

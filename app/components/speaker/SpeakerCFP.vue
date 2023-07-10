@@ -13,7 +13,7 @@ const { docPath } = useLocale('speaker')
       <h3>{{ $t('top.speakers_schedule_title') }}</h3>
       <!-- 応募期限 -->
       <i18n-t keypath="top.speakers_schedule_limit" tag="p" class="deadline">
-        <em>{{ $t('words.application_deadline_date') }}</em>
+        <em>{{ $t('words.speakers_deadline_date') }}</em>
       </i18n-t>
       <p class="apply-button">
         <RoundButton href="https://forms.gle/Yd5ugvzBBkCMMHa58" target="_blank" rel="noreferrer"

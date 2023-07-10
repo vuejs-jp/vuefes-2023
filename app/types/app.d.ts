@@ -22,8 +22,7 @@ export interface FormUser {
 }
 
 /**
- * below
- * experimental
+ * namecard
  */
 
 // addition.csv data
@@ -62,6 +61,10 @@ type ListMember = {
   orderId: string
 }
 
+/**
+ * speaker
+ */
+
 type Speaker = {
   id: string
   type: 'evan' | 'foreign' | 'domestic'
@@ -84,4 +87,26 @@ type SpeakerProfile = {
   githubId?: string
   twitterId?: string
   mastodonUrl?: string
+}
+
+/**
+ * sponsor
+ */
+
+type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'
+
+type OptionCategory =
+  | 'session-room-naming-rights'
+  | 'special-lunch'
+  | 'lunch'
+  | 'after-party'
+  | 'name-card'
+  | 'refreshment'
+  | 'simultaneous-interpretation'
+  | 'media'
+
+type Sponsor = {
+  name: string
+  image: string
+  category: SponsorCategory | OptionCategory
 }

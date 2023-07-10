@@ -43,6 +43,7 @@ const { docPath } = useLocale('sponsor')
         >
       </i18n-t>
     </div>
+    <SponsorList />
   </section>
   <VoiceAudioSpectrum />
 </template>

@@ -17,6 +17,13 @@ export default defineTheme({
       blue: '#3178C6',
     },
     sangosyo: '#F17C67',
+    sponsor: {
+      platinum: '#93AF5E',
+      gold: '#FFC408',
+      silver: '#ADBFD4',
+      bronze: '#F17C67',
+      options: '#546F89',
+    },
   },
   fontSize: {
     base: '0.0625rem',

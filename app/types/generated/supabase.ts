@@ -1,4 +1,4 @@
-export type Json = string | number | boolean | null | { [key: string]: Json } | Json[]
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
 
 export interface Database {
   graphql_public: {
@@ -30,36 +30,48 @@ export interface Database {
     Tables: {
       event_users: {
         Row: {
+          activated_at: string | null
           avatar_url: string
           created_at: string
+          display_name: string
           email: string
           full_name: string
           id: string
           provider: string
           receipt_id: string
+          role: string | null
           secret_word: string
+          updated_at: string
           user_id: string
         }
         Insert: {
+          activated_at?: string | null
           avatar_url: string
           created_at?: string
+          display_name: string
           email: string
           full_name: string
           id?: string
           provider: string
           receipt_id: string
+          role?: string | null
           secret_word: string
+          updated_at?: string
           user_id: string
         }
         Update: {
+          activated_at?: string | null
           avatar_url?: string
           created_at?: string
+          display_name?: string
           email?: string
           full_name?: string
           id?: string
           provider?: string
           receipt_id?: string
+          role?: string | null
           secret_word?: string
+          updated_at?: string
           user_id?: string
         }
         Relationships: [

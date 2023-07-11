@@ -10,9 +10,10 @@ export function useSupabase({ user }: UseSupabaseProps) {
   const client = useSupabaseClient<Database>()
   const { onError, onSuccess } = useToast()
 
-  async function addEventUser(secretWord: string, receiptId: string) {
+  async function addEventUser(displayName: string, secretWord: string, receiptId: string) {
     const userData = {
       ...user,
+      display_name: displayName,
       secret_word: secretWord,
       receipt_id: receiptId,
     }

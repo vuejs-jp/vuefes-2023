@@ -16,11 +16,12 @@ definePageMeta({
 const { signOut, signedUser, hasAuth } = await useAuth()
 const { addEventUser } = useSupabase({ user: signedUser })
 
+const displayName = ref('')
 const secretWord = ref('')
 const receiptId = ref('')
 
 function onPurchase() {
-  addEventUser(secretWord.value, receiptId.value)
+  addEventUser(displayName.value, secretWord.value, receiptId.value)
 }
 
 const avatar = {

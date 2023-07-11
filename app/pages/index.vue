@@ -9,7 +9,7 @@ import { useNamecard } from '~/composables/useNamecard'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
-const { hasAuth, signOut, signedUser } = await useAuth()
+const { hasAuth, signOut, signedUser } = useAuth()
 const { handle, isShow } = useDialog()
 const { canRegister } = useNamecard()
 

@@ -23,7 +23,7 @@ const dummyUser = {
 
 let signedUser = reactive<FormUser>({ ...initialUser })
 
-const useAuth = async () => {
+const useAuth = () => {
   // for dev
   onMounted(() => {
     if (shouldDevLogin()) {

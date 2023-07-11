@@ -14,7 +14,7 @@ definePageMeta({
   middleware: ['error'],
 })
 
-const { hasAuth, signOut, signedUser } = await useAuth()
+const { hasAuth, signOut, signedUser } = useAuth()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
 

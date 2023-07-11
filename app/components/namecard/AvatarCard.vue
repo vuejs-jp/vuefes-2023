@@ -7,19 +7,11 @@ import VueFesLogo from '@/assets/namecard/vuefes_logo.svg'
 import Hook from '@/assets/namecard/hook.svg'
 import Sponsor from '@/assets/namecard/sponsor.svg'
 import AvatarInfo from './AvatarInfo.vue'
-import { Role } from '~/types/app'
+import { FormUser, Role } from '~/types/app'
 
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  avatarUrl: {
-    type: String,
-    required: true,
-  },
-  role: {
-    type: String as PropType<Role>,
+  signedUser: {
+    type: Object as PropType<FormUser>,
     required: true,
   },
   opacity: {
@@ -27,12 +19,6 @@ const props = defineProps({
     default: 1,
   },
 })
-const { opacity, ...rest } = toRefs(props)
-const avatar = {
-  name: rest.name.value,
-  avatarUrl: rest.avatarUrl.value,
-  role: rest.role.value,
-}
 </script>
 
 <template>
@@ -48,7 +34,7 @@ const avatar = {
     </div>
     <div class="avatar-wrapper">
       <h2>Hello!! I am</h2>
-      <AvatarInfo v-bind="{ ...avatar }" />
+      <AvatarInfo :signed-user="signedUser" />
     </div>
   </div>
 </template>

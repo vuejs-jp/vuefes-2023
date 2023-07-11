@@ -17,6 +17,7 @@ export interface FormUser {
   full_name: string
   avatar_url: string
   provider: string
+  role?: string
   email: string
   created_at: string
 }

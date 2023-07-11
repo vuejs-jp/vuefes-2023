@@ -6,19 +6,11 @@ import NamecardTitle2 from '@/assets/namecard/title2.svg'
 import VueFesLogo from '@/assets/namecard/vuefes_logo.svg'
 import Sponsor from '@/assets/namecard/sponsor.svg'
 import AvatarInfo from './AvatarInfo.vue'
-import { Role } from '~/types/app'
+import { FormUser } from '~/types/app'
 
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  avatarUrl: {
-    type: String,
-    required: true,
-  },
-  role: {
-    type: String as PropType<Role>,
+  signedUser: {
+    type: Object as PropType<FormUser>,
     required: true,
   },
 })
@@ -36,7 +28,7 @@ const props = defineProps({
     </div>
     <div class="avatar-wrapper">
       <h2>Hello!! I am</h2>
-      <AvatarInfo v-bind="{ ...props }" use-share />
+      <AvatarInfo :signed-user="signedUser" use-share />
     </div>
   </div>
 </template>

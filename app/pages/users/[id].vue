@@ -13,7 +13,7 @@ definePageMeta({
   middleware: ['error'],
 })
 
-const { signOut, signedUser, hasAuth } = await useAuth()
+const { signOut, signedUser, hasAuth } = useAuth()
 const { addEventUser } = useSupabase({ user: signedUser })
 
 const secretWord = ref('')
@@ -22,12 +22,6 @@ const receiptId = ref('')
 function onPurchase() {
   addEventUser(secretWord.value, receiptId.value)
 }
-
-const avatar = {
-  name: signedUser.full_name,
-  avatarUrl: signedUser.avatar_url ?? '',
-  role: 'attendee',
-} as const
 
 // mock
 // const avatar = {
@@ -53,7 +47,7 @@ const avatar = {
     <section>
       <StatusCard status="registered" />
       <h2>ネームカード</h2>
-      <AvatarCard v-bind="{ ...avatar }" />
+      <AvatarCard :signed-user="{ ...signedUser, role: 'attendee' }" />
     </section>
 
     <RoundButton v-if="hasAuth" class="btn-purchase" @click="onPurchase">purchase</RoundButton>

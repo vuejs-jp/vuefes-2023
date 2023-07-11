@@ -5,7 +5,7 @@ import DialogArea from '~/components/DialogArea.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import useAuth from '~/composables/useAuth'
 
-const { signIn } = await useAuth()
+const { signIn } = useAuth()
 </script>
 
 <template>

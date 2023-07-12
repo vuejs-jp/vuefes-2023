@@ -1,27 +1,21 @@
 <script setup lang="ts">
-import { PropType } from 'vue'
-import { FormUser } from '~/types/app'
+import { useUserStore } from '~/composables/useUserStore'
 
-const props = defineProps({
-  signedUser: {
-    type: Object as PropType<FormUser>,
-    required: true,
-  },
-})
+const { signedUser } = useUserStore()
 </script>
 
 <template>
   <article>
-    <div v-if="props.signedUser.avatar_url" class="user-info">
+    <div v-if="signedUser.avatar_url" class="user-info">
       <img
         class="user-icon"
         width="100"
         height="100"
         decoding="async"
-        :src="props.signedUser.avatar_url"
-        :alt="props.signedUser.full_name"
+        :src="signedUser.avatar_url"
+        :alt="signedUser.full_name"
       />
-      Hello「{{ props.signedUser.full_name }}」
+      Hello「{{ signedUser.full_name }}」
     </div>
     <div v-else class="user">NO AUTH</div>
     <p class="user-debug">{{ signedUser }}</p>

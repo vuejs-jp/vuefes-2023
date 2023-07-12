@@ -6,6 +6,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
+import { useUserStore } from '~/composables/useUserStore'
 import { useSupabase } from '~/composables/useSupabase'
 import { isProd } from '~/utils/environment.constants'
 
@@ -13,7 +14,8 @@ definePageMeta({
   middleware: ['error'],
 })
 
-const { signOut, signedUser, hasAuth } = useAuth()
+const { signOut, hasAuth } = useAuth()
+const { signedUser } = useUserStore()
 const { addEventUser } = useSupabase({ user: signedUser })
 
 const displayName = ref('')
@@ -53,8 +55,8 @@ function onPurchase() {
 
     <RoundButton v-if="hasAuth" class="btn-purchase" @click="onPurchase">purchase</RoundButton>
 
-    <div v-if="!isProd" class="user">
-      <UserForDev :signed-user="signedUser" />
+    <div v-if="!isProd">
+      <UserForDev />
     </div>
 
     <FooterPageSection />

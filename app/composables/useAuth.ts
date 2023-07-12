@@ -2,6 +2,7 @@ import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
 import { match } from 'ts-pattern'
 import { AuthProvider, FormUser } from '~/types/app'
+import { storeKey } from '~/atoms/user'
 
 const initialUser = {
   user_id: '',
@@ -33,6 +34,8 @@ const useAuth = () => {
     }
   })
 
+  const store = inject(storeKey)
+
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
     match(evt)
@@ -46,12 +49,14 @@ const useAuth = () => {
           signedUser.provider = user?.app_metadata.provider as AuthProvider
           signedUser.email = user?.email || ''
           signedUser.created_at = user?.created_at || ''
+          store?.setUser(signedUser)
         }
       })
       .with('SIGNED_OUT', () => {
         Object.entries(initialUser).forEach(([key, value]) => {
           signedUser[key as keyof FormUser] = value
         })
+        store?.setUser()
         location.href = '/'
       })
       .with(

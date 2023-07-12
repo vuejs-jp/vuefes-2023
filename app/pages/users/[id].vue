@@ -18,11 +18,12 @@ const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
 const { addEventUser } = useSupabase({ user: signedUser })
 
+const displayName = ref('')
 const secretWord = ref('')
 const receiptId = ref('')
 
 function onPurchase() {
-  addEventUser(secretWord.value, receiptId.value)
+  addEventUser(displayName.value, secretWord.value, receiptId.value)
 }
 
 // mock

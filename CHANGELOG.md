@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [ver.2023.5.2](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.2)
+
+- スポンサー応募期限の追加
+- スポンサー情報の更新
+
 ## [ver.2023.5.1](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.1)
 
 - スポンサー情報 (各社一覧) の追加

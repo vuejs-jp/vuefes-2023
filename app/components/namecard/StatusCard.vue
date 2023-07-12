@@ -25,23 +25,27 @@ css({
   '.root': {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    gap: '29px',
+    gap: 'calc({space.8} * 1)',
+    padding: 'calc({space.8} * 3)',
     width: '960px',
-    height: '225px',
     background: '{color.white}',
     color: (props) => props.status === 'registered' ? '{color.vue.green}' : '{color.sangosyo}',
     border: (props) => props.status === 'registered' ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
     borderRadius: '8px',
   },
   '.title': {
-    fontSize: 'calc(32*{fontSize.base})',
+    fontSize: 'calc(24*{fontSize.base})',
     fontWeight: 900,
   },
   '.detail': {
-    fontSize: 'calc(16*{fontSize.base})',
+    fontSize: 'calc(14*{fontSize.base})',
     fontWeight: 400,
     whiteSpace: 'pre-wrap',
+  },
+  '@mobile': {
+    '.root': {
+      width: '100%',
+    },
   },
 })
 </style>

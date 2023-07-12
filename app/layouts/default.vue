@@ -1,7 +1,13 @@
+<script setup lang="ts">
+import Provider from '~/providers/Provider.vue'
+</script>
+
 <template>
-  <div class="container">
-    <slot />
-  </div>
+  <Provider>
+    <div class="container">
+      <slot />
+    </div>
+  </Provider>
 </template>
 
 <style lang="ts" scoped>

@@ -6,6 +6,7 @@ import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
+import { useUserStore } from '~/composables/useUserStore'
 import { useImage } from '~/composables/useImage'
 import { useDialog } from '~/composables/useDialog'
 import { isProd } from '~/utils/environment.constants'
@@ -14,7 +15,8 @@ definePageMeta({
   middleware: ['error'],
 })
 
-const { hasAuth, signOut, signedUser } = useAuth()
+const { hasAuth, signOut } = useAuth()
+const { signedUser } = useUserStore()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
 
@@ -32,7 +34,9 @@ const checkFiles = async (files: File[]) => {
 }
 
 onMounted(function () {
-  isShow.value = true
+  if (!signedUser.user_id) {
+    isShow.value = true
+  }
 })
 </script>
 
@@ -74,8 +78,8 @@ onMounted(function () {
       <IntegrationCard @on-close="() => handle(false)" />
     </div>
 
-    <div v-if="!isProd" class="user">
-      <UserForDev :signed-user="signedUser" />
+    <div v-if="!isProd">
+      <UserForDev />
     </div>
 
     <FooterPageSection />

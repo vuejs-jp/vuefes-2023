@@ -4,12 +4,14 @@ import AvatarLogo from '~/components/namecard/AvatarLogo.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import PopupArea from '~/components/PopupArea.vue'
 import useAuth from '~/composables/useAuth'
+import { useUserStore } from '~/composables/useUserStore'
 import { useDialog } from '~/composables/useDialog'
 import { useNamecard } from '~/composables/useNamecard'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
-const { hasAuth, signOut, signedUser } = useAuth()
+const { hasAuth, signOut } = useAuth()
+const { signedUser } = useUserStore()
 const { handle, isShow } = useDialog()
 const { canRegister } = useNamecard()
 

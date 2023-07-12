@@ -17,6 +17,9 @@ const { docPath } = useLocale('sponsor')
       <ContentDoc v-slot="{ doc }" :path="docPath">
         <ContentRenderer class="subtitle" :value="doc" />
       </ContentDoc>
+      <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.sponsors_deadline_date') }}</em>
+      </i18n-t>
       <div class="link-box">
         <!-- 申し込みフォーム -->
         <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
@@ -70,6 +73,15 @@ css({
       fontWeight: 500,
       fontSize: '18px',
       lineHeight: '180%'
+    },
+  },
+  '.deadline': {
+    color: '{color.vue.blue}',
+    fontSize: '24px',
+
+    'em': {
+      fontStyle: 'normal',
+      fontWeight: 700,
     },
   },
   '.link-box': {

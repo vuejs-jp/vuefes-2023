@@ -4,7 +4,7 @@ export function useFormReCaptcha() {
   const { vueApp } = useNuxtApp()
   const config = useRuntimeConfig()
   vueApp.use(VueReCaptcha, {
-    siteKey: config.reCaptchaWebsiteKey,
+    siteKey: config.public.reCaptchaWebsiteKey,
     loaderOptions: {
       renderParameters: {
         hl: 'ja',

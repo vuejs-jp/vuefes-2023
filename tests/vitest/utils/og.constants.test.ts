@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createOg, generalOg, twitterOg } from 'app/utils/og.constants'
+import { createOg, generalOg, twitterOg } from '../../../app/utils/og.constants'
 
 describe('generalOg', () => {
   it('default value', () => {

@@ -35,7 +35,7 @@ useHead({
         </template>
         <template v-if="canRegister && hasAuth">
           <button @click="() => handle(isShow ? false : true)">
-            <AvatarLogo :url="signedUser.avatar_url" />
+            <AvatarLogo :name="signedUser.full_name" :url="signedUser.avatar_url" />
           </button>
           <template v-if="isShow">
             <PopupArea :signed-user="signedUser" @sign-out="signOut" />

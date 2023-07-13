@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import UploadLogo from '~/assets/logo/upload_logo.svg'
+import RoundButton from '~/components/button/RoundButton.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
+import { useSupabase } from '~/composables/useSupabase'
 import { useImage } from '~/composables/useImage'
 import { useDialog } from '~/composables/useDialog'
 import { isProd } from '~/utils/environment.constants'
@@ -17,10 +19,18 @@ definePageMeta({
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
+const { addEventUser } = useSupabase({ user: signedUser })
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
 
 const picture = ref()
+const displayName = ref('')
+const secretWord = ref('')
+const receiptId = ref('')
+
+const onPurchase = () => {
+  addEventUser(displayName.value, secretWord.value, receiptId.value)
+}
 
 const checkFiles = async (files: File[]) => {
   if (files.length === 0) return
@@ -72,6 +82,7 @@ onMounted(function () {
           <img alt="" :src="picture" width="100" height="100" decoding="async" />
         </div>
       </div>
+      <RoundButton v-if="hasAuth" class="btn-purchase" @click="onPurchase">purchase</RoundButton>
     </section>
 
     <div v-if="isShow">

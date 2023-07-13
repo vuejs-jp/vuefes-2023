@@ -7,7 +7,7 @@ import TextButton from '~/components/button/TextButton.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
-import { useSupabase } from '~/composables/useSupabase'
+import { useUser } from '~/composables/useUser'
 import { isProd } from '~/utils/environment.constants'
 
 definePageMeta({
@@ -16,15 +16,9 @@ definePageMeta({
 
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
-const { addEventUser } = useSupabase({ user: signedUser })
+const { eventUser } = await useUser(signedUser.user_id)
 
-const displayName = ref('')
-const secretWord = ref('')
-const receiptId = ref('')
-
-function onPurchase() {
-  addEventUser(displayName.value, secretWord.value, receiptId.value)
-}
+const isActivated = eventUser?.activated_at !== ''
 
 // mock
 // const avatar = {
@@ -48,12 +42,11 @@ function onPurchase() {
     </NavPageSection>
 
     <section>
-      <StatusCard status="registered" />
+      <StatusCard :status="isActivated ? 'registered' : 'failed'" />
       <h2>ネームカード</h2>
       <AvatarCard :signed-user="{ ...signedUser, role: 'attendee' }" />
+      <RoundButton class="btn-update" href="/register">再編集</RoundButton>
     </section>
-
-    <RoundButton v-if="hasAuth" class="btn-purchase" @click="onPurchase">purchase</RoundButton>
 
     <div v-if="!isProd">
       <UserForDev />
@@ -70,13 +63,13 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
+    '::v-deep(h2)': {
+      color: '{color.vue.blue}',
+      fontSize: 'calc(32*{fontSize.base})',
+      fontWeight: 900,
+    },
   },
-  'h2': {
-    color: '{color.vue.blue}',
-    fontSize: 'calc(32*{fontSize.base})',
-    fontWeight: 900,
-  },
-  '.btn-purchase': {
+  '.btn-update': {
     marginTop: '64px'
   }
 })

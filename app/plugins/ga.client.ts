@@ -1,4 +1,7 @@
 import VueGtag from 'vue-gtag'
+import { useRouter } from '#imports'
+
+type Router = ReturnType<typeof useRouter>
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
@@ -6,10 +9,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     VueGtag,
     {
       config: {
-        id: config.gtagId,
+        id: config.public.gtagId,
       },
     },
-    // @ts-expect-error
-    nuxtApp.$router,
+    // NOTE: NuxtAppがエクスポートしている`$router`の型が何か推論されないのでこっち側で明示的に型を指定する
+    nuxtApp.$router as Router,
   )
 })

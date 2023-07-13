@@ -2,6 +2,10 @@
 import VueFesLogo from '@/assets/namecard/vuefes_logo.svg'
 
 const props = defineProps({
+  name: {
+    type: String,
+    default: '',
+  },
   url: {
     type: String,
     default: '',

@@ -19,7 +19,7 @@ const { backgroundColor, textColor } = useUserRole()
 
 <template>
   <div class="avatar">
-    <AvatarLogo :url="signedUser.avatar_url" size="large" />
+    <AvatarLogo :name="signedUser.full_name" :url="signedUser.avatar_url" size="large" />
     <h3>{{ signedUser.full_name }}</h3>
     <div
       v-if="signedUser.user_id"

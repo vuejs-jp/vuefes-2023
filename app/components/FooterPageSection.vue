@@ -12,6 +12,7 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
       <VueFesLogo />
     </div>
     <div class="footer-info">
+      <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
       <div v-if="!$device.isMobile" class="footer-info-links">
         <div class="contacts">
           <ContactLinks />
@@ -21,10 +22,12 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
         </div>
         <PrivacyPolicyAndCoc />
       </div>
+      <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
       <div v-if="!$device.isMobile" class="footer-copyright">
         <CopyrightText />
       </div>
     </div>
+    <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
     <div v-if="$device.isMobile" class="footer-copyright">
       <CopyrightText />
     </div>

@@ -195,9 +195,8 @@ describe('top', () => {
 
       // check validation errors
 
-      cy.get('@input-name').type('a')
+      cy.get('@input-name').type('a').type('{backspace}').blur()
       cy.wait(1000)
-      cy.get('@input-name').type('{backspace}').blur()
       cy.contains('名前を入力してください')
       cy.get('@input-mail').type('a').type('{backspace}').blur()
       cy.wait(1000)

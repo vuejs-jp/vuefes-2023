@@ -14,9 +14,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <h3 class="comment">
+  <p class="comment">
     <span class="comment-main">{{ title }}</span>
-  </h3>
+  </p>
 </template>
 
 <style lang="ts" scoped>

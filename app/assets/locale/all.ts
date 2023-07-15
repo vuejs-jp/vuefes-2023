@@ -9,6 +9,8 @@ export default {
       vuefes_twitter: 'Vue Fes Japan の Twitter',
       speakers_deadline_date: '2023/7/15（土）23:59:59',
       sponsors_deadline_date: '2023/7/28（金）23:59:59',
+      buy_ticket: 'チケットを購入',
+      create_namecard: 'ネームカードを作成',
     },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
@@ -16,6 +18,10 @@ export default {
        * message section
        */
       message_subtitle: '想い',
+      /**
+       * namecard section
+       */
+      namecard_infolink: '最新情報は、{0} をご確認ください。',
       /**
        * speakers section
        */
@@ -55,6 +61,8 @@ export default {
       vuefes_twitter: 'Vue Fes Japan\'s Twitter',
       speakers_deadline_date: '2023/7/15 (Sat) 23:59:59',
       sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
+      buy_ticket: 'Buy A Ticket',
+      create_namecard: 'Create A Namecard',
     },
     top: {
       check_twitter: 'Check information on Twitter!',

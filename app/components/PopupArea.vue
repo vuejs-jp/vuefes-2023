@@ -8,6 +8,10 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  top: {
+    type: Number,
+    required: true,
+  },
 })
 </script>
 
@@ -38,7 +42,7 @@ const props = defineProps({
 css({
   '.popup-root': {
     position: 'fixed',
-    top: '12%',
+    top: (props) => `${props.top}%`,
     right: '2%',
     width: '200px',
     height: '100px',

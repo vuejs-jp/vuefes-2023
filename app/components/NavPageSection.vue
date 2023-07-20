@@ -11,6 +11,10 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  hasAlert: {
+    type: Boolean,
+    required: false,
+  },
 })
 
 const { navRef } = useNav()
@@ -70,7 +74,7 @@ onMounted(function () {
 css({
   'nav': {
     position: 'fixed',
-    top: 0,
+    top: (props) => props.hasAlert ? '50px' : '0px',
     zIndex: 10,
     width: '100%',
     backgroundColor: 'rgba(53, 73, 94, 0.9)',
@@ -121,6 +125,9 @@ css({
     },
   },
   '@mobile': {
+    'nav': {
+      top: (props) => props.hasAlert ? '80px' : '0px',
+    },
     '.twitter':{
       display: 'block',
     },

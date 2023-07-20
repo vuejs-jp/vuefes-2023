@@ -14,7 +14,7 @@ css({
     left: '50%',
     top: '50%',
     transform: 'translateX(-50%) translateY(-50%)',
-    width: '530px',
+    width: ' 960px',
     height: '500px',
     transition: '.2s',
   },

@@ -11,6 +11,7 @@ export default {
       sponsors_deadline_date: '2023/7/28（金）23:59:59',
       buy_ticket: 'チケットを購入',
       create_namecard: 'ネームカードを作成',
+      back_top: 'トップに戻る',
     },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
@@ -63,6 +64,7 @@ export default {
       sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
       buy_ticket: 'Buy A Ticket',
       create_namecard: 'Create A Namecard',
+      back_top: 'Back to Top',
     },
     top: {
       check_twitter: 'Check information on Twitter!',

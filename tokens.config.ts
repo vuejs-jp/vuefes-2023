@@ -30,5 +30,7 @@ export default defineTheme({
   },
   space: {
     8: '8px',
+    header: '88px',
+    bodybottom: '88px',
   },
 })

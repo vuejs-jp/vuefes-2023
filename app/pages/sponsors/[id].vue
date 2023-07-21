@@ -22,8 +22,8 @@ const users = sponsorUsers.filter((user: SponsorUser) => {
       />
 
       <ul class="detailhead-tags">
-        <li><SponsorTag label="Platinum" color="platinum"></SponsorTag></li>
-        <li><SponsorTag label="Session room naming rights"></SponsorTag></li>
+        <li><SponsorTag label="Platinum" color="platinum" /></li>
+        <li><SponsorTag label="Session room naming rights" /></li>
       </ul>
       <div class="detailhead-body">
         <div class="detailhead-left">
@@ -54,12 +54,7 @@ const users = sponsorUsers.filter((user: SponsorUser) => {
     </section>
     <footer>
       <!-- スポンサー資料 -->
-      <RoundButton
-        href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
-        target="_blank"
-        rel="noreferrer"
-        outline
-      >
+      <RoundButton to="/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
     </footer>

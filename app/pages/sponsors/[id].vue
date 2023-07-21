@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { SponsorUser } from '~/types/app'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
+import { sponsorUsers } from '~/utils/sponsor-users.constants'
 const route = useRoute()
 const id = route.params.id
+const users = sponsorUsers.filter((user: SponsorUser) => {
+  return user.sponsorName === 'クラウドサイン（弁護士ドットコム株式会社）'
+})
 </script>
 
 <template>
@@ -16,6 +21,10 @@ const id = route.params.id
         :yamato-title="$t('top.sponsors_subtitle')"
       />
 
+      <ul class="detailhead-tags">
+        <li><SponsorTag label="Platinum" color="platinum"></SponsorTag></li>
+        <li><SponsorTag label="Session room naming rights"></SponsorTag></li>
+      </ul>
       <div class="detailhead-body">
         <div class="detailhead-left">
           <p class="detailhead-img">
@@ -36,6 +45,12 @@ const id = route.params.id
         セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッシ
         ョン内容セッション内容セッション内容セッション内容セッション内容セッション内容
       </p>
+
+      <ul class="detailbody-persons">
+        <li v-for="u in users" :key="u.id">
+          <SpeakerCard :speaker="u" />
+        </li>
+      </ul>
     </section>
     <footer>
       <!-- スポンサー資料 -->
@@ -56,20 +71,32 @@ const id = route.params.id
 css({
   'main': {
     '--max-width': '1280px',
-    padding: 'calc({space.header} + {space.8} * 10) 0 calc({space.bodybottom})',
+    padding: 'calc({space.header} + {space.8} * 10) calc({space.8} * 4) calc({space.bodybottom})',
     color: '{color.vue.blue}',
     lineHeight: '1.8',
+    maxWidth: 'var(--max-width)',
+    margin: '0 auto',
   },
   'section': {
     maxWidth: '{max.width}',
     margin: '0 auto',
   },
+  '.detailhead-tags': {
+    display: 'flex',
+    marginTop: 'calc({space.8} * 8)',
+    overflow: 'scroll',
+    height: 'calc({space.8} * 6)',
+    '& > li + li': {
+      marginLeft: 'calc({space.8} * 1.5)',
+    }
+  },
   '.detailhead-body': {
     display: 'flex',
-    marginTop: 'calc({space.8} * 10)',
+    marginTop: 'calc({space.8} * 4)',
     color: '#292C33',
   },
   '.detailhead-left': {
+    position: 'relative',
     flex: '0 0 auto',
     marginRight: 'calc({space.8} * 5)',
   },
@@ -81,7 +108,8 @@ css({
     justifyContent: 'center',
     alignItems: 'center',
     width: '475px',
-    height: '267px',
+    height: 'auto',
+    aspectRatio: '690 / 388',
     boxShadow: '0px 4px 4px 0px #00000040',
     borderRadius: 'calc({space.8} * 1)'
   },
@@ -106,10 +134,52 @@ css({
     fontWeight: '700',
     marginBottom: 'calc({space.8} * 4)',
   },
+  '.detailbody-persons': {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    width: '650px',
+    margin: 'calc({space.8} * 10) auto',
+    'li': {
+      marginBottom: 'calc({space.8} * 4)',
+    },
+  },
   'footer': {
     textAlign: 'center',
     marginTop: 'calc({space.8} * 8)',
-  }
+  },
+  '@tablet': {
+    'main': {
+      '--max-width': '760px',
+    },
+    '.detailhead-img': {
+       width: '368px',
+    },
+    '.detailbody-persons': {
+      width: '580px',
+    },
+  },
+  '@mobile': {
+    'main': {
+      '--max-width': '100%',
+    },
+    '.detailhead-body': {
+      display: 'block',
+    },
+    '.detailhead-left': {
+      marginRight: '0',
+    },
+    '.detailhead-right': {
+      marginTop: 'calc({space.8} * 4)',
+    },
+    '.detailhead-img': {
+       width: '100%',
+    },
+    '.detailbody-persons': {
+      width: 'auto',
+      justifyContent: 'center',
+    },
+  },
 
 
 })

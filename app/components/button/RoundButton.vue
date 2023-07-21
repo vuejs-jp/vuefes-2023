@@ -107,6 +107,7 @@ css({
       backgroundColor: '{color.white}',
       color: '{color.vue.blue}',
       border: '2px solid {color.vue.blue}',
+      boxShadow: 'none',
       '&:hover': {
         background: 'rgba(53, 73, 94, 0.2)',
         transition: '.2s',

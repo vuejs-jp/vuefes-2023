@@ -111,3 +111,7 @@ type Sponsor = {
   image: string
   category: SponsorCategory | OptionCategory
 }
+
+type SponsorUser = Speaker & {
+  sponsorName: Sponsor.name
+}

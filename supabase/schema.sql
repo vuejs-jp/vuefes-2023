@@ -16,3 +16,12 @@ create table if not exists public.event_users (
     updated_at timestamp with time zone default timezone('utc' :: text, now()) not null
 );
 comment on table public.event_users is 'Holds all of event users information';
+
+create table if not exists public.pm_receipts (
+    id uuid not null primary key default uuid_generate_v4(),
+    role varchar(16) not null,
+    receipt_id varchar(40) not null unique,
+    created_at timestamp with time zone default timezone('utc' :: text, now()) not null,
+    updated_at timestamp with time zone default timezone('utc' :: text, now()) not null
+);
+comment on table public.pm_receipts is 'Holds all of pass market receipts information';

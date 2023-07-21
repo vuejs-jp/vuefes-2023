@@ -34,7 +34,7 @@ const props = defineProps({
     </div>
     <div class="avatar-wrapper">
       <h2>Hello!! I am</h2>
-      <AvatarInfo :signed-user="signedUser" />
+      <AvatarInfo :signed-user="props.signedUser" />
     </div>
   </div>
 </template>

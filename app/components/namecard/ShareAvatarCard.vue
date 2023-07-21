@@ -28,7 +28,7 @@ const props = defineProps({
     </div>
     <div class="avatar-wrapper">
       <h2>Hello!! I am</h2>
-      <AvatarInfo :signed-user="signedUser" use-share />
+      <AvatarInfo :signed-user="props.signedUser" use-share />
     </div>
   </div>
 </template>

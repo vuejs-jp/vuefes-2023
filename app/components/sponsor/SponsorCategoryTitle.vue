@@ -15,7 +15,7 @@ const { existBasic } = useSponsor()
 
 <template>
   <h3 class="sponsor-category-title">
-    {{ category.replaceAll('-', ' ') }}
+    {{ props.category.replaceAll('-', ' ') }}
   </h3>
 </template>
 

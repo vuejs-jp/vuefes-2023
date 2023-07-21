@@ -20,10 +20,10 @@ const props = defineProps({
 <template>
   <template v-if="url">
     <img
-      :alt="name"
-      :src="url"
-      :width="size === 'small' ? 40 : 120"
-      :height="size === 'small' ? 40 : 120"
+      :alt="props.name"
+      :src="props.url"
+      :width="props.size === 'small' ? 40 : 120"
+      :height="props.size === 'small' ? 40 : 120"
       class="avatar"
       decoding="async"
     />

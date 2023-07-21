@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RoundButton from '~/components/button/RoundButton.vue'
+import SectionTitle from '~/components/SectionTitle.vue'
 const route = useRoute()
 const id = route.params.id
 </script>
@@ -8,7 +9,13 @@ const id = route.params.id
   <NavPageSection />
   <main class="sponsors-detail">
     <section class="detailhead">
-      <SectionTitle color="vue.blue" title="Sponsors" :yamato-title="$t('top.sponsors_subtitle')" />
+      <SectionTitle
+        id="sponsor-detail"
+        color="vue.blue"
+        title="Sponsors"
+        :yamato-title="$t('top.sponsors_subtitle')"
+      />
+
       <div class="detailhead-body">
         <div class="detailhead-left">
           <p class="detailhead-img">

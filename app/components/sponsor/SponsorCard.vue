@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
 import { Sponsor } from '~/types/app'
+import { urlBasePath } from '~/utils/constants'
 
 const props = defineProps({
   sponsor: {
@@ -19,14 +20,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class="`sponsor-card ${useOptional ? 'options' : sponsor.category}`">
+  <div :class="`sponsor-card ${props.useOptional ? 'options' : props.sponsor.category}`">
     <img
       width="100"
       height="100"
       class="sponsor-image"
       decoding="async"
-      :src="`${urlBasePath}${sponsor.image}`"
-      :alt="`${sponsor.name}のロゴ`"
+      :src="`${urlBasePath}${props.sponsor.image}`"
+      :alt="`${props.sponsor.name}のロゴ`"
     />
   </div>
 </template>

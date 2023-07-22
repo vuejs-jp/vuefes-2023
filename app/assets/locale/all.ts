@@ -13,6 +13,20 @@ export default {
       create_namecard: 'ネームカードを作成',
       back_top: 'トップに戻る',
     },
+    category: {
+      platinum: 'Platinum',
+      gold: 'Gold',
+      silver: 'Silver',
+      bronze: 'bronze',
+      'session-room-naming-rights': 'Session room naming rights',
+      'special-lunch': 'Special lunch',
+      lunch: 'Lunch',
+      'after-party': 'After party',
+      'name-card': 'Name card',
+      refreshment: 'Refreshment',
+      'simultaneous-interpretation': 'Simultaneous interpretation',
+      media: 'Media',
+    },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
       /**
@@ -66,6 +80,20 @@ export default {
       create_namecard: 'Create A Namecard',
       back_top: 'Back to Top',
     },
+    category: {
+      platinum: 'Platinum',
+      gold: 'Gold',
+      silver: 'Silver',
+      bronze: 'bronze',
+      'session-room-naming-rights': 'Session room naming rights',
+      'special-lunch': 'Special lunch',
+      lunch: 'Lunch',
+      'after-party': 'After party',
+      'name-card': 'Name card',
+      refreshment: 'Refreshment',
+      'simultaneous-interpretation': 'Simultaneous interpretation',
+      media: 'Media',
+    },
     top: {
       check_twitter: 'Check information on Twitter!',
       /**
@@ -102,6 +130,7 @@ export default {
   },
   ja_basic: {
     words: {},
+    category: {},
     top: {},
   },
 } as const

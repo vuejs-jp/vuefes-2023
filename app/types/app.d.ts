@@ -110,6 +110,7 @@ type Sponsor = {
   name: string
   image: string
   category: SponsorCategory | OptionCategory
+  site: string
 }
 
 type SponsorUser = Speaker & {

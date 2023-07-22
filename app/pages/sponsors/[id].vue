@@ -1,14 +1,19 @@
 <script setup lang="ts">
-import { SponsorUser } from '~/types/app'
+import { SponsorUser, Sponsor } from '~/types/app'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSectionContainer from '~/container/NavPageSectionContainer.vue'
 import { sponsorUsers } from '~/utils/sponsor-users.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
+import { all } from '~/utils/sponsor.constants'
 
 const route = useRoute()
-const id = route.params.id
+const sponsorId = route.params.id
+const sponsorData = all.find((s: Sponsor) => {
+  return s.name === sponsorId
+})
+
 const users = sponsorUsers.filter((user: SponsorUser) => {
   return user.sponsorName === 'クラウドサイン（弁護士ドットコム株式会社）'
 })
@@ -21,7 +26,7 @@ useHead({
 
 <template>
   <NavPageSectionContainer />
-  <main class="sponsors-detail">
+  <main v-if="sponsorData" class="sponsors-detail">
     <section class="detailhead">
       <SectionTitle
         id="sponsor-detail"
@@ -31,16 +36,32 @@ useHead({
       />
 
       <ul class="detailhead-tags">
-        <li><SponsorTag label="Platinum" color="platinum" /></li>
+        <li>
+          <SponsorTag
+            :label="$t(`category.${sponsorData.category}`)"
+            :color="sponsorData.category"
+          />
+        </li>
         <li><SponsorTag label="Session room naming rights" /></li>
       </ul>
       <div class="detailhead-body">
         <div class="detailhead-left">
           <p class="detailhead-img">
-            <img src="/sponsors/cloudsign.png" alt="" width="570" height="322" decoding="async" />
+            <img
+              :src="sponsorData.image"
+              :alt="sponsorData.name"
+              width="570"
+              height="322"
+              decoding="async"
+            />
           </p>
-          <a class="detailhead-sponsorname" href="#">
-            <h1>クラウドサイン（弁護士ドットコム株式会社）様</h1>
+          <a
+            class="detailhead-sponsorname"
+            :href="sponsorData.site"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h1>{{ sponsorData.name }}</h1>
           </a>
         </div>
         <div class="detailhead-right">
@@ -62,7 +83,16 @@ useHead({
       </ul>
     </section>
     <footer>
-      <!-- スポンサー資料 -->
+      <!-- トップにもどる -->
+      <RoundButton to="/" outline>
+        {{ $t('words.back_top') }}
+      </RoundButton>
+    </footer>
+  </main>
+  <main v-else class="sponsors-detail -error">
+    <h1>ページが存在しません</h1>
+    <footer>
+      <!-- トップにもどる -->
       <RoundButton to="/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
@@ -73,6 +103,13 @@ useHead({
 
 <style lang="ts" scoped>
 css({
+  'main.-error': {
+    'h1': {
+      fontSize: 'calc(22*{fontSize.base})',
+      fontWeight: '700',
+      textAlign: 'center',
+    }
+  },
   'main': {
     '--max-width': '1280px',
     '--head-img-width': '475px',
@@ -119,7 +156,7 @@ css({
     display: 'inline-block',
     color: '{color.vue.green}',
     textDecoration: 'underline',
-    marginTop: 'calc({space.8} * 1)',
+    marginTop: 'calc({space.8} * 2)',
     '&:hover': {
       transition: '.2s',
     },

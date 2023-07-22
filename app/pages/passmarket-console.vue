@@ -1,11 +1,15 @@
 <script setup lang="ts">
+import RoundButton from '~/components/button/RoundButton.vue'
 import { usePassMarketUpload } from '~/composables/usePassMarketUpload'
+import { useSupabase } from '~/composables/useSupabase'
 import { AdditionItem, ListMember } from '~/types/app'
 
 const memberData = ref<ListMember[]>()
 const members = ref<AdditionItem[]>()
+const receiptIds = ref<{ role: 'attendee'; receipt_id: string }[]>([])
 
 const { convertMembers, fetchSheet } = usePassMarketUpload()
+const { updatePMReceipt } = useSupabase()
 
 enum FileName {
   ADDITION_CSV = 'addition.csv',
@@ -28,6 +32,12 @@ const checkFiles = async (files: File[]) => {
   }
   alert(`this file is not acceptable -> ${filename}`)
 }
+
+const onUpdate = () => {
+  if (receiptIds.value?.length === 0) return
+
+  updatePMReceipt(receiptIds.value)
+}
 </script>
 
 <template>
@@ -44,6 +54,9 @@ const checkFiles = async (files: File[]) => {
         addition.csv
       </p>
     </DragDropArea>
+    <div class="update-button">
+      <RoundButton @click="onUpdate">レシート情報の取込</RoundButton>
+    </div>
     <div class="resultarea">
       <div v-if="memberData">
         <ul>
@@ -87,6 +100,10 @@ css({
     verticalAlign: 'middle',
     height: '100vh',
     color: '{color.vue.blue}',
+  },
+  '.update-button': {
+    display: 'grid',
+    placeItems: 'center',
   },
 })
 </style>

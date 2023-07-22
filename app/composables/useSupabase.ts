@@ -1,13 +1,11 @@
-import { FormUser } from '~/types/app'
 import { Database } from '~/types/supabase'
+import { Role } from '~/types/app'
+import { useUserStore } from './useUserStore'
 import { useToast } from './useToast'
 
-export interface UseSupabaseProps {
-  user: FormUser
-}
-
-export function useSupabase({ user }: UseSupabaseProps) {
+export function useSupabase() {
   const client = useSupabaseClient<Database>()
+  const { signedUser: user } = useUserStore()
   const { onError, onSuccess } = useToast()
 
   async function addEventUser(displayName: string, secretWord: string, receiptId: string) {
@@ -27,5 +25,18 @@ export function useSupabase({ user }: UseSupabaseProps) {
     onSuccess('購入しました', 3000)
   }
 
-  return { addEventUser }
+  async function updatePMReceipt(receiptIds: { role: Role; receipt_id: string }[]) {
+    const { error } = await client
+      .from('pm_receipts')
+      .upsert(receiptIds, { onConflict: 'receipt_id' })
+      .select()
+    if (error) {
+      onError('購入情報を取り込めませんでした', 3000)
+      return
+    }
+
+    onSuccess('購入情報を取り込みました', 3000)
+  }
+
+  return { addEventUser, updatePMReceipt }
 }

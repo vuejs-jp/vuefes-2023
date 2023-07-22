@@ -19,7 +19,7 @@ definePageMeta({
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { addEventUser } = useSupabase({ user: signedUser })
+const { addEventUser } = useSupabase()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
 

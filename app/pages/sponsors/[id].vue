@@ -87,19 +87,17 @@ css({
     marginTop: 'calc({space.8} * 8)',
     overflow: 'scroll',
     height: 'calc({space.8} * 6)',
-    '& > li + li': {
-      marginLeft: 'calc({space.8} * 1.5)',
-    }
+    columnGap: 'calc({space.8} * 1.5)',
   },
   '.detailhead-body': {
     display: 'flex',
     marginTop: 'calc({space.8} * 4)',
     color: '#292C33',
+    columnGap: 'calc({space.8} * 5)',
   },
   '.detailhead-left': {
     position: 'relative',
     flex: '0 0 auto',
-    marginRight: 'calc({space.8} * 5)',
   },
   '.detailhead-right': {
     fontSize: 'calc(18*{fontSize.base})',
@@ -140,9 +138,7 @@ css({
     justifyContent: 'center',
     flexWrap: 'wrap',
     margin: 'calc({space.8} * 10) auto',
-    'li': {
-      margin: 'calc({space.8} * 2)',
-    },
+    gap: 'calc({space.8} * 4)',
   },
   'footer': {
     textAlign: 'center',
@@ -161,15 +157,8 @@ css({
     '.detailhead-body': {
       display: 'block',
     },
-    '.detailhead-left': {
-      marginRight: '0',
-    },
     '.detailhead-right': {
       marginTop: 'calc({space.8} * 4)',
-    },
-    '.detailbody-persons': {
-      width: 'auto',
-      justifyContent: 'center',
     },
   },
 

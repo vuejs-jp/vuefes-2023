@@ -59,128 +59,47 @@ const props = defineProps({
 
 <style lang="ts" scoped>
 css({
-    'section': {
-        padding: '120px 20px 120px',
+  '.speaker-card': {
+    '--img-size': '308px',
+    color: '{color.vue.blue}',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.5em',
+    'img': {
+      borderRadius: '0.5em',
+      width: '{img.size}',
+      height: '{img.size}',
     },
-    '.speaker-root': {
-        display: 'grid',
-        gap: '40px',
-        maxWidth: '984px',
-        margin: '0 auto',
-        width: '100%',
-        'h2': {
-            color: '{color.vue.blue}',
-            fontWeight: 700,
-            fontSize: '32px',
-            margin: '0 auto',
-        },
+  },
+  '.speaker-title': {
+    fontSize: '14px',
+    lineHeight: '14px',
+  },
+  '.speaker-name': {
+    fontSize: '22px',
+    fontWeight: 700,
+    lineHeight: '22px',
+  },
+  '.speaker-sns': {
+    display: 'flex',
+    gap: '1.5em',
+    marginTop: '1em',
+    'svg': {
+      fill: '{color.vue.blue}',
     },
-    '.speaker-session': {
-        color: '{color.vue.blue}',
-        maxWidth: '984px',
-        margin: '0 auto',
-        width: '100%',
-        'h2': {
-            fontWeight: 700,
-            fontSize: '32px',
-        },
-    },
-    '.speakers': {
-        display: 'flex',
-        gap: '2em',
-    },
+    '.flip-horizontal': {
+      transform: 'scale(-1,1)',
+    }
+  },
+  '@tablet': {
     '.speaker-card': {
-        color: '{color.vue.blue}',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '0.5em',
-        'img': {
-            borderRadius: '0.5em',
-            width: '308px',
-            height: '308px',
-        },
+      '--img-size': '274px',
     },
-    '.speaker-title': {
-        fontSize: '14px',
-        lineHeight: '14px',
+  },
+  '@mobile': {
+    '.speaker-card': {
+      '--img-size': '208px',
     },
-    '.speaker-name': {
-        fontSize: '22px',
-        fontWeight: 700,
-        lineHeight: '22px',
-    },
-    '.speaker-sns': {
-        display: 'flex',
-        gap: '1.5em',
-        marginTop: '1em',
-        'svg': {
-            fill: '{color.vue.blue}',
-
-        },
-        '.flip-horizontal': {
-            transform: 'scale(-1,1)',
-        }
-    },
-    '.deadline': {
-        color: '{color.vue.blue}',
-        fontSize: '24px',
-        margin: '0 auto',
-
-        'em': {
-            fontStyle: 'normal',
-            fontWeight: 700,
-        }
-    },
-    '.apply-button': {
-        margin: '0 auto',
-    },
-    '.twitter-text': {
-        fontSize: '18px',
-        color: '{color.vue.blue}',
-        margin: '0 auto',
-    },
-    '.twitter-link': {
-        color: '{color.vue.green}',
-        textDecoration: 'underline',
-
-        '&:hover': {
-            transition: '.2s',
-        },
-    },
-    '.subtitle': {
-        display: 'grid',
-        gap: '40px',
-        'p': {
-            color: '{color.vue.blue}',
-            fontWeight: 500,
-            fontSize: '16px',
-            lineHeight: '1.8',
-            'a': {
-                color: '{color.vue.green}',
-                textDecoration: 'underline',
-                '&:hover': {
-                    transition: '.2s',
-                },
-            },
-        },
-    },
-    '@mobile': {
-        '.speaker-card': {
-            'img': {
-                borderRadius: '0.5em',
-                width: '208px',
-                height: '208px',
-            },
-        },
-    },
-    '@tablet': {
-        '.speaker-card': {
-            'img': {
-                borderRadius: '0.5em',
-                width: '274px',
-                height: '274px',
-            },
-        },
-    },
+  },
 })
 </style>

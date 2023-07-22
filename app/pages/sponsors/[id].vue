@@ -75,13 +75,10 @@ useHead({
 css({
   'main': {
     '--max-width': '1280px',
+    '--head-img-width': '475px',
     padding: 'calc({space.header} + {space.8} * 10) calc({space.8} * 4) calc({space.bodybottom})',
     color: '{color.vue.blue}',
     lineHeight: '1.8',
-    maxWidth: 'var(--max-width)',
-    margin: '0 auto',
-  },
-  'section': {
     maxWidth: '{max.width}',
     margin: '0 auto',
   },
@@ -111,7 +108,7 @@ css({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '475px',
+    width: '{head.img.width}',
     height: 'auto',
     aspectRatio: '690 / 388',
     boxShadow: '0px 4px 4px 0px #00000040',
@@ -140,12 +137,11 @@ css({
   },
   '.detailbody-persons': {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     flexWrap: 'wrap',
-    width: '650px',
     margin: 'calc({space.8} * 10) auto',
     'li': {
-      marginBottom: 'calc({space.8} * 4)',
+      margin: 'calc({space.8} * 2)',
     },
   },
   'footer': {
@@ -154,18 +150,13 @@ css({
   },
   '@tablet': {
     'main': {
-      '--max-width': '760px',
-    },
-    '.detailhead-img': {
-       width: '368px',
-    },
-    '.detailbody-persons': {
-      width: '580px',
-    },
+      '--head-img-width': '368px',
+    }
   },
   '@mobile': {
     'main': {
       '--max-width': '100%',
+      '--head-img-width': '100%',
     },
     '.detailhead-body': {
       display: 'block',
@@ -175,9 +166,6 @@ css({
     },
     '.detailhead-right': {
       marginTop: 'calc({space.8} * 4)',
-    },
-    '.detailhead-img': {
-       width: '100%',
     },
     '.detailbody-persons': {
       width: 'auto',

@@ -70,7 +70,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
     v-bind="{
       ...(isRouterLink && routerLinkProps),
       ...(isLink && linkProps),
-      ...((!isRouterLink && !isLink) && buttonProps),
+      ...(!isRouterLink && !isLink && buttonProps),
     }"
     :class="myclass.join(' ')"
     :disabled="props.disabled"

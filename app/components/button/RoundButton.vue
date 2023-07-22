@@ -60,15 +60,17 @@ const buttonProps = {
   type: props.type,
   onClick,
 }
+
+const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 
 <template>
   <component
-    :is="isRouterLink ? 'NuxtLink' : isLink ? 'a' : 'button'"
+    :is="isRouterLink ? _nuxtLink : isLink ? 'a' : 'button'"
     v-bind="{
       ...(isRouterLink && routerLinkProps),
       ...(isLink && linkProps),
-      ...((!isRouterLink || !isLink) && buttonProps),
+      ...((!isRouterLink && !isLink) && buttonProps),
     }"
     :class="myclass.join(' ')"
     :disabled="props.disabled"

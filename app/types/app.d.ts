@@ -107,6 +107,7 @@ type OptionCategory =
   | 'media'
 
 type Sponsor = {
+  id: string
   name: string
   image: string
   category: SponsorCategory | OptionCategory

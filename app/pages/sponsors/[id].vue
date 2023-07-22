@@ -1,5 +1,8 @@
 <script setup lang="ts">
+/* eslint-disable vuejs-accessibility/heading-has-content */
+
 import { SponsorUser, Sponsor } from '~/types/app'
+import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSectionContainer from '~/container/NavPageSectionContainer.vue'
@@ -11,7 +14,7 @@ import { all } from '~/utils/sponsor.constants'
 const route = useRoute()
 const sponsorId = route.params.id
 const sponsorData = all.find((s: Sponsor) => {
-  return s.name === sponsorId
+  return s.id === sponsorId
 })
 
 const users = sponsorUsers.filter((user: SponsorUser) => {
@@ -65,15 +68,16 @@ useHead({
           </a>
         </div>
         <div class="detailhead-right">
-          クラウドサインは、契約の締結から管理までデジタルで完結させる契約マネジメントプラットフォームです。企業や自治体などでの導入実績250万社を超える電子契約市場No.1の電子契約サービスです。Vue.jsはサービス初期から活用しており、プロダクトを長年支えてきました。今年は長らく待ち望んでいたオフライン開催。クラウドサインとしても運営の皆様をはじめ、参加者の方々と一緒にVue.jsのコミュニティを盛り上げていきたいと思います。当日会場でお会いできるのを楽しみにしております。
+          <MarkDownText :path="`sponsors/${sponsorData.id}/head`" />
         </div>
       </div>
     </section>
     <section class="detailbody">
-      <h2 class="detailbody-title">セッションタイトル</h2>
+      <h2 class="detailbody-title">
+        <MarkDownText :path="`sponsors/${sponsorData.id}/title`" />
+      </h2>
       <p>
-        セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッション内容セッシ
-        ョン内容セッション内容セッション内容セッション内容セッション内容セッション内容
+        <MarkDownText :path="`sponsors/${sponsorData.id}/body`" />
       </p>
 
       <ul class="detailbody-persons">

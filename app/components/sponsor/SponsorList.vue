@@ -13,7 +13,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="platinumSponsor in sponsors.platinumSponsors"
             :key="platinumSponsor.name"
-            :to="`/sponsors/${platinumSponsor.name}`"
+            :to="`/sponsors/${platinumSponsor.id}`"
           >
             <SponsorCard :sponsor="platinumSponsor" />
           </NuxtLink>
@@ -25,7 +25,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="goldSponsor in sponsors.goldSponsors"
             :key="goldSponsor.name"
-            :to="`/sponsors/${goldSponsor.name}`"
+            :to="`/sponsors/${goldSponsor.id}`"
           >
             <SponsorCard :sponsor="goldSponsor" />
           </NuxtLink>
@@ -37,7 +37,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="silverSponsor in sponsors.silverSponsors"
             :key="silverSponsor.name"
-            :to="`/sponsors/${silverSponsor.name}`"
+            :to="`/sponsors/${silverSponsor.id}`"
           >
             <SponsorCard :sponsor="silverSponsor" />
           </NuxtLink>
@@ -49,7 +49,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="bronzeSponsor in sponsors.bronzeSponsors"
             :key="bronzeSponsor.name"
-            :to="`/sponsors/${bronzeSponsor.name}`"
+            :to="`/sponsors/${bronzeSponsor.id}`"
           >
             <SponsorCard :sponsor="bronzeSponsor" />
           </NuxtLink>
@@ -63,7 +63,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="namingRightSponsor in sponsors.namingRightSponsors"
             :key="namingRightSponsor.name"
-            :to="`/sponsors/${namingRightSponsor.name}`"
+            :to="`/sponsors/${namingRightSponsor.id}`"
           >
             <SponsorCard :sponsor="namingRightSponsor" use-optional use-column-layout />
           </NuxtLink>
@@ -75,7 +75,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="specialLunchSponsor in sponsors.specialLunchSponsors"
             :key="specialLunchSponsor.name"
-            :to="`/sponsors/${specialLunchSponsor.name}`"
+            :to="`/sponsors/${specialLunchSponsor.id}`"
           >
             <SponsorCard :sponsor="specialLunchSponsor" use-optional use-column-layout />
           </NuxtLink>
@@ -89,7 +89,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="lunchSponsor in sponsors.lunchSponsors"
             :key="lunchSponsor.name"
-            :to="`/sponsors/${lunchSponsor.name}`"
+            :to="`/sponsors/${lunchSponsor.id}`"
           >
             <SponsorCard :sponsor="lunchSponsor" use-optional />
           </NuxtLink>
@@ -101,7 +101,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="afterPartySponsor in sponsors.afterPartySponsors"
             :key="afterPartySponsor.name"
-            :to="`/sponsors/${afterPartySponsor.name}`"
+            :to="`/sponsors/${afterPartySponsor.id}`"
           >
             <SponsorCard :sponsor="afterPartySponsor" use-optional />
           </NuxtLink>
@@ -113,7 +113,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="namecardSponsor in sponsors.namecardSponsors"
             :key="namecardSponsor.name"
-            :to="`/sponsors/${namecardSponsor.name}`"
+            :to="`/sponsors/${namecardSponsor.id}`"
           >
             <SponsorCard :sponsor="namecardSponsor" use-optional />
           </NuxtLink>
@@ -125,7 +125,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="refreshmentSponsor in sponsors.refreshmentSponsors"
             :key="refreshmentSponsor.name"
-            :to="`/sponsors/${refreshmentSponsor.name}`"
+            :to="`/sponsors/${refreshmentSponsor.id}`"
           >
             <SponsorCard :sponsor="refreshmentSponsor" use-optional />
           </NuxtLink>
@@ -137,7 +137,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="interpretationSponsor in sponsors.interpretationSponsors"
             :key="interpretationSponsor.name"
-            :to="`/sponsors/${interpretationSponsor.name}`"
+            :to="`/sponsors/${interpretationSponsor.id}`"
           >
             <SponsorCard :sponsor="interpretationSponsor" use-optional />
           </NuxtLink>
@@ -149,7 +149,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="mediaSponsor in sponsors.mediaSponsors"
             :key="mediaSponsor.name"
-            :to="`/sponsors/${mediaSponsor.name}`"
+            :to="`/sponsors/${mediaSponsor.id}`"
           >
             <SponsorCard :sponsor="mediaSponsor" use-optional />
           </NuxtLink>

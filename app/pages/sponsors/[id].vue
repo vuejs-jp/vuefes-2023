@@ -2,16 +2,25 @@
 import { SponsorUser } from '~/types/app'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
+import NavPageSectionContainer from '~/container/NavPageSectionContainer.vue'
 import { sponsorUsers } from '~/utils/sponsor-users.constants'
+import { generalOg, twitterOg } from '~/utils/og.constants'
+import { conferenceTitle } from '~/utils/constants'
+
 const route = useRoute()
 const id = route.params.id
 const users = sponsorUsers.filter((user: SponsorUser) => {
   return user.sponsorName === 'クラウドサイン（弁護士ドットコム株式会社）'
 })
+
+useHead({
+  titleTemplate: (titleChunk) => `スポンサー詳細 | ${conferenceTitle}`,
+  meta: [...generalOg(), ...twitterOg()],
+})
 </script>
 
 <template>
-  <NavPageSection />
+  <NavPageSectionContainer />
   <main class="sponsors-detail">
     <section class="detailhead">
       <SectionTitle

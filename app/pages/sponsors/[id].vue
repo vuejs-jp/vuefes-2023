@@ -16,13 +16,12 @@ const sponsorId = route.params.id
 const sponsorData = all.find((s: Sponsor) => {
   return s.id === sponsorId
 })
-
 const users = sponsorUsers.filter((user: SponsorUser) => {
-  return user.sponsorName === 'クラウドサイン（弁護士ドットコム株式会社）'
+  return user.sponsorId === sponsorId
 })
 
 useHead({
-  titleTemplate: (titleChunk) => `スポンサー詳細 | ${conferenceTitle}`,
+  titleTemplate: (titleChunk) => `${sponsorData.name} | ${conferenceTitle}`,
   meta: [...generalOg(), ...twitterOg()],
 })
 </script>

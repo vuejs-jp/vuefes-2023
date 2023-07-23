@@ -115,5 +115,5 @@ type Sponsor = {
 }
 
 type SponsorUser = Speaker & {
-  sponsorName: Sponsor.name
+  sponsorId: string
 }

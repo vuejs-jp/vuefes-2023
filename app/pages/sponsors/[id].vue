@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /* eslint-disable vuejs-accessibility/heading-has-content */
 
-import { SponsorUser, Sponsor } from '~/types/app'
+import { SponsorUser, Sponsor, SponsorCategory, OptionCategory } from '~/types/app'
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
@@ -11,11 +11,21 @@ import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
 
+const emptySponsor: Sponsor = {
+  id: '',
+  name: '',
+  image: '',
+  category: 'lunch',
+  site: '',
+}
+
 const route = useRoute()
-const sponsorId = route.params.id
-const sponsorData = all.find((s: Sponsor) => {
-  return s.id === sponsorId
-})
+const sponsorId = route.params.id as string
+const sponsorData: Sponsor =
+  all.find((s: Sponsor) => {
+    return s.id === sponsorId
+  }) || emptySponsor
+
 const users = sponsorUsers.filter((user: SponsorUser) => {
   return user.sponsorId === sponsorId
 })
@@ -28,7 +38,7 @@ useHead({
 
 <template>
   <NavPageSectionContainer />
-  <main v-if="sponsorData" class="sponsors-detail">
+  <main v-if="sponsorData.id" class="sponsors-detail">
     <section class="detailhead">
       <SectionTitle
         id="sponsor-detail"
@@ -111,6 +121,7 @@ css({
       fontSize: 'calc(22*{fontSize.base})',
       fontWeight: '700',
       textAlign: 'center',
+      padding: 'calc({space.8} * 10) 0',
     }
   },
   'main': {

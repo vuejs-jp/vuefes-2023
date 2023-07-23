@@ -4,7 +4,14 @@
 
 export type Color = 'white' | 'vue.blue' | 'vue.green' | 'typescript.blue'
 
-export type Path = 'message' | 'form' | 'sponsor' | 'speaker' | 'privacy' | 'code-of-conduct'
+export type Path =
+  | 'message'
+  | 'form'
+  | 'sponsor'
+  | 'speaker'
+  | 'privacy'
+  | 'code-of-conduct'
+  | string
 
 export type AuthProvider = 'github' | 'google'
 
@@ -27,7 +34,7 @@ export interface FormUser {
  */
 
 // addition.csv data
-type AdditionItem = {
+export type AdditionItem = {
   orderId: string
   applyTime: string
   eventId: string
@@ -37,7 +44,7 @@ type AdditionItem = {
 }
 
 // list.xls colums
-type ListRow = {
+export type ListRow = {
   __EMPTY: string // "チケットID"
   __EMPTY_1: string // "参加者名"
   __EMPTY_10: string // "受付状況"
@@ -54,7 +61,7 @@ type ListRow = {
 }
 
 // list.xls data
-type ListMember = {
+export type ListMember = {
   ticketId: string
   ticketName: string
   userName: string
@@ -66,21 +73,21 @@ type ListMember = {
  * speaker
  */
 
-type Speaker = {
+export type Speaker = {
   id: string
   type: 'evan' | 'foreign' | 'domestic'
   session: Session
   profile: SpeakerProfile
 }
 
-type Session = {
+export type Session = {
   title: string
   description: string
   type: 'main' | 'lt'
   time: number
 }
 
-type SpeakerProfile = {
+export type SpeakerProfile = {
   image: string
   title: string
   name: string
@@ -94,9 +101,9 @@ type SpeakerProfile = {
  * sponsor
  */
 
-type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'
+export type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'
 
-type OptionCategory =
+export type OptionCategory =
   | 'session-room-naming-rights'
   | 'special-lunch'
   | 'lunch'
@@ -106,7 +113,7 @@ type OptionCategory =
   | 'simultaneous-interpretation'
   | 'media'
 
-type Sponsor = {
+export type Sponsor = {
   id: string
   name: string
   image: string
@@ -114,6 +121,6 @@ type Sponsor = {
   site: string
 }
 
-type SponsorUser = Speaker & {
+export type SponsorUser = Speaker & {
   sponsorId: string
 }

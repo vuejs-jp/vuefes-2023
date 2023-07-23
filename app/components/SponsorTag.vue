@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { SponsorCategory } from '~/types/app'
+import { SponsorCategory, OptionCategory } from '~/types/app'
 const props = defineProps({
   label: {
     type: String,
     required: true,
   },
   color: {
-    type: String as PropType<SponsorCategory>,
+    type: String as PropType<SponsorCategory | OptionCategory>,
     default: 'options',
   },
 })

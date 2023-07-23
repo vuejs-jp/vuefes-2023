@@ -5,7 +5,7 @@ import { SponsorUser, Sponsor, SponsorCategory, OptionCategory } from '~/types/a
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
-import NavPageSectionContainer from '~/container/NavPageSectionContainer.vue'
+import NavPageSection from '~/components/NavPageSection.vue'
 import { sponsorUsers } from '~/utils/sponsor-users.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
@@ -37,7 +37,7 @@ useHead({
 </script>
 
 <template>
-  <NavPageSectionContainer />
+  <NavPageSection />
   <main v-if="sponsorData.id" class="sponsors-detail">
     <section class="detailhead">
       <SectionTitle

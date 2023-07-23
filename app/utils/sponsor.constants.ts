@@ -134,9 +134,9 @@ const silverSponsors: Sponsor[] = [
     url: 'https://lapras.com/person',
   },
   {
-    id: 'gifee',
+    id: 'giftee',
     name: '株式会社ギフティ',
-    image: '/sponsors/gifee.png',
+    image: '/sponsors/giftee.png',
     category: 'silver',
     url: 'https://giftee.co.jp/',
   },
@@ -260,9 +260,9 @@ const namecardSponsors: Sponsor[] = [
 
 const refreshmentSponsors: Sponsor[] = [
   {
-    id: 'gifee',
+    id: 'giftee',
     name: '株式会社ギフティ',
-    image: '/sponsors/gifee.png',
+    image: '/sponsors/giftee.png',
     category: 'refreshment',
     url: 'https://giftee.co.jp/',
   },

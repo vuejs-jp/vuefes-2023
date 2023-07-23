@@ -25,3 +25,21 @@ create table if not exists public.pm_receipts (
     updated_at timestamp with time zone default timezone('utc' :: text, now()) not null
 );
 comment on table public.pm_receipts is 'Holds all of pass market receipts information';
+
+-- *** Function definitions ***
+create or replace function public.handle_activate()
+  returns trigger as $$
+begin
+  update public.event_users
+  set activated_at = now(), role = new.role
+  where receipt_id = new.receipt_id;
+  return new;
+end;
+$$ language plpgsql security definer;
+
+-- *** Trigger definitions ***
+drop trigger if exists on_new_receipt_created on public.pm_receipts;
+create trigger on_new_receipt_created
+  after insert on public.pm_receipts
+  for each row
+  execute function handle_activate();

@@ -118,7 +118,7 @@ export type Sponsor = {
   name: string
   image: string
   category: SponsorCategory | OptionCategory
-  site: string
+  url: string
 }
 
 export type SponsorUser = Speaker & {

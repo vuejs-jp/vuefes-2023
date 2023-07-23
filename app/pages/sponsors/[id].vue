@@ -16,7 +16,7 @@ const emptySponsor: Sponsor = {
   name: '',
   image: '',
   category: 'lunch',
-  site: '',
+  url: '',
 }
 
 const route = useRoute()
@@ -69,7 +69,7 @@ useHead({
           </p>
           <a
             class="detailhead-sponsorname"
-            :href="sponsorData.site"
+            :href="sponsorData.url"
             target="_blank"
             rel="noreferrer"
           >

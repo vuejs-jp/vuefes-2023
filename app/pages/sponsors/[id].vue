@@ -61,7 +61,7 @@ useHead({
           <p class="detailhead-img">
             <img
               :src="sponsorData.image"
-              :alt="sponsorData.name"
+              :alt="`${sponsorData.name}のロゴ`"
               width="570"
               height="322"
               decoding="async"

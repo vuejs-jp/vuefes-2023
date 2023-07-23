@@ -33,4 +33,9 @@ export default defineTheme({
     header: '88px',
     bodybottom: '88px',
   },
+  zindex: {
+    dialog: '9000',
+    menu: '8000',
+    alert: '10',
+  },
 })

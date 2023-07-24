@@ -10,6 +10,7 @@ import NavPageSection from '~/components/NavPageSection.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
+import { useSponsor } from '~/composables/useSponsor'
 
 const emptySponsor: Sponsor = {
   id: '',
@@ -19,6 +20,7 @@ const emptySponsor: Sponsor = {
   url: '',
 }
 
+const { getCategoryType } = useSponsor()
 const route = useRoute()
 const sponsorId = route.params.id as string
 const sponsorData: Sponsor =
@@ -52,7 +54,7 @@ useHead({
         <li>
           <SponsorTag
             :label="$t(`category.${sponsorData.category}`)"
-            :color="sponsorData.category"
+            :color="getCategoryType(sponsorData.category)"
           />
         </li>
       </ul>

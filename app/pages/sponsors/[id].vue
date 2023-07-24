@@ -55,7 +55,6 @@ useHead({
             :color="sponsorData.category"
           />
         </li>
-        <li><SponsorTag label="Session room naming rights" /></li>
       </ul>
       <div class="detailhead-body">
         <div class="detailhead-left">

@@ -17,7 +17,7 @@ export default {
       platinum: 'Platinum',
       gold: 'Gold',
       silver: 'Silver',
-      bronze: 'bronze',
+      bronze: 'Bronze',
       'session-room-naming-rights': 'Session room naming rights',
       'special-lunch': 'Special lunch',
       lunch: 'Lunch',

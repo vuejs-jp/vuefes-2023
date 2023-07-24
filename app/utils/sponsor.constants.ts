@@ -188,7 +188,7 @@ const all: Sponsor[] = [
     name: 'GMOインターネットグループ株式会社',
     image: '/sponsors/gmo-internet-group.svg',
     categories: ['after-party'],
-    url: 'gmo.jp',
+    url: 'https://gmo.jp',
   },
   {
     id: 'crowdworks',

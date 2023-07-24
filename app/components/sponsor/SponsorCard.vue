@@ -3,14 +3,14 @@ import { PropType } from 'vue'
 import { Sponsor } from '~/types/app'
 import { urlBasePath } from '~/utils/constants'
 
-const props = defineProps({
+defineProps({
   sponsor: {
     type: Object as PropType<Sponsor>,
     required: true,
   },
-  useOptional: {
-    type: Boolean,
-    default: false,
+  category: {
+    type: String,
+    required: true,
   },
   useColumnLayout: {
     type: Boolean,
@@ -20,7 +20,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class="`sponsor-card ${useOptional ? 'options' : sponsor.category}`">
+  <div :class="`sponsor-card ${category}`">
     <img
       width="100"
       height="100"

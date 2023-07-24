@@ -3,7 +3,8 @@ import { OptionCategory, SponsorCategory } from '~/types/app'
 export function useSponsor() {
   const existBasic = (category: SponsorCategory | OptionCategory) =>
     category === 'platinum' || category === 'gold' || category === 'silver' || category === 'bronze'
-  const getCategoryType = (category: SponsorCategory | OptionCategory) => {
+
+  const getCategoryType = (category: SponsorCategory | OptionCategory): string => {
     return existBasic(category) ? category : 'options'
   }
 

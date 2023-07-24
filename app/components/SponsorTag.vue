@@ -6,7 +6,7 @@ const props = defineProps({
     required: true,
   },
   color: {
-    type: String as PropType<SponsorCategory | OptionCategory>,
+    type: String,
     default: 'options',
   },
 })

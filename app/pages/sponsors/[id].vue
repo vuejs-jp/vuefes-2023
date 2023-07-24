@@ -6,7 +6,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
-import { sponsorUsers } from '~/utils/sponsor-users.constants'
+// import { sponsorUsers } from '~/utils/sponsor-users.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
@@ -26,9 +26,10 @@ const sponsorData: Sponsor =
     return s.id === sponsorId
   }) || emptySponsor
 
-const users = sponsorUsers.filter((user: SponsorUser) => {
-  return user.sponsorId === sponsorId
-})
+// TODO: develop later
+// const users = sponsorUsers.filter((user: SponsorUser) => {
+//   return user.sponsorId === sponsorId
+// })
 
 useHead({
   titleTemplate: (titleChunk) => `${sponsorData.name} | ${conferenceTitle}`,
@@ -89,11 +90,12 @@ useHead({
         <MarkDownText :path="`sponsors/${sponsorData.id}/body`" />
       </p>
 
-      <ul class="detailbody-persons">
+      <!-- TODO: develop later -->
+      <!-- <ul class="detailbody-persons">
         <li v-for="u in users" :key="u.id">
           <SpeakerCard :speaker="u" />
         </li>
-      </ul>
+      </ul> -->
     </section>
     <footer>
       <!-- トップにもどる -->
@@ -165,6 +167,8 @@ css({
   },
   '.detailhead-img img': {
     maxWidth: '60%',
+    maxHeight: '60%',
+    objectFit: 'contain'
   },
   '.detailhead-sponsorname': {
     display: 'inline-block',

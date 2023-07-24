@@ -15,7 +15,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="platinumSponsor.name"
             :to="`/sponsors/${platinumSponsor.id}`"
           >
-            <SponsorCard :sponsor="platinumSponsor" />
+            <SponsorCard :sponsor="platinumSponsor" category="platinum" />
           </NuxtLink>
         </div>
       </li>
@@ -27,7 +27,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="goldSponsor.name"
             :to="`/sponsors/${goldSponsor.id}`"
           >
-            <SponsorCard :sponsor="goldSponsor" />
+            <SponsorCard :sponsor="goldSponsor" category="gold" />
           </NuxtLink>
         </div>
       </li>
@@ -39,7 +39,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="silverSponsor.name"
             :to="`/sponsors/${silverSponsor.id}`"
           >
-            <SponsorCard :sponsor="silverSponsor" />
+            <SponsorCard :sponsor="silverSponsor" category="silver" />
           </NuxtLink>
         </div>
       </li>
@@ -51,7 +51,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="bronzeSponsor.name"
             :to="`/sponsors/${bronzeSponsor.id}`"
           >
-            <SponsorCard :sponsor="bronzeSponsor" />
+            <SponsorCard :sponsor="bronzeSponsor" category="bronze" />
           </NuxtLink>
         </div>
       </li>
@@ -65,7 +65,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="namingRightSponsor.name"
             :to="`/sponsors/${namingRightSponsor.id}`"
           >
-            <SponsorCard :sponsor="namingRightSponsor" use-optional use-column-layout />
+            <SponsorCard :sponsor="namingRightSponsor" use-column-layout category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -77,7 +77,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="specialLunchSponsor.name"
             :to="`/sponsors/${specialLunchSponsor.id}`"
           >
-            <SponsorCard :sponsor="specialLunchSponsor" use-optional use-column-layout />
+            <SponsorCard :sponsor="specialLunchSponsor" use-column-layout category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -91,7 +91,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="lunchSponsor.name"
             :to="`/sponsors/${lunchSponsor.id}`"
           >
-            <SponsorCard :sponsor="lunchSponsor" use-optional />
+            <SponsorCard :sponsor="lunchSponsor" category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -103,7 +103,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="afterPartySponsor.name"
             :to="`/sponsors/${afterPartySponsor.id}`"
           >
-            <SponsorCard :sponsor="afterPartySponsor" use-optional />
+            <SponsorCard :sponsor="afterPartySponsor" category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -115,7 +115,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="namecardSponsor.name"
             :to="`/sponsors/${namecardSponsor.id}`"
           >
-            <SponsorCard :sponsor="namecardSponsor" use-optional />
+            <SponsorCard :sponsor="namecardSponsor" category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -127,7 +127,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="refreshmentSponsor.name"
             :to="`/sponsors/${refreshmentSponsor.id}`"
           >
-            <SponsorCard :sponsor="refreshmentSponsor" use-optional />
+            <SponsorCard :sponsor="refreshmentSponsor" category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -139,7 +139,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="interpretationSponsor.name"
             :to="`/sponsors/${interpretationSponsor.id}`"
           >
-            <SponsorCard :sponsor="interpretationSponsor" use-optional />
+            <SponsorCard :sponsor="interpretationSponsor" category="options" />
           </NuxtLink>
         </div>
       </li>
@@ -151,7 +151,7 @@ import * as sponsors from '~/utils/sponsor.constants'
             :key="mediaSponsor.name"
             :to="`/sponsors/${mediaSponsor.id}`"
           >
-            <SponsorCard :sponsor="mediaSponsor" use-optional />
+            <SponsorCard :sponsor="mediaSponsor" category="options" />
           </NuxtLink>
         </div>
       </li>

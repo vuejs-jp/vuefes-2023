@@ -117,7 +117,7 @@ export type Sponsor = {
   id: string
   name: string
   image: string
-  category: SponsorCategory | OptionCategory
+  categories: Array<SponsorCategory | OptionCategory>
   url: string
 }
 

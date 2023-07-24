@@ -16,7 +16,7 @@ const emptySponsor: Sponsor = {
   id: '',
   name: '',
   image: '',
-  category: 'lunch',
+  categories: ['lunch'],
   url: '',
 }
 
@@ -51,11 +51,8 @@ useHead({
       />
 
       <ul class="detailhead-tags">
-        <li>
-          <SponsorTag
-            :label="$t(`category.${sponsorData.category}`)"
-            :color="getCategoryType(sponsorData.category)"
-          />
+        <li v-for="category in sponsorData.categories" :key="`category-${category}`">
+          <SponsorTag :label="$t(`category.${category}`)" :color="getCategoryType(category)" />
         </li>
       </ul>
       <div class="detailhead-body">

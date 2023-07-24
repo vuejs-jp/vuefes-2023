@@ -18,17 +18,17 @@ const props = defineProps({
     <img
       width="208"
       height="208"
-      :alt="`${props.speaker.profile.name}の写真`"
-      :src="`${urlBasePath}${props.speaker.profile.image}`"
+      :alt="`${speaker.profile.name}の写真`"
+      :src="`${urlBasePath}${speaker.profile.image}`"
       loading="lazy"
       decoding="async"
     />
-    <p class="speaker-title">{{ props.speaker.profile.title }}</p>
-    <p class="speaker-name">{{ props.speaker.profile.name }}</p>
+    <p class="speaker-title">{{ speaker.profile.title }}</p>
+    <p class="speaker-name">{{ speaker.profile.name }}</p>
     <div class="speaker-sns">
       <a
-        v-if="props.speaker.profile.githubId"
-        :href="`https://github.com/${props.speaker.profile.githubId}`"
+        v-if="speaker.profile.githubId"
+        :href="`https://github.com/${speaker.profile.githubId}`"
         aria-label="github"
         target="_blank"
         rel="noreferrer"
@@ -36,8 +36,8 @@ const props = defineProps({
         <GithubLogo class="flip-horizontal" width="1.5em" height="1.5em" />
       </a>
       <a
-        v-if="props.speaker.profile.twitterId"
-        :href="`https://twitter.com/${props.speaker.profile.twitterId}`"
+        v-if="speaker.profile.twitterId"
+        :href="`https://twitter.com/${speaker.profile.twitterId}`"
         aria-label="twitter"
         target="_blank"
         rel="noreferrer"
@@ -45,8 +45,8 @@ const props = defineProps({
         <TwitterLogo width="1.5em" height="1.5em" />
       </a>
       <a
-        v-if="props.speaker.profile.mastodonUrl"
-        :href="props.speaker.profile.mastodonUrl"
+        v-if="speaker.profile.mastodonUrl"
+        :href="speaker.profile.mastodonUrl"
         aria-label="mastodon"
         target="_blank"
         rel="noreferrer"

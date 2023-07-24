@@ -20,14 +20,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class="`sponsor-card ${props.useOptional ? 'options' : props.sponsor.category}`">
+  <div :class="`sponsor-card ${useOptional ? 'options' : sponsor.category}`">
     <img
       width="100"
       height="100"
       class="sponsor-image"
       decoding="async"
-      :src="`${urlBasePath}${props.sponsor.image}`"
-      :alt="`${props.sponsor.name}のロゴ`"
+      :src="`${urlBasePath}${sponsor.image}`"
+      :alt="`${sponsor.name}のロゴ`"
     />
   </div>
 </template>

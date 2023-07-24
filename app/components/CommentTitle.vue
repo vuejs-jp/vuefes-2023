@@ -15,7 +15,7 @@ const props = defineProps({
 
 <template>
   <p class="comment">
-    <span class="comment-main">{{ props.title }}</span>
+    <span class="comment-main">{{ title }}</span>
   </p>
 </template>
 

@@ -13,7 +13,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <span class="tag-root"> {{ props.label }} </span>
+  <span class="tag-root"> {{ label }} </span>
 </template>
 
 <style lang="ts" scoped>

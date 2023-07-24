@@ -19,7 +19,7 @@ const props = defineProps({
   <div class="popup-root">
     <ul class="popup-menu">
       <li>
-        <TextButton :href="`/users/${props.signedUser.user_id}`">
+        <TextButton :href="`/users/${signedUser.user_id}`">
           <template #icon>
             <CardLogo />
           </template>

@@ -44,6 +44,11 @@ export default defineNuxtConfig({
       }),
     ],
   },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   build: {
     transpile: ['vue-toastification'],
   },

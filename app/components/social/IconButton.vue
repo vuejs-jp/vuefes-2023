@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <a :href="props.url" :title="props.title" target="_blank" rel="noreferrer">
+  <a :href="url" :title="title" target="_blank" rel="noreferrer">
     <slot />
   </a>
 </template>

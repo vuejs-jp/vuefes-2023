@@ -211,6 +211,20 @@ const all: Sponsor[] = [
     categories: ['media'],
     url: 'https://gihyo.jp',
   },
+  {
+    id: 'yuzuriha',
+    name: '株式会社YUZURIHA',
+    image: '/sponsors/yuzuriha.png',
+    categories: ['bronze'],
+    url: 'https://yzrh.jp',
+  },
+  {
+    id: 'attelu',
+    name: '株式会社アッテル',
+    image: '/sponsors/attelu.png',
+    categories: ['bronze'],
+    url: 'https://attelu.jp',
+  },
 ]
 
 const platinumSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('platinum'))

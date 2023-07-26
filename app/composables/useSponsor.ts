@@ -1,12 +1,15 @@
 import { OptionCategory, SponsorCategory } from '~/types/app'
 
 export function useSponsor() {
-  const existBasic = (category: SponsorCategory | OptionCategory) =>
+  const isPlatinum = (categories: Array<SponsorCategory | OptionCategory>) =>
+    categories.some((category) => category === 'platinum')
+
+  const isBasic = (category: SponsorCategory | OptionCategory) =>
     category === 'platinum' || category === 'gold' || category === 'silver' || category === 'bronze'
 
   const getCategoryType = (category: SponsorCategory | OptionCategory): string => {
-    return existBasic(category) ? category : 'options'
+    return isBasic(category) ? category : 'options'
   }
 
-  return { existBasic, getCategoryType }
+  return { isPlatinum, isBasic, getCategoryType }
 }

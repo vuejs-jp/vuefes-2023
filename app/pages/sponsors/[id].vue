@@ -20,7 +20,7 @@ const emptySponsor: Sponsor = {
   url: '',
 }
 
-const { getCategoryType } = useSponsor()
+const { getCategoryType, isPlatinum } = useSponsor()
 const route = useRoute()
 const sponsorId = route.params.id as string
 const sponsorData: Sponsor =
@@ -80,7 +80,7 @@ useHead({
         </div>
       </div>
     </section>
-    <section class="detailbody">
+    <section v-if="isPlatinum(sponsorData.categories)" class="detailbody">
       <h2 class="detailbody-title">
         <MarkDownText :path="`sponsors/${sponsorData.id}/title`" />
       </h2>

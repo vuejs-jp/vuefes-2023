@@ -202,7 +202,7 @@ const all: Sponsor[] = [
     name: 'Newt',
     image: '/sponsors/newt.png',
     categories: ['media'],
-    url: '',
+    url: 'https://www.newt.so/',
   },
   {
     id: 'gihyojp',

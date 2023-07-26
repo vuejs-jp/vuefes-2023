@@ -7,7 +7,7 @@ export async function useUser(userId: string) {
     return data
   })
 
-  const isActivated = eventUser.value?.activated_at !== undefined
+  const isActivated = eventUser.value?.activated_at !== null
 
   return { eventUser: eventUser.value, isActivated }
 }

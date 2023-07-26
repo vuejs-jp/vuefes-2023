@@ -20,7 +20,7 @@ const emptySponsor: Sponsor = {
   url: '',
 }
 
-const { getCategoryType, isPlatinum } = useSponsor()
+const { getCategoryType, isOptions, isPlatinum } = useSponsor()
 const route = useRoute()
 const sponsorId = route.params.id as string
 const sponsorData: Sponsor =
@@ -55,7 +55,14 @@ useHead({
           <SponsorTag :label="$t(`category.${category}`)" :color="getCategoryType(category)" />
         </li>
       </ul>
-      <div class="detailhead-body">
+      <div
+        class="detailhead-body"
+        :style="
+          isOptions(sponsorData.categories)
+            ? { gridTemplateColumns: '1fr', placeItems: 'center' }
+            : { gridTemplateColumns: 'auto 1fr' }
+        "
+      >
         <div class="detailhead-left">
           <p class="detailhead-img">
             <img
@@ -75,7 +82,7 @@ useHead({
             <h1>{{ sponsorData.name }}</h1>
           </a>
         </div>
-        <div class="detailhead-right">
+        <div v-if="!isOptions(sponsorData.categories)" class="detailhead-right">
           <MarkDownText :path="`sponsors/${sponsorData.id}/head`" />
         </div>
       </div>
@@ -141,10 +148,10 @@ css({
     columnGap: 'calc({space.8} * 1.5)',
   },
   '.detailhead-body': {
-    display: 'flex',
+    display: 'grid',
     marginTop: 'calc({space.8} * 4)',
     color: '#292C33',
-    columnGap: 'calc({space.8} * 5)',
+    gap: 'calc({space.8} * 5)',
   },
   '.detailhead-left': {
     position: 'relative',

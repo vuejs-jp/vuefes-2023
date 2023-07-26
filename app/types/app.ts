@@ -9,6 +9,9 @@ export type Path =
   | 'form'
   | 'sponsor'
   | 'speaker'
+  | 'ticket'
+  | 'namecard'
+  | 'handson'
   | 'privacy'
   | 'code-of-conduct'
   | string

@@ -2,7 +2,8 @@
 import Arrow3 from '~/assets/namecard/arrow3.svg'
 import Ticket from '~/assets/namecard/ticket.svg'
 import Namecard from '~/assets/namecard/namecard.svg'
-import ProcessCard from '~/components/namecard/ProcessCard.vue'
+import MarkDownText from '~/components/MarkDownText.vue'
+import TicketCard from '~/components/namecard/TicketCard.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
@@ -11,18 +12,26 @@ import RoundButton from '~/components/button/RoundButton.vue'
 <template>
   <section>
     <div class="ticket-root">
-      <SectionTitle
-        id="ticket"
-        color="vue.blue"
-        :title="'Ticket & Namecard'"
-        :yamato-title="'チケット & ネームカード'"
-      />
-      <p class="ticket-des center">
-        (仮文言) Vue Fes Japan 2023 では、<br />
-        <strong>ご入場にはチケットの購入とネームカードの作成が必要です！</strong>
-      </p>
+      <SectionTitle id="ticket" color="vue.blue" :title="'Ticket'" yamato-title="チケット" />
+      <div class="explain">
+        <MarkDownText path="ticket" />
+      </div>
+      <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.tickets_deadline_date') }}</em>
+      </i18n-t>
+      <div class="center">
+        <!-- チケットを購入 -->
+        <RoundButton href="#" target="_blank" rel="noreferrer">
+          {{ $t('words.buy_ticket') }}
+        </RoundButton>
+      </div>
+      <h3>
+        <CommentTitle color="vue.green" title="お早めにご購入を！" />
+        チケット
+      </h3>
+
       <div class="process-wrapper">
-        <ProcessCard color="vue.green">
+        <TicketCard color="vue.green">
           <template #icon>
             <Ticket />
           </template>
@@ -30,8 +39,8 @@ import RoundButton from '~/components/button/RoundButton.vue'
             <h4>チケットのご購入</h4>
             <p>Ticket</p>
           </template>
-        </ProcessCard>
-        <ProcessCard color="typescript.blue">
+        </TicketCard>
+        <TicketCard color="typescript.blue">
           <template #icon>
             <Namecard />
           </template>
@@ -39,37 +48,17 @@ import RoundButton from '~/components/button/RoundButton.vue'
             <h4>ネームカードの作成</h4>
             <p>Namecard</p>
           </template>
-        </ProcessCard>
+        </TicketCard>
       </div>
 
-      <h3>
-        <CommentTitle color="vue.green" title="お早めにご購入を！" />
-        チケット
-      </h3>
-      <p>
-        (仮文言) Vue Fes Japan 2023 では、事前チケットを販売中です。<br />
-        チケットの事前販売は、2023/00/00（あ）XX:XXに締め切らせていただきます。
-      </p>
-      <div class="center">
-        <!-- チケットを購入 -->
-        <RoundButton href="#" target="_blank" rel="noreferrer">
-          {{ $t('words.buy_ticket') }}
-        </RoundButton>
-      </div>
-      <p class="ticket-limit center">チケットの事前販売: 2023/00/00（あ）XX:XXまで</p>
-      <p>
-        (仮文言) Vue Fes Japan
-        をより楽しむために、以下からオリジナルのネームカードを手に入れましょう！
-      </p>
       <div>
         <Arrow3 class="arrow" />
       </div>
 
       <h3><CommentTitle color="vue.green" title="必ず事前にご確認ください！" />ネームカード</h3>
-      <p>
-        (仮文言)
-        事前にアカウント情報を登録して頂いた参加者限定で、当日配布するチケットをオリジナルのネームカードとして配布いたします。
-      </p>
+      <div class="explain">
+        <MarkDownText path="namecard" />
+      </div>
       <img
         class="ticket-img"
         src="https://placehold.jp/592x395.png"
@@ -78,13 +67,29 @@ import RoundButton from '~/components/button/RoundButton.vue'
         height="395"
         decoding="async"
       />
-      <p class="ticket-limit center">登録期限: 2023/00/00（あ）XX:XXまで</p>
+      <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.namecard_deadline_date') }}</em>
+      </i18n-t>
       <div class="center">
         <!-- ネームカードを作成 -->
         <RoundButton href="#" target="_blank" rel="noreferrer">
           {{ $t('words.create_namecard') }}
         </RoundButton>
       </div>
+
+      <h3>ハンズオン</h3>
+      <div class="explain">
+        <MarkDownText path="handson" />
+      </div>
+      <i18n-t keypath="top.handson_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.handson_deadline_date') }}</em>
+      </i18n-t>
+      <div class="center">
+        <RoundButton href="#" target="_blank" rel="noreferrer">
+          {{ $t('words.apply_handson') }}
+        </RoundButton>
+      </div>
+
       <!-- 最新情報は、Vue Fes Japan の Twitter をご確認ください -->
       <i18n-t keypath="top.namecard_infolink" tag="p" class="twitter-text center">
         <a
@@ -128,12 +133,22 @@ css({
       marginBottom: 'calc({space.8} * 1)'
     }
   },
-  '.ticket-des': {
-    fontSize: 'calc(24*{fontSize.base})',
+  '.explain': {
+    fontSize: 'calc(18*{fontSize.base})',
+    fontWeight: 500,
     lineHeight: 1.8,
     'strong': {
       fontWeight: 'bold'
     }
+  },
+  '.deadline': {
+    color: '{color.vue.blue}',
+    fontSize: 'calc(24*{fontSize.base})',
+
+    'em': {
+      fontStyle: 'normal',
+      fontWeight: 700,
+    },
   },
   '.ticket-img': {
     display: 'block',

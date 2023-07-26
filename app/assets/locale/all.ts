@@ -9,8 +9,12 @@ export default {
       vuefes_twitter: 'Vue Fes Japan の Twitter',
       speakers_deadline_date: '2023/7/15（土）23:59:59',
       sponsors_deadline_date: '2023/7/28（金）23:59:59',
+      tickets_deadline_date: '2023/10/10（火）23:59:59',
+      namecard_deadline_date: '2023/9/30（土）23:59:59',
+      handson_deadline_date: '2023/10/10（火）23:59:59',
       buy_ticket: 'チケットを購入',
       create_namecard: 'ネームカードを作成',
+      apply_handson: 'チケットを購入',
       back_top: 'トップに戻る',
     },
     category: {
@@ -37,6 +41,9 @@ export default {
        * namecard section
        */
       namecard_infolink: '最新情報は、{0} をご確認ください。',
+      tickets_schedule_limit: '応募期限: {0} まで',
+      namecard_schedule_limit: '応募期限: {0} まで',
+      handson_schedule_limit: '応募期限: {0} まで',
       /**
        * speakers section
        */
@@ -76,8 +83,12 @@ export default {
       vuefes_twitter: 'Vue Fes Japan\'s Twitter',
       speakers_deadline_date: '2023/7/15 (Sat) 23:59:59',
       sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
+      tickets_deadline_date: '2023/10/10（Tue）23:59:59',
+      namecard_deadline_date: '2023/9/30（Sat）23:59:59',
+      handson_deadline_date: '2023/10/10（Tue）23:59:59',
       buy_ticket: 'Buy A Ticket',
       create_namecard: 'Create A Namecard',
+      apply_handson: 'Apply Hands-On',
       back_top: 'Back to Top',
     },
     category: {
@@ -100,6 +111,13 @@ export default {
        * message section
        */
       message_subtitle: 'Thought',
+      /**
+       * namecard section
+       */
+      namecard_infolink: 'Confirm {0} in latest information.',
+      tickets_schedule_limit: 'Tickets Deadline: Until {0}',
+      namecard_schedule_limit: 'Name card Deadline: Until {0}',
+      handson_schedule_limit: 'Hands-on Deadline: Until {0}',
       /**
        * speakers section
        */

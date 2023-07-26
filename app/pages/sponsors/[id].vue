@@ -142,10 +142,10 @@ css({
   },
   '.detailhead-tags': {
     display: 'flex',
+    flexWrap: 'wrap',
     marginTop: 'calc({space.8} * 8)',
-    overflow: 'scroll',
-    height: 'calc({space.8} * 6)',
     columnGap: 'calc({space.8} * 1.5)',
+    gap: 'calc({space.8} * 0.5)',
   },
   '.detailhead-body': {
     display: 'grid',

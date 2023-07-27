@@ -4,17 +4,19 @@ import RoundButton from '~/components/button/RoundButton.vue'
 </script>
 
 <template>
-  <h3 id="handson">ハンズオン</h3>
-  <div class="explain">
-    <MarkDownText path="handson" />
-  </div>
-  <div class="center">
-    <i18n-t keypath="top.handson_schedule_limit" tag="p" class="deadline">
-      <em>{{ $t('words.handson_deadline_date') }}</em>
-    </i18n-t>
-    <RoundButton href="#" target="_blank" rel="noreferrer">
-      {{ $t('words.apply_handson') }}
-    </RoundButton>
+  <div class="handson">
+    <h3 id="handson">ハンズオン</h3>
+    <div class="explain">
+      <MarkDownText path="handson" />
+    </div>
+    <div class="center">
+      <i18n-t keypath="top.handson_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.handson_deadline_date') }}</em>
+      </i18n-t>
+      <RoundButton href="#" target="_blank" rel="noreferrer">
+        {{ $t('words.apply_handson') }}
+      </RoundButton>
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,17 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 1.5)',
+  },
+  '.handson': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: 'calc({space.8} * 3)',
+    '::v-deep(h3)': {
+      textAlign: 'center',
+      fontSize: '32px',
+      fontWeight: 'bold',
+      lineHeight: '1',
+    },
   },
   '.explain': {
     fontSize: 'calc(18*{fontSize.base})',

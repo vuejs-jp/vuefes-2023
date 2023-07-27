@@ -5,26 +5,29 @@ import RoundButton from '~/components/button/RoundButton.vue'
 </script>
 
 <template>
-  <h3><CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />ネームカード</h3>
-  <div class="explain">
-    <MarkDownText path="namecard" />
-  </div>
-  <img
-    class="ticket-img"
-    src="https://placehold.jp/592x395.png"
-    alt=""
-    width="592"
-    height="395"
-    decoding="async"
-  />
-  <div class="center">
-    <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline">
-      <em>{{ $t('words.namecard_deadline_date') }}</em>
-    </i18n-t>
-    <!-- ネームカードを作成 -->
-    <RoundButton to="/register" target="_blank" rel="noreferrer">
-      {{ $t('words.create_namecard') }}
-    </RoundButton>
+  <div class="namecard">
+    <CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />
+    <h3>ネームカード</h3>
+    <div class="explain">
+      <MarkDownText path="namecard" />
+    </div>
+    <img
+      class="ticket-img"
+      src="https://placehold.jp/592x395.png"
+      alt=""
+      width="592"
+      height="395"
+      decoding="async"
+    />
+    <div class="center">
+      <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.namecard_deadline_date') }}</em>
+      </i18n-t>
+      <!-- ネームカードを作成 -->
+      <RoundButton to="/register" target="_blank" rel="noreferrer">
+        {{ $t('words.create_namecard') }}
+      </RoundButton>
+    </div>
   </div>
 </template>
 
@@ -34,6 +37,17 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 1.5)',
+  },
+  '.namecard': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: 'calc({space.8} * 3)',
+    '::v-deep(h3)': {
+      textAlign: 'center',
+      color: '{color.vue.blue}',
+      fontSize: 'calc(32*{fontSize.base})',
+      fontWeight: 700,
+    },
   },
   '.explain': {
     fontSize: 'calc(18*{fontSize.base})',

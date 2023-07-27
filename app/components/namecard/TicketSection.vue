@@ -7,98 +7,104 @@ import RoundButton from '~/components/button/RoundButton.vue'
 </script>
 
 <template>
-  <SectionTitle id="ticket" color="vue.blue" :title="'Ticket'" yamato-title="チケット" />
-  <div class="explain">
-    <MarkDownText path="ticket" />
-  </div>
-  <div class="center">
-    <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline">
-      <em>{{ $t('words.tickets_deadline_date') }}</em>
-    </i18n-t>
-    <!-- チケットを購入 -->
-    <RoundButton href="#" target="_blank" rel="noreferrer">
-      {{ $t('words.buy_ticket') }}
-    </RoundButton>
-  </div>
-  <h3>
+  <div class="ticket">
+    <SectionTitle id="ticket" color="vue.blue" :title="'Ticket'" yamato-title="チケット" />
+    <div class="explain">
+      <MarkDownText path="ticket" />
+    </div>
+    <div class="center">
+      <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.tickets_deadline_date') }}</em>
+      </i18n-t>
+      <!-- チケットを購入 -->
+      <RoundButton href="#" target="_blank" rel="noreferrer">
+        {{ $t('words.buy_ticket') }}
+      </RoundButton>
+    </div>
     <CommentTitle color="vue.green" title="お早めにご購入を！" />
-    チケット種別
-  </h3>
-  <div class="process-wrapper">
-    <TicketCard>
-      <template #image>
-        <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
-      </template>
-      <template #action>
-        <a href="#" target="_blank" rel="noreferrer">一般チケット</a>
-      </template>
-      <template #default>
-        <div class="price-list">
-          <div class="price">
-            <i18n-t keypath="top.ticket_early_price" tag="p">
-              <strong>7,000</strong>
+    <h3>チケット種別</h3>
+    <div class="process-wrapper">
+      <TicketCard>
+        <template #image>
+          <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
+        </template>
+        <template #action>
+          <a href="#" target="_blank" rel="noreferrer">一般チケット</a>
+        </template>
+        <template #default>
+          <div class="price-list">
+            <div class="price">
+              <i18n-t keypath="top.ticket_early_price" tag="p">
+                <strong>7,000</strong>
+              </i18n-t>
+              <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+            </div>
+            <i18n-t keypath="top.ticket_price" tag="p" class="price">
+              <strong>8,000</strong>
             </i18n-t>
-            <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
           </div>
-          <i18n-t keypath="top.ticket_price" tag="p" class="price">
-            <strong>8,000</strong>
-          </i18n-t>
-        </div>
-      </template>
-    </TicketCard>
-    <TicketCard>
-      <template #image>
-        <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
-      </template>
-      <template #action>
-        <a href="#" target="_blank" rel="noreferrer">一般＋アフターパーティチケット</a>
-      </template>
-      <template #default>
-        <div class="price-list">
-          <div class="price">
-            <i18n-t keypath="top.ticket_early_price" tag="p">
-              <strong>10,000</strong>
+        </template>
+      </TicketCard>
+      <TicketCard>
+        <template #image>
+          <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
+        </template>
+        <template #action>
+          <a href="#" target="_blank" rel="noreferrer">一般＋アフターパーティチケット</a>
+        </template>
+        <template #default>
+          <div class="price-list">
+            <div class="price">
+              <i18n-t keypath="top.ticket_early_price" tag="p">
+                <strong>10,000</strong>
+              </i18n-t>
+              <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+            </div>
+            <i18n-t keypath="top.ticket_price" tag="p" class="price">
+              <strong>11,000</strong>
             </i18n-t>
-            <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
           </div>
-          <i18n-t keypath="top.ticket_price" tag="p" class="price">
-            <strong>11,000</strong>
+        </template>
+      </TicketCard>
+      <TicketCard>
+        <template #image>
+          <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
+        </template>
+        <template #action>
+          <nuxt-link to="/#handson">ハンズオンチケット</nuxt-link>
+        </template>
+        <template #default>
+          <div class="price">
+            <strong>無料</strong>
+          </div>
+          <p class="price-des">
+            ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくはハンズオンについてをご覧ください。
+          </p>
+        </template>
+      </TicketCard>
+      <TicketCard>
+        <template #image>
+          <img
+            alt=""
+            src="/tickets/personal-sponsor.png"
+            width="400"
+            height="225"
+            decoding="async"
+          />
+        </template>
+        <template #action>
+          <nuxt-link to="/#personal-sponsor">個人スポンサーチケット</nuxt-link>
+        </template>
+        <template #default>
+          <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price">
+            <strong>10,000</strong>
           </i18n-t>
-        </div>
-      </template>
-    </TicketCard>
-    <TicketCard>
-      <template #image>
-        <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
-      </template>
-      <template #action>
-        <nuxt-link to="/#handson">ハンズオンチケット</nuxt-link>
-      </template>
-      <template #default>
-        <div class="price">
-          <strong>無料</strong>
-        </div>
-        <p class="price-des">
-          ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくはハンズオンについてをご覧ください。
-        </p>
-      </template>
-    </TicketCard>
-    <TicketCard>
-      <template #image>
-        <img alt="" src="/tickets/personal-sponsor.png" width="400" height="225" decoding="async" />
-      </template>
-      <template #action>
-        <nuxt-link to="/#personal-sponsor">個人スポンサーチケット</nuxt-link>
-      </template>
-      <template #default>
-        <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price">
-          <strong>10,000</strong>
-        </i18n-t>
-        <p class="price-des">
-          ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは個人スポンサーについてをご覧ください。
-        </p>
-      </template>
-    </TicketCard>
+          <p class="price-des">
+            ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは個人スポンサーについてをご覧ください。
+          </p>
+        </template>
+      </TicketCard>
+    </div>
   </div>
 </template>
 
@@ -108,6 +114,17 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 1.5)',
+  },
+  '.ticket': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: 'calc({space.8} * 3)',
+    '::v-deep(h3)': {
+      textAlign: 'center',
+      fontSize: '32px',
+      fontWeight: 'bold',
+      lineHeight: '1',
+    },
   },
   '.explain': {
     fontSize: 'calc(18*{fontSize.base})',

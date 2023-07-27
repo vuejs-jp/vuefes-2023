@@ -36,15 +36,6 @@ css({
     fontSize: 'calc(18*{fontSize.base})',
     color: '{color.vue.blue}',
     'grid-template-columns': 'minmax(0, 1fr)',
-    '::v-deep(h3)': {
-      textAlign: 'center',
-      color: '{color.vue.blue}',
-      fontSize: 'calc(32*{fontSize.base})',
-      fontWeight: 700,
-    },
-    '::v-deep(h3 p)': {
-      marginBottom: 'calc({space.8} * 1)'
-    }
   },
   '.arrow': {
     margin: '0 auto'

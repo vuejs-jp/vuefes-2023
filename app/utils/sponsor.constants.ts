@@ -95,7 +95,7 @@ const all: Sponsor[] = [
   {
     id: 'visasq',
     name: '株式会社ビザスク',
-    image: '/sponsors/visasq.png',
+    image: '/sponsors/visasq.svg',
     categories: ['silver'],
     url: 'https://service.visasq.com/',
   },

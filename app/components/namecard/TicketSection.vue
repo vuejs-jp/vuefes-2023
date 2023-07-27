@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Ticket from '~/assets/namecard/ticket.svg'
-import Namecard from '~/assets/namecard/namecard.svg'
 import MarkDownText from '~/components/MarkDownText.vue'
 import TicketCard from '~/components/namecard/TicketCard.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
@@ -27,22 +25,72 @@ import RoundButton from '~/components/button/RoundButton.vue'
     チケット種別
   </h3>
   <div class="process-wrapper">
-    <TicketCard color="vue.green">
-      <template #icon>
-        <Ticket />
+    <TicketCard>
+      <template #image>
+        <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
+      </template>
+      <template #action>
+        <a href="#" target="_blank" rel="noreferrer">一般チケット</a>
       </template>
       <template #default>
-        <h4>チケットのご購入</h4>
-        <p>Ticket</p>
+        <div class="price-list">
+          <i18n-t keypath="top.ticket_early_price" tag="p" class="price">
+            <strong>7,000</strong>
+          </i18n-t>
+          <i18n-t keypath="top.ticket_price" tag="p" class="price">
+            <strong>8,000</strong>
+          </i18n-t>
+        </div>
       </template>
     </TicketCard>
-    <TicketCard color="typescript.blue">
-      <template #icon>
-        <Namecard />
+    <TicketCard>
+      <template #image>
+        <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
+      </template>
+      <template #action>
+        <a href="#" target="_blank" rel="noreferrer">一般＋アフターパーティチケット</a>
       </template>
       <template #default>
-        <h4>ネームカードの作成</h4>
-        <p>Namecard</p>
+        <div class="price-list">
+          <i18n-t keypath="top.ticket_early_price" tag="p" class="price">
+            <strong>10,000</strong>
+          </i18n-t>
+          <i18n-t keypath="top.ticket_price" tag="p" class="price">
+            <strong>11,000</strong>
+          </i18n-t>
+        </div>
+      </template>
+    </TicketCard>
+    <TicketCard>
+      <template #image>
+        <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
+      </template>
+      <template #action>
+        <nuxt-link to="/#handson">ハンズオンチケット</nuxt-link>
+      </template>
+      <template #default>
+        <div class="price">
+          <strong>無料</strong>
+        </div>
+        <p class="price-des">
+          ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくはハンズオンについてをご覧ください。
+        </p>
+      </template>
+    </TicketCard>
+    <TicketCard>
+      <template #image>
+        <img alt="" src="/tickets/personal-sponsor.png" width="400" height="225" decoding="async" />
+      </template>
+      <template #action>
+        <nuxt-link to="/#personal-sponsor">個人スポンサーチケット</nuxt-link>
+      </template>
+      <template #default>
+        <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price">
+          <strong>10,000</strong>
+        </i18n-t>
+        <p class="price-des">
+          ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは個人スポンサーについてをご覧ください。
+        </p>
       </template>
     </TicketCard>
   </div>
@@ -73,8 +121,32 @@ css({
   },
   '.process-wrapper': {
     display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 'calc({space.8} * 5)',
+  },
+  '.price-list': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: 'calc({space.8} * 1)',
+  },
+  '.price': {
+    color: '{color.vue.blue}',
+    fontSize: 'calc(18*{fontSize.base})',
+    fontWeight: 500,
+    lineHeight: 1.8,
+    '::v-deep(strong)': {
+      fontSize: 'calc(32*{fontSize.base})',
+      fontWeight: 700,
+      lineHeight: 1,
+    },
+  },
+  '.price-des': {
+    padding: '0 calc({space.8} * 6.25)',
+    color: '{color.vue.blue}',
+    fontSize: 'calc(12*{fontSize.base})',
+    fontWeight: 500,
+    lineHeight: 1.8,
   },
 })
 </style>

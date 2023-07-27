@@ -5,7 +5,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 </script>
 
 <template>
-  <h3><CommentTitle color="vue.green" title="必ず事前にご確認ください！" />ネームカード</h3>
+  <h3><CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />ネームカード</h3>
   <div class="explain">
     <MarkDownText path="namecard" />
   </div>
@@ -22,7 +22,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
       <em>{{ $t('words.namecard_deadline_date') }}</em>
     </i18n-t>
     <!-- ネームカードを作成 -->
-    <RoundButton href="#" target="_blank" rel="noreferrer">
+    <RoundButton to="/register" target="_blank" rel="noreferrer">
       {{ $t('words.create_namecard') }}
     </RoundButton>
   </div>

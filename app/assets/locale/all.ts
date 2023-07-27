@@ -27,6 +27,8 @@ export default {
        */
       namecard_infolink: '最新情報は、{0} をご確認ください。',
       tickets_schedule_limit: '応募期限: {0} まで',
+      ticket_early_price: '早割： {0} 円',
+      ticket_price: '通常： {0} 円',
       namecard_schedule_limit: '応募期限: {0} まで',
       handson_schedule_limit: '応募期限: {0} まで',
       /**
@@ -41,6 +43,7 @@ export default {
        */
       sponsors_subtitle: 'スポンサー',
       sponsors_schedule_limit: '応募期限: {0} まで',
+      personal_sponsor_price: '{0} 円',
       sponsors_toptext: '',
       sponsors_infolink: '詳細情報は、{0} をご確認ください。',
       /**
@@ -86,6 +89,8 @@ export default {
        */
       namecard_infolink: 'Confirm {0} in latest information.',
       tickets_schedule_limit: 'Tickets Deadline: Until {0}',
+      ticket_early_price: 'Early Price: ¥ {0}',
+      ticket_price: 'General Price: ¥ {0}',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',
       /**
@@ -100,6 +105,7 @@ export default {
        */
       sponsors_subtitle: 'Sponsors',
       sponsors_schedule_limit: 'Application Deadline: Until {0}',
+      personal_sponsor_price: '¥ {0}',
       sponsors_toptext: '',
       sponsors_infolink: 'For more information, please check {0}',
       /**

@@ -1,48 +1,47 @@
-<script setup lang="ts">
-import ArrowDownLogo from '~/assets/logo/arrow_down_logo.svg'
-import { Color } from '~/types/app'
-
-const props = defineProps({
-  color: {
-    type: String as PropType<Color>,
-    required: true,
-  },
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="process-root">
-    <slot name="icon" />
+    <div class="image">
+      <slot name="image" />
+    </div>
     <slot />
-    <component :is="ArrowDownLogo" class="arrow-down" />
+    <div class="action">
+      <slot name="action" />
+    </div>
   </div>
 </template>
 
 <style lang="ts" scoped>
 css({
   '.process-root': {
+    position: 'relative',
     display: 'grid',
     placeItems: 'center',
-    gap: 'calc({space.8} * 1)',
+    paddingBottom: 'calc({space.8} * 1)',
     width: '360px',
-    padding: 'calc({space.8} * 3) 0',
-    border: (props) => `calc({space.8} * 0.5) solid {color.${props.color}}`,
+    background: '{color.white}',
     borderRadius: 'calc({space.8} * 2)',
-    '::v-deep(h4)': {
-      color: (props) => `{color.${props.color}}`,
-      fontSize: 'calc(24*{fontSize.base})',
-      fontWeight: 700,
-    },
-    '::v-deep(p)': {
-      color: (props) => `{color.${props.color}}`,
-      fontSize: 'calc(16*{fontSize.base})',
-      fontWeight: 800,
-    },
   },
-  '.arrow-down': {
-    width: '24px',
-    height: '24px',
-    fill: (props) => `{color.${props.color}}`,
+  '.image': {
+    paddingBottom: 'calc({space.8} * 5.25)',
+  },
+  '.action': {
+    position: 'absolute',
+    top: '190px',
+    left: '50%',
+    transform: 'translate(-50%, 0)',
+    width: '400px',
+    textAlign: 'center',
+    '::v-deep(a)': {
+      display: 'block',
+      width: '300px',
+      margin: '0 auto',
+      background: '{color.vue.blue}',
+      color: '{color.white}',
+      padding: 'calc({space.8} * 1) 0',
+      borderRadius: 'calc({space.8} * 6.25)',
+    },
   },
 })
 </style>

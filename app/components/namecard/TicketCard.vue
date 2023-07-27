@@ -28,7 +28,7 @@ css({
   },
   '.action': {
     position: 'absolute',
-    top: '190px',
+    top: '180px',
     left: '50%',
     transform: 'translate(-50%, 0)',
     width: '400px',
@@ -41,6 +41,11 @@ css({
       color: '{color.white}',
       padding: 'calc({space.8} * 1) 0',
       borderRadius: 'calc({space.8} * 6.25)',
+    },
+  },
+  '@mobile': {
+    '.action': {
+      top: '160px',
     },
   },
 })

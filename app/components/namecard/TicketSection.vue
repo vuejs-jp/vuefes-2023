@@ -34,9 +34,12 @@ import RoundButton from '~/components/button/RoundButton.vue'
       </template>
       <template #default>
         <div class="price-list">
-          <i18n-t keypath="top.ticket_early_price" tag="p" class="price">
-            <strong>7,000</strong>
-          </i18n-t>
+          <div class="price">
+            <i18n-t keypath="top.ticket_early_price" tag="p">
+              <strong>7,000</strong>
+            </i18n-t>
+            <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+          </div>
           <i18n-t keypath="top.ticket_price" tag="p" class="price">
             <strong>8,000</strong>
           </i18n-t>
@@ -52,9 +55,12 @@ import RoundButton from '~/components/button/RoundButton.vue'
       </template>
       <template #default>
         <div class="price-list">
-          <i18n-t keypath="top.ticket_early_price" tag="p" class="price">
-            <strong>10,000</strong>
-          </i18n-t>
+          <div class="price">
+            <i18n-t keypath="top.ticket_early_price" tag="p">
+              <strong>10,000</strong>
+            </i18n-t>
+            <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+          </div>
           <i18n-t keypath="top.ticket_price" tag="p" class="price">
             <strong>11,000</strong>
           </i18n-t>
@@ -124,13 +130,20 @@ css({
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 'calc({space.8} * 5)',
+    '::v-deep(a)': {
+      '&:hover': {
+        transition: '.2s',
+      },
+    },
   },
   '.price-list': {
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 1)',
+    paddingBottom: 'calc({space.8} * 2)',
   },
   '.price': {
+    textAlign: 'right',
     color: '{color.vue.blue}',
     fontSize: 'calc(18*{fontSize.base})',
     fontWeight: 500,
@@ -140,6 +153,12 @@ css({
       fontWeight: 700,
       lineHeight: 1,
     },
+  },
+  '.early-price': {
+    color: '{color.vue.blue}',
+    fontSize: 'calc(12*{fontSize.base})',
+    fontWeight: 500,
+    lineHeight: 1.8,
   },
   '.price-des': {
     padding: '0 calc({space.8} * 6.25)',

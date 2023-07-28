@@ -10,9 +10,11 @@ import RoundButton from '~/components/button/RoundButton.vue'
       <MarkDownText path="handson" />
     </div>
     <div class="center">
+      <!--
       <i18n-t keypath="top.handson_schedule_limit" tag="p" class="deadline">
         <em>{{ $t('words.handson_deadline_date') }}</em>
       </i18n-t>
+      -->
       <RoundButton href="#" target="_blank" rel="noreferrer">
         {{ $t('words.apply_handson') }}
       </RoundButton>

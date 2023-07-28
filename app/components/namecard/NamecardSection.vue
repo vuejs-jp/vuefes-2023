@@ -2,6 +2,9 @@
 import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
+import { useNamecard } from '~/composables/useNamecard'
+
+const { canRegister } = useNamecard()
 </script>
 
 <template>
@@ -20,13 +23,17 @@ import RoundButton from '~/components/button/RoundButton.vue'
       decoding="async"
     />
     <div class="center">
+      <!--
       <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline">
         <em>{{ $t('words.namecard_deadline_date') }}</em>
       </i18n-t>
+      -->
       <!-- ネームカードを作成 -->
-      <RoundButton to="/register" target="_blank" rel="noreferrer">
-        {{ $t('words.create_namecard') }}
-      </RoundButton>
+      <div class="apply">
+        <RoundButton to="/register" target="_blank" rel="noreferrer" :disabled="!canRegister">
+          {{ $t('words.create_namecard') }}
+        </RoundButton>
+      </div>
     </div>
   </div>
 </template>
@@ -56,6 +63,9 @@ css({
     'strong': {
       fontWeight: 'bold',
     },
+  },
+  '.apply': {
+    width: '320px'
   },
   '.deadline': {
     color: '{color.vue.blue}',

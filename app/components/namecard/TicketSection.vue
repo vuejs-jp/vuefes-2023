@@ -13,13 +13,17 @@ import RoundButton from '~/components/button/RoundButton.vue'
       <MarkDownText path="ticket" />
     </div>
     <div class="center">
+      <!--
       <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline">
         <em>{{ $t('words.tickets_deadline_date') }}</em>
       </i18n-t>
+      -->
       <!-- チケットを購入 -->
-      <RoundButton href="#" target="_blank" rel="noreferrer">
-        {{ $t('words.buy_ticket') }}
-      </RoundButton>
+      <div class="apply">
+        <RoundButton href="#" target="_blank" rel="noreferrer">
+          {{ $t('words.buy_ticket') }}
+        </RoundButton>
+      </div>
     </div>
     <CommentTitle color="vue.green" title="お早めにご購入を！" />
     <h3>チケット種別</h3>
@@ -133,6 +137,9 @@ css({
     'strong': {
       fontWeight: 'bold',
     },
+  },
+  '.apply': {
+    width: '320px'
   },
   '.deadline': {
     color: '{color.vue.blue}',

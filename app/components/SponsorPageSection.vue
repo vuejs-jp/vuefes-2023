@@ -22,17 +22,12 @@ const { docPath } = useLocale('sponsor')
         <em>{{ $t('words.sponsors_deadline_date') }}</em>
       </i18n-t>
       -->
-      <i18n-t keypath="top.sponsors_schedule_over" tag="p" class="deadline-over">
-        <span>{{ $t('words.sponsors_deadline_date') }}</span>
+      <i18n-t keypath="top.sponsors_schedule_extend" tag="p" class="deadline-extend">
+        <em>{{ $t('words.sponsors_deadline_date') }}</em>
       </i18n-t>
       <div class="link-box">
         <!-- 申し込みフォーム -->
-        <RoundButton
-          href="https://forms.gle/rxHNdjFDnFGxzf5SA"
-          target="_blank"
-          rel="noreferrer"
-          disabled
-        >
+        <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
           {{ $t('words.application_form') }}
         </RoundButton>
         <!-- スポンサー資料 -->
@@ -41,7 +36,6 @@ const { docPath } = useLocale('sponsor')
           target="_blank"
           rel="noreferrer"
           outline
-          disabled
         >
           {{ $t('words.sponsordoc') }}
         </RoundButton>
@@ -86,9 +80,10 @@ css({
       lineHeight: '180%'
     },
   },
-  '.deadline': {
+  '.deadline, .deadline-extend': {
     color: '{color.vue.blue}',
     fontSize: '24px',
+    whiteSpace: 'pre-wrap',
 
     'em': {
       fontStyle: 'normal',

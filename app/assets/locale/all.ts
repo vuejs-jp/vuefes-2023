@@ -59,6 +59,7 @@ export default {
        */
       sponsors_subtitle: 'スポンサー',
       sponsors_schedule_limit: '応募期限: {0} まで',
+      sponsors_schedule_extend: 'スポンサー募集を延長しました。\n新しい応募期限: {0} まで',
       sponsors_schedule_over:
         'スポンサー募集は {0} をもって締め切りました。応募いただいた企業におかれましては感謝申し上げます。',
       personal_sponsor_price: '{0} 円',
@@ -139,6 +140,8 @@ export default {
        */
       sponsors_subtitle: 'Sponsors',
       sponsors_schedule_limit: 'Sponsorship Deadline: Until {0}',
+      sponsors_schedule_extend:
+        'We have extended the sponsorship period.\nSponsorship Deadline: Until {0}',
       sponsors_schedule_over:
         'Sponsorship opportunities have been closed as of {0} . We thank all companies that applied.',
       personal_sponsor_price: '¥ {0}',

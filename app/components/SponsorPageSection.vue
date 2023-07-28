@@ -17,12 +17,22 @@ const { docPath } = useLocale('sponsor')
       <ContentDoc v-slot="{ doc }" :path="docPath">
         <ContentRenderer class="subtitle" :value="doc" />
       </ContentDoc>
+      <!--
       <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline">
         <em>{{ $t('words.sponsors_deadline_date') }}</em>
       </i18n-t>
+      -->
+      <i18n-t keypath="top.sponsors_schedule_over" tag="p" class="deadline-over">
+        <span>{{ $t('words.sponsors_deadline_date') }}</span>
+      </i18n-t>
       <div class="link-box">
         <!-- 申し込みフォーム -->
-        <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
+        <RoundButton
+          href="https://forms.gle/rxHNdjFDnFGxzf5SA"
+          target="_blank"
+          rel="noreferrer"
+          disabled
+        >
           {{ $t('words.application_form') }}
         </RoundButton>
         <!-- スポンサー資料 -->
@@ -31,6 +41,7 @@ const { docPath } = useLocale('sponsor')
           target="_blank"
           rel="noreferrer"
           outline
+          disabled
         >
           {{ $t('words.sponsordoc') }}
         </RoundButton>
@@ -83,6 +94,10 @@ css({
       fontStyle: 'normal',
       fontWeight: 700,
     },
+  },
+  '.deadline-over': {
+    color: '{color.vue.blue}',
+    fontSize: '24px',
   },
   '.link-box': {
     display: 'flex',

@@ -35,7 +35,20 @@ const sponsorData: Sponsor =
 
 useHead({
   titleTemplate: (titleChunk) => `${sponsorData.name} | ${conferenceTitle}`,
-  meta: [...generalOg(), ...twitterOg()],
+  meta: [
+    ...generalOg({
+      title: `${sponsorData.name} | ${conferenceTitle}`,
+      description: `${sponsorData.name} のスポンサー情報を掲載しています。`,
+      url: `${linkUrl}sponsors/${sponsorData.id}`,
+      image: `${linkUrl}og/sponsors/${sponsorData.id}.png`,
+    }),
+    ...twitterOg({
+      title: `${sponsorData.name} | ${conferenceTitle}`,
+      description: `${sponsorData.name} のスポンサー情報を掲載しています。`,
+      url: `${linkUrl}sponsors/${sponsorData.id}`,
+      image: `${linkUrl}og/sponsors/${sponsorData.id}.png`,
+    }),
+  ],
 })
 </script>
 

@@ -30,9 +30,9 @@ const all: Sponsor[] = [
     url: 'https://yappli.co.jp/',
   },
   {
-    id: 'feature-architect',
+    id: 'future-architect',
     name: 'フューチャーアーキテクト株式会社',
-    image: '/sponsors/feature-architect.png',
+    image: '/sponsors/future-architect.png',
     categories: ['gold'],
     url: 'https://www.future.co.jp/architect/',
   },

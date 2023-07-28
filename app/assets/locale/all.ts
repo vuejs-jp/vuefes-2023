@@ -8,7 +8,7 @@ export default {
       codeofconduct: '行動規範',
       vuefes_twitter: 'Vue Fes Japan の Twitter',
       speakers_deadline_date: '2023/7/15（土）23:59:59',
-      sponsors_deadline_date: '2023/7/28（金）23:59:59',
+      sponsors_deadline_date: '2023/8/31（木）23:59:59',
       tickets_deadline_date: '2023/10/10（火）23:59:59',
       namecard_deadline_date: '2023/9/30（土）23:59:59',
       handson_deadline_date: '2023/10/10（火）23:59:59',
@@ -89,7 +89,7 @@ export default {
       /* prettier-ignore */
       vuefes_twitter: 'Vue Fes Japan\'s Twitter',
       speakers_deadline_date: '2023/7/15 (Sat) 23:59:59',
-      sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
+      sponsors_deadline_date: '2023/8/31（Thu）23:59:59',
       tickets_deadline_date: '2023/10/10（Tue）23:59:59',
       namecard_deadline_date: '2023/9/30（Sat）23:59:59',
       handson_deadline_date: '2023/10/10（Tue）23:59:59',

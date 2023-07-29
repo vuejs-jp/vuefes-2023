@@ -11,5 +11,5 @@ Vue.js とエコシステムがさらに発展しつつある中、この度 202
 ぜひ、一緒にカンファレンスに参加し、リアルでしか味わえない体験を楽しみましょう！
 
 <div class="representative">
-  Vue.js&ensp;日本ユーザーグループ&ensp;代表&ensp;川口 和也&ensp;( <a href="https://twitter.com/kazu_pon" target="_blank" rel="noreferrer">@kazu_pon</a> )
+  Vue.js&ensp;日本ユーザーグループ&ensp;代表&ensp;川口 和也&ensp;( <a href="https://x.com/kazu_pon" target="_blank" rel="noreferrer">@kazu_pon</a> )
 </div>

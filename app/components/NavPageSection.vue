@@ -3,7 +3,7 @@ import MenuLogo from '~/assets/logo/menu_logo.svg'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import NavView from '~/components/nav/NavView.vue'
-import { useNav, getNavLinks } from '~/composables/useNav'
+import { useNav } from '~/composables/useNav'
 import { conferenceTitle } from '~/utils/constants'
 
 const props = defineProps({
@@ -17,7 +17,7 @@ const props = defineProps({
   },
 })
 
-const { navRef } = useNav()
+const { navLinks, navRef } = useNav()
 const htmlRef = ref()
 const showMenu = ref(false)
 
@@ -25,7 +25,6 @@ const toggleMenu = () => {
   showMenu.value = !showMenu.value
   htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
 }
-const navLinks = await getNavLinks()
 
 onMounted(function () {
   htmlRef.value = document.querySelector('html')

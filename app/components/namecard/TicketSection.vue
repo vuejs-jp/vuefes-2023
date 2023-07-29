@@ -13,13 +13,17 @@ import RoundButton from '~/components/button/RoundButton.vue'
       <MarkDownText path="ticket" />
     </div>
     <div class="center">
+      <!--
       <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline">
         <em>{{ $t('words.tickets_deadline_date') }}</em>
       </i18n-t>
+      -->
       <!-- チケットを購入 -->
-      <RoundButton href="#" target="_blank" rel="noreferrer">
-        {{ $t('words.buy_ticket') }}
-      </RoundButton>
+      <div class="apply">
+        <RoundButton href="#" target="_blank" rel="noreferrer">
+          {{ $t('words.buy_ticket') }}
+        </RoundButton>
+      </div>
     </div>
     <CommentTitle color="vue.green" title="お早めにご購入を！" />
     <h3>チケット種別</h3>
@@ -78,7 +82,10 @@ import RoundButton from '~/components/button/RoundButton.vue'
             <strong>無料</strong>
           </div>
           <p class="price-des">
-            ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくはハンズオンについてをご覧ください。
+            ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは<nuxt-link
+              to="/#handson"
+              >ハンズオン</nuxt-link
+            >についてをご覧ください。
           </p>
         </template>
       </TicketCard>
@@ -100,7 +107,10 @@ import RoundButton from '~/components/button/RoundButton.vue'
             <strong>10,000</strong>
           </i18n-t>
           <p class="price-des">
-            ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは個人スポンサーについてをご覧ください。
+            ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは<nuxt-link
+              to="/#personal-sponsor"
+              >個人スポンサー</nuxt-link
+            >についてをご覧ください。
           </p>
         </template>
       </TicketCard>
@@ -133,6 +143,9 @@ css({
     'strong': {
       fontWeight: 'bold',
     },
+  },
+  '.apply': {
+    width: '320px'
   },
   '.deadline': {
     color: '{color.vue.blue}',
@@ -183,6 +196,13 @@ css({
     fontSize: 'calc(12*{fontSize.base})',
     fontWeight: 500,
     lineHeight: 1.8,
+    '::v-deep(a)': {
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
+    },
   },
 })
 </style>

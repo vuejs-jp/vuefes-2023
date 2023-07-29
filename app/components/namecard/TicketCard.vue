@@ -45,7 +45,7 @@ css({
   },
   '@mobile': {
     '.action': {
-      top: '160px',
+      top: '176px',
     },
   },
 })

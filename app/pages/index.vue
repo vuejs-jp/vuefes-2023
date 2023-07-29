@@ -4,7 +4,7 @@ import { useNamecard } from '~/composables/useNamecard'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
-const { canRegister } = useNamecard()
+const { canPurchase } = useNamecard()
 
 useHead({
   titleTemplate: (titleChunk) => `${conferenceTitle}`,
@@ -17,7 +17,7 @@ useHead({
     <NavPageSectionContainer />
     <TopPageSection />
     <MessagePageSection />
-    <template v-if="canRegister">
+    <template v-if="canPurchase">
       <TicketPageSection />
     </template>
     <SpeakerPageSection />

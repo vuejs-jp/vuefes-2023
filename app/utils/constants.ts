@@ -12,6 +12,14 @@ export const navLinks: NavLink[] = [
   { text: 'Contact', link: '/#form' },
 ]
 
+export const navRegisterLinks: NavLink[] = [
+  { text: 'Message', link: '/#message' },
+  { text: 'Ticket', link: '/#ticket' },
+  { text: 'Speakers', link: '/#speakers' },
+  { text: 'Sponsors', link: '/#sponsors' },
+  { text: 'Contact', link: '/#form' },
+]
+
 export const conferenceTitle = 'Vue Fes Japan 2023'
 
 export const ogDescription =

@@ -3,7 +3,9 @@ import CrossLogo from '~/assets/logo/cross_logo.svg'
 import ContactLinks from '~/components/footer/ContactLinks.vue'
 import PastEventsMobile from '~/components/footer/PastEventsMobile.vue'
 import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
-import { getNavLinks } from '~/composables/useNav'
+import { useNav } from '~/composables/useNav'
+
+const { navLinks } = useNav()
 
 const emit = defineEmits(['toggle'])
 const props = defineProps({
@@ -15,7 +17,6 @@ const props = defineProps({
 const emitToggle = () => {
   emit('toggle')
 }
-const navLinks = await getNavLinks()
 </script>
 
 <template>

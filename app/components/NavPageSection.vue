@@ -3,7 +3,7 @@ import MenuLogo from '~/assets/logo/menu_logo.svg'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import NavView from '~/components/nav/NavView.vue'
-import { useNav, getNavLinks } from '~/composables/useNav'
+import { useNav } from '~/composables/useNav'
 import { conferenceTitle } from '~/utils/constants'
 
 const props = defineProps({
@@ -11,9 +11,13 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  hasAlert: {
+    type: Boolean,
+    required: false,
+  },
 })
 
-const { navRef } = useNav()
+const { navLinks, navRef } = useNav()
 const htmlRef = ref()
 const showMenu = ref(false)
 
@@ -21,7 +25,6 @@ const toggleMenu = () => {
   showMenu.value = !showMenu.value
   htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
 }
-const navLinks = await getNavLinks()
 
 onMounted(function () {
   htmlRef.value = document.querySelector('html')
@@ -70,7 +73,7 @@ onMounted(function () {
 css({
   'nav': {
     position: 'fixed',
-    top: 0,
+    top: (props) => props.hasAlert ? '50px' : '0px',
     zIndex: 10,
     width: '100%',
     backgroundColor: 'rgba(53, 73, 94, 0.9)',
@@ -121,6 +124,9 @@ css({
     },
   },
   '@mobile': {
+    'nav': {
+      top: (props) => props.hasAlert ? '80px' : '0px',
+    },
     '.twitter':{
       display: 'block',
     },

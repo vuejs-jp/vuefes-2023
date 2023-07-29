@@ -16,9 +16,7 @@ definePageMeta({
 
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
-const { eventUser } = await useUser(signedUser.user_id)
-
-const isActivated = eventUser?.activated_at !== ''
+const { isActivated } = await useUser(signedUser.user_id)
 
 // mock
 // const avatar = {
@@ -44,7 +42,10 @@ const isActivated = eventUser?.activated_at !== ''
     <section>
       <StatusCard :status="isActivated ? 'registered' : 'failed'" />
       <h2>ネームカード</h2>
-      <AvatarCard :signed-user="{ ...signedUser, role: 'attendee' }" />
+      <AvatarCard
+        :signed-user="{ ...signedUser, role: 'attendee' }"
+        :opacity="isActivated ? 1 : 0.6"
+      />
       <RoundButton class="btn-update" href="/register">再編集</RoundButton>
     </section>
 

@@ -9,6 +9,12 @@ export default {
       vuefes_twitter: 'Vue Fes Japan の Twitter',
       speakers_deadline_date: '2023/7/15（土）23:59:59',
       sponsors_deadline_date: '2023/7/28（金）23:59:59',
+      tickets_deadline_date: '2023/10/10（火）23:59:59',
+      namecard_deadline_date: '2023/9/30（土）23:59:59',
+      handson_deadline_date: '2023/10/10（火）23:59:59',
+      buy_ticket: 'チケットを購入',
+      create_namecard: 'ネームカードを作成',
+      apply_handson: 'チケットを購入',
     },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
@@ -16,6 +22,16 @@ export default {
        * message section
        */
       message_subtitle: '想い',
+      /**
+       * namecard section
+       */
+      namecard_infolink: '最新情報は、{0} をご確認ください。',
+      tickets_schedule_limit: '応募期限: {0} まで',
+      ticket_early_price: '早割： {0} 円',
+      ticket_early_price_explain: '※ 9/18（月・祝）23:59まで',
+      ticket_price: '通常： {0} 円',
+      namecard_schedule_limit: '応募期限: {0} まで',
+      handson_schedule_limit: '応募期限: {0} まで',
       /**
        * speakers section
        */
@@ -28,6 +44,7 @@ export default {
        */
       sponsors_subtitle: 'スポンサー',
       sponsors_schedule_limit: '応募期限: {0} まで',
+      personal_sponsor_price: '{0} 円',
       sponsors_toptext: '',
       sponsors_infolink: '詳細情報は、{0} をご確認ください。',
       /**
@@ -55,6 +72,12 @@ export default {
       vuefes_twitter: 'Vue Fes Japan\'s Twitter',
       speakers_deadline_date: '2023/7/15 (Sat) 23:59:59',
       sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
+      tickets_deadline_date: '2023/10/10（Tue）23:59:59',
+      namecard_deadline_date: '2023/9/30（Sat）23:59:59',
+      handson_deadline_date: '2023/10/10（Tue）23:59:59',
+      buy_ticket: 'Buy A Ticket',
+      create_namecard: 'Create A Namecard',
+      apply_handson: 'Apply Hands-On',
     },
     top: {
       check_twitter: 'Check information on Twitter!',
@@ -62,6 +85,16 @@ export default {
        * message section
        */
       message_subtitle: 'Thought',
+      /**
+       * namecard section
+       */
+      namecard_infolink: 'Confirm {0} in latest information.',
+      tickets_schedule_limit: 'Tickets Deadline: Until {0}',
+      ticket_early_price: 'Early Price: ¥ {0}',
+      ticket_early_price_explain: '※ Until 9/18 (Mon/Holiday) 23:59',
+      ticket_price: 'General Price: ¥ {0}',
+      namecard_schedule_limit: 'Name card Deadline: Until {0}',
+      handson_schedule_limit: 'Hands-on Deadline: Until {0}',
       /**
        * speakers section
        */
@@ -74,6 +107,7 @@ export default {
        */
       sponsors_subtitle: 'Sponsors',
       sponsors_schedule_limit: 'Application Deadline: Until {0}',
+      personal_sponsor_price: '¥ {0}',
       sponsors_toptext: '',
       sponsors_infolink: 'For more information, please check {0}',
       /**

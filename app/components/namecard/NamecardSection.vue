@@ -30,7 +30,12 @@ const { canRegister } = useNamecard()
       -->
       <!-- ネームカードを作成 -->
       <div class="apply">
-        <RoundButton to="/register" target="_blank" rel="noreferrer" :disabled="!canRegister">
+        <RoundButton
+          :to="canRegister ? '/register' : '#'"
+          target="_blank"
+          rel="noreferrer"
+          :disabled="!canRegister"
+        >
           {{ $t('words.create_namecard') }}
         </RoundButton>
       </div>

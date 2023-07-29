@@ -1,8 +1,16 @@
-import { navLinks, NavLink } from '~/utils/constants'
+import { navLinks as _navLinks, navRegisterLinks, NavLink } from '~/utils/constants'
+import { useNamecard } from '~/composables/useNamecard'
 
 export function useNav() {
   const navRef = ref<HTMLElement | null>(null)
   const showNav = ref(false)
+
+  const { canPurchase } = useNamecard()
+
+  const navLinks = computed(() => {
+    if (canPurchase) return navRegisterLinks
+    return _navLinks
+  })
 
   function checkShowNav() {
     showNav.value = window.pageYOffset > 50
@@ -17,12 +25,5 @@ export function useNav() {
     window.removeEventListener('scroll', checkShowNav)
   })
 
-  return { navRef, showNav }
-}
-
-export async function getNavLinks(): Promise<ComputedRef<NavLink[]>> {
-  const myNavLinks = computed(() => {
-    return [...navLinks]
-  })
-  return myNavLinks
+  return { navRef, showNav, navLinks }
 }

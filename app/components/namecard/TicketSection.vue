@@ -82,7 +82,10 @@ import RoundButton from '~/components/button/RoundButton.vue'
             <strong>無料</strong>
           </div>
           <p class="price-des">
-            ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくはハンズオンについてをご覧ください。
+            ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは<nuxt-link
+              to="/#handson"
+              >ハンズオン</nuxt-link
+            >についてをご覧ください。
           </p>
         </template>
       </TicketCard>
@@ -104,7 +107,10 @@ import RoundButton from '~/components/button/RoundButton.vue'
             <strong>10,000</strong>
           </i18n-t>
           <p class="price-des">
-            ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは個人スポンサーについてをご覧ください。
+            ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは<nuxt-link
+              to="/#personal-sponsor"
+              >個人スポンサー</nuxt-link
+            >についてをご覧ください。
           </p>
         </template>
       </TicketCard>
@@ -190,6 +196,13 @@ css({
     fontSize: 'calc(12*{fontSize.base})',
     fontWeight: 500,
     lineHeight: 1.8,
+    '::v-deep(a)': {
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
+    },
   },
 })
 </style>

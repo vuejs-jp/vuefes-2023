@@ -15,9 +15,11 @@ import RoundButton from '~/components/button/RoundButton.vue'
         <em>{{ $t('words.handson_deadline_date') }}</em>
       </i18n-t>
       -->
-      <RoundButton href="#" target="_blank" rel="noreferrer">
-        {{ $t('words.apply_handson') }}
-      </RoundButton>
+      <div class="apply">
+        <RoundButton href="#" target="_blank" rel="noreferrer">
+          {{ $t('words.apply_handson') }}
+        </RoundButton>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +49,9 @@ css({
     'strong': {
       fontWeight: 'bold',
     },
+  },
+  '.apply': {
+    width: '320px'
   },
   '.deadline': {
     color: '{color.vue.blue}',

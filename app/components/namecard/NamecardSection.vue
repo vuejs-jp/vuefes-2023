@@ -65,6 +65,7 @@ css({
     fontSize: 'calc(18*{fontSize.base})',
     fontWeight: 500,
     lineHeight: 1.8,
+    whiteSpace: 'pre-wrap',
     'strong': {
       fontWeight: 'bold',
     },

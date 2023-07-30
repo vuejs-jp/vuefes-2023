@@ -4,6 +4,13 @@ import PastEvents from '~/components/footer/PastEvents.vue'
 import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
 import CopyrightText from '~/components/footer/CopyrightText.vue'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
+
+const props = defineProps({
+  hasAuth: {
+    type: Boolean,
+    required: false,
+  },
+})
 </script>
 
 <template>
@@ -11,7 +18,7 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
     <div class="footer-vuefes-logo">
       <VueFesLogo />
     </div>
-    <div class="footer-info">
+    <div v-if="!hasAuth" class="footer-info">
       <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
       <div v-if="!$device.isMobile" class="footer-info-links">
         <div class="contacts">
@@ -27,8 +34,11 @@ import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
         <CopyrightText />
       </div>
     </div>
+    <div v-if="hasAuth" class="footer-info">
+      <CopyrightText />
+    </div>
     <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
-    <div v-if="$device.isMobile" class="footer-copyright">
+    <div v-if="!hasAuth && $device.isMobile" class="footer-copyright">
       <CopyrightText />
     </div>
   </section>

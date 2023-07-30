@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/i18n',
     '@nuxt/content',
+    '@nuxthq/studio',
   ],
   pinceau: {
     configFileName: 'tokens.config',

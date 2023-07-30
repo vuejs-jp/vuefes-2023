@@ -5,9 +5,9 @@ import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
 <template>
-  <section id="personal-sponsor">
+  <section class="personal-sponsor">
     <!-- 個人スポンサー -->
-    <h3>{{ $t('words.personal_sponsor') }}</h3>
+    <h3 id="personal-sponsor">{{ $t('words.personal_sponsor') }}</h3>
     <MarkDownText path="personal-sponsors-text1" />
     <div class="personal-sponsor-apply">
       <i18n-t keypath="top.sponsors_personal_limit" tag="p" class="personal-sponsor-limit">
@@ -47,7 +47,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
 
 <style lang="ts" scoped>
 css({
-  '#personal-sponsor': {
+  '.personal-sponsor': {
     padding: 'calc({space.8} * 4) 0',
     background: '#EEEEEE',
     fontSize: 'calc(18*{fontSize.base})',

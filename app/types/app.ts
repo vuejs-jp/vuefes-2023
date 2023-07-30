@@ -104,7 +104,7 @@ export type SpeakerProfile = {
  * sponsor
  */
 
-export type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze'
+export type SponsorCategory = 'platinum' | 'gold' | 'silver' | 'bronze' | 'individual'
 
 export type OptionCategory =
   | 'session-room-naming-rights'

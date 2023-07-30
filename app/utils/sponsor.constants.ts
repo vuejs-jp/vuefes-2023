@@ -261,6 +261,8 @@ const interpretationSponsors: Sponsor[] = all.filter((s: Sponsor) =>
 
 const mediaSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('media'))
 
+const individual: string[] = []
+
 export {
   platinumSponsors,
   goldSponsors,
@@ -274,5 +276,6 @@ export {
   interpretationSponsors,
   refreshmentSponsors,
   mediaSponsors,
+  individual,
   all,
 }

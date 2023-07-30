@@ -9,6 +9,7 @@ export default {
       vuefes_twitter: 'Vue Fes Japan の Twitter',
       speakers_deadline_date: '2023/7/15（土）23:59:59',
       sponsors_deadline_date: '2023/8/31（木）23:59:59',
+      sponsors_personal_deadline_date: '2023/8/31（木）23:59:59',
       tickets_deadline_date: '2023/10/10（火）23:59:59',
       namecard_deadline_date: '2023/9/30（土）23:59:59',
       handson_deadline_date: '2023/10/10（火）23:59:59',
@@ -16,6 +17,8 @@ export default {
       create_namecard: 'ネームカードを作成',
       apply_handson: 'チケットを購入',
       back_top: 'トップに戻る',
+      apply_personal_sponsor: '個人スポンサーに応募',
+      personal_sponsor: '個人スポンサー',
     },
     category: {
       platinum: 'Platinum',
@@ -65,6 +68,7 @@ export default {
       personal_sponsor_price: '{0} 円',
       sponsors_toptext: '',
       sponsors_infolink: '詳細情報は、{0} をご確認ください。',
+      sponsors_personal_limit: '登録期限: {0} まで',
       /**
        * contact section
        */
@@ -97,6 +101,8 @@ export default {
       create_namecard: 'Create A Namecard',
       apply_handson: 'Apply Hands-On',
       back_top: 'Back to Top',
+      apply_personal_sponsor: 'Apply Personal Sponsor',
+      personal_sponsor: 'Personal Sponsor',
     },
     category: {
       platinum: 'Platinum',
@@ -147,6 +153,7 @@ export default {
       personal_sponsor_price: '¥ {0}',
       sponsors_toptext: '',
       sponsors_infolink: 'For more information, please check {0}',
+      sponsors_personal_limit: 'Sponsorship Deadline: Until: {0}',
       /**
        * contact section
        */

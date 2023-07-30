@@ -67,6 +67,17 @@ export default {
         'スポンサー募集は {0} をもって締め切りました。応募いただいた企業におかれましては感謝申し上げます。',
       personal_sponsor_price: '{0} 円',
       sponsors_toptext: '',
+      sponsors_merit1: 'クレジット掲載',
+      sponsors_merit1_detail: 'Vue Fes Japan 公式 Web サイトにお名前を掲載します（希望者のみ）。',
+      sponsors_merit2: 'Vue Fes Japan 2023 スタッフ限定Tシャツ',
+      sponsors_merit2_detail:
+        'スタッフのみに配布される限定 Tシャツがもらえます。\n※サイズはXS～XXL。チケット購入時にご指定ください。',
+      sponsors_merit3: '優先入場',
+      sponsors_merit3_detail:
+        '当日の受付に個人スポンサー優先レーンをご用意します。行列に並ぶことなく、スムーズにご入場いただけます。',
+      sponsors_merit4: '優先席',
+      sponsors_merit4_detail:
+        '各トラック会場の最前列に優先席をご用意いたします。\n※セッション開始後、空席になっている場合は一般参加者にも開放されます。',
       sponsors_infolink: '詳細情報は、{0} をご確認ください。',
       sponsors_personal_limit: '登録期限: {0} まで',
       /**
@@ -152,6 +163,18 @@ export default {
         'Sponsorship opportunities have been closed as of {0} . We thank all companies that applied.',
       personal_sponsor_price: '¥ {0}',
       sponsors_toptext: '',
+      sponsors_merit1: 'Posting credits',
+      sponsors_merit1_detail:
+        'Your name will be posted on Vue Fes Japan official website (applicants only).',
+      sponsors_merit2: 'Vue Fes Japan 2023 Staff T-shirt for limited',
+      sponsors_merit2_detail:
+        'You will receive a limited T-shirt distributed only to the staff. \n *Sizes are XS to XXL. Please specify when purchasing your ticket.',
+      sponsors_merit3: 'Priority entrance',
+      sponsors_merit3_detail:
+        'Personal sponsor priority lanes will be available at the reception on the day of the event. You can enter smoothly without waiting in line.',
+      sponsors_merit4: 'Priority seating',
+      sponsors_merit4_detail:
+        'Priority seats will be available in the front row of each track venue. \n * After the session starts, if there are vacant seats, they will be open to general participants.',
       sponsors_infolink: 'For more information, please check {0}',
       sponsors_personal_limit: 'Sponsorship Deadline: Until: {0}',
       /**

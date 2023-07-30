@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
+import SponsorMerits from '~/components/sponsor/SponsorMerits.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
@@ -8,10 +9,16 @@ import MarkDownText from '~/components/MarkDownText.vue'
     <!-- 個人スポンサー -->
     <h3 id="personal-sponsor">{{ $t('words.personal_sponsor') }}</h3>
     <MarkDownText path="personal-sponsors-text1" />
+    <SponsorMerits />
+    <div class="personal-sponsor-cap">
+      <MarkDownText path="personal-sponsors-caption" />
+    </div>
     <div class="personal-sponsor-apply">
+      <!--
       <i18n-t keypath="top.sponsors_personal_limit" tag="p" class="personal-sponsor-limit">
         <strong>{{ $t('words.sponsors_personal_deadline_date') }}</strong>
       </i18n-t>
+      -->
       <!-- 個人スポンサーに応募 -->
       <RoundButton
         href="https://forms.gle/rxHNdjFDnFGxzf5SA"
@@ -21,21 +28,6 @@ import MarkDownText from '~/components/MarkDownText.vue'
       >
         {{ $t('words.apply_personal_sponsor') }}
       </RoundButton>
-    </div>
-    <div class="personal-sponsors-text2">
-      <MarkDownText path="personal-sponsors-text2" />
-    </div>
-    <img
-      width="760"
-      height="498"
-      :alt="`個人スポンサー特典 1:限定Tシャツ配布 2:優先入場 3:優先席`"
-      src="/sponsors/personal-sponsor.png"
-      loading="lazy"
-      decoding="async"
-      class="personal-sponsor-img"
-    />
-    <div class="personal-sponsor-cap">
-      <MarkDownText path="personal-sponsors-caption" />
     </div>
   </section>
 </template>
@@ -48,6 +40,8 @@ css({
     fontSize: 'calc(18*{fontSize.base})',
     color: '{color.vue.blue}',
     lineHeight: '1.8',
+    display: 'grid',
+    gap: 'calc({space.8} * 3)',
   },
   'h3': {
     fontSize: 'calc(32*{fontSize.base})',

@@ -17,7 +17,6 @@ export function useLocale(path: Path) {
       .with('privacy', () => `/${locale.value}/privacy`)
       .with('code-of-conduct', () => `/${locale.value}/code-of-conduct`)
       .with('personal-sponsors-text1', () => `/${locale.value}/top/personal-sponsors-text1`)
-      .with('personal-sponsors-text2', () => `/${locale.value}/top/personal-sponsors-text2`)
       .with('personal-sponsors-caption', () => `/${locale.value}/top/personal-sponsors-caption`)
 
     // set sponsors markdown

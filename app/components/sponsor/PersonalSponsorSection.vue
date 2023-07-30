@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
-import SponsorCategoryTitle from './SponsorCategoryTitle.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
@@ -38,10 +37,6 @@ import MarkDownText from '~/components/MarkDownText.vue'
     <div class="personal-sponsor-cap">
       <MarkDownText path="personal-sponsors-caption" />
     </div>
-    <SponsorCategoryTitle category="individual" />
-    <ul class="personal-sponsor-list">
-      <li>TBD</li>
-    </ul>
   </section>
 </template>
 
@@ -90,12 +85,5 @@ css({
       paddingLeft: '1em',
     }
   },
-  '.personal-sponsor-list': {
-    display: 'flex',
-    flexWrap: 'wrap',
-    color: '{color.sponsor.options}',
-    fontSize: 'calc(24*{fontSize.base})',
-    gap: '0 1em',
-  }
 })
 </style>

@@ -25,11 +25,7 @@ const { signedUser } = useUserStore()
 const { addEventUser } = useSupabase()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
-const {
-  isSubmitting,
-  nameError,
-  validateName,
-} = useForm()
+const { isSubmitting, nameError, validateName } = useForm()
 
 const picture = ref()
 const displayName = ref('')
@@ -63,7 +59,6 @@ const updateReceiptId = (value: string) => {
   receiptId.value = value
 }
 
-
 onMounted(function () {
   isShow.value = !signedUser.user_id
 })
@@ -89,10 +84,21 @@ onMounted(function () {
         <div class="form">
           <form>
             <!-- お名前／Name  -->
-            <InputField id="displayName" name="displayName" :title-label="$t('top.register_form_display_name_label')"
-              required :error="nameError" @input="updateDisplayName" @blur="validateName" />
+            <InputField
+              id="displayName"
+              name="displayName"
+              :title-label="$t('top.register_form_display_name_label')"
+              required
+              :error="nameError"
+              @input="updateDisplayName"
+              @blur="validateName"
+            />
             <!-- アバター-->
-            <DragDropArea file-name="profiledata" file-accept="image/png,image/jpeg,image/gif" @check-files="checkFiles">
+            <DragDropArea
+              file-name="profiledata"
+              file-accept="image/png,image/jpeg,image/gif"
+              @check-files="checkFiles"
+            >
               <div class="upload">
                 <UploadLogo />
                 <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
@@ -101,26 +107,39 @@ onMounted(function () {
               </div>
             </DragDropArea>
             <h3>チケット情報の入力</h3>
-            <p>チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。</p>
+            <p>
+              チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。
+            </p>
             <!-- あいことば  -->
-            <InputField id="secretWord" name="secretWord" :title-label="$t('top.register_form_secret_word_label')"
-              required :error="nameError" @input="updateSecretWord" @blur="validateName" />
+            <InputField
+              id="secretWord"
+              name="secretWord"
+              :title-label="$t('top.register_form_secret_word_label')"
+              required
+              :error="nameError"
+              @input="updateSecretWord"
+              @blur="validateName"
+            />
             <!-- 注文番号 -->
-            <InputField id="receiptId" name="receiptId" :title-label="$t('top.register_form_receipt_id_label')" required
-              :error="nameError" @input="updateReceiptId" @blur="validateName" />
+            <InputField
+              id="receiptId"
+              name="receiptId"
+              :title-label="$t('top.register_form_receipt_id_label')"
+              required
+              :error="nameError"
+              @input="updateReceiptId"
+              @blur="validateName"
+            />
 
             <div class="link-box">
               <!-- キャンセル -->
-              <RoundButton href="/" outline>
-                キャンセル
-              </RoundButton>
+              <RoundButton href="/" outline> キャンセル </RoundButton>
               <!-- 確定 -->
               <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
             </div>
           </form>
         </div>
       </div>
-
 
       <p>↓DEBUG↓</p>
       <div class="resultarea">

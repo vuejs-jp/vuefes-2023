@@ -13,6 +13,11 @@ const props = defineProps({
     required: true,
   },
 })
+
+interface PopupAreaEmit {
+  (e: 'sign-out'): void
+}
+const emit = defineEmits<PopupAreaEmit>()
 </script>
 
 <template>

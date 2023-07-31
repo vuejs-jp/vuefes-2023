@@ -20,8 +20,8 @@ css({
     placeItems: 'center',
     paddingBottom: 'calc({space.8} * 1)',
     width: '360px',
-    background: '{color.white}',
-    borderRadius: 'calc({space.8} * 2)',
+    background: '#F2F7FF',
+    borderRadius: '0 0 calc({space.8} * 0.5) calc({space.8} * 0.5)',
   },
   '.image': {
     paddingBottom: 'calc({space.8} * 5.25)',

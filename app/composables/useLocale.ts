@@ -14,6 +14,7 @@ export function useLocale(path: Path) {
       .with('ticket', () => `/${locale.value}/top/ticket`)
       .with('namecard', () => `/${locale.value}/top/namecard`)
       .with('volunteer', () => `/${locale.value}/top/volunteer`)
+      .with('childcare', () => `/${locale.value}/top/childcare`)
       .with('handson', () => `/${locale.value}/top/handson`)
       .with('privacy', () => `/${locale.value}/privacy`)
       .with('code-of-conduct', () => `/${locale.value}/code-of-conduct`)

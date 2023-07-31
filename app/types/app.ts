@@ -12,6 +12,7 @@ export type Path =
   | 'ticket'
   | 'namecard'
   | 'volunteer'
+  | 'childcare'
   | 'handson'
   | 'privacy'
   | 'code-of-conduct'

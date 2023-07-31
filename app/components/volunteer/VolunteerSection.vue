@@ -2,13 +2,10 @@
 import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
-import { useNamecard } from '~/composables/useNamecard'
-
-const { canRegister } = useNamecard()
 </script>
 
 <template>
-  <div class="namecard">
+  <div class="volunteer">
     <CommentTitle color="vue.green" title="あなたも一緒に Vue Fes Japan を盛り上げませんか？" />
     <h3>当日ボランティア募集</h3>
     <div class="explain">
@@ -34,7 +31,7 @@ css({
     placeItems: 'center',
     gap: 'calc({space.8} * 1.5)',
   },
-  '.namecard': {
+  '.volunteer': {
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 3)',
@@ -53,6 +50,9 @@ css({
     'strong': {
       fontWeight: 'bold',
     },
+    ':not(:last-child)': {
+      paddingBottom: 'calc({space.8} * 3)',
+    },
   },
   '.apply': {
     width: '320px'
@@ -64,10 +64,6 @@ css({
       fontStyle: 'normal',
       fontWeight: 700,
     },
-  },
-  '.ticket-img': {
-    display: 'block',
-    margin: '0 auto'
   },
 })
 </style>

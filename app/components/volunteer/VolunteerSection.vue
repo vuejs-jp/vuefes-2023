@@ -9,34 +9,18 @@ const { canRegister } = useNamecard()
 
 <template>
   <div class="namecard">
-    <CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />
-    <h3>ネームカード</h3>
+    <CommentTitle color="vue.green" title="あなたも一緒に Vue Fes Japan を盛り上げませんか？" />
+    <h3>当日ボランティア募集</h3>
     <div class="explain">
-      <MarkDownText path="namecard" />
+      <MarkDownText path="volunteer" />
     </div>
-    <img
-      class="ticket-img"
-      src="/namecard/sample.png"
-      alt=""
-      width="592"
-      height="395"
-      decoding="async"
-    />
     <div class="center">
-      <!--
-      <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline">
-        <em>{{ $t('words.namecard_deadline_date') }}</em>
+      <i18n-t keypath="top.volunteer_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.volunteer_deadline_date') }}</em>
       </i18n-t>
-      -->
-      <!-- ネームカードを作成 -->
       <div class="apply">
-        <RoundButton
-          :to="canRegister ? '/register' : '#'"
-          target="_blank"
-          rel="noreferrer"
-          :disabled="!canRegister"
-        >
-          {{ $t('words.create_namecard') }}
+        <RoundButton href="#" target="_blank" rel="noreferrer">
+          {{ $t('words.apply_volunteer') }}
         </RoundButton>
       </div>
     </div>

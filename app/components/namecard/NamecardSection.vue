@@ -69,6 +69,9 @@ css({
     'strong': {
       fontWeight: 'bold',
     },
+    ':not(:last-child)': {
+      paddingBottom: 'calc({space.8} * 3)',
+    },
   },
   '.apply': {
     width: '320px'

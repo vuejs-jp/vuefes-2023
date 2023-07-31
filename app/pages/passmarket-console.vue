@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import RoundButton from '~/components/button/RoundButton.vue'
+import { usePassMarket } from '~/composables/usePassMarket'
 import { usePassMarketUpload } from '~/composables/usePassMarketUpload'
 import { useSupabase } from '~/composables/useSupabase'
-import { AdditionItem, ListMember } from '~/types/app'
+import { AdditionItem, ListMember, Role } from '~/types/app'
 
 const memberData = ref<ListMember[]>()
 const members = ref<AdditionItem[]>()
-const receiptIds = ref<{ role: 'attendee'; receipt_id: string }[]>([])
+const receiptIds = ref<{ role: Role; receipt_id: string }[]>([])
 
+const { getReceipts } = usePassMarket()
 const { convertMembers, fetchSheet } = usePassMarketUpload()
 const { updatePMReceipt } = useSupabase()
 
@@ -24,7 +26,9 @@ const checkFiles = async (files: File[]) => {
 
   if (filename === FileName.LIST_XLS) {
     memberData.value = await fetchSheet(file)
-    console.log('memberData', memberData.value)
+    // console.log('memberData', memberData.value)
+    receiptIds.value = getReceipts(memberData.value)
+    console.log('receiptIds', receiptIds.value)
   }
   if (filename === FileName.ADDITION_CSV) {
     members.value = await convertMembers(file)
@@ -58,6 +62,14 @@ const onUpdate = () => {
       <RoundButton @click="onUpdate">レシート情報の取込</RoundButton>
     </div>
     <div class="resultarea">
+      <div v-if="receiptIds">
+        <ul>
+          <li v-for="(receipt, index) in receiptIds" :key="index">
+            {{ receipt }}
+          </li>
+        </ul>
+      </div>
+      <!--
       <div v-if="memberData">
         <ul>
           <li v-for="(member, index) in memberData" :key="index">
@@ -72,6 +84,7 @@ const onUpdate = () => {
           </li>
         </ul>
       </div>
+      -->
       <div v-if="!memberData && !members" class="noresult">Upload your CSV file from the top</div>
     </div>
   </main>

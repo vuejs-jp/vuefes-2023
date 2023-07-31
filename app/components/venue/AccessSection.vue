@@ -114,5 +114,15 @@ css({
       textDecoration: 'underline',
     },
   },
+  '@mobile': {
+    '.access-content': {
+      flexDirection: 'column-reverse',
+    },
+    '.images': {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+    },
+  },
 })
 </style>

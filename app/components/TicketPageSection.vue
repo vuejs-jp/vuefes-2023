@@ -29,7 +29,7 @@ import FaqSection from '~/components/namecard/FaqSection.vue'
 css({
   'section': {
     padding: '120px 20px 120px',
-    backgroundColor: '#eee'
+    backgroundColor: '#fff'
   },
   '.ticket-root': {
     display: 'grid',

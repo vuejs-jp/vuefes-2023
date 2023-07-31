@@ -36,7 +36,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
 css({
   '.personal-sponsor': {
     padding: 'calc({space.8} * 4) 0',
-    background: '#EEEEEE',
+    background: '#fff',
     fontSize: 'calc(18*{fontSize.base})',
     color: '{color.vue.blue}',
     lineHeight: '1.8',

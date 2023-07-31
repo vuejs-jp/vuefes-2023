@@ -16,6 +16,7 @@ export default {
       buy_ticket: 'チケットを購入',
       create_namecard: 'ネームカードを作成',
       apply_volunteer: 'ボランティアに応募',
+      apply_childcare: 'サポートを申し込む',
       apply_handson: 'チケットを購入',
     },
     top: {
@@ -85,6 +86,7 @@ export default {
       buy_ticket: 'Buy A Ticket',
       create_namecard: 'Create A Namecard',
       apply_volunteer: 'Apply Volunteer',
+      apply_childcare: 'Apply Child Care',
       apply_handson: 'Apply Hands-On',
     },
     top: {

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import EventSection from '~/components/event/EventSection.vue'
 import StoreSection from '~/components/event/StoreSection.vue'
-import ChildCareSection from '~/components/event/ChildCareSection.vue'
 </script>
 
 <template>
@@ -9,7 +8,6 @@ import ChildCareSection from '~/components/event/ChildCareSection.vue'
     <div class="event-root">
       <EventSection />
       <StoreSection />
-      <ChildCareSection />
     </div>
   </section>
 </template>

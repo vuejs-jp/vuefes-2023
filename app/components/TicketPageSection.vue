@@ -2,6 +2,7 @@
 import Arrow3 from '~/assets/namecard/arrow3.svg'
 import TicketSection from '~/components/namecard/TicketSection.vue'
 import NamecardSection from '~/components/namecard/NamecardSection.vue'
+import VolunteerSection from '~/components/volunteer/VolunteerSection.vue'
 import HandsonSection from '~/components/handson/HandsonSection.vue'
 import PersonalSponsorSection from '~/components/sponsor/PersonalSponsorSection.vue'
 import FaqSection from '~/components/namecard/FaqSection.vue'
@@ -13,6 +14,7 @@ import FaqSection from '~/components/namecard/FaqSection.vue'
       <TicketSection />
       <Arrow3 class="arrow" />
       <NamecardSection />
+      <VolunteerSection />
       <HandsonSection />
       <PersonalSponsorSection />
       <FaqSection />

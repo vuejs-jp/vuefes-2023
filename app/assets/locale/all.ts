@@ -11,9 +11,11 @@ export default {
       sponsors_deadline_date: '2023/7/28（金）23:59:59',
       tickets_deadline_date: '2023/10/10（火）23:59:59',
       namecard_deadline_date: '2023/9/30（土）23:59:59',
+      volunteer_deadline_date: '2023/8/31（木）23:59:59',
       handson_deadline_date: '2023/10/10（火）23:59:59',
       buy_ticket: 'チケットを購入',
       create_namecard: 'ネームカードを作成',
+      apply_volunteer: 'ボランティアに応募',
       apply_handson: 'チケットを購入',
     },
     top: {
@@ -32,6 +34,10 @@ export default {
       ticket_price: '通常： {0} 円',
       namecard_schedule_limit: '応募期限: {0} まで',
       handson_schedule_limit: '応募期限: {0} まで',
+      /**
+       * volunteer section
+       */
+      volunteer_schedule_limit: '応募期限: {0} まで',
       /**
        * speakers section
        */
@@ -74,9 +80,11 @@ export default {
       sponsors_deadline_date: '2023/7/28（Fri）23:59:59',
       tickets_deadline_date: '2023/10/10（Tue）23:59:59',
       namecard_deadline_date: '2023/9/30（Sat）23:59:59',
+      volunteer_deadline_date: '2023/8/31（Thu）23:59:59',
       handson_deadline_date: '2023/10/10（Tue）23:59:59',
       buy_ticket: 'Buy A Ticket',
       create_namecard: 'Create A Namecard',
+      apply_volunteer: 'Apply Volunteer',
       apply_handson: 'Apply Hands-On',
     },
     top: {
@@ -95,6 +103,10 @@ export default {
       ticket_price: 'General Price: ¥ {0}',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',
+      /**
+       * volunteer section
+       */
+      volunteer_schedule_limit: '応募期限: {0} まで',
       /**
        * speakers section
        */

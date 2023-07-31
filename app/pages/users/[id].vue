@@ -53,7 +53,7 @@ const { isActivated } = await useUser(signedUser.user_id)
       <UserForDev />
     </div>
 
-    <FooterPageSection />
+    <FooterPageSection has-auth />
   </main>
 </template>
 

@@ -15,7 +15,7 @@ const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
 const { isActivated } = await useUser(signedUser.user_id)
 const { handle, isShow } = useDialog()
-const { canRegister } = useNamecard()
+const { canPurchase, canRegister } = useNamecard()
 
 useHead({
   titleTemplate: (titleChunk) => `${conferenceTitle}`,
@@ -54,7 +54,7 @@ useHead({
     </NavPageSection>
     <TopPageSection />
     <MessagePageSection />
-    <template v-if="canRegister">
+    <template v-if="canPurchase">
       <TicketPageSection />
     </template>
     <SpeakerPageSection />

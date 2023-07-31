@@ -11,5 +11,5 @@ As Vue.js and the ecosystem continue to develop, we have decided to reboot Vue F
 By all means, let's participate in the conference together and enjoy an experience that can only be experienced in real life!
 
 <div class="representative">
-  Japan User Group&ensp;representative&ensp;Kawaguchi Kazuya&ensp;( <a href="https://twitter.com/kazu_pon" target="_blank" rel="noreferrer">@kazu_pon</a> )
+  Japan User Group&ensp;representative&ensp;Kawaguchi Kazuya&ensp;( <a href="https://x.com/kazu_pon" target="_blank" rel="noreferrer">@kazu_pon</a> )
 </div>

@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/i18n',
     '@nuxt/content',
+    '@nuxthq/studio',
   ],
   pinceau: {
     configFileName: 'tokens.config',
@@ -79,6 +80,7 @@ export default defineNuxtConfig({
       reCaptchaWebsiteKey: process.env.NUXT_RECAPTCHA_WEBSITE_KEY,
       inCypress: process.env.IN_CYPRESS === 'true',
       // feature flags
+      registerTicket: process.env.NUXT_ENABLE_REGISTER_TICKET,
       registerNamecard: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
       // supabase
       supabaseProjectUrl: process.env.SUPABASE_URL,

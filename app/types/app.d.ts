@@ -120,3 +120,12 @@ type Sponsor = {
   image: string
   category: SponsorCategory | OptionCategory
 }
+
+/**
+ * team
+ */
+type Team = {
+  image: string
+  name: string
+  snsId: string
+}

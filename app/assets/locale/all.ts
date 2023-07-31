@@ -59,6 +59,10 @@ export default {
       /* prettier-ignore */
       contact_form_text_label: 'お問い合わせ内容／Content',
       contact_submit_done: 'メッセージ送信に成功しました。',
+      /**
+       * teams section
+       */
+      teams_subtitle: 'チーム',
     },
   },
   en: {
@@ -122,6 +126,10 @@ export default {
       /* prettier-ignore */
       contact_form_text_label: 'Content',
       contact_submit_done: 'Message sent successfully.',
+      /**
+       * teams section
+       */
+      teams_subtitle: 'Teams',
     },
   },
   ja_basic: {

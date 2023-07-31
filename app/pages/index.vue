@@ -60,6 +60,7 @@ useHead({
     <SpeakerPageSection />
     <SponsorPageSection />
     <FormPageSection />
+    <TeamPageSection />
     <FooterPageSection />
   </main>
 </template>

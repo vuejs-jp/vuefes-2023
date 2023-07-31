@@ -16,7 +16,7 @@ const { canRegister } = useNamecard()
     </div>
     <img
       class="ticket-img"
-      src="https://placehold.jp/592x395.png"
+      src="/namecard/sample.png"
       alt=""
       width="592"
       height="395"

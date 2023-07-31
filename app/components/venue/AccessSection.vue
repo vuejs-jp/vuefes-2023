@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
+
+// デスクトップ表示の画像サイズに合わせる
+const imageWidth = 320
 </script>
 
 <template>
@@ -17,12 +20,16 @@ import RoundButton from '~/components/button/RoundButton.vue'
             class="image image-hall"
             alt="イベントホールの写真"
             src="/venue/hall.jpeg"
+            :width="imageWidth"
+            :height="imageWidth * 2 / 3"
             decoding="async"
           />
           <img
             class="image image-entrance"
             alt="イベント入り口の写真"
             src="/venue/entrance.jpg"
+            :width="imageWidth"
+            :height="imageWidth * 2 / 3"
             decoding="async"
           />
         </div>

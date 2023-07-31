@@ -98,6 +98,12 @@ css({
       aspectRatio: '3/2',
       objectFit: 'cover',
     },
+    '.image-hall': {
+      filter: 'brightness(180%) saturate(120%)',
+    },
+    '.image-entrance': {
+      filter: 'brightness(120%) saturate(150%)',
+    },
   },
   '.route': {
     flexGrow: '1',

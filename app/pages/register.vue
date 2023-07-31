@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import InputField from '~/components/forms/InputField.vue'
+import RoundButton from '~/components/button/RoundButton.vue'
+import SubmitButton from '~/components/forms/SubmitButton.vue'
 import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import UploadLogo from '~/assets/logo/upload_logo.svg'
-import RoundButton from '~/components/button/RoundButton.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
@@ -11,6 +13,7 @@ import { useUserStore } from '~/composables/useUserStore'
 import { useSupabase } from '~/composables/useSupabase'
 import { useImage } from '~/composables/useImage'
 import { useDialog } from '~/composables/useDialog'
+import { useForm } from '~/composables/useForm'
 import { isProd } from '~/utils/environment.constants'
 
 definePageMeta({
@@ -22,6 +25,11 @@ const { signedUser } = useUserStore()
 const { addEventUser } = useSupabase()
 const { getBase64 } = useImage()
 const { handle, isShow } = useDialog()
+const {
+  isSubmitting,
+  nameError,
+  validateName,
+} = useForm()
 
 const picture = ref()
 const displayName = ref('')
@@ -43,10 +51,21 @@ const checkFiles = async (files: File[]) => {
   alert(`this file is not acceptable -> ${filename}`)
 }
 
+const updateDisplayName = (value: string) => {
+  displayName.value = value
+}
+
+const updateSecretWord = (value: string) => {
+  secretWord.value = value
+}
+
+const updateReceiptId = (value: string) => {
+  receiptId.value = value
+}
+
+
 onMounted(function () {
-  if (!signedUser.user_id) {
-    isShow.value = true
-  }
+  isShow.value = !signedUser.user_id
 })
 </script>
 
@@ -65,18 +84,45 @@ onMounted(function () {
 
     <section>
       <h2>ネームカードの編集</h2>
-      <DragDropArea
-        file-name="profiledata"
-        file-accept="image/png,image/jpeg,image/gif"
-        @check-files="checkFiles"
-      >
-        <div class="upload">
-          <UploadLogo />
-          <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
-          <p>または</p>
-          <p class="action">ファイルを選択</p>
+      <div class="form-root">
+        <p>来場時に発行されるネームカードの情報を入力します。</p>
+        <div class="form">
+          <form>
+            <!-- お名前／Name  -->
+            <InputField id="displayName" name="displayName" :title-label="$t('top.register_form_display_name_label')"
+              required :error="nameError" @input="updateDisplayName" @blur="validateName" />
+            <!-- アバター-->
+            <DragDropArea file-name="profiledata" file-accept="image/png,image/jpeg,image/gif" @check-files="checkFiles">
+              <div class="upload">
+                <UploadLogo />
+                <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
+                <p>または</p>
+                <p class="action">ファイルを選択</p>
+              </div>
+            </DragDropArea>
+            <h3>チケット情報の入力</h3>
+            <p>チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。</p>
+            <!-- あいことば  -->
+            <InputField id="secretWord" name="secretWord" :title-label="$t('top.register_form_secret_word_label')"
+              required :error="nameError" @input="updateSecretWord" @blur="validateName" />
+            <!-- 注文番号 -->
+            <InputField id="receiptId" name="receiptId" :title-label="$t('top.register_form_receipt_id_label')" required
+              :error="nameError" @input="updateReceiptId" @blur="validateName" />
+
+            <div class="link-box">
+              <!-- キャンセル -->
+              <RoundButton href="/" outline>
+                キャンセル
+              </RoundButton>
+              <!-- 確定 -->
+              <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
+            </div>
+          </form>
         </div>
-      </DragDropArea>
+      </div>
+
+
+      <p>↓DEBUG↓</p>
       <div class="resultarea">
         <div v-if="picture">
           <img alt="" :src="picture" width="100" height="100" decoding="async" />
@@ -110,6 +156,11 @@ css({
     fontSize: 'calc(32*{fontSize.base})',
     fontWeight: 900,
   },
+  'h3': {
+    color: '{color.vue.blue}',
+    fontSize: 'calc(24*{fontSize.base})',
+    fontWeight: 900,
+  },
   '.upload': {
     display: 'grid',
     placeItems: 'center',
@@ -127,6 +178,30 @@ css({
       fontSize: 'calc(16*{fontSize.base})',
       fontWeight: 500,
     },
+  },
+  '.form-root': {
+    display: 'grid',
+    gap: '40px',
+    maxWidth: '768px',
+    margin: '0 auto',
+    width: '100%',
+    'grid-template-columns': 'minmax(0, 1fr)'
+  },
+  '.form-button': {
+    textAlign: 'center'
+  },
+  '.form': {
+    'form': {
+      display: 'grid',
+      gap: '40px',
+    },
+  },
+  '.link-box': {
+    display: 'flex',
+    flexWrap: 'wrap',
+    padding: '0 16px',
+    justifyContent: 'center',
+    gap: '40px'
   },
 })
 </style>

@@ -56,6 +56,11 @@ export default {
       contact_form_name_label: 'お名前／Name',
       contact_form_name_placeholder: '山田太郎',
       contact_form_mail_label: 'メールアドレス／Mail',
+      /* register page */
+      register_form_display_name_label: 'お名前／Name　12文字以内',
+      register_form_avatar_label: 'アバター／Avatar',
+      register_form_secret_word_label: 'あいことば',
+      register_form_receipt_id_label: '注文番号',
       /* prettier-ignore */
       contact_form_text_label: 'お問い合わせ内容／Content',
       contact_submit_done: 'メッセージ送信に成功しました。',
@@ -119,6 +124,11 @@ export default {
       contact_form_name_label: 'Name',
       contact_form_name_placeholder: 'Yamada Taro',
       contact_form_mail_label: 'Mail',
+      /* register page */
+      register_form_name_label: 'Name  12 characters max.',
+      register_form_avatar_label: 'Avatar',
+      register_form_watchword_label: 'Watchword',
+      register_form_order_number_label: 'Order Number',
       /* prettier-ignore */
       contact_form_text_label: 'Content',
       contact_submit_done: 'Message sent successfully.',

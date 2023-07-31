@@ -19,11 +19,24 @@ const props = defineProps({
       loading="lazy"
       decoding="async"
     />
+    <p class="team-name">{{ team.name }}</p>
   </div>
 </template>
 
 <style lang="ts" scoped>
 css({
+  '.team-card': {
+    'img': {
+      borderRadius: '0.5em',
+    },
+  },
+  '.team-name': {
+  color: '{color.vue.blue}',
+    textAlign: 'center',
+    fontSize: '14px',
+    lineHeight: '1.3',
+    marginTop: '0.5em',
+  },
   '@mobile': {
     '.team-card': {
       'img': {

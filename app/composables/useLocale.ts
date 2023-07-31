@@ -9,6 +9,7 @@ export function useLocale(path: Path) {
       .with('message', () => `/${locale.value}/top/message`)
       .with('form', () => `/${locale.value}/top/contact`)
       .with('sponsor', () => `/${locale.value}/top/sponsors`)
+      .with('team', () => `/${locale.value}/top/teams`)
       .with('speaker', () => `/${locale.value}/top/speakers`)
       .with('ticket', () => `/${locale.value}/top/ticket`)
       .with('namecard', () => `/${locale.value}/top/namecard`)

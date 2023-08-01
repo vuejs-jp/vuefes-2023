@@ -19,39 +19,35 @@ const props = defineProps({
       loading="lazy"
       decoding="async"
     />
-    <p class="team-name">{{ team.name }}</p>
+    <p class="team-name">{{ team.snsId }}</p>
   </div>
 </template>
 
 <style lang="ts" scoped>
 css({
   '.team-card': {
+    width: 'calc((100% - 160px) / 5)',
     'img': {
+      width: '100%',
       borderRadius: '0.5em',
     },
   },
   '.team-name': {
-  color: '{color.vue.blue}',
-    textAlign: 'center',
-    fontSize: '14px',
-    lineHeight: '1.3',
-    marginTop: '0.5em',
-  },
-  '@mobile': {
-    '.team-card': {
-      'img': {
-        width: '208px',
-        height: '208px',
-      },
-    },
+      color: '{color.vue.blue}',
+        textAlign: 'center',
+        fontSize: '14px',
+        lineHeight: '1.3',
+        marginTop: '0.5em',
   },
   '@tablet': {
     '.team-card': {
-      'img': {
-        width: '274px',
-        height: '274px',
-      },
-     },
+      width: 'calc((100% - 96px) / 4)',
     },
-  })
+  },
+  '@mobile': {
+    '.team-card': {
+      width: 'calc((100% - 8vw) / 3)',
+    },
+  },
+})
 </style>

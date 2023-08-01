@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { teams } from '~/utils/teams.constants'
 import { useLocale } from '~/composables/useLocale'
-const { docPath } = useLocale('team')
+const { docPath } = useLocale('teams')
 </script>
 
 <template>
@@ -31,6 +31,17 @@ css({
     gap: '40px',
     margin: '0 auto',
   },
+  '.subtitle': {
+    display: 'grid',
+    placeItems: 'center',
+    gap: '40px',
+    '::v-deep(p)': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '1.8',
+    },
+  },
   '.teams': {
     display: 'flex',
     flexWrap: 'wrap',
@@ -38,12 +49,14 @@ css({
     maxWidth: '988px',
     margin: '0 auto',
   },
-  '@mobile': {
-    '.teams': {
-    },
-  },
   '@tablet': {
     '.teams': {
+      maxWidth: '760px',
+    },
+  },
+  '@mobile': {
+    '.teams': {
+      gap: '4vw',
     },
   },
 })

@@ -8,7 +8,6 @@ export type Path =
   | 'message'
   | 'form'
   | 'sponsor'
-  | 'teams'
   | 'speaker'
   | 'ticket'
   | 'namecard'

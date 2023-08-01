@@ -10,6 +10,7 @@ import { useDialog } from '~/composables/useDialog'
 import { useNamecard } from '~/composables/useNamecard'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
+import TimeTableSection from '~/components/TimeTableSection.vue'
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
@@ -53,6 +54,7 @@ useHead({
       </template>
     </NavPageSection>
     <TopPageSection />
+    <TimeTableSection />
     <MessagePageSection />
     <template v-if="canPurchase">
       <TicketPageSection />

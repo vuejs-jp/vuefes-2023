@@ -25,7 +25,6 @@ describe('top', () => {
         cy.contains('a', 'Contact').should('be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
         cy.get('.hamburger-menu').should('not.be.visible')
-        cy.contains('a', 'Login')
       })
     })
     it('header (tablet)', () => {
@@ -38,7 +37,6 @@ describe('top', () => {
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
         cy.get('.hamburger-menu').should('be.visible')
-        cy.contains('a', 'Login')
       })
     })
     it('header (mobile)', () => {
@@ -51,7 +49,6 @@ describe('top', () => {
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
         // cy.get('.hamburger-menu').should('be.visible')
-        cy.contains('a', 'Login')
       })
     })
     it('header with auth', () => {

@@ -1,28 +1,30 @@
 <script setup lang="ts">
-  import { computed } from 'vue'
+import { computed } from 'vue'
 
-  const startTime = 9 * 60 + 30
-  const endTime = 18 * 60
-  const interval = 30
+const startTime = 9 * 60 + 30
+const endTime = 18 * 60
+const interval = 30
 
-  // computed
-  const timeSlots = computed(() => {
-    const slots = []
-    for (let time = startTime; time <= endTime; time += interval) {
-      const hour = Math.floor(time / 60)
-      const minute = time % 60
-      const formattedTime = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`
-      slots.push(formattedTime)
-    }
-    return slots
-  })
+// computed
+const timeSlots = computed(() => {
+  const slots = []
+  for (let time = startTime; time <= endTime; time += interval) {
+    const hour = Math.floor(time / 60)
+    const minute = time % 60
+    const formattedTime = `${hour.toString().padStart(2, '0')}:${minute
+      .toString()
+      .padStart(2, '0')}`
+    slots.push(formattedTime)
+  }
+  return slots
+})
 </script>
 
 <template>
   <table class="timetable">
     <thead>
       <tr>
-        <th class="time-column" />
+        <th class="blank">空欄</th>
         <th class="track1">トラック1</th>
         <th class="track2">トラック2</th>
         <th class="track3">トラック3</th>
@@ -31,16 +33,16 @@
       </tr>
     </thead>
     <tbody>
-    <!-- Loop through the time slots from 9:30 to 18:00 -->
-    <!-- Each row represents a 30-minute interval -->
-    <tr v-for="timeSlot in timeSlots" :key="timeSlot">
-      <td class="time-column">{{ timeSlot }}</td>
-      <td class="track1" />
-      <td class="track2" />
-      <td class="track3" />
-      <td class="track4" />
-      <td class="track5" />
-    </tr>
+      <!-- Loop through the time slots from 9:30 to 18:00 -->
+      <!-- Each row represents a 30-minute interval -->
+      <tr v-for="timeSlot in timeSlots" :key="timeSlot">
+        <td class="schedule">{{ timeSlot }}</td>
+        <td class="track1" />
+        <td class="track2" />
+        <td class="track3" />
+        <td class="track4" />
+        <td class="track5" />
+      </tr>
     </tbody>
   </table>
 </template>
@@ -59,7 +61,7 @@ css({
           fontWeight: '700',
           backgroundColor: '#35495E',
           textAlign: 'center',
-          '&.time-column': {
+          '&.blank': {
             backgroundColor: '#35495E',
           },
           '&.track1': {
@@ -85,7 +87,7 @@ css({
         'td': {
           padding: '16px',
           fontSize: 'calc(16*{fontSize.base})',
-          '&.time-column': {
+          '&.schedule': {
             color: '{color.white}',
             textAlign: 'center',
             fontWeight: '500',

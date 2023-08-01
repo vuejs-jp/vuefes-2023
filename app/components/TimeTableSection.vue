@@ -6,14 +6,19 @@ import 'scroll-hint/css/scroll-hint.css'
 
 onMounted(() => {
   new ScrollHint('.timetable-wrapper', {
-    suggestiveShadow: true
+    suggestiveShadow: true,
   })
 })
 </script>
 <template>
   <section>
     <div class="timetable-root">
-      <SectionTitle id="ticket" color="vue.blue" :title="'Time table'" yamato-title="タイムテーブル" />
+      <SectionTitle
+        id="ticket"
+        color="vue.blue"
+        :title="'Time table'"
+        yamato-title="タイムテーブル"
+      />
       <div v-if="$device.isMobile" class="timetable-wrapper">
         <TimetableViewMobile />
       </div>

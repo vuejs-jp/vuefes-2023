@@ -1,0 +1,1 @@
+In addition, in order to participate in **Vue Fes Japan, a general ticket is required in addition to individual sponsor ticket**. Please note that **You cannot enter with individual sponsor ticket only**. If you are not going to participate on the day, you can purchase only individual sponsor ticket (privileges will be credited only).

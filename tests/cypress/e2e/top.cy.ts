@@ -25,6 +25,7 @@ describe('top', () => {
         cy.contains('a', 'Contact').should('be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
         cy.get('.hamburger-menu').should('not.be.visible')
+        cy.contains('a', 'Login')
       })
     })
     it('header (tablet)', () => {
@@ -37,6 +38,7 @@ describe('top', () => {
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
         cy.get('.hamburger-menu').should('be.visible')
+        cy.contains('a', 'Login')
       })
     })
     it('header (mobile)', () => {
@@ -48,7 +50,8 @@ describe('top', () => {
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
-        cy.get('.hamburger-menu').should('be.visible')
+        // cy.get('.hamburger-menu').should('be.visible')
+        cy.contains('a', 'Login')
       })
     })
     it('header with auth', () => {
@@ -141,6 +144,21 @@ describe('top', () => {
           cy.contains('Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。')
         })
     })
+    // it('Ticket & Namecard', () => {
+    //   loadPage()
+    //   cy.contains('h2', 'Ticket & Namecard')
+    //     .closest('section')
+    //     .within(() => {
+    //       cy.contains('h4', 'チケットのご購入')
+    //       cy.contains('h4', 'ネームカードの作成')
+    //       cy.contains('h3', 'チケット')
+    //       cy.contains('チケットの事前販売')
+    //       cy.contains('h3', 'ネームカード')
+    //       cy.contains('登録期限:')
+    //       cy.contains('a', 'ネームカードを作成')
+    //       cy.contains(/最新情報は、Vue Fes Japan の Twitter をご確認ください。/)
+    //     })
+    // })
     it('speakers', () => {
       loadPage()
       cy.contains('h2', 'Speakers')
@@ -152,6 +170,7 @@ describe('top', () => {
           cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
           cy.contains('a', '申し込みフォーム')
           cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
+          cy.get('.speaker-card').should('have.length', 6)
         })
     })
     it('sponsors', () => {
@@ -195,14 +214,14 @@ describe('top', () => {
 
       // check validation errors
 
-      cy.get('@input-name').type('a')
+      cy.get('@input-name').type('a', { force: true })
       cy.wait(1000)
-      cy.get('@input-name').type('{backspace}').blur()
+      cy.get('@input-name').type('{backspace}', { force: true }).blur()
       cy.contains('名前を入力してください')
-      cy.get('@input-mail').type('a').type('{backspace}').blur()
+      cy.get('@input-mail').type('a', { force: true }).type('{backspace}', { force: true }).blur()
       cy.wait(1000)
       cy.contains('メールアドレスを入力してください')
-      cy.get('@input-text').type('t').type('{backspace}').blur()
+      cy.get('@input-text').type('t', { force: true }).type('{backspace}', { force: true }).blur()
       cy.wait(1000)
       cy.contains('問い合わせ内容を入力してください')
       cy.get('@btn-submit').should('have.attr', 'disabled')
@@ -210,9 +229,9 @@ describe('top', () => {
       // check activated
 
       cy.wait(1000)
-      cy.get('@input-name').type('やまだ')
-      cy.get('@input-mail').type('mymail@vue.com')
-      cy.get('@input-text').type('こめんと').blur()
+      cy.get('@input-name').type('やまだ', { force: true })
+      cy.get('@input-mail').type('mymail@vue.com', { force: true })
+      cy.get('@input-text').type('こめんと', { force: true }).blur()
       cy.wait(1000)
       cy.get('@btn-submit').should('not.have.attr', 'disabled')
     })

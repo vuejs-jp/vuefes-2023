@@ -9,8 +9,7 @@ const props = defineProps({
     required: true,
   },
 })
-
-const { existBasic } = useSponsor()
+const { getCategoryType } = useSponsor()
 </script>
 
 <template>
@@ -26,8 +25,8 @@ css({
     height: '60px',
     display: 'inline-flex',
     alignItems: 'flex-end',
-    color: (props) => `{color.sponsor.${existBasic(props.category) ? props.category : 'options'}}`,
-    borderBottom: (props) => `5px solid {color.sponsor.${existBasic(props.category) ? props.category : 'options'}}`,
+    color: (props) => `{color.sponsor.${getCategoryType(props.category)}}`,
+    borderBottom: (props) => `5px solid {color.sponsor.${getCategoryType(props.category)}}`,
     fontSize: 'calc(24*{fontSize.base})',
     fontWeight: 800,
     lineHeight: 1,

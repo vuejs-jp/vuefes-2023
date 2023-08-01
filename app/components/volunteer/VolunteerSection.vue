@@ -2,6 +2,7 @@
 import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
+import { volunteerUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
         <em>{{ $t('words.volunteer_deadline_date') }}</em>
       </i18n-t>
       <div class="apply">
-        <RoundButton href="#" target="_blank" rel="noreferrer">
+        <RoundButton :href="volunteerUrl" target="_blank" rel="noreferrer">
           {{ $t('words.apply_volunteer') }}
         </RoundButton>
       </div>

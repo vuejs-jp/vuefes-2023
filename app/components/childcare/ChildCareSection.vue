@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MarkDownText from '~/components/MarkDownText.vue'
-import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
+import { childCareUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
       </i18n-t>
       -->
       <div class="apply">
-        <RoundButton href="#" target="_blank" rel="noreferrer">
+        <RoundButton :href="childCareUrl" target="_blank" rel="noreferrer">
           {{ $t('words.apply_childcare') }}
         </RoundButton>
       </div>

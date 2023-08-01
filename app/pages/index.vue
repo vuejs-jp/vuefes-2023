@@ -17,10 +17,10 @@ useHead({
     <NavPageSectionContainer />
     <TopPageSection />
     <MessagePageSection />
+    <SpeakerPageSection />
     <template v-if="canPurchase">
       <TicketPageSection />
     </template>
-    <SpeakerPageSection />
     <SponsorPageSection />
     <FormPageSection />
     <FooterPageSection />

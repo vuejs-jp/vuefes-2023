@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 const startTime = 9 * 60 + 30
-const endTime = 18 * 60
+const endTime = 13 * 60
 const interval = 30
 
 // computed
@@ -24,7 +24,7 @@ const timeSlots = computed(() => {
   <table class="timetable">
     <thead>
       <tr>
-        <th class="blank">空欄</th>
+        <th />
         <th class="track1">トラック1</th>
         <th class="track2">トラック2</th>
         <th class="track3">トラック3</th>
@@ -61,9 +61,6 @@ css({
           fontWeight: '700',
           backgroundColor: '#35495E',
           textAlign: 'center',
-          '&.blank': {
-            backgroundColor: '#35495E',
-          },
           '&.track1': {
             backgroundColor: '#33A6B8',
           },

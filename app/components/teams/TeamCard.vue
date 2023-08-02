@@ -10,7 +10,13 @@ const props = defineProps({
 </script>
 
 <template>
-  <component :is="team.snsLink ? 'a' : 'div'" :href="team.snsLink" class="team-card">
+  <component
+    :is="team.snsLink ? 'a' : 'div'"
+    :href="team.snsLink"
+    :target="team.snsLink ? '_blank' : ''"
+    :rel="team.snsLink ? 'noreferrer' : ''"
+    class="team-card"
+  >
     <img
       width="172"
       height="172"

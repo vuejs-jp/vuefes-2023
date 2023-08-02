@@ -21,8 +21,8 @@ useHead({
     <SpeakerPageSection />
     <template v-if="canPurchase">
       <TicketPageSection />
+      <AccessSection />
     </template>
-    <AccessSection />
     <SponsorPageSection />
     <FormPageSection />
     <FooterPageSection />

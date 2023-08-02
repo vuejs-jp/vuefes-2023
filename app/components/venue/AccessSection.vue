@@ -21,7 +21,7 @@ const imageWidth = 320
             alt="イベントホールの写真"
             src="/venue/hall.jpeg"
             :width="imageWidth"
-            :height="imageWidth * 2 / 3"
+            :height="(imageWidth * 2) / 3"
             decoding="async"
           />
           <img
@@ -29,7 +29,7 @@ const imageWidth = 320
             alt="イベント入り口の写真"
             src="/venue/entrance.jpg"
             :width="imageWidth"
-            :height="imageWidth * 2 / 3"
+            :height="(imageWidth * 2) / 3"
             decoding="async"
           />
         </div>

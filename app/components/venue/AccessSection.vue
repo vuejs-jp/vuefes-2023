@@ -86,12 +86,15 @@ css({
     gap: 'calc({space.8} * 3)',
   },
   '.images': {
+    '--images-gap': 'calc({space.8} * 1.5)',
     display: 'flex',
     flexDirection: 'column',
-    gap: 'calc({space.8} * 1.5)',
+    gap: '{images.gap}',
 
     '.image': {
-      flexBasis: '100%',
+      '--image-width': '100%',
+      flexBasis: '{image.width}',
+      maxWidth: '{image.width}',
       aspectRatio: '3/2',
       objectFit: 'cover',
     },
@@ -122,6 +125,10 @@ css({
       flexDirection: 'row',
       flexWrap: 'wrap',
       alignItems: 'center',
+
+      '.image': {
+        '--image-width': 'calc((100% - {images.gap}) / 2)',
+      },
     },
   },
 })

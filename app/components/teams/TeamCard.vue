@@ -20,7 +20,7 @@ const props = defineProps({
       decoding="async"
     />
     <span class="team-name">{{ team.snsId }}</span>
-    </component>
+  </component>
 </template>
 
 <style lang="ts" scoped>

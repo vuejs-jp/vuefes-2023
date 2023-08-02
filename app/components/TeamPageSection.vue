@@ -7,10 +7,10 @@ const { docPath } = useLocale('teams')
 <template>
   <section class="team-root">
     <SectionTitle
-        id="team"
-        color="vue.blue"
-        title="Teams"
-        :yamato-title="$t('top.teams_subtitle')"
+      id="team"
+      color="vue.blue"
+      title="Teams"
+      :yamato-title="$t('top.teams_subtitle')"
     />
     <ContentDoc v-slot="{ doc }" :path="docPath">
       <ContentRenderer class="subtitle" :value="doc" />

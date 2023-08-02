@@ -133,8 +133,9 @@ export type SponsorUser = Speaker & {
 /**
  * team
  */
-type Team = {
+export type Team = {
   image: string
   name: string
   snsId: string
+  snsLink: string
 }

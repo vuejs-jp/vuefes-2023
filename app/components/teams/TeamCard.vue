@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="team-card">
+  <component :is="team.snsLink ? 'a' : 'div'" :href="team.snsLink" class="team-card">
     <img
       width="172"
       height="172"
@@ -19,8 +19,8 @@ const props = defineProps({
       loading="lazy"
       decoding="async"
     />
-    <p class="team-name">{{ team.snsId }}</p>
-  </div>
+    <span class="team-name">{{ team.snsId }}</span>
+    </component>
 </template>
 
 <style lang="ts" scoped>
@@ -33,11 +33,12 @@ css({
     },
   },
   '.team-name': {
+      display: 'block',
       color: '{color.vue.blue}',
-        textAlign: 'center',
-        fontSize: '14px',
-        lineHeight: '1.3',
-        marginTop: '0.5em',
+      textAlign: 'center',
+      fontSize: '14px',
+      lineHeight: '1.3',
+      marginTop: '0.5em',
   },
   '@tablet': {
     '.team-card': {

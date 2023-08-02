@@ -30,5 +30,12 @@ export default defineTheme({
   },
   space: {
     8: '8px',
+    header: '88px',
+    bodybottom: '88px',
+  },
+  zindex: {
+    dialog: '9000',
+    menu: '8000',
+    alert: '10',
   },
 })

@@ -56,7 +56,7 @@ css({
     left: 0,
     width: '100vw',
     height: '100vh',
-    zIndex: 10,
+    zIndex: '{zindex.menu}',
     background: '{color.vue.blue}',
     color: '{color.white}',
     overflow: 'scroll',
@@ -94,7 +94,6 @@ css({
     position: 'fixed',
     top: '32px',
     right: '32px',
-    zIndex: 10,
   },
 })
 </style>

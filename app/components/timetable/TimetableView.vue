@@ -24,7 +24,7 @@ const timeSlots = computed(() => {
   <table class="timetable">
     <thead>
       <tr>
-        <th />
+        <th>空欄</th>
         <th class="track1">トラック1</th>
         <th class="track2">トラック2</th>
         <th class="track3">トラック3</th>
@@ -61,6 +61,9 @@ css({
           fontWeight: '700',
           backgroundColor: '#35495E',
           textAlign: 'center',
+          '&.blank': {
+            backgroundColor: '#35495E',
+          },
           '&.track1': {
             backgroundColor: '#33A6B8',
           },

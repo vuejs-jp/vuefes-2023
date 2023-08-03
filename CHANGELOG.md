@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [ver.2023.5.4](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.4)
+
+- チーム情報 (コアスタッフ一覧) の追加
+
 ## [ver.2023.5.3](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.3)
 
 - スポンサー詳細 (各社詳細) の追加

@@ -23,6 +23,7 @@ useHead({
     </template>
     <SponsorPageSection />
     <FormPageSection />
+    <TeamPageSection />
     <FooterPageSection />
   </main>
 </template>

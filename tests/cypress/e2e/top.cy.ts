@@ -189,6 +189,17 @@ describe('top', () => {
           cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })
     })
+    it('teams', () => {
+      loadPage()
+      cy.contains('h2', 'Teams')
+        .contains('チーム')
+        .closest('section')
+        .within(() => {
+          cy.contains(
+            'Vue Fes Japan 2023 は、Vue.js 日本ユーザーグループのスタッフによって企画・運営されています。',
+          )
+        })
+    })
   })
   describe('form', () => {
     it('contact', () => {

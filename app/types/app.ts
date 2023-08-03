@@ -129,3 +129,13 @@ export type Sponsor = {
 export type SponsorUser = Speaker & {
   sponsorId: string
 }
+
+/**
+ * team
+ */
+export type Team = {
+  image: string
+  name: string
+  snsId: string
+  snsLink: string
+}

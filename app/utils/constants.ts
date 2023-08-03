@@ -14,8 +14,8 @@ export const navLinks: NavLink[] = [
 
 export const navRegisterLinks: NavLink[] = [
   { text: 'Message', link: '/#message' },
-  { text: 'Ticket', link: '/#ticket' },
   { text: 'Speakers', link: '/#speakers' },
+  { text: 'Ticket', link: '/#ticket' },
   { text: 'Access', link: '/#access' },
   { text: 'Sponsors', link: '/#sponsors' },
   { text: 'Contact', link: '/#form' },

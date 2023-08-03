@@ -82,7 +82,7 @@ export default {
       sponsors_merit1_detail: 'Vue Fes Japan 公式 Web サイトにお名前を掲載します（希望者のみ）。',
       sponsors_merit2: 'Vue Fes Japan 2023 スタッフ限定Tシャツ',
       sponsors_merit2_detail:
-        'スタッフのみに配布される限定 Tシャツがもらえます。\n※サイズはXS～XXL。チケット購入時にご指定ください。',
+        'スタッフのみに配布される限定 Tシャツがもらえます。\n※サイズはS～XXXL。チケット購入時にご指定ください。',
       sponsors_merit3: '優先入場',
       sponsors_merit3_detail:
         '当日の受付に個人スポンサー優先レーンをご用意します。行列に並ぶことなく、スムーズにご入場いただけます。',
@@ -194,7 +194,7 @@ export default {
         'Your name will be posted on Vue Fes Japan official website (applicants only).',
       sponsors_merit2: 'Vue Fes Japan 2023 Staff T-shirt for limited',
       sponsors_merit2_detail:
-        'You will receive a limited T-shirt distributed only to the staff. \n *Sizes are XS to XXL. Please specify when purchasing your ticket.',
+        'You will receive a limited T-shirt distributed only to the staff. \n *Sizes are S to XXXL. Please specify when purchasing your ticket.',
       sponsors_merit3: 'Priority entrance',
       sponsors_merit3_detail:
         'Personal sponsor priority lanes will be available at the reception on the day of the event. You can enter smoothly without waiting in line.',

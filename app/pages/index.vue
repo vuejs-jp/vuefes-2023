@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavPageSectionContainer from '~/container/NavPageSectionContainer.vue'
+import AccessSection from '~/components/venue/AccessSection.vue'
 import { useNamecard } from '~/composables/useNamecard'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
@@ -20,6 +21,7 @@ useHead({
     <SpeakerPageSection />
     <template v-if="canPurchase">
       <TicketPageSection />
+      <AccessSection />
     </template>
     <SponsorPageSection />
     <FormPageSection />

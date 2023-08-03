@@ -65,6 +65,10 @@ export default {
       speakers_schedule_limit: '応募期限: {0} まで',
       speakers_schedule_update: '詳細情報は、{0} をご確認ください。',
       /**
+       * access section
+       */
+      access_subtitle: 'アクセス',
+      /**
        * sponsors section
        */
       sponsors_subtitle: 'スポンサー',
@@ -170,6 +174,10 @@ export default {
       speakers_schedule_title: 'Recruitment Schedule',
       speakers_schedule_limit: 'Application Deadline: Until {0}',
       speakers_schedule_update: 'Please check {0} for the latest information.',
+      /**
+       * access section
+       */
+      access_subtitle: 'Access',
       /**
        * sponsors section
        */

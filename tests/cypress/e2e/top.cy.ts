@@ -21,6 +21,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Access').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
@@ -33,6 +34,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
+        cy.contains('a', 'Access').should('not.be.visible')
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
@@ -45,6 +47,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
+        cy.contains('a', 'Access').should('not.be.visible')
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
@@ -56,6 +59,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Access').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
@@ -79,6 +83,10 @@ describe('top', () => {
       cy.url().should('eq', 'http://localhost:3000/#speakers')
 
       cy.visit('/')
+      cy.contains('nav a', 'Access').click()
+      cy.url().should('eq', 'http://localhost:3000/#access')
+
+      cy.visit('/')
       cy.contains('nav a', 'Sponsors').click()
       cy.url().should('eq', 'http://localhost:3000/#sponsors')
 
@@ -96,6 +104,10 @@ describe('top', () => {
       cy.url().should('eq', 'http://localhost:3000/#speakers')
 
       loadPagePrivacy()
+      cy.contains('nav a', 'Access').click()
+      cy.url().should('eq', 'http://localhost:3000/#access')
+
+      loadPagePrivacy()
       cy.contains('nav a', 'Sponsors').click()
       cy.url().should('eq', 'http://localhost:3000/#sponsors')
 
@@ -111,6 +123,10 @@ describe('top', () => {
       loadPageCodeOfConduct()
       cy.contains('nav a', 'Speakers').click()
       cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Access').click()
+      cy.url().should('eq', 'http://localhost:3000/#access')
 
       loadPageCodeOfConduct()
       cy.contains('nav a', 'Sponsors').click()
@@ -168,6 +184,29 @@ describe('top', () => {
           cy.contains('a', '申し込みフォーム')
           cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
           cy.get('.speaker-card').should('have.length', 6)
+        })
+    })
+    it('access', () => {
+      loadPage()
+      cy.contains('h2', 'Access')
+        .contains('アクセス')
+        .closest('section')
+        .within(() => {
+          cy.contains('h3', '会場: 中野セントラルパーク カンファレンス')
+          cy.contains('東京都中野区中野 4-10-2 中野セントラルパークサウス 1F、B1F')
+          cy.contains('a', 'https://www.nakano-centralpark.jp/conference/').should(
+            'have.attr',
+            'href',
+            'https://www.nakano-centralpark.jp/conference/',
+          )
+          cy.contains('JR 中央線・総武線、東京メトロ東西線')
+          cy.contains('「中野」駅北口より徒歩5分')
+          cy.contains('small', '※JR新宿駅から中野駅まで中央線で1駅（約4分）です。')
+          cy.contains('a', 'Google マップで見る').should(
+            'have.attr',
+            'href',
+            'https://goo.gl/maps/TBWRVrd3dthoe98s5',
+          )
         })
     })
     it('sponsors', () => {
@@ -280,6 +319,7 @@ describe('top', () => {
         .should('be.visible')
         .within(() => {
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
+          cy.contains('a', 'Access').should('have.attr', 'href', '/#access')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
           cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')
           cy.contains('Vue Fes Japan')
@@ -302,6 +342,7 @@ describe('top', () => {
         .should('be.visible')
         .within(() => {
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
+          cy.contains('a', 'Access').should('have.attr', 'href', '/#access')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
           cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')
           cy.contains('Vue Fes Japan')

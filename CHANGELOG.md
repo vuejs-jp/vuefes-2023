@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [ver.2023.5.4](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.4)
+
+- チーム情報 (コアスタッフ一覧) の追加
+
+## [ver.2023.5.3](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.3)
+
+- スポンサー詳細 (各社詳細) の追加
+- スポンサー情報の更新
+- X (Twitter) ドメインの更新
+- (ロジック用) ネームカードに伴う DB マイグレーション更新、各種コンポーネント製作の用途
+
 ## [ver.2023.5.2](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.5.2)
 
 - スポンサー応募期限の追加

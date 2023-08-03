@@ -14,8 +14,9 @@ export const navLinks: NavLink[] = [
 
 export const navRegisterLinks: NavLink[] = [
   { text: 'Message', link: '/#message' },
-  { text: 'Ticket', link: '/#ticket' },
   { text: 'Speakers', link: '/#speakers' },
+  { text: 'Ticket', link: '/#ticket' },
+  { text: 'Access', link: '/#access' },
   { text: 'Sponsors', link: '/#sponsors' },
   { text: 'Contact', link: '/#form' },
 ]
@@ -31,6 +32,15 @@ export const ogCoCDescription =
 export const ogPrivacyDescription = 'Vue Fes Japan 2023 のプライバシーポリシーです。'
 
 export const linkUrl = 'https://vuefes.jp/2023/'
+
+// WIP
+export const ticketUrl = 'https://passmarket.yahoo.co.jp/event/show/detail/02j5vbqweig21.html'
+
+export const volunteerUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfLztgJd07h3XxaLe9Bt8RNWOsX2DT3b5vpUSR3nNSoYtZ1qg/viewform'
+
+export const childCareUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSe_tfFxeSJjOmMGck-HXlKvuwkTjFHQoLzvL1ZPhYkkXuVshQ/viewform'
 
 export const urlBasePath = isProd ? '/2023' : ''
 

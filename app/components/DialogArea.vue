@@ -10,17 +10,17 @@
 css({
   '.root': {
     position: 'fixed',
-    zIndex: 9999,
+    zIndex: '{zindex.dialog}',
     left: '50%',
     top: '50%',
     transform: 'translateX(-50%) translateY(-50%)',
-    width: '530px',
+    width: ' 960px',
     height: '500px',
     transition: '.2s',
   },
   '.mask': {
     position: 'fixed',
-    zIndex: 9999,
+    zIndex: '{zindex.dialog}',
     top: 0,
     right: 0,
     bottom: 0,

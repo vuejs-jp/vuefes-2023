@@ -93,7 +93,7 @@ onMounted(function () {
       <UserForDev />
     </div>
 
-    <FooterPageSection />
+    <FooterPageSection has-auth />
   </main>
 </template>
 

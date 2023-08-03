@@ -1,0 +1,1 @@
+Vue Fes Japan 2023 is looking for volunteer staffs to help with the day-of operations. Volunteer staffs can attend the conference free of charge while helping with operations. Please see the application form below for more details.

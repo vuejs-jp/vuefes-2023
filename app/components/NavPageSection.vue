@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import MenuLogo from '~/assets/logo/menu_logo.svg'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
+import VueFesUserLogo from '~/assets/logo/vuefes_user_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import NavView from '~/components/nav/NavView.vue'
 import { useNav } from '~/composables/useNav'
@@ -36,7 +37,12 @@ onMounted(function () {
     <div class="nav-root">
       <h1>
         <nuxt-link to="/" aria-label="top">
-          <VueFesLogo />
+          <template v-if="!hasAuth">
+            <VueFesLogo />
+          </template>
+          <template v-if="hasAuth">
+            <VueFesUserLogo />
+          </template>
         </nuxt-link>
         <span class="sr-only">{{ conferenceTitle }}</span>
       </h1>

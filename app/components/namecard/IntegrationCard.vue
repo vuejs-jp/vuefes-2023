@@ -5,6 +5,11 @@ import DialogArea from '~/components/DialogArea.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import useAuth from '~/composables/useAuth'
 
+interface IntegrationCardEmit {
+  (e: 'on-close'): void
+}
+const emit = defineEmits<IntegrationCardEmit>()
+
 const { signIn } = useAuth()
 </script>
 
@@ -51,8 +56,8 @@ css({
     right: 0,
     bottom: 0,
     left: 0,
-    width: '540px',
-    height: '500px',
+    width: '100%',
+    height: '100%',
     margin: '0 auto',
     padding: 'calc({space.8} * 2.5) calc({space.8} * 3.75)',
     backgroundColor: '#fff',

@@ -34,6 +34,9 @@ export default defineNuxtConfig({
     debug: false,
     runtime: true,
   },
+  supabase: {
+    redirect: false,
+  },
   devtools: {
     enabled: true,
     vscode: {},

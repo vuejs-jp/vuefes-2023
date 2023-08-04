@@ -136,6 +136,5 @@ export type SponsorUser = Speaker & {
 export type Team = {
   image: string
   name: string
-  snsId: string
   snsLink: string
 }

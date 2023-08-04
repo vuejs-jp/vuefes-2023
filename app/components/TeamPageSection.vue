@@ -16,7 +16,7 @@ const { docPath } = useLocale('teams')
       <ContentRenderer class="subtitle" :value="doc" />
     </ContentDoc>
     <div class="teams">
-      <TeamsTeamCard v-for="team in teams" :key="team.snsId" :team="team" />
+      <TeamsTeamCard v-for="team in teams" :key="team.name" :team="team" />
     </div>
   </section>
 </template>

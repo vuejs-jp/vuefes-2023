@@ -25,7 +25,7 @@ const props = defineProps({
       loading="lazy"
       decoding="async"
     />
-    <span class="team-name">{{ team.snsId }}</span>
+    <span class="team-name">{{ team.name }}</span>
   </component>
 </template>
 

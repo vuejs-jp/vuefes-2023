@@ -33,25 +33,41 @@ const timeSlots = computed(() => {
       <tr>
         <td class="">開場</td>
       </tr>
+      <!-- Todo: Component化 スポンサーセッション -->
       <tr>
-        <td class="track track-c">
-          <div class="place">ホールA+B</div>
+        <td class="track track-c sponsor-session">
+          <div class="headline">
+            <div class="place">ホールA+B</div>
+          </div>
           <div class="title">オープニング</div>
           <div class="speaker">スピーカー</div>
         </td>
       </tr>
       <tr>
-        <td class="track track-m">
-          <div class="place">ホールC</div>
+        <td class="track track-m sponsor-session">
+          <div class="headline">
+            <div class="place">ホールC</div>
+          </div>
           <div class="title">スポンサーセッション</div>
           <div class="speaker">スピーカー</div>
         </td>
       </tr>
       <tr>
-        <td class="track track-e">
-          <div class="place">ホール1</div>
+        <td class="track track-e sponsor-session">
+          <div class="headline">
+            <div class="place">ホール1</div>
+          </div>
           <div class="title">スポンサーセッション</div>
           <div class="speaker">スピーカー</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="track track-c">
+          <div class="headline">
+            <div class="place">ホールA+B</div>
+            <div class="translate">同時通訳あり</div>
+          </div>
+          <div class="title">ホールA+Bセッション</div>
         </td>
       </tr>
     </tbody>
@@ -87,14 +103,37 @@ css({
           '&.track': {
             position: 'relative',
             padding: '46px 0 16px',
-            '.place': {
+            '.headline': {
               position: 'absolute',
               top: '0',
               left: '0',
-              padding: '8px 16px',
-              fontSize: 'calc(12*{fontSize.base})',
-              fontWeight: '700',
-              color: '{color.white}',
+              display: 'flex',
+              '.place': {
+                padding: '8px 16px',
+                fontSize: 'calc(12*{fontSize.base})',
+                fontWeight: '700',
+                color: '{color.white}',
+              },
+              '.translate': {
+                position: 'relative',
+                padding: '8px 16px 8px 40px',
+                fontSize: 'calc(12*{fontSize.base})',
+                fontWeight: '700',
+                color: '#35495E',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: '50%',
+                  left: '16px',
+                  transform: 'translateY(-50%)',
+                  width: '15px',
+                  height: '15px',
+                  backgroundImage: 'url(/timetable/translation_logo.svg)',
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                },
+              },
             },
             '.title': {
               fontSize: 'calc(16*{fontSize.base})',
@@ -105,39 +144,45 @@ css({
               fontWeight: '500',
             },
             '&.track-c': {
-              border: '1px solid #33A6B8',
               '.place': {
                 backgroundColor: '#33A6B8',
               },
-              '.title': {
-                color: '#33A6B8',
-              },
-              '.speaker': {
-                color: '#33A6B8',
+              '&.sponsor-session': {
+                border: '1px solid #33A6B8',
+                '.title': {
+                  color: '#33A6B8',
+                },
+                '.speaker': {
+                  color: '#33A6B8',
+                },
               },
             },
             '&.track-m': {
-              border: '1px solid #F17C67',
               '.place': {
                 backgroundColor: '#F17C67',
               },
-              '.title': {
-                color: '#F17C67',
-              },
-              '.speaker': {
-                color: '#F17C67',
+             '&.sponsor-session': {
+                border: '1px solid #F17C67',
+                '.title': {
+                  color: '#F17C67',
+                },
+                '.speaker': {
+                  color: '#F17C67',
+                },
               },
             },
             '&.track-e': {
-              border: '1px solid #90B44B',
               '.place': {
                 backgroundColor: '#90B44B',
               },
-              '.title': {
-                color: '#90B44B',
-              },
-              '.speaker': {
-                color: '#90B44B',
+              '&.sponsor-session': {
+                 border: '1px solid #90B44B',
+                 '.title': {
+                    color: '#90B44B',
+                 },
+                 '.speaker': {
+                    color: '#90B44B',
+                 },
               },
             },
           },

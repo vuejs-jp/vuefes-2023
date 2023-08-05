@@ -221,7 +221,7 @@ const all: Sponsor[] = [
   {
     id: 'attelu',
     name: '株式会社アッテル',
-    image: '/sponsors/attelu.png',
+    image: '/sponsors/attelu.svg',
     categories: ['bronze'],
     url: 'https://attelu.jp',
   },

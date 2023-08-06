@@ -31,78 +31,75 @@ const timeSlots = computed(() => {
       <!-- Loop through the time slots from 9:30 to 18:00 -->
       <!-- Each row represents a 30-minute interval -->
       <tr>
-        <td class="">開場</td>
+        <TimetableBodyRowMobile :sessions="[{title: '開場'}]" />
       </tr>
       <!-- Todo: Component化 スポンサーセッション -->
       <tr>
-        <td class="track track-c sponsor-session">
-          <div class="headline">
-            <div class="place">ホールA+B</div>
-          </div>
-          <div class="title">オープニング</div>
-          <div class="speaker">スピーカー</div>
-        </td>
+        <TimetableBodyRowMobile
+            track="cloud-sign"
+            is-sponsor-session
+            :sessions="[{
+              title: 'オープニング',
+              speaker: 'スピーカー',
+            }]"
+            }
+        />
       </tr>
       <tr>
-        <td class="track track-m sponsor-session">
-          <div class="headline">
-            <div class="place">ホールC</div>
-          </div>
-          <div class="title">スポンサーセッション</div>
-          <div class="speaker">スピーカー</div>
-        </td>
+        <TimetableBodyRowMobile
+            track="medpia"
+            is-sponsor-session
+            :sessions="[{
+              title: 'スポンサーセッション',
+              speaker: 'スピーカー',
+            }]"
+        />
       </tr>
       <tr>
-        <td class="track track-e sponsor-session">
-          <div class="headline">
-            <div class="place">ホール1</div>
-          </div>
-          <div class="title">スポンサーセッション</div>
-          <div class="speaker">スピーカー</div>
-        </td>
+        <TimetableBodyRowMobile
+            track="m3"
+            is-sponsor-session
+            :sessions="[{
+              title: 'スポンサーセッション',
+              speaker: 'スピーカー',
+            }]"
+        />
       </tr>
       <tr>
-        <td class="track track-c">
-          <div class="headline">
-            <div class="place">ホールA+B</div>
-            <div class="translate">同時通訳あり</div>
-          </div>
-          <div class="info">
-            <div class="title">ホールA+Bセッション</div>
-          </div>
-        </td>
+        <TimetableBodyRowMobile
+            track="cloud-sign"
+            :is-translation="true"
+            :sessions="[{
+              title: 'XXXX',
+            }]"
+        />
       </tr>
       <tr>
-        <td class="track track-c info-time">
-          <div class="headline">
-            <div class="place">ホールA+B</div>
-            <div class="translate">同時通訳あり</div>
-          </div>
-          <div class="info">
-            <p class="time">10:30 - 11:00</p>
-            <p class="title">メインセッションメインセッション</p>
-          </div>
-          <div class="info">
-            <p class="time">14:45 - 15:05</p>
-            <p class="title">メインセッションメインセッション</p>
-          </div>
-        </td>
+        <TimetableBodyRowMobile
+            track="medpia"
+            :is-translation="true"
+            :sessions="[{
+              time: '10:30 - 11:00',
+              title: 'メインセッションメインセッション',
+            },{
+              time: '14:45 - 15:05',
+              title: 'メインセッションメインセッション',
+            }]"
+        />
       </tr>
       <tr>
-        <td class="track track-m info-time">
-          <div class="headline">
-            <div class="place">ルーム3A</div>
-          </div>
-          <div class="info">
-            <p class="time">サブタイトル</p>
-            <p class="title">ルーム3Aセッションセッションセッションセッションセッション</p>
-            <p class="speaker">発表者名</p>
-          </div>
-          <div class="info">
-            <p class="time">14:45 - 15:05</p>
-            <p class="title">メインセッションメインセッション</p>
-          </div>
-        </td>
+        <TimetableBodyRowMobile
+            track="medpia"
+            :is-translation="true"
+            :sessions="[{
+              title: 'メインセッションメインセッション',
+              speaker: '発表者',
+            },{
+              time: 'サブタイトル',
+              title: 'メインセッションメインセッション',
+              speaker: '発表者',
+            }]"
+        />
       </tr>
     </tbody>
   </table>

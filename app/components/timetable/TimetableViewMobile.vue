@@ -31,74 +31,88 @@ const timeSlots = computed(() => {
       <!-- Loop through the time slots from 9:30 to 18:00 -->
       <!-- Each row represents a 30-minute interval -->
       <tr>
-        <TimetableBodyRowMobile :sessions="[{title: '開場'}]" />
+        <TimetableBodyRowMobile :sessions="[{ title: '開場' }]" />
       </tr>
-      <!-- Todo: Component化 スポンサーセッション -->
+
       <tr>
         <TimetableBodyRowMobile
-            track="cloud-sign"
-            is-sponsor-session
-            :sessions="[{
+          track="cloud-sign"
+          is-sponsor-session
+          :sessions="[
+            {
               title: 'オープニング',
               speaker: 'スピーカー',
-            }]"
-            }
+            },
+          ]"
+          }
         />
       </tr>
       <tr>
         <TimetableBodyRowMobile
-            track="medpia"
-            is-sponsor-session
-            :sessions="[{
+          track="medpia"
+          is-sponsor-session
+          :sessions="[
+            {
               title: 'スポンサーセッション',
               speaker: 'スピーカー',
-            }]"
+            },
+          ]"
         />
       </tr>
       <tr>
         <TimetableBodyRowMobile
-            track="m3"
-            is-sponsor-session
-            :sessions="[{
+          track="m3"
+          is-sponsor-session
+          :sessions="[
+            {
               title: 'スポンサーセッション',
               speaker: 'スピーカー',
-            }]"
+            },
+          ]"
         />
       </tr>
       <tr>
         <TimetableBodyRowMobile
-            track="cloud-sign"
-            :is-translation="true"
-            :sessions="[{
+          track="cloud-sign"
+          :is-translation="true"
+          :sessions="[
+            {
               title: 'XXXX',
-            }]"
+            },
+          ]"
         />
       </tr>
       <tr>
         <TimetableBodyRowMobile
-            track="medpia"
-            :is-translation="true"
-            :sessions="[{
+          track="medpia"
+          :is-translation="true"
+          :sessions="[
+            {
               time: '10:30 - 11:00',
               title: 'メインセッションメインセッション',
-            },{
+            },
+            {
               time: '14:45 - 15:05',
               title: 'メインセッションメインセッション',
-            }]"
+            },
+          ]"
         />
       </tr>
       <tr>
         <TimetableBodyRowMobile
-            track="medpia"
-            :is-translation="true"
-            :sessions="[{
+          track="medpia"
+          :is-translation="true"
+          :sessions="[
+            {
               title: 'メインセッションメインセッション',
               speaker: '発表者',
-            },{
+            },
+            {
               time: 'サブタイトル',
               title: 'メインセッションメインセッション',
               speaker: '発表者',
-            }]"
+            },
+          ]"
         />
       </tr>
     </tbody>

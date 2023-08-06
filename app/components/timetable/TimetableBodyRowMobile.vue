@@ -23,7 +23,7 @@ const cssTdClass = computed(() => {
     'track-m': track === 'medpia',
     'track-e': track === 'm3',
     'track-v': track === 'vue',
-    'sponsor-session': isSponsorSession
+    'sponsor-session': isSponsorSession,
   }
 })
 
@@ -42,7 +42,6 @@ const namePlace = computed(() => {
       return ''
   }
 })
-
 </script>
 <template>
   <td :class="cssTdClass">

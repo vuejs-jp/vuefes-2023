@@ -67,7 +67,41 @@ const timeSlots = computed(() => {
             <div class="place">ホールA+B</div>
             <div class="translate">同時通訳あり</div>
           </div>
-          <div class="title">ホールA+Bセッション</div>
+          <div class="info">
+            <div class="title">ホールA+Bセッション</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="track track-c info-time">
+          <div class="headline">
+            <div class="place">ホールA+B</div>
+            <div class="translate">同時通訳あり</div>
+          </div>
+          <div class="info">
+            <p class="time">10:30 - 11:00</p>
+            <p class="title">メインセッションメインセッション</p>
+          </div>
+          <div class="info">
+            <p class="time">14:45 - 15:05</p>
+            <p class="title">メインセッションメインセッション</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="track track-m info-time">
+          <div class="headline">
+            <div class="place">ルーム3A</div>
+          </div>
+          <div class="info">
+            <p class="time">サブタイトル</p>
+            <p class="title">ルーム3Aセッションセッションセッションセッションセッション</p>
+            <p class="speaker">発表者名</p>
+          </div>
+          <div class="info">
+            <p class="time">14:45 - 15:05</p>
+            <p class="title">メインセッションメインセッション</p>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -94,7 +128,7 @@ css({
     'tbody': {
       'tr': {
         'td': {
-          padding: '16px 0',
+          padding: '16px',
           fontSize: 'calc(16*{fontSize.base})',
           fontWeight: '700',
           textAlign: 'center',
@@ -102,7 +136,7 @@ css({
           backgroundColor: '{color.white}',
           '&.track': {
             position: 'relative',
-            padding: '46px 0 16px',
+            padding: '46px 16px 16px',
             '.headline': {
               position: 'absolute',
               top: '0',
@@ -143,6 +177,29 @@ css({
               fontSize: 'calc(11*{fontSize.base})',
               fontWeight: '500',
             },
+            '.info': {
+              marginBottom: 'calc(16*{fontSize.base})',
+              textAlign: 'left',
+              color: '#35495E',
+              '.time': {
+                marginBottom: 'calc(3*{fontSize.base})',
+                color: '#35495E',
+                fontSize: 'calc(11*{fontSize.base})',
+                fontWeight: '500',
+              },
+              '.title': {
+                fontSize: 'calc(16*{fontSize.base})',
+                fontWeight: '700',
+                color: '#35495E',
+              },
+              '.speaker': {
+                fontSize: 'calc(11*{fontSize.base})',
+                fontWeight: '500',
+              },
+              '&:last-child': {
+                marginBottom: '0',
+              },
+             },
             '&.track-c': {
               '.place': {
                 backgroundColor: '#33A6B8',

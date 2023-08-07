@@ -46,6 +46,12 @@ css({
     fontSize: 'calc(18*{fontSize.base})',
     fontWeight: 500,
     lineHeight: 1.8,
+    '::v-deep(a)': {
+      textDecoration: 'underline',
+      '&:hover': {
+        transition: '.2s',
+      },
+    },
     'strong': {
       fontWeight: 'bold',
     },

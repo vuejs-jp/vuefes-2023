@@ -172,6 +172,12 @@ css({
   },
   '.detailhead-right': {
     fontSize: 'calc(18*{fontSize.base})',
+    '::v-deep(a)': {
+      textDecoration: 'underline',
+      '&:hover': {
+        transition: '.2s',
+      },
+    },
   },
   '.detailhead-img': {
     display: 'flex',

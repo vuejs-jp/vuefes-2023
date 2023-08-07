@@ -20,7 +20,7 @@ const emptySponsor: Sponsor = {
   url: '',
 }
 
-const { getCategoryType, isOptions, isPlatinum } = useSponsor()
+const { getCategoryType, isMoreSilver, isOptions, isPlatinum, isBronze } = useSponsor()
 const route = useRoute()
 const sponsorId = route.params.id as string
 const sponsorData: Sponsor =
@@ -71,7 +71,7 @@ useHead({
       <div
         class="detailhead-body"
         :style="
-          isOptions(sponsorData.categories)
+          isOptions(sponsorData.categories) || isBronze(sponsorData.categories)
             ? { gridTemplateColumns: '1fr', placeItems: 'center' }
             : { gridTemplateColumns: 'auto 1fr' }
         "
@@ -95,7 +95,7 @@ useHead({
             <h1>{{ sponsorData.name }}</h1>
           </a>
         </div>
-        <div v-if="!isOptions(sponsorData.categories)" class="detailhead-right">
+        <div v-if="isMoreSilver(sponsorData.categories)" class="detailhead-right">
           <MarkDownText :path="`sponsors/${sponsorData.id}/head`" />
         </div>
       </div>

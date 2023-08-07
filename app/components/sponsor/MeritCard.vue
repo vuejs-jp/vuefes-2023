@@ -67,6 +67,10 @@ css({
     position: 'absolute',
     top: '0',
     left: '0',
+    '::v-deep(svg)': {
+      width: '80px',
+      height: '80px',
+    },
   },
   '.image': {
     position: 'absolute',
@@ -74,6 +78,9 @@ css({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     textAlign: 'center',
+    '::v-deep(svg)': {
+      width: '160px',
+    },
     '::v-deep(a)': {
       display: 'block',
       width: '300px',
@@ -99,9 +106,31 @@ css({
     },
   },
   '@mobile': {
-    '.merit': {
-      gridTemplateColumns: '1fr',
-      placeItems: 'center',
+    '.merit-card': {
+      width: '114px',
+      height: '83px',
+    },
+    '.merit-id': {
+      fontSize: 'calc(14*{fontSize.base})',
+     },
+    '.polygon': {
+      '::v-deep(svg)': {
+        width: '48px',
+        height: '48px',
+      },
+    },
+    '.image': {
+      '::v-deep(svg)': {
+        width: '40px',
+      },
+    },
+    '.merit-item': {
+      '::v-deep(h4)': {
+        fontSize: 'calc(18*{fontSize.base})',
+      },
+      '::v-deep(p)': {
+        fontSize: 'calc(14*{fontSize.base})',
+      },
     },
   },
 })

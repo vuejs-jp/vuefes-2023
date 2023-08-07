@@ -3,6 +3,13 @@ import { OptionCategory, SponsorCategory } from '~/types/app'
 export function useSponsor() {
   const isPlatinum = (categories: Array<SponsorCategory | OptionCategory>) =>
     categories.some((category) => category === 'platinum')
+  const isBronze = (categories: Array<SponsorCategory | OptionCategory>) =>
+    categories.some((category) => category === 'bronze')
+
+  const isMoreSilver = (categories: Array<SponsorCategory | OptionCategory>) =>
+    categories.some(
+      (category) => category === 'platinum' || category === 'gold' || category === 'silver',
+    )
 
   const isOptions = (categories: Array<SponsorCategory | OptionCategory>) =>
     categories.every(
@@ -20,5 +27,5 @@ export function useSponsor() {
     return isBasicBy(category) ? category : 'options'
   }
 
-  return { isPlatinum, isOptions, isBasicBy, getCategoryType }
+  return { isPlatinum, isBronze, isMoreSilver, isOptions, isBasicBy, getCategoryType }
 }

@@ -165,7 +165,7 @@ const all: Sponsor[] = [
   {
     id: 'mercari',
     name: '株式会社メルカリ',
-    image: '/sponsors/mercari.png',
+    image: '/sponsors/mercari.svg',
     categories: ['bronze'],
     url: 'https://jp.merpay.com',
   },
@@ -221,7 +221,7 @@ const all: Sponsor[] = [
   {
     id: 'attelu',
     name: '株式会社アッテル',
-    image: '/sponsors/attelu.png',
+    image: '/sponsors/attelu.svg',
     categories: ['bronze'],
     url: 'https://attelu.jp',
   },

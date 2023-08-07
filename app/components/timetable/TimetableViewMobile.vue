@@ -88,11 +88,11 @@ const timeSlots = computed(() => {
           :is-translation="true"
           :sessions="[
             {
-              time: '10:30 - 11:00',
+              subTitle: '10:30 - 11:00',
               title: 'メインセッションメインセッション',
             },
             {
-              time: '14:45 - 15:05',
+              subTitle: '14:45 - 15:05',
               title: 'メインセッションメインセッション',
             },
           ]"
@@ -108,7 +108,7 @@ const timeSlots = computed(() => {
               speaker: '発表者',
             },
             {
-              time: 'サブタイトル',
+              subTitle: 'サブタイトル',
               title: 'メインセッションメインセッション',
               speaker: '発表者',
             },

@@ -159,7 +159,7 @@ export default {
       namecard_infolink: 'Confirm {0} in latest information.',
       tickets_schedule_limit: 'Tickets Deadline: Until {0}',
       ticket_early_price: 'Early Price: ¥ {0}',
-      ticket_early_price_explain: '※ Until 9/18 (Mon/Holiday) 23:59',
+      ticket_early_price_explain: '※ Until 9/18 (Mon./Holiday) 23:59',
       ticket_price: 'General Price: ¥ {0}',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',

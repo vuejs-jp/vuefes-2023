@@ -14,6 +14,7 @@ export type Path =
   | 'volunteer'
   | 'childcare'
   | 'handson'
+  | 'faq'
   | 'privacy'
   | 'code-of-conduct'
   | string

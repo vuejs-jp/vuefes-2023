@@ -21,6 +21,7 @@ export function useLocale(path: Path) {
       .with('code-of-conduct', () => `/${locale.value}/code-of-conduct`)
       .with('personal-sponsors-text1', () => `/${locale.value}/top/personal-sponsors-text1`)
       .with('personal-sponsors-caption', () => `/${locale.value}/top/personal-sponsors-caption`)
+      .with('faq', () => `/${locale.value}/top/faq`)
 
     // set sponsors markdown
     m = all.reduce((prev: any, s: Sponsor) => {

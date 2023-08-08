@@ -33,8 +33,7 @@ export const ogPrivacyDescription = 'Vue Fes Japan 2023 のプライバシーポ
 
 export const linkUrl = 'https://vuefes.jp/2023/'
 
-// WIP
-export const ticketUrl = 'https://passmarket.yahoo.co.jp/event/show/detail/02j5vbqweig21.html'
+export const ticketUrl = 'https://passmarket.yahoo.co.jp/event/show/detail/02hv5juj2f531.html'
 
 export const volunteerUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSfLztgJd07h3XxaLe9Bt8RNWOsX2DT3b5vpUSR3nNSoYtZ1qg/viewform'

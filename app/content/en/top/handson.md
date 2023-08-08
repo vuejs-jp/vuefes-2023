@@ -4,4 +4,5 @@ Whether you are a beginner looking to learn Vue.js or an experienced user wantin
 
 Pre-registration is required to participate. When purchasing a general ticket, please apply for a hands-on ticket (free) together. Seats are limited and on a first-come, first-served basis, so register early!
 
-- When you participate, please prepare the development environment by referring to the link below. https://handson.vuejs-jp.org/setup.html
+- When you participate, please prepare the development environment by referring to the link below.
+  https://handson.vuejs-jp.org/setup.html

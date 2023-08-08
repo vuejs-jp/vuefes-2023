@@ -241,7 +241,7 @@ const all: Sponsor[] = [
   },
   {
     id: 'tabian',
-    name: '株式会社タビアン',
+    name: 'タビアン株式会社',
     image: '/sponsors/tabian.png',
     categories: ['handson'],
     url: 'https://tabian.co.jp',
@@ -280,9 +280,7 @@ const interpretationSponsors: Sponsor[] = all.filter((s: Sponsor) =>
   s.categories.includes('simultaneous-interpretation'),
 )
 
-const handsonSponsors: Sponsor[] = all.filter((s: Sponsor) =>
-  s.categories.includes('handson'),
-)
+const handsonSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('handson'))
 
 const mediaSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('media'))
 

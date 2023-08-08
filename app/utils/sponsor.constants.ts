@@ -225,6 +225,20 @@ const all: Sponsor[] = [
     categories: ['bronze'],
     url: 'https://attelu.jp',
   },
+  {
+    id: 'algorithms',
+    name: '株式会社アルゴリズム',
+    image: '/sponsors/algorithms.png',
+    categories: ['bronze'],
+    url: 'https://algorithms.co.jp',
+  },
+  {
+    id: 'interfirm',
+    name: '株式会社インターファーム',
+    image: '/sponsors/interfirm.png',
+    categories: ['bronze'],
+    url: 'https://www.interfirm.jp',
+  },
 ]
 
 const platinumSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('platinum'))

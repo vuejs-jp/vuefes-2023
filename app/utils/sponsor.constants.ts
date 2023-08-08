@@ -54,7 +54,7 @@ const all: Sponsor[] = [
     id: 'hacomono',
     name: '株式会社hacomono',
     image: '/sponsors/hacomono.png',
-    categories: ['gold'],
+    categories: ['gold', 'special-lunch'],
     url: 'https://www.hacomono.jp/',
   },
   {

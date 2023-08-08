@@ -28,6 +28,15 @@ const sponsorData: Sponsor =
     return s.id === sponsorId
   }) || emptySponsor
 
+if (!sponsorData.id) {
+  // https://nuxt.com/docs/getting-started/error-handling#showerror
+  throw showError({
+    statusCode: 404,
+    fatal: true,
+    message: 'Not Found Sponsors',
+  })
+}
+
 // TODO: develop later
 // const users = sponsorUsers.filter((user: SponsorUser) => {
 //   return user.sponsorId === sponsorId
@@ -54,7 +63,7 @@ useHead({
 
 <template>
   <NavPageSection />
-  <main v-if="sponsorData.id" class="sponsors-detail">
+  <main class="sponsors-detail">
     <section class="detailhead">
       <SectionTitle
         id="sponsor-detail"
@@ -122,28 +131,11 @@ useHead({
       </RoundButton>
     </footer>
   </main>
-  <main v-else class="sponsors-detail -error">
-    <h1>ページが存在しません</h1>
-    <footer>
-      <!-- トップにもどる -->
-      <RoundButton to="/" outline>
-        {{ $t('words.back_top') }}
-      </RoundButton>
-    </footer>
-  </main>
   <FooterPageSection />
 </template>
 
 <style lang="ts" scoped>
 css({
-  'main.-error': {
-    'h1': {
-      fontSize: 'calc(22*{fontSize.base})',
-      fontWeight: '700',
-      textAlign: 'center',
-      padding: 'calc({space.8} * 10) 0',
-    }
-  },
   'main': {
     '--max-width': '1280px',
     '--head-img-width': '475px',

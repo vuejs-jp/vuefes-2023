@@ -24,7 +24,6 @@ css({
       marginBottom: 'calc({space.8} * 1.5)',
       fontSize: 'calc(18*{fontSize.base})',
       fontWeight: 'bold',
-      lineHeight: '1',
     },
     '::v-deep(p)': {
       marginBottom: 'calc({space.8} * 3)',

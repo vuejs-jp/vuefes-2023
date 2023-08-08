@@ -18,30 +18,32 @@ type Props = {
 const props = defineProps<Props>()
 
 // tdのclassを設定する
-const cssTdClass = computed((): {
-  track?: Track,
-  'track-a': boolean,
-  'track-b': boolean,
-  'track-c': boolean,
-  'track-d': boolean,
-  'sponsor-session': boolean,
-  'sponsor-session-a': boolean,
-  'sponsor-session-b': boolean,
-  'sponsor-session-c': boolean,
-} => {
-  const { track, sponsorSession } = props
-  return {
-    track,
-    'track-a': track === 'cloud-sign',
-    'track-b': track === 'medpia',
-    'track-c': track === 'm3',
-    'track-d': track === 'vue',
-    'sponsor-session': sponsorSession !== undefined,
-    'sponsor-session-a': sponsorSession === 'cloud-sign',
-    'sponsor-session-b': sponsorSession === 'medpia',
-    'sponsor-session-c': sponsorSession === 'm3',
-  }
-})
+const cssTdClass = computed(
+  (): {
+    track?: Track
+    'track-a': boolean
+    'track-b': boolean
+    'track-c': boolean
+    'track-d': boolean
+    'sponsor-session': boolean
+    'sponsor-session-a': boolean
+    'sponsor-session-b': boolean
+    'sponsor-session-c': boolean
+  } => {
+    const { track, sponsorSession } = props
+    return {
+      track,
+      'track-a': track === 'cloud-sign',
+      'track-b': track === 'medpia',
+      'track-c': track === 'm3',
+      'track-d': track === 'vue',
+      'sponsor-session': sponsorSession !== undefined,
+      'sponsor-session-a': sponsorSession === 'cloud-sign',
+      'sponsor-session-b': sponsorSession === 'medpia',
+      'sponsor-session-c': sponsorSession === 'm3',
+    }
+  },
+)
 
 const namePlace = computed(() => {
   const { track } = props

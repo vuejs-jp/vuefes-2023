@@ -18,101 +18,167 @@ const timeSlots = computed(() => {
   }
   return slots
 })
+
+type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
+type Track = Sponsor | 'vue'
+
+type TimeTable = {
+  time: string
+  tracks: {
+    track?: Track
+    sponsorSession?: Sponsor
+    isTranslation?: boolean
+    sessions: {
+      subTitle?: string
+      title?: string
+      speaker?: string
+    }[]
+  }[]
+}[]
+
+const timeTables: TimeTable = [
+  {
+    time: '09:30 - 10:00',
+    tracks: [
+      {
+        sessions: [
+          {
+            title: '開場',
+          },
+        ],
+      }
+    ]
+  },
+  {
+    time: '10:30 - 10:40',
+    tracks: [
+      {
+        sessions: [
+          {
+            title: 'オープニング',
+            speaker: '川口 和也',
+          },
+        ],
+      }
+    ]
+  },
+  {
+    time: '10:40 - 11:30',
+    tracks: [
+      {
+        sessions: [
+          {
+            title: 'キーノート',
+            speaker: 'Evan You',
+          },
+        ],
+      }
+    ]
+  },
+  {
+    time: '11:30 - 11:40',
+    tracks: [
+      {
+        sponsorSession: 'cloud-sign',
+        sessions: [
+          {
+            title: 'プラチナスポンサーセッション',
+            speaker: 'クラウドサイン（弁護士ドットコム株式会社）',
+          },
+        ],
+      }
+    ]
+  },
+  {
+    time: '11:40 - 11:50',
+    tracks: [
+      {
+        sponsorSession: 'medpia',
+        sessions: [
+          {
+            title: 'プラチナスポンサーセッション',
+            speaker: 'ユニークビジョン株式会社',
+          },
+        ],
+      }
+    ]
+  },
+  {
+    time: '11:50 - 12:00',
+    tracks: [
+      {
+        sponsorSession: 'm3',
+        sessions: [
+          {
+            title: 'プラチナスポンサーセッション',
+            speaker: '株式会社リンクアンドモチベーション',
+          },
+        ],
+      }
+    ]
+  },
+  {
+    time: '12:00 - 12:30',
+    tracks: [
+      {
+        track: 'cloud-sign',
+        isTranslation: true,
+        sessions: [
+          {
+            title: 'Getting Your Head Around useHead',
+            speaker: 'Evan Harlan Wilton',
+          },
+        ],
+      },
+      {
+        track: 'medpia',
+        sessions: [
+          {
+            title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
+            speaker: 'やまのく',
+          },
+        ],
+      },
+      {
+        track: 'm3',
+        sessions: [
+          {
+            title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
+            speaker: 'sorami',
+          },
+        ],
+      },
+      {
+        track: 'vue',
+        sessions: [
+          {
+            subTitle: '16:45 - 17:45',
+            title: 'Vue.js クリニック',
+          },
+        ],
+      }
+    ]
+  }
+]
+
 </script>
 
 <template>
-  <table v-for="timeSlot in timeSlots" :key="timeSlot" class="timetable">
+  <table v-for="timetable in timeTables" :key="timetable.time" class="timetable">
     <thead>
       <tr>
-        <th class="schedule">{{ timeSlot }}</th>
+        <th class="schedule">{{ timetable.time }}</th>
       </tr>
     </thead>
     <tbody>
       <!-- Loop through the time slots from 9:30 to 18:00 -->
       <!-- Each row represents a 30-minute interval -->
-      <tr>
-        <TimetableBodyRowMobile :sessions="[{ title: '開場' }]" />
-      </tr>
-
-      <tr>
+      <tr v-for="track in timetable.tracks" :key="track.track">
         <TimetableBodyRowMobile
-          track="cloud-sign"
-          is-sponsor-session
-          :sessions="[
-            {
-              title: 'オープニング',
-              speaker: 'スピーカー',
-            },
-          ]"
-          }
-        />
-      </tr>
-      <tr>
-        <TimetableBodyRowMobile
-          track="medpia"
-          is-sponsor-session
-          :sessions="[
-            {
-              title: 'スポンサーセッション',
-              speaker: 'スピーカー',
-            },
-          ]"
-        />
-      </tr>
-      <tr>
-        <TimetableBodyRowMobile
-          track="m3"
-          is-sponsor-session
-          :sessions="[
-            {
-              title: 'スポンサーセッション',
-              speaker: 'スピーカー',
-            },
-          ]"
-        />
-      </tr>
-      <tr>
-        <TimetableBodyRowMobile
-          track="cloud-sign"
-          :is-translation="true"
-          :sessions="[
-            {
-              title: 'XXXX',
-            },
-          ]"
-        />
-      </tr>
-      <tr>
-        <TimetableBodyRowMobile
-          track="medpia"
-          :is-translation="true"
-          :sessions="[
-            {
-              subTitle: '10:30 - 11:00',
-              title: 'メインセッションメインセッション',
-            },
-            {
-              subTitle: '14:45 - 15:05',
-              title: 'メインセッションメインセッション',
-            },
-          ]"
-        />
-      </tr>
-      <tr>
-        <TimetableBodyRowMobile
-          track="medpia"
-          :is-translation="true"
-          :sessions="[
-            {
-              title: 'メインセッションメインセッション',
-              speaker: '発表者',
-            },
-            {
-              subTitle: 'サブタイトル',
-              title: 'メインセッションメインセッション',
-              speaker: '発表者',
-            },
-          ]"
+            :track="track.track"
+            :sponsor-session="track.sponsorSession"
+            :is-translation="track.isTranslation"
+            :sessions="track.sessions"
         />
       </tr>
     </tbody>

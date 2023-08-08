@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
+type Track = Sponsor | 'vue'
+
 type Props = {
-  track?: 'cloud-sign' | 'medpia' | 'm3' | 'vue'
-  isSponsorSession?: boolean
+  track?: Track
+  sponsorSession?: Sponsor
   isTranslation?: boolean
   sessions: {
     subTitle?: string
@@ -15,15 +18,28 @@ type Props = {
 const props = defineProps<Props>()
 
 // tdのclassを設定する
-const cssTdClass = computed(() => {
-  const { track, isSponsorSession } = props
+const cssTdClass = computed((): {
+  track?: Track,
+  'track-a': boolean,
+  'track-b': boolean,
+  'track-c': boolean,
+  'track-d': boolean,
+  'sponsor-session': boolean,
+  'sponsor-session-a': boolean,
+  'sponsor-session-b': boolean,
+  'sponsor-session-c': boolean,
+} => {
+  const { track, sponsorSession } = props
   return {
     track,
-    'track-c': track === 'cloud-sign',
-    'track-m': track === 'medpia',
-    'track-e': track === 'm3',
-    'track-v': track === 'vue',
-    'sponsor-session': isSponsorSession,
+    'track-a': track === 'cloud-sign',
+    'track-b': track === 'medpia',
+    'track-c': track === 'm3',
+    'track-d': track === 'vue',
+    'sponsor-session': sponsorSession !== undefined,
+    'sponsor-session-a': sponsorSession === 'cloud-sign',
+    'sponsor-session-b': sponsorSession === 'medpia',
+    'sponsor-session-c': sponsorSession === 'm3',
   }
 })
 
@@ -67,6 +83,36 @@ css({
     textAlign: 'center',
     color: '#35495E',
     backgroundColor: '{color.white}',
+    '&.sponsor-session': {
+      border: '1px solid',
+      '&.sponsor-session-a': {
+        borderColor: '#33A6B8',
+        '.title': {
+          color: '#33A6B8',
+        },
+        '.speaker': {
+          color: '#33A6B8',
+        },
+      },
+      '&.sponsor-session-b': {
+        borderColor: '#F17C67',
+        '.title': {
+          color: '#F17C67',
+        },
+        '.speaker': {
+          color: '#F17C67',
+        },
+      },
+      '&.sponsor-session-c': {
+        borderColor: '#90B44B',
+        '.title': {
+          color: '#90B44B',
+        },
+        '.speaker': {
+          color: '#90B44B',
+        },
+      },
+    },
     '&.track': {
         position: 'relative',
         padding: '46px 16px 16px',
@@ -133,46 +179,24 @@ css({
           marginBottom: '0',
         },
       },
-      '&.track-c': {
+      '&.track-a': {
         '.place': {
           backgroundColor: '#33A6B8',
         },
-        '&.sponsor-session': {
-          border: '1px solid #33A6B8',
-          '.title': {
-            color: '#33A6B8',
-          },
-          '.speaker': {
-            color: '#33A6B8',
-          },
-        },
       },
-      '&.track-m': {
+      '&.track-b': {
         '.place': {
           backgroundColor: '#F17C67',
         },
-        '&.sponsor-session': {
-          border: '1px solid #F17C67',
-          '.title': {
-            color: '#F17C67',
-          },
-          '.speaker': {
-            color: '#F17C67',
-          },
-        },
       },
-      '&.track-e': {
+      '&.track-c': {
         '.place': {
           backgroundColor: '#90B44B',
         },
-        '&.sponsor-session': {
-          border: '1px solid #90B44B',
-          '.title': {
-            color: '#90B44B',
-          },
-          '.speaker': {
-            color: '#90B44B',
-          },
+      },
+      '&.track-d': {
+        '.place': {
+          backgroundColor: '#42B983',
         },
       },
     },

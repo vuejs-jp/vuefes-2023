@@ -117,6 +117,7 @@ export type OptionCategory =
   | 'name-card'
   | 'refreshment'
   | 'simultaneous-interpretation'
+  | 'handson'
   | 'media'
 
 export type Sponsor = {

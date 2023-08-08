@@ -239,6 +239,13 @@ const all: Sponsor[] = [
     categories: ['bronze'],
     url: 'https://www.interfirm.jp',
   },
+  {
+    id: 'tabian',
+    name: '株式会社タビアン',
+    image: '/sponsors/tabian.png',
+    categories: ['handson'],
+    url: 'https://tabian.co.jp',
+  },
 ]
 
 const platinumSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('platinum'))
@@ -273,6 +280,10 @@ const interpretationSponsors: Sponsor[] = all.filter((s: Sponsor) =>
   s.categories.includes('simultaneous-interpretation'),
 )
 
+const handsonSponsors: Sponsor[] = all.filter((s: Sponsor) =>
+  s.categories.includes('handson'),
+)
+
 const mediaSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('media'))
 
 const individual: string[] = []
@@ -288,6 +299,7 @@ export {
   afterPartySponsors,
   namecardSponsors,
   interpretationSponsors,
+  handsonSponsors,
   refreshmentSponsors,
   mediaSponsors,
   individual,

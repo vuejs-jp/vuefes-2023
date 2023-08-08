@@ -35,6 +35,7 @@ export default {
       'name-card': 'Name card',
       refreshment: 'Refreshment',
       'simultaneous-interpretation': 'Simultaneous interpretation',
+      handson: 'Handson',
       media: 'Media',
     },
     top: {
@@ -145,6 +146,7 @@ export default {
       'name-card': 'Name card',
       refreshment: 'Refreshment',
       'simultaneous-interpretation': 'Simultaneous interpretation',
+      handson: 'Handson',
       media: 'Media',
     },
     top: {

@@ -3,7 +3,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 
 import SpeakerCFP from './speaker/SpeakerCFP.vue'
 import SpeakerCard from './speaker/SpeakerCard.vue'
-import { speakers } from '~/utils/speakers.constants'
+import { ltSpeakers, sessionSpeakers } from '~/utils/speakers.constants'
 </script>
 
 <template>
@@ -20,7 +20,13 @@ import { speakers } from '~/utils/speakers.constants'
       <h3>Session</h3>
 
       <div class="speakers">
-        <SpeakerCard v-for="speaker in speakers" :key="speaker.id" :speaker="speaker" />
+        <SpeakerCard v-for="speaker in sessionSpeakers" :key="speaker.id" :speaker="speaker" />
+      </div>
+
+      <h3>LT</h3>
+
+      <div class="speakers">
+        <SpeakerCard v-for="speaker in ltSpeakers" :key="speaker.id" :speaker="speaker" />
       </div>
     </div>
   </section>
@@ -29,40 +35,42 @@ import { speakers } from '~/utils/speakers.constants'
 
 <style lang="ts" scoped>
 css({
+  'section': {
+    padding: 'calc({space.8} * 15) calc({space.8} * 2.5)',
+  },
+  '.speaker-root': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2.5em',
+    maxWidth: '1080px',
+    margin: '0 auto',
+  },
+  '.cfp': {
+    padding: '0 20px',
+  },
+  '.speaker-session': {
+    color: '{color.vue.blue}',
+    maxWidth: '1080px',
+    margin: '0 auto',
+    padding: '0 calc({space.8} * 2.5)',
+    display: 'grid',
+    gap: 'calc({space.8} * 5)',
+    'h3': {
+      fontWeight: 700,
+      fontSize: 'calc(32*{fontSize.base})',
+    },
+  },
+  '.speakers': {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: '2em',
+    margin: '0 auto',
+  },
+  '@tablet': {
     'section': {
-        padding: '120px 20px',
+      padding: 'calc({space.8} * 15) 0',
     },
-    '.speaker-root': {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '2.5em',
-        maxWidth: '1080px',
-        margin: '0 auto',
-    },
-    '.cfp': {
-      padding: '0 20px',
-    },
-    '.speaker-session': {
-        color: '{color.vue.blue}',
-        maxWidth: '1080px',
-        margin: '0 auto',
-        padding: '0 20px',
-        'h3': {
-            fontWeight: 700,
-            fontSize: '32px',
-        },
-    },
-    '.speakers': {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        gap: '2em',
-        margin: '0 auto',
-    },
-    '@tablet': {
-        'section': {
-            padding: '120px 0',
-        },
-    },
+  },
 })
 </style>

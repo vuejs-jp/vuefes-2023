@@ -120,6 +120,100 @@ export const speakers: Speaker[] = [
       description: 'ユーザーフレンドリーな開発を目指して活動しています。',
     },
   },
+  {
+    id: 'wattanx',
+    type: 'domestic',
+    session: {
+      title: 'Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/wattanx.png',
+      title: '',
+      name: 'wattanx / ワッタン',
+      twitterId: 'wattanx',
+      githubId: 'pontaxx',
+      description: '',
+    },
+  },
+  {
+    id: 'sorami',
+    type: 'domestic',
+    session: {
+      title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/sorami.png',
+      title: '',
+      name: 'sorami / ソラミ',
+      twitterId: 'sorami',
+      githubId: 'sorami',
+      description: '',
+    },
+  },
+  {
+    id: 'mizdra',
+    type: 'domestic',
+    session: {
+      title: 'Vue Language Server から生まれた Volar.js と、それが秘める可能性',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/mizdra.png',
+      title: '',
+      name: 'mizdra',
+      twitterId: 'mizdra',
+      githubId: 'mizdra',
+      description: '',
+    },
+  },
+  {
+    id: 'nozomu-ikuta',
+    type: 'domestic',
+    session: {
+      title: 'Deep dive to unjs and Nuxt 3',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/nozomu_ikuta.png',
+      title: '',
+      name: 'Nozomu Ikuta',
+      twitterId: 'NozomuIkuta',
+      githubId: 'NozomuIkuta',
+      description: '',
+    },
+  },
 
   // LT
+  {
+    id: 'kira-puka',
+    type: 'domestic',
+    session: {
+      title: 'Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/kira_puka.png',
+      title: '',
+      name: 'きらぷか',
+      twitterId: 'kira_puka',
+      githubId: 'memory-lovers',
+      description: '',
+    },
+  },
 ]
+
+export const sessionSpeakers = speakers.filter((speaker) => speaker.session.type !== 'lt')
+
+export const ltSpeakers = speakers.filter((speaker) => speaker.session.type === 'lt')

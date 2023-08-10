@@ -24,6 +24,7 @@
   },
   "excludeFiles": [
     "app/components/DragDropArea.vue",
-    "app/components/timetable/TimetableViewMobile.vue"
+    "app/components/timetable/TimetableViewMobile.vue",
+    "app/components/timetable/TimetableView.vue"
   ]
 }

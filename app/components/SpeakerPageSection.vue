@@ -63,6 +63,7 @@ css({
   '.speakers': {
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     gap: '2em',
   },
   '@tablet': {

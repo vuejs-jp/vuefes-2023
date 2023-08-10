@@ -168,7 +168,7 @@ export const speakers: Speaker[] = [
     profile: {
       image: '/speakers/mizdra.png',
       title: '',
-      name: 'mizdra',
+      name: 'mizdra / ミズドラ',
       twitterId: 'mizdra',
       githubId: 'mizdra',
       description: '',

@@ -123,6 +123,12 @@ const timeTables: TimeTable = [
         track: 'm3',
         sessions: [
           {
+            subTitle: '12:00 - 12:15',
+            title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
+            speaker: 'sorami',
+          },
+          {
+            subTitle: '12:15 - 12:30',
             title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
             speaker: 'sorami',
           },

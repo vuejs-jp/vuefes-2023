@@ -24,24 +24,62 @@ const timeSlots = computed(() => {
   <table class="timetable">
     <thead>
       <tr>
-        <th>空欄</th>
-        <th class="track1">トラック1</th>
-        <th class="track2">トラック2</th>
-        <th class="track3">トラック3</th>
-        <th class="track4">トラック4</th>
-        <th class="track5">トラック5</th>
+        <th />
+        <th class="track1">クラウドサイントラック</th>
+        <th class="track2">メドピアトラック</th>
+        <th class="track3">エムスリーやっていきトラック</th>
+        <th class="track4">Vueトラック</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Loop through the time slots from 9:30 to 18:00 -->
-      <!-- Each row represents a 30-minute interval -->
-      <tr v-for="timeSlot in timeSlots" :key="timeSlot">
-        <td class="schedule">{{ timeSlot }}</td>
-        <td class="track1" />
-        <td class="track2" />
-        <td class="track3" />
-        <td class="track4" />
-        <td class="track5" />
+      <tr>
+        <td class="schedule">09:30 - 10:00</td>
+        <td class="track" colspan="3">開場</td>
+        <td class="track close" rowspan="2">午後オープン</td>
+      </tr>
+      <tr>
+        <td class="schedule">09:30 - 10:00</td>
+        <td class="track sponsor-session sponsor-session-a">
+          <div class="info">
+            <div class="title">スポンサーセッション</div>
+            <div class="speaker">あああああああああああああああ</div>
+          </div>
+        </td>
+        <td class="track sponsor-session sponsor-session-b">
+          <div class="info">
+            <div class="title">スポンサーセッション</div>
+            <div class="speaker">いいいいいいいいいいいいいいい</div>
+          </div>
+        </td>
+        <td class="track sponsor-session sponsor-session-c">
+          <div class="info">
+            <div class="title">スポンサーセッション</div>
+            <div class="speaker">ううううううううううううううう</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="schedule">10:00 - 10:30</td>
+        <td class="track track-a">
+          <div class="info">
+            <div class="title">ホールA+Bセッション</div>
+          </div>
+        </td>
+        <td class="track track-b">
+          <div class="info">
+            <div class="title">ルーム1セッション</div>
+          </div>
+        </td>
+        <td class="track track-c">
+          <div class="info">
+            <div class="title">ホールCセッション</div>
+          </div>
+        </td>
+        <td class="track track-d">
+          <div class="info">
+            <div class="title">ルーム1セッション</div>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -86,12 +124,68 @@ css({
       'tr': {
         'td': {
           padding: '16px',
+          color: '#35495E',
           fontSize: 'calc(16*{fontSize.base})',
+          fontWeight: '700',
+          textAlign: 'center',
+          backgroundColor: '#F2F7FF',
           '&.schedule': {
             color: '{color.white}',
             textAlign: 'center',
             fontWeight: '500',
             backgroundColor: '#35495E',
+          },
+          '&.close': {
+            color: '#B5B5B5',
+            backgroundColor: '#EEE',
+          },
+          '&.sponsor-session': {
+            border: '1px solid',
+            '&.sponsor-session-a': {
+              borderColor: '#33A6B8',
+              '.title': {
+                color: '#33A6B8',
+              },
+              '.speaker': {
+                color: '#33A6B8',
+              },
+              },
+              '&.sponsor-session-b': {
+                borderColor: '#F17C67',
+              '.title': {
+                color: '#F17C67',
+              },
+              '.speaker': {
+                color: '#F17C67',
+              },
+            },
+            '&.sponsor-session-c': {
+              borderColor: '#90B44B',
+              '.title': {
+                color: '#90B44B',
+              },
+              '.speaker': {
+                color: '#90B44B',
+              },
+            },
+          },
+          '&.track': {
+            textAlign: 'left',
+            '&.info': {
+
+            }
+          },
+          '&.track-a': {
+            borderTop: '1px solid #33A6B8',
+          },
+          '&.track-b': {
+            borderTop: '1px solid #F17C67',
+          },
+          '&.track-c': {
+            borderTop: '1px solid #90B44B',
+          },
+          '&.track-d': {
+            borderTop: '1px solid #3178C6',
           },
         },
       },

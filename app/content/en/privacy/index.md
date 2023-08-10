@@ -12,16 +12,18 @@ This conference shall obtain personal information by legal and fair means, and s
 
 The conference handles the following personal information of users
 
-- E-mail address
-  - Name entered on the application form for services involving delivery
-  - E-mail address entered on this website
-  - Email address entered on the sponsor application form
-  - Email address entered in the CfP application form
+- Email address
+  - Email address entered on this website
+  - Email address entered on various application form such as sponsors, CFP, etc
+  - Email address entered when purchasing tickets on PassMarket
 - Name
-  - Name of contact person entered on the sponsor application form
-  - Name entered on the CfP Application Form
-- Address and phone number
-- Address and phone number entered in the application form for services involving delivery
+  - Name entered on various application form such as sponsors, CFP, etc
+  - Name entered when creating a name card
+  - Name entered when purchasing tickets on PassMarket
+- Avator image
+  - Avator image uploaded when creating a name card
+- Others
+  - Occupation, age, years of work experience entered when purchasing tickets on PassMarket
 
 ## Purpose of use of personal information
 

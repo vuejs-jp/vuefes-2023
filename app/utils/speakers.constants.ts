@@ -192,6 +192,42 @@ export const speakers: Speaker[] = [
       description: '',
     },
   },
+  {
+    id: 'yamanoku',
+    type: 'domestic',
+    session: {
+      title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/yamanoku.png',
+      title: '',
+      name: 'やまのく',
+      twitterId: 'yamanoku',
+      githubId: 'yamanoku',
+      description: '',
+    },
+  },
+  {
+    id: 'harlan-zw',
+    type: 'foreign',
+    session: {
+      title: 'Getting Your Head Around useHead',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/harlan_zw.jpg',
+      title: '',
+      name: 'Harlan Wilton',
+      twitterId: 'harlan_zw',
+      githubId: 'harlan-zw',
+      description: '',
+    },
+  },
 
   // LT
   {
@@ -209,6 +245,60 @@ export const speakers: Speaker[] = [
       name: 'きらぷか',
       twitterId: 'kira_puka',
       githubId: 'memory-lovers',
+      description: '',
+    },
+  },
+  {
+    id: 'northprint',
+    type: 'domestic',
+    session: {
+      title: 'WebGISとVue.jsの親和性について',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/northprint.png',
+      title: '',
+      name: '楢山哲弘',
+      twitterId: 'northprint',
+      githubId: 'northprint',
+      description: '',
+    },
+  },
+  {
+    id: 't0yohei',
+    type: 'domestic',
+    session: {
+      title: 'Vue を使って Grid System を実装した話',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/t0yohei.jpg',
+      title: '',
+      name: 't0yohei / トヨヘイ',
+      twitterId: 't0yohei',
+      githubId: 't0yohei',
+      description: '',
+    },
+  },
+  {
+    id: 'yud0uhu',
+    type: 'domestic',
+    session: {
+      title: 'Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/yud0uhu.jpg',
+      title: '',
+      name: '0yu / オユ',
+      twitterId: 'yud0uhu',
+      githubId: 'yud0uhu',
       description: '',
     },
   },

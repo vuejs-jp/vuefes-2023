@@ -2,6 +2,7 @@
 import RoundButton from '~/components/button/RoundButton.vue'
 import SponsorMerits from '~/components/sponsor/SponsorMerits.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
+import { ticketUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -19,9 +20,9 @@ import MarkDownText from '~/components/MarkDownText.vue'
         <strong>{{ $t('words.sponsors_personal_deadline_date') }}</strong>
       </i18n-t>
       -->
-      <!-- 個人スポンサーに応募 -->
+      <!-- チケットを購入 -->
       <RoundButton
-        href="https://forms.gle/rxHNdjFDnFGxzf5SA"
+        :href="ticketUrl"
         target="_blank"
         rel="noreferrer"
         class="personal-sponsor-apply-btn"

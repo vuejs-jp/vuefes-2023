@@ -124,12 +124,12 @@ useHead({
         </li>
       </ul> -->
     </section>
-    <footer>
+    <div class="back">
       <!-- トップにもどる -->
       <RoundButton to="/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
-    </footer>
+    </div>
   </main>
   <FooterPageSection />
 </template>
@@ -211,7 +211,7 @@ css({
     margin: 'calc({space.8} * 10) auto',
     gap: 'calc({space.8} * 4)',
   },
-  'footer': {
+  '.back': {
     textAlign: 'center',
     marginTop: 'calc({space.8} * 8)',
   },

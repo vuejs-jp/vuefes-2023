@@ -83,7 +83,7 @@ css({
     fontSize: 'calc(16*{fontSize.base})',
     fontWeight: '700',
     textAlign: 'center',
-    color: '#35495E',
+    color: '{color.vue.blue}',
     backgroundColor: '{color.white}',
     '&.sponsor-session': {
       border: '1px solid',
@@ -134,7 +134,7 @@ css({
           padding: '8px 16px 8px 40px',
           fontSize: 'calc(12*{fontSize.base})',
           fontWeight: '700',
-          color: '#35495E',
+          color: '{color.vue.blue}',
           '&::before': {
             content: '""',
             position: 'absolute',
@@ -153,17 +153,17 @@ css({
       '.info': {
         marginBottom: 'calc(16*{fontSize.base})',
         textAlign: 'left',
-        color: '#35495E',
+        color: '{color.vue.blue}',
         '.subtitle': {
           marginBottom: 'calc(3*{fontSize.base})',
-          color: '#35495E',
+          color: '{color.vue.blue}',
           fontSize: 'calc(11*{fontSize.base})',
           fontWeight: '500',
         },
         '.title': {
           fontSize: 'calc(16*{fontSize.base})',
           fontWeight: '700',
-          color: '#35495E',
+          color: '{color.vue.blue}',
         },
         '.speaker': {
           fontSize: 'calc(11*{fontSize.base})',

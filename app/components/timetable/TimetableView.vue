@@ -34,24 +34,24 @@ const timeSlots = computed(() => {
     <tbody>
       <tr>
         <td class="schedule">09:30 - 10:00</td>
-        <td class="track" colspan="3">開場</td>
+        <td class="" colspan="3">開場</td>
         <td class="track close" rowspan="2">午後オープン</td>
       </tr>
       <tr>
         <td class="schedule">09:30 - 10:00</td>
-        <td class="track sponsor-session sponsor-session-a">
+        <td class="sponsor-session sponsor-session-a">
           <div class="info">
             <div class="title">スポンサーセッション</div>
             <div class="speaker">あああああああああああああああ</div>
           </div>
         </td>
-        <td class="track sponsor-session sponsor-session-b">
+        <td class="sponsor-session sponsor-session-b">
           <div class="info">
             <div class="title">スポンサーセッション</div>
             <div class="speaker">いいいいいいいいいいいいいいい</div>
           </div>
         </td>
-        <td class="track sponsor-session sponsor-session-c">
+        <td class="sponsor-session sponsor-session-c">
           <div class="info">
             <div class="title">スポンサーセッション</div>
             <div class="speaker">ううううううううううううううう</div>
@@ -81,6 +81,65 @@ const timeSlots = computed(() => {
           </div>
         </td>
       </tr>
+      <tr>
+        <td class="schedule">10:00 - 10:30</td>
+        <td class="track track-a">
+          <div class="translate">同時通訳あり</div>
+          <div class="info">
+            <div class="subtitle">10:30 - 10:45</div>
+            <div class="title">セッションA</div>
+            <div class="speaker">Evan You</div>
+          </div>
+          <div class="info">
+            <div class="subtitle">10:45 - 11:00</div>
+            <div class="title">セッションB</div>
+            <div class="speaker">Evan You</div>
+          </div>
+        </td>
+        <td class="track track-b" rowspan="2">
+          <div class="info">
+            <div class="subtitle">10:30 - 10:45</div>
+            <div class="title">セッションA</div>
+            <div class="speaker">Evan You</div>
+          </div>
+        </td>
+        <td class="track track-c">
+          <div class="info">
+            <div class="title">セッションA</div>
+          </div>
+        </td>
+        <td class="track track-d">
+          <div class="info">
+            <div class="title">セッションA</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="schedule">10:00 - 10:30</td>
+        <td class="track track-a">
+          <div class="translate">同時通訳あり</div>
+          <div class="info">
+            <div class="subtitle">10:30 - 10:45</div>
+            <div class="title">セッションA</div>
+            <div class="speaker">Evan You</div>
+          </div>
+          <div class="info">
+            <div class="subtitle">10:45 - 11:00</div>
+            <div class="title">セッションB</div>
+            <div class="speaker">Evan You</div>
+          </div>
+        </td>
+        <td class="track track-c">
+          <div class="info">
+            <div class="title">セッションA</div>
+          </div>
+        </td>
+        <td class="track track-d">
+          <div class="info">
+            <div class="title">セッションA</div>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </template>
@@ -97,10 +156,10 @@ css({
           color: '{color.white}',
           fontSize: 'calc(18*{fontSize.base})',
           fontWeight: '700',
-          backgroundColor: '#35495E',
+          backgroundColor: '{color.vue.blue}',
           textAlign: 'center',
           '&.blank': {
-            backgroundColor: '#35495E',
+            backgroundColor: '{color.vue.blue}',
           },
           '&.track1': {
             backgroundColor: '#33A6B8',
@@ -124,7 +183,7 @@ css({
       'tr': {
         'td': {
           padding: '16px',
-          color: '#35495E',
+          color: '{color.vue.blue}',
           fontSize: 'calc(16*{fontSize.base})',
           fontWeight: '700',
           textAlign: 'center',
@@ -133,7 +192,7 @@ css({
             color: '{color.white}',
             textAlign: 'center',
             fontWeight: '500',
-            backgroundColor: '#35495E',
+            backgroundColor: '{color.vue.blue}',
           },
           '&.close': {
             color: '#B5B5B5',
@@ -171,8 +230,47 @@ css({
           },
           '&.track': {
             textAlign: 'left',
-            '&.info': {
-
+            '.translate': {
+                position: 'relative',
+                marginBottom: '16px',
+                paddingLeft: '25px',
+                fontSize: 'calc(12*{fontSize.base})',
+                fontWeight: '700',
+                color: '{color.vue.blue}',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: '50%',
+                    left: '0',
+                    transform: 'translateY(-50%)',
+                    width: '15px',
+                    height: '15px',
+                    backgroundImage: 'url(/timetable/translation_logo.svg)',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                },
+            },
+            '.info': {
+    marginBottom: 'calc(16*{fontSize.base})',
+'.subtitle': {
+    marginBottom: 'calc(3*{fontSize.base})',
+    color: '{color.vue.blue}',
+    fontSize: 'calc(11*{fontSize.base})',
+    fontWeight: '500',
+},
+'.title': {
+    fontSize: 'calc(16*{fontSize.base})',
+    fontWeight: '700',
+    color: '{color.vue.blue}',
+},
+'.speaker': {
+    fontSize: 'calc(11*{fontSize.base})',
+    fontWeight: '500',
+},
+'&:last-child': {
+    marginBottom: '0',
+},
             }
           },
           '&.track-a': {

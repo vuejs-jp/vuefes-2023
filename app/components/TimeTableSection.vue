@@ -28,6 +28,9 @@ onMounted(() => {
       <div v-else class="timetable-wrapper">
         <TimetableView />
       </div>
+      <p class="timetable-info">
+        ※各セッションの開始・終了時間は多少前後する可能性がありますので、あらかじめご了承ください。
+      </p>
     </div>
   </section>
 </template>
@@ -86,13 +89,20 @@ css({
   '.timetable-root': {
     display: 'flex',
     flexDirection: 'column',
-    gap: '2.5em',
     maxWidth: '1080px',
     margin: '0 auto',
   },
   '.timetable-wrapper': {
+    marginTop: '2.5rem',
     width: '100%',
     overflowX: 'scroll',
+  },
+  '.timetable-info': {
+    marginTop: '8px',
+    fontSize: 'calc(11*{fontSize.base})',
+    lineHeight: '150%',
+    fontWeight: '700',
+    color: '{color.vue.blue}',
   },
   '.invisible-mobile': {
     display: 'block',

@@ -1,0 +1,164 @@
+[
+  {
+    "time": "09:30 - 10:00",
+    "tracks": [
+      {
+        "colspan": 3,
+        "sessions": [
+          {
+            "title": "開場"
+          }
+        ]
+      },
+      {
+        "rowspan": 2,
+        "isClose": true,
+        "sessions": [
+          {
+            "title": "午後オープン"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "10:00 - 10:30",
+    "tracks": [
+      {
+        "sponsorSession": "cloud-sign",
+        "sessions": [
+          {
+            "title": "プラチナスポンサーセッション",
+            "speaker": "クラウドサイン（弁護士ドットコム株式会社）"
+          }
+        ]
+      },
+      {
+        "sponsorSession": "medpia",
+        "sessions": [
+          {
+            "title": "ゴールドスポンサーセッション",
+            "speaker": "メドピア株式会社"
+          }
+        ]
+      },
+      {
+        "sponsorSession": "m3",
+        "sessions": [
+          {
+            "title": "ゴールドスポンサーセッション",
+            "speaker": "エムスリー株式会社"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "10:30 - 11:00",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "sessions": [
+          {
+            "title": "ホールA+Bセッション"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "sessions": [
+          {
+            "title": "ホールCセッション"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "ルーム1セッション"
+          }
+        ]
+      },
+      {
+        "track": "vue",
+        "rowspan": 3,
+        "sessions": [
+          {
+            "title": "ルーム2セッション"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "11:00 - 11:10",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "sessions": [
+          {
+            "isTranslation": true,
+            "subTitle": "10:30 - 1045",
+            "title": "セッションA",
+            "speaker": "山田太郎"
+          },
+          {
+            "isTranslation": true,
+            "subTitle": "10:45 - 11:00",
+            "title": "セッションB",
+            "speaker": "山田太郎"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "rowspan": 2,
+        "sessions": [
+          {
+            "subTitle": "10:30 - 1045",
+            "title": "セッションC",
+            "speaker": "山田太郎"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "セッションD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "11:10 - 11:20",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "sessions": [
+          {
+            "isTranslation": true,
+            "subTitle": "10:30 - 1045",
+            "title": "セッションA",
+            "speaker": "山田太郎"
+          },
+          {
+            "subTitle": "10:45 - 11:00",
+            "title": "セッションB",
+            "speaker": "山田太郎"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "セッションD"
+          }
+        ]
+      }
+    ]
+  }
+]

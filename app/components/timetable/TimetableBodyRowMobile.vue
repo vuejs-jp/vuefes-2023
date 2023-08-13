@@ -69,7 +69,7 @@ const namePlace = computed(() => {
       </div>
       <div v-if="props.isTranslation" class="translate">同時通訳あり</div>
     </div>
-    <div v-for="session in props.sessions" :key="session.subTitle" class="info">
+    <div v-for="session in props.sessions" :key="session.title" class="info">
       <p v-if="session.subTitle" class="subtitle">{{ session.subTitle }}</p>
       <div class="title">{{ session.title }}</div>
       <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>

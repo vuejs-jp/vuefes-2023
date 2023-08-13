@@ -1,6 +1,6 @@
 <script setup lang="ts">
-type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
-type Track = Sponsor | 'vue'
+import { Track } from '~/types/timetable'
+import { Sponsor } from '~/types/app'
 
 type TimeTable = {
   time: string

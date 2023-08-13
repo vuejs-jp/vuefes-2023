@@ -1,23 +1,189 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { Track } from '~/types/timetable'
+import { Sponsor } from '~/types/timetable'
+import TimetableBodyRow from '~/components/timetable/TimetableBodyRow.vue'
 
-const startTime = 9 * 60 + 30
-const endTime = 13 * 60
-const interval = 30
+type TimeTable = {
+  time: string
+  tracks: {
+    colspan?: number
+    rowspan?: number
+    isClose?: boolean
+    track?: Track
+    sponsorSession?: Sponsor
+    sessions: {
+      isTranslation?: boolean
+      subTitle?: string
+      title?: string
+      speaker?: string
+    }[]
+  }[]
+}[]
 
-// computed
-const timeSlots = computed(() => {
-  const slots = []
-  for (let time = startTime; time <= endTime; time += interval) {
-    const hour = Math.floor(time / 60)
-    const minute = time % 60
-    const formattedTime = `${hour.toString().padStart(2, '0')}:${minute
-      .toString()
-      .padStart(2, '0')}`
-    slots.push(formattedTime)
+const timeTables: TimeTable = [
+  {
+    time: '09:30 - 10:00',
+    tracks: [
+      {
+        colspan: 3,
+        sessions: [
+          {
+            title: '開場',
+          },
+        ],
+      },
+      {
+        rowspan: 2,
+        isClose: true,
+        sessions: [
+          {
+            title: '午後オープン',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    time: '10:00 - 10:30',
+    tracks: [
+      {
+        sponsorSession: 'cloud-sign',
+        sessions: [
+          {
+            title: 'プラチナスポンサーセッション',
+            speaker: 'クラウドサイン（弁護士ドットコム株式会社）',
+          },
+        ],
+      },
+      {
+        sponsorSession: 'medpia',
+        sessions: [
+          {
+            title: 'ゴールドスポンサーセッション',
+            speaker: 'メドピア株式会社',
+          },
+        ],
+      },
+      {
+        sponsorSession: 'm3',
+        sessions: [
+          {
+            title: 'ゴールドスポンサーセッション',
+            speaker: 'エムスリー株式会社',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    time: '10:30 - 11:00',
+    tracks: [
+      {
+        track: 'cloud-sign',
+        sessions: [
+          {
+            title: 'ホールA+Bセッション',
+          },
+        ],
+      },
+      {
+        track: 'medpia',
+        sessions: [
+          {
+            title: 'ホールCセッション',
+          },
+        ],
+      },
+      {
+        track: 'm3',
+        sessions: [
+          {
+            title: 'ルーム1セッション',
+          },
+        ],
+      },
+      {
+        track: 'vue',
+        rowspan: 3,
+        sessions: [
+          {
+            title: 'ルーム2セッション',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    time: '11:00 - 11:10',
+    tracks: [
+      {
+        track: 'cloud-sign',
+        sessions: [
+          {
+            isTranslation: true,
+            subTitle: '10:30 - 1045',
+            title: 'セッションA',
+            speaker: '山田太郎',
+          },
+          {
+            isTranslation: true,
+            subTitle: '10:45 - 11:00',
+            title: 'セッションB',
+            speaker: '山田太郎',
+          }
+        ],
+      },
+      {
+        track: 'medpia',
+        rowspan: 2,
+        sessions: [
+          {
+            subTitle: '10:30 - 1045',
+            title: 'セッションC',
+            speaker: '山田太郎',
+          },
+        ]
+      },
+      {
+        track: 'm3',
+        sessions: [
+          {
+            title: 'セッションD',
+          },
+        ]
+      },
+    ]
+  },
+  {
+    time: '11:10 - 11:20',
+    tracks: [
+      {
+        track: 'cloud-sign',
+        sessions: [
+          {
+            isTranslation: true,
+            subTitle: '10:30 - 1045',
+            title: 'セッションA',
+            speaker: '山田太郎',
+          },
+          {
+            subTitle: '10:45 - 11:00',
+            title: 'セッションB',
+            speaker: '山田太郎',
+          }
+        ],
+      },
+      {
+        track: 'm3',
+        sessions: [
+          {
+            title: 'セッションD',
+          },
+        ]
+      },
+    ]
   }
-  return slots
-})
+]
 </script>
 
 <template>
@@ -32,113 +198,9 @@ const timeSlots = computed(() => {
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="schedule">09:30 - 10:00</td>
-        <td class="" colspan="3">開場</td>
-        <td class="track close" rowspan="2">午後オープン</td>
-      </tr>
-      <tr>
-        <td class="schedule">09:30 - 10:00</td>
-        <td class="sponsor-session sponsor-session-a">
-          <div class="info">
-            <div class="title">スポンサーセッション</div>
-            <div class="speaker">あああああああああああああああ</div>
-          </div>
-        </td>
-        <td class="sponsor-session sponsor-session-b">
-          <div class="info">
-            <div class="title">スポンサーセッション</div>
-            <div class="speaker">いいいいいいいいいいいいいいい</div>
-          </div>
-        </td>
-        <td class="sponsor-session sponsor-session-c">
-          <div class="info">
-            <div class="title">スポンサーセッション</div>
-            <div class="speaker">ううううううううううううううう</div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="schedule">10:00 - 10:30</td>
-        <td class="track track-a">
-          <div class="info">
-            <div class="title">ホールA+Bセッション</div>
-          </div>
-        </td>
-        <td class="track track-b">
-          <div class="info">
-            <div class="title">ルーム1セッション</div>
-          </div>
-        </td>
-        <td class="track track-c">
-          <div class="info">
-            <div class="title">ホールCセッション</div>
-          </div>
-        </td>
-        <td class="track track-d">
-          <div class="info">
-            <div class="title">ルーム1セッション</div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="schedule">10:00 - 10:30</td>
-        <td class="track track-a">
-          <div class="translate">同時通訳あり</div>
-          <div class="info">
-            <div class="subtitle">10:30 - 10:45</div>
-            <div class="title">セッションA</div>
-            <div class="speaker">Evan You</div>
-          </div>
-          <div class="info">
-            <div class="subtitle">10:45 - 11:00</div>
-            <div class="title">セッションB</div>
-            <div class="speaker">Evan You</div>
-          </div>
-        </td>
-        <td class="track track-b" rowspan="2">
-          <div class="info">
-            <div class="subtitle">10:30 - 10:45</div>
-            <div class="title">セッションA</div>
-            <div class="speaker">Evan You</div>
-          </div>
-        </td>
-        <td class="track track-c">
-          <div class="info">
-            <div class="title">セッションA</div>
-          </div>
-        </td>
-        <td class="track track-d">
-          <div class="info">
-            <div class="title">セッションA</div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="schedule">10:00 - 10:30</td>
-        <td class="track track-a">
-          <div class="translate">同時通訳あり</div>
-          <div class="info">
-            <div class="subtitle">10:30 - 10:45</div>
-            <div class="title">セッションA</div>
-            <div class="speaker">Evan You</div>
-          </div>
-          <div class="info">
-            <div class="subtitle">10:45 - 11:00</div>
-            <div class="title">セッションB</div>
-            <div class="speaker">Evan You</div>
-          </div>
-        </td>
-        <td class="track track-c">
-          <div class="info">
-            <div class="title">セッションA</div>
-          </div>
-        </td>
-        <td class="track track-d">
-          <div class="info">
-            <div class="title">セッションA</div>
-          </div>
-        </td>
+      <tr v-for="timetable in timeTables" :key="timetable.time">
+        <td class="schedule">{{ timetable.time }}</td>
+        <TimetableBodyRow :tracks="timetable.tracks" />
       </tr>
     </tbody>
   </table>
@@ -193,97 +255,6 @@ css({
             textAlign: 'center',
             fontWeight: '500',
             backgroundColor: '{color.vue.blue}',
-          },
-          '&.close': {
-            color: '#B5B5B5',
-            backgroundColor: '#EEE',
-          },
-          '&.sponsor-session': {
-            border: '1px solid',
-            '&.sponsor-session-a': {
-              borderColor: '#33A6B8',
-              '.title': {
-                color: '#33A6B8',
-              },
-              '.speaker': {
-                color: '#33A6B8',
-              },
-              },
-              '&.sponsor-session-b': {
-                borderColor: '#F17C67',
-              '.title': {
-                color: '#F17C67',
-              },
-              '.speaker': {
-                color: '#F17C67',
-              },
-            },
-            '&.sponsor-session-c': {
-              borderColor: '#90B44B',
-              '.title': {
-                color: '#90B44B',
-              },
-              '.speaker': {
-                color: '#90B44B',
-              },
-            },
-          },
-          '&.track': {
-            textAlign: 'left',
-            '.translate': {
-                position: 'relative',
-                marginBottom: '16px',
-                paddingLeft: '25px',
-                fontSize: 'calc(12*{fontSize.base})',
-                fontWeight: '700',
-                color: '{color.vue.blue}',
-                '&::before': {
-                    content: '""',
-                    position: 'absolute',
-                    top: '50%',
-                    left: '0',
-                    transform: 'translateY(-50%)',
-                    width: '15px',
-                    height: '15px',
-                    backgroundImage: 'url(/timetable/translation_logo.svg)',
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                },
-            },
-            '.info': {
-    marginBottom: 'calc(16*{fontSize.base})',
-'.subtitle': {
-    marginBottom: 'calc(3*{fontSize.base})',
-    color: '{color.vue.blue}',
-    fontSize: 'calc(11*{fontSize.base})',
-    fontWeight: '500',
-},
-'.title': {
-    fontSize: 'calc(16*{fontSize.base})',
-    fontWeight: '700',
-    color: '{color.vue.blue}',
-},
-'.speaker': {
-    fontSize: 'calc(11*{fontSize.base})',
-    fontWeight: '500',
-},
-'&:last-child': {
-    marginBottom: '0',
-},
-            }
-          },
-          '&.track-a': {
-            borderTop: '1px solid #33A6B8',
-          },
-          '&.track-b': {
-            borderTop: '1px solid #F17C67',
-          },
-          '&.track-c': {
-            borderTop: '1px solid #90B44B',
-          },
-          '&.track-d': {
-            borderTop: '1px solid #3178C6',
           },
         },
       },

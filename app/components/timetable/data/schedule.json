@@ -145,11 +145,11 @@
         "rowspan": 2,
         "sessions": [
           {
-              "title": "ランチタイム"
+            "title": "ランチタイム"
           },
           {
-              "subTitle": "12:30 - 12:40",
-              "title": "ランチセッション"
+            "subTitle": "12:30 - 12:40",
+            "title": "ランチセッション"
           }
         ]
       }
@@ -202,7 +202,7 @@
         "track": "medpia",
         "sessions": [
           {
-              "title": "LT x 4"
+            "title": "LT x 4"
           },
           {
             "title": "Vueを使ってGrid Systemを実装した話",
@@ -226,8 +226,8 @@
         "track": "m3",
         "sessions": [
           {
-              "title": "セッション",
-              "speaker": "翠"
+            "title": "セッション",
+            "speaker": "翠"
           }
         ]
       }
@@ -318,8 +318,8 @@
         "track": "m3",
         "sessions": [
           {
-              "title": "Vue Language Server から生まれた Volar.js と、それが秘める可能性",
-              "speaker": "mizdra"
+            "title": "Vue Language Server から生まれた Volar.js と、それが秘める可能性",
+            "speaker": "mizdra"
           }
         ]
       }
@@ -426,8 +426,8 @@
         "track": "medpia",
         "sessions": [
           {
-              "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
-              "speaker": "やまのく"
+            "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
+            "speaker": "やまのく"
           }
         ]
       },
@@ -435,8 +435,8 @@
         "track": "m3",
         "sessions": [
           {
-              "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
-              "speaker": "sorami"
+            "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
+            "speaker": "sorami"
           }
         ]
       },

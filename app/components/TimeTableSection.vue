@@ -17,7 +17,7 @@ onMounted(() => {
   <section>
     <div class="timetable-root">
       <SectionTitle
-        id="ticket"
+        id="timetable"
         color="vue.blue"
         :title="'Time table'"
         yamato-title="タイムテーブル"

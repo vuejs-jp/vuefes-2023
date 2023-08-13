@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import timeTables from './data/scheduleMobile.json'
 import { Track } from '~/types/timetable'
-import { Sponsor } from '~/types/app'
+import { Sponsor } from '~/types/timetable'
 
 type TimeTable = {
   time: string
@@ -15,141 +16,10 @@ type TimeTable = {
     }[]
   }[]
 }[]
-
-const timeTables: TimeTable = [
-  {
-    time: '09:30 - 10:00',
-    tracks: [
-      {
-        sessions: [
-          {
-            title: '開場',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    time: '10:30 - 10:40',
-    tracks: [
-      {
-        sessions: [
-          {
-            title: 'オープニング',
-            speaker: '川口 和也',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    time: '10:40 - 11:30',
-    tracks: [
-      {
-        sessions: [
-          {
-            title: 'キーノート',
-            speaker: 'Evan You',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    time: '11:30 - 11:40',
-    tracks: [
-      {
-        sponsorSession: 'cloud-sign',
-        sessions: [
-          {
-            title: 'プラチナスポンサーセッション',
-            speaker: 'クラウドサイン（弁護士ドットコム株式会社）',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    time: '11:40 - 11:50',
-    tracks: [
-      {
-        sponsorSession: 'medpia',
-        sessions: [
-          {
-            title: 'プラチナスポンサーセッション',
-            speaker: 'ユニークビジョン株式会社',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    time: '11:50 - 12:00',
-    tracks: [
-      {
-        sponsorSession: 'm3',
-        sessions: [
-          {
-            title: 'プラチナスポンサーセッション',
-            speaker: '株式会社リンクアンドモチベーション',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    time: '12:00 - 12:30',
-    tracks: [
-      {
-        track: 'cloud-sign',
-        isTranslation: true,
-        sessions: [
-          {
-            title: 'Getting Your Head Around useHead',
-            speaker: 'Evan Harlan Wilton',
-          },
-        ],
-      },
-      {
-        track: 'medpia',
-        sessions: [
-          {
-            title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
-            speaker: 'やまのく',
-          },
-        ],
-      },
-      {
-        track: 'm3',
-        sessions: [
-          {
-            subTitle: '12:00 - 12:15',
-            title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
-            speaker: 'sorami',
-          },
-          {
-            subTitle: '12:15 - 12:30',
-            title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
-            speaker: 'sorami',
-          },
-        ],
-      },
-      {
-        track: 'vue',
-        sessions: [
-          {
-            subTitle: '16:45 - 17:45',
-            title: 'Vue.js クリニック',
-          },
-        ],
-      },
-    ],
-  },
-]
 </script>
 
 <template>
-  <table v-for="timetable in timeTables" :key="timetable.time" class="timetable">
+  <table v-for="timetable in timeTables as TimeTable" :key="timetable.time" class="timetable">
     <thead>
       <tr>
         <th class="schedule">{{ timetable.time }}</th>
@@ -174,13 +44,13 @@ css({
   '.timetable': {
     minWidth: '100%',
     borderCollapse: 'separate',
-    borderSpacing: '8px',
+    borderSpacing: '{space.8}',
     'thead': {
       'tr': {
         'th': {
           padding: '16px 0',
           color: '{color.white}',
-          backgroundColor: '#35495E',
+          backgroundColor: '{color.vue.blue}',
           fontSize: 'calc(16*{fontSize.base})',
           fontWeight: '500',
           textAlign: 'center',

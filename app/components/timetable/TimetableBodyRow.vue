@@ -64,95 +64,95 @@ css({
     color: '{color.vue.blue}',
     backgroundColor: '{color.white}',
     '&.close': {
-      color: '#B5B5B5',
-      backgroundColor: '#EEE',
+      color: '{color.timetable.close.title}',
+      backgroundColor: '{color.timetable.close.background}',
     },
     '&.sponsor-session': {
       border: '1px solid',
       '&.sponsor-session-a': {
-        borderColor: '#33A6B8',
+        borderColor: '{color.timetable.trackA}',
         '.title': {
-          color: '#33A6B8',
+          color: '{color.timetable.trackA}',
         },
         '.speaker': {
-          color: '#33A6B8',
+          color: '{color.timetable.trackA}',
         },
       },
       '&.sponsor-session-b': {
-        borderColor: '#F17C67',
+        borderColor: '{color.timetable.trackB}',
         '.title': {
-          color: '#F17C67',
+          color: '{color.timetable.trackB}',
         },
         '.speaker': {
-          color: '#F17C67',
+          color: '{color.timetable.trackB}',
         },
       },
       '&.sponsor-session-c': {
-        borderColor: '#90B44B',
+        borderColor: '{color.timetable.trackC}',
         '.title': {
-          color: '#90B44B',
+          color: '{color.timetable.trackC}',
         },
         '.speaker': {
-          color: '#90B44B',
+          color: '{color.timetable.trackC}',
         },
       },
     },
     '&.track': {
       textAlign: 'left',
-    '.info': {
-      marginBottom: 'calc(16*{fontSize.base})',
-      '.translate': {
-        position: 'relative',
-        marginBottom: '16px',
-        paddingLeft: '25px',
-        fontSize: 'calc(12*{fontSize.base})',
-        fontWeight: '700',
-        color: '{color.vue.blue}',
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        top: '50%',
-        left: '0',
-        transform: 'translateY(-50%)',
-        width: '15px',
-        height: '15px',
-        backgroundImage: 'url(/timetable/translation_logo.svg)',
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      },
-      },
-      '.subtitle': {
-        marginBottom: 'calc(3*{fontSize.base})',
-        color: '{color.vue.blue}',
-        fontSize: 'calc(11*{fontSize.base})',
-        fontWeight: '500',
-      },
-      '.title': {
-        fontSize: 'calc(16*{fontSize.base})',
-        fontWeight: '700',
-        color: '{color.vue.blue}',
-      },
-      '.speaker': {
-        fontSize: 'calc(11*{fontSize.base})',
-        fontWeight: '500',
-      },
-      '&:last-child': {
-        marginBottom: '0',
-      },
-    }
+      '.info': {
+        marginBottom: 'calc(16*{fontSize.base})',
+        '.translate': {
+          position: 'relative',
+          marginBottom: '16px',
+          paddingLeft: '25px',
+          fontSize: 'calc(12*{fontSize.base})',
+          fontWeight: '700',
+          color: '{color.vue.blue}',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: '50%',
+          left: '0',
+          transform: 'translateY(-50%)',
+          width: '15px',
+          height: '15px',
+          backgroundImage: 'url(/timetable/translation_logo.svg)',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        },
+        },
+        '.subtitle': {
+          marginBottom: 'calc(3*{fontSize.base})',
+          color: '{color.vue.blue}',
+          fontSize: 'calc(11*{fontSize.base})',
+          fontWeight: '500',
+        },
+        '.title': {
+          fontSize: 'calc(16*{fontSize.base})',
+          fontWeight: '700',
+          color: '{color.vue.blue}',
+        },
+        '.speaker': {
+          fontSize: 'calc(11*{fontSize.base})',
+          fontWeight: '500',
+        },
+        '&:last-child': {
+          marginBottom: '0',
+        },
+      }
     },
     '&.track-a': {
-      borderTop: '1px solid #33A6B8',
+      borderTop: '1px solid {color.timetable.trackA}',
     },
     '&.track-b': {
-      borderTop: '1px solid #F17C67',
+      borderTop: '1px solid {color.timetable.trackB}',
     },
     '&.track-c': {
-      borderTop: '1px solid #90B44B',
+      borderTop: '1px solid {color.timetable.trackC}',
     },
     '&.track-d': {
-      borderTop: '1px solid #3178C6',
+      borderTop: '1px solid {color.timetable.trackD}',
     },
   },
 })

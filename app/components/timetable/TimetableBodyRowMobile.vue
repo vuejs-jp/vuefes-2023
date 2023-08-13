@@ -88,30 +88,30 @@ css({
     '&.sponsor-session': {
       border: '1px solid',
       '&.sponsor-session-a': {
-        borderColor: '#33A6B8',
+        borderColor: '{color.timetable.trackA}',
         '.title': {
-          color: '#33A6B8',
+          color: '{color.timetable.trackA}',
         },
         '.speaker': {
-          color: '#33A6B8',
+          color: '{color.timetable.trackA}',
         },
       },
       '&.sponsor-session-b': {
-        borderColor: '#F17C67',
+        borderColor: '{color.timetable.trackB}',
         '.title': {
-          color: '#F17C67',
+          color: '{color.timetable.trackB}',
         },
         '.speaker': {
-          color: '#F17C67',
+          color: '{color.timetable.trackB}',
         },
       },
       '&.sponsor-session-c': {
-        borderColor: '#90B44B',
+        borderColor: '{color.timetable.trackC}',
         '.title': {
-          color: '#90B44B',
+          color: '{color.timetable.trackC}',
         },
         '.speaker': {
-          color: '#90B44B',
+          color: '{color.timetable.trackC}',
         },
       },
     },
@@ -175,22 +175,22 @@ css({
       },
       '&.track-a': {
         '.place': {
-          backgroundColor: '#33A6B8',
+          backgroundColor: '{color.timetable.trackA}',
         },
       },
       '&.track-b': {
         '.place': {
-          backgroundColor: '#F17C67',
+          backgroundColor: '{color.timetable.trackB}',
         },
       },
       '&.track-c': {
         '.place': {
-          backgroundColor: '#90B44B',
+          backgroundColor: '{color.timetable.trackC}',
         },
       },
       '&.track-d': {
         '.place': {
-          backgroundColor: '#42B983',
+          backgroundColor: '{color.timetable.trackD}',
         },
       },
     },

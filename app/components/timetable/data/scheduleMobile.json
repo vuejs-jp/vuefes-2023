@@ -1,11 +1,22 @@
 [
   {
-    "time": "09:30 - 10:00",
+    "time": "09:30 - 10:30",
     "tracks": [
       {
+        "colspan": 3,
         "sessions": [
           {
             "title": "開場"
+          }
+        ]
+      },
+      {
+        "track": "vue",
+        "rowspan": 5,
+        "isClose": true,
+        "sessions": [
+          {
+            "title": "午後オープン"
           }
         ]
       }
@@ -15,6 +26,7 @@
     "time": "10:30 - 10:40",
     "tracks": [
       {
+        "colspan": 3,
         "sessions": [
           {
             "title": "オープニング",
@@ -28,8 +40,11 @@
     "time": "10:40 - 11:30",
     "tracks": [
       {
+        "colspan": 3,
+        "isTranslation": true,
         "sessions": [
           {
+            "isTranslation": true,
             "title": "キーノート",
             "speaker": "Evan You"
           }
@@ -41,6 +56,7 @@
     "time": "11:30 - 11:40",
     "tracks": [
       {
+        "colspan": 3,
         "sponsorSession": "cloud-sign",
         "sessions": [
           {
@@ -55,7 +71,8 @@
     "time": "11:40 - 11:50",
     "tracks": [
       {
-        "sponsorSession": "medpia",
+        "colspan": 3,
+        "sponsorSession": "cloud-sign",
         "sessions": [
           {
             "title": "プラチナスポンサーセッション",
@@ -69,26 +86,346 @@
     "time": "11:50 - 12:00",
     "tracks": [
       {
-        "sponsorSession": "m3",
+        "colspan": 3,
+        "sponsorSession": "cloud-sign",
         "sessions": [
           {
             "title": "プラチナスポンサーセッション",
-            "speaker": "株式会社リンクアンドモチベーション"
+            "speaker": "株式会社リンクアンドモチベーション\n"
           }
         ]
       }
     ]
   },
   {
-    "time": "12:00 - 12:30",
+    "time": "12:00 - 13:15",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "rowspan": 3,
+        "sessions": [
+          {
+            "title": "ランチライム"
+          },
+          {
+            "subTitle": "12:25 - 12:40",
+            "title": "ランチセッション"
+          },
+          {
+            "subTitle": "12:55 - 13:15",
+            "title": "ランチセッション"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "rowspan": 3,
+        "sessions": [
+          {
+            "title": "ランチタイム"
+          },
+          {
+            "subTitle": "12:30 - 12:40",
+            "title": "ランチセッション"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "ランチタイム"
+          },
+          {
+            "subTitle": "12:20 - 12:30",
+            "title": "ランチセッション"
+          }
+        ]
+      },
+      {
+        "track": "vue",
+        "rowspan": 2,
+        "sessions": [
+          {
+            "title": "ランチタイム"
+          },
+          {
+            "subTitle": "12:30 - 12:40",
+            "title": "ランチセッション"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "12:45 - 13:15",
+    "tracks": [
+      {
+        "track": "m3",
+        "rowspan": 2,
+        "sessions": [
+          {
+            "title": "Nuxt2から 3へマイグレーションする方法を考えたら、マイクロフロントエンドのフレームワークができてしまった話",
+            "speaker": "みゅーとん"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "13:15 - 13:30",
+    "tracks": [
+      {
+        "track": "vue",
+        "rowspan": 6,
+        "sessions": [
+          {
+            "subTitle": "13:15 - 15:15",
+            "title": "ハンズオン"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "13:30 - 14:00",
     "tracks": [
       {
         "track": "cloud-sign",
         "isTranslation": true,
         "sessions": [
           {
+            "isTranslation": true,
+            "title": "セッション",
+            "speaker": "Sebastien Chopin"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "sessions": [
+          {
+            "title": "LT x 4"
+          },
+          {
+            "title": "Vueを使ってGrid Systemを実装した話",
+            "speaker": "t0yohei"
+          },
+          {
+            "title": "WebGISとVue.jsの親和性について",
+            "speaker": "楢山 哲弘"
+          },
+          {
+            "title": "Nuxt3のモジュール開発は意外と簡単？Module Author Guideをのぞいてみよう",
+            "speaker": "きらぷか"
+          },
+          {
+            "title": "Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話",
+            "speaker": "0yu"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "セッション",
+            "speaker": "翠"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "14:00 - 14:15",
+    "tracks": [
+      {
+        "colspan": 3,
+        "sessions": [
+          {
+            "title": "休憩"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "14:15 - 14:45",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "isTranslation": true,
+        "sessions": [
+          {
+            "isTranslation": true,
+            "title": "セッション",
+            "speaker": "Daniel Roe"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "sessions": [
+          {
+            "title": "18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法",
+            "speaker": "山下 裕一朗"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "Nuxt 3でJamstackテンプレートを作るときの考え方\n",
+            "speaker": "まぁし"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "14:45 - 15:00",
+    "tracks": [
+      {
+        "colspan": 3,
+        "sessions": [
+          {
+            "title": "休憩"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "15:00 - 15:30",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "isTranslation": true,
+        "sessions": [
+          {
+            "isTranslation": true,
+            "title": "セッション",
+            "speaker": "Anthony Fu"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "sessions": [
+          {
+            "title": "Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜",
+            "speaker": "wattanx"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "Vue Language Server から生まれた Volar.js と、それが秘める可能性",
+            "speaker": "mizdra"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "15:30 - 15:45",
+    "tracks": [
+      {
+        "colspan": 4,
+        "sessions": [
+          {
+            "title": "休憩"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "15:45 - 16:15",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "isTranslation": true,
+        "sessions": [
+          {
+            "isTranslation": true,
+            "title": "セッション",
+            "speaker": "Matias Capeletto"
+          }
+        ]
+      },
+      {
+        "track": "medpia",
+        "sessions": [
+          {
+            "title": "Deep dive to unjs and Nuxt 3 (仮)",
+            "speaker": "Nozomu Iluta"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "LT x 4"
+          },
+          {
+            "title": "SOLID 原則に基づくSFC 実装",
+            "speaker": "53able"
+          },
+          {
+            "title": "Composition API時代のPub/Subパターンでの状態管理",
+            "speaker": "fuqda"
+          },
+          {
+            "title": "Exploring the Power of Error Handling in Vue JS",
+            "speaker": "Hieu"
+          },
+          {
+            "title": "フルスクラッチEC基盤のNuxt2を3に移行し開発速度とパフォーマンスを向上させる",
+            "speaker": "湧川 仁貴"
+          }
+        ]
+      },
+      {
+        "track": "vue",
+        "rowspan": 2,
+        "sessions": [
+          {
+            "subTitle": "15:45 - 16:30",
+            "title": "パネルディスカッション"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "16:15 - 16:30",
+    "tracks": [
+      {
+        "colspan": 3,
+        "sessions": [
+          {
+            "title": "休憩"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "16:30 - 17:00",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "isTranslation": true,
+        "sessions": [
+          {
+            "isTranslation": true,
             "title": "Getting Your Head Around useHead",
-            "speaker": "Evan Harlan Wilton"
+            "speaker": "Harlan Wilton"
           }
         ]
       },
@@ -105,12 +442,6 @@
         "track": "m3",
         "sessions": [
           {
-            "subTitle": "12:00 - 12:15",
-            "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
-            "speaker": "sorami"
-          },
-          {
-            "subTitle": "12:15 - 12:30",
             "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
             "speaker": "sorami"
           }
@@ -118,10 +449,90 @@
       },
       {
         "track": "vue",
+        "rowspan": 3,
         "sessions": [
+          {
+            "subTitle": "16:30 - 16:45",
+            "title": "休憩"
+          },
           {
             "subTitle": "16:45 - 17:45",
             "title": "Vue.js クリニック"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "17:00 - 17:15",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "rowspan": 3,
+        "isClose": true,
+        "sessions": [
+          {
+            "subTitle": "17:00 - 18:00",
+            "title": "転換"
+          }
+        ]
+      },
+      {
+        "colspan": 2,
+        "sessions": [
+          {
+            "title": "休憩"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "17:15 - 17:45",
+    "tracks": [
+      {
+        "track": "medpia",
+        "sessions": [
+          {
+            "title": "セッション",
+            "speaker": "ota-meshi"
+          }
+        ]
+      },
+      {
+        "track": "m3",
+        "sessions": [
+          {
+            "title": "STUDIOの作り方 2023 ver.",
+            "speaker": "甲斐 啓真"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "17:45 - 18:00",
+    "tracks": [
+      {
+        "colspan": 3,
+        "rowspan": 2,
+        "isClose": true,
+        "sessions": [
+          {
+            "title": "クローズ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "time": "18:00 - 19:30",
+    "tracks": [
+      {
+        "track": "cloud-sign",
+        "sessions": [
+          {
+            "title": "アフターパーティ"
           }
         ]
       }

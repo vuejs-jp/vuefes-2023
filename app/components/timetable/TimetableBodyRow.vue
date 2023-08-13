@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import json from './foo.json'
-
 type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
 type Track = Sponsor | 'vue'
 
 type Props = {
   tracks?: any
 }
-
-console.log(json)
 
 const props = defineProps<Props>()
 

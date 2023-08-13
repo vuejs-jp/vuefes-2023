@@ -13,41 +13,42 @@ console.log(json)
 const props = defineProps<Props>()
 
 // tdのclassを設定する
-const cssTdClass =
-    (args): {
-      track?: Track
-      'close': boolean
-      'track-a': boolean
-      'track-b': boolean
-      'track-c': boolean
-      'track-d': boolean
-      'sponsor-session': boolean
-      'sponsor-session-a': boolean
-      'sponsor-session-b': boolean
-      'sponsor-session-c': boolean
-    } => {
-      const { track, sponsorSession, isClose } = args
-      return {
-        track,
-        'close': isClose,
-        'track-a': track === 'cloud-sign',
-        'track-b': track === 'medpia',
-        'track-c': track === 'm3',
-        'track-d': track === 'vue',
-        'sponsor-session': sponsorSession !== undefined,
-        'sponsor-session-a': sponsorSession === 'cloud-sign',
-        'sponsor-session-b': sponsorSession === 'medpia',
-        'sponsor-session-c': sponsorSession === 'm3',
-      }
-    }
+const cssTdClass = (
+  args,
+): {
+  track?: Track
+  close: boolean
+  'track-a': boolean
+  'track-b': boolean
+  'track-c': boolean
+  'track-d': boolean
+  'sponsor-session': boolean
+  'sponsor-session-a': boolean
+  'sponsor-session-b': boolean
+  'sponsor-session-c': boolean
+} => {
+  const { track, sponsorSession, isClose } = args
+  return {
+    track,
+    close: isClose,
+    'track-a': track === 'cloud-sign',
+    'track-b': track === 'medpia',
+    'track-c': track === 'm3',
+    'track-d': track === 'vue',
+    'sponsor-session': sponsorSession !== undefined,
+    'sponsor-session-a': sponsorSession === 'cloud-sign',
+    'sponsor-session-b': sponsorSession === 'medpia',
+    'sponsor-session-c': sponsorSession === 'm3',
+  }
+}
 </script>
 <template>
   <td
-      v-for="track in props.tracks"
-      :key="track.track"
-      :class="cssTdClass(track)"
-      :colspan="track.colspan"
-      :rowspan="track.rowspan"
+    v-for="track in props.tracks"
+    :key="track.track"
+    :class="cssTdClass(track)"
+    :colspan="track.colspan"
+    :rowspan="track.rowspan"
   >
     <div v-for="session in track.sessions" :key="session.title" class="info">
       <div v-if="session.isTranslation" class="translate">同時通訳あり</div>

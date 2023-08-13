@@ -130,7 +130,7 @@ const timeTables: TimeTable = [
             subTitle: '10:45 - 11:00',
             title: 'セッションB',
             speaker: '山田太郎',
-          }
+          },
         ],
       },
       {
@@ -142,7 +142,7 @@ const timeTables: TimeTable = [
             title: 'セッションC',
             speaker: '山田太郎',
           },
-        ]
+        ],
       },
       {
         track: 'm3',
@@ -150,9 +150,9 @@ const timeTables: TimeTable = [
           {
             title: 'セッションD',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     time: '11:10 - 11:20',
@@ -170,7 +170,7 @@ const timeTables: TimeTable = [
             subTitle: '10:45 - 11:00',
             title: 'セッションB',
             speaker: '山田太郎',
-          }
+          },
         ],
       },
       {
@@ -179,10 +179,10 @@ const timeTables: TimeTable = [
           {
             title: 'セッションD',
           },
-        ]
+        ],
       },
-    ]
-  }
+    ],
+  },
 ]
 </script>
 

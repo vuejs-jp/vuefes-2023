@@ -14,6 +14,7 @@ export type Path =
   | 'volunteer'
   | 'childcare'
   | 'handson'
+  | 'faq'
   | 'privacy'
   | 'code-of-conduct'
   | string
@@ -116,6 +117,7 @@ export type OptionCategory =
   | 'name-card'
   | 'refreshment'
   | 'simultaneous-interpretation'
+  | 'handson'
   | 'media'
 
 export type Sponsor = {

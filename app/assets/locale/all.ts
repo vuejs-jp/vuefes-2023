@@ -20,7 +20,7 @@ export default {
       apply_childcare: 'サポートを申し込む',
       apply_handson: 'チケットを購入',
       back_top: 'トップに戻る',
-      apply_personal_sponsor: '個人スポンサーに応募',
+      apply_personal_sponsor: 'チケットを購入',
       personal_sponsor: '個人スポンサー',
     },
     category: {
@@ -35,6 +35,7 @@ export default {
       'name-card': 'Name card',
       refreshment: 'Refreshment',
       'simultaneous-interpretation': 'Simultaneous interpretation',
+      handson: 'Handson',
       media: 'Media',
     },
     top: {
@@ -82,7 +83,7 @@ export default {
       sponsors_merit1_detail: 'Vue Fes Japan 公式 Web サイトにお名前を掲載します（希望者のみ）。',
       sponsors_merit2: 'Vue Fes Japan 2023 スタッフ限定Tシャツ',
       sponsors_merit2_detail:
-        'スタッフのみに配布される限定 Tシャツがもらえます。\n※サイズはS～XXXL。チケット購入時にご指定ください。',
+        'スタッフのみに配布される限定 Tシャツがもらえます。\n※サイズはS～XXXL。チケット購入時にご指定ください。\n※当日、会場でのみのお渡しとなります。発送はできかねます。',
       sponsors_merit3: '優先入場',
       sponsors_merit3_detail:
         '当日の受付に個人スポンサー優先レーンをご用意します。行列に並ぶことなく、スムーズにご入場いただけます。',
@@ -145,6 +146,7 @@ export default {
       'name-card': 'Name card',
       refreshment: 'Refreshment',
       'simultaneous-interpretation': 'Simultaneous interpretation',
+      handson: 'Handson',
       media: 'Media',
     },
     top: {
@@ -159,7 +161,7 @@ export default {
       namecard_infolink: 'Confirm {0} in latest information.',
       tickets_schedule_limit: 'Tickets Deadline: Until {0}',
       ticket_early_price: 'Early Price: ¥ {0}',
-      ticket_early_price_explain: '※ Until 9/18 (Mon/Holiday) 23:59',
+      ticket_early_price_explain: '※ Until 9/18 (Mon./Holiday) 23:59',
       ticket_price: 'General Price: ¥ {0}',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',
@@ -194,7 +196,7 @@ export default {
         'Your name will be posted on Vue Fes Japan official website (applicants only).',
       sponsors_merit2: 'Vue Fes Japan 2023 Staff T-shirt for limited',
       sponsors_merit2_detail:
-        'You will receive a limited T-shirt distributed only to the staff. \n *Sizes are S to XXXL. Please specify when purchasing your ticket.',
+        'You will receive a limited T-shirt distributed only to the staff. \n *Sizes are S to XXXL. Please specify when purchasing your ticket.\n *It will only be available for pickup at the venue on the day of the event. Shipping is not available.',
       sponsors_merit3: 'Priority entrance',
       sponsors_merit3_detail:
         'Personal sponsor priority lanes will be available at the reception on the day of the event. You can enter smoothly without waiting in line.',

@@ -54,7 +54,7 @@ const all: Sponsor[] = [
     id: 'hacomono',
     name: '株式会社hacomono',
     image: '/sponsors/hacomono.png',
-    categories: ['gold'],
+    categories: ['gold', 'special-lunch'],
     url: 'https://www.hacomono.jp/',
   },
   {
@@ -225,6 +225,27 @@ const all: Sponsor[] = [
     categories: ['bronze'],
     url: 'https://attelu.jp',
   },
+  {
+    id: 'algorithms',
+    name: '株式会社アルゴリズム',
+    image: '/sponsors/algorithms.png',
+    categories: ['bronze'],
+    url: 'https://algorithms.co.jp',
+  },
+  {
+    id: 'interfirm',
+    name: '株式会社インターファーム',
+    image: '/sponsors/interfirm.png',
+    categories: ['bronze'],
+    url: 'https://www.interfirm.jp',
+  },
+  {
+    id: 'tabian',
+    name: 'タビアン株式会社',
+    image: '/sponsors/tabian.png',
+    categories: ['handson'],
+    url: 'https://tabian.co.jp',
+  },
 ]
 
 const platinumSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('platinum'))
@@ -259,6 +280,8 @@ const interpretationSponsors: Sponsor[] = all.filter((s: Sponsor) =>
   s.categories.includes('simultaneous-interpretation'),
 )
 
+const handsonSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('handson'))
+
 const mediaSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('media'))
 
 const individual: string[] = []
@@ -274,6 +297,7 @@ export {
   afterPartySponsors,
   namecardSponsors,
   interpretationSponsors,
+  handsonSponsors,
   refreshmentSponsors,
   mediaSponsors,
   individual,

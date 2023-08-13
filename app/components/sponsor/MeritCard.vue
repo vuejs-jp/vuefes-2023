@@ -126,10 +126,10 @@ css({
     },
     '.merit-item': {
       '::v-deep(h4)': {
-        fontSize: 'calc(18*{fontSize.base})',
+        fontSize: 'calc(21*{fontSize.base})',
       },
       '::v-deep(p)': {
-        fontSize: 'calc(14*{fontSize.base})',
+        fontSize: 'calc(18*{fontSize.base})',
       },
     },
   },

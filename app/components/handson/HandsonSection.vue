@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
+import { ticketUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
       </i18n-t>
       -->
       <div class="apply">
-        <RoundButton href="#" target="_blank" rel="noreferrer">
+        <RoundButton :href="ticketUrl" target="_blank" rel="noreferrer">
           {{ $t('words.apply_handson') }}
         </RoundButton>
       </div>

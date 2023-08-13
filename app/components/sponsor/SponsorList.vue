@@ -144,6 +144,20 @@ import * as sponsors from '~/utils/sponsor.constants'
         </div>
       </li>
       <li>
+        <SponsorCategoryTitle category="handson" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="handsonSponsor in sponsors.handsonSponsors"
+            :key="handsonSponsor.name"
+            :to="`/sponsors/${handsonSponsor.id}`"
+          >
+            <SponsorCard :sponsor="handsonSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+    </ul>
+    <ul class="sponsor-list">
+      <li>
         <SponsorCategoryTitle category="media" />
         <div class="sponsors options-sponsors">
           <NuxtLink

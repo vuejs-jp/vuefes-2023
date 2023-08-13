@@ -90,6 +90,7 @@ export default defineNuxtConfig({
       // feature flags
       registerTicket: process.env.NUXT_ENABLE_REGISTER_TICKET,
       registerNamecard: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
+      showTimetable: process.env.NUXT_ENABLE_SHOW_TIMETABLE,
       // supabase
       supabaseProjectUrl: process.env.SUPABASE_URL,
       supabaseApiKey: process.env.SUPABASE_KEY,

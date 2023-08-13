@@ -59,6 +59,7 @@ css({
       'tr': {
         'td': {
           padding: '16px',
+          width: '153px',
           color: '{color.vue.blue}',
           fontSize: 'calc(16*{fontSize.base})',
           fontWeight: '700',

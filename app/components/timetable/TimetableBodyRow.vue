@@ -58,6 +58,7 @@ const cssTdClass = (
 css({
   'td': {
     padding: '16px',
+    width: '248px',
     fontSize: 'calc(16*{fontSize.base})',
     fontWeight: '700',
     textAlign: 'center',

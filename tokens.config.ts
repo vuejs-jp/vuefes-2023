@@ -40,7 +40,7 @@ export default defineTheme({
       close: {
         title: '#B5B5B5',
         background: '#EEE',
-      }
+      },
     },
   },
   fontSize: {

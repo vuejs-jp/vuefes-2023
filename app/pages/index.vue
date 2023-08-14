@@ -2,11 +2,13 @@
 import NavPageSectionContainer from '~/container/NavPageSectionContainer.vue'
 import AccessSection from '~/components/venue/AccessSection.vue'
 import { useNamecard } from '~/composables/useNamecard'
+import { useFeature } from '~/composables/useFeature'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import TimeTableSection from '~/components/TimeTableSection.vue'
 
 const { canPurchase } = useNamecard()
+const { showTimetable } = useFeature()
 
 useHead({
   titleTemplate: (titleChunk) => `${conferenceTitle}`,
@@ -18,7 +20,9 @@ useHead({
   <main>
     <NavPageSectionContainer />
     <TopPageSection />
-    <TimeTableSection />
+    <template v-if="showTimetable">
+      <TimeTableSection />
+    </template>
     <MessagePageSection />
     <SpeakerPageSection />
     <template v-if="canPurchase">

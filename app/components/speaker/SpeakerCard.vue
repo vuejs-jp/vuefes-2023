@@ -6,7 +6,7 @@ import { useSession } from '~/composables/useSession'
 import { Speaker } from '~/types/app'
 import { urlBasePath } from '~/utils/constants'
 
-const { showSpeaker } = useSession()
+const { showSpeakerInfo } = useSession()
 
 const props = defineProps({
   speaker: {
@@ -21,8 +21,8 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 <template>
   <div class="speaker-card">
     <component
-      :is="showSpeaker ? _nuxtLink : 'div'"
-      :to="showSpeaker ? `/sessions/${speaker.id}` : ''"
+      :is="showSpeakerInfo ? _nuxtLink : 'div'"
+      :to="showSpeakerInfo ? `/sessions/${speaker.id}` : ''"
     >
       <img
         width="208"

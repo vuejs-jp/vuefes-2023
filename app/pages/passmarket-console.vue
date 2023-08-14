@@ -3,6 +3,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import { usePassMarket } from '~/composables/usePassMarket'
 import { usePassMarketUpload } from '~/composables/usePassMarketUpload'
 import { useSupabase } from '~/composables/useSupabase'
+import { useArray } from '~/composables/useArray'
 import { AdditionItem, ListMember, Role } from '~/types/app'
 
 const memberData = ref<ListMember[]>()
@@ -12,10 +13,13 @@ const receiptIds = ref<{ role: Role; receipt_id: string }[]>([])
 const { getReceipts } = usePassMarket()
 const { convertMembers, fetchSheet } = usePassMarketUpload()
 const { updatePMReceipt } = useSupabase()
+const { unique } = useArray()
 
 enum FileName {
-  ADDITION_CSV = 'addition.csv',
+  // 参加者一覧
   LIST_XLS = 'list.xls',
+  // 購入者アンケート情報
+  ADDITION_CSV = 'addition.csv',
 }
 
 const checkFiles = async (files: File[]) => {
@@ -26,13 +30,11 @@ const checkFiles = async (files: File[]) => {
 
   if (filename === FileName.LIST_XLS) {
     memberData.value = await fetchSheet(file)
-    // console.log('memberData', memberData.value)
-    receiptIds.value = getReceipts(memberData.value)
-    console.log('receiptIds', receiptIds.value)
+    const _receiptIds = getReceipts(memberData.value)
+    receiptIds.value = unique<{ role: Role; receipt_id: string }>(_receiptIds, 'receipt_id')
   }
   if (filename === FileName.ADDITION_CSV) {
     members.value = await convertMembers(file)
-    console.log('members', members.value)
   }
   alert(`this file is not acceptable -> ${filename}`)
 }

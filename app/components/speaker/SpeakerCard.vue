@@ -2,8 +2,11 @@
 import GithubLogo from '~/assets/logo/github_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
+import { useSession } from '~/composables/useSession'
 import { Speaker } from '~/types/app'
 import { urlBasePath } from '~/utils/constants'
+
+const { showSpeaker } = useSession()
 
 const props = defineProps({
   speaker: {
@@ -11,18 +14,25 @@ const props = defineProps({
     required: true,
   },
 })
+
+const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 
 <template>
   <div class="speaker-card">
-    <img
-      width="208"
-      height="208"
-      :alt="`${speaker.profile.name}の写真`"
-      :src="`${urlBasePath}${speaker.profile.image}`"
-      loading="lazy"
-      decoding="async"
-    />
+    <component
+      :is="showSpeaker ? _nuxtLink : 'div'"
+      :to="showSpeaker ? `/sessions/${speaker.id}` : ''"
+    >
+      <img
+        width="208"
+        height="208"
+        :alt="`${speaker.profile.name}の写真`"
+        :src="`${urlBasePath}${speaker.profile.image}`"
+        loading="lazy"
+        decoding="async"
+      />
+    </component>
     <p class="speaker-title">{{ speaker.profile.title }}</p>
     <p class="speaker-name">{{ speaker.profile.name }}</p>
     <div class="speaker-sns">

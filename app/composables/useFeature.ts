@@ -5,5 +5,6 @@ export function useFeature() {
     registerTicket: config.public.registerTicket,
     registerNamecard: config.public.registerNamecard,
     showTimetable: config.public.showTimetable,
+    showSpeakerInfo: config.public.showSpeakerInfo,
   }
 }

@@ -35,6 +35,9 @@ onMounted(() => {
   </section>
 </template>
 <style>
+.scroll-hint-icon-wrap {
+  height: 18%;
+}
 .scroll-hint.is-right-scrollable {
   background: linear-gradient(
     270deg,
@@ -96,6 +99,14 @@ css({
     marginTop: '2.5rem',
     width: '100%',
     overflowX: 'scroll',
+
+    '&::before': {
+      position: 'absolute',
+      width: '24%',
+      background: 'linear-gradient(to right, rgba(white, 0), #eee)',
+      right: 0,
+      top: 0,
+    },
   },
   '.timetable-info': {
     marginTop: '8px',

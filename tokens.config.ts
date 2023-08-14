@@ -38,8 +38,8 @@ export default defineTheme({
       trackC: '#3178C6',
       trackD: '#42B983',
       close: {
-        title: '#B5B5B5',
-        background: '#EEE',
+        title: '#8c8c8c',
+        background: '#CBCBCB',
       },
     },
   },

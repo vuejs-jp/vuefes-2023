@@ -6,7 +6,7 @@
         "colspan": 3,
         "sessions": [
           {
-            "title": "開場"
+            "title": "開場・受付"
           }
         ]
       },
@@ -15,7 +15,7 @@
         "isClose": true,
         "sessions": [
           {
-            "title": "午後オープン"
+            "title": ""
           }
         ]
       }
@@ -96,14 +96,14 @@
     ]
   },
   {
-    "time": "12:00 - 13:15",
+    "time": "12:00 - 12:30",
     "tracks": [
       {
         "track": "cloud-sign",
         "rowspan": 3,
         "sessions": [
           {
-            "title": "ランチライム"
+            "title": "ランチタイム"
           },
           {
             "subTitle": "12:25 - 12:40",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "time": "12:45 - 13:15",
+    "time": "12:30 - 13:15",
     "tracks": [
       {
         "track": "m3",
@@ -202,7 +202,7 @@
         "track": "medpia",
         "sessions": [
           {
-            "title": "LT x 4"
+            "title": "ライトニングトーク"
           },
           {
             "title": "Vueを使ってGrid Systemを実装した話",
@@ -364,7 +364,7 @@
         "track": "m3",
         "sessions": [
           {
-            "title": "LT x 4"
+            "title": "ライトニングトーク"
           },
           {
             "title": "SOLID 原則に基づくSFC 実装",
@@ -523,7 +523,7 @@
         "track": "cloud-sign",
         "sessions": [
           {
-            "title": "アフターパーティ"
+            "title": "アフターパーティー"
           }
         ]
       }

@@ -75,8 +75,7 @@ css({
     '--img-size': '308px',
     color: '{color.vue.blue}',
     display: 'flex',
-    flexDirection: 'column',
-    gap: '0.5em',
+    gap: 'calc({space.8} * 4)',
     'img': {
       borderRadius: '0.5em',
       width: '{img.size}',

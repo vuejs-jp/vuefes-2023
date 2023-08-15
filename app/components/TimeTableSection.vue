@@ -39,32 +39,44 @@ onMounted(() => {
 .scroll-hint-icon-wrap {
   height: 18%;
 }
+
 .scroll-hint.is-right-scrollable {
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 1) 0,
-    rgba(255, 255, 255, 0) 248px,
-    rgba(0, 0, 0, 0)
-  );
+  background: none;
 }
 
 .scroll-hint.is-right-scrollable.is-left-scrollable {
-  background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 0,
-      rgba(255, 255, 255, 0) 248px,
-      rgba(0, 0, 0, 0)
-    ),
-    linear-gradient(270deg, rgba(0, 0, 0, 0.15) 0, rgba(0, 0, 0, 0) 16px, rgba(0, 0, 0, 0));
+  background: none;
 }
 
 .scroll-hint.is-left-scrollable {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0,
-    rgba(255, 255, 255, 0) 248px,
-    rgba(0, 0, 0, 0)
-  );
+  background: none;
+}
+
+.is-right-scrollable::before {
+  content: '';
+  position: absolute;
+  right: -180px;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255, 0), #eee);
+  transition: width 0.2s ease-out;
+}
+
+.is-left-scrollable::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255,255,255, 0), #eee);
+  transition: width 0.2s ease-out;
+}
+
+.is-right-scrollable.is-left-scrollable.timetable-wrapper::before,
+.is-right-scrollable.is-left-scrollable.timetable-wrapper::after{
+  width: 0;
 }
 
 .scroll-hint-icon {
@@ -100,14 +112,6 @@ css({
     marginTop: '2.5rem',
     width: '100%',
     overflowX: 'scroll',
-
-    '&::before': {
-      position: 'absolute',
-      width: '24%',
-      background: 'linear-gradient(to right, rgba(white, 0), #eee)',
-      right: 0,
-      top: 0,
-    },
   },
   '.timetable-info': {
     marginTop: '8px',

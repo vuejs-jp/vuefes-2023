@@ -59,7 +59,7 @@ onMounted(() => {
   top: 0;
   width: 35%;
   height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255, 0), #eee);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #eee);
   transition: width 0.2s ease-out;
 }
 
@@ -70,12 +70,12 @@ onMounted(() => {
   top: 0;
   width: 35%;
   height: 100%;
-  background: linear-gradient(to left, rgba(255,255,255, 0), #eee);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #eee);
   transition: width 0.2s ease-out;
 }
 
 .is-right-scrollable.is-left-scrollable.timetable-wrapper::before,
-.is-right-scrollable.is-left-scrollable.timetable-wrapper::after{
+.is-right-scrollable.is-left-scrollable.timetable-wrapper::after {
   width: 0;
 }
 

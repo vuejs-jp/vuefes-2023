@@ -33,6 +33,7 @@ onMounted(() => {
       </p>
     </div>
   </section>
+  <VoiceAudioSpectrum />
 </template>
 <style>
 .scroll-hint-icon-wrap {

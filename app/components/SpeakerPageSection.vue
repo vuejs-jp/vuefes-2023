@@ -3,7 +3,9 @@ import SectionTitle from '~/components/SectionTitle.vue'
 
 import SpeakerCFP from './speaker/SpeakerCFP.vue'
 import SpeakerCard from './speaker/SpeakerCard.vue'
+import SponsorSpeakerCard from './speaker/SponsorSpeakerCard.vue'
 import { ltSpeakers, sessionSpeakers } from '~/utils/speakers.constants'
+import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
 </script>
 
 <template>
@@ -23,10 +25,20 @@ import { ltSpeakers, sessionSpeakers } from '~/utils/speakers.constants'
         <SpeakerCard v-for="speaker in sessionSpeakers" :key="speaker.id" :speaker="speaker" />
       </div>
 
-      <h3>LT</h3>
+      <h3>Lightning Talk</h3>
 
       <div class="speakers">
         <SpeakerCard v-for="speaker in ltSpeakers" :key="speaker.id" :speaker="speaker" />
+      </div>
+
+      <h3>Sponsor Session</h3>
+
+      <div class="speakers">
+        <SponsorSpeakerCard
+          v-for="speaker in sponsorSpeakers"
+          :key="speaker.id"
+          :speaker="speaker"
+        />
       </div>
     </div>
   </section>

@@ -128,7 +128,11 @@ export type Sponsor = {
   url: string
 }
 
-export type SponsorUser = Speaker & {
+export type SponsorSpeaker = {
+  id: string
+  type: 'evan' | 'foreign' | 'domestic'
+  session: Session
+  profile: SpeakerProfile[]
   sponsorId: string
 }
 

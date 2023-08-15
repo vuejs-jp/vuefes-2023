@@ -101,7 +101,7 @@ useHead({
             target="_blank"
             rel="noreferrer"
           >
-            <h1>{{ sponsorData.name }}</h1>
+            <h2>{{ sponsorData.name }}</h2>
           </a>
         </div>
         <div v-if="isMoreSilver(sponsorData.categories)" class="detailhead-right">

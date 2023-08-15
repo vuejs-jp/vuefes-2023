@@ -108,7 +108,7 @@ css({
     }
   },
   '@tablet': {
-    '.speaker-card': {
+    '.sponsor-speaker-card': {
       '--img-size': '274px',
     },
     '.speaker-title': {
@@ -116,7 +116,7 @@ css({
     },
   },
   '@mobile': {
-    '.speaker-card': {
+    '.sponsor-speaker-card': {
       '--img-size': '144px',
     },
     '.speaker-title': {

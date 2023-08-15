@@ -2,6 +2,46 @@ import { SponsorSpeaker } from '~/types/app'
 
 export const sponsorSpeakers: SponsorSpeaker[] = [
   {
+    id: 'cloudsign',
+    type: 'domestic',
+    session: {
+      title: '走りながらエンジンを交換する ~ 大規模プロダクトを成長させつつVue3にするには ~',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: [
+      {
+        image: '/sponsor-speakers/takahiro_shinoda.jpg',
+        title: 'プロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
+        name: '鵜木 義秀',
+        twitterId: 'tttttt_621_s',
+        description: '＜未定＞',
+      },
+    ],
+    sponsorId: 'cloudsign',
+  },
+  {
+    id: 'link-and-motivation-group',
+    type: 'domestic',
+    session: {
+      title: 'Vue.jsを活用して開発リードタイムが1/3になった話',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: [
+      {
+        image: '/sponsor-speakers/yoshihide_unoki.png',
+        title: 'プロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
+        name: '鵜木 義秀',
+        twitterId: 'nokki_y',
+        description: '＜未定＞',
+      },
+    ],
+    sponsorId: 'link-and-motivation-group',
+  },
+  {
     id: 'medpeer',
     type: 'domestic',
     session: {
@@ -41,46 +81,6 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       },
     ],
     sponsorId: 'coconala',
-  },
-  {
-    id: 'link-and-motivation-group',
-    type: 'domestic',
-    session: {
-      title: 'Vue.jsを活用して開発リードタイムが1/3になった話',
-      description: '＜未定＞',
-      time: 0,
-      type: 'main',
-    },
-    profile: [
-      {
-        image: '/sponsor-speakers/yoshihide_unoki.png',
-        title: 'プロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
-        name: '鵜木 義秀',
-        twitterId: 'nokki_y',
-        description: '＜未定＞',
-      },
-    ],
-    sponsorId: 'link-and-motivation-group',
-  },
-  {
-    id: 'cloudsign',
-    type: 'domestic',
-    session: {
-      title: '走りながらエンジンを交換する ~ 大規模プロダクトを成長させつつVue3にするには ~',
-      description: '＜未定＞',
-      time: 0,
-      type: 'main',
-    },
-    profile: [
-      {
-        image: '/sponsor-speakers/takahiro_shinoda.jpg',
-        title: 'プロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
-        name: '鵜木 義秀',
-        twitterId: 'tttttt_621_s',
-        description: '＜未定＞',
-      },
-    ],
-    sponsorId: 'cloudsign',
   },
   {
     id: 'stores',

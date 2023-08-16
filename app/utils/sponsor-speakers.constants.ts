@@ -13,8 +13,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         image: '/sponsor-speakers/takahiro_shinoda.jpg',
-        title: 'プロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
-        name: '鵜木 義秀',
+        title: ' クラウドサイン事業本部 ProductEngineering部 エンジニア',
+        name: '篠田 貴大',
         twitterId: 'tttttt_621_s',
         description: '＜未定＞',
       },

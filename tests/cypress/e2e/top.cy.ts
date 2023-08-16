@@ -157,21 +157,29 @@ describe('top', () => {
           cy.contains('Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。')
         })
     })
-    // it('Ticket & Namecard', () => {
-    //   loadPage()
-    //   cy.contains('h2', 'Ticket & Namecard')
-    //     .closest('section')
-    //     .within(() => {
-    //       cy.contains('h4', 'チケットのご購入')
-    //       cy.contains('h4', 'ネームカードの作成')
-    //       cy.contains('h3', 'チケット')
-    //       cy.contains('チケットの事前販売')
-    //       cy.contains('h3', 'ネームカード')
-    //       cy.contains('登録期限:')
-    //       cy.contains('a', 'ネームカードを作成')
-    //       cy.contains(/最新情報は、Vue Fes Japan の Twitter をご確認ください。/)
-    //     })
-    // })
+    it('ticket', () => {
+      loadPage()
+      cy.contains('h2', 'Ticket')
+        .closest('section')
+        .within(() => {
+          // チケット
+          cy.contains('a', 'チケットを購入')
+          cy.contains('a', '一般チケット')
+          cy.contains('a', '一般＋アフターパーティチケット')
+          cy.contains('a', 'ハンズオンチケット')
+          cy.contains('a', '個人スポンサーチケット')
+          // ネームカード
+          cy.contains('a', 'ネームカードを作成')
+          // 当日ボランティア
+          cy.contains('a', 'ボランティアに応募')
+          cy.contains('応募期限:')
+          cy.contains(/応募期限:.*2023\/8\/31（木）23:59:59.*まで/)
+          // 託児サポート
+          cy.contains('a', 'サポートを申し込む')
+          // ハンズオン
+          cy.contains('a', 'チケットを購入')
+        })
+    })
     it('speakers', () => {
       loadPage()
       cy.contains('h2', 'Speakers')

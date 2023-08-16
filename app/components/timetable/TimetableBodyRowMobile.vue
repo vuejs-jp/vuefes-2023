@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Sponsors, Tracks } from '~/types/timetable'
 
 type Props = {
-  track?: Tracks
-  sponsorSession?: Sponsors
+  track?: string
+  sponsorSession?: string
   isTranslation?: boolean
   sessions: {
     subTitle?: string
@@ -18,7 +17,7 @@ const props = defineProps<Props>()
 // tdのclassを設定する
 const cssTdClass = computed(
   (): {
-    track?: Tracks
+    track?: string
     'track-a': boolean
     'track-b': boolean
     'track-c': boolean

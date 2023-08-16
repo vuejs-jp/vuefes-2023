@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import timeTables from './data/scheduleMobile.json'
-import { Track } from '~/types/timetable'
-import { Sponsor } from '~/types/timetable'
-
-type TimeTable = {
+type TimetableType = {
   time: string
   tracks: {
-    track?: Track
-    sponsorSession?: Sponsor
+    track?: string
+    sponsorSession?: string
     isTranslation?: boolean
     sessions: {
       subTitle?: string
@@ -19,20 +16,18 @@ type TimeTable = {
 </script>
 
 <template>
-  <table v-for="timetable in timeTables as TimeTable" :key="timetable.time" class="timetable">
+  <table v-for="timetable in timeTables as TimetableType" :key="timetable.time" class="timetable">
     <thead>
       <tr>
         <th class="schedule">{{ timetable.time }}</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Loop through the time slots from 9:30 to 18:00 -->
-      <!-- Each row represents a 30-minute interval -->
-      <tr v-for="track in timetable.tracks" :key="track.track">
+      <tr v-for="(track, index) in timetable.tracks" :key="index">
         <TimetableBodyRowMobile
-          :track="track.track"
-          :sponsor-session="track.sponsorSession"
-          :is-translation="track.isTranslation"
+          :track="track?.track"
+          :sponsor-session="track?.sponsorSession"
+          :is-translation="track?.isTranslation"
           :sessions="track.sessions"
         />
       </tr>

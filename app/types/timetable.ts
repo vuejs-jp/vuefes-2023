@@ -9,10 +9,10 @@ export interface Session {
 }
 
 export interface Track {
-  track: Tracks
+  track?: string
   colspan?: number
   rowspan?: number
   isClose?: boolean
-  sponsorSession?: Sponsors
-  sessions: Session[]
+  sponsorSession?: string
+  sessions?: Session[]
 }

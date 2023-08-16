@@ -1,28 +1,31 @@
 <script setup lang="ts">
 type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
-type Track = Sponsor | 'vue'
+type TrackName = Sponsor | 'vue'
 
-type Props = {
-  tracks?: any
+interface Session {
+  title: string;
+  speaker?: string;
+  subTitle?: string;
+  isTranslation?: boolean;
 }
 
-const props = defineProps<Props>()
+interface Track {
+  track: TrackName;
+  colspan?: number;
+  rowspan?: number;
+  isClose?: boolean;
+  sponsorSession?: Sponsor;
+  sessions: Session[];
+}
+
+const props = defineProps<{
+  tracks: Track[];
+}>()
 
 // tdのclassを設定する
 const cssTdClass = (
-  args,
-): {
-  track?: Track
-  close: boolean
-  'track-a': boolean
-  'track-b': boolean
-  'track-c': boolean
-  'track-d': boolean
-  'sponsor-session': boolean
-  'sponsor-session-a': boolean
-  'sponsor-session-b': boolean
-  'sponsor-session-c': boolean
-} => {
+  args: Track,
+) => {
   const { track, sponsorSession, isClose } = args
   return {
     track,

@@ -22,6 +22,7 @@ onMounted(() => {
         :title="'Time table'"
         yamato-title="タイムテーブル"
       />
+      <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
       <div v-if="$device.isMobile" class="timetable-wrapper">
         <TimetableViewMobile />
       </div>

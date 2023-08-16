@@ -1,6 +1,7 @@
 import { match } from 'ts-pattern'
-import { Path, Sponsor } from '~/types/app'
+import { Path, Speaker, Sponsor } from '~/types/app'
 import { all } from '~/utils/sponsor.constants'
+import { speakers } from '~/utils/speakers.constants'
 
 export function useLocale(path: Path) {
   const { locale } = useI18n({ useScope: 'global' })
@@ -29,6 +30,11 @@ export function useLocale(path: Path) {
         .with(`sponsors/${s.id}/head`, () => `/${locale.value}/sponsors/${s.id}/head`)
         .with(`sponsors/${s.id}/title`, () => `/${locale.value}/sponsors/${s.id}/title`)
         .with(`sponsors/${s.id}/body`, () => `/${locale.value}/sponsors/${s.id}/body`)
+    }, m)
+
+    // set sessions markdown
+    m = speakers.reduce((prev: any, s: Speaker) => {
+      return prev.with(`sessions/${s.id}/head`, () => `/${locale.value}/sessions/${s.id}/head`)
     }, m)
 
     return (m as any).exhaustive()

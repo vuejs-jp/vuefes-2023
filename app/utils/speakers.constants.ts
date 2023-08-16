@@ -120,6 +120,190 @@ export const speakers: Speaker[] = [
       description: 'ユーザーフレンドリーな開発を目指して活動しています。',
     },
   },
+  {
+    id: 'wattanx',
+    type: 'domestic',
+    session: {
+      title: 'Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/wattanx.png',
+      title: '',
+      name: 'wattanx / ワッタン',
+      twitterId: 'wattanx',
+      githubId: 'pontaxx',
+      description: '',
+    },
+  },
+  {
+    id: 'sorami',
+    type: 'domestic',
+    session: {
+      title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/sorami.png',
+      title: '',
+      name: 'sorami / ソラミ',
+      twitterId: 'sorami',
+      githubId: 'sorami',
+      description: '',
+    },
+  },
+  {
+    id: 'mizdra',
+    type: 'domestic',
+    session: {
+      title: 'Vue Language Server から生まれた Volar.js と、それが秘める可能性',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/mizdra.png',
+      title: '',
+      name: 'mizdra / ミズドラ',
+      twitterId: 'mizdra',
+      githubId: 'mizdra',
+      description: '',
+    },
+  },
+  {
+    id: 'nozomu-ikuta',
+    type: 'domestic',
+    session: {
+      title: 'Deep dive to unjs and Nuxt 3',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/nozomu_ikuta.png',
+      title: '',
+      name: 'Nozomu Ikuta',
+      twitterId: 'NozomuIkuta',
+      githubId: 'NozomuIkuta',
+      description: '',
+    },
+  },
+  {
+    id: 'yamanoku',
+    type: 'domestic',
+    session: {
+      title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/yamanoku.png',
+      title: '',
+      name: 'やまのく',
+      twitterId: 'yamanoku',
+      githubId: 'yamanoku',
+      description: '',
+    },
+  },
+  {
+    id: 'harlan-zw',
+    type: 'foreign',
+    session: {
+      title: 'Getting Your Head Around useHead',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/harlan_zw.jpg',
+      title: '',
+      name: 'Harlan Wilton',
+      twitterId: 'harlan_zw',
+      githubId: 'harlan-zw',
+      description: '',
+    },
+  },
 
   // LT
+  {
+    id: 'kira-puka',
+    type: 'domestic',
+    session: {
+      title: 'Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/kira_puka.png',
+      title: '',
+      name: 'きらぷか',
+      twitterId: 'kira_puka',
+      githubId: 'memory-lovers',
+      description: '',
+    },
+  },
+  {
+    id: 'northprint',
+    type: 'domestic',
+    session: {
+      title: 'WebGISとVue.jsの親和性について',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/northprint.png',
+      title: '',
+      name: '楢山哲弘',
+      twitterId: 'northprint',
+      githubId: 'northprint',
+      description: '',
+    },
+  },
+  {
+    id: 't0yohei',
+    type: 'domestic',
+    session: {
+      title: 'Vue を使って Grid System を実装した話',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/t0yohei.jpg',
+      title: '',
+      name: 't0yohei / トヨヘイ',
+      twitterId: 't0yohei',
+      githubId: 't0yohei',
+      description: '',
+    },
+  },
+  {
+    id: 'yud0uhu',
+    type: 'domestic',
+    session: {
+      title: 'Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/yud0uhu.jpg',
+      title: '',
+      name: '0yu / オユ',
+      twitterId: 'yud0uhu',
+      githubId: 'yud0uhu',
+      description: '',
+    },
+  },
 ]
+
+export const sessionSpeakers = speakers.filter((speaker) => speaker.session.type !== 'lt')
+
+export const ltSpeakers = speakers.filter((speaker) => speaker.session.type === 'lt')

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /* eslint-disable vuejs-accessibility/heading-has-content */
 
-import { SponsorUser, Sponsor, SponsorCategory, OptionCategory } from '~/types/app'
+import { Sponsor } from '~/types/app'
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
@@ -101,7 +101,7 @@ useHead({
             target="_blank"
             rel="noreferrer"
           >
-            <h1>{{ sponsorData.name }}</h1>
+            <h2>{{ sponsorData.name }}</h2>
           </a>
         </div>
         <div v-if="isMoreSilver(sponsorData.categories)" class="detailhead-right">

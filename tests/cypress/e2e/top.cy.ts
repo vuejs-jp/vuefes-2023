@@ -183,7 +183,7 @@ describe('top', () => {
           cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
           cy.contains('a', '申し込みフォーム')
           cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
-          cy.get('.speaker-card').should('have.length', 6)
+          cy.get('.speaker-card').should('have.length', 16)
         })
     })
     it('access', () => {

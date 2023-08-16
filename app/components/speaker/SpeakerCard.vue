@@ -82,11 +82,11 @@ css({
     },
   },
   '.speaker-title': {
-    fontSize: '14px',
+    fontSize: 'calc(14*{fontSize.base})',
     lineHeight: '14px',
   },
   '.speaker-name': {
-    fontSize: '22px',
+    fontSize: 'calc(22*{fontSize.base})',
     fontWeight: 700,
     lineHeight: '22px',
   },
@@ -108,7 +108,13 @@ css({
   },
   '@mobile': {
     '.speaker-card': {
-      '--img-size': '208px',
+      '--img-size': '144px',
+    },
+    '.speaker-title': {
+      fontSize: 'calc(10*{fontSize.base})',
+    },
+    '.speaker-name': {
+      fontSize: 'calc(18*{fontSize.base})',
     },
   },
 })

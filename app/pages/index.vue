@@ -5,7 +5,7 @@ import { useNamecard } from '~/composables/useNamecard'
 import { useFeature } from '~/composables/useFeature'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
-import TimeTableSection from '~/components/TimeTableSection.vue'
+import TimetablePageSection from '~/components/TimetablePageSection.vue'
 
 const { canPurchase } = useNamecard()
 const { showTimetable } = useFeature()
@@ -23,7 +23,7 @@ useHead({
     <MessagePageSection />
     <SpeakerPageSection />
     <template v-if="showTimetable">
-      <TimeTableSection />
+      <TimetablePageSection />
     </template>
     <template v-if="canPurchase">
       <TicketPageSection />

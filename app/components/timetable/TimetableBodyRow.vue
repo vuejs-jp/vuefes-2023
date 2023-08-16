@@ -1,22 +1,5 @@
 <script setup lang="ts">
-type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
-type TrackName = Sponsor | 'vue'
-
-interface Session {
-  title: string
-  speaker?: string
-  subTitle?: string
-  isTranslation?: boolean
-}
-
-interface Track {
-  track: TrackName
-  colspan?: number
-  rowspan?: number
-  isClose?: boolean
-  sponsorSession?: Sponsor
-  sessions: Session[]
-}
+import { Track } from '~/types/timetable'
 
 const props = defineProps<{
   tracks: Track[]
@@ -28,13 +11,13 @@ const cssTdClass = (args: Track) => {
   return {
     track,
     close: isClose,
-    'track-a': track === 'cloud-sign',
-    'track-b': track === 'medpia',
+    'track-a': track === 'cloudsign',
+    'track-b': track === 'medpeer',
     'track-c': track === 'm3',
     'track-d': track === 'vue',
     'sponsor-session': sponsorSession !== undefined,
-    'sponsor-session-a': sponsorSession === 'cloud-sign',
-    'sponsor-session-b': sponsorSession === 'medpia',
+    'sponsor-session-a': sponsorSession === 'cloudsign',
+    'sponsor-session-b': sponsorSession === 'medpeer',
     'sponsor-session-c': sponsorSession === 'm3',
   }
 }

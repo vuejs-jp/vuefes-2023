@@ -55,7 +55,7 @@
     "tracks": [
       {
         "colspan": 3,
-        "sponsorSession": "cloud-sign",
+        "sponsorSession": "cloudsign",
         "sessions": [
           {
             "title": "プラチナスポンサーセッション",
@@ -70,7 +70,7 @@
     "tracks": [
       {
         "colspan": 3,
-        "sponsorSession": "cloud-sign",
+        "sponsorSession": "cloudsign",
         "sessions": [
           {
             "title": "プラチナスポンサーセッション",
@@ -85,7 +85,7 @@
     "tracks": [
       {
         "colspan": 3,
-        "sponsorSession": "cloud-sign",
+        "sponsorSession": "cloudsign",
         "sessions": [
           {
             "title": "プラチナスポンサーセッション",
@@ -99,7 +99,7 @@
     "time": "12:05 - 13:30",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "title": "ランチタイム"
@@ -115,7 +115,7 @@
         ]
       },
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "ランチタイム"
@@ -166,7 +166,7 @@
     "time": "13:30 - 14:00",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "isTranslation": true,
@@ -176,7 +176,7 @@
         ]
       },
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "ライトニングトーク"
@@ -227,7 +227,7 @@
     "time": "14:15 - 14:45",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "isTranslation": true,
@@ -237,7 +237,7 @@
         ]
       },
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法",
@@ -273,7 +273,7 @@
     "time": "15:00 - 15:30",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "isTranslation": true,
@@ -283,7 +283,7 @@
         ]
       },
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜",
@@ -319,7 +319,7 @@
     "time": "15:45 - 16:15",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "isTranslation": true,
@@ -329,7 +329,7 @@
         ]
       },
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "Deep dive to unjs and Nuxt 3 (仮)",
@@ -390,7 +390,7 @@
     "time": "16:30 - 17:00",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "isTranslation": true,
@@ -400,7 +400,7 @@
         ]
       },
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
@@ -459,7 +459,7 @@
     "time": "17:15 - 17:45",
     "tracks": [
       {
-        "track": "medpia",
+        "track": "medpeer",
         "sessions": [
           {
             "title": "セッション",
@@ -497,7 +497,7 @@
     "time": "18:00 - 19:30",
     "tracks": [
       {
-        "track": "cloud-sign",
+        "track": "cloudsign",
         "sessions": [
           {
             "title": "アフターパーティー"

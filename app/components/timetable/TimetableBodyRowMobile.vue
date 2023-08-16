@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-
-type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
-type Track = Sponsor | 'vue'
+import { Sponsors, Tracks } from '~/types/timetable'
 
 type Props = {
-  track?: Track
-  sponsorSession?: Sponsor
+  track?: Tracks
+  sponsorSession?: Sponsors
   isTranslation?: boolean
   sessions: {
     subTitle?: string
@@ -20,7 +18,7 @@ const props = defineProps<Props>()
 // tdのclassを設定する
 const cssTdClass = computed(
   (): {
-    track?: Track
+    track?: Tracks
     'track-a': boolean
     'track-b': boolean
     'track-c': boolean
@@ -33,13 +31,13 @@ const cssTdClass = computed(
     const { track, sponsorSession } = props
     return {
       track,
-      'track-a': track === 'cloud-sign',
-      'track-b': track === 'medpia',
+      'track-a': track === 'cloudsign',
+      'track-b': track === 'medpeer',
       'track-c': track === 'm3',
       'track-d': track === 'vue',
       'sponsor-session': sponsorSession !== undefined,
-      'sponsor-session-a': sponsorSession === 'cloud-sign',
-      'sponsor-session-b': sponsorSession === 'medpia',
+      'sponsor-session-a': sponsorSession === 'cloudsign',
+      'sponsor-session-b': sponsorSession === 'medpeer',
       'sponsor-session-c': sponsorSession === 'm3',
     }
   },
@@ -48,9 +46,9 @@ const cssTdClass = computed(
 const namePlace = computed(() => {
   const { track } = props
   switch (track) {
-    case 'cloud-sign':
+    case 'cloudsign':
       return 'クラウドサイントラック'
-    case 'medpia':
+    case 'medpeer':
       return 'メドピアトラック'
     case 'm3':
       return 'エムスリーやっていきトラック'

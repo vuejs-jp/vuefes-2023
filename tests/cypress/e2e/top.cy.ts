@@ -21,6 +21,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Ticket').should('be.visible')
         cy.contains('a', 'Access').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
@@ -34,6 +35,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
+        cy.contains('a', 'Ticket').should('be.visible')
         cy.contains('a', 'Access').should('not.be.visible')
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
@@ -47,6 +49,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
+        cy.contains('a', 'Ticket').should('be.visible')
         cy.contains('a', 'Access').should('not.be.visible')
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
@@ -59,6 +62,7 @@ describe('top', () => {
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Ticket').should('be.visible')
         cy.contains('a', 'Access').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')

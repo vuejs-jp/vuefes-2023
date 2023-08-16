@@ -18,6 +18,7 @@ describe('top', () => {
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
@@ -32,6 +33,7 @@ describe('top', () => {
     it('header (tablet)', () => {
       cy.viewport(769, 600)
       loadPage()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
@@ -46,6 +48,7 @@ describe('top', () => {
     it('header (mobile)', () => {
       cy.viewport(375, 600)
       loadPage()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
@@ -59,6 +62,7 @@ describe('top', () => {
     })
     it('header with auth', () => {
       loadPageWithAuth()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')

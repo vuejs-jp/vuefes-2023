@@ -89,6 +89,7 @@ css({
     alignItems: 'center',
     width: '308px',
     height: '60px',
+    whiteSpace: 'pre-wrap',
   },
   '.speaker-name': {
     fontSize: 'calc(22*{fontSize.base})',

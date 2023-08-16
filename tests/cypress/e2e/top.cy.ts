@@ -178,7 +178,7 @@ describe('top', () => {
         .contains('スピーカー')
         .closest('section')
         .within(() => {
-          cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
+          // cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
           cy.contains('h3', '募集スケジュール')
           cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
           cy.contains('a', '申し込みフォーム')

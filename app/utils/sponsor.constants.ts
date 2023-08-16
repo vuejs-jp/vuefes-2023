@@ -234,7 +234,7 @@ const all: Sponsor[] = [
   },
   {
     id: 'interfirm',
-    name: '株式会社インターファーム',
+    name: 'KATIX（株式会社インターファーム）',
     image: '/sponsors/interfirm.png',
     categories: ['bronze'],
     url: 'https://www.interfirm.jp',

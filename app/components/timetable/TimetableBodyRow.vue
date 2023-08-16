@@ -3,29 +3,27 @@ type Sponsor = 'cloud-sign' | 'medpia' | 'm3'
 type TrackName = Sponsor | 'vue'
 
 interface Session {
-  title: string;
-  speaker?: string;
-  subTitle?: string;
-  isTranslation?: boolean;
+  title: string
+  speaker?: string
+  subTitle?: string
+  isTranslation?: boolean
 }
 
 interface Track {
-  track: TrackName;
-  colspan?: number;
-  rowspan?: number;
-  isClose?: boolean;
-  sponsorSession?: Sponsor;
-  sessions: Session[];
+  track: TrackName
+  colspan?: number
+  rowspan?: number
+  isClose?: boolean
+  sponsorSession?: Sponsor
+  sessions: Session[]
 }
 
 const props = defineProps<{
-  tracks: Track[];
+  tracks: Track[]
 }>()
 
 // tdのclassを設定する
-const cssTdClass = (
-  args: Track,
-) => {
+const cssTdClass = (args: Track) => {
   const { track, sponsorSession, isClose } = args
   return {
     track,

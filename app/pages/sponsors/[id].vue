@@ -224,6 +224,7 @@ css({
     marginBottom: 'calc({space.8} * 4)',
   },
   '.detailbody-explain': {
+    fontSize: 'calc(18*{fontSize.base})',
     margin: '0 auto',
   },
   '.detailbody-persons': {

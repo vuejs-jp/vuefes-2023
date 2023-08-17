@@ -14,7 +14,7 @@ export function useFormReCaptcha() {
 
   const reCaptchaInstance = useReCaptcha()
 
-  const hasSiteKey = config.reCaptchaWebsiteKey !== ''
+  const hasSiteKey = config.public.reCaptchaWebsiteKey !== ''
 
   async function execute() {
     await reCaptchaInstance?.recaptchaLoaded()

@@ -9,6 +9,7 @@ import TextButton from '~/components/button/TextButton.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useUser } from '~/composables/useUser'
+import { calendarUrl } from '~/utils/constants'
 // import UserForDev from '~/components/UserForDev.vue'
 // import { isProd } from '~/utils/environment.constants'
 
@@ -48,6 +49,15 @@ const { eventUser } = await useUser(signedUser.user_id)
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <RoundButton class="btn-update" href="/register">再編集</RoundButton>
+      <RoundButton
+        class="btn-calendar"
+        :href="calendarUrl"
+        target="_blank"
+        rel="noreferrer"
+        outline
+      >
+        カレンダーに追加
+      </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
         <CommentTitle color="vue.green" title="ネームカードが完成したらSNSで参加表明しましょう！" />
         <div class="social-item">
@@ -97,7 +107,7 @@ css({
       fontWeight: 900,
     },
   },
-  '.btn-update': {
+  '.btn-update, .btn-calendar': {
     marginTop: '64px'
   },
   '.social': {

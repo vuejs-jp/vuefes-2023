@@ -11,7 +11,7 @@ export function useForm() {
   const { onError, onSuccess } = useToast()
   const config = useRuntimeConfig()
 
-  const endpoint = `https://${config.newtSpaceUid}.form.newt.so/v1/${config.newtFormUid}`
+  const endpoint = `https://${config.public.newtSpaceUid}.form.newt.so/v1/${config.public.newtFormUid}`
   const isSent = ref(false)
 
   const isSubmitting = computed(() => {

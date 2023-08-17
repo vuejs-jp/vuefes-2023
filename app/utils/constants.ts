@@ -45,6 +45,9 @@ export const volunteerUrl =
 export const childCareUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSe_tfFxeSJjOmMGck-HXlKvuwkTjFHQoLzvL1ZPhYkkXuVshQ/viewform'
 
+export const calendarUrl =
+  'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vue%20Fes%20Japan%202023&dates=20231028T010000Z/20231028T093000Z'
+
 export const urlBasePath = isProd ? '/2023' : ''
 
 export const vuefesTwitterID = '@vuefes'

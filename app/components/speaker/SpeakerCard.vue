@@ -2,8 +2,11 @@
 import GithubLogo from '~/assets/logo/github_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
+import { useSession } from '~/composables/useSession'
 import { Speaker } from '~/types/app'
 import { urlBasePath } from '~/utils/constants'
+
+const { showSpeakerInfo } = useSession()
 
 const props = defineProps({
   speaker: {
@@ -11,18 +14,25 @@ const props = defineProps({
     required: true,
   },
 })
+
+const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 
 <template>
   <div class="speaker-card">
-    <img
-      width="208"
-      height="208"
-      :alt="`${speaker.profile.name}の写真`"
-      :src="`${urlBasePath}${speaker.profile.image}`"
-      loading="lazy"
-      decoding="async"
-    />
+    <component
+      :is="showSpeakerInfo ? _nuxtLink : 'div'"
+      :to="showSpeakerInfo ? `/sessions/${speaker.id}` : ''"
+    >
+      <img
+        width="208"
+        height="208"
+        :alt="`${speaker.profile.name}の写真`"
+        :src="`${urlBasePath}${speaker.profile.image}`"
+        loading="lazy"
+        decoding="async"
+      />
+    </component>
     <p class="speaker-title">{{ speaker.profile.title }}</p>
     <p class="speaker-name">{{ speaker.profile.name }}</p>
     <div class="speaker-sns">
@@ -72,11 +82,11 @@ css({
     },
   },
   '.speaker-title': {
-    fontSize: '14px',
+    fontSize: 'calc(14*{fontSize.base})',
     lineHeight: '14px',
   },
   '.speaker-name': {
-    fontSize: '22px',
+    fontSize: 'calc(22*{fontSize.base})',
     fontWeight: 700,
     lineHeight: '22px',
   },
@@ -98,7 +108,13 @@ css({
   },
   '@mobile': {
     '.speaker-card': {
-      '--img-size': '208px',
+      '--img-size': '144px',
+    },
+    '.speaker-title': {
+      fontSize: 'calc(10*{fontSize.base})',
+    },
+    '.speaker-name': {
+      fontSize: 'calc(18*{fontSize.base})',
     },
   },
 })

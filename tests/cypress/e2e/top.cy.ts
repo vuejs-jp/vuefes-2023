@@ -18,9 +18,12 @@ describe('top', () => {
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Speakers').should('be.visible')
+        cy.contains('a', 'Ticket').should('be.visible')
         cy.contains('a', 'Access').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
@@ -31,9 +34,12 @@ describe('top', () => {
     it('header (tablet)', () => {
       cy.viewport(769, 600)
       loadPage()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
+        cy.contains('a', 'Speakers').should('not.be.visible')
+        cy.contains('a', 'Ticket').should('not.be.visible')
         cy.contains('a', 'Access').should('not.be.visible')
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
@@ -44,9 +50,12 @@ describe('top', () => {
     it('header (mobile)', () => {
       cy.viewport(375, 600)
       loadPage()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
+        cy.contains('a', 'Speakers').should('not.be.visible')
+        cy.contains('a', 'Ticket').should('not.be.visible')
         cy.contains('a', 'Access').should('not.be.visible')
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
@@ -56,9 +65,12 @@ describe('top', () => {
     })
     it('header with auth', () => {
       loadPageWithAuth()
+      cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
+        cy.contains('a', 'Speakers').should('be.visible')
+        cy.contains('a', 'Ticket').should('be.visible')
         cy.contains('a', 'Access').should('be.visible')
         cy.contains('a', 'Sponsors').should('be.visible')
         cy.contains('a', 'Contact').should('be.visible')
@@ -83,6 +95,10 @@ describe('top', () => {
       cy.url().should('eq', 'http://localhost:3000/#speakers')
 
       cy.visit('/')
+      cy.contains('nav a', 'Ticket').click()
+      cy.url().should('eq', 'http://localhost:3000/#ticket')
+
+      cy.visit('/')
       cy.contains('nav a', 'Access').click()
       cy.url().should('eq', 'http://localhost:3000/#access')
 
@@ -104,6 +120,10 @@ describe('top', () => {
       cy.url().should('eq', 'http://localhost:3000/#speakers')
 
       loadPagePrivacy()
+      cy.contains('nav a', 'Ticket').click()
+      cy.url().should('eq', 'http://localhost:3000/#ticket')
+
+      loadPagePrivacy()
       cy.contains('nav a', 'Access').click()
       cy.url().should('eq', 'http://localhost:3000/#access')
 
@@ -123,6 +143,10 @@ describe('top', () => {
       loadPageCodeOfConduct()
       cy.contains('nav a', 'Speakers').click()
       cy.url().should('eq', 'http://localhost:3000/#speakers')
+
+      loadPageCodeOfConduct()
+      cy.contains('nav a', 'Ticket').click()
+      cy.url().should('eq', 'http://localhost:3000/#ticket')
 
       loadPageCodeOfConduct()
       cy.contains('nav a', 'Access').click()
@@ -157,33 +181,41 @@ describe('top', () => {
           cy.contains('Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。')
         })
     })
-    // it('Ticket & Namecard', () => {
-    //   loadPage()
-    //   cy.contains('h2', 'Ticket & Namecard')
-    //     .closest('section')
-    //     .within(() => {
-    //       cy.contains('h4', 'チケットのご購入')
-    //       cy.contains('h4', 'ネームカードの作成')
-    //       cy.contains('h3', 'チケット')
-    //       cy.contains('チケットの事前販売')
-    //       cy.contains('h3', 'ネームカード')
-    //       cy.contains('登録期限:')
-    //       cy.contains('a', 'ネームカードを作成')
-    //       cy.contains(/最新情報は、Vue Fes Japan の Twitter をご確認ください。/)
-    //     })
-    // })
+    it('ticket', () => {
+      loadPage()
+      cy.contains('h2', 'Ticket')
+        .closest('section')
+        .within(() => {
+          // チケット
+          cy.contains('a', 'チケットを購入')
+          cy.contains('a', '一般チケット')
+          cy.contains('a', '一般＋アフターパーティチケット')
+          cy.contains('a', 'ハンズオンチケット')
+          cy.contains('a', '個人スポンサーチケット')
+          // ネームカード
+          cy.contains('a', 'ネームカードを作成')
+          // 当日ボランティア
+          cy.contains('a', 'ボランティアに応募')
+          cy.contains('応募期限:')
+          cy.contains(/応募期限:.*2023\/8\/31（木）23:59:59.*まで/)
+          // 託児サポート
+          cy.contains('a', 'サポートを申し込む')
+          // ハンズオン
+          cy.contains('a', 'チケットを購入')
+        })
+    })
     it('speakers', () => {
       loadPage()
       cy.contains('h2', 'Speakers')
         .contains('スピーカー')
         .closest('section')
         .within(() => {
-          cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
-          cy.contains('h3', '募集スケジュール')
-          cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
-          cy.contains('a', '申し込みフォーム')
-          cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
-          cy.get('.speaker-card').should('have.length', 6)
+          // cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
+          // cy.contains('h3', '募集スケジュール')
+          // cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
+          // cy.contains('a', '申し込みフォーム')
+          // cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
+          cy.get('.speaker-card').should('have.length', 26)
         })
     })
     it('access', () => {

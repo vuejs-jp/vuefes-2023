@@ -91,6 +91,7 @@ export default defineNuxtConfig({
       registerTicket: process.env.NUXT_ENABLE_REGISTER_TICKET,
       registerNamecard: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
       showTimetable: process.env.NUXT_ENABLE_SHOW_TIMETABLE,
+      showSpeakerInfo: process.env.NUXT_ENABLE_SHOW_SPEAKER_INFO,
       // supabase
       supabaseProjectUrl: process.env.SUPABASE_URL,
       supabaseApiKey: process.env.SUPABASE_KEY,

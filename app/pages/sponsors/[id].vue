@@ -135,9 +135,9 @@ useHead({
       <h2 class="detailbody-title">
         {{ sponsorSpeakerData.session.title || 'セッション' }}
       </h2>
-      <p class="detailbody-explain">
+      <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorData.id}/head`" />
-      </p>
+      </div>
       <div v-if="sponsorSpeakerData.profile.length !== 0" class="detailbody-persons">
         <SponsorSpeakerCard :speaker="sponsorSpeakerData" />
       </div>

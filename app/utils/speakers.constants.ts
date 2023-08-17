@@ -338,6 +338,42 @@ export const speakers: Speaker[] = [
       description: '',
     },
   },
+  {
+    id: '53able',
+    type: 'domestic',
+    session: {
+      title: 'SOLID 原則に基づくSFC 実装',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/53able.jpg',
+      title: '',
+      name: '53able / ゴー',
+      twitterId: '53able',
+      githubId: '53able',
+      description: '',
+    },
+  },
+  {
+    id: 'fuqda',
+    type: 'domestic',
+    session: {
+      title: 'Composition API時代のPub/Subパターンでの状態管理',
+      description: '＜未定＞',
+      time: 0,
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/fuqda.jpg',
+      title: '',
+      name: 'fuqda / フクダ',
+      twitterId: 'fuqda90',
+      githubId: 'Shigeyuki-fukuda',
+      description: '',
+    },
+  },
 ]
 
 export const sessionSpeakers = speakers.filter((speaker) => speaker.session.type !== 'lt')

@@ -25,12 +25,20 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     id: 'unique-vision',
     type: 'domestic',
     session: {
-      title: '',
+      title: 'ユニークビジョンのフロントエンド開発における取り組み',
       description: '＜未定＞',
       time: 0,
       type: 'main',
     },
-    profile: [],
+    profile: [
+      {
+        image: '/sponsor-speakers/kazumasa_yamamoto.png',
+        title: 'ユニークビジョン株式会社\nエンジニア',
+        name: '山本 一将',
+        twitterId: 'kyamamoto9120',
+        description: '＜未定＞',
+      },
+    ],
     sponsorId: 'unique-vision',
   },
   {

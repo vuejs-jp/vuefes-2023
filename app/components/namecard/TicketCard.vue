@@ -44,6 +44,9 @@ css({
     },
   },
   '@mobile': {
+    '.process-root': {
+      width: '100%',
+    },
     '.action': {
       top: '176px',
     },

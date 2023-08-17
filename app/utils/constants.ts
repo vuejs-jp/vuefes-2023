@@ -8,6 +8,7 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { text: 'Message', link: '/#message' },
   { text: 'Speakers', link: '/#speakers' },
+  { text: 'Time table', link: '/#timetable' },
   { text: 'Sponsors', link: '/#sponsors' },
   { text: 'Contact', link: '/#form' },
 ]
@@ -15,6 +16,7 @@ export const navLinks: NavLink[] = [
 export const navRegisterLinks: NavLink[] = [
   { text: 'Message', link: '/#message' },
   { text: 'Speakers', link: '/#speakers' },
+  { text: 'Time table', link: '/#timetable' },
   { text: 'Ticket', link: '/#ticket' },
   { text: 'Access', link: '/#access' },
   { text: 'Sponsors', link: '/#sponsors' },

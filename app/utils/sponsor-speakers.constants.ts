@@ -22,6 +22,18 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     sponsorId: 'cloudsign',
   },
   {
+    id: 'unique-vision',
+    type: 'domestic',
+    session: {
+      title: '',
+      description: '＜未定＞',
+      time: 0,
+      type: 'main',
+    },
+    profile: [],
+    sponsorId: 'unique-vision',
+  },
+  {
     id: 'link-and-motivation-group',
     type: 'domestic',
     session: {

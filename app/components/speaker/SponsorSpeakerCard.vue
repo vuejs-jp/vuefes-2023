@@ -19,63 +19,62 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 
 <template>
-  <div class="sponsor-speaker-card">
-    <div v-for="(profile, index) in speaker.profile" :key="index">
-      <component
-        :is="showSpeakerInfo ? _nuxtLink : 'div'"
-        :to="showSpeakerInfo ? `/sponsor-sessions/${speaker.id}` : ''"
+  <div v-for="(profile, index) in speaker.profile" :key="index" class="speaker-card">
+    <component
+      :is="showSpeakerInfo ? _nuxtLink : 'div'"
+      :to="showSpeakerInfo ? `/sponsor-sessions/${speaker.id}` : ''"
+    >
+      <img
+        width="208"
+        height="208"
+        :alt="`${profile.name}の写真`"
+        :src="`${urlBasePath}${profile.image}`"
+        loading="lazy"
+        decoding="async"
+      />
+    </component>
+    <p v-if="profile.title" class="speaker-title">{{ profile.title }}</p>
+    <p class="speaker-name">{{ profile.name }}</p>
+    <div class="speaker-sns">
+      <a
+        v-if="profile.githubId"
+        :href="`https://github.com/${profile.githubId}`"
+        aria-label="github"
+        target="_blank"
+        rel="noreferrer"
       >
-        <img
-          width="208"
-          height="208"
-          :alt="`${profile.name}の写真`"
-          :src="`${urlBasePath}${profile.image}`"
-          loading="lazy"
-          decoding="async"
-        />
-      </component>
-      <p class="speaker-title">{{ profile.title }}</p>
-      <p class="speaker-name">{{ profile.name }}</p>
-      <div class="speaker-sns">
-        <a
-          v-if="profile.githubId"
-          :href="`https://github.com/${profile.githubId}`"
-          aria-label="github"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GithubLogo class="flip-horizontal" width="1.5em" height="1.5em" />
-        </a>
-        <a
-          v-if="profile.twitterId"
-          :href="`https://twitter.com/${profile.twitterId}`"
-          aria-label="twitter"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <TwitterLogo width="1.5em" height="1.5em" />
-        </a>
-        <a
-          v-if="profile.mastodonUrl"
-          :href="profile.mastodonUrl"
-          aria-label="mastodon"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <MastodonLogo width="1.5em" height="1.5em" />
-        </a>
-      </div>
+        <GithubLogo class="flip-horizontal" width="1.5em" height="1.5em" />
+      </a>
+      <a
+        v-if="profile.twitterId"
+        :href="`https://twitter.com/${profile.twitterId}`"
+        aria-label="twitter"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <TwitterLogo width="1.5em" height="1.5em" />
+      </a>
+      <a
+        v-if="profile.mastodonUrl"
+        :href="profile.mastodonUrl"
+        aria-label="mastodon"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <MastodonLogo width="1.5em" height="1.5em" />
+      </a>
     </div>
   </div>
 </template>
 
 <style lang="ts" scoped>
 css({
-  '.sponsor-speaker-card': {
+  '.speaker-card': {
     '--img-size': '308px',
     color: '{color.vue.blue}',
     display: 'flex',
-    gap: 'calc({space.8} * 4)',
+    flexDirection: 'column',
+    gap: '0.5em',
     'img': {
       borderRadius: '0.5em',
       width: '{img.size}',
@@ -88,7 +87,7 @@ css({
     display: 'flex',
     alignItems: 'center',
     width: '308px',
-    height: '60px',
+    height: '56px',
     whiteSpace: 'pre-wrap',
   },
   '.speaker-name': {
@@ -108,7 +107,7 @@ css({
     }
   },
   '@tablet': {
-    '.sponsor-speaker-card': {
+    '.speaker-card': {
       '--img-size': '274px',
     },
     '.speaker-title': {
@@ -116,7 +115,7 @@ css({
     },
   },
   '@mobile': {
-    '.sponsor-speaker-card': {
+    '.speaker-card': {
       '--img-size': '144px',
     },
     '.speaker-title': {

@@ -1,15 +1,16 @@
 <script setup lang="ts">
 /* eslint-disable vuejs-accessibility/heading-has-content */
 
-import { Sponsor } from '~/types/app'
+import { Sponsor, SponsorSpeaker } from '~/types/app'
+import SponsorSpeakerCard from '~/components/speaker/SponsorSpeakerCard.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
-// import { sponsorUsers } from '~/utils/sponsor-users.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
+import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
 import { useSponsor } from '~/composables/useSponsor'
 
 const emptySponsor: Sponsor = {
@@ -18,6 +19,27 @@ const emptySponsor: Sponsor = {
   image: '',
   categories: ['lunch'],
   url: '',
+}
+
+const emptySponsorSpeaker: SponsorSpeaker = {
+  id: '',
+  type: 'domestic',
+  session: {
+    title: '',
+    description: '',
+    time: 0,
+    type: 'main',
+  },
+  profile: [
+    {
+      image: '',
+      title: '',
+      name: '',
+      twitterId: '',
+      description: '',
+    },
+  ],
+  sponsorId: '',
 }
 
 const { getCategoryType, isMoreSilver, isOptions, isPlatinum, isBronze } = useSponsor()
@@ -37,10 +59,10 @@ if (!sponsorData.id) {
   })
 }
 
-// TODO: develop later
-// const users = sponsorUsers.filter((user: SponsorUser) => {
-//   return user.sponsorId === sponsorId
-// })
+const sponsorSpeakerData: SponsorSpeaker =
+  sponsorSpeakers.find((s: SponsorSpeaker) => {
+    return s.id === sponsorId
+  }) || emptySponsorSpeaker
 
 useHead({
   titleTemplate: (titleChunk) => `${sponsorData.name} | ${conferenceTitle}`,
@@ -111,18 +133,14 @@ useHead({
     </section>
     <section v-if="isPlatinum(sponsorData.categories)" class="detailbody">
       <h2 class="detailbody-title">
-        <MarkDownText :path="`sponsors/${sponsorData.id}/title`" />
+        {{ sponsorSpeakerData.session.title || 'セッション' }}
       </h2>
-      <p>
-        <MarkDownText :path="`sponsors/${sponsorData.id}/body`" />
-      </p>
-
-      <!-- TODO: develop later -->
-      <!-- <ul class="detailbody-persons">
-        <li v-for="u in users" :key="u.id">
-          <SpeakerCard :speaker="u" />
-        </li>
-      </ul> -->
+      <div class="detailbody-explain">
+        <MarkDownText :path="`sponsor-sessions/${sponsorData.id}/head`" />
+      </div>
+      <div v-if="sponsorSpeakerData.profile.length !== 0" class="detailbody-persons">
+        <SponsorSpeakerCard :speaker="sponsorSpeakerData" />
+      </div>
     </section>
     <div class="back">
       <!-- トップにもどる -->
@@ -196,13 +214,18 @@ css({
     },
   },
   '.detailbody': {
-    marginTop: 'calc({space.8} * 4)',
+    maxWidth: '768px',
+    margin: 'calc({space.8} * 4) auto 0',
   },
   '.detailbody-title': {
     textAlign: 'center',
     fontSize: 'calc(32*{fontSize.base})',
     fontWeight: '700',
     marginBottom: 'calc({space.8} * 4)',
+  },
+  '.detailbody-explain': {
+    fontSize: 'calc(18*{fontSize.base})',
+    margin: '0 auto',
   },
   '.detailbody-persons': {
     display: 'flex',

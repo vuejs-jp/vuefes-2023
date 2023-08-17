@@ -29,7 +29,14 @@ export function useLocale(path: Path) {
       return prev
         .with(`sponsors/${s.id}/head`, () => `/${locale.value}/sponsors/${s.id}/head`)
         .with(`sponsors/${s.id}/title`, () => `/${locale.value}/sponsors/${s.id}/title`)
-        .with(`sponsors/${s.id}/body`, () => `/${locale.value}/sponsors/${s.id}/body`)
+    }, m)
+
+    // set sponsor sessions markdown
+    m = all.reduce((prev: any, s: Sponsor) => {
+      return prev.with(
+        `sponsor-sessions/${s.id}/head`,
+        () => `/${locale.value}/sponsor-sessions/${s.id}/head`,
+      )
     }, m)
 
     // set sessions markdown

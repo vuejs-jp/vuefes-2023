@@ -366,7 +366,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: '/speakers/fuqda.jpeg',
+      image: '/speakers/fuqda.png',
       title: '',
       name: 'fuqda / フクダ',
       twitterId: 'fuqda90',

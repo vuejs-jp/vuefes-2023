@@ -56,7 +56,7 @@ onMounted(() => {
 .is-right-scrollable::before {
   content: '';
   position: absolute;
-  right: -180px;
+  right: 0;
   top: 0;
   width: 35%;
   height: 100%;
@@ -67,7 +67,7 @@ onMounted(() => {
 .is-left-scrollable::after {
   content: '';
   position: absolute;
-  left: 0;
+  left: 180px;
   top: 0;
   width: 35%;
   height: 100%;

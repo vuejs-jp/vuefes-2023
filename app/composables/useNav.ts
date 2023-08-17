@@ -1,14 +1,16 @@
-import { navLinks as _navLinks, navRegisterLinks, NavLink } from '~/utils/constants'
+import { navLinks as _navLinks, navFullLinks, NavLink } from '~/utils/constants'
 import { useNamecard } from '~/composables/useNamecard'
+import { useFeature } from '~/composables/useFeature'
 
 export function useNav() {
   const navRef = ref<HTMLElement | null>(null)
   const showNav = ref(false)
 
   const { canPurchase } = useNamecard()
+  const { showTimetable } = useFeature()
 
   const navLinks = computed(() => {
-    if (canPurchase) return navRegisterLinks
+    if (canPurchase) return navFullLinks(showTimetable)
     return _navLinks
   })
 

@@ -4,6 +4,6 @@ export function useFeature() {
   return {
     registerTicket: config.public.registerTicket,
     registerNamecard: config.public.registerNamecard,
-    showTimetable: config.public.showTimetable,
+    showTimetable: config.public.showTimetable === 'true',
   }
 }

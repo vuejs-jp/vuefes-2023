@@ -48,7 +48,7 @@ css({
       width: '100%',
     },
     '.action': {
-      top: '182px',
+      top: '191px',
     },
   },
 })

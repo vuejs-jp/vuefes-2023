@@ -16,10 +16,10 @@ const { canRegister } = useNamecard()
 </script>
 
 <template>
-  <div v-if="canRegister && !eventUser?.activated_at">
+  <div v-if="canRegister && hasAuth && !eventUser?.activated_at">
     <AlertBar />
   </div>
-  <NavPageSection :has-alert="canRegister && !eventUser?.activated_at">
+  <NavPageSection :has-alert="canRegister && hasAuth && !eventUser?.activated_at">
     <template #avatar>
       <template v-if="canRegister && hasAuth">
         <button @click="() => handle(isShow ? false : true)">

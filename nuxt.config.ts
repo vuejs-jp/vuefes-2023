@@ -62,8 +62,8 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'ja', iso: 'ja_JP', file: 'ja.ts' },
-      { code: 'ja-basic', iso: 'ja_JP', file: 'ja-basic.ts' },
       { code: 'en', iso: 'en-US', file: 'en.ts' },
+      { code: 'ja-basic', iso: 'ja_JP', file: 'ja-basic.ts' },
     ],
     lazy: true,
     defaultLocale: 'ja',

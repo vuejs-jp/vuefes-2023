@@ -39,7 +39,7 @@ const onClick = () => {
       class="item-link"
       @click="onClick"
     >
-      {{ locale.code === 'ja' ? '日本語' : locale.code === 'en' ? '英語' : 'やさしいにほんご' }}
+      {{ locale.code === 'ja' ? '日本語' : locale.code === 'en' ? 'English' : 'やさしいにほんご' }}
     </nuxt-link>
   </div>
 </template>

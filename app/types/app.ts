@@ -44,6 +44,7 @@ export interface FormUser {
 export type AdditionItem = {
   orderId: string
   applyTime: string
+  orderBody: string
   eventId: string
   eventTitle: string
   ticketId: string

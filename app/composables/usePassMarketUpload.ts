@@ -42,6 +42,7 @@ export function usePassMarketUpload() {
             return {
               orderId: valueFilter(tmp[0]),
               applyTime: valueFilter(tmp[1]),
+              orderBody: valueFilter(tmp[2]),
               eventId: valueFilter(tmp[3]),
               eventTitle: valueFilter(tmp[4]),
               ticketId: valueFilter(tmp[5]),

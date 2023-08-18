@@ -165,6 +165,7 @@ describe('top', () => {
   describe('content', () => {
     it('main visual', () => {
       loadPage()
+      cy.wait(1500)
       cy.contains('a', '最新情報はTwitterでCheck!').should(
         'have.attr',
         'href',
@@ -174,6 +175,7 @@ describe('top', () => {
     })
     it('message', () => {
       loadPage()
+      cy.wait(1500)
       cy.contains('h2', 'Message')
         .contains('想い')
         .closest('section')
@@ -183,6 +185,7 @@ describe('top', () => {
     })
     it('ticket', () => {
       loadPage()
+      cy.wait(1500)
       cy.contains('h2', 'Ticket')
         .closest('section')
         .within(() => {
@@ -206,6 +209,7 @@ describe('top', () => {
     })
     it('speakers', () => {
       loadPage()
+      cy.wait(1500)
       cy.contains('h2', 'Speakers')
         .contains('スピーカー')
         .closest('section')
@@ -243,6 +247,7 @@ describe('top', () => {
     })
     it('sponsors', () => {
       loadPage()
+      cy.wait(1500)
       cy.contains('h2', 'Sponsors')
         .contains('スポンサー')
         .closest('section')
@@ -275,6 +280,7 @@ describe('top', () => {
   describe('form', () => {
     it('contact', () => {
       loadPage()
+      cy.wait(1500)
       cy.contains('h2', 'Contact')
         .contains('お問い合わせ')
         .closest('section')
@@ -318,6 +324,7 @@ describe('top', () => {
   describe('footer', () => {
     it('footer', () => {
       loadPage()
+      cy.wait(1500)
       cy.get('.footer-section').within(() => {
         cy.get('.footer-vuefes-logo')
         cy.contains('a', 'Vue Fes Japan Online 2022').should(

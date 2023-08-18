@@ -6,5 +6,6 @@ export function useFeature() {
     registerNamecard: config.public.registerNamecard,
     showTimetable: config.public.showTimetable === 'true',
     showSpeakerInfo: config.public.showSpeakerInfo,
+    switchLocale: config.public.switchLocale,
   }
 }

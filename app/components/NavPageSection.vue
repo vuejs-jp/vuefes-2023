@@ -3,8 +3,10 @@ import MenuLogo from '~/assets/logo/menu_logo.svg'
 import VueFesLogo from '~/assets/logo/vuefes_logo.svg'
 import VueFesUserLogo from '~/assets/logo/vuefes_user_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
+import LangSwitcher from '~/components/locale/LangSwitcher.vue'
 import NavView from '~/components/nav/NavView.vue'
 import { useNav } from '~/composables/useNav'
+import { useLocaleSwitcher } from '~/composables/useLocaleSwitcher'
 import { conferenceTitle } from '~/utils/constants'
 
 const props = defineProps({
@@ -20,6 +22,7 @@ const props = defineProps({
 
 const { navLinks, navRef } = useNav()
 const { isMobile } = useDevice()
+const { switchLocale } = useLocaleSwitcher()
 const htmlRef = ref()
 const showMenu = ref(false)
 
@@ -48,7 +51,7 @@ onMounted(function () {
         <span class="sr-only">{{ conferenceTitle }}</span>
       </h1>
       <div v-if="!hasAuth" class="links">
-        <ul v-for="l in navLinks" :key="l.link">
+        <ul v-for="l in navLinks" :key="l.link" class="link-items">
           <li>
             <nuxt-link :to="`${l.link}`">{{ l.text }}</nuxt-link>
           </li>
@@ -62,6 +65,10 @@ onMounted(function () {
         >
           <TwitterLogo />
         </a>
+        <LangSwitcher
+          v-if="switchLocale"
+          :top="hasAlert ? (isMobile ? '160px' : '130px') : '80px'"
+        />
         <slot name="avatar" />
         <!-- hamburger-menu -->
         <button v-if="!showMenu" class="hamburger-menu" @click="toggleMenu">
@@ -94,22 +101,24 @@ css({
     display: 'flex',
     alignItems: 'center',
     columnGap: '40px',
-    '::v-deep(ul)': {
-      display: 'block',
+  },
+  '.link-items': {
+    display: 'block',
+  },
+  '.link-items a': {
+    color: '{color.white}',
+    fontSize: 'calc(16*{fontSize.base})',
+    '&:hover': {
+      color: '{color.vue.green}',
+      transition: '.2s',
     },
-    '::v-deep(a)': {
-      color: '{color.white}',
-      fontSize: 'calc(16*{fontSize.base})',
+  },
+  '.twitter': {
+    'svg': {
+      fill: '{color.white}',
       '&:hover': {
-        color: '{color.vue.green}',
+        fill: '{color.vue.green}',
         transition: '.2s',
-      },
-      'svg': {
-        fill: '{color.white}',
-        '&:hover': {
-          fill: '{color.vue.green}',
-          transition: '.2s',
-        },
       },
     },
   },
@@ -134,7 +143,7 @@ css({
       display: 'block',
     },
     '.links': {
-       'ul': {
+      'ul': {
         display: 'none',
       },
       'a': {

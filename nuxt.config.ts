@@ -92,6 +92,7 @@ export default defineNuxtConfig({
       registerNamecard: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
       showTimetable: process.env.NUXT_ENABLE_SHOW_TIMETABLE,
       showSpeakerInfo: process.env.NUXT_ENABLE_SHOW_SPEAKER_INFO,
+      switchLocale: process.env.NUXT_ENABLE_SWITCH_LOCALE,
       // supabase
       supabaseProjectUrl: process.env.SUPABASE_URL,
       supabaseApiKey: process.env.SUPABASE_KEY,

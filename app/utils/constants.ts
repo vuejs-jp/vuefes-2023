@@ -12,14 +12,18 @@ export const navLinks: NavLink[] = [
   { text: 'Contact', link: '/#form' },
 ]
 
-export const navRegisterLinks: NavLink[] = [
-  { text: 'Message', link: '/#message' },
-  { text: 'Speakers', link: '/#speakers' },
-  { text: 'Ticket', link: '/#ticket' },
-  { text: 'Access', link: '/#access' },
-  { text: 'Sponsors', link: '/#sponsors' },
-  { text: 'Contact', link: '/#form' },
-]
+export const navFullLinks = (showTimetable: boolean) =>
+  [
+    { text: 'Message', link: '/#message' },
+    { text: 'Speakers', link: '/#speakers' },
+    ...[showTimetable ? { text: 'Time table', link: '/#timetable' } : undefined],
+    { text: 'Ticket', link: '/#ticket' },
+    { text: 'Access', link: '/#access' },
+    { text: 'Sponsors', link: '/#sponsors' },
+    { text: 'Contact', link: '/#form' },
+  ].filter((l) => {
+    return l !== undefined
+  })
 
 export const conferenceTitle = 'Vue Fes Japan 2023'
 

@@ -32,6 +32,16 @@ export default defineTheme({
       bronze: '#F17C67',
       options: '#546F89',
     },
+    timetable: {
+      trackA: '#33A6B8',
+      trackB: '#F17C67',
+      trackC: '#3178C6',
+      trackD: '#42B983',
+      close: {
+        title: '#8c8c8c',
+        background: '#CBCBCB',
+      },
+    },
   },
   fontSize: {
     base: '0.0625rem',

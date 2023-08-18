@@ -23,6 +23,10 @@
     }
   },
   "excludeFiles": [
-    "app/components/DragDropArea.vue"
+    "app/components/DragDropArea.vue",
+    "app/components/timetable/TimetableView.vue",
+    "app/components/timetable/TimetableViewMobile.vue",
+    "app/components/timetable/TimetableBodyRow.vue",
+    "app/components/timetable/TimetableBodyRowMobile.vue"
   ]
 }

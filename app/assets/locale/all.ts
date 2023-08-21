@@ -38,6 +38,11 @@ export default {
       handson: 'Handson',
       media: 'Media',
     },
+    track: {
+      cloudsign: 'クラウドサイントラック',
+      medpeer: 'メドピアトラック',
+      m3: 'エムスリーやっていきトラック',
+    },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
       /**
@@ -149,6 +154,11 @@ export default {
       handson: 'Handson',
       media: 'Media',
     },
+    track: {
+      cloudsign: 'クラウドサイントラック',
+      medpeer: 'メドピアトラック',
+      m3: 'エムスリーやっていきトラック',
+    },
     top: {
       check_twitter: 'Check information on Twitter!',
       /**
@@ -226,6 +236,7 @@ export default {
   ja_basic: {
     words: {},
     category: {},
+    track: {},
     top: {},
   },
 } as const

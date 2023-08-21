@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Sponsor, SponsorSpeaker } from '~/types/app'
+import SponsorSpeakerCard from '~/components/speaker/SponsorSpeakerCard.vue'
+import MarkDownText from '~/components/MarkDownText.vue'
+import RoundButton from '~/components/button/RoundButton.vue'
 import { useSession } from '~/composables/useSession'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
@@ -12,7 +15,7 @@ const emptySponsorSpeaker: SponsorSpeaker = {
   session: {
     title: '',
     description: '',
-    time: 0,
+    time: '',
     type: 'main',
   },
   profile: [
@@ -27,7 +30,7 @@ const emptySponsorSpeaker: SponsorSpeaker = {
   sponsorId: '',
 }
 
-const { showSpeakerInfo } = useSession()
+const { showSpeakerInfo, getTrackColor } = useSession()
 
 if (!showSpeakerInfo) {
   // https://nuxt.com/docs/getting-started/error-handling#showerror
@@ -105,23 +108,94 @@ useHead({
         title="Speakers"
         :yamato-title="$t('top.speakers_subtitle')"
       />
+      <div class="detailhead-tags">
+        <SponsorTag
+          v-if="sponsorSpeakerData.session.track"
+          :label="$t(`track.${sponsorSpeakerData.session.track}`)"
+          :color="getTrackColor(sponsorSpeakerData.session.track)"
+        />
+        <SponsorTag
+          v-if="sponsorSpeakerData.session.time"
+          :label="sponsorSpeakerData.session.time"
+          color="vue.blue"
+        />
+      </div>
     </section>
+    <section class="detailbody">
+      <h2 class="detailbody-title">
+        {{ sponsorSpeakerData.session.title || 'セッション' }}
+      </h2>
+      <div class="detailbody-explain">
+        <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/head`" />
+      </div>
+      <div class="detailbody-persons">
+        <SponsorSpeakerCard :speaker="sponsorSpeakerData" />
+      </div>
+    </section>
+    <div class="back">
+      <RoundButton to="/" outline>
+        {{ $t('words.back_top') }}
+      </RoundButton>
+    </div>
   </main>
   <FooterPageSection />
 </template>
 
 <style lang="ts" scoped>
 css({
-  'section': {
-    marginTop: '120px',
+  'main': {
+    '--max-width': '1280px',
+    '--head-img-width': '475px',
+    padding: 'calc({space.header} + {space.8} * 10) calc({space.8} * 4) calc({space.bodybottom})',
+    color: '{color.vue.blue}',
+    lineHeight: '1.8',
+    maxWidth: '{max.width}',
+    margin: '0 auto',
     display: 'grid',
-    placeItems: 'center',
-    gap: '40px',
-    '::v-deep(h2)': {
-      color: '{color.vue.blue}',
-      fontSize: 'calc(32*{fontSize.base})',
-      fontWeight: 900,
+    gap: 'calc({space.8} * 8)',
+  },
+  '.detailhead-tags': {
+    display: 'flex',
+    flexWrap: 'wrap',
+    marginTop: 'calc({space.8} * 4)',
+    columnGap: 'calc({space.8} * 1.5)',
+    gap: 'calc({space.8} * 0.5)',
+  },
+  '.detailbody': {
+    margin: '0 auto',
+  },
+  '.detailbody-title': {
+    textAlign: 'center',
+    fontSize: 'calc(32*{fontSize.base})',
+    fontWeight: '700',
+    marginBottom: 'calc({space.8} * 3)',
+  },
+  '.detailbody-explain': {
+    fontSize: 'calc(18*{fontSize.base})',
+    margin: '0 auto calc({space.8} * 8)',
+  },
+  '.detailbody-persons': {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: 'calc({space.8} * 4)',
+  },
+  '.back': {
+    textAlign: 'center',
+  },
+  '@tablet': {
+    'main': {
+      '--head-img-width': '368px',
     },
-  }
+  },
+  '@mobile': {
+    'main': {
+      '--max-width': '100%',
+      '--head-img-width': '100%',
+    },
+    '.detailhead-body': {
+      display: 'block',
+    },
+  },
 })
 </style>

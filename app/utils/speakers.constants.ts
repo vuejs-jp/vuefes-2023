@@ -8,7 +8,7 @@ export const speakers: Speaker[] = [
     session: {
       title: 'キーノート',
       description: '＜未定＞',
-      time: 0,
+      time: '10:25 - 11:05',
       type: 'main',
     },
     profile: {
@@ -21,6 +21,7 @@ export const speakers: Speaker[] = [
         'Evan is an independent open source developer and is the creator / project lead of Vue and Vite.',
     },
   },
+
   // 海外スピーカー
   {
     id: 'Atinux',
@@ -29,7 +30,8 @@ export const speakers: Speaker[] = [
       title: 'Nuxt to the Edge',
       description:
         'Learn how to build a Vue application deployed to the edge to bring a blazing fast experience to your end users.',
-      time: 0,
+      track: 'cloudsign',
+      time: '13:30 - 14:00',
       type: 'main',
     },
     profile: {
@@ -46,9 +48,10 @@ export const speakers: Speaker[] = [
     id: 'patak-dev',
     type: 'foreign',
     session: {
-      title: '＜未定＞',
+      title: '',
       description: '＜未定＞',
-      time: 0,
+      track: 'cloudsign',
+      time: '15:45 - 16:15',
       type: 'main',
     },
     profile: {
@@ -64,9 +67,10 @@ export const speakers: Speaker[] = [
     id: 'antfu',
     type: 'foreign',
     session: {
-      title: '＜未定＞',
+      title: '',
       description: '＜未定＞',
-      time: 0,
+      track: 'cloudsign',
+      time: '15:00 - 15:30',
       type: 'main',
     },
     profile: {
@@ -83,9 +87,10 @@ export const speakers: Speaker[] = [
     id: 'daniel-roe',
     type: 'foreign',
     session: {
-      title: '＜未定＞',
+      title: '',
       description: '＜未定＞',
-      time: 0,
+      track: 'cloudsign',
+      time: '14:15 - 14:45',
       type: 'main',
     },
     profile: {
@@ -105,9 +110,10 @@ export const speakers: Speaker[] = [
     id: 'sapphi_red',
     type: 'domestic',
     session: {
-      title: '＜未定＞',
+      title: '',
       description: '＜未定＞',
-      time: 0,
+      track: 'm3',
+      time: '13:30 - 14:00',
       type: 'main',
     },
     profile: {
@@ -126,7 +132,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '15:00 - 15:30',
       type: 'main',
     },
     profile: {
@@ -144,7 +151,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
       description: '＜未定＞',
-      time: 0,
+      track: 'm3',
+      time: '16:30 - 17:00',
       type: 'main',
     },
     profile: {
@@ -162,7 +170,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Vue Language Server から生まれた Volar.js と、それが秘める可能性',
       description: '＜未定＞',
-      time: 0,
+      track: 'm3',
+      time: '15:00 - 15:30',
       type: 'main',
     },
     profile: {
@@ -180,7 +189,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Deep dive to unjs and Nuxt 3',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '15:45 - 16:15',
       type: 'main',
     },
     profile: {
@@ -198,7 +208,8 @@ export const speakers: Speaker[] = [
     session: {
       title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '16:30 - 17:00',
       type: 'main',
     },
     profile: {
@@ -217,7 +228,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Getting Your Head Around useHead',
       description: '＜未定＞',
-      time: 0,
+      track: 'cloudsign',
+      time: '16:30 - 17:00',
       type: 'main',
     },
     profile: {
@@ -235,7 +247,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Nuxt 3でJamstackテンプレートを作るときの考え方',
       description: '＜未定＞',
-      time: 0,
+      track: 'm3',
+      time: '14:15 - 14:45',
       type: 'main',
     },
     profile: {
@@ -252,7 +265,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'STUDIOの作り方 2023 ver.',
       description: '＜未定＞',
-      time: 0,
+      track: 'm3',
+      time: '17:15 - 17:45',
       type: 'main',
     },
     profile: {
@@ -272,7 +286,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '13:30 - 14:00',
       type: 'lt',
     },
     profile: {
@@ -290,7 +305,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'WebGISとVue.jsの親和性について',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '13:30 - 14:00',
       type: 'lt',
     },
     profile: {
@@ -308,7 +324,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Vue を使って Grid System を実装した話',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '13:30 - 14:00',
       type: 'lt',
     },
     profile: {
@@ -326,7 +343,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '13:30 - 14:00',
       type: 'lt',
     },
     profile: {
@@ -344,7 +362,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'SOLID 原則に基づくSFC 実装',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '15:45 - 16:05',
       type: 'lt',
     },
     profile: {
@@ -362,7 +381,8 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Composition API時代のPub/Subパターンでの状態管理',
       description: '＜未定＞',
-      time: 0,
+      track: 'medpeer',
+      time: '15:45 - 16:05',
       type: 'lt',
     },
     profile: {

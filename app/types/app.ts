@@ -1,3 +1,5 @@
+import { Tracks } from './timetable'
+
 /**
  * for app
  */
@@ -92,7 +94,8 @@ export type Session = {
   title: string
   description: string
   type: 'main' | 'lt'
-  time: number
+  track?: Tracks
+  time: string
 }
 
 export type SpeakerProfile = {

@@ -43,6 +43,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "yyx990803",
             "title": "キーノート",
             "speaker": "Evan You"
           }
@@ -58,6 +59,7 @@
         "sponsorSession": "cloudsign",
         "sessions": [
           {
+            "id": "cloudsign",
             "title": "プラチナスポンサーセッション",
             "speaker": "クラウドサイン（弁護士ドットコム株式会社）"
           }
@@ -73,6 +75,7 @@
         "sponsorSession": "cloudsign",
         "sessions": [
           {
+            "id": "unique-vision",
             "title": "プラチナスポンサーセッション",
             "speaker": "ユニークビジョン株式会社"
           }
@@ -88,6 +91,7 @@
         "sponsorSession": "cloudsign",
         "sessions": [
           {
+            "id": "link-and-motivation-group",
             "title": "プラチナスポンサーセッション",
             "speaker": "株式会社リンクアンドモチベーション\n"
           }
@@ -170,6 +174,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "Atinux",
             "title": "セッション",
             "speaker": "Sebastien Chopin"
           }
@@ -182,18 +187,22 @@
             "title": "ライトニングトーク"
           },
           {
+            "id": "t0yohei",
             "title": "Vueを使ってGrid Systemを実装した話",
             "speaker": "t0yohei"
           },
           {
+            "id": "northprint",
             "title": "WebGISとVue.jsの親和性について",
             "speaker": "楢山 哲弘"
           },
           {
+            "id": "kira-puka",
             "title": "Nuxt3のモジュール開発は意外と簡単？Module Author Guideをのぞいてみよう",
             "speaker": "きらぷか"
           },
           {
+            "id": "yud0uhu",
             "title": "Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話",
             "speaker": "0yu"
           }
@@ -203,6 +212,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "sapphi_red",
             "title": "セッション",
             "speaker": "翠"
           }
@@ -231,6 +241,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "daniel-roe",
             "title": "セッション",
             "speaker": "Daniel Roe"
           }
@@ -249,6 +260,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "chocodogmagic",
             "title": "Nuxt 3でJamstackテンプレートを作るときの考え方\n",
             "speaker": "まぁし"
           }
@@ -277,6 +289,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "antfu",
             "title": "セッション",
             "speaker": "Anthony Fu"
           }
@@ -286,6 +299,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "wattanx",
             "title": "Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜",
             "speaker": "wattanx"
           }
@@ -295,6 +309,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "mizdra",
             "title": "Vue Language Server から生まれた Volar.js と、それが秘める可能性",
             "speaker": "mizdra"
           }
@@ -323,6 +338,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "patak-dev",
             "title": "セッション",
             "speaker": "Matias Capeletto"
           }
@@ -332,6 +348,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "nozomu-ikuta",
             "title": "Deep dive to unjs and Nuxt 3 (仮)",
             "speaker": "Nozomu Iluta"
           }
@@ -344,10 +361,12 @@
             "title": "ライトニングトーク"
           },
           {
+            "id": "53able",
             "title": "SOLID 原則に基づくSFC 実装",
             "speaker": "53able"
           },
           {
+            "id": "fuqda",
             "title": "Composition API時代のPub/Subパターンでの状態管理",
             "speaker": "fuqda"
           },
@@ -394,6 +413,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "harlan-zw",
             "title": "Getting Your Head Around useHead",
             "speaker": "Harlan Wilton"
           }
@@ -403,6 +423,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "yamanoku",
             "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
             "speaker": "やまのく"
           }
@@ -412,6 +433,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "sorami",
             "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
             "speaker": "sorami"
           }
@@ -471,6 +493,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "keima",
             "title": "STUDIOの作り方 2023 ver.",
             "speaker": "甲斐 啓真"
           }

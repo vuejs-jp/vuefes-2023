@@ -27,7 +27,7 @@ const emptySponsorSpeaker: SponsorSpeaker = {
   session: {
     title: '',
     description: '',
-    time: 0,
+    time: '',
     type: 'main',
   },
   profile: [
@@ -214,7 +214,6 @@ css({
     },
   },
   '.detailbody': {
-    maxWidth: '768px',
     margin: 'calc({space.8} * 4) auto 0',
   },
   '.detailbody-title': {
@@ -255,7 +254,5 @@ css({
       marginTop: 'calc({space.8} * 4)',
     },
   },
-
-
 })
 </style>

@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { useSession } from '~/composables/useSession'
 import { Track } from '~/types/timetable'
 
 const props = defineProps<{
   tracks: Track[]
 }>()
+
+const { showSpeakerInfo } = useSession()
 
 // tdのclassを設定する
 const cssTdClass = (args: Track) => {
@@ -21,6 +24,8 @@ const cssTdClass = (args: Track) => {
     'sponsor-session-c': sponsorSession === 'm3',
   }
 }
+
+const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 <template>
   <td
@@ -33,7 +38,19 @@ const cssTdClass = (args: Track) => {
     <div v-for="session in track.sessions" :key="session.title" class="info">
       <div v-if="session.isTranslation" class="translate">同時通訳あり</div>
       <p v-if="session.subTitle" class="subtitle">{{ session.subTitle }}</p>
-      <div class="title">{{ session.title }}</div>
+      <component
+        :is="session.id ? _nuxtLink : 'div'"
+        :to="
+          showSpeakerInfo && session.id
+            ? track.sponsorSession
+              ? `/sponsor-sessions/${session.id}`
+              : `/sessions/${session.id}`
+            : ''
+        "
+        class="title"
+      >
+        {{ session.title }}
+      </component>
       <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>
     </div>
   </td>
@@ -48,6 +65,9 @@ css({
     textAlign: 'center',
     color: '{color.vue.blue}',
     backgroundColor: '{color.white}',
+    '.info': {
+      display: 'grid',
+    },
     '&.close': {
       color: '{color.timetable.close.title}',
       backgroundColor: '{color.timetable.close.background}',

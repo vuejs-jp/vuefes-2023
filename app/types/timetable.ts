@@ -2,6 +2,7 @@ export type Sponsors = 'cloudsign' | 'medpeer' | 'm3'
 export type Tracks = Sponsors | 'vue'
 
 export interface Session {
+  id?: string
   title: string
   speaker?: string
   subTitle?: string

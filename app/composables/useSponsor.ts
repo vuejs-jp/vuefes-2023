@@ -24,7 +24,7 @@ export function useSponsor() {
     category === 'platinum' || category === 'gold' || category === 'silver' || category === 'bronze'
 
   const getCategoryType = (category: SponsorCategory | OptionCategory): string => {
-    return isBasicBy(category) ? category : 'options'
+    return isBasicBy(category) ? `sponsor.${category}` : 'sponsor.options'
   }
 
   return { isPlatinum, isBronze, isMoreSilver, isOptions, isBasicBy, getCategoryType }

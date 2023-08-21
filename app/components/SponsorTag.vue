@@ -25,7 +25,7 @@ css({
     fontSize: 'calc(18*{fontSize.base})',
     fontWeight: '700',
     borderRadius: '24px',
-    backgroundColor: (props) => `{color.sponsor.${props.color}}`,
+    backgroundColor: (props) => `{color.${props.color}}`,
     color: '{color.white}',
     lineHeight: '1',
     whiteSpace: 'nowrap',

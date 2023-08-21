@@ -5,5 +5,6 @@ export default defineI18nLocale(async (locale) => {
     words: all.ja.words,
     top: all.ja.top,
     category: all.ja.category,
+    track: all.ja.track,
   }
 })

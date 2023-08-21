@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [ver.2023.7.1](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.7.1)
+
+- タイムテーブル情報 (セッション一覧) の追加
+- スピーカー情報の更新
+- スポンサー情報の更新
+
 ## [ver.2023.6.1](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.6.1)
 
 - スポンサー情報の更新

@@ -33,15 +33,22 @@ export function useLocale(path: Path) {
 
     // set sponsor sessions markdown
     m = all.reduce((prev: any, s: Sponsor) => {
-      return prev.with(
-        `sponsor-sessions/${s.id}/head`,
-        () => `/${locale.value}/sponsor-sessions/${s.id}/head`,
-      )
+      return prev
+        .with(
+          `sponsor-sessions/${s.id}/head`,
+          () => `/${locale.value}/sponsor-sessions/${s.id}/head`,
+        )
+        .with(
+          `sponsor-sessions/${s.id}/profile`,
+          () => `/${locale.value}/sponsor-sessions/${s.id}/profile`,
+        )
     }, m)
 
     // set sessions markdown
     m = speakers.reduce((prev: any, s: Speaker) => {
-      return prev.with(`sessions/${s.id}/head`, () => `/${locale.value}/sessions/${s.id}/head`)
+      return prev
+        .with(`sessions/${s.id}/head`, () => `/${locale.value}/sessions/${s.id}/head`)
+        .with(`sessions/${s.id}/profile`, () => `/${locale.value}/sessions/${s.id}/profile`)
     }, m)
 
     return (m as any).exhaustive()

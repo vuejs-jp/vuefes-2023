@@ -107,7 +107,7 @@ export const speakers: Speaker[] = [
 
   // 国内スピーカー
   {
-    id: 'sapphi_red',
+    id: 'sapphi-red',
     type: 'domestic',
     session: {
       title: '',

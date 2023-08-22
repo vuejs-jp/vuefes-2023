@@ -130,6 +130,7 @@ useHead({
       </div>
       <div class="detailbody-persons">
         <SponsorSpeakerCard :speaker="sponsorSpeakerData" />
+        <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/profile`" />
       </div>
     </section>
     <div class="back">
@@ -163,6 +164,7 @@ css({
   },
   '.detailbody': {
     margin: '0 auto',
+    width: '100%',
   },
   '.detailbody-title': {
     textAlign: 'center',
@@ -175,9 +177,9 @@ css({
     margin: '0 auto calc({space.8} * 8)',
   },
   '.detailbody-persons': {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
+    fontSize: 'calc(18*{fontSize.base})',
+    display: 'grid',
+    gridTemplateColumns: 'auto 1fr',
     gap: 'calc({space.8} * 4)',
   },
   '.back': {
@@ -195,6 +197,10 @@ css({
     },
     '.detailhead-body': {
       display: 'block',
+    },
+    '.detailbody-persons': {
+      gridTemplateColumns: '1fr',
+      placeItems: 'center',
     },
   },
 })

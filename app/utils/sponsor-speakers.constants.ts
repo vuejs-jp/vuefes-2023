@@ -12,6 +12,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     },
     profile: [
       {
+        id: 'takahiro-shinoda',
         image: '/sponsor-speakers/takahiro_shinoda.jpg',
         title: '弁護士ドットコム株式会社\nクラウドサイン事業本部 ProductEngineering部\nエンジニア',
         name: '篠田 貴大',
@@ -32,6 +33,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     },
     profile: [
       {
+        id: 'kazumasa-yamamoto',
         image: '/sponsor-speakers/kazumasa_yamamoto.png',
         title: 'ユニークビジョン株式会社\nエンジニア',
         name: '山本 一将',
@@ -52,6 +54,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     },
     profile: [
       {
+        id: 'yoshihide-unoki',
         image: '/sponsor-speakers/yoshihide_unoki.png',
         title:
           '株式会社リンクアンドモチベーション\nプロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
@@ -73,6 +76,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     },
     profile: [
       {
+        id: 'kazuhiro-kobayashi',
         image: '/sponsor-speakers/kazuhiro_kobayashi.jpg',
         title:
           'メドピア株式会社\nプライマリケアプラットフォーム事業部 サービス開発部 フロント・モバイルグループ\nフロントエンドテックリード',
@@ -95,6 +99,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     },
     profile: [
       {
+        id: 'yuta-ichihara',
         image: '/sponsor-speakers/yuta_ichihara.png',
         title: '株式会社ココナラ\nフロントエンドエンジニア',
         name: '市原 雄太',
@@ -114,6 +119,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     },
     profile: [
       {
+        id: 'daisuke-fujimura',
         image: '/sponsor-speakers/daisuke_fujimura.png',
         title: 'STORES 株式会社\nCTO',
         name: '藤村 大介',
@@ -121,6 +127,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
         description: '＜未定＞',
       },
       {
+        id: 'wattanx',
         image: '/speakers/wattanx.png',
         title: 'STORES 株式会社',
         name: 'wattanx / ワッタン',

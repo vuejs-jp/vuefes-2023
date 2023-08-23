@@ -20,6 +20,7 @@ const emptySponsorSpeaker: SponsorSpeaker = {
   },
   profile: [
     {
+      id: '',
       image: '',
       title: '',
       name: '',
@@ -31,6 +32,7 @@ const emptySponsorSpeaker: SponsorSpeaker = {
 }
 
 const { showSpeakerInfo, getTrackColor } = useSession()
+const { locale } = useI18n({ useScope: 'global' })
 
 if (!showSpeakerInfo) {
   // https://nuxt.com/docs/getting-started/error-handling#showerror
@@ -128,9 +130,19 @@ useHead({
       <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/head`" />
       </div>
-      <div class="detailbody-persons">
-        <SponsorSpeakerCard :speaker="sponsorSpeakerData" />
-        <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/profile`" />
+      <div
+        v-for="(profile, index) in sponsorSpeakerData.profile"
+        :key="index"
+        class="detailbody-persons"
+      >
+        <SponsorSpeakerCard :id="sponsorSpeakerData.id" :profile="profile" />
+        <!-- MarkDownText を使いたい -->
+        <!--
+        <MarkDownText :path="`sessions/${profile.id}/profile`" />
+        -->
+        <ContentDoc v-slot="{ doc }" :path="`/${locale}/sessions/${profile.id}/profile`">
+          <ContentRenderer :value="doc" />
+        </ContentDoc>
       </div>
     </section>
     <div class="back">
@@ -181,6 +193,7 @@ css({
     display: 'grid',
     gridTemplateColumns: 'auto 1fr',
     gap: 'calc({space.8} * 4)',
+    paddingBottom: 'calc({space.8} * 3)',
   },
   '.back': {
     textAlign: 'center',

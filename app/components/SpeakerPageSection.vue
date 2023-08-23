@@ -37,11 +37,14 @@ import { closedCall } from '~/utils/status.constants'
       <h3>Sponsor Session</h3>
 
       <div class="speakers">
-        <SponsorSpeakerCard
-          v-for="speaker in sponsorSpeakers"
-          :key="speaker.id"
-          :speaker="speaker"
-        />
+        <template v-for="(speaker, index) in sponsorSpeakers" :key="index">
+          <SponsorSpeakerCard
+            v-for="(profile, key) in speaker.profile"
+            :id="speaker.id"
+            :key="key"
+            :profile="profile"
+          />
+        </template>
       </div>
     </div>
   </section>

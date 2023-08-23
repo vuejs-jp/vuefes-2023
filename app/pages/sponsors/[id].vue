@@ -138,8 +138,12 @@ useHead({
       <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorData.id}/head`" />
       </div>
-      <div v-if="sponsorSpeakerData.profile.length !== 0" class="detailbody-persons">
-        <SponsorSpeakerCard :speaker="sponsorSpeakerData" />
+      <div
+        v-for="(profile, index) in sponsorSpeakerData.profile"
+        :key="index"
+        class="detailbody-persons"
+      >
+        <SponsorSpeakerCard :id="sponsorSpeakerData.id" :profile="profile" />
       </div>
     </section>
     <div class="back">

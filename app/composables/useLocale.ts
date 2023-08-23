@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern'
-import { Path, Speaker, Sponsor } from '~/types/app'
+import { Path, Speaker, Sponsor, SponsorSpeaker } from '~/types/app'
 import { all } from '~/utils/sponsor.constants'
 import { speakers } from '~/utils/speakers.constants'
 

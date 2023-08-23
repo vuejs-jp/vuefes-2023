@@ -127,6 +127,25 @@ export const speakers: Speaker[] = [
     },
   },
   {
+    id: 'ota-meshi',
+    type: 'domestic',
+    session: {
+      title: '',
+      description: '＜未定＞',
+      track: 'medpeer',
+      time: '17:15 - 17:45',
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/ota-meshi.jpg',
+      title: 'フューチャー株式会社\nTechnology Innovation Group シニアアーキテクト',
+      name: '太田 洋介',
+      twitterId: 'omoteota',
+      githubId: 'ota-meshi',
+      description: '',
+    },
+  },
+  {
     id: 'wattanx',
     type: 'domestic',
     session: {
@@ -138,7 +157,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/wattanx.png',
-      title: '',
+      title: 'STORES 株式会社\nソフトウェアエンジニア',
       name: 'wattanx / ワッタン',
       twitterId: 'pontaxx',
       githubId: 'wattanx',
@@ -387,10 +406,31 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/fuqda.png',
-      title: '',
+      title: 'ペイトナー株式会社所属のフロントエンドエンジニア',
       name: 'fuqda / フクダ',
       twitterId: 'fuqda90',
       githubId: 'Shigeyuki-fukuda',
+      description: '',
+    },
+  },
+  {
+    id: 'mew-ton',
+    type: 'domestic',
+    session: {
+      title:
+        'Nuxt2 から 3 へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話',
+      description: '＜未定＞',
+      track: 'm3',
+      time: '15:45 - 16:05',
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/mew-ton.png',
+      title:
+        '株式会社 hacomono フロントエンドテックリード\n基盤グループ Enabling チーム\nVRChat フロントエンドエンジニア集会主催',
+      name: 'みゅーとん',
+      twitterId: '_mew_ton',
+      githubId: 'mew-ton',
       description: '',
     },
   },

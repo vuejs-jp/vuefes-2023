@@ -3,14 +3,18 @@ import GithubLogo from '~/assets/logo/github_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
 import { useSession } from '~/composables/useSession'
-import { SponsorSpeaker } from '~/types/app'
+import { SpeakerProfile } from '~/types/app'
 import { urlBasePath } from '~/utils/constants'
 
 const { showSpeakerInfo } = useSession()
 
 const props = defineProps({
-  speaker: {
-    type: Object as PropType<SponsorSpeaker>,
+  id: {
+    type: String,
+    required: true,
+  },
+  profile: {
+    type: Object as PropType<SpeakerProfile>,
     required: true,
   },
 })
@@ -19,10 +23,10 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 
 <template>
-  <div v-for="(profile, index) in speaker.profile" :key="index" class="speaker-card">
+  <div class="speaker-card">
     <component
       :is="showSpeakerInfo ? _nuxtLink : 'div'"
-      :to="showSpeakerInfo ? `/sponsor-sessions/${speaker.id}` : ''"
+      :to="showSpeakerInfo ? `/sponsor-sessions/${id}` : ''"
     >
       <img
         width="208"
@@ -87,7 +91,8 @@ css({
     display: 'flex',
     alignItems: 'center',
     width: '308px',
-    height: '56px',
+    minHeight: '14px',
+    paddingBottom: 'calc({space.8} * 1)',
     whiteSpace: 'pre-wrap',
   },
   '.speaker-name': {

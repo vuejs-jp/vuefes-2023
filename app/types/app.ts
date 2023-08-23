@@ -99,6 +99,7 @@ export type Session = {
 }
 
 export type SpeakerProfile = {
+  id?: string // SponsorSpeaker に限って id を必須とする
   image: string
   title: string
   name: string

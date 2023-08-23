@@ -33,7 +33,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         decoding="async"
       />
     </component>
-    <p class="speaker-title">{{ speaker.profile.title }}</p>
+    <p v-if="speaker.profile.title" class="speaker-title">{{ speaker.profile.title }}</p>
     <p class="speaker-name">{{ speaker.profile.name }}</p>
     <div class="speaker-sns">
       <a
@@ -84,6 +84,10 @@ css({
   '.speaker-title': {
     fontSize: 'calc(14*{fontSize.base})',
     lineHeight: '14px',
+    width: '308px',
+    minHeight: '14px',
+    paddingBottom: 'calc({space.8} * 1)',
+    whiteSpace: 'pre-wrap',
   },
   '.speaker-name': {
     fontSize: 'calc(22*{fontSize.base})',
@@ -105,6 +109,9 @@ css({
     '.speaker-card': {
       '--img-size': '274px',
     },
+    '.speaker-title': {
+      width: '274px',
+    },
   },
   '@mobile': {
     '.speaker-card': {
@@ -112,6 +119,7 @@ css({
     },
     '.speaker-title': {
       fontSize: 'calc(10*{fontSize.base})',
+      width: '144px',
     },
     '.speaker-name': {
       fontSize: 'calc(18*{fontSize.base})',

@@ -1,4 +1,4 @@
-import { SponsorSpeaker } from '~/types/app'
+import { SpeakerProfile, SponsorSpeaker } from '~/types/app'
 
 export const sponsorSpeakers: SponsorSpeaker[] = [
   {

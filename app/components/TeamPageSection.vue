@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { teams } from '~/utils/teams.constants'
-import { useLocale } from '~/composables/useLocale'
-const { docPath } = useLocale('teams')
+import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
 <template>
@@ -12,9 +11,9 @@ const { docPath } = useLocale('teams')
       title="Teams"
       :yamato-title="$t('top.teams_subtitle')"
     />
-    <ContentDoc v-slot="{ doc }" :path="docPath">
-      <ContentRenderer class="subtitle" :value="doc" />
-    </ContentDoc>
+    <div class="subtitle">
+      <MarkDownText path="teams" />
+    </div>
     <div class="teams">
       <TeamsTeamCard v-for="team in teams" :key="team.name" :team="team" />
     </div>

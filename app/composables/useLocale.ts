@@ -1,10 +1,19 @@
 import { match } from 'ts-pattern'
-import { Path, Speaker, Sponsor, SponsorSpeaker } from '~/types/app'
+import { Path, Speaker, SpeakerProfile, Sponsor, SponsorSpeaker } from '~/types/app'
 import { all } from '~/utils/sponsor.constants'
 import { speakers } from '~/utils/speakers.constants'
 
 export function useLocale(path: Path) {
   const { locale } = useI18n({ useScope: 'global' })
+
+  const profiles = ref<SpeakerProfile[]>([])
+
+  for (const s of sponsorSpeakers) {
+    for (const p of s.profile) {
+      profiles.value.push(p)
+    }
+  }
+  sponsorSpeakers.forEach((s: SponsorSpeaker) => s.profile)
 
   const docPath = computed(() => {
     let m = match(path)
@@ -42,6 +51,13 @@ export function useLocale(path: Path) {
           `sponsor-sessions/${s.id}/profile`,
           () => `/${locale.value}/sponsor-sessions/${s.id}/profile`,
         )
+    }, m)
+
+    // set sponsor sessions markdown
+    m = profiles.value.reduce((prev: any, p: SpeakerProfile) => {
+      return prev.with(`sessions/${p.id}/profile`, () => {
+        return `/${locale.value}/sessions/${p.id}/profile`
+      })
     }, m)
 
     // set sessions markdown

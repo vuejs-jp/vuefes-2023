@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useLocale } from '~/composables/useLocale'
-const { docPath } = useLocale('message')
+import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
 <template>
@@ -13,9 +12,9 @@ const { docPath } = useLocale('message')
           title="Message"
           :yamato-title="$t('top.message_subtitle')"
         />
-        <ContentDoc v-slot="{ doc }" :path="docPath">
-          <ContentRenderer class="text" :value="doc" />
-        </ContentDoc>
+        <div class="text">
+          <MarkDownText path="message" />
+        </div>
       </div>
     </section>
   </VoiceFrame>

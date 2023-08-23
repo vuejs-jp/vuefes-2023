@@ -65,7 +65,9 @@ if (!speakerData.id) {
       </div>
       <div class="detailbody-persons">
         <SpeakerCard :speaker="speakerData" />
-        <MarkDownText :path="`sessions/${speakerData.id}/profile`" />
+        <div class="person-info">
+          <MarkDownText :path="`sessions/${speakerData.id}/profile`" />
+        </div>
       </div>
     </section>
     <div class="back">
@@ -110,12 +112,40 @@ css({
   '.detailbody-explain': {
     fontSize: 'calc(18*{fontSize.base})',
     margin: '0 auto calc({space.8} * 8)',
+    '::v-deep(p)': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '1.8',
+      'a': {
+        color: '{color.vue.green}',
+        textDecoration: 'underline',
+        '&:hover': {
+          transition: '.2s',
+        },
+      },
+    },
   },
   '.detailbody-persons': {
     fontSize: 'calc(18*{fontSize.base})',
     display: 'grid',
     gridTemplateColumns: 'auto 1fr',
     gap: 'calc({space.8} * 4)',
+  },
+  '.person-info': {
+    '::v-deep(p)': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '1.8',
+      'a': {
+        color: '{color.vue.green}',
+        textDecoration: 'underline',
+        '&:hover': {
+          transition: '.2s',
+        },
+      },
+    },
   },
   '.back': {
     textAlign: 'center',

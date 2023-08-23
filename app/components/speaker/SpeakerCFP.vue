@@ -1,14 +1,13 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
-import { useLocale } from '~/composables/useLocale'
-const { docPath } = useLocale('speaker')
+import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
 <template>
   <div class="speaker-cfp">
-    <ContentDoc v-slot="{ doc }" :path="docPath">
-      <ContentRenderer class="speaker-cfp-description" :value="doc" />
-    </ContentDoc>
+    <div class="speaker-cfp-description">
+      <MarkDownText path="speaker" />
+    </div>
     <div class="speaker-cfp-schedule">
       <h3>{{ $t('top.speakers_schedule_title') }}</h3>
       <!-- 応募期限 -->

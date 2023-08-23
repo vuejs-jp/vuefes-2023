@@ -32,7 +32,6 @@ const emptySponsorSpeaker: SponsorSpeaker = {
 }
 
 const { showSpeakerInfo, getTrackColor } = useSession()
-const { locale } = useI18n({ useScope: 'global' })
 
 if (!showSpeakerInfo) {
   // https://nuxt.com/docs/getting-started/error-handling#showerror
@@ -136,13 +135,9 @@ useHead({
         class="detailbody-persons"
       >
         <SponsorSpeakerCard :id="sponsorSpeakerData.id" :profile="profile" />
-        <!-- MarkDownText を使いたい -->
-        <!--
-        <MarkDownText :path="`sessions/${profile.id}/profile`" />
-        -->
-        <ContentDoc v-slot="{ doc }" :path="`/${locale}/sessions/${profile.id}/profile`">
-          <ContentRenderer :value="doc" />
-        </ContentDoc>
+        <div class="person-info">
+          <MarkDownText :path="`sessions/${profile.id}/profile`" />
+        </div>
       </div>
     </section>
     <div class="back">
@@ -187,6 +182,19 @@ css({
   '.detailbody-explain': {
     fontSize: 'calc(18*{fontSize.base})',
     margin: '0 auto calc({space.8} * 8)',
+    '::v-deep(p)': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '1.8',
+      'a': {
+        color: '{color.vue.green}',
+        textDecoration: 'underline',
+        '&:hover': {
+          transition: '.2s',
+        },
+      },
+    },
   },
   '.detailbody-persons': {
     fontSize: 'calc(18*{fontSize.base})',
@@ -194,6 +202,21 @@ css({
     gridTemplateColumns: 'auto 1fr',
     gap: 'calc({space.8} * 4)',
     paddingBottom: 'calc({space.8} * 3)',
+  },
+  '.person-info': {
+    '::v-deep(p)': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '1.8',
+      'a': {
+        color: '{color.vue.green}',
+        textDecoration: 'underline',
+        '&:hover': {
+          transition: '.2s',
+        },
+      },
+    },
   },
   '.back': {
     textAlign: 'center',

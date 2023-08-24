@@ -112,8 +112,8 @@ export const speakers: Speaker[] = [
     session: {
       title: '',
       description: '＜未定＞',
-      track: 'm3',
-      time: '13:30 - 14:00',
+      track: 'medpeer',
+      time: '16:30 - 17:00',
       type: 'main',
     },
     profile: {
@@ -227,8 +227,8 @@ export const speakers: Speaker[] = [
     session: {
       title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
       description: '＜未定＞',
-      track: 'medpeer',
-      time: '16:30 - 17:00',
+      track: 'm3',
+      time: '13:30 - 14:00',
       type: 'main',
     },
     profile: {

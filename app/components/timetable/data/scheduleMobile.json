@@ -198,8 +198,9 @@
         "track": "m3",
         "sessions": [
           {
-            "title": "セッション",
-            "speaker": "翠"
+            "id": "yamanoku",
+            "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
+            "speaker": "やまのく"
           }
         ]
       }
@@ -402,8 +403,8 @@
         "track": "medpeer",
         "sessions": [
           {
-            "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
-            "speaker": "やまのく"
+            "title": "セッション",
+            "speaker": "翠"
           }
         ]
       },

@@ -118,7 +118,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/sapphi_red.png',
-      title: 'Vite Core team Member',
+      title: 'Vite core team member\n東工大デジタル創作同好会traP所属',
       name: '翠 / sapphi-red',
       twitterId: 'sapphi_red',
       githubId: 'sapphi-red',
@@ -176,7 +176,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/sorami.png',
-      title: '',
+      title: '株式会社MIERUNE',
       name: 'sorami / ソラミ',
       twitterId: 'sorami',
       githubId: 'sorami',
@@ -214,7 +214,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/nozomu_ikuta.png',
-      title: '',
+      title: 'unjsメンバー\nVue.js日本ユーザーグループコアスタッフ',
       name: 'Nozomu Ikuta',
       twitterId: 'NozomuIkuta',
       githubId: 'NozomuIkuta',
@@ -233,7 +233,8 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/yamanoku.png',
-      title: '',
+      title:
+        '株式会社クラウドワークス\nプロダクト本部プロダクト開発部プラットフォーム開発3グループ',
       name: 'やまのく',
       twitterId: 'yamanoku',
       githubId: 'yamanoku',
@@ -311,7 +312,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/kira_puka.png',
-      title: '',
+      title: '合同会社めもらば 代表',
       name: 'きらぷか',
       twitterId: 'kira_puka',
       githubId: 'memory-lovers',
@@ -330,7 +331,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/northprint.png',
-      title: '',
+      title: '株式会社MIERUNE',
       name: '楢山哲弘',
       twitterId: 'northprint',
       githubId: 'northprint',
@@ -349,7 +350,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/t0yohei.jpg',
-      title: '',
+      title: '株式会社クラウドワークス\nweb エンジニア',
       name: 't0yohei / トヨヘイ',
       twitterId: 't0yohei',
       githubId: 't0yohei',
@@ -368,7 +369,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/yud0uhu.jpg',
-      title: '',
+      title: '合同会社DMM.com 動画配信事業部所属\nフロントエンドエンジニア',
       name: '0yu / オユ',
       twitterId: 'yud0uhu',
       githubId: 'yud0uhu',
@@ -406,7 +407,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/fuqda.png',
-      title: 'ペイトナー株式会社所属のフロントエンドエンジニア',
+      title: 'ペイトナー株式会社\nフロントエンドエンジニア',
       name: 'fuqda / フクダ',
       twitterId: 'fuqda90',
       githubId: 'Shigeyuki-fukuda',

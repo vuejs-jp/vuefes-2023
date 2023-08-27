@@ -1,4 +1,4 @@
-import { SpeakerProfile, SponsorSpeaker } from '~/types/app'
+import { SponsorSpeaker } from '~/types/app'
 
 export const sponsorSpeakers: SponsorSpeaker[] = [
   {
@@ -129,7 +129,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       {
         id: 'wattanx',
         image: '/speakers/wattanx.png',
-        title: 'STORES 株式会社',
+        title: 'STORES 株式会社\nソフトウェアエンジニア',
         name: 'wattanx / ワッタン',
         twitterId: 'wattanx',
         githubId: 'pontaxx',

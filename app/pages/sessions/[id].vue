@@ -111,6 +111,11 @@ css({
   },
   '.detailbody-explain': {
     margin: '0 auto calc({space.8} * 8)',
+    '::v-deep(ul)': {
+      listStyleType: 'square',
+      marginLeft: 'calc({space.8} * 4)',
+      marginBottom: 'calc({space.8} * 2)',
+    },
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
@@ -132,6 +137,11 @@ css({
     gap: 'calc({space.8} * 4)',
   },
   '.person-info': {
+    '::v-deep(ul)': {
+      listStyleType: 'square',
+      marginLeft: 'calc({space.8} * 4)',
+      marginBottom: 'calc({space.8} * 2)',
+    },
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,

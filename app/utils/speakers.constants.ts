@@ -24,7 +24,7 @@ export const speakers: Speaker[] = [
 
   // 海外スピーカー
   {
-    id: 'sebastien',
+    id: 'atinux',
     type: 'foreign',
     session: {
       title: 'Nuxt to the Edge',

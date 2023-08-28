@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { useSession } from '~/composables/useSession'
 
 type Props = {
   track?: string
   sponsorSession?: string
   isTranslation?: boolean
   sessions: {
+    id?: string
     subTitle?: string
     title?: string
     speaker?: string
@@ -13,6 +14,8 @@ type Props = {
 }
 
 const props = defineProps<Props>()
+
+const { showSpeakerInfo } = useSession()
 
 // tdのclassを設定する
 const cssTdClass = computed(
@@ -57,6 +60,8 @@ const namePlace = computed(() => {
       return ''
   }
 })
+
+const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 <template>
   <td :class="cssTdClass">
@@ -68,7 +73,19 @@ const namePlace = computed(() => {
     </div>
     <div v-for="session in props.sessions" :key="session.title" class="info">
       <p v-if="session.subTitle" class="subtitle">{{ session.subTitle }}</p>
-      <div class="title">{{ session.title }}</div>
+      <component
+        :is="session.id ? _nuxtLink : 'div'"
+        :to="
+          showSpeakerInfo && session.id
+            ? sponsorSession
+              ? `/sponsor-sessions/${session.id}`
+              : `/sessions/${session.id}`
+            : ''
+        "
+        class="title"
+      >
+        {{ session.title }}
+      </component>
       <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>
     </div>
   </td>

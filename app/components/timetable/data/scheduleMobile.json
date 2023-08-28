@@ -81,7 +81,7 @@
         "sessions": [
           {
             "title": "プラチナスポンサーセッション",
-            "speaker": "株式会社リンクアンドモチベーション\n"
+            "speaker": "株式会社リンクアンドモチベーション"
           }
         ]
       }
@@ -131,6 +131,7 @@
             "title": "ランチセッション"
           },
           {
+            "id": "mew-ton",
             "subTitle": "12:45 - 13:15",
             "title": "Nuxt2から 3へマイグレーションする方法を考えたら、マイクロフロントエンドのフレームワークができてしまった話",
             "speaker": "みゅーとん"
@@ -165,6 +166,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "atinux",
             "title": "セッション",
             "speaker": "Sebastien Chopin"
           }
@@ -177,18 +179,22 @@
             "title": "ライトニングトーク"
           },
           {
+            "id": "t0yohei",
             "title": "Vueを使ってGrid Systemを実装した話",
             "speaker": "t0yohei"
           },
           {
+            "id": "northprint",
             "title": "WebGISとVue.jsの親和性について",
             "speaker": "楢山 哲弘"
           },
           {
+            "id": "kira-puka",
             "title": "Nuxt3のモジュール開発は意外と簡単？Module Author Guideをのぞいてみよう",
             "speaker": "きらぷか"
           },
           {
+            "id": "yud0uhu",
             "title": "Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話",
             "speaker": "0yu"
           }
@@ -228,6 +234,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "daniel-roe",
             "title": "セッション",
             "speaker": "Daniel Roe"
           }
@@ -246,6 +253,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "chocodogmagic",
             "title": "Nuxt 3でJamstackテンプレートを作るときの考え方\n",
             "speaker": "まぁし"
           }
@@ -275,6 +283,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "antfu",
             "title": "セッション",
             "speaker": "Anthony Fu"
           }
@@ -284,6 +293,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "wattanx",
             "title": "Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜",
             "speaker": "wattanx"
           }
@@ -293,6 +303,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "mizdra",
             "title": "Vue Language Server から生まれた Volar.js と、それが秘める可能性",
             "speaker": "mizdra"
           }
@@ -322,6 +333,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "patak-dev",
             "title": "セッション",
             "speaker": "Matias Capeletto"
           }
@@ -331,6 +343,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "nozomu-ikuta",
             "title": "Deep dive to unjs and Nuxt 3",
             "speaker": "Nozomu Iluta"
           }
@@ -343,10 +356,12 @@
             "title": "ライトニングトーク"
           },
           {
+            "id": "53able",
             "title": "SOLID 原則に基づくSFC 実装",
             "speaker": "53able"
           },
           {
+            "id": "fuqda",
             "title": "Composition API時代のPub/Subパターンでの状態管理",
             "speaker": "fuqda"
           },
@@ -394,6 +409,7 @@
         "sessions": [
           {
             "isTranslation": true,
+            "id": "harlan-zw",
             "title": "Getting Your Head Around useHead",
             "speaker": "Harlan Wilton"
           }
@@ -403,6 +419,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "sapphi-red",
             "title": "セッション",
             "speaker": "翠"
           }
@@ -412,6 +429,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "sorami",
             "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
             "speaker": "sorami"
           }
@@ -464,6 +482,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "ota-meshi",
             "title": "セッション",
             "speaker": "ota-meshi"
           }
@@ -473,6 +492,7 @@
         "track": "m3",
         "sessions": [
           {
+            "id": "keima",
             "title": "STUDIOの作り方 2023 ver.",
             "speaker": "甲斐 啓真"
           }

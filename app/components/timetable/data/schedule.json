@@ -93,7 +93,7 @@
           {
             "id": "link-and-motivation-group",
             "title": "プラチナスポンサーセッション",
-            "speaker": "株式会社リンクアンドモチベーション\n"
+            "speaker": "株式会社リンクアンドモチベーション"
           }
         ]
       }
@@ -141,6 +141,7 @@
             "title": "ランチセッション"
           },
           {
+            "id": "mew-ton",
             "subTitle": "12:45 - 13:15",
             "title": "Nuxt2から 3へマイグレーションする方法を考えたら、マイクロフロントエンドのフレームワークができてしまった話",
             "speaker": "みゅーとん"
@@ -174,7 +175,7 @@
         "sessions": [
           {
             "isTranslation": true,
-            "id": "Atinux",
+            "id": "atinux",
             "title": "セッション",
             "speaker": "Sebastien Chopin"
           }
@@ -484,6 +485,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "ota-meshi",
             "title": "セッション",
             "speaker": "ota-meshi"
           }

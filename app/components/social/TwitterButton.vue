@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHover } from '~/composables/useHover'
+import { twitterDomainUrl } from '~/utils/constants'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 
 const hoverRef = ref(null)
@@ -9,7 +10,7 @@ const isHovered = useHover(hoverRef)
 <template>
   <a
     ref="hoverRef"
-    href="https://twitter.com/vuefes"
+    :href="`${twitterDomainUrl}vuefes`"
     target="_blank"
     rel="noreferrer"
     class="twitter-root"

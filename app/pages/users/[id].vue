@@ -9,7 +9,7 @@ import TextButton from '~/components/button/TextButton.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useUser } from '~/composables/useUser'
-import { calendarUrl } from '~/utils/constants'
+import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
 // import UserForDev from '~/components/UserForDev.vue'
 // import { isProd } from '~/utils/environment.constants'
 
@@ -72,7 +72,7 @@ const { eventUser } = await useUser(signedUser.user_id)
             <FacebookLogo />
           </a>
           <a
-            :href="`https://twitter.com/share?url=${encodeURIComponent(
+            :href="`${twitterDomainUrl}share?url=${encodeURIComponent(
               `https://vuefes.jp/2023/users/${signedUser.user_id}`,
             )}`"
             target="_blank"

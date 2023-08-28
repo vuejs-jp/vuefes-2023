@@ -35,6 +35,9 @@ export const ogCoCDescription =
 
 export const ogPrivacyDescription = 'Vue Fes Japan 2023 のプライバシーポリシーです。'
 
+// replace https://twitter.com/
+export const twitterDomainUrl = 'https://x.com/'
+
 export const linkUrl = 'https://vuefes.jp/2023/'
 
 export const ticketUrl = 'https://passmarket.yahoo.co.jp/event/show/detail/02hv5juj2f531.html'

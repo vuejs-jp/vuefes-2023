@@ -1,14 +1,16 @@
 import { Team } from '~/types/app'
+import { twitterDomainUrl } from '~/utils/constants'
+
 export const teams: Team[] = [
   {
     image: 'teams/kazupon.png',
     name: 'kazupon',
-    snsLink: 'https://twitter.com/kazu_pon',
+    snsLink: `${twitterDomainUrl}kazu_pon`,
   },
   {
     image: 'teams/448jp.png',
     name: '448jp',
-    snsLink: 'https://twitter.com/448jp',
+    snsLink: `${twitterDomainUrl}448jp`,
   },
   {
     image: 'teams/aster.jpeg',
@@ -18,187 +20,187 @@ export const teams: Team[] = [
   {
     image: 'teams/becolomochi.png',
     name: 'becolomochi',
-    snsLink: 'https://twitter.com/becolomochi',
+    snsLink: `${twitterDomainUrl}becolomochi`,
   },
   {
     image: 'teams/fulu.jpg',
     name: 'fulu',
-    snsLink: 'https://twitter.com/firirice',
+    snsLink: `${twitterDomainUrl}firirice`,
   },
   {
     image: 'teams/happylifetaka.png',
     name: 'happylifetaka',
-    snsLink: 'https://twitter.com/happylifetaka',
+    snsLink: `${twitterDomainUrl}happylifetaka`,
   },
   {
     image: 'teams/jayes.png',
     name: 'jay-es',
-    snsLink: 'https://twitter.com/shindy_JP',
+    snsLink: `${twitterDomainUrl}shindy_JP`,
   },
   {
     image: 'teams/jiyuujin.png',
     name: 'jiyuujin',
-    snsLink: 'https://twitter.com/jiyuujinlab',
+    snsLink: `${twitterDomainUrl}jiyuujinlab`,
   },
   {
     image: 'teams/kame.png',
     name: 'kame',
-    snsLink: 'https://twitter.com/dir20634',
+    snsLink: `${twitterDomainUrl}dir20634`,
   },
   {
     image: 'teams/keigo.jpg',
     name: 'keigo',
-    snsLink: 'https://twitter.com/Kspace_trk',
+    snsLink: `${twitterDomainUrl}Kspace_trk`,
   },
   {
     image: 'teams/kiaking.jpg',
     name: 'kiaking',
-    snsLink: 'https://twitter.com/KiaKing85',
+    snsLink: `${twitterDomainUrl}KiaKing85`,
   },
   {
     image: 'teams/kokoakuma.jpeg',
     name: 'kokoakuma',
-    snsLink: 'https://twitter.com/kokoakuma_dev',
+    snsLink: `${twitterDomainUrl}kokoakuma_dev`,
   },
   {
     image: 'teams/maashi.jpg',
     name: 'まぁし',
-    snsLink: 'https://twitter.com/chocodogmagic',
+    snsLink: `${twitterDomainUrl}chocodogmagic`,
   },
   {
     image: 'teams/matzryo.jpeg',
     name: 'matzryo',
-    snsLink: 'https://twitter.com/matzryo',
+    snsLink: `${twitterDomainUrl}matzryo`,
   },
   {
     image: 'teams/miyake.jpg',
     name: 'miyake',
-    snsLink: 'https://twitter.com/kazuyukimiyake',
+    snsLink: `${twitterDomainUrl}kazuyukimiyake`,
   },
   {
     image: 'teams/moabear.png',
     name: 'moabear',
-    snsLink: 'https://twitter.com/moa_bear_',
+    snsLink: `${twitterDomainUrl}moa_bear_`,
   },
   {
     image: 'teams/momolili.jpg',
     name: 'momolili',
-    snsLink: 'https://twitter.com/momolili_CS5',
+    snsLink: `${twitterDomainUrl}momolili_CS5`,
   },
   {
     image: 'teams/nal.jpg',
     name: 'nal',
-    snsLink: 'https://twitter.com/nal_pan',
+    snsLink: `${twitterDomainUrl}nal_pan`,
   },
   {
     image: 'teams/naramochi.png',
     name: 'naramochi',
-    snsLink: 'https://twitter.com/_naramochi',
+    snsLink: `${twitterDomainUrl}_naramochi`,
   },
   {
     image: 'teams/nokki.jpeg',
     name: 'nokki',
-    snsLink: 'https://twitter.com/nokki_y',
+    snsLink: `${twitterDomainUrl}nokki_y`,
   },
   {
     image: 'teams/nozomu.png',
     name: 'nozomu.ikuta',
-    snsLink: 'https://twitter.com/NozomuIkuta',
+    snsLink: `${twitterDomainUrl}NozomuIkuta`,
   },
   {
     image: 'teams/oreo.png',
     name: 'oreo',
-    snsLink: 'https://twitter.com/oreo2991',
+    snsLink: `${twitterDomainUrl}oreo2991`,
   },
   {
     image: 'teams/robjam.JPG',
     name: 'robjam',
-    snsLink: 'https://twitter.com/robjamdev',
+    snsLink: `${twitterDomainUrl}robjamdev`,
   },
   {
     image: 'teams/ryo_gk.jpeg',
     name: 'ryo_gk',
-    snsLink: 'https://twitter.com/ryo_gk55',
+    snsLink: `${twitterDomainUrl}ryo_gk55`,
   },
   {
     image: 'teams/ryoaccount.jpg',
     name: 'ryoAccount',
-    snsLink: 'https://twitter.com/RYO_nami',
+    snsLink: `${twitterDomainUrl}RYO_nami`,
   },
   {
     image: 'teams/ryuhei.jpg',
     name: 'ryuhei373',
-    snsLink: 'https://twitter.com/373_3',
+    snsLink: `${twitterDomainUrl}373_3`,
   },
   {
     image: 'teams/sanadi.jpg',
     name: 'Sanadi',
-    snsLink: 'https://twitter.com/favorita_biz',
+    snsLink: `${twitterDomainUrl}favorita_biz`,
   },
   {
     image: 'teams/shinya.jpg',
     name: 'shinya ogawa',
-    snsLink: 'https://twitter.com/DesignSupplyWeb',
+    snsLink: `${twitterDomainUrl}DesignSupplyWeb`,
   },
   {
     image: 'teams/shiori.jpg',
     name: 'shiori',
-    snsLink: 'https://twitter.com/dummy11022',
+    snsLink: `${twitterDomainUrl}dummy11022`,
   },
   {
     image: 'teams/shiyuu.png',
     name: 'shiyuu',
-    snsLink: 'https://twitter.com/shiyuu33',
+    snsLink: `${twitterDomainUrl}shiyuu33`,
   },
   {
     image: 'teams/takuan.png',
     name: 'takuan',
-    snsLink: 'https://twitter.com/takuan517',
+    snsLink: `${twitterDomainUrl}takuan517`,
   },
   {
     image: 'teams/tokuda.png',
     name: 'tokuda109',
-    snsLink: 'https://twitter.com/tokuda109',
+    snsLink: `${twitterDomainUrl}tokuda109`,
   },
   {
     image: 'teams/torish.png',
     name: 'torish14',
-    snsLink: 'https://twitter.com/torish14_str',
+    snsLink: `${twitterDomainUrl}torish14_str`,
   },
   {
     image: 'teams/toshick.png',
     name: 'toshick',
-    snsLink: 'https://twitter.com/toshick',
+    snsLink: `${twitterDomainUrl}toshick`,
   },
   {
     image: 'teams/tutti.jpg',
     name: 'tutti',
-    snsLink: 'https://twitter.com/tutti2612',
+    snsLink: `${twitterDomainUrl}tutti2612`,
   },
   {
     image: 'teams/watasan.jpg',
     name: 'watasan',
-    snsLink: 'https://twitter.com/hishiwata7',
+    snsLink: `${twitterDomainUrl}hishiwata7`,
   },
   {
     image: 'teams/watsuyo.jpg',
     name: 'watsuyo',
-    snsLink: 'https://twitter.com/watsuyo_2',
+    snsLink: `${twitterDomainUrl}watsuyo_2`,
   },
   {
     image: 'teams/yuhei.jpg',
     name: 'Yuhei FUJITA',
-    snsLink: 'https://twitter.com/Yuhei_FUJITA',
+    snsLink: `${twitterDomainUrl}Yuhei_FUJITA`,
   },
   {
     image: 'teams/yurufuwa.jpg',
     name: 'yurufuwaFE',
-    snsLink: 'https://twitter.com/yurufuwaFE',
+    snsLink: `${twitterDomainUrl}yurufuwaFE`,
   },
   {
     image: 'teams/yuuki.jpg',
     name: 'Yuuki Ishibashi',
-    snsLink: 'https://twitter.com/Bassy3600',
+    snsLink: `${twitterDomainUrl}Bassy3600`,
   },
   {
     image: 'teams/nakamoto.png',
@@ -208,11 +210,11 @@ export const teams: Team[] = [
   {
     image: 'teams/kumin.png',
     name: '平間久美子',
-    snsLink: 'https://twitter.com/kumin',
+    snsLink: `${twitterDomainUrl}kumin`,
   },
   {
     image: 'teams/hirano.png',
     name: '平野 雅一',
-    snsLink: 'https://twitter.com/Hirano_Tech',
+    snsLink: `${twitterDomainUrl}Hirano_Tech`,
   },
 ]

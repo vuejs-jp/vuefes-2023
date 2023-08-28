@@ -4,7 +4,7 @@ import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
 import { useSession } from '~/composables/useSession'
 import { SpeakerProfile } from '~/types/app'
-import { urlBasePath } from '~/utils/constants'
+import { twitterDomainUrl, urlBasePath } from '~/utils/constants'
 
 const { showSpeakerInfo } = useSession()
 
@@ -51,7 +51,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
       </a>
       <a
         v-if="profile.twitterId"
-        :href="`https://twitter.com/${profile.twitterId}`"
+        :href="`${twitterDomainUrl}${profile.twitterId}`"
         aria-label="twitter"
         target="_blank"
         rel="noreferrer"

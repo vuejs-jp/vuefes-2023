@@ -169,7 +169,8 @@ describe('top', () => {
       cy.contains('a', '最新情報はTwitterでCheck!').should(
         'have.attr',
         'href',
-        'https://twitter.com/vuefes',
+        // 'https://twitter.com/vuefes',
+        'https://x.com/vuefes',
       )
       cy.contains('Twitter ー @vuefes #vuefes')
     })
@@ -260,7 +261,8 @@ describe('top', () => {
           cy.contains('a', 'Vue Fes Japan の Twitter').should(
             'have.attr',
             'href',
-            'https://twitter.com/vuefes',
+            // 'https://twitter.com/vuefes',
+            'https://x.com/vuefes',
           )
           cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })

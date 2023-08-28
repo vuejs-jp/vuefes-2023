@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
+import { twitterDomainUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -41,7 +42,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
       <!-- 詳細情報は、Vue Fes Japan の Twitterをご確認ください。 -->
       <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
         <a
-          href="https://twitter.com/vuefes"
+          :href="`${twitterDomainUrl}vuefes`"
           target="_blank"
           class="twitter-link"
           rel="noreferrer"

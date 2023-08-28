@@ -7,7 +7,7 @@ import LangSwitcher from '~/components/locale/LangSwitcher.vue'
 import NavView from '~/components/nav/NavView.vue'
 import { useNav } from '~/composables/useNav'
 import { useLocaleSwitcher } from '~/composables/useLocaleSwitcher'
-import { conferenceTitle } from '~/utils/constants'
+import { conferenceTitle, twitterDomainUrl } from '~/utils/constants'
 
 const props = defineProps({
   hasAuth: {
@@ -58,7 +58,7 @@ onMounted(function () {
         </ul>
         <a
           class="twitter"
-          href="https://twitter.com/vuefes"
+          :href="`${twitterDomainUrl}vuefes`"
           aria-label="twitter"
           target="_blank"
           rel="noreferrer"

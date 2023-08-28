@@ -1,7 +1,18 @@
+<script setup lang="ts">
+const props = defineProps({
+  userId: {
+    type: String,
+    required: true,
+  },
+})
+
+const userPageUrl = computed(() => `/users/${props.userId}`)
+</script>
+
 <template>
-  <a href="/register" class="alert-root">
+  <nuxt-link :to="userPageUrl" class="alert-root">
     チケット購入のまたは紐付けが未完了です。プロフィール画面から登録してください。
-  </a>
+  </nuxt-link>
 </template>
 
 <style lang="ts" scoped>

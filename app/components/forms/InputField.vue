@@ -5,6 +5,7 @@ type _InputFieldProps = Omit<InputHTMLAttributes, 'onInput' | 'onBlur'>
 interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
   titleLabel: string
   error: string
+  value?: string
   /**
    * FIXME 削除したい (削除できなさそう)
    */
@@ -15,7 +16,7 @@ interface InputFieldEmit {
   (e: 'blur', value: string): void
 }
 const props = defineProps<InputFieldProps>()
-const { id, name, placeholder = '', type, required = false, titleLabel, error = '' } = toRefs(props)
+const { id, name, placeholder = '', type, required = false, titleLabel, error = '', value } = toRefs(props)
 const emit = defineEmits<InputFieldEmit>()
 function handleInput(e: Event) {
   if (!(e.target instanceof HTMLInputElement)) {
@@ -35,15 +36,8 @@ function handleFocusOut(e: Event) {
   <label :for="id" class="input-root">
     {{ titleLabel }}
     <input
-      :id="id"
-      :name="name"
-      :type="type"
-      class="form-input"
-      :placeholder="placeholder"
-      :required="required"
-      @input="handleInput"
-      @blur="handleFocusOut"
-    />
+:id="id" :name="name" :type="type" class="form-input" :placeholder="placeholder" :required="required"
+      :value="value" @input="handleInput" @blur="handleFocusOut" />
     <p v-if="error" class="error">{{ error }}</p>
   </label>
 </template>

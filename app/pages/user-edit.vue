@@ -12,7 +12,6 @@ import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useSupabase } from '~/composables/useSupabase'
 import { useImage } from '~/composables/useImage'
-import { useDialog } from '~/composables/useDialog'
 import { useForm } from '~/composables/useForm'
 import { isProd } from '~/utils/environment.constants'
 
@@ -22,9 +21,8 @@ definePageMeta({
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { addEventUser } = useSupabase()
+const { updateEventUser } = useSupabase()
 const { getBase64 } = useImage()
-const { handle, isShow } = useDialog()
 const { isSubmitting, nameError, validateName } = useForm()
 
 const picture = ref()
@@ -34,7 +32,7 @@ const receiptId = ref('')
 
 const onSubmit = (e: Event) => {
   e.preventDefault()
-  addEventUser(displayName.value, secretWord.value, receiptId.value)
+  updateEventUser(displayName.value, secretWord.value, receiptId.value, signedUser.user_id)
 }
 
 const checkFiles = async (files: File[]) => {
@@ -59,10 +57,6 @@ const updateSecretWord = (value: string) => {
 const updateReceiptId = (value: string) => {
   receiptId.value = value
 }
-
-onMounted(function () {
-  isShow.value = !signedUser.user_id
-})
 </script>
 
 <template>
@@ -79,7 +73,7 @@ onMounted(function () {
     </NavPageSection>
 
     <section>
-      <h2>ネームカードの作成</h2>
+      <h2>ネームカードの編集</h2>
       <div class="form-root">
         <p>来場時に発行されるネームカードの情報を入力します。</p>
         <div class="form">
@@ -87,7 +81,8 @@ onMounted(function () {
             <!-- お名前／Name  -->
             <InputField
 id="displayName" name="displayName" :title-label="$t('top.register_form_display_name_label')"
-              required :error="nameError" @input="updateDisplayName" @blur="validateName" />
+              required :error="nameError" :value="signedUser.display_name" @input="updateDisplayName"
+              @blur="validateName" />
             <!-- アバター-->
             <DragDropArea file-name="profiledata" file-accept="image/png,image/jpeg,image/gif" @check-files="checkFiles">
               <div class="upload">
@@ -99,22 +94,18 @@ id="displayName" name="displayName" :title-label="$t('top.register_form_display_
             </DragDropArea>
             <h3>チケット情報の入力</h3>
             <p>
-              チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。
+              チケット購入完了メールに記載されている「注文番号」を入力してください。
             </p>
-            <!-- あいことば  -->
-            <InputField
-id="secretWord" name="secretWord" :title-label="$t('top.register_form_secret_word_label')"
-              required :error="nameError" @input="updateSecretWord" @blur="validateName" />
             <!-- 注文番号 -->
             <InputField
 id="receiptId" name="receiptId" :title-label="$t('top.register_form_receipt_id_label')" required
-              :error="nameError" @input="updateReceiptId" @blur="validateName" />
+              :error="nameError" :value="signedUser.display_name" @input="updateReceiptId" @blur="validateName" />
 
             <div class="link-box">
               <!-- キャンセル -->
               <RoundButton href="/" outline> キャンセル </RoundButton>
               <!-- 確定 -->
-              <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
+              <SubmitButton :disabled="isSubmitting"> 確定 </SubmitButton>
             </div>
           </form>
         </div>
@@ -128,10 +119,6 @@ id="receiptId" name="receiptId" :title-label="$t('top.register_form_receipt_id_l
       </div>
       <RoundButton v-if="hasAuth" class="btn-purchase" @click="onSubmit">purchase</RoundButton>
     </section>
-
-    <div v-if="isShow">
-      <IntegrationCard @on-close="() => handle(false)" />
-    </div>
 
     <div v-if="!isProd">
       <UserForDev />

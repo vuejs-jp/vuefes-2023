@@ -44,41 +44,24 @@ const { eventUser } = await useUser(signedUser.user_id)
     <section>
       <StatusCard :status="eventUser?.activated_at ? 'registered' : 'failed'" />
       <h2>ネームカード</h2>
-      <AvatarCard
-        :signed-user="{ ...signedUser, role: 'attendee' }"
-        :opacity="eventUser?.activated_at ? 1 : 0.6"
-      />
-      <RoundButton class="btn-update" href="/register">再編集</RoundButton>
-      <RoundButton
-        class="btn-calendar"
-        :href="calendarUrl"
-        target="_blank"
-        rel="noreferrer"
-        outline
-      >
+      <AvatarCard :signed-user="{ ...signedUser, role: 'attendee' }" :opacity="eventUser?.activated_at ? 1 : 0.6" />
+      <RoundButton class="btn-update" href="/user-edit">再編集</RoundButton>
+      <RoundButton class="btn-calendar" :href="calendarUrl" target="_blank" rel="noreferrer" outline>
         カレンダーに追加
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
         <CommentTitle color="vue.green" title="ネームカードが完成したらSNSで参加表明しましょう！" />
         <div class="social-item">
           <a
-            :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              `https://vuefes.jp/2023/users/${signedUser.user_id}`,
-            )}`"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="facebook"
-          >
+:href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            `https://vuefes.jp/2023/users/${signedUser.user_id}`,
+          )}`" target="_blank" rel="noreferrer" aria-label="facebook">
             <FacebookLogo />
           </a>
           <a
-            :href="`https://twitter.com/share?url=${encodeURIComponent(
-              `https://vuefes.jp/2023/users/${signedUser.user_id}`,
-            )}`"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="twitter"
-          >
+:href="`https://twitter.com/share?url=${encodeURIComponent(
+            `https://vuefes.jp/2023/users/${signedUser.user_id}`,
+          )}`" target="_blank" rel="noreferrer" aria-label="twitter">
             <TwitterLogoBlue />
           </a>
         </div>

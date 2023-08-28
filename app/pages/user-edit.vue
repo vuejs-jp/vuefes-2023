@@ -80,11 +80,21 @@ const updateReceiptId = (value: string) => {
           <form @submit="onSubmit">
             <!-- お名前／Name  -->
             <InputField
-id="displayName" name="displayName" :title-label="$t('top.register_form_display_name_label')"
-              required :error="nameError" :value="signedUser.display_name" @input="updateDisplayName"
-              @blur="validateName" />
+              id="displayName"
+              name="displayName"
+              :title-label="$t('top.register_form_display_name_label')"
+              required
+              :error="nameError"
+              :value="signedUser.display_name"
+              @input="updateDisplayName"
+              @blur="validateName"
+            />
             <!-- アバター-->
-            <DragDropArea file-name="profiledata" file-accept="image/png,image/jpeg,image/gif" @check-files="checkFiles">
+            <DragDropArea
+              file-name="profiledata"
+              file-accept="image/png,image/jpeg,image/gif"
+              @check-files="checkFiles"
+            >
               <div class="upload">
                 <UploadLogo />
                 <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
@@ -93,13 +103,18 @@ id="displayName" name="displayName" :title-label="$t('top.register_form_display_
               </div>
             </DragDropArea>
             <h3>チケット情報の入力</h3>
-            <p>
-              チケット購入完了メールに記載されている「注文番号」を入力してください。
-            </p>
+            <p>チケット購入完了メールに記載されている「注文番号」を入力してください。</p>
             <!-- 注文番号 -->
             <InputField
-id="receiptId" name="receiptId" :title-label="$t('top.register_form_receipt_id_label')" required
-              :error="nameError" :value="signedUser.display_name" @input="updateReceiptId" @blur="validateName" />
+              id="receiptId"
+              name="receiptId"
+              :title-label="$t('top.register_form_receipt_id_label')"
+              required
+              :error="nameError"
+              :value="signedUser.display_name"
+              @input="updateReceiptId"
+              @blur="validateName"
+            />
 
             <div class="link-box">
               <!-- キャンセル -->

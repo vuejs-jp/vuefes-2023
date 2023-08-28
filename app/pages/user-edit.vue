@@ -126,13 +126,13 @@ const updateReceiptId = (value: string) => {
         </div>
       </div>
 
-      <p>↓DEBUG↓</p>
+      <!-- <p>↓DEBUG↓</p>
       <div class="resultarea">
         <div v-if="picture">
           <img alt="" :src="picture" width="100" height="100" decoding="async" />
         </div>
       </div>
-      <RoundButton v-if="hasAuth" class="btn-purchase" @click="onSubmit">purchase</RoundButton>
+      <RoundButton v-if="hasAuth" class="btn-purchase" @click="onSubmit">purchase</RoundButton> -->
     </section>
 
     <div v-if="!isProd">

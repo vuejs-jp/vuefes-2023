@@ -87,13 +87,11 @@ useHead({
       title: `${sponsorData[0].name} | ${conferenceTitle}`,
       description: `${sponsorData[0].name} のスポンサーセッションを掲載しています。`,
       url: `${linkUrl}sponsor-sessions/${sponsorSpeakerData.id}`,
-      image: `${linkUrl}og/sponsors/${sponsorSpeakerData.id}.png`,
     }),
     ...twitterOg({
       title: `${sponsorData[0].name} | ${conferenceTitle}`,
       description: `${sponsorData[0].name} のスポンサーセッションを掲載しています。`,
       url: `${linkUrl}sponsor-sessions/${sponsorSpeakerData.id}`,
-      image: `${linkUrl}og/sponsors/${sponsorSpeakerData.id}.png`,
     }),
   ],
 })

@@ -4,6 +4,8 @@ import SpeakerCard from '~/components/speaker/SpeakerCard.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { useSession } from '~/composables/useSession'
+import { generalOg, twitterOg } from '~/utils/og.constants'
+import { conferenceTitle } from '~/utils/constants'
 import { speakers } from '~/utils/speakers.constants'
 
 const { showSpeakerInfo, getTrackColor } = useSession()
@@ -31,6 +33,22 @@ if (!speakerData.id) {
     message: 'Not Found Speakers',
   })
 }
+
+useHead({
+  titleTemplate: (titleChunk) => `${speakerData.profile.name} | ${conferenceTitle}`,
+  meta: [
+    ...generalOg({
+      title: `${speakerData.profile.name} | ${conferenceTitle}`,
+      description: `${speakerData.profile.name} のスピーカー情報を掲載しています。`,
+      url: `${linkUrl}sessions/${speakerData.id}`,
+    }),
+    ...twitterOg({
+      title: `${speakerData.profile.name} | ${conferenceTitle}`,
+      description: `${speakerData.profile.name} のスピーカー情報を掲載しています。`,
+      url: `${linkUrl}sessions/${speakerData.id}`,
+    }),
+  ],
+})
 </script>
 
 <template>

@@ -185,7 +185,7 @@ css({
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '18px',
+      fontSize: 'calc(18*{fontSize.base})',
       lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
@@ -207,7 +207,7 @@ css({
     '::v-deep(p)': {
       color: '{color.vue.blue}',
       fontWeight: 500,
-      fontSize: '18px',
+      fontSize: 'calc(18*{fontSize.base})',
       lineHeight: '1.8',
       'a': {
         color: '{color.vue.green}',
@@ -231,12 +231,25 @@ css({
       '--max-width': '100%',
       '--head-img-width': '100%',
     },
-    '.detailhead-body': {
+    '.detailbody': {
       display: 'block',
+    },
+    '.detailbody-title': {
+      fontSize: 'calc(24*{fontSize.base})',
+    },
+    '.detailbody-explain': {
+      '::v-deep(p)': {
+        fontSize: 'calc(16*{fontSize.base})',
+      },
     },
     '.detailbody-persons': {
       gridTemplateColumns: '1fr',
       placeItems: 'center',
+    },
+    '.person-info': {
+      '::v-deep(p)': {
+        fontSize: 'calc(16*{fontSize.base})',
+      },
     },
   },
 })

@@ -123,6 +123,7 @@ css({
     },
     '.speaker-name': {
       fontSize: 'calc(18*{fontSize.base})',
+      width: '144px',
     },
   },
 })

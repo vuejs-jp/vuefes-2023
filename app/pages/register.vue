@@ -111,16 +111,6 @@ onMounted(function () {
             <p>
               チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。
             </p>
-            <!-- あいことば  -->
-            <InputField
-              id="secretWord"
-              name="secretWord"
-              :title-label="$t('top.register_form_secret_word_label')"
-              required
-              :error="nameError"
-              @input="updateSecretWord"
-              @blur="validateName"
-            />
             <!-- 注文番号 -->
             <InputField
               id="receiptId"

@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
 import { Sponsor } from '~/types/app'
+import { urlBasePath } from '~/utils/constants'
 
-const props = defineProps({
+defineProps({
   sponsor: {
     type: Object as PropType<Sponsor>,
     required: true,
   },
-  useOptional: {
-    type: Boolean,
-    default: false,
+  category: {
+    type: String,
+    required: true,
   },
   useColumnLayout: {
     type: Boolean,
@@ -19,7 +20,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class="`sponsor-card ${useOptional ? 'options' : sponsor.category}`">
+  <div :class="`sponsor-card ${category}`">
     <img
       width="100"
       height="100"
@@ -33,6 +34,11 @@ const props = defineProps({
 
 <style lang="ts" scoped>
 css({
+  '.sponsor-image': {
+    width: '60%',
+    maxHeight: '80%',
+    objectFit: 'contain',
+  },
   '.sponsor-card': {
     display: 'flex',
     justifyContent: 'center',
@@ -46,153 +52,81 @@ css({
       transition: '.2s',
     },
     '&.platinum': {
-      maxWidth: '475px',
-      width: 'calc(50% - 19px)',
+      width: '475px',
       height: '267px',
-      '> .sponsor-image': {
-        margin: '5% 10%',
-        maxWidth: '288px',
-      },
     },
     '&.gold': {
-      maxWidth: '306px',
-      width: 'calc(33% - 17.5px)',
+      width: '306px',
       height: '172px',
-      '> .sponsor-image': {
-        margin: '5% 10%',
-        maxWidth: '183px',
-      },
     },
     '&.silver': {
-      maxWidth: '170px',
-      width: 'calc(20% - 17px)',
+      width: '170px',
       height: '94px',
-      '> .sponsor-image': {
-        margin: '5% 10%',
-        maxWidth: '102px',
-      },
     },
     '&.bronze': {
-      maxWidth: '140px',
-      width: 'calc(16% - 16px)',
+      width: '140px',
       height: '77px',
-      '> .sponsor-image': {
-        margin: '5% 10%',
-        maxWidth: '84px',
-      },
     },
     '&.options': {
-      maxWidth: '140px',
-      width: 'calc(32% - 16px)',
+      width: '140px',
       height: '77px',
-      '> .sponsor-image': {
-        margin: '5% 10%',
-        maxWidth: '84px',
-      },
     }
-  },
-  '.sponsor-image': {
-    maxWidth: '288px',
-    width: '100%',
-    margin: 'auto',
-    objectFit: 'cover',
   },
   '@tablet': {
     '.sponsor-card': {
       '&.platinum': {
-        maxWidth: '368px',
-        width: 'calc(50% - 12px)',
+        width: '368px',
         height: '207px',
-        '> .sponsor-image': {
-          margin: '10% 20%',
-          maxWidth: '220px',
-        },
       },
       '&.gold': {
         maxWidth: '368px',
-        width: 'calc(50% - 12px)',
-        height: '207px',
-        '> .sponsor-image': {
-          margin: '10% 20%',
-          maxWidth: '220px',
-        },
+        width: '100%',
+        height: 'auto',
+        aspectRatio: '368 / 207',
       },
       '&.silver': {
+        // width: '243px',
+        // height: '137px',
         maxWidth: '243px',
-        width: 'calc(33% - 8px)',
-        height: '137px',
-        '> .sponsor-image': {
-          margin: '10% 20%',
-          maxWidth: '145px',
-        },
+        width: '100%',
+        height: 'auto',
+        aspectRatio: '234 / 137',
       },
       '&.bronze': {
-        maxWidth: '176px',
-        width: 'calc(25% - 16px)',
+        width: '176px',
         height: '99px',
-        '> .sponsor-image': {
-          margin: '10% 20%',
-          maxWidth: '105px',
-        },
       },
       '&.options': {
-        maxWidth: '176px',
-        width: 'calc(25% - 16px)',
+        width: '176px',
         height: '99px',
-        '> .sponsor-image': {
-          margin: '10% 20%',
-          maxWidth: '105px',
-        },
       }
     },
   },
   '@mobile': {
     '.sponsor-card': {
       '&.platinum': {
-        maxWidth: '100%',
+        maxWidth: '690px',
         width: '100%',
-        height: '388px',
-        '> .sponsor-image': {
-          maxWidth: '414px',
-          width: '80%'
-        },
+        height: 'auto',
+        aspectRatio: '690 / 388',
       },
-      '&.gold': {
+      '&.gold, &.silver': {
         maxWidth: '326px',
-        width: 'calc(50% - 19px)',
-        height: '143px',
-        '> .sponsor-image': {
-          maxWidth: '195px',
-          width: 'calc(100% - 19px)',
-        },
-      },
-      '&.silver': {
-        maxWidth: '326px',
-        width: 'calc(50% - 19px)',
-        height: '143px',
-        '> .sponsor-image': {
-          maxWidth: '195px',
-          width: 'calc(100% - 19px)',
-        },
+        width: '100%',
+        height: 'auto',
+        aspectRatio: '326 / 183',
       },
       '&.bronze': {
         maxWidth: '216px',
-        width: 'calc(33% - 16px)',
-        height: '92px',
-        '> .sponsor-image': {
-          maxWidth: '129px',
-          width: 'calc(100% - 16px)',
-        },
+        width: '100%',
+        height: 'auto',
+        aspectRatio: '216 / 121',
       },
       '&.options': {
-        maxWidth: '216px',
-        width: (props) => props.useColumnLayout ? 'calc(66% - 16px)' : 'calc(33% - 16px)',
-        height: '92px',
-        '> .sponsor-image': {
-          maxWidth: '89px',
-          width: 'calc(100% - 16px)',
-        },
-      }
+        width: '140px',
+        height: 'auto',
+        aspectRatio: '216 / 121',
+      },
     },
   }
 })

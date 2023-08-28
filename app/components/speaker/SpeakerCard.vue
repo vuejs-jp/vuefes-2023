@@ -2,7 +2,11 @@
 import GithubLogo from '~/assets/logo/github_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
+import { useSession } from '~/composables/useSession'
 import { Speaker } from '~/types/app'
+import { urlBasePath } from '~/utils/constants'
+
+const { showSpeakerInfo } = useSession()
 
 const props = defineProps({
   speaker: {
@@ -10,19 +14,26 @@ const props = defineProps({
     required: true,
   },
 })
+
+const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 </script>
 
 <template>
   <div class="speaker-card">
-    <img
-      width="208"
-      height="208"
-      :alt="`${speaker.profile.name}の写真`"
-      :src="`${urlBasePath}${speaker.profile.image}`"
-      loading="lazy"
-      decoding="async"
-    />
-    <p class="speaker-title">{{ speaker.profile.title }}</p>
+    <component
+      :is="showSpeakerInfo ? _nuxtLink : 'div'"
+      :to="showSpeakerInfo ? `/sessions/${speaker.id}` : ''"
+    >
+      <img
+        width="208"
+        height="208"
+        :alt="`${speaker.profile.name}の写真`"
+        :src="`${urlBasePath}${speaker.profile.image}`"
+        loading="lazy"
+        decoding="async"
+      />
+    </component>
+    <p v-if="speaker.profile.title" class="speaker-title">{{ speaker.profile.title }}</p>
     <p class="speaker-name">{{ speaker.profile.name }}</p>
     <div class="speaker-sns">
       <a
@@ -58,128 +69,61 @@ const props = defineProps({
 
 <style lang="ts" scoped>
 css({
-    'section': {
-        padding: '120px 20px 120px',
+  '.speaker-card': {
+    '--img-size': '308px',
+    color: '{color.vue.blue}',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.5em',
+    'img': {
+      borderRadius: '0.5em',
+      width: '{img.size}',
+      height: '{img.size}',
     },
-    '.speaker-root': {
-        display: 'grid',
-        gap: '40px',
-        maxWidth: '984px',
-        margin: '0 auto',
-        width: '100%',
-        'h2': {
-            color: '{color.vue.blue}',
-            fontWeight: 700,
-            fontSize: '32px',
-            margin: '0 auto',
-        },
+  },
+  '.speaker-title': {
+    fontSize: 'calc(14*{fontSize.base})',
+    lineHeight: '14px',
+    width: '308px',
+    minHeight: '14px',
+    paddingBottom: 'calc({space.8} * 1)',
+    whiteSpace: 'pre-wrap',
+  },
+  '.speaker-name': {
+    fontSize: 'calc(22*{fontSize.base})',
+    fontWeight: 700,
+    lineHeight: '22px',
+  },
+  '.speaker-sns': {
+    display: 'flex',
+    gap: '1.5em',
+    marginTop: '1em',
+    'svg': {
+      fill: '{color.vue.blue}',
     },
-    '.speaker-session': {
-        color: '{color.vue.blue}',
-        maxWidth: '984px',
-        margin: '0 auto',
-        width: '100%',
-        'h2': {
-            fontWeight: 700,
-            fontSize: '32px',
-        },
-    },
-    '.speakers': {
-        display: 'flex',
-        gap: '2em',
-    },
+    '.flip-horizontal': {
+      transform: 'scale(-1,1)',
+    }
+  },
+  '@tablet': {
     '.speaker-card': {
-        color: '{color.vue.blue}',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '0.5em',
-        'img': {
-            borderRadius: '0.5em',
-            width: '308px',
-            height: '308px',
-        },
+      '--img-size': '274px',
     },
     '.speaker-title': {
-        fontSize: '14px',
-        lineHeight: '14px',
+      width: '274px',
+    },
+  },
+  '@mobile': {
+    '.speaker-card': {
+      '--img-size': '144px',
+    },
+    '.speaker-title': {
+      fontSize: 'calc(10*{fontSize.base})',
+      width: '144px',
     },
     '.speaker-name': {
-        fontSize: '22px',
-        fontWeight: 700,
-        lineHeight: '22px',
+      fontSize: 'calc(18*{fontSize.base})',
     },
-    '.speaker-sns': {
-        display: 'flex',
-        gap: '1.5em',
-        marginTop: '1em',
-        'svg': {
-            fill: '{color.vue.blue}',
-
-        },
-        '.flip-horizontal': {
-            transform: 'scale(-1,1)',
-        }
-    },
-    '.deadline': {
-        color: '{color.vue.blue}',
-        fontSize: '24px',
-        margin: '0 auto',
-
-        'em': {
-            fontStyle: 'normal',
-            fontWeight: 700,
-        }
-    },
-    '.apply-button': {
-        margin: '0 auto',
-    },
-    '.twitter-text': {
-        fontSize: '18px',
-        color: '{color.vue.blue}',
-        margin: '0 auto',
-    },
-    '.twitter-link': {
-        color: '{color.vue.green}',
-        textDecoration: 'underline',
-
-        '&:hover': {
-            transition: '.2s',
-        },
-    },
-    '.subtitle': {
-        display: 'grid',
-        gap: '40px',
-        'p': {
-            color: '{color.vue.blue}',
-            fontWeight: 500,
-            fontSize: '16px',
-            lineHeight: '1.8',
-            'a': {
-                color: '{color.vue.green}',
-                textDecoration: 'underline',
-                '&:hover': {
-                    transition: '.2s',
-                },
-            },
-        },
-    },
-    '@mobile': {
-        '.speaker-card': {
-            'img': {
-                borderRadius: '0.5em',
-                width: '208px',
-                height: '208px',
-            },
-        },
-    },
-    '@tablet': {
-        '.speaker-card': {
-            'img': {
-                borderRadius: '0.5em',
-                width: '274px',
-                height: '274px',
-            },
-        },
-    },
+  },
 })
 </style>

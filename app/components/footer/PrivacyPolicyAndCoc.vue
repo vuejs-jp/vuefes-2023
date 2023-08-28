@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import TextButton from '~/components/button/TextButton.vue'
+
+interface PrivacyPolicyAndCocEmit {
+  (e: 'on-click'): void
+}
+const emit = defineEmits<PrivacyPolicyAndCocEmit>()
 </script>
 
 <template>
   <div class="doc-root">
-    <TextButton href="/privacy" underline @click.stop="$emit('click')">{{
+    <TextButton href="/privacy" underline @click.stop="$emit('on-click')">{{
       $t('words.privacypolicy')
     }}</TextButton>
-    <TextButton href="/code-of-conduct" underline @click.stop="$emit('click')">{{
+    <TextButton href="/code-of-conduct" underline @click.stop="$emit('on-click')">{{
       $t('words.codeofconduct')
     }}</TextButton>
   </div>

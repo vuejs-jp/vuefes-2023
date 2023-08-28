@@ -1,0 +1,33 @@
+<script setup lang="ts">
+import EventSection from '~/components/event/EventSection.vue'
+import StoreSection from '~/components/event/StoreSection.vue'
+</script>
+
+<template>
+  <section>
+    <div class="event-root">
+      <EventSection />
+      <StoreSection />
+    </div>
+  </section>
+</template>
+
+<style lang="ts" scoped>
+css({
+  'section': {
+    padding: '120px 20px 120px',
+    background: 'linear-gradient(180deg, #F17C67 40.63%, #FFC408 100%)',
+  },
+  '.event-root': {
+    display: 'grid',
+    gap: 'calc({space.8} * 5)',
+    maxWidth: '768px',
+    margin: '0 auto',
+    width: '100%',
+    fontSize: 'calc(18*{fontSize.base})',
+    color: '{color.vue.blue}',
+    background: '{color.white}',
+    'grid-template-columns': 'minmax(0, 1fr)',
+  },
+})
+</style>

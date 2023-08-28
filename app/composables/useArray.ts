@@ -5,5 +5,9 @@ export function useArray() {
     return value.replace(/^"(.+)"$/, '$1').replace(/'/g, '')
   }
 
-  return { valueFilter }
+  function unique<T>(items: T[], key: keyof T) {
+    return Array.from(new Map(items.map((item) => [item[key], item])).values())
+  }
+
+  return { valueFilter, unique }
 }

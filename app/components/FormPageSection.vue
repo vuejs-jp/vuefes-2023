@@ -3,9 +3,9 @@ import InputField from '~/components/forms/InputField.vue'
 import TextareaField from '~/components/forms/TextareaField.vue'
 import SubmitButton from '~/components/forms/SubmitButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
+import MarkDownText from '~/components/MarkDownText.vue'
 
 import { useForm } from '~/composables/useForm'
-import { useLocale } from '~/composables/useLocale'
 
 const {
   name,
@@ -21,7 +21,6 @@ const {
   validateDetail,
   onSubmit,
 } = useForm()
-const { docPath } = useLocale('form')
 
 const updateName = (value: string) => {
   name.value = value
@@ -43,10 +42,9 @@ const updateDetail = (value: string) => {
         title="Contact"
         :yamato-title="$t('top.contact_subtitle')"
       />
-      <!-- タイトル下テキスト -->
-      <ContentDoc v-slot="{ doc }" :path="docPath">
-        <ContentRenderer class="subtitle" :value="doc" />
-      </ContentDoc>
+      <div class="subtitle">
+        <MarkDownText path="form" />
+      </div>
       <div class="form">
         <form @submit="onSubmit">
           <!-- お名前／Name  -->

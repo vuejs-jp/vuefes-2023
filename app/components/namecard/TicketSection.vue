@@ -4,6 +4,7 @@ import TicketCard from '~/components/namecard/TicketCard.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
+import { ticketUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -20,7 +21,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
       -->
       <!-- チケットを購入 -->
       <div class="apply">
-        <RoundButton href="#" target="_blank" rel="noreferrer">
+        <RoundButton :href="ticketUrl" target="_blank" rel="noreferrer">
           {{ $t('words.buy_ticket') }}
         </RoundButton>
       </div>
@@ -33,7 +34,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
           <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <a href="#" target="_blank" rel="noreferrer">一般チケット</a>
+          <a :href="ticketUrl" target="_blank" rel="noreferrer">一般チケット</a>
         </template>
         <template #default>
           <div class="price-list">
@@ -54,7 +55,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
           <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <a href="#" target="_blank" rel="noreferrer">一般＋アフターパーティチケット</a>
+          <a :href="ticketUrl" target="_blank" rel="noreferrer">一般＋アフターパーティチケット</a>
         </template>
         <template #default>
           <div class="price-list">
@@ -142,6 +143,9 @@ css({
     lineHeight: 1.8,
     'strong': {
       fontWeight: 'bold',
+    },
+    ':not(:last-child)': {
+      paddingBottom: 'calc({space.8} * 3)',
     },
   },
   '.apply': {

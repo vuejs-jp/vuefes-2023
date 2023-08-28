@@ -12,13 +12,18 @@ export const navLinks: NavLink[] = [
   { text: 'Contact', link: '/#form' },
 ]
 
-export const navRegisterLinks: NavLink[] = [
-  { text: 'Message', link: '/#message' },
-  { text: 'Ticket', link: '/#ticket' },
-  { text: 'Speakers', link: '/#speakers' },
-  { text: 'Sponsors', link: '/#sponsors' },
-  { text: 'Contact', link: '/#form' },
-]
+export const navFullLinks = (showTimetable: boolean) =>
+  [
+    { text: 'Message', link: '/#message' },
+    { text: 'Speakers', link: '/#speakers' },
+    ...[showTimetable ? { text: 'Time table', link: '/#timetable' } : undefined],
+    { text: 'Ticket', link: '/#ticket' },
+    { text: 'Access', link: '/#access' },
+    { text: 'Sponsors', link: '/#sponsors' },
+    { text: 'Contact', link: '/#form' },
+  ].filter((l) => {
+    return l !== undefined
+  })
 
 export const conferenceTitle = 'Vue Fes Japan 2023'
 
@@ -31,6 +36,17 @@ export const ogCoCDescription =
 export const ogPrivacyDescription = 'Vue Fes Japan 2023 のプライバシーポリシーです。'
 
 export const linkUrl = 'https://vuefes.jp/2023/'
+
+export const ticketUrl = 'https://passmarket.yahoo.co.jp/event/show/detail/02hv5juj2f531.html'
+
+export const volunteerUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfLztgJd07h3XxaLe9Bt8RNWOsX2DT3b5vpUSR3nNSoYtZ1qg/viewform'
+
+export const childCareUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSe_tfFxeSJjOmMGck-HXlKvuwkTjFHQoLzvL1ZPhYkkXuVshQ/viewform'
+
+export const calendarUrl =
+  'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vue%20Fes%20Japan%202023&dates=20231028T010000Z/20231028T093000Z'
 
 export const urlBasePath = isProd ? '/2023' : ''
 

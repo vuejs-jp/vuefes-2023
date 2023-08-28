@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import RoundButton from '~/components/button/RoundButton.vue'
-import { useLocale } from '~/composables/useLocale'
-const { docPath } = useLocale('sponsor')
+import MarkDownText from '~/components/MarkDownText.vue'
 </script>
 
 <template>
@@ -13,11 +12,15 @@ const { docPath } = useLocale('sponsor')
         title="Sponsors"
         :yamato-title="$t('top.sponsors_subtitle')"
       />
-      <!-- タイトル下テキスト -->
-      <ContentDoc v-slot="{ doc }" :path="docPath">
-        <ContentRenderer class="subtitle" :value="doc" />
-      </ContentDoc>
+      <div class="subtitle">
+        <MarkDownText path="sponsor" />
+      </div>
+      <!--
       <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline">
+        <em>{{ $t('words.sponsors_deadline_date') }}</em>
+      </i18n-t>
+      -->
+      <i18n-t keypath="top.sponsors_schedule_extend" tag="p" class="deadline-extend">
         <em>{{ $t('words.sponsors_deadline_date') }}</em>
       </i18n-t>
       <div class="link-box">
@@ -75,14 +78,19 @@ css({
       lineHeight: '180%'
     },
   },
-  '.deadline': {
+  '.deadline, .deadline-extend': {
     color: '{color.vue.blue}',
     fontSize: '24px',
+    whiteSpace: 'pre-wrap',
 
     'em': {
       fontStyle: 'normal',
       fontWeight: 700,
     },
+  },
+  '.deadline-over': {
+    color: '{color.vue.blue}',
+    fontSize: '24px',
   },
   '.link-box': {
     display: 'flex',

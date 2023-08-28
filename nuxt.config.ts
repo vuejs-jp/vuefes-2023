@@ -34,6 +34,9 @@ export default defineNuxtConfig({
     debug: false,
     runtime: true,
   },
+  supabase: {
+    redirect: false,
+  },
   devtools: {
     enabled: true,
     vscode: {},
@@ -45,6 +48,11 @@ export default defineNuxtConfig({
       }),
     ],
   },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   build: {
     transpile: ['vue-toastification'],
   },
@@ -54,8 +62,8 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'ja', iso: 'ja_JP', file: 'ja.ts' },
-      { code: 'ja-basic', iso: 'ja_JP', file: 'ja-basic.ts' },
       { code: 'en', iso: 'en-US', file: 'en.ts' },
+      { code: 'ja-basic', iso: 'ja_JP', file: 'ja-basic.ts' },
     ],
     lazy: true,
     defaultLocale: 'ja',
@@ -82,6 +90,9 @@ export default defineNuxtConfig({
       // feature flags
       registerTicket: process.env.NUXT_ENABLE_REGISTER_TICKET,
       registerNamecard: process.env.NUXT_ENABLE_REGISTER_NAMECARD,
+      showTimetable: process.env.NUXT_ENABLE_SHOW_TIMETABLE,
+      showSpeakerInfo: process.env.NUXT_ENABLE_SHOW_SPEAKER_INFO,
+      switchLocale: process.env.NUXT_ENABLE_SWITCH_LOCALE,
       // supabase
       supabaseProjectUrl: process.env.SUPABASE_URL,
       supabaseApiKey: process.env.SUPABASE_KEY,

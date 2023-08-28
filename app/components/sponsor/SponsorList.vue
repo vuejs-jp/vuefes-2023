@@ -5,202 +5,264 @@ import * as sponsors from '~/utils/sponsor.constants'
 </script>
 
 <template>
-  <ul class="sponsor-list">
-    <li>
-      <SponsorCategoryTitle category="platinum" />
-      <div class="sponsors platinum-sponsors">
-        <SponsorCard
-          v-for="platinumSponsor in sponsors.platinumSponsors"
-          :key="platinumSponsor.name"
-          :sponsor="platinumSponsor"
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="gold" />
-      <div class="sponsors gold-sponsors">
-        <SponsorCard
-          v-for="goldSponsor in sponsors.goldSponsors"
-          :key="goldSponsor.name"
-          :sponsor="goldSponsor"
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="silver" />
-      <div class="sponsors silver-sponsors">
-        <SponsorCard
-          v-for="silverSponsor in sponsors.silverSponsors"
-          :key="silverSponsor.name"
-          :sponsor="silverSponsor"
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="bronze" />
-      <div class="sponsors bronze-sponsors">
-        <SponsorCard
-          v-for="bronzeSponsor in sponsors.bronzeSponsors"
-          :key="bronzeSponsor.name"
-          :sponsor="bronzeSponsor"
-        />
-      </div>
-    </li>
-  </ul>
-  <ul class="sponsor-list">
-    <li>
-      <SponsorCategoryTitle category="session-room-naming-rights" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="namingRightSponsor in sponsors.namingRightSponsors"
-          :key="namingRightSponsor.name"
-          :sponsor="namingRightSponsor"
-          use-optional
-          use-column-layout
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="special-lunch" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="specialLunchSponsor in sponsors.specialLunchSponsors"
-          :key="specialLunchSponsor.name"
-          :sponsor="specialLunchSponsor"
-          use-optional
-          use-column-layout
-        />
-      </div>
-    </li>
-  </ul>
-  <ul class="sponsor-halflist">
-    <li>
-      <SponsorCategoryTitle category="lunch" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="lunchSponsor in sponsors.lunchSponsors"
-          :key="lunchSponsor.name"
-          :sponsor="lunchSponsor"
-          use-optional
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="after-party" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="afterPartySponsor in sponsors.afterPartySponsors"
-          :key="afterPartySponsor.name"
-          :sponsor="afterPartySponsor"
-          use-optional
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="name-card" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="namecardSponsor in sponsors.namecardSponsors"
-          :key="namecardSponsor.name"
-          :sponsor="namecardSponsor"
-          use-optional
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="refreshment" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="refreshmentSponsor in sponsors.refreshmentSponsors"
-          :key="refreshmentSponsor.name"
-          :sponsor="refreshmentSponsor"
-          use-optional
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="simultaneous-interpretation" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="interpretationSponsor in sponsors.interpretationSponsors"
-          :key="interpretationSponsor.name"
-          :sponsor="interpretationSponsor"
-          use-optional
-        />
-      </div>
-    </li>
-    <li>
-      <SponsorCategoryTitle category="media" />
-      <div class="sponsors options-sponsors">
-        <SponsorCard
-          v-for="mediaSponsor in sponsors.mediaSponsors"
-          :key="mediaSponsor.name"
-          :sponsor="mediaSponsor"
-          use-optional
-        />
-      </div>
-    </li>
-  </ul>
+  <div class="sponsor-list-root">
+    <ul class="sponsor-list">
+      <li>
+        <SponsorCategoryTitle category="platinum" />
+        <div class="sponsors platinum-sponsors">
+          <NuxtLink
+            v-for="platinumSponsor in sponsors.platinumSponsors"
+            :key="platinumSponsor.name"
+            :to="`/sponsors/${platinumSponsor.id}`"
+          >
+            <SponsorCard :sponsor="platinumSponsor" category="platinum" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="gold" />
+        <div class="sponsors gold-sponsors">
+          <NuxtLink
+            v-for="goldSponsor in sponsors.goldSponsors"
+            :key="goldSponsor.name"
+            :to="`/sponsors/${goldSponsor.id}`"
+          >
+            <SponsorCard :sponsor="goldSponsor" category="gold" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="silver" />
+        <div class="sponsors silver-sponsors">
+          <NuxtLink
+            v-for="silverSponsor in sponsors.silverSponsors"
+            :key="silverSponsor.name"
+            :to="`/sponsors/${silverSponsor.id}`"
+          >
+            <SponsorCard :sponsor="silverSponsor" category="silver" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="bronze" />
+        <div class="sponsors bronze-sponsors">
+          <NuxtLink
+            v-for="bronzeSponsor in sponsors.bronzeSponsors"
+            :key="bronzeSponsor.name"
+            :to="`/sponsors/${bronzeSponsor.id}`"
+          >
+            <SponsorCard :sponsor="bronzeSponsor" category="bronze" />
+          </NuxtLink>
+        </div>
+      </li>
+    </ul>
+    <ul class="sponsor-list">
+      <li>
+        <SponsorCategoryTitle category="session-room-naming-rights" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="namingRightSponsor in sponsors.namingRightSponsors"
+            :key="namingRightSponsor.name"
+            :to="`/sponsors/${namingRightSponsor.id}`"
+          >
+            <SponsorCard :sponsor="namingRightSponsor" use-column-layout category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="special-lunch" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="specialLunchSponsor in sponsors.specialLunchSponsors"
+            :key="specialLunchSponsor.name"
+            :to="`/sponsors/${specialLunchSponsor.id}`"
+          >
+            <SponsorCard :sponsor="specialLunchSponsor" use-column-layout category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+    </ul>
+    <ul class="sponsor-list -half">
+      <li>
+        <SponsorCategoryTitle category="lunch" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="lunchSponsor in sponsors.lunchSponsors"
+            :key="lunchSponsor.name"
+            :to="`/sponsors/${lunchSponsor.id}`"
+          >
+            <SponsorCard :sponsor="lunchSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="after-party" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="afterPartySponsor in sponsors.afterPartySponsors"
+            :key="afterPartySponsor.name"
+            :to="`/sponsors/${afterPartySponsor.id}`"
+          >
+            <SponsorCard :sponsor="afterPartySponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="name-card" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="namecardSponsor in sponsors.namecardSponsors"
+            :key="namecardSponsor.name"
+            :to="`/sponsors/${namecardSponsor.id}`"
+          >
+            <SponsorCard :sponsor="namecardSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="refreshment" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="refreshmentSponsor in sponsors.refreshmentSponsors"
+            :key="refreshmentSponsor.name"
+            :to="`/sponsors/${refreshmentSponsor.id}`"
+          >
+            <SponsorCard :sponsor="refreshmentSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="simultaneous-interpretation" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="interpretationSponsor in sponsors.interpretationSponsors"
+            :key="interpretationSponsor.name"
+            :to="`/sponsors/${interpretationSponsor.id}`"
+          >
+            <SponsorCard :sponsor="interpretationSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+      <li>
+        <SponsorCategoryTitle category="handson" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="handsonSponsor in sponsors.handsonSponsors"
+            :key="handsonSponsor.name"
+            :to="`/sponsors/${handsonSponsor.id}`"
+          >
+            <SponsorCard :sponsor="handsonSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+    </ul>
+    <ul class="sponsor-list">
+      <li>
+        <SponsorCategoryTitle category="media" />
+        <div class="sponsors options-sponsors">
+          <NuxtLink
+            v-for="mediaSponsor in sponsors.mediaSponsors"
+            :key="mediaSponsor.name"
+            :to="`/sponsors/${mediaSponsor.id}`"
+          >
+            <SponsorCard :sponsor="mediaSponsor" category="options" />
+          </NuxtLink>
+        </div>
+      </li>
+    </ul>
+    <ul v-if="sponsors.individual.length !== 0" class="sponsor-list">
+      <li>
+        <SponsorCategoryTitle category="individual" />
+        <div class="personal-sponsor-list">
+          <span v-for="sponsor in sponsors.individual" :key="sponsor">
+            {{ sponsor }}
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style lang="ts" scoped>
 css({
-  '.sponsor-list': {
+  '.sponsor-list-root': {
     maxWidth: '988px',
-    margin: '40px auto 0',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '40px',
+    margin: '0 auto',
   },
-  '.sponsor-halflist': {
-    maxWidth: '988px',
+  '.sponsor-list': {
     margin: '40px auto 0',
     display: 'flex',
     flexWrap: 'wrap',
     gap: '40px',
     'li': {
-      width: 'calc(50% - 20px)',
+      width: '100%',
+    },
+    '&.-half': {
+      gap: '40px 40px',
+      'li': {
+        width: 'calc(50% - 20px)',
+      },
     },
   },
+
   '.sponsors': {
-    marginTop: '32px',
+    marginTop: 'calc({space.8} * 4)',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    'a': {
+      display: 'block',
+      textAlign: 'center',
+      '& > div': {
+        margin: '0 auto',
+      }
+    }
   },
   '.platinum-sponsors': {
-    gap: '24px 38px',
+    gap: '24px 24px',
   },
   '.gold-sponsors': {
-    gap: '32px 3%',
+    gap: '32px 32px',
   },
   '.silver-sponsors': {
-    gap: '31px 34px',
+    gap: '32px 32px',
   },
   '.bronze-sponsors': {
-    gap: '29px 32px',
+    gap: '32px 32px',
   },
   '.options-sponsors': {
-    gap: '29px 32px',
+    gap: '32px 32px',
+  },
+  '.personal-sponsor-list': {
+    display: 'flex',
+    flexWrap: 'wrap',
+    color: '{color.sponsor.options}',
+    fontSize: 'calc(24*{fontSize.base})',
+    gap: 'calc({space.8} * 1) calc({space.8} * 2)',
   },
   '@tablet': {
     '.sponsor-list': {
-      maxWidth: '760px',
-    },
-    '.sponsor-halflist': {
-      maxWidth: '760px',
-    },
-    '.platinum-sponsors': {
-      gap: '24px',
+      '&.-half': {
+        gap: '40px 20px',
+        'li': {
+          width: 'calc(50% - 10px)',
+        },
+      },
     },
     '.gold-sponsors': {
-      gap: '32px 24px'
+      gap: '32px 24px',
+      '& > a': {
+        width: 'calc(50% - 12px)',
+      },
     },
     '.silver-sponsors': {
-      gap: '31px 15px'
+      gap: '32px 24px',
+      '& > a': {
+        width: 'calc(31%)',
+      },
     },
     '.bronze-sponsors': {
-      gap: '32px 18px'
+      gap: '32px 18px',
     },
     '.options-sponsors': {
       gap: '32px 18px'
@@ -208,16 +270,22 @@ css({
   },
   '@mobile': {
     '.gold-sponsors': {
-      gap: '32px 38px'
+      gap: '20px 20px',
     },
     '.silver-sponsors': {
-      gap: '32px 38px'
+      gap: '20px 20px',
+      '& > a': {
+        width: 'calc(50% - 10px)',
+      },
     },
     '.bronze-sponsors': {
-      gap: '32px 21px'
+      gap: '20px 16px',
+      '& > a': {
+        width: 'calc(33% - 10px)',
+      },
     },
     '.options-sponsors': {
-      gap: '32px 21px'
+      gap: '20px',
     },
   }
 })

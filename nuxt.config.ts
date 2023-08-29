@@ -45,11 +45,10 @@ export default defineNuxtConfig({
     componentDirs: ['og'],
     debug: true,
     fonts: [
-      'Inter:400',
       {
-        name: 'notosans-regular',
-        weight: 800,
-        path: '/fonts/NotoSans-Regular.ttf',
+        name: 'notosansjp-black',
+        weight: 900,
+        path: '/fonts/NotoSansJP-Black.ttf',
       },
     ],
   },

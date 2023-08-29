@@ -7,7 +7,7 @@ import timeTables from './data/schedule.json'
   <table class="timetable">
     <thead>
       <tr>
-        <th />
+        <th aria-label="cell" />
         <th class="trackA">クラウドサイントラック</th>
         <th class="trackB">メドピアトラック</th>
         <th class="trackC">エムスリーやっていきトラック</th>

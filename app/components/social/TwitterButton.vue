@@ -13,6 +13,7 @@ const isHovered = useHover(hoverRef)
     :href="`${twitterDomainUrl}vuefes`"
     target="_blank"
     rel="noreferrer"
+    aria-label="twitter"
     class="twitter-root"
   >
     <!-- 最新情報はTwitterでCheck -->

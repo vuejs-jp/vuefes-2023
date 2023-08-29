@@ -1,6 +1,4 @@
 <script setup lang="ts">
-/* eslint-disable vuejs-accessibility/heading-has-content */
-
 import { Sponsor, SponsorSpeaker } from '~/types/app'
 import SponsorSpeakerCard from '~/components/speaker/SponsorSpeakerCard.vue'
 import MarkDownText from '~/components/MarkDownText.vue'

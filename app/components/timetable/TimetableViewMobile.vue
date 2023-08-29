@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import timeTables from './data/scheduleMobile.json'
+import _timetables from './data/scheduleMobile.json'
+
 type TimetableType = {
   time: string
   tracks: {
@@ -13,10 +14,12 @@ type TimetableType = {
     }[]
   }[]
 }[]
+
+const timetables: TimetableType = _timetables
 </script>
 
 <template>
-  <table v-for="timetable in timeTables as TimetableType" :key="timetable.time" class="timetable">
+  <table v-for="timetable in timetables" :key="timetable.time" class="timetable">
     <thead>
       <tr>
         <th class="schedule">{{ timetable.time }}</th>

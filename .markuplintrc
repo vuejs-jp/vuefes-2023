@@ -10,13 +10,23 @@
   },
   "rules": {
     "invalid-attr": {
-      "option": {
+      "options": {
         "attrs": {
+          "colspan": {
+            "allowed": true,
+            "type": "Number"
+          },
           "placeholder": {
-            "disallowed": false
+            "allowed": true,
+            "type": "String"
           },
           "required": {
-            "disallowed": false
+            "allowed": true,
+            "type": "Boolean"
+          },
+          "rowspan": {
+            "allowed": true,
+            "type": "Number"
           }
         }
       }
@@ -24,9 +34,6 @@
   },
   "excludeFiles": [
     "app/components/DragDropArea.vue",
-    "app/components/timetable/TimetableView.vue",
-    "app/components/timetable/TimetableViewMobile.vue",
-    "app/components/timetable/TimetableBodyRow.vue",
-    "app/components/timetable/TimetableBodyRowMobile.vue"
+    "app/components/timetable/TimetableViewMobile.vue"
   ]
 }

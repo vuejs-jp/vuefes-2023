@@ -7,3 +7,6 @@
   from = "/*"
   to = "/2023/:splat"
   status = 301
+
+[functions.server]
+  external_node_modules = ["chrome-aws-lambda"]

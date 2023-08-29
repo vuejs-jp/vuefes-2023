@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/content',
     '@nuxthq/studio',
+    'nuxt-og-image',
   ],
   pinceau: {
     configFileName: 'tokens.config',
@@ -36,6 +37,16 @@ export default defineNuxtConfig({
   },
   supabase: {
     redirect: false,
+  },
+  ogImage: {
+    playground: true,
+    runtimeBrowser: true,
+    runtimeCacheStorage: false,
+    componentDirs: ['og'],
+    debug: true,
+  },
+  experimental: {
+    componentIslands: true,
   },
   devtools: {
     enabled: true,

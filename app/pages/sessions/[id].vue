@@ -95,6 +95,14 @@ useHead({
     </div>
   </main>
   <FooterPageSection />
+  <OgImage
+    component="OgTemplate"
+    :signed-user="{
+      full_name: speakerData.profile.name,
+      avatar_url: `${linkUrl}${speakerData.profile.image}`,
+      role: 'speaker',
+    }"
+  />
 </template>
 
 <style lang="ts" scoped>

@@ -95,7 +95,6 @@ useHead({
     </div>
   </main>
   <FooterPageSection />
-  <!--
   <OgImage
     component="OgTemplate"
     :signed-user="{
@@ -104,7 +103,6 @@ useHead({
       role: 'speaker',
     }"
   />
-  -->
 </template>
 
 <style lang="ts" scoped>

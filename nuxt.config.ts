@@ -44,6 +44,14 @@ export default defineNuxtConfig({
     runtimeCacheStorage: false,
     componentDirs: ['og'],
     debug: true,
+    fonts: [
+      'Inter:400',
+      {
+        name: 'notosans-regular',
+        weight: 800,
+        path: '/fonts/NotoSans-Regular.ttf',
+      },
+    ],
   },
   experimental: {
     componentIslands: true,

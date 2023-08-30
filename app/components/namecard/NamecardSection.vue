@@ -12,7 +12,7 @@ const { canRegister } = useNamecard()
     <CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />
     <h3>ネームカード</h3>
     <div class="explain">
-      <MarkDownText path="namecard" />
+      <MarkDownText :path="canRegister ? 'namecard' : 'prepare-namecard'" />
     </div>
     <img
       class="ticket-img"

@@ -13,6 +13,7 @@ export type Path =
   | 'speaker'
   | 'teams'
   | 'ticket'
+  | 'prepare-namecard'
   | 'namecard'
   | 'volunteer'
   | 'childcare'

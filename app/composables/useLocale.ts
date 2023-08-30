@@ -23,6 +23,7 @@ export function useLocale(path: Path) {
       .with('teams', () => `/${locale.value}/top/teams`)
       .with('speaker', () => `/${locale.value}/top/speakers`)
       .with('ticket', () => `/${locale.value}/top/ticket`)
+      .with('prepare-namecard', () => `/${locale.value}/top/prepare-namecard`)
       .with('namecard', () => `/${locale.value}/top/namecard`)
       .with('volunteer', () => `/${locale.value}/top/volunteer`)
       .with('childcare', () => `/${locale.value}/top/childcare`)

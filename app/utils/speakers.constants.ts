@@ -361,7 +361,7 @@ export const speakers: Speaker[] = [
     id: 'yud0uhu',
     type: 'domestic',
     session: {
-      title: 'Vue3/Electornで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
+      title: 'Vue3/Electronで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
       description: '＜未定＞',
       track: 'medpeer',
       time: '13:30 - 14:00',

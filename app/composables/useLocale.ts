@@ -36,6 +36,7 @@ export function useLocale(path: Path) {
       .with('store', () => `/${locale.value}/top/store`)
       .with('pre-order', () => `/${locale.value}/top/pre-order`)
       .with('current-day-sales', () => `/${locale.value}/top/current-day-sales`)
+      .with('event', () => `/${locale.value}/top/event`)
 
     // set sponsors markdown
     m = all.reduce((prev: any, s: Sponsor) => {

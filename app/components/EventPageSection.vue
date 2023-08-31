@@ -15,13 +15,14 @@ import StoreSection from '~/components/event/StoreSection.vue'
 <style lang="ts" scoped>
 css({
   '.event-wrapper': {
-    padding: '40px',
+    padding: '120px 0',
     background: 'linear-gradient(180deg, #F17C67 40.63%, #FFC408 100%)',
+    display: 'grid',
+    gridTemplateColumns: '1fr min(1280px, calc(100% - 40px)) 1fr',
   },
   '.event-root': {
+    gridColumn: '2',
     padding: 'calc({space.8} * 5) 0',
-    display: 'grid',
-    maxWidth: '1280px',
     margin: '0 auto',
     width: '100%',
     fontSize: 'calc(18*{fontSize.base})',

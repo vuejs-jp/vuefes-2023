@@ -436,6 +436,25 @@ export const speakers: Speaker[] = [
       description: '',
     },
   },
+  {
+    id: 'hitoki-wakugawa',
+    type: 'domestic',
+    session: {
+      title: 'フルスクラッチECの基盤であるNuxt2を3に移行し、開発の効率性とパフォーマンスを高める',
+      description: '＜未定＞',
+      track: 'm3',
+      time: '15:45 - 16:15',
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/hitoki-wakugawa.jpg',
+      title: '株式会社TENTIAL\nテクノロジー本部EC プラットフォーム部 マネージャー',
+      name: '湧川 仁貴',
+      twitterId: '_wakkn',
+      githubId: 'waku-waku',
+      description: '',
+    },
+  },
 ]
 
 export const sessionSpeakers = speakers.filter((speaker) => speaker.session.type !== 'lt')

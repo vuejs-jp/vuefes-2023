@@ -25,6 +25,7 @@ useHead({
     <template v-if="showTimetable">
       <TimetablePageSection />
     </template>
+    <EventPageSection />
     <template v-if="canPurchase">
       <TicketPageSection />
       <AccessSection />

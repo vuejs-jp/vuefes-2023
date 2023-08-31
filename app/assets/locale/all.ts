@@ -22,6 +22,7 @@ export default {
       back_top: 'トップに戻る',
       apply_personal_sponsor: 'チケットを購入',
       personal_sponsor: '個人スポンサー',
+      pre_order: '事前注文する',
     },
     category: {
       platinum: 'Platinum',

@@ -425,7 +425,7 @@
         "sessions": [
           {
             "id": "sapphi-red",
-            "title": "セッション",
+            "title": "マルチスレッドフレンドリーなJavaScriptを求めて",
             "speaker": "翠"
           }
         ]

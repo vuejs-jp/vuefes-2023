@@ -110,7 +110,7 @@ export const speakers: Speaker[] = [
     id: 'sapphi-red',
     type: 'domestic',
     session: {
-      title: '',
+      title: 'マルチスレッドフレンドリーなJavaScriptを求めて',
       description: '＜未定＞',
       track: 'medpeer',
       time: '16:30 - 17:00',
@@ -388,7 +388,8 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/53able.png',
-      title: '',
+      title:
+        '株式会社クラウドワークス\nプロダクト本部 プロダクト開発部\nプラットフォーム開発3グループ',
       name: '53able / ゴー',
       twitterId: '53able',
       githubId: '53able',

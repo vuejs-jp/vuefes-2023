@@ -105,7 +105,6 @@ css({
     gap: '0.6em',
     '.title': {
       fontWeight: 'bold',
-      fontFamily: 'Yu Gothic',
       fontSize: '22px',
       whiteSpace: 'pre-wrap',
       lineHeight: '1.2',

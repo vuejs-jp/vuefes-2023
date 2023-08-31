@@ -130,7 +130,7 @@ export const speakers: Speaker[] = [
     id: 'ota-meshi',
     type: 'domestic',
     session: {
-      title: '',
+      title: 'eslint-plugin-vue の現状と今後',
       description: '＜未定＞',
       track: 'medpeer',
       time: '17:15 - 17:45',

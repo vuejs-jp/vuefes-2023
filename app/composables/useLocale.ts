@@ -32,6 +32,9 @@ export function useLocale(path: Path) {
       .with('personal-sponsors-text1', () => `/${locale.value}/top/personal-sponsors-text1`)
       .with('personal-sponsors-caption', () => `/${locale.value}/top/personal-sponsors-caption`)
       .with('faq', () => `/${locale.value}/top/faq`)
+      .with('store', () => `/${locale.value}/top/store`)
+      .with('pre-order', () => `/${locale.value}/top/pre-order`)
+      .with('current-day-sales', () => `/${locale.value}/top/current-day-sales`)
 
     // set sponsors markdown
     m = all.reduce((prev: any, s: Sponsor) => {

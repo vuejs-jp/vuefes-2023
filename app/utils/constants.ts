@@ -48,6 +48,8 @@ export const childCareUrl =
 export const calendarUrl =
   'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vue%20Fes%20Japan%202023&dates=20231028T010000Z/20231028T093000Z'
 
+export const storeUrl = 'https://vuejs-jp.stores.jp'
+
 export const urlBasePath = isProd ? '/2023' : ''
 
 export const vuefesTwitterID = '@vuefes'

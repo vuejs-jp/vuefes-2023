@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import EventSection from '~/components/event/EventSection.vue'
+// import EventSection from '~/components/event/EventSection.vue'
 import StoreSection from '~/components/event/StoreSection.vue'
 </script>
 
 <template>
-  <section>
+  <section class="event-wrapper">
     <div class="event-root">
+      <!--
       <EventSection />
+      -->
       <StoreSection />
     </div>
   </section>
@@ -14,11 +16,12 @@ import StoreSection from '~/components/event/StoreSection.vue'
 
 <style lang="ts" scoped>
 css({
-  'section': {
-    padding: '120px 0 120px',
+  '.event-wrapper': {
+    padding: '120px 0',
     background: 'linear-gradient(180deg, #F17C67 40.63%, #FFC408 100%)',
   },
   '.event-root': {
+    padding: 'calc({space.8} * 5) 0',
     display: 'grid',
     gap: 'calc({space.8} * 5)',
     maxWidth: '1280px',

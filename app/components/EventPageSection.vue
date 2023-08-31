@@ -21,7 +21,6 @@ css({
   '.event-root': {
     padding: 'calc({space.8} * 5) 0',
     display: 'grid',
-    gap: 'calc({space.8} * 5)',
     maxWidth: '1280px',
     margin: '0 auto',
     width: '100%',

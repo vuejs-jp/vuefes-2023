@@ -12,8 +12,8 @@ import MarkDownText from '~/components/MarkDownText.vue'
     <div class="event-menu">
       <div class="event-card">
         <img
-          width="475"
-          height="268"
+          width="690"
+          height="388"
           :alt="'リフレッシュメントスペース supported by giftee'"
           :src="'event/refreshment_space.png'"
           decoding="async"
@@ -26,8 +26,8 @@ import MarkDownText from '~/components/MarkDownText.vue'
       </div>
       <div class="event-card">
         <img
-          width="475"
-          height="268"
+          width="690"
+          height="388"
           :alt="'クリエイティブウォール'"
           :src="'event/creative_wall.png'"
           decoding="async"
@@ -40,8 +40,8 @@ import MarkDownText from '~/components/MarkDownText.vue'
       </div>
       <div class="event-card">
         <img
-          width="475"
-          height="268"
+          width="690"
+          height="388"
           :alt="'ハンズオン'"
           :src="'event/hands_on.png'"
           decoding="async"
@@ -58,8 +58,8 @@ import MarkDownText from '~/components/MarkDownText.vue'
       </div>
       <div class="event-card">
         <img
-          width="475"
-          height="268"
+          width="690"
+          height="388"
           :alt="'タトゥースペース'"
           :src="'event/tattoo_space.png'"
           decoding="async"
@@ -78,10 +78,10 @@ import MarkDownText from '~/components/MarkDownText.vue'
 <style lang="ts" scoped>
 css({
   '.event': {
-    padding: '80px 40px',
+    padding: '40px',
     display: 'grid',
     placeItems: 'center',
-    gap: 'calc({space.8} * 3)',
+    gap: '40px',
   },
   '.explain': {
     maxWidth: '760px',
@@ -96,7 +96,6 @@ css({
     flexWrap: 'wrap',
     gap: '2em',
     justifyContent: 'center',
-    margin: '40px 0'
   },
   '.event-card': {
     '--img-size': '475px',
@@ -140,7 +139,6 @@ css({
     },
     '.event-card': {
       '--img-size': '690px',
-      maxWidth: '690px',
       maxWidth: '690px',
     },
   },

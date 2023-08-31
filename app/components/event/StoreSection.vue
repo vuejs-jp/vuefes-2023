@@ -7,54 +7,52 @@ import { storeUrl } from '~/utils/constants'
 </script>
 
 <template>
-  <section>
-    <div class="store-root">
-      <div class="store-title">
-        <CommentTitle color="vue.green" title="今年もやります" />
-        <h3 id="store">Vue Fes Store</h3>
-        <div class="explain"><MarkDownText path="store" /></div>
-      </div>
+  <div class="store-root">
+    <div class="store-title">
+      <CommentTitle color="vue.green" title="今年もやります" />
+      <h3 id="store">Vue Fes Store</h3>
+      <div class="explain"><MarkDownText path="store" /></div>
+    </div>
 
-      <div class="store-menu">
-        <div v-for="menu in storeMenu" :key="menu.name" class="store-card">
-          <img
-            width="308"
-            height="308"
-            :alt="`${menu.imgAlt}の写真`"
-            :src="`${menu.imgSrc}`"
-            decoding="async"
-          />
-          <div class="name">{{ menu.name }}</div>
-          <div class="price">{{ menu.price }}</div>
-          <div class="text">{{ menu.text }}</div>
-          <div class="supplement">
-            <div v-if="menu.color" class="color">カラー：{{ menu.color }}</div>
-            <div class="size">サイズ：{{ menu.size }}</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="store-info">
-        <div class="store-purchase">
-          <div class="sub-title">
-            <h6>購入方法</h6>
-            <p>購入方法は以下の2種類があります。</p>
-          </div>
-          <div class="pre-order">
-            <MarkDownText path="pre-order" />
-          </div>
-          <div class="button">
-            <RoundButton :href="storeUrl" target="_blank" rel="noreferrer" class="button">
-              {{ $t('words.pre_order') }}
-            </RoundButton>
-          </div>
-          <div class="current-day-sales">
-            <MarkDownText path="current-day-sales" />
-          </div>
+    <div class="store-menu">
+      <div v-for="menu in storeMenu" :key="menu.name" class="store-card">
+        <img
+          width="329"
+          height="329"
+          :alt="`${menu.imgAlt}の写真`"
+          :src="`${menu.imgSrc}`"
+          decoding="async"
+        />
+        <div class="name">{{ menu.name }}</div>
+        <div class="price">{{ menu.price }}</div>
+        <div class="text">{{ menu.text }}</div>
+        <div class="supplement">
+          <div v-if="menu.color" class="color">カラー：{{ menu.color }}</div>
+          <div class="size">サイズ：{{ menu.size }}</div>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="store-info">
+      <div class="store-purchase">
+        <div class="sub-title">
+          <h6>購入方法</h6>
+          <p>購入方法は以下の2種類があります。</p>
+        </div>
+        <div class="pre-order">
+          <MarkDownText path="pre-order" />
+        </div>
+        <div class="button">
+          <RoundButton :href="storeUrl" target="_blank" rel="noreferrer" class="button">
+            {{ $t('words.pre_order') }}
+          </RoundButton>
+        </div>
+        <div class="current-day-sales">
+          <MarkDownText path="current-day-sales" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="ts" scoped>
@@ -62,10 +60,10 @@ css({
   '.store-root': {
     color: '{color.vue.blue}',
     background: '{color.white}',
-    padding: 'calc({space.8} * 3)',
+    padding: '40px',
     display: 'flex',
     flexDirection: 'column',
-    gap: 'calc({space.8} * 3)',
+    gap: 'calc({space.8} * 10)',
     justifyContent: 'center',
   },
 
@@ -91,11 +89,10 @@ css({
   '.store-menu': {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '2em',
+    gap: '28px',
     justifyContent: 'center',
   },
   '.store-card': {
-    width: '308px',
     display: 'flex',
     flexDirection: 'column',
     gap: '1em',
@@ -115,8 +112,6 @@ css({
   '.store-info': {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: 'calc({space.8} * 5)',
-    paddingBottom: 'calc({space.8} * 5)',
   },
   '.store-purchase': {
     display: 'flex',
@@ -144,6 +139,21 @@ css({
   '.button': {
     display: 'flex',
     justifyContent: 'center'
-  }
+  },
+  '@tablet': {
+    '.store-card': {
+      '--img-size': '232px',
+      maxWidth: '232px',
+    },
+  },
+  '@mobile': {
+    '.store-root': {
+      padding: '20px',
+    },
+    '.store-card': {
+      '--img-size': '329px',
+      maxWidth: '329px',
+    },
+  },
 });
 </style>

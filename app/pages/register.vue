@@ -5,14 +5,11 @@ import SubmitButton from '~/components/forms/SubmitButton.vue'
 import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import UploadLogo from '~/assets/logo/upload_logo.svg'
 import TextButton from '~/components/button/TextButton.vue'
-import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useSupabase } from '~/composables/useSupabase'
-import { useImage } from '~/composables/useImage'
-import { useDialog } from '~/composables/useDialog'
 import { useForm } from '~/composables/useForm'
 import { isProd } from '~/utils/environment.constants'
 
@@ -22,47 +19,37 @@ definePageMeta({
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { addEventUser } = useSupabase()
-const { getBase64 } = useImage()
-const { handle, isShow } = useDialog()
-const { isSubmitting, nameError, validateName } = useForm()
+const { updateEventUser, getFullAvatarUrl, uploadAvatar } = useSupabase()
 
 const picture = ref()
 const displayName = ref('')
-const secretWord = ref('')
 const receiptId = ref('')
 
 const onSubmit = (e: Event) => {
   e.preventDefault()
-  addEventUser(displayName.value, secretWord.value, receiptId.value)
+  updateEventUser(displayName.value, picture.value, receiptId.value, signedUser.user_id)
 }
 
 const checkFiles = async (files: File[]) => {
   if (files.length === 0) return
 
   const file = files[0]
-  const filename = file.name
+  // const filename = file.name
+  const fileExt = file.name.split('.').pop()
+  const filePath = `${signedUser.user_id}/${Math.random()}.${fileExt}`
 
-  picture.value = await getBase64(file)
+  uploadAvatar(filePath, file)
 
-  alert(`this file is not acceptable -> ${filename}`)
+  picture.value = filePath
 }
 
 const updateDisplayName = (value: string) => {
   displayName.value = value
 }
 
-const updateSecretWord = (value: string) => {
-  secretWord.value = value
-}
-
 const updateReceiptId = (value: string) => {
   receiptId.value = value
 }
-
-onMounted(function () {
-  isShow.value = !signedUser.user_id
-})
 </script>
 
 <template>
@@ -90,16 +77,12 @@ onMounted(function () {
               name="displayName"
               :title-label="$t('top.register_form_display_name_label')"
               required
-              :error="nameError"
+              error=""
               @input="updateDisplayName"
-              @blur="validateName"
+              @blur="() => {}"
             />
             <!-- アバター-->
-            <DragDropArea
-              file-name="profiledata"
-              file-accept="image/png,image/jpeg,image/gif"
-              @check-files="checkFiles"
-            >
+            <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
               <div class="upload">
                 <UploadLogo />
                 <p class="title">{{ 'ファイルをドラッグ&ドロップ' }}</p>
@@ -117,16 +100,16 @@ onMounted(function () {
               name="receiptId"
               :title-label="$t('top.register_form_receipt_id_label')"
               required
-              :error="nameError"
+              error=""
               @input="updateReceiptId"
-              @blur="validateName"
+              @blur="() => {}"
             />
 
             <div class="link-box">
               <!-- キャンセル -->
               <RoundButton href="/" outline> キャンセル </RoundButton>
               <!-- 確定 -->
-              <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
+              <SubmitButton> 確定 </SubmitButton>
             </div>
           </form>
         </div>
@@ -140,10 +123,6 @@ onMounted(function () {
       </div>
       <RoundButton v-if="hasAuth" class="btn-purchase" @click="onSubmit">purchase</RoundButton> -->
     </section>
-
-    <div v-if="isShow">
-      <IntegrationCard @on-close="() => handle(false)" />
-    </div>
 
     <div v-if="!isProd">
       <UserForDev />

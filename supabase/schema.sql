@@ -9,7 +9,6 @@ create table if not exists public.event_users (
     provider varchar(20) not null,
     display_name varchar(12) not null,
     role varchar(16),
-    secret_word varchar(200) not null,
     receipt_id varchar(40) not null unique,
     activated_at timestamp with time zone,
     created_at timestamp with time zone default timezone('utc' :: text, now()) not null,
@@ -43,3 +42,12 @@ create trigger on_new_receipt_created
   after insert on public.pm_receipts
   for each row
   execute function handle_activate();
+
+-- *** Storage buckets ***
+create policy "Avatar images are publicly accessible."
+  on storage.objects for select
+  using ( bucket_id = 'avatar' );
+
+create policy "Anyone can upload an avatar."
+  on storage.objects for insert
+  with check ( bucket_id = 'avatar' );

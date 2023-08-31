@@ -75,7 +75,12 @@ const useAuth = () => {
       .exhaustive()
   })
   const signIn = async (provider: AuthProvider) => {
-    const { error } = await supabase.auth.signInWithOAuth({ provider })
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo: isProd ? 'https://vuefes.jp/2023/register' : 'http://localhost:3000/register',
+      },
+    })
     if (error) {
       throw new Error(`can not signin with ${provider === 'github' ? 'GitHub' : 'Google'}`)
     }

@@ -4,15 +4,17 @@ import { useUserStore } from './useUserStore'
 import { useToast } from './useToast'
 
 export function useSupabase() {
+  const config = useRuntimeConfig()
+  const { supabaseProjectUrl } = config.public
   const client = useSupabaseClient<Database>()
   const { signedUser: user } = useUserStore()
   const { onError, onSuccess } = useToast()
 
-  async function addEventUser(displayName: string, secretWord: string, receiptId: string) {
+  async function addEventUser(displayName: string, avatarUrl: string, receiptId: string) {
     const userData = {
       ...user,
       display_name: displayName,
-      secret_word: secretWord,
+      avatar_url: avatarUrl,
       receipt_id: receiptId,
     }
 
@@ -27,14 +29,14 @@ export function useSupabase() {
 
   async function updateEventUser(
     displayName: string,
-    secretWord: string,
+    avatarUrl: string,
     receiptId: string,
     userId: string,
   ) {
     const userData = {
       ...user,
       display_name: displayName,
-      secret_word: secretWord,
+      avatar_url: avatarUrl,
       receipt_id: receiptId,
     }
 
@@ -45,6 +47,14 @@ export function useSupabase() {
     }
 
     onSuccess('編集しました', 3000)
+  }
+
+  function getFullAvatarUrl(avatarUrl: string) {
+    return `${supabaseProjectUrl}/storage/v1/object/public/avatar/${avatarUrl}`
+  }
+
+  async function uploadAvatar(filePath: string, file: File) {
+    await client.storage.from('avatar').upload(filePath, file)
   }
 
   async function updatePMReceipt(receiptIds: { role: Role; receipt_id: string }[]) {
@@ -60,5 +70,5 @@ export function useSupabase() {
     onSuccess('購入情報を取り込みました', 3000)
   }
 
-  return { addEventUser, updateEventUser, updatePMReceipt }
+  return { addEventUser, updateEventUser, getFullAvatarUrl, uploadAvatar, updatePMReceipt }
 }

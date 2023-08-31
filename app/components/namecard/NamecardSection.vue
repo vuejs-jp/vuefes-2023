@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
+import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { useNamecard } from '~/composables/useNamecard'
+import { useDialog } from '~/composables/useDialog'
 
 const { canRegister } = useNamecard()
+const { handle, isShow } = useDialog()
 </script>
 
 <template>
@@ -30,16 +33,14 @@ const { canRegister } = useNamecard()
       -->
       <!-- ネームカードを作成 -->
       <div class="apply">
-        <RoundButton
-          :to="canRegister ? '/register' : '#'"
-          target="_blank"
-          rel="noreferrer"
-          :disabled="!canRegister"
-        >
+        <RoundButton type="submit" :disabled="!canRegister" @click="() => handle(true)">
           {{ $t('words.create_namecard') }}
         </RoundButton>
       </div>
     </div>
+  </div>
+  <div v-if="isShow">
+    <IntegrationCard @on-close="() => handle(false)" />
   </div>
 </template>
 

@@ -76,7 +76,6 @@ css({
     '::v-deep(h3)': {
       fontSize: '32px',
       fontWeight: 'bold',
-      fontFamily: 'Yu Gothic',
       lineHeight: '1',
     },
   },
@@ -102,13 +101,11 @@ css({
   },
   '.name': {
     fontWeight: 'bold',
-    fontFamily: 'Yu Gothic',
     lineHeight: '1',
   },
   '.price': {
     fontSize: '22px',
     fontWeight: 'bold',
-    fontFamily: 'Yu Gothic',
     lineHeight: '1',
   },
 
@@ -126,7 +123,6 @@ css({
     '::v-deep(h6)': {
       fontSize: '22px',
       fontWeight: 'bold',
-      fontFamily: 'Yu Gothic',
       lineHeight: '1',
     },
   },

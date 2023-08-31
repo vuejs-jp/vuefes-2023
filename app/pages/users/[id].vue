@@ -26,9 +26,9 @@ const { eventUser } = await useUser(userId)
 defineOgImageWithoutCache({
   component: 'OgTemplate',
   signedUser: {
-    full_name: eventUser.full_name,
-    avatar_url: eventUser.avatar_url,
-    role: eventUser.role || 'attendee',
+    full_name: eventUser?.full_name,
+    avatar_url: eventUser?.avatar_url,
+    role: eventUser?.role || 'attendee',
   },
 })
 
@@ -56,7 +56,7 @@ defineOgImageWithoutCache({
       <StatusCard :status="eventUser?.activated_at ? 'registered' : 'failed'" />
       <h2>ネームカード</h2>
       <AvatarCard
-        :signed-user="{ ...signedUser, role: eventUser.role || 'attendee' }"
+        :signed-user="{ ...signedUser, role: eventUser?.role || 'attendee' }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <RoundButton class="btn-update" href="/register">再編集</RoundButton>

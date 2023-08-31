@@ -11,7 +11,7 @@ import { storeUrl } from '~/utils/constants'
     <div class="store-root">
       <div class="store-title">
         <CommentTitle color="vue.green" title="今年もやります" />
-        <h3>Vue Fes Store</h3>
+        <h3 id="store">Vue Fes Store</h3>
         <div class="explain"><MarkDownText path="store" /></div>
       </div>
 

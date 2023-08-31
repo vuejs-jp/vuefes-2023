@@ -196,7 +196,7 @@ describe('top', () => {
           cy.contains('a', 'ハンズオンチケット')
           cy.contains('a', '個人スポンサーチケット')
           // ネームカード
-          cy.contains('a', 'ネームカードを作成')
+          cy.contains('button', 'ネームカードを作成')
           // 当日ボランティア
           cy.contains('a', 'ボランティアに応募')
           cy.contains('応募期限:')

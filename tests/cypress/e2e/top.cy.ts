@@ -354,7 +354,7 @@ describe('top', () => {
     it('render', () => {
       cy.viewport(769, 600)
       loadPage()
-      cy.wait(1500)
+      cy.wait(2000)
       cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')

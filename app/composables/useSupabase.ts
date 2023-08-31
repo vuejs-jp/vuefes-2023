@@ -4,25 +4,57 @@ import { useUserStore } from './useUserStore'
 import { useToast } from './useToast'
 
 export function useSupabase() {
+  const config = useRuntimeConfig()
+  const { supabaseProjectUrl } = config.public
   const client = useSupabaseClient<Database>()
   const { signedUser: user } = useUserStore()
   const { onError, onSuccess } = useToast()
 
-  async function addEventUser(displayName: string, secretWord: string, receiptId: string) {
+  async function addEventUser(displayName: string, avatarUrl: string, receiptId: string) {
     const userData = {
       ...user,
       display_name: displayName,
-      secret_word: secretWord,
+      avatar_url: avatarUrl,
       receipt_id: receiptId,
     }
 
     const { error } = await client.from('event_users').insert(userData)
     if (error) {
-      onError('購入できませんでした', 3000)
+      onError('登録できませんでした', 3000)
       return
     }
 
-    onSuccess('購入しました', 3000)
+    onSuccess('登録しました', 3000)
+  }
+
+  async function updateEventUser(
+    displayName: string,
+    avatarUrl: string,
+    receiptId: string,
+    userId: string,
+  ) {
+    const userData = {
+      ...user,
+      display_name: displayName,
+      avatar_url: avatarUrl,
+      receipt_id: receiptId,
+    }
+
+    const { error } = await client.from('event_users').update(userData).eq('user_id', userId)
+    if (error) {
+      onError('編集できませんでした', 3000)
+      return
+    }
+
+    onSuccess('編集しました', 3000)
+  }
+
+  function getFullAvatarUrl(avatarUrl: string) {
+    return `${supabaseProjectUrl}/storage/v1/object/public/avatar/${avatarUrl}`
+  }
+
+  async function uploadAvatar(filePath: string, file: File) {
+    await client.storage.from('avatar').upload(filePath, file)
   }
 
   async function updatePMReceipt(receiptIds: { role: Role; receipt_id: string }[]) {
@@ -38,5 +70,5 @@ export function useSupabase() {
     onSuccess('購入情報を取り込みました', 3000)
   }
 
-  return { addEventUser, updatePMReceipt }
+  return { addEventUser, updateEventUser, getFullAvatarUrl, uploadAvatar, updatePMReceipt }
 }

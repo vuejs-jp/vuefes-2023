@@ -36,6 +36,8 @@ export interface FormUser {
   provider: string
   role?: string
   email: string
+  display_name: string
+  receipt_id: string
   created_at: string
 }
 

@@ -72,7 +72,7 @@ const updateReceiptId = (value: string) => {
     </NavPageSection>
 
     <section>
-      <h2>ネームカードの作成</h2>
+      <h2>ネームカードの編集</h2>
       <div class="form-root">
         <p>来場時に発行されるネームカードの情報を入力します。</p>
         <div class="form">
@@ -84,6 +84,7 @@ const updateReceiptId = (value: string) => {
               :title-label="$t('top.register_form_display_name_label')"
               required
               :error="displayNameError"
+              :value="signedUser.display_name"
               @input="updateDisplayName"
               @blur="validateDisplayName"
             />
@@ -97,9 +98,7 @@ const updateReceiptId = (value: string) => {
               </div>
             </DragDropArea>
             <h3>チケット情報の入力</h3>
-            <p>
-              チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。
-            </p>
+            <p>チケット購入完了メールに記載されている「注文番号」を入力してください。</p>
             <!-- 注文番号 -->
             <InputField
               id="receiptId"
@@ -107,6 +106,7 @@ const updateReceiptId = (value: string) => {
               :title-label="$t('top.register_form_receipt_id_label')"
               required
               :error="receiptIdError"
+              :value="signedUser.display_name"
               @input="updateReceiptId"
               @blur="validateReceiptId"
             />

@@ -17,7 +17,7 @@ const { canRegister } = useNamecard()
 
 <template>
   <div v-if="canRegister && hasAuth && !eventUser?.activated_at">
-    <AlertBar />
+    <AlertBar :user-id="signedUser.user_id" />
   </div>
   <NavPageSection :has-alert="canRegister && hasAuth && !eventUser?.activated_at">
     <template #avatar>

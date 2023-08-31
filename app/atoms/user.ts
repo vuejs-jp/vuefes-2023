@@ -13,6 +13,8 @@ export function useStore() {
       provider: '',
       email: '',
       created_at: '',
+      display_name: '',
+      receipt_id: '',
     },
   })
 

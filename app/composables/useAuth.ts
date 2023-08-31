@@ -11,6 +11,8 @@ const initialUser = {
   provider: '',
   email: '',
   created_at: '',
+  display_name: '',
+  receipt_id: '',
 }
 
 const dummyUser = {
@@ -20,6 +22,8 @@ const dummyUser = {
   provider: 'google',
   email: 'dummy@cy.com',
   created_at: '2023-06-02T15:12:03.369752Z',
+  display_name: 'ダミー表示名',
+  receipt_id: 'dummydummy',
 }
 
 let signedUser = reactive<FormUser>({ ...initialUser })
@@ -49,6 +53,8 @@ const useAuth = () => {
           signedUser.provider = user?.app_metadata.provider as AuthProvider
           signedUser.email = user?.email || ''
           signedUser.created_at = user?.created_at || ''
+          // signedUser.display_name = user?.display_name || ''
+          // signedUser.receipt_id = user?.receipt_id || ''
           store?.setUser(signedUser)
         }
       })
@@ -69,7 +75,12 @@ const useAuth = () => {
       .exhaustive()
   })
   const signIn = async (provider: AuthProvider) => {
-    const { error } = await supabase.auth.signInWithOAuth({ provider })
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo: isProd ? 'https://vuefes.jp/2023/register' : 'http://localhost:3000/register',
+      },
+    })
     if (error) {
       throw new Error(`can not signin with ${provider === 'github' ? 'GitHub' : 'Google'}`)
     }

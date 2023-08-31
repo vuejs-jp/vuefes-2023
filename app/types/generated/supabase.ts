@@ -40,7 +40,6 @@ export interface Database {
           provider: string
           receipt_id: string
           role: string | null
-          secret_word: string
           updated_at: string
           user_id: string
         }
@@ -55,7 +54,6 @@ export interface Database {
           provider: string
           receipt_id: string
           role?: string | null
-          secret_word: string
           updated_at?: string
           user_id: string
         }
@@ -70,7 +68,6 @@ export interface Database {
           provider?: string
           receipt_id?: string
           role?: string | null
-          secret_word?: string
           updated_at?: string
           user_id?: string
         }

@@ -10,6 +10,7 @@ import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useSupabase } from '~/composables/useSupabase'
+import { useFormError } from '~/composables/useFormError'
 import { isProd } from '~/utils/environment.constants'
 
 definePageMeta({
@@ -19,10 +20,16 @@ definePageMeta({
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
 const { updateEventUser, uploadAvatar } = useSupabase()
+const { displayNameError, receiptIdError, validateDisplayName, validateReceiptId } = useFormError()
 
 const picture = ref()
 const displayName = ref('')
 const receiptId = ref('')
+
+const isSubmitting = computed(() => {
+  if (!displayName.value || !receiptId.value) return false
+  return displayNameError.value === '' && receiptIdError.value === ''
+})
 
 const onSubmit = (e: Event) => {
   e.preventDefault()
@@ -76,10 +83,10 @@ const updateReceiptId = (value: string) => {
               name="displayName"
               :title-label="$t('top.register_form_display_name_label')"
               required
-              error=""
+              :error="displayNameError"
               :value="signedUser.display_name"
               @input="updateDisplayName"
-              @blur="() => {}"
+              @blur="validateDisplayName"
             />
             <!-- アバター-->
             <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
@@ -98,17 +105,17 @@ const updateReceiptId = (value: string) => {
               name="receiptId"
               :title-label="$t('top.register_form_receipt_id_label')"
               required
-              error=""
+              :error="receiptIdError"
               :value="signedUser.display_name"
               @input="updateReceiptId"
-              @blur="() => {}"
+              @blur="validateReceiptId"
             />
 
             <div class="link-box">
               <!-- キャンセル -->
               <RoundButton href="/" outline> キャンセル </RoundButton>
               <!-- 確定 -->
-              <SubmitButton> 確定 </SubmitButton>
+              <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
             </div>
           </form>
         </div>

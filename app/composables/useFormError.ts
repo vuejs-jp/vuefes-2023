@@ -2,6 +2,8 @@ export function useFormError() {
   const nameError = ref('')
   const emailError = ref('')
   const detailError = ref('')
+  const displayNameError = ref('')
+  const receiptIdError = ref('')
 
   function validateName(value: string) {
     if (value === '') {
@@ -30,12 +32,32 @@ export function useFormError() {
     detailError.value = ''
   }
 
+  function validateDisplayName(value: string) {
+    if (value === '') {
+      nameError.value = '名前を入力してください'
+      return
+    }
+    nameError.value = ''
+  }
+
+  function validateReceiptId(value: string) {
+    if (value === '') {
+      nameError.value = '名前を入力してください'
+      return
+    }
+    nameError.value = ''
+  }
+
   return {
     nameError,
     emailError,
     detailError,
+    displayNameError,
+    receiptIdError,
     validateName,
     validateEmail,
     validateDetail,
+    validateDisplayName,
+    validateReceiptId,
   }
 }

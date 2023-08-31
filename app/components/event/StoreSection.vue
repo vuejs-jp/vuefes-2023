@@ -34,21 +34,23 @@ import { storeUrl } from '~/utils/constants'
         </div>
       </div>
 
-      <div class="store-purchase">
-        <div class="sub-title">
-          <h6>購入方法</h6>
-          <p>購入方法は以下の2種類があります。</p>
-        </div>
-        <div class="pre-order">
-          <MarkDownText path="pre-order" />
-        </div>
-        <div class="button">
-          <RoundButton :href="storeUrl" target="_blank" rel="noreferrer" class="button">
-            {{ $t('words.pre_order') }}
-          </RoundButton>
-        </div>
-        <div class="current-day-sales">
-          <MarkDownText path="current-day-sales" />
+      <div class="store-info">
+        <div class="store-purchase">
+          <div class="sub-title">
+            <h6>購入方法</h6>
+            <p>購入方法は以下の2種類があります。</p>
+          </div>
+          <div class="pre-order">
+            <MarkDownText path="pre-order" />
+          </div>
+          <div class="button">
+            <RoundButton :href="storeUrl" target="_blank" rel="noreferrer" class="button">
+              {{ $t('words.pre_order') }}
+            </RoundButton>
+          </div>
+          <div class="current-day-sales">
+            <MarkDownText path="current-day-sales" />
+          </div>
         </div>
       </div>
     </div>
@@ -60,8 +62,7 @@ css({
   '.store-root': {
     color: '{color.vue.blue}',
     background: '{color.white}',
-    paddingTop: 'calc({space.8} * 3)',
-    paddingBottom: 'calc({space.8} * 3)',
+    padding: 'calc({space.8} * 3)',
     display: 'flex',
     flexDirection: 'column',
     gap: 'calc({space.8} * 3)',
@@ -111,11 +112,16 @@ css({
     lineHeight: '1',
   },
 
+  '.store-info': {
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: 'calc({space.8} * 5)',
+    paddingBottom: 'calc({space.8} * 5)',
+  },
   '.store-purchase': {
     display: 'flex',
     flexDirection: 'column',
-    padding: 'calc({space.8} * 20)',
-    paddingBottom: 'calc({space.8} * 1)',
+    maxWidth: '768px',
     gap: '2em',
     '::v-deep(h6)': {
       fontSize: '22px',

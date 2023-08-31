@@ -102,6 +102,9 @@ css({
     fontFamily: 'Yu Gothic',
     lineHeight: '1',
   },
+  '.text': {
+    width: '308px',
+  },
   '.price': {
     fontSize: '22px',
     fontWeight: 'bold',
@@ -145,6 +148,9 @@ css({
       '--img-size': '232px',
       maxWidth: '232px',
     },
+    '.text': {
+      width: '232px',
+    },
   },
   '@mobile': {
     '.store-root': {
@@ -153,6 +159,9 @@ css({
     '.store-card': {
       '--img-size': '329px',
       maxWidth: '329px',
+    },
+    '.text': {
+      width: '329px',
     },
   },
 });

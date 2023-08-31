@@ -29,6 +29,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  download: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const isLink = Boolean(props.href)
@@ -75,6 +79,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
     :class="myclass.join(' ')"
     :disabled="props.disabled"
     :aria-disabled="props.disabled"
+    :download="props.download"
   >
     <slot name="icon" />
     <slot />

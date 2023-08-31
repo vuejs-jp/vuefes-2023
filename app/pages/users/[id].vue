@@ -17,9 +17,20 @@ definePageMeta({
   middleware: ['error'],
 })
 
+const route = useRoute()
+const userId = route.params.id as string
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
-const { eventUser } = await useUser(signedUser.user_id)
+const { eventUser } = await useUser(userId)
+
+defineOgImageWithoutCache({
+  component: 'OgTemplate',
+  signedUser: {
+    full_name: eventUser.full_name,
+    avatar_url: eventUser.avatar_url,
+    role: eventUser.role || 'attendee',
+  },
+})
 
 // mock
 // const avatar = {
@@ -45,10 +56,20 @@ const { eventUser } = await useUser(signedUser.user_id)
       <StatusCard :status="eventUser?.activated_at ? 'registered' : 'failed'" />
       <h2>ネームカード</h2>
       <AvatarCard
-        :signed-user="{ ...signedUser, role: 'attendee' }"
+        :signed-user="{ ...signedUser, role: eventUser.role || 'attendee' }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <RoundButton class="btn-update" href="/register">再編集</RoundButton>
+      <RoundButton
+        class="btn-save"
+        :href="`${linkUrl}users/${userId}/__og_image__/og.png`"
+        target="_blank"
+        rel="noreferrer"
+        outline
+        download
+      >
+        画像を保存
+      </RoundButton>
       <RoundButton
         class="btn-calendar"
         :href="calendarUrl"
@@ -107,8 +128,8 @@ css({
       fontWeight: 900,
     },
   },
-  '.btn-update, .btn-calendar': {
-    marginTop: '64px'
+  '.btn-update, .btn-save, .btn-calendar': {
+    marginTop: 'calc({space.8} * 4)'
   },
   '.social': {
     display: 'grid',

@@ -155,6 +155,8 @@ export type Team = {
  * store
  */
 export type StoreMenu = {
+  imgAlt: string
+  imgSrc: string
   name: string
   price: string
   text: string

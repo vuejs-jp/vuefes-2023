@@ -64,6 +64,8 @@ export default {
        * volunteer section
        */
       volunteer_schedule_limit: '応募期限: {0} まで',
+      volunteer_schedule_over:
+        '当日ボランティア募集は {0} をもって締め切りました。応募いただいた方々におかれましては感謝申し上げます。',
       /**
        * speakers section
        */
@@ -185,6 +187,8 @@ export default {
        * volunteer section
        */
       volunteer_schedule_limit: '応募期限: {0} まで',
+      volunteer_schedule_over:
+        'Volunteer opportunities have been closed as of {0} . We thank all people that applied.',
       /**
        * speakers section
        */

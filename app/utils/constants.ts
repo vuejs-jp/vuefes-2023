@@ -17,6 +17,7 @@ export const navFullLinks = (showTimetable: boolean) =>
     { text: 'Message', link: '/#message' },
     { text: 'Speakers', link: '/#speakers' },
     ...[showTimetable ? { text: 'Time table', link: '/#timetable' } : undefined],
+    { text: 'Events', link: '/#events' },
     { text: 'Ticket', link: '/#ticket' },
     { text: 'Access', link: '/#access' },
     { text: 'Sponsors', link: '/#sponsors' },

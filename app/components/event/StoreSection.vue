@@ -62,10 +62,10 @@ css({
   '.store-root': {
     color: '{color.vue.blue}',
     background: '{color.white}',
-    padding: 'calc({space.8} * 3)',
+    padding: '40px',
     display: 'flex',
     flexDirection: 'column',
-    gap: 'calc({space.8} * 3)',
+    gap: 'calc({space.8} * 10)',
     justifyContent: 'center',
   },
 
@@ -90,7 +90,7 @@ css({
   '.store-menu': {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '2em',
+    gap: '28px',
     justifyContent: 'center',
   },
   '.store-card': {
@@ -103,6 +103,9 @@ css({
     fontWeight: 'bold',
     lineHeight: '1',
   },
+  '.text': {
+    width: '308px',
+  },
   '.price': {
     fontSize: '22px',
     fontWeight: 'bold',
@@ -112,8 +115,6 @@ css({
   '.store-info': {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: 'calc({space.8} * 5)',
-    paddingBottom: 'calc({space.8} * 5)',
   },
   '.store-purchase': {
     display: 'flex',
@@ -140,6 +141,27 @@ css({
   '.button': {
     display: 'flex',
     justifyContent: 'center'
-  }
+  },
+  '@tablet': {
+    '.store-card': {
+      '--img-size': '232px',
+      maxWidth: '232px',
+    },
+    '.text': {
+      width: '232px',
+    },
+  },
+  '@mobile': {
+    '.store-root': {
+      padding: '20px',
+    },
+    '.store-card': {
+      '--img-size': '329px',
+      maxWidth: '329px',
+    },
+    '.text': {
+      width: '329px',
+    },
+  },
 });
 </style>

@@ -3,6 +3,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { volunteerUrl } from '~/utils/constants'
+import { closedVolunteer } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -12,7 +13,10 @@ import { volunteerUrl } from '~/utils/constants'
     <div class="explain">
       <MarkDownText path="volunteer" />
     </div>
-    <div class="center">
+    <i18n-t v-if="closedVolunteer" keypath="top.volunteer_schedule_over" tag="p" class="deadline">
+      <em>{{ $t('words.volunteer_deadline_date') }}</em>
+    </i18n-t>
+    <div v-if="!closedVolunteer" class="center">
       <i18n-t keypath="top.volunteer_schedule_limit" tag="p" class="deadline">
         <em>{{ $t('words.volunteer_deadline_date') }}</em>
       </i18n-t>

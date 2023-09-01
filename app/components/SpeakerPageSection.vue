@@ -6,7 +6,7 @@ import SpeakerCard from './speaker/SpeakerCard.vue'
 import SponsorSpeakerCard from './speaker/SponsorSpeakerCard.vue'
 import { ltSpeakers, sessionSpeakers } from '~/utils/speakers.constants'
 import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
-import { closedCall } from '~/utils/status.constants'
+import { closedSession } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import { closedCall } from '~/utils/status.constants'
       title="Speakers"
       :yamato-title="$t('top.speakers_subtitle')"
     />
-    <template v-if="!closedCall">
+    <template v-if="!closedSession">
       <SpeakerCFP class="cfp" />
     </template>
 

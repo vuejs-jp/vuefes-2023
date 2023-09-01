@@ -2,6 +2,7 @@
 import RoundButton from '~/components/button/RoundButton.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import { twitterDomainUrl } from '~/utils/constants'
+import { closedSponsor } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -13,42 +14,45 @@ import { twitterDomainUrl } from '~/utils/constants'
         title="Sponsors"
         :yamato-title="$t('top.sponsors_subtitle')"
       />
-      <div class="subtitle">
-        <MarkDownText path="sponsor" />
-      </div>
-      <!--
-      <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline">
+      <i18n-t v-if="closedSponsor" keypath="top.sponsors_schedule_over" tag="p" class="deadline">
         <em>{{ $t('words.sponsors_deadline_date') }}</em>
       </i18n-t>
-      -->
-      <i18n-t keypath="top.sponsors_schedule_extend" tag="p" class="deadline-extend">
-        <em>{{ $t('words.sponsors_deadline_date') }}</em>
-      </i18n-t>
-      <div class="link-box">
-        <!-- 申し込みフォーム -->
-        <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
-          {{ $t('words.application_form') }}
-        </RoundButton>
-        <!-- スポンサー資料 -->
-        <RoundButton
-          href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
-          outline
-        >
-          {{ $t('words.sponsordoc') }}
-        </RoundButton>
-      </div>
-      <!-- 詳細情報は、Vue Fes Japan の Twitterをご確認ください。 -->
-      <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
-        <a
-          :href="`${twitterDomainUrl}vuefes`"
-          target="_blank"
-          class="twitter-link"
-          rel="noreferrer"
-          >{{ $t('words.vuefes_twitter') }}</a
-        >
-      </i18n-t>
+      <template v-if="!closedSponsor">
+        <div class="subtitle">
+          <MarkDownText path="sponsor" />
+        </div>
+        <!--
+        <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline">
+          <em>{{ $t('words.sponsors_deadline_date') }}</em>
+        </i18n-t>
+        -->
+        <i18n-t keypath="top.sponsors_schedule_extend" tag="p" class="deadline-extend">
+          <em>{{ $t('words.sponsors_deadline_date') }}</em>
+        </i18n-t>
+        <div class="link-box">
+          <RoundButton href="https://forms.gle/rxHNdjFDnFGxzf5SA" target="_blank" rel="noreferrer">
+            {{ $t('words.application_form') }}
+          </RoundButton>
+          <RoundButton
+            href="https://docs.google.com/presentation/d/1cgBIP6m8E82oef3p3BUZ7mMBFxnvTeA_t9kSwdnipgs/edit?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            outline
+          >
+            {{ $t('words.sponsordoc') }}
+          </RoundButton>
+        </div>
+        <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
+          <a
+            :href="`${twitterDomainUrl}vuefes`"
+            target="_blank"
+            class="twitter-link"
+            rel="noreferrer"
+          >
+            {{ $t('words.vuefes_twitter') }}</a
+          >
+        </i18n-t>
+      </template>
     </div>
     <SponsorList />
   </section>

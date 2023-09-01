@@ -246,6 +246,13 @@ const all: Sponsor[] = [
     categories: ['handson'],
     url: 'https://tabian.co.jp',
   },
+  {
+    id: 'tam',
+    name: '株式会社TAM',
+    image: '/sponsors/tam.png',
+    categories: ['refreshment'],
+    url: 'https://www.tam-tam.co.jp',
+  },
 ]
 
 const platinumSponsors: Sponsor[] = all.filter((s: Sponsor) => s.categories.includes('platinum'))

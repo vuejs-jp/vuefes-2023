@@ -437,6 +437,25 @@ export const speakers: Speaker[] = [
     },
   },
   {
+    id: 'hieu',
+    type: 'domestic',
+    session: {
+      title: 'Exploring the Power of Error Handling in Vue JS',
+      description: '＜未定＞',
+      track: 'm3',
+      time: '15:45 - 16:15',
+      type: 'lt',
+    },
+    profile: {
+      image: '/speakers/hieu.png',
+      title: '株式会社ブレイン フロントエンドエンジニア',
+      name: 'Hieu / グエンゴックヒエウ',
+      twitterId: 'hieune_151',
+      githubId: 'hieu-brain',
+      description: '',
+    },
+  },
+  {
     id: 'hitoki-wakugawa',
     type: 'domestic',
     session: {

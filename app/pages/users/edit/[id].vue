@@ -9,6 +9,7 @@ import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
+import { useUser } from '~/composables/useUser'
 import { useSupabase } from '~/composables/useSupabase'
 import { useFormError } from '~/composables/useFormError'
 import { isProd } from '~/utils/environment.constants'
@@ -17,9 +18,12 @@ definePageMeta({
   middleware: ['error'],
 })
 
+const route = useRoute()
+const userId = route.params.id as string
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
 const { updateEventUser, uploadAvatar } = useSupabase()
+const { eventUser } = await useUser(userId)
 const { displayNameError, receiptIdError, validateDisplayName, validateReceiptId } = useFormError()
 
 const picture = ref()
@@ -84,11 +88,22 @@ const updateReceiptId = (value: string) => {
               :title-label="$t('top.register_form_display_name_label')"
               required
               :error="displayNameError"
-              :value="signedUser.display_name"
+              :value="eventUser?.display_name"
               @input="updateDisplayName"
               @blur="validateDisplayName"
             />
             <!-- アバター-->
+            <InputField
+              id="avatarUrl"
+              type="search"
+              name="avatarUrl"
+              title-label=""
+              error=""
+              :value="eventUser?.avatar_url"
+              disabled
+              @input="() => {}"
+              @blur="() => {}"
+            />
             <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
               <div class="upload">
                 <UploadLogo />
@@ -106,14 +121,14 @@ const updateReceiptId = (value: string) => {
               :title-label="$t('top.register_form_receipt_id_label')"
               required
               :error="receiptIdError"
-              :value="signedUser.display_name"
+              :value="eventUser?.receipt_id"
               @input="updateReceiptId"
               @blur="validateReceiptId"
             />
 
             <div class="link-box">
               <!-- キャンセル -->
-              <RoundButton href="/" outline> キャンセル </RoundButton>
+              <RoundButton to="/" outline> キャンセル </RoundButton>
               <!-- 確定 -->
               <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
             </div>

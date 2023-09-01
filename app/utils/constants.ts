@@ -50,7 +50,7 @@ export const childCareUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSe_tfFxeSJjOmMGck-HXlKvuwkTjFHQoLzvL1ZPhYkkXuVshQ/viewform'
 
 export const calendarUrl =
-  'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vue%20Fes%20Japan%202023&dates=20231028T010000Z/20231028T093000Z'
+  'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vue%20Fes%20Japan%202023&dates=20231028T003000Z/20231028T103000Z'
 
 export const storeUrl = 'https://vuejs-jp.stores.jp'
 

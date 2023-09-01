@@ -59,7 +59,7 @@ defineOgImageWithoutCache({
         :signed-user="{ ...signedUser, role: eventUser?.role || 'attendee' }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
-      <RoundButton class="btn-update" href="/user-edit">再編集</RoundButton>
+      <RoundButton class="btn-update" :to="`/users/edit/${userId}`">再編集</RoundButton>
       <RoundButton
         class="btn-save"
         :href="`${linkUrl}users/${userId}/__og_image__/og.png`"

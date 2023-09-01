@@ -18,7 +18,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
           :src="'event/refreshment_space.png'"
           decoding="async"
         />
-        <div class="title">リフレッシュメントスペース<br />supported by giftee</div>
+        <div class="title">リフレッシュメントスペース<br />supported by giftee, HENNGE, TAM</div>
         <div class="description">
           喉が渇いたらお茶やコーヒーはいかがですか？
           小腹を満たすお菓子もご用意しています。もちろん無料です。

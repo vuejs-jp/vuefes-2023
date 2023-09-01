@@ -5,7 +5,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
 
 <template>
   <div class="event">
-    <SectionTitle id="event" color="vue.blue" :title="'Events'" yamato-title="イベント" />
+    <SectionTitle id="events" color="vue.blue" :title="'Events'" yamato-title="イベント" />
     <div class="explain">
       <MarkDownText path="event" />
     </div>

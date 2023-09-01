@@ -97,9 +97,9 @@ const updateReceiptId = (value: string) => {
               id="avatarUrl"
               type="search"
               name="avatarUrl"
-              title-label=""
+              title-label="アバター画像"
               error=""
-              :value="eventUser?.avatar_url"
+              :value="picture || eventUser?.avatar_url"
               disabled
               @input="() => {}"
               @blur="() => {}"

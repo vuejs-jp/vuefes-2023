@@ -10,6 +10,7 @@ interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
    * FIXME 削除したい (削除できなさそう)
    */
   placeholder?: string
+  disabled?: boolean
 }
 interface InputFieldEmit {
   (e: 'input', value: string): void
@@ -22,6 +23,7 @@ const {
   placeholder = '',
   type,
   required = false,
+  disabled = false,
   titleLabel,
   error = '',
   value,
@@ -52,6 +54,7 @@ function handleFocusOut(e: Event) {
       :placeholder="placeholder"
       :required="required"
       :value="value"
+      :disabled="disabled"
       @input="handleInput"
       @blur="handleFocusOut"
     />
@@ -75,6 +78,9 @@ css({
     borderRadius: '8px',
     '&::placeholder': {
       fontWeight: 500,
+    },
+    '&:disabled': {
+      pointerEvents: 'none',
     },
   },
   '.error': {

@@ -1,7 +1,15 @@
 # CHANGELOG
 
+## [ver.2023.9.1](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.9.1)
+
+- スポンサー情報の更新
+- スピーカー情報の更新
+- ストア情報の追加、外部サイト (STORES) へ回遊
+- Vue Fes Japan 2023 当日の企画情報の追加
+
 ## [ver.2023.8.2](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.8.2)
 
+- スポンサー情報の更新
 - スピーカー情報 (OG image) の更新
 
 ## [ver.2023.8.1](https://github.com/vuejs-jp/vuefes-2023/tree/ver.2023.8.1)

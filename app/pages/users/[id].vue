@@ -32,6 +32,22 @@ defineOgImageWithoutCache({
   },
 })
 
+useHead({
+  titleTemplate: (titleChunk) => `${eventUser?.full_name} | ${conferenceTitle}`,
+  meta: [
+    ...generalOg({
+      title: `${eventUser?.full_name} | ${conferenceTitle}`,
+      description: `${eventUser?.full_name} の参加者情報を掲載しています。`,
+      url: `${linkUrl}users/${userId}`,
+    }),
+    ...twitterOg({
+      title: `${eventUser?.full_name} | ${conferenceTitle}`,
+      description: `${eventUser?.full_name} の参加者情報を掲載しています。`,
+      url: `${linkUrl}users/${userId}`,
+    }),
+  ],
+})
+
 // mock
 // const avatar = {
 //   name: 'jiyuujin',

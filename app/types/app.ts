@@ -153,3 +153,16 @@ export type Team = {
   name: string
   snsLink: string
 }
+
+/**
+ * store
+ */
+export type StoreMenu = {
+  imgAlt: string
+  imgSrc: string
+  name: string
+  price: string
+  text: string
+  color?: string
+  size: string
+}

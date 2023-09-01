@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import EventSection from '~/components/event/EventSection.vue'
+// import EventSection from '~/components/event/EventSection.vue'
 import StoreSection from '~/components/event/StoreSection.vue'
 </script>
 
 <template>
   <section class="event-wrapper">
     <div class="event-root">
+      <!--
       <EventSection />
+      -->
       <StoreSection />
     </div>
   </section>

@@ -53,6 +53,55 @@ import { storeUrl } from '~/utils/constants'
       </div>
     </div>
   </div>
+=======
+  <section>
+    <div class="store-root">
+      <div class="store-title">
+        <CommentTitle color="vue.green" title="今年もやります" />
+        <h3 id="store">Vue Fes Store</h3>
+        <div class="explain"><MarkDownText path="store" /></div>
+      </div>
+
+      <div class="store-menu">
+        <div v-for="menu in storeMenu" :key="menu.name" class="store-card">
+          <img
+            width="308"
+            height="308"
+            :alt="`${menu.imgAlt}の写真`"
+            :src="`${menu.imgSrc}`"
+            decoding="async"
+          />
+          <div class="name">{{ menu.name }}</div>
+          <div class="price">{{ menu.price }}</div>
+          <div class="text">{{ menu.text }}</div>
+          <div class="supplement">
+            <div v-if="menu.color" class="color">カラー：{{ menu.color }}</div>
+            <div class="size">サイズ：{{ menu.size }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="store-info">
+        <div class="store-purchase">
+          <div class="sub-title">
+            <h6>購入方法</h6>
+            <p>購入方法は以下の2種類があります。</p>
+          </div>
+          <div class="pre-order">
+            <MarkDownText path="pre-order" />
+          </div>
+          <div class="button">
+            <RoundButton :href="storeUrl" target="_blank" rel="noreferrer" class="button">
+              {{ $t('words.pre_order') }}
+            </RoundButton>
+          </div>
+          <div class="current-day-sales">
+            <MarkDownText path="current-day-sales" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="ts" scoped>
@@ -92,6 +141,7 @@ css({
     justifyContent: 'center',
   },
   '.store-card': {
+    width: '308px',
     display: 'flex',
     flexDirection: 'column',
     gap: '1em',

@@ -37,9 +37,7 @@ const emitToggle = () => {
         </li>
       </ul>
       <!-- contact links -->
-      <div class="mobile-menu-contacts">
-        <ContactLinks />
-      </div>
+      <ContactLinks />
       <!-- close button -->
       <button class="close" @click="emitToggle">
         <CrossLogo />
@@ -84,11 +82,6 @@ css({
         fontSize: '20px',
       },
     },
-  },
-  '.mobile-menu-contacts': {
-    position: 'absolute',
-    bottom: '60px',
-    left: '40px',
   },
   '.close': {
     position: 'fixed',

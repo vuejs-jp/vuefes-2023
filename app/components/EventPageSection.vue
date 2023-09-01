@@ -31,17 +31,11 @@ css({
     'grid-template-columns': 'minmax(0, 1fr)',
   },
   '@tablet': {
-    '.event-wrapper': {
-      padding: '40px',
-    },
     '.event-root': {
       maxWidth: '888px',
     },
   },
   '@mobile': {
-    '.event-wrapper': {
-      padding: '20px',
-    },
     '.event-root': {
       maxWidth: '730px',
     },

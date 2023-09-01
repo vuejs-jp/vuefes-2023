@@ -66,7 +66,7 @@ onMounted(function () {
           <TwitterLogo />
         </a>
         <LangSwitcher
-          v-if="switchLocale"
+          v-if="switchLocale && !isMobile"
           :top="hasAlert ? (isMobile ? '160px' : '130px') : '80px'"
         />
         <slot name="avatar" />

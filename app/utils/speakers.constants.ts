@@ -195,7 +195,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/mizdra.png',
-      title: '',
+      title: '株式会社はてな Webアプリケーションエンジニア\nフロントエンドエキスパート',
       name: 'mizdra / ミズドラ',
       twitterId: 'mizdra',
       githubId: 'mizdra',
@@ -273,7 +273,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/chocodogmagic.jpg',
-      title: '',
+      title: '株式会社TAMTO フロントエンドエンジニア',
       name: 'まぁし（知念）',
       twitterId: 'chocodogmagic',
       description: '',

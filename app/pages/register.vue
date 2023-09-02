@@ -88,6 +88,17 @@ const updateReceiptId = (value: string) => {
               @blur="validateDisplayName"
             />
             <!-- アバター-->
+            <InputField
+              id="avatarUrl"
+              type="search"
+              name="avatarUrl"
+              title-label="アバター画像"
+              error=""
+              :value="picture"
+              disabled
+              @input="() => {}"
+              @blur="() => {}"
+            />
             <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
               <div class="upload">
                 <UploadLogo />

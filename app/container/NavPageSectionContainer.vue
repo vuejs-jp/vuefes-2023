@@ -28,7 +28,7 @@ const { canRegister } = useNamecard()
         <template v-if="isShow">
           <PopupArea
             :signed-user="signedUser"
-            :top="canRegister && !eventUser?.activated_at ? 18 : 10"
+            :top="canRegister && !eventUser?.activated_at ? '80px' : '130px'"
             @sign-out="signOut"
           />
         </template>

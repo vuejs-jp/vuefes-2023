@@ -31,13 +31,9 @@ const displayName = ref('')
 const receiptId = ref('')
 
 const isSubmitting = computed(() => {
-  if (
-    displayName.value === eventUser?.display_name ||
-    picture.value === eventUser?.avatar_url ||
-    receiptId.value === eventUser.receipt_id
-  )
+  if (displayName.value === eventUser?.display_name || picture.value === eventUser?.avatar_url)
     return false
-  return displayNameError.value === '' && receiptIdError.value === ''
+  return displayNameError.value === ''
 })
 
 const onSubmit = (e: Event) => {
@@ -127,6 +123,7 @@ const updateReceiptId = (value: string) => {
               required
               :error="receiptIdError"
               :value="eventUser?.receipt_id"
+              disabled
               @input="updateReceiptId"
               @blur="validateReceiptId"
             />

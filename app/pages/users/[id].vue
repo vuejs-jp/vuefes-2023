@@ -26,23 +26,23 @@ const { eventUser } = await useUser(userId)
 defineOgImageWithoutCache({
   component: 'OgTemplate',
   signedUser: {
-    full_name: eventUser?.full_name,
+    full_name: eventUser?.display_name,
     avatar_url: eventUser?.avatar_url,
     role: eventUser?.role || 'attendee',
   },
 })
 
 useHead({
-  titleTemplate: (titleChunk) => `${eventUser?.full_name} | ${conferenceTitle}`,
+  titleTemplate: (titleChunk) => `${eventUser?.display_name} | ${conferenceTitle}`,
   meta: [
     ...generalOg({
-      title: `${eventUser?.full_name} | ${conferenceTitle}`,
-      description: `${eventUser?.full_name} の参加者情報を掲載しています。`,
+      title: `${eventUser?.display_name} | ${conferenceTitle}`,
+      description: `${eventUser?.display_name} の参加者情報を掲載しています。`,
       url: `${linkUrl}users/${userId}`,
     }),
     ...twitterOg({
-      title: `${eventUser?.full_name} | ${conferenceTitle}`,
-      description: `${eventUser?.full_name} の参加者情報を掲載しています。`,
+      title: `${eventUser?.display_name} | ${conferenceTitle}`,
+      description: `${eventUser?.display_name} の参加者情報を掲載しています。`,
       url: `${linkUrl}users/${userId}`,
     }),
   ],
@@ -72,7 +72,11 @@ useHead({
       <StatusCard :status="eventUser?.activated_at ? 'registered' : 'failed'" />
       <h2>ネームカード</h2>
       <AvatarCard
-        :signed-user="{ ...signedUser, role: eventUser?.role || 'attendee' }"
+        :signed-user="{
+          ...signedUser,
+          full_name: eventUser?.display_name || eventUser?.full_name || '参加者',
+          role: eventUser?.role || 'attendee',
+        }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <RoundButton class="btn-update" :to="`/users/edit/${userId}`">再編集</RoundButton>

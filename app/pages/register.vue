@@ -124,7 +124,7 @@ const updateReceiptId = (value: string) => {
 
             <div class="link-box">
               <!-- キャンセル -->
-              <RoundButton href="/" outline> キャンセル </RoundButton>
+              <RoundButton to="/" outline> キャンセル </RoundButton>
               <!-- 確定 -->
               <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
             </div>

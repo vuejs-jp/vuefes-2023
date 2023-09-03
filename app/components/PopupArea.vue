@@ -9,7 +9,7 @@ const props = defineProps({
     required: true,
   },
   top: {
-    type: Number,
+    type: String,
     required: true,
   },
 })
@@ -47,7 +47,7 @@ const emit = defineEmits<PopupAreaEmit>()
 css({
   '.popup-root': {
     position: 'fixed',
-    top: (props) => `${props.top}%`,
+    top: (props) => `${props.top}`,
     right: '2%',
     width: '200px',
     height: '100px',

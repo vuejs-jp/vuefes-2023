@@ -22,7 +22,7 @@ const route = useRoute()
 const userId = route.params.id as string
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { updateEventUser, uploadAvatar } = useSupabase()
+const { updateEventUser, uploadAvatar, getFullAvatarUrl } = useSupabase()
 const { eventUser } = await useUser(userId)
 const { displayNameError, receiptIdError, validateDisplayName, validateReceiptId } = useFormError()
 
@@ -31,7 +31,10 @@ const displayName = ref('')
 const receiptId = ref('')
 
 const isSubmitting = computed(() => {
-  if (displayName.value === eventUser?.display_name || picture.value === eventUser?.avatar_url)
+  if (
+    displayName.value === eventUser?.display_name ||
+    getFullAvatarUrl(picture.value) === eventUser?.avatar_url
+  )
     return false
   return displayNameError.value === ''
 })

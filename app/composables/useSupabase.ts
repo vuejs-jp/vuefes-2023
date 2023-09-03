@@ -14,7 +14,7 @@ export function useSupabase() {
     const userData = {
       ...user,
       display_name: displayName,
-      avatar_url: avatarUrl,
+      avatar_url: getFullAvatarUrl(avatarUrl),
       receipt_id: receiptId,
     }
 
@@ -36,7 +36,7 @@ export function useSupabase() {
     const userData = {
       ...user,
       display_name: displayName,
-      avatar_url: avatarUrl,
+      avatar_url: getFullAvatarUrl(avatarUrl),
       receipt_id: receiptId,
     }
 

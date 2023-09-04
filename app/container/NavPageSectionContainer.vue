@@ -17,13 +17,16 @@ const { canRegister } = useNamecard()
 
 <template>
   <div v-if="canRegister && hasAuth && eventUser?.activated_at !== undefined">
-    <AlertBar :user-id="signedUser.user_id" />
+    <AlertBar :user-id="eventUser?.user_id" />
   </div>
   <NavPageSection :has-alert="canRegister && hasAuth && eventUser?.activated_at !== undefined">
     <template #avatar>
       <template v-if="canRegister && hasAuth">
         <button @click="() => handle(isShow ? false : true)">
-          <AvatarLogo :name="signedUser.full_name" :url="signedUser.avatar_url" />
+          <AvatarLogo
+            :name="eventUser?.display_name"
+            :url="eventUser?.avatar_url || signedUser.avatar_url"
+          />
         </button>
         <template v-if="isShow">
           <PopupArea

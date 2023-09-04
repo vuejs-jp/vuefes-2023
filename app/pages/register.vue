@@ -19,7 +19,7 @@ definePageMeta({
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { addEventUser, uploadAvatar } = useSupabase()
+const { addEventUser, getFullAvatarUrl, uploadAvatar } = useSupabase()
 const { displayNameError, receiptIdError, validateDisplayName, validateReceiptId } = useFormError()
 
 const picture = ref()
@@ -88,16 +88,13 @@ const updateReceiptId = (value: string) => {
               @blur="validateDisplayName"
             />
             <!-- アバター-->
-            <InputField
-              id="avatarUrl"
-              type="search"
-              name="avatarUrl"
-              title-label="アバター画像"
-              error=""
-              :value="picture"
-              disabled
-              @input="() => {}"
-              @blur="() => {}"
+            <h3>アバター画像</h3>
+            <img
+              alt=""
+              :src="picture && getFullAvatarUrl(picture)"
+              width="120"
+              height="120"
+              decoding="async"
             />
             <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
               <div class="upload">

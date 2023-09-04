@@ -251,7 +251,7 @@ const all: Sponsor[] = [
     name: 'HENNGE株式会社',
     image: '/sponsors/hennge.png',
     categories: ['bronze', 'refreshment'],
-    url: '',
+    url: 'https://hennge.com',
   },
   {
     id: 'tam',

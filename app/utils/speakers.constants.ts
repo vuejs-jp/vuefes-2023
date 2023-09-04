@@ -310,7 +310,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/baseballyama.jpeg',
-      title: '株式会社フライル ソフトウェアエンジニア / Svelteコアチームメンバー',
+      title: '株式会社フライル ソフトウェアエンジニア\nSvelteコアチームメンバー',
       name: '山下 裕一朗',
       twitterId: 'baseballyama_',
       githubId: 'baseballyama',

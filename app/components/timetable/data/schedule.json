@@ -252,6 +252,7 @@
         "track": "medpeer",
         "sessions": [
           {
+            "id": "baseballyama",
             "title": "18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法",
             "speaker": "山下 裕一朗"
           }

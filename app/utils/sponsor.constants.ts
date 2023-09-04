@@ -247,6 +247,13 @@ const all: Sponsor[] = [
     url: 'https://tabian.co.jp',
   },
   {
+    id: 'hennge',
+    name: 'HENNGE株式会社',
+    image: '/sponsors/hennge.png',
+    categories: ['bronze', 'refreshment'],
+    url: '',
+  },
+  {
     id: 'tam',
     name: '株式会社TAM',
     image: '/sponsors/tam.png',

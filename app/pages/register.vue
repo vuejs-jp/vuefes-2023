@@ -78,11 +78,27 @@ const updateReceiptId = (value: string) => {
         <div class="form">
           <form @submit="onSubmit">
             <!-- お名前／Name  -->
-            <InputField id="displayName" name="displayName" :title-label="$t('top.register_form_display_name_label')"
-              required :error="displayNameError" @input="updateDisplayName" @blur="validateDisplayName" />
+            <InputField
+              id="displayName"
+              name="displayName"
+              :title-label="$t('top.register_form_display_name_label')"
+              required
+              :error="displayNameError"
+              @input="updateDisplayName"
+              @blur="validateDisplayName"
+            />
             <!-- アバター-->
-            <InputField id="avatarUrl" type="search" name="avatarUrl" title-label="アバター画像" error="" :value="picture"
-              disabled @input="() => { }" @blur="() => { }" />
+            <InputField
+              id="avatarUrl"
+              type="search"
+              name="avatarUrl"
+              title-label="アバター画像"
+              error=""
+              :value="picture"
+              disabled
+              @input="() => {}"
+              @blur="() => {}"
+            />
             <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
               <div class="upload">
                 <UploadLogo />
@@ -96,8 +112,15 @@ const updateReceiptId = (value: string) => {
               チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。
             </p>
             <!-- 注文番号 -->
-            <InputField id="receiptId" name="receiptId" :title-label="$t('top.register_form_receipt_id_label')" required
-              :error="receiptIdError" @input="updateReceiptId" @blur="validateReceiptId" />
+            <InputField
+              id="receiptId"
+              name="receiptId"
+              :title-label="$t('top.register_form_receipt_id_label')"
+              required
+              :error="receiptIdError"
+              @input="updateReceiptId"
+              @blur="validateReceiptId"
+            />
 
             <div class="link-box">
               <!-- キャンセル -->

@@ -41,7 +41,7 @@ const isSubmitting = computed(() => {
 
 const onSubmit = (e: Event) => {
   e.preventDefault()
-  updateEventUser(displayName.value, picture.value, receiptId.value, signedUser.user_id)
+  updateEventUser(displayName.value, picture.value, signedUser.user_id)
 }
 
 const checkFiles = async (files: File[]) => {

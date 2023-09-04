@@ -27,17 +27,11 @@ export function useSupabase() {
     onSuccess('登録しました', 3000)
   }
 
-  async function updateEventUser(
-    displayName: string,
-    avatarUrl: string,
-    receiptId: string,
-    userId: string,
-  ) {
+  async function updateEventUser(displayName: string, avatarUrl: string, userId: string) {
     const userData = {
-      ...user,
+      // ...user,
       display_name: displayName,
       avatar_url: getFullAvatarUrl(avatarUrl),
-      receipt_id: receiptId,
     }
 
     const { error } = await client.from('event_users').update(userData).eq('user_id', userId)

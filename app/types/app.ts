@@ -95,7 +95,6 @@ export type Speaker = {
 
 export type Session = {
   title: string
-  description: string
   type: 'main' | 'lt'
   track?: Tracks
   time: string
@@ -106,7 +105,6 @@ export type SpeakerProfile = {
   image: string
   title: string
   name: string
-  description: string
   githubId?: string
   twitterId?: string
   mastodonUrl?: string

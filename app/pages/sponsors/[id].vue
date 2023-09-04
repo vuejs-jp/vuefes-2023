@@ -24,7 +24,6 @@ const emptySponsorSpeaker: SponsorSpeaker = {
   type: 'domestic',
   session: {
     title: '',
-    description: '',
     time: '',
     type: 'main',
   },
@@ -34,7 +33,6 @@ const emptySponsorSpeaker: SponsorSpeaker = {
       title: '',
       name: '',
       twitterId: '',
-      description: '',
     },
   ],
   sponsorId: '',

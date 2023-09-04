@@ -7,7 +7,6 @@ export const speakers: Speaker[] = [
     type: 'evan',
     session: {
       title: 'キーノート',
-      description: '＜未定＞',
       time: '10:25 - 11:05',
       type: 'main',
     },
@@ -17,8 +16,6 @@ export const speakers: Speaker[] = [
       name: 'Evan You',
       twitterId: 'youyuxi',
       githubId: 'yyx990803',
-      description:
-        'Evan is an independent open source developer and is the creator / project lead of Vue and Vite.',
     },
   },
 
@@ -28,8 +25,6 @@ export const speakers: Speaker[] = [
     type: 'foreign',
     session: {
       title: 'Nuxt to the Edge',
-      description:
-        'Learn how to build a Vue application deployed to the edge to bring a blazing fast experience to your end users.',
       track: 'cloudsign',
       time: '13:30 - 14:00',
       type: 'main',
@@ -40,8 +35,6 @@ export const speakers: Speaker[] = [
       name: 'Sebastien Chopin',
       twitterId: 'Atinux',
       githubId: 'Atinux',
-      description:
-        'Author of Nuxt and CEO at NuxtLabs. I am passionate about open source and developer experience. I strive to make the web faster and create the flow feeling for developers by making the best tools to express their full creativity.',
     },
   },
   {
@@ -49,7 +42,6 @@ export const speakers: Speaker[] = [
     type: 'foreign',
     session: {
       title: '',
-      description: '＜未定＞',
       track: 'cloudsign',
       time: '15:45 - 16:15',
       type: 'main',
@@ -60,7 +52,6 @@ export const speakers: Speaker[] = [
       name: 'Matias Capeletto',
       twitterId: 'patak_dev',
       githubId: 'patak-dev',
-      description: 'A collaborative being, working full time on the Vite ecosystem @StackBlitz.',
     },
   },
   {
@@ -68,7 +59,6 @@ export const speakers: Speaker[] = [
     type: 'foreign',
     session: {
       title: '',
-      description: '＜未定＞',
       track: 'cloudsign',
       time: '15:00 - 15:30',
       type: 'main',
@@ -79,8 +69,6 @@ export const speakers: Speaker[] = [
       name: 'Anthony Fu',
       twitterId: 'antfu7',
       githubId: 'antfu',
-      description:
-        'Anthony is a fanatical open sourceror. DX and ecosystem for Vue, Vite and Nuxt.',
     },
   },
   {
@@ -88,7 +76,6 @@ export const speakers: Speaker[] = [
     type: 'foreign',
     session: {
       title: '',
-      description: '＜未定＞',
       track: 'cloudsign',
       time: '14:15 - 14:45',
       type: 'main',
@@ -100,8 +87,6 @@ export const speakers: Speaker[] = [
       twitterId: 'danielcroe',
       githubId: 'danielroe',
       mastodonUrl: 'https://mastodon.roe.dev/@daniel',
-      description:
-        "Daniel leads the Nuxt core team - previously CTO of SaaS startup and founder of a creative agency focusing on clarity of vision and message. His open-source work has a focus in the Vue.js and Nuxt ecosystems and he's involved in consultancy with companies around the world, particularly around JAMstack, serverless and software architecture. He's based in the North East of England where he lives with his family, three cats, and a dog.",
     },
   },
 
@@ -111,7 +96,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'マルチスレッドフレンドリーなJavaScriptを求めて',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '16:30 - 17:00',
       type: 'main',
@@ -123,7 +107,6 @@ export const speakers: Speaker[] = [
       twitterId: 'sapphi_red',
       githubId: 'sapphi-red',
       mastodonUrl: 'https://m.webtoo.ls/@sapphi_red',
-      description: 'ユーザーフレンドリーな開発を目指して活動しています。',
     },
   },
   {
@@ -131,7 +114,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'eslint-plugin-vue の現状と今後',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '17:15 - 17:45',
       type: 'main',
@@ -142,7 +124,6 @@ export const speakers: Speaker[] = [
       name: '太田 洋介',
       twitterId: 'omoteota',
       githubId: 'ota-meshi',
-      description: '',
     },
   },
   {
@@ -150,7 +131,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '15:00 - 15:30',
       type: 'main',
@@ -161,7 +141,6 @@ export const speakers: Speaker[] = [
       name: 'wattanx / ワッタン',
       twitterId: 'pontaxx',
       githubId: 'wattanx',
-      description: '',
     },
   },
   {
@@ -169,7 +148,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
-      description: '＜未定＞',
       track: 'm3',
       time: '16:30 - 17:00',
       type: 'main',
@@ -180,7 +158,6 @@ export const speakers: Speaker[] = [
       name: 'sorami / ソラミ',
       twitterId: 'sorami',
       githubId: 'sorami',
-      description: '',
     },
   },
   {
@@ -188,7 +165,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue Language Server から生まれた Volar.js と、それが秘める可能性',
-      description: '＜未定＞',
       track: 'm3',
       time: '15:00 - 15:30',
       type: 'main',
@@ -199,7 +175,6 @@ export const speakers: Speaker[] = [
       name: 'mizdra / ミズドラ',
       twitterId: 'mizdra',
       githubId: 'mizdra',
-      description: '',
     },
   },
   {
@@ -207,7 +182,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Deep dive to unjs and Nuxt 3',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '15:45 - 16:15',
       type: 'main',
@@ -218,7 +192,6 @@ export const speakers: Speaker[] = [
       name: 'Nozomu Ikuta',
       twitterId: 'NozomuIkuta',
       githubId: 'NozomuIkuta',
-      description: '',
     },
   },
   {
@@ -226,7 +199,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
-      description: '＜未定＞',
       track: 'm3',
       time: '13:30 - 14:00',
       type: 'main',
@@ -239,7 +211,6 @@ export const speakers: Speaker[] = [
       twitterId: 'yamanoku',
       githubId: 'yamanoku',
       mastodonUrl: 'https://mstdn.jp/@yamanoku',
-      description: '',
     },
   },
   {
@@ -247,7 +218,6 @@ export const speakers: Speaker[] = [
     type: 'foreign',
     session: {
       title: 'Getting your head around your `<head>`',
-      description: '＜未定＞',
       track: 'cloudsign',
       time: '16:30 - 17:00',
       type: 'main',
@@ -258,7 +228,6 @@ export const speakers: Speaker[] = [
       name: 'Harlan Wilton',
       twitterId: 'harlan_zw',
       githubId: 'harlan-zw',
-      description: '',
     },
   },
   {
@@ -266,7 +235,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Nuxt 3でJamstackテンプレートを作るときの考え方',
-      description: '＜未定＞',
       track: 'm3',
       time: '14:15 - 14:45',
       type: 'main',
@@ -276,7 +244,6 @@ export const speakers: Speaker[] = [
       title: '株式会社TAMTO フロントエンドエンジニア',
       name: 'まぁし（知念）',
       twitterId: 'chocodogmagic',
-      description: '',
     },
   },
   {
@@ -284,7 +251,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'STUDIOの作り方 2023 ver.',
-      description: '＜未定＞',
       track: 'm3',
       time: '17:15 - 17:45',
       type: 'main',
@@ -295,7 +261,6 @@ export const speakers: Speaker[] = [
       name: 'Keima',
       twitterId: 'keima_studio',
       githubId: 'keimakai',
-      description: '',
     },
   },
   {
@@ -303,7 +268,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: '18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '14:15 - 14:45',
       type: 'main',
@@ -314,7 +278,6 @@ export const speakers: Speaker[] = [
       name: '山下 裕一朗',
       twitterId: 'baseballyama_',
       githubId: 'baseballyama',
-      description: '',
     },
   },
 
@@ -324,7 +287,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -335,7 +297,6 @@ export const speakers: Speaker[] = [
       name: 'きらぷか',
       twitterId: 'kira_puka',
       githubId: 'memory-lovers',
-      description: '',
     },
   },
   {
@@ -343,7 +304,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'WebGISとVue.jsの親和性について',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -354,7 +314,6 @@ export const speakers: Speaker[] = [
       name: '楢山哲弘',
       twitterId: 'northprint',
       githubId: 'northprint',
-      description: '',
     },
   },
   {
@@ -362,7 +321,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue を使って Grid System を実装した話',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -373,7 +331,6 @@ export const speakers: Speaker[] = [
       name: 't0yohei / トヨヘイ',
       twitterId: 't0yohei',
       githubId: 't0yohei',
-      description: '',
     },
   },
   {
@@ -381,7 +338,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue3/Electronで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -392,7 +348,6 @@ export const speakers: Speaker[] = [
       name: '0yu / オユ',
       twitterId: 'yud0uhu',
       githubId: 'yud0uhu',
-      description: '',
     },
   },
   {
@@ -400,7 +355,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'SOLID 原則に基づくSFC 実装',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '15:45 - 16:05',
       type: 'lt',
@@ -412,7 +366,6 @@ export const speakers: Speaker[] = [
       name: '53able / ゴー',
       twitterId: '53able',
       githubId: '53able',
-      description: '',
     },
   },
   {
@@ -420,7 +373,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Composition API時代のPub/Subパターンでの状態管理',
-      description: '＜未定＞',
       track: 'medpeer',
       time: '15:45 - 16:05',
       type: 'lt',
@@ -431,7 +383,6 @@ export const speakers: Speaker[] = [
       name: 'fuqda / フクダ',
       twitterId: 'fuqda90',
       githubId: 'Shigeyuki-fukuda',
-      description: '',
     },
   },
   {
@@ -440,7 +391,6 @@ export const speakers: Speaker[] = [
     session: {
       title:
         'Nuxt2 から 3 へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話',
-      description: '＜未定＞',
       track: 'm3',
       time: '15:45 - 16:05',
       type: 'lt',
@@ -452,7 +402,6 @@ export const speakers: Speaker[] = [
       name: 'みゅーとん',
       twitterId: '_mew_ton',
       githubId: 'mew-ton',
-      description: '',
     },
   },
   {
@@ -460,7 +409,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Exploring the Power of Error Handling in Vue JS',
-      description: '＜未定＞',
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',
@@ -471,7 +419,6 @@ export const speakers: Speaker[] = [
       name: 'Hieu / グエンゴックヒエウ',
       twitterId: 'hieune_151',
       githubId: 'hieu-brain',
-      description: '',
     },
   },
   {
@@ -479,7 +426,6 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'フルスクラッチECの基盤であるNuxt2を3に移行し、開発の効率性とパフォーマンスを高める',
-      description: '＜未定＞',
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',
@@ -490,7 +436,6 @@ export const speakers: Speaker[] = [
       name: '湧川 仁貴',
       twitterId: '_wakkn',
       githubId: 'waku-waku',
-      description: '',
     },
   },
 ]

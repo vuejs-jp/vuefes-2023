@@ -246,7 +246,7 @@ export const speakers: Speaker[] = [
     id: 'harlan-zw',
     type: 'foreign',
     session: {
-      title: 'Getting Your Head Around useHead',
+      title: 'Getting your head around your `<head>`',
       description: '＜未定＞',
       track: 'cloudsign',
       time: '16:30 - 17:00',
@@ -254,7 +254,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/harlan_zw.jpg',
-      title: '',
+      title: 'Open-source developer',
       name: 'Harlan Wilton',
       twitterId: 'harlan_zw',
       githubId: 'harlan-zw',
@@ -295,6 +295,25 @@ export const speakers: Speaker[] = [
       name: 'Keima',
       twitterId: 'keima_studio',
       githubId: 'keimakai',
+      description: '',
+    },
+  },
+  {
+    id: 'baseballyama',
+    type: 'domestic',
+    session: {
+      title: '18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法',
+      description: '＜未定＞',
+      track: 'medpeer',
+      time: '14:15 - 14:45',
+      type: 'main',
+    },
+    profile: {
+      image: '/speakers/baseballyama.jpg',
+      title: '株式会社フライル ソフトウェアエンジニア / Svelteコアチームメンバー',
+      name: '山下 裕一朗',
+      twitterId: 'baseballyama_',
+      githubId: 'baseballyama',
       description: '',
     },
   },

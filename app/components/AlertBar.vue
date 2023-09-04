@@ -5,10 +5,12 @@ const props = defineProps({
     required: true,
   },
 })
+
+const nameCardUrl = computed(() => `/users/${props.userId}`)
 </script>
 
 <template>
-  <nuxt-link to="/user-edit" class="alert-root">
+  <nuxt-link :to="nameCardUrl" class="alert-root">
     チケット購入のまたは紐付けが未完了です。プロフィール画面から登録してください。
   </nuxt-link>
 </template>

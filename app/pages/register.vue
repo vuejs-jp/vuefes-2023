@@ -19,7 +19,7 @@ definePageMeta({
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { updateEventUser, uploadAvatar } = useSupabase()
+const { addEventUser, uploadAvatar } = useSupabase()
 const { displayNameError, receiptIdError, validateDisplayName, validateReceiptId } = useFormError()
 
 const picture = ref()
@@ -33,7 +33,7 @@ const isSubmitting = computed(() => {
 
 const onSubmit = (e: Event) => {
   e.preventDefault()
-  updateEventUser(displayName.value, picture.value, receiptId.value, signedUser.user_id)
+  addEventUser(displayName.value, picture.value, receiptId.value)
 }
 
 const checkFiles = async (files: File[]) => {

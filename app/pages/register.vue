@@ -105,9 +105,7 @@ const updateReceiptId = (value: string) => {
               </div>
             </DragDropArea>
             <h3>チケット情報の入力</h3>
-            <p>
-              購入完了メールに記載されている「注文番号」を入力してください。
-            </p>
+            <p>購入完了メールに記載されている「注文番号」を入力してください。</p>
             <!-- 注文番号 -->
             <InputField
               id="receiptId"

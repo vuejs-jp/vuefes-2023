@@ -19,11 +19,11 @@ const { signIn } = useAuth()
     <div class="container">
       <h3 class="title">ソーシャルアカウントとの連携</h3>
       <p class="detail">
-        ネームカードを作成するには、あらかじめ<a :href="ticketUrl" target="_blank" rel="noreferrer">チケットの購入</a>が必要です。チケット購入後、以下のいずれかのソーシャルアカウントからログインし、必要な情報をご登録ください。
+        ネームカードを作成するには、あらかじめ<a :href="ticketUrl" target="_blank" rel="noreferrer"
+          >チケットの購入</a
+        >が必要です。チケット購入後、以下のいずれかのソーシャルアカウントからログインし、必要な情報をご登録ください。
       </p>
-      <p class="detail">
-        ※ネームカード作成は必須ではありません。
-      </p>
+      <p class="detail">※ネームカード作成は必須ではありません。</p>
       <ul>
         <li>
           <RoundButton outline @click="() => signIn('google')">

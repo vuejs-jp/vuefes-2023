@@ -110,7 +110,7 @@ export default {
       contact_form_name_placeholder: '山田太郎',
       contact_form_mail_label: 'メールアドレス／Mail',
       /* register page */
-      register_form_display_name_label: 'お名前／Name　12文字以内',
+      register_form_display_name_label: 'お名前／Name　全角12文字（半角24文字）以内',
       register_form_avatar_label: 'アバター／Avatar',
       register_form_secret_word_label: 'あいことば',
       register_form_receipt_id_label: '注文番号',

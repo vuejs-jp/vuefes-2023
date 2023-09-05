@@ -27,7 +27,7 @@ css({
     flexDirection: 'column',
     gap: 'calc({space.8} * 1)',
     padding: 'calc({space.8} * 3)',
-    width: '960px',
+    width: '760px',
     background: '{color.white}',
     color: (props) => props.status === 'registered' ? '{color.vue.green}' : '{color.sangosyo}',
     border: (props) => props.status === 'registered' ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',

@@ -4,6 +4,7 @@ import GitHubSvg from '~/assets/logo/github_logo.svg'
 import DialogArea from '~/components/DialogArea.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import useAuth from '~/composables/useAuth'
+import { ticketUrl } from '~/utils/constants'
 
 interface IntegrationCardEmit {
   (e: 'on-close'): void
@@ -18,10 +19,11 @@ const { signIn } = useAuth()
     <div class="container">
       <h3 class="title">ソーシャルアカウントとの連携</h3>
       <p class="detail">
-        {{
-          'オリジナルのネームカード作成には下のいずれかからソーシャルアカウントからログインしてください。\nその後、チケット購入情報との紐付けを行ってください。'
-        }}
+        ネームカードを作成するには、あらかじめ<a :href="ticketUrl" target="_blank" rel="noreferrer"
+          >チケットの購入</a
+        >が必要です。チケット購入後、以下のいずれかのソーシャルアカウントからログインし、必要な情報をご登録ください。
       </p>
+      <p class="detail">※ネームカード作成は必須ではありません。</p>
       <ul>
         <li>
           <RoundButton outline @click="() => signIn('google')">
@@ -82,9 +84,18 @@ css({
     fontWeight: 700,
   },
   '.detail': {
+    width: '100%',
     fontSize: 'calc(16*{fontSize.base})',
     fontWeight: 500,
     whiteSpace: 'pre-wrap',
+    textAlign: 'left',
+  },
+  '.detail a': {
+    color: '{color.vue.blue}',
+    textDecoration: 'underline',
+  },
+  '.detail a:hover': {
+    textDecoration: 'none',
   },
   '.separator': {
     display: 'grid',

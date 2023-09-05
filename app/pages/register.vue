@@ -74,7 +74,7 @@ const updateReceiptId = (value: string) => {
     <section>
       <h2>ネームカードの作成</h2>
       <div class="form-root">
-        <p>来場時に発行されるネームカードの情報を入力します。</p>
+        <p>当日会場でお渡しするネームカードの情報を入力してください。</p>
         <div class="form">
           <form @submit="onSubmit">
             <!-- お名前／Name  -->
@@ -88,7 +88,7 @@ const updateReceiptId = (value: string) => {
               @blur="validateDisplayName"
             />
             <!-- アバター-->
-            <h3>アバター画像</h3>
+            <h3>アバター／Avatar</h3>
             <img
               alt=""
               :src="picture && getFullAvatarUrl(picture)"
@@ -106,7 +106,7 @@ const updateReceiptId = (value: string) => {
             </DragDropArea>
             <h3>チケット情報の入力</h3>
             <p>
-              チケット購入時に入力した「あいことば」と、購入完了メールに記載されている「注文番号」を入力してください。
+              購入完了メールに記載されている「注文番号」を入力してください。
             </p>
             <!-- 注文番号 -->
             <InputField

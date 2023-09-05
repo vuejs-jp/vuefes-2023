@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import { useSession } from '~/composables/useSession'
+import { Session } from '~/types/timetable'
 
 type Props = {
   track?: string
   sponsorSession?: string
   isTranslation?: boolean
-  sessions: {
-    id?: string
-    subTitle?: string
-    title?: string
-    speaker?: string
-  }[]
+  sessions: Session[]
 }
 
 const props = defineProps<Props>()

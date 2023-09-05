@@ -48,7 +48,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/matias.jpg',
-      title: 'Vite Core team Member',
+      title: 'Vite Core Team Member',
       name: 'Matias Capeletto',
       twitterId: 'patak_dev',
       githubId: 'patak-dev',
@@ -65,7 +65,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/antfu.png',
-      title: 'Vue/Vite/Nuxt Core team Member',
+      title: 'Vue/Vite/Nuxt Core Team Member',
       name: 'Anthony Fu',
       twitterId: 'antfu7',
       githubId: 'antfu',
@@ -102,7 +102,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/sapphi_red.png',
-      title: 'Vite core team member\n東工大デジタル創作同好会traP所属',
+      title: 'Vite Core Team Member\n東工大デジタル創作同好会traP所属',
       name: '翠 / sapphi-red',
       twitterId: 'sapphi_red',
       githubId: 'sapphi-red',
@@ -121,7 +121,7 @@ export const speakers: Speaker[] = [
     profile: {
       image: '/speakers/ota-meshi.jpg',
       title: 'フューチャー株式会社\nTechnology Innovation Group シニアアーキテクト',
-      name: '太田 洋介',
+      name: '太田 洋介 / ota-meshi',
       twitterId: 'omoteota',
       githubId: 'ota-meshi',
     },
@@ -171,7 +171,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/mizdra.png',
-      title: '株式会社はてな Webアプリケーションエンジニア\nフロントエンドエキスパート',
+      title: '株式会社はてな\nWebアプリケーションエンジニア フロントエンドエキスパート',
       name: 'mizdra / ミズドラ',
       twitterId: 'mizdra',
       githubId: 'mizdra',
@@ -181,14 +181,14 @@ export const speakers: Speaker[] = [
     id: 'nozomu-ikuta',
     type: 'domestic',
     session: {
-      title: 'Deep dive to unjs and Nuxt 3',
+      title: 'Deep Dive to UnJS and Nuxt 3',
       track: 'medpeer',
       time: '15:45 - 16:15',
       type: 'main',
     },
     profile: {
       image: '/speakers/nozomu_ikuta.png',
-      title: 'unjsメンバー\nVue.js日本ユーザーグループコアスタッフ',
+      title: 'グローバル・ブレイン株式会社\nUnJS Team Member / Vue.js-JP Core Staff',
       name: 'Nozomu Ikuta',
       twitterId: 'NozomuIkuta',
       githubId: 'NozomuIkuta',
@@ -217,14 +217,14 @@ export const speakers: Speaker[] = [
     id: 'harlan-zw',
     type: 'foreign',
     session: {
-      title: 'Getting your head around your `<head>`',
+      title: 'Getting your head around your <head>',
       track: 'cloudsign',
       time: '16:30 - 17:00',
       type: 'main',
     },
     profile: {
       image: '/speakers/harlan_zw.jpg',
-      title: 'Open-source developer',
+      title: 'Open-Source Developer',
       name: 'Harlan Wilton',
       twitterId: 'harlan_zw',
       githubId: 'harlan-zw',
@@ -257,8 +257,8 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: '/speakers/keima.jpg',
-      title: '',
-      name: 'Keima',
+      title: 'STUDIO Inc. CPO / Founder',
+      name: '甲斐 啓真 / Keima',
       twitterId: 'keima_studio',
       githubId: 'keimakai',
     },

@@ -62,6 +62,7 @@ onMounted(() => {
   height: 100%;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #eee);
   transition: width 0.2s ease-out;
+  pointer-events: none;
 }
 
 .is-left-scrollable::after {
@@ -73,6 +74,7 @@ onMounted(() => {
   height: 100%;
   background: linear-gradient(to left, rgba(255, 255, 255, 0), #eee);
   transition: width 0.2s ease-out;
+  pointer-events: none;
 }
 
 .is-right-scrollable.is-left-scrollable.timetable-wrapper::before,

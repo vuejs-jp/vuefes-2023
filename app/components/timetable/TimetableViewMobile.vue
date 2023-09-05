@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Session } from '~/types/timetable'
 import _timetables from './data/scheduleMobile.json'
 
 type TimetableType = {
@@ -7,11 +8,7 @@ type TimetableType = {
     track?: string
     sponsorSession?: string
     isTranslation?: boolean
-    sessions: {
-      subTitle?: string
-      title?: string
-      speaker?: string
-    }[]
+    sessions: Session[]
   }[]
 }[]
 

@@ -43,7 +43,7 @@ const onSubmit = (e: Event) => {
   e.preventDefault()
   updateEventUser(
     displayName.value || eventUser?.display_name,
-    picture.value || eventUser.avatar_url,
+    picture.value || eventUser?.avatar_url,
     signedUser.user_id,
   )
 }

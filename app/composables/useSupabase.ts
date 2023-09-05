@@ -27,7 +27,11 @@ export function useSupabase() {
     onSuccess('登録しました', 3000)
   }
 
-  async function updateEventUser(displayName: string, avatarUrl: string, userId: string) {
+  async function updateEventUser(
+    displayName: string | undefined,
+    avatarUrl: string,
+    userId: string,
+  ) {
     const userData = {
       // ...user,
       display_name: displayName,

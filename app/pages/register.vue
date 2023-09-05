@@ -46,7 +46,7 @@ const checkFiles = async (files: File[]) => {
 
   uploadAvatar(filePath, file)
 
-  picture.value = filePath
+  picture.value = getFullAvatarUrl(filePath)
 }
 
 const updateDisplayName = (value: string) => {

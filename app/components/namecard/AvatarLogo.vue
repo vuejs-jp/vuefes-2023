@@ -38,6 +38,8 @@ const props = defineProps({
 <style lang="ts" scoped>
 css({
   '.avatar': {
+    width: '40px',
+    height: '40px',
     borderRadius: '50%',
     boxShadow: '0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
   },

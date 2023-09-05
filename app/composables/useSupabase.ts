@@ -48,11 +48,7 @@ export function useSupabase() {
   }
 
   function getFullAvatarUrl(avatarUrl: string) {
-    if (
-      (avatarUrl && avatarUrl?.startsWith('https://')) ||
-      avatarUrl?.startsWith(supabaseProjectUrl)
-    )
-      return avatarUrl
+    if (avatarUrl?.startsWith(supabaseProjectUrl)) return avatarUrl
     return `${supabaseProjectUrl}/storage/v1/object/public/avatar/${avatarUrl}`
   }
 

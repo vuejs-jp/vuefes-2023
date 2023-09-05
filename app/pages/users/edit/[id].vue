@@ -31,10 +31,7 @@ const displayName = ref('')
 const receiptId = ref('')
 
 const isSubmitting = computed(() => {
-  if (
-    displayName.value === eventUser?.display_name ||
-    getFullAvatarUrl(picture.value) === eventUser?.avatar_url
-  )
+  if (displayName.value === eventUser?.display_name || picture.value === eventUser?.avatar_url)
     return false
   return displayNameError.value === ''
 })
@@ -58,7 +55,7 @@ const checkFiles = async (files: File[]) => {
 
   uploadAvatar(filePath, file)
 
-  picture.value = filePath
+  picture.value = getFullAvatarUrl(filePath)
 }
 
 const updateDisplayName = (value: string) => {

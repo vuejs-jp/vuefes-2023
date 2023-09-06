@@ -38,7 +38,7 @@ describe('sessions detail', () => {
   describe('antfu sessions', () => {
     it('antfu', () => {
       loadPage('antfu')
-      cy.contains('h2', 'セッション')
+      cy.contains('h2', "Anthony's Roads to Open Source - The Set Theory")
       cy.wait(500)
       cy.contains('p', 'Anthony Fu')
       cy.get('img[alt="Anthony Fuの写真"]')
@@ -47,19 +47,19 @@ describe('sessions detail', () => {
   describe('daniel-roe sessions', () => {
     it('daniel-roe', () => {
       loadPage('daniel-roe')
-      cy.contains('h2', 'セッション')
+      cy.contains('h2', 'A New Nuxt')
       cy.wait(500)
       cy.contains('p', 'Daniel Roe')
       cy.get('img[alt="Daniel Roeの写真"]')
     })
   })
-  describe('daniel-roe sessions', () => {
-    it('daniel-roe', () => {
-      loadPage('daniel-roe')
-      cy.contains('h2', 'セッション')
+  describe('sapphi-red sessions', () => {
+    it('sapphi-red', () => {
+      loadPage('sapphi-red')
+      cy.contains('h2', 'マルチスレッドフレンドリーなJavaScriptを求めて')
       cy.wait(500)
-      cy.contains('p', 'Daniel Roe')
-      cy.get('img[alt="Daniel Roeの写真"]')
+      cy.contains('p', '翠 / sapphi-red')
+      cy.get('img[alt="翠 / sapphi-redの写真"]')
     })
   })
 })

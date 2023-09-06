@@ -46,6 +46,8 @@ css({
       fontWeight: 900,
     },
     '::v-deep(img)': {
+      width: '120px',
+      height: '120px',
       borderRadius: '50%',
       boxShadow: '0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
     },

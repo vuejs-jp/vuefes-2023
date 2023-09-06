@@ -105,6 +105,7 @@ const updateReceiptId = (value: string) => {
               width="120"
               height="120"
               decoding="async"
+              :style="{ width: '120px', height: '120px' }"
             />
             <DragDropArea file-name="profiledata" file-accept="image/*" @check-files="checkFiles">
               <div class="upload">

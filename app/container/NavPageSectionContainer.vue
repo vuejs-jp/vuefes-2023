@@ -22,10 +22,14 @@ const { canRegister } = useNamecard()
   <NavPageSection :has-alert="canRegister && hasAuth && eventUser?.activated_at !== undefined">
     <template #avatar>
       <template v-if="canRegister && hasAuth">
-        <button @click="() => handle(isShow ? false : true)">
+        <button
+          :style="{ width: '40px', height: '40px' }"
+          @click="() => handle(isShow ? false : true)"
+        >
           <AvatarLogo
             :name="eventUser?.display_name"
             :url="eventUser?.avatar_url || signedUser.avatar_url"
+            size="small"
           />
         </button>
         <template v-if="isShow">

@@ -1,1 +1,2 @@
-TBD
+- As we approach the one-year mark since the release of Nuxt 3, let's take a journey through the past, present, and future of Nuxt and its vibrant ecosystem. We'll reflect on the progress since Nuxt 3 was released and think about what's coming next.
+- We'll start with what's possible today, before launching into some of the experimental features that will soon become integral parts of Nuxt ... and even some unannounced things we've been working on behind the scenes.

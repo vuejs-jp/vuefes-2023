@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import SectionTitle from '~/components/SectionTitle.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
+import CommentTitle from '~/components/CommentTitle.vue'
+import { experts } from '~/utils/events-vuejs-clinic.constants'
+import { panelers } from '~/utils/events-panel-discussion.constants'
 </script>
 
 <template>
@@ -8,6 +11,30 @@ import MarkDownText from '~/components/MarkDownText.vue'
     <SectionTitle id="events" color="vue.blue" :title="'Events'" yamato-title="イベント" />
     <div class="explain">
       <MarkDownText path="event" />
+    </div>
+
+    <div class="event-title">
+      <CommentTitle color="vue.green" title="エキスパートに聞こう！" />
+      <h3 id="events-clinic">Vue.js クリニック</h3>
+      <div class="explain"><MarkDownText path="event-vuejs-clinic" /></div>
+    </div>
+    <h4 class="event-subtitle">登壇予定のエキスパート</h4>
+    <div class="teams">
+      <EventPanelerCard v-for="paneler in experts" :key="paneler.name" :team="paneler" />
+    </div>
+
+    <div class="event-title">
+      <CommentTitle color="vue.green" title="なぜVueを選んだのか？" />
+      <h3 id="events-panel">パネルディスカッション</h3>
+      <div class="explain"><MarkDownText path="event-panel-discussion" /></div>
+    </div>
+    <h4 class="event-subtitle">パネラー</h4>
+    <div class="teams">
+      <EventPanelerCard v-for="paneler in panelers" :key="paneler.name" :team="paneler" />
+    </div>
+
+    <div class="event-title">
+      <h3>その他の各種イベント</h3>
     </div>
     <div class="event-menu">
       <div class="event-card">
@@ -85,11 +112,24 @@ css({
   },
   '.explain': {
     maxWidth: '760px',
+    margin: '0 auto',
     display: 'flex',
     justifyContent: 'center',
+    textAlign: 'left',
     '::v-deep(p)': {
-      textAlign: 'left',
-    }
+      lineHeight: '1.8',
+      marginBottom: '2em',
+    },
+    '::v-deep(p:last-child)': {
+      marginBottom: '0',
+    },
+    '::v-deep(a)': {
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
+    },
   },
   '.event-menu': {
     display: 'flex',
@@ -120,6 +160,21 @@ css({
       },
     }
   },
+  '.event-title': {
+    display: 'grid',
+    gap: 'calc({space.8} * 3)',
+    textAlign: 'center',
+    marginTop: 'calc({space.8} * 8)',
+    '::v-deep(h3)': {
+      fontSize: '32px',
+      fontWeight: 'bold',
+      lineHeight: '1',
+    },
+  },
+  '.event-subtitle': {
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
   '@tablet': {
     '.explain': {
       maxWidth: '730px',
@@ -139,6 +194,19 @@ css({
     '.event-card': {
       '--img-size': '690px',
       maxWidth: '690px',
+    },
+  },
+  '.teams': {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '32px',
+    maxWidth: '988px',
+    margin: '0 auto',
+    '@tablet': {
+      maxWidth: '760px',
+    },
+    '@mobile': {
+      gap: '4vw',
     },
   },
 });

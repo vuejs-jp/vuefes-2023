@@ -37,6 +37,8 @@ export function useLocale(path: Path) {
       .with('pre-order', () => `/${locale.value}/top/pre-order`)
       .with('current-day-sales', () => `/${locale.value}/top/current-day-sales`)
       .with('event', () => `/${locale.value}/top/event`)
+      .with('event-vuejs-clinic', () => `/${locale.value}/top/event-vuejs-clinic`)
+      .with('event-panel-discussion', () => `/${locale.value}/top/event-panel-discussion`)
 
     // set sponsors markdown
     m = all.reduce((prev: any, s: Sponsor) => {

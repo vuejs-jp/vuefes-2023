@@ -19,7 +19,8 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'din-2014', 'Yu Gothic Medium', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+  font-family: 'din-2014', 'Yu Gothic Medium', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic',
+    sans-serif;
 }
 
 * {

@@ -125,4 +125,23 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     ],
     sponsorId: 'stores',
   },
+  {
+    id: 'mntsq',
+    type: 'domestic',
+    session: {
+      title: 'Vue.jsプロジェクト設計のベストプラクティスを求めて',
+      time: '',
+      type: 'main',
+    },
+    profile: [
+      {
+        id: 'hiroshi-azumi',
+        image: '/sponsor-speakers/hiroshi_azumi.jpg',
+        title: 'MNTSQ株式会社\nエンジニア（フロントエンド担当）',
+        name: '安積 洋',
+        twitterId: 'cyber_snufkin',
+      },
+    ],
+    sponsorId: 'mntsq',
+  },
 ]

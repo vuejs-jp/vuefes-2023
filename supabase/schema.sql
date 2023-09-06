@@ -16,6 +16,8 @@ create table if not exists public.event_users (
 );
 comment on table public.event_users is 'Holds all of event users information';
 
+ALTER TABLE public.event_users ALTER COLUMN display_name TYPE varchar(24);
+
 create table if not exists public.pm_receipts (
     id uuid not null primary key default uuid_generate_v4(),
     role varchar(16) not null,

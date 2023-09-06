@@ -58,7 +58,7 @@ export const speakers: Speaker[] = [
     id: 'antfu',
     type: 'foreign',
     session: {
-      title: '',
+      title: "Anthony's Roads to Open Source - The Set Theory",
       track: 'cloudsign',
       time: '15:00 - 15:30',
       type: 'main',
@@ -75,7 +75,7 @@ export const speakers: Speaker[] = [
     id: 'daniel-roe',
     type: 'foreign',
     session: {
-      title: '',
+      title: 'A New Nuxt',
       track: 'cloudsign',
       time: '14:15 - 14:45',
       type: 'main',

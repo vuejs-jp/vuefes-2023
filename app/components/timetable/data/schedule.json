@@ -176,7 +176,7 @@
           {
             "isTranslation": true,
             "id": "atinux",
-            "title": "セッション",
+            "title": "Nuxt to the Edge",
             "speaker": "Sebastien Chopin"
           }
         ]
@@ -243,7 +243,7 @@
           {
             "isTranslation": true,
             "id": "daniel-roe",
-            "title": "セッション",
+            "title": "A New Nuxt",
             "speaker": "Daniel Roe"
           }
         ]
@@ -292,7 +292,7 @@
           {
             "isTranslation": true,
             "id": "antfu",
-            "title": "セッション",
+            "title": "Anthony's Roads to Open Source - The Set Theory",
             "speaker": "Anthony Fu"
           }
         ]

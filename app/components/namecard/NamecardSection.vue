@@ -27,7 +27,7 @@ const { handle, isShow } = useDialog()
     />
     <div class="center">
       <!--
-      <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline">
+      <i18n-t keypath="top.namecard_schedule_limit" tag="p" class="deadline" scope="global">
         <em>{{ $t('words.namecard_deadline_date') }}</em>
       </i18n-t>
       -->

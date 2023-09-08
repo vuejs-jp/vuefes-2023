@@ -12,7 +12,7 @@ import { ticketUrl } from '~/utils/constants'
     </div>
     <div class="center">
       <!--
-      <i18n-t keypath="top.handson_schedule_limit" tag="p" class="deadline">
+      <i18n-t keypath="top.handson_schedule_limit" tag="p" class="deadline" scope="global">
         <em>{{ $t('words.handson_deadline_date') }}</em>
       </i18n-t>
       -->

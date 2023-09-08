@@ -10,11 +10,17 @@ import { closedVolunteer } from '~/utils/status.constants'
   <div class="volunteer">
     <CommentTitle color="vue.green" title="あなたも一緒に Vue Fes Japan を盛り上げませんか？" />
     <h3><s>当日ボランティア募集</s></h3>
-    <i18n-t v-if="closedVolunteer" keypath="top.volunteer_schedule_over" tag="p" class="deadline">
+    <i18n-t
+      v-if="closedVolunteer"
+      keypath="top.volunteer_schedule_over"
+      tag="p"
+      class="deadline"
+      scope="global"
+    >
       <em>{{ $t('words.volunteer_deadline_date') }}</em>
     </i18n-t>
     <div v-if="!closedVolunteer" class="center">
-      <i18n-t keypath="top.volunteer_schedule_limit" tag="p" class="deadline">
+      <i18n-t keypath="top.volunteer_schedule_limit" tag="p" class="deadline" scope="global">
         <em>{{ $t('words.volunteer_deadline_date') }}</em>
       </i18n-t>
       <div class="apply">

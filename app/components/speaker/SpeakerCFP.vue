@@ -12,7 +12,7 @@ import { twitterDomainUrl } from '~/utils/constants'
     <div class="speaker-cfp-schedule">
       <h3>{{ $t('top.speakers_schedule_title') }}</h3>
       <!-- 応募期限 -->
-      <i18n-t keypath="top.speakers_schedule_limit" tag="p" class="deadline">
+      <i18n-t keypath="top.speakers_schedule_limit" tag="p" class="deadline" scope="global">
         <em>{{ $t('words.speakers_deadline_date') }}</em>
       </i18n-t>
       <p class="apply-button">
@@ -21,7 +21,7 @@ import { twitterDomainUrl } from '~/utils/constants'
         </RoundButton>
       </p>
       <!-- 詳細情報は、Vue Fes Japan の Twitter をご確認ください -->
-      <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
+      <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text" scope="global">
         <a
           :href="`${twitterDomainUrl}vuefes`"
           target="_blank"

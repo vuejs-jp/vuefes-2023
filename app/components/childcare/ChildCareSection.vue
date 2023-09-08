@@ -12,7 +12,7 @@ import { childCareUrl } from '~/utils/constants'
     </div>
     <div class="center">
       <!--
-      <i18n-t keypath="top.volunteer_schedule_limit" tag="p" class="deadline">
+      <i18n-t keypath="top.volunteer_schedule_limit" tag="p" class="deadline" scope="global">
         <em>{{ $t('words.volunteer_deadline_date') }}</em>
       </i18n-t>
       -->

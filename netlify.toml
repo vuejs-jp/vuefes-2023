@@ -1,9 +1,4 @@
 [[redirects]]
-  from = "/2023/*"
-  to = "/2023/index.html"
-  status = 200
-
-[[redirects]]
   from = "/*"
   to = "/2023/:splat"
   status = 301

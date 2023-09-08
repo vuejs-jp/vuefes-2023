@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Team } from '~/types/app'
+import { urlBasePath } from '~/utils/constants'
 
 const props = defineProps({
   team: {

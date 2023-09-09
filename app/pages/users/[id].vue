@@ -13,9 +13,9 @@ import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
 // import UserForDev from '~/components/UserForDev.vue'
 // import { isProd } from '~/utils/environment.constants'
 
-definePageMeta({
+/*definePageMeta({
   middleware: ['error'],
-})
+})*/
 
 const route = useRoute()
 const userId = route.params.id as string

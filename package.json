@@ -6,6 +6,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "debug": "npm run generate:transpile && npm run debug-posttranspile && netlify serve --dir=dist",
+    "debug-posttranspile": "mv .output/public .output/2023 && mkdir .output/public && mv .output/2023 .output/public",
     "prepare": "husky install",
     "dev": "nuxt dev",
     "build": "nuxt build",

@@ -16,7 +16,7 @@ import { ticketUrl } from '~/utils/constants'
     </div>
     <div class="personal-sponsor-apply">
       <!--
-      <i18n-t keypath="top.sponsors_personal_limit" tag="p" class="personal-sponsor-limit">
+      <i18n-t keypath="top.sponsors_personal_limit" tag="p" class="personal-sponsor-limit" scope="global">
         <strong>{{ $t('words.sponsors_personal_deadline_date') }}</strong>
       </i18n-t>
       -->

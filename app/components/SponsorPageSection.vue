@@ -14,7 +14,13 @@ import { closedSponsor } from '~/utils/status.constants'
         title="Sponsors"
         :yamato-title="$t('top.sponsors_subtitle')"
       />
-      <i18n-t v-if="closedSponsor" keypath="top.sponsors_schedule_over" tag="p" class="deadline">
+      <i18n-t
+        v-if="closedSponsor"
+        keypath="top.sponsors_schedule_over"
+        tag="p"
+        class="deadline"
+        scope="global"
+      >
         <em>{{ $t('words.sponsors_deadline_date') }}</em>
       </i18n-t>
       <template v-if="!closedSponsor">
@@ -22,11 +28,16 @@ import { closedSponsor } from '~/utils/status.constants'
           <MarkDownText path="sponsor" />
         </div>
         <!--
-        <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline">
+        <i18n-t keypath="top.sponsors_schedule_limit" tag="p" class="deadline" scope="global">
           <em>{{ $t('words.sponsors_deadline_date') }}</em>
         </i18n-t>
         -->
-        <i18n-t keypath="top.sponsors_schedule_extend" tag="p" class="deadline-extend">
+        <i18n-t
+          keypath="top.sponsors_schedule_extend"
+          tag="p"
+          class="deadline-extend"
+          scope="global"
+        >
           <em>{{ $t('words.sponsors_deadline_date') }}</em>
         </i18n-t>
         <div class="link-box">
@@ -42,7 +53,7 @@ import { closedSponsor } from '~/utils/status.constants'
             {{ $t('words.sponsordoc') }}
           </RoundButton>
         </div>
-        <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text">
+        <i18n-t keypath="top.sponsors_infolink" tag="p" class="twitter-text" scope="global">
           <a
             :href="`${twitterDomainUrl}vuefes`"
             target="_blank"

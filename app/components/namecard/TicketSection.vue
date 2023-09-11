@@ -15,7 +15,7 @@ import { ticketUrl } from '~/utils/constants'
     </div>
     <div class="center">
       <!--
-      <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline">
+      <i18n-t keypath="top.tickets_schedule_limit" tag="p" class="deadline" scope="global">
         <em>{{ $t('words.tickets_deadline_date') }}</em>
       </i18n-t>
       -->
@@ -39,12 +39,12 @@ import { ticketUrl } from '~/utils/constants'
         <template #default>
           <div class="price-list">
             <div class="price">
-              <i18n-t keypath="top.ticket_early_price" tag="p">
+              <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
                 <strong>7,000</strong>
               </i18n-t>
               <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
             </div>
-            <i18n-t keypath="top.ticket_price" tag="p" class="price">
+            <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>8,000</strong>
             </i18n-t>
           </div>
@@ -60,12 +60,12 @@ import { ticketUrl } from '~/utils/constants'
         <template #default>
           <div class="price-list">
             <div class="price">
-              <i18n-t keypath="top.ticket_early_price" tag="p">
+              <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
                 <strong>10,000</strong>
               </i18n-t>
               <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
             </div>
-            <i18n-t keypath="top.ticket_price" tag="p" class="price">
+            <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>11,000</strong>
             </i18n-t>
           </div>
@@ -104,7 +104,7 @@ import { ticketUrl } from '~/utils/constants'
           <nuxt-link to="/#personal-sponsor">個人スポンサーチケット</nuxt-link>
         </template>
         <template #default>
-          <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price">
+          <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
             <strong>10,000</strong>
           </i18n-t>
           <p class="price-des">

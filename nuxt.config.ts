@@ -103,6 +103,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  routeRules: {
+    '/register/**': { ssr: false },
+    '/users/**': { ssr: false },
+  },
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_GTAG_ID,

@@ -35,9 +35,14 @@ export default defineNuxtConfig({
     debug: false,
     runtime: true,
   },
-  supabase: {
-    redirect: false,
-  },
+  /**
+   * NOTE:
+   *  一旦supabaseの設定無効にする。
+   *  詳細スレ: https://vuejs-jp.slack.com/archives/C04G9G31VC2/p1693224416617309
+   */
+  // supabase: {
+  //   redirect: false,
+  // },
   ogImage: {
     playground: true,
     runtimeBrowser: true,

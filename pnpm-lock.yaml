@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -41,8 +41,8 @@ devDependencies:
     specifier: 8.0.0-beta.13
     version: 8.0.0-beta.13(rollup@3.27.2)
   '@nuxtjs/supabase':
-    specifier: 1.0.1
-    version: 1.0.1(rollup@3.27.2)
+    specifier: 0.3.6
+    version: 0.3.6(rollup@3.27.2)
   '@types/node':
     specifier: 18.13.0
     version: 18.13.0
@@ -1039,6 +1039,11 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /@intlify/shared@9.3.0:
+    resolution: {integrity: sha512-MMGRz6zWxtz7rHtxIIdnyb8SYOIaaseN1IvUhAEs9tOW4u77RD4DFp4qgPXesp2Gxo/5QitH9kwSs0jnxGUNEw==}
+    engines: {node: '>= 16'}
+    dev: true
+
   /@intlify/shared@9.3.0-beta.22:
     resolution: {integrity: sha512-GS+OHgYcHaq7a+zC1dlVvEHUYHVPKPC/tV3OmFyKJ2Lm7qAFmX29MQn9WOG4WtUme86tPp5LRFz6mYL5VQUJqQ==}
     engines: {node: '>= 16'}
@@ -1046,11 +1051,6 @@ packages:
 
   /@intlify/shared@9.3.0-beta.24:
     resolution: {integrity: sha512-AKxJ8s7eKIQWkNaf4wyyoLRwf4puCuQgjSChlDJm5JBEt6T8HGgnYTJLRXu6LD/JACn3Qwu6hM/XRX1c9yvjmQ==}
-    engines: {node: '>= 16'}
-    dev: true
-
-  /@intlify/shared@9.3.0-beta.26:
-    resolution: {integrity: sha512-RpCtfSYIg4tSskrazTr5+WCHyw6qpgwdIxC+x3nCnrPGxyk+en9FoSbadVfx/w7uDTdyhKslEw4d2+qhNc0s4Q==}
     engines: {node: '>= 16'}
     dev: true
 
@@ -1710,7 +1710,7 @@ packages:
     resolution: {integrity: sha512-S2sF4hLQWS48lWPpRT8xqVUFuwFGTgeKvojp8vL/iP79fWxudua2DWXR15T8C2zpauYwNgEpEWJmy6vxY2ZQeg==}
     hasBin: true
     dependencies:
-      '@nuxt/kit': 3.6.5(rollup@3.27.2)
+      '@nuxt/kit': 3.7.0(rollup@3.27.2)
       chalk: 5.3.0
       ci-info: 3.8.0
       consola: 3.2.3
@@ -1895,11 +1895,11 @@ packages:
       - vue-router
     dev: true
 
-  /@nuxtjs/supabase@1.0.1(rollup@3.27.2):
-    resolution: {integrity: sha512-rmWVYU42EEoXdzWvjHKosHyn9vXrp2M1WX4zAM8q3SFsDGKNwX2A+jrLmvM4Mv2UekrXFlnhLuGvE8dV36mQTQ==}
+  /@nuxtjs/supabase@0.3.6(rollup@3.27.2):
+    resolution: {integrity: sha512-LhBGyZ+ySEH3kxUwocMm+AaGVd7kIz//rEgOTdpTtnNPiogt5/3ZalJvt0XqZoPbk8KTf+yyOq+9SbDjup661A==}
     dependencies:
-      '@nuxt/kit': 3.6.5(rollup@3.27.2)
-      '@supabase/supabase-js': 2.31.0
+      '@nuxt/kit': 3.7.0(rollup@3.27.2)
+      '@supabase/supabase-js': 2.24.0
       defu: 6.1.2
       pathe: 1.1.1
     transitivePeerDependencies:
@@ -2335,21 +2335,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: false
-
-  /@supabase/supabase-js@2.31.0:
-    resolution: {integrity: sha512-W9/4s+KnSUX67wJKBn/3yLq+ieycnMzVjK3nNTLX5Wko3ypNT/081l2iFYrf+nsLQ1CiT4mA92I3dxCy6CmxTg==}
-    dependencies:
-      '@supabase/functions-js': 2.1.2
-      '@supabase/gotrue-js': 2.46.1
-      '@supabase/postgrest-js': 1.8.0
-      '@supabase/realtime-js': 2.7.3
-      '@supabase/storage-js': 2.5.1
-      cross-fetch: 3.1.8
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
 
   /@tootallnate/once@1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
@@ -12410,7 +12395,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/shared': 9.3.0
       '@intlify/vue-i18n-bridge': 0.8.0(vue-i18n@9.3.0-beta.22)
       '@intlify/vue-router-bridge': 0.8.0
       ufo: 1.2.0

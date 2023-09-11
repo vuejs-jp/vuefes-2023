@@ -41,7 +41,7 @@ const all: Sponsor[] = [
     name: 'JetBrains s.r.o.',
     image: '/sponsors/jetbrains.png',
     categories: ['gold'],
-    url: 'https://www.jetbrains.com/ja-jp/',
+    url: 'https://jb.gg/vuefes2023-webstorm',
   },
   {
     id: 'medpeer',

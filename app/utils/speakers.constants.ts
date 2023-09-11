@@ -41,7 +41,7 @@ export const speakers: Speaker[] = [
     id: 'patak-dev',
     type: 'foreign',
     session: {
-      title: '',
+      title: 'Vite: Stories of collaboration',
       track: 'cloudsign',
       time: '15:45 - 16:15',
       type: 'main',

@@ -29,7 +29,7 @@ describe('sessions detail', () => {
   describe('patak-dev sessions', () => {
     it('patak-dev', () => {
       loadPage('patak-dev')
-      cy.contains('h2', 'セッション')
+      cy.contains('h2', 'Vite: Stories of collaboration')
       cy.wait(500)
       cy.contains('p', 'Matias Capeletto')
       cy.get('img[alt="Matias Capelettoの写真"]')

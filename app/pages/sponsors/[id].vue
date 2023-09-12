@@ -6,7 +6,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
-import { conferenceTitle } from '~/utils/constants'
+import { conferenceTitle, urlBasePath } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
 import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
 import { useSponsor } from '~/composables/useSponsor'
@@ -106,7 +106,7 @@ useHead({
         <div class="detailhead-left">
           <p class="detailhead-img">
             <img
-              :src="sponsorData.image"
+              :src="`${urlBasePath}${sponsorData.image}`"
               :alt="`${sponsorData.name}のロゴ`"
               width="570"
               height="322"

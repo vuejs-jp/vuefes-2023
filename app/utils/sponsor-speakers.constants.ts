@@ -12,7 +12,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'takahiro-shinoda',
-        image: './sponsor-speakers/takahiro_shinoda.jpg',
+        image: 'sponsor-speakers/takahiro_shinoda.jpg',
         title: '弁護士ドットコム株式会社\nクラウドサイン事業本部 ProductEngineering部\nエンジニア',
         name: '篠田 貴大',
         twitterId: 'tttttt_621_s',
@@ -31,7 +31,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'kazumasa-yamamoto',
-        image: './sponsor-speakers/kazumasa_yamamoto.png',
+        image: 'sponsor-speakers/kazumasa_yamamoto.png',
         title: 'ユニークビジョン株式会社\nエンジニア',
         name: '山本 一将',
         twitterId: 'kyamamoto9120',
@@ -50,7 +50,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'yoshihide-unoki',
-        image: './sponsor-speakers/yoshihide_unoki.png',
+        image: 'sponsor-speakers/yoshihide_unoki.png',
         title:
           '株式会社リンクアンドモチベーション\nプロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
         name: '鵜木 義秀',
@@ -70,7 +70,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'kazuhiro-kobayashi',
-        image: './sponsor-speakers/kazuhiro_kobayashi.jpg',
+        image: 'sponsor-speakers/kazuhiro_kobayashi.jpg',
         title:
           'メドピア株式会社\nプライマリケアプラットフォーム事業部 サービス開発部 フロント・モバイルグループ\nフロントエンドテックリード',
         name: '小林 和弘',
@@ -91,7 +91,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'yuta-ichihara',
-        image: './sponsor-speakers/yuta_ichihara.png',
+        image: 'sponsor-speakers/yuta_ichihara.png',
         title: '株式会社ココナラ\nフロントエンドエンジニア',
         name: '市原 雄太',
       },
@@ -109,14 +109,14 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'daisuke-fujimura',
-        image: './sponsor-speakers/daisuke_fujimura.png',
+        image: 'sponsor-speakers/daisuke_fujimura.png',
         title: 'STORES 株式会社\nCTO',
         name: '藤村 大介',
         twitterId: 'ffu_',
       },
       {
         id: 'wattanx',
-        image: './speakers/wattanx.png',
+        image: 'speakers/wattanx.png',
         title: 'STORES 株式会社\nソフトウェアエンジニア',
         name: 'wattanx / ワッタン',
         twitterId: 'pontaxx',
@@ -136,7 +136,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     profile: [
       {
         id: 'hiroshi-azumi',
-        image: './sponsor-speakers/hiroshi_azumi.jpg',
+        image: 'sponsor-speakers/hiroshi_azumi.jpg',
         title: 'MNTSQ株式会社\nエンジニア（フロントエンド担当）',
         name: '安積 洋',
         twitterId: 'cyber_snufkin',

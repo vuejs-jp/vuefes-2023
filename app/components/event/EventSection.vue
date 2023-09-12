@@ -116,6 +116,7 @@ css({
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'left',
+    lineBreak: 'anywhere',
     '::v-deep(p)': {
       lineHeight: '1.8',
       marginBottom: '2em',

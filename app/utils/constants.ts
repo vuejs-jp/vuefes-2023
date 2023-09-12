@@ -54,7 +54,7 @@ export const calendarUrl =
 
 export const storeUrl = 'https://vuejs-jp.stores.jp'
 
-export const urlBasePath = isProd ? '/2023/' : ''
+export const urlBasePath = isProd ? '/2023/' : '/'
 
 export const vuefesTwitterID = '@vuefes'
 

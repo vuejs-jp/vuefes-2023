@@ -4,6 +4,7 @@ import { isProd } from './app/utils/environment.constants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   srcDir: 'app/',
   app: {
     buildAssetsDir: '/_nuxt/',
@@ -101,6 +102,10 @@ export default defineNuxtConfig({
         depth: 0,
         exclude: [1, 2, 3, 4, 5, 6],
       },
+    },
+    // @ts-ignore
+    experimental: {
+      clientDB: true, // https://github.com/nuxt/content/issues/2215#issuecomment-1713796864
     },
   },
   routeRules: {

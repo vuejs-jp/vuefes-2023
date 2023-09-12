@@ -59,7 +59,7 @@ const all: Sponsor[] = [
   },
   {
     id: 'plaid',
-    name: '株式会社PLAID',
+    name: '株式会社プレイド',
     image: '/sponsors/plaid.svg',
     categories: ['gold'],
     url: 'https://plaid.co.jp/',

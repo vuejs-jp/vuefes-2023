@@ -1,4 +1,3 @@
-import { resolve } from 'path'
 import svgLoader from 'vite-svg-loader'
 import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
@@ -104,12 +103,8 @@ export default defineNuxtConfig({
         exclude: [1, 2, 3, 4, 5, 6],
       },
     },
-    sources: {
-      content: {
-        driver: 'fs',
-        prefix: '/2023', // https://github.com/nuxt/content/issues/1480
-        base: resolve(__dirname, 'app/content'),
-      },
+    experimental: {
+      clientDB: true, // https://github.com/nuxt/content/issues/2215#issuecomment-1713796864
     },
   },
   routeRules: {

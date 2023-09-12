@@ -103,6 +103,7 @@ export default defineNuxtConfig({
         exclude: [1, 2, 3, 4, 5, 6],
       },
     },
+    // @ts-ignore
     experimental: {
       clientDB: true, // https://github.com/nuxt/content/issues/2215#issuecomment-1713796864
     },

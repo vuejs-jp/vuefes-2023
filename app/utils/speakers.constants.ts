@@ -11,7 +11,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/evan.jpg',
+      image: 'speakers/evan.jpg',
       title: 'Creator of Vue / Vite',
       name: 'Evan You',
       twitterId: 'youyuxi',
@@ -30,7 +30,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/sebastien.jpg',
+      image: 'speakers/sebastien.jpg',
       title: 'NuxtLabs CEO',
       name: 'Sebastien Chopin',
       twitterId: 'Atinux',
@@ -47,7 +47,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/matias.jpg',
+      image: 'speakers/matias.jpg',
       title: 'Vite Core Team Member',
       name: 'Matias Capeletto',
       twitterId: 'patak_dev',
@@ -64,7 +64,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/antfu.png',
+      image: 'speakers/antfu.png',
       title: 'Vue/Vite/Nuxt Core Team Member',
       name: 'Anthony Fu',
       twitterId: 'antfu7',
@@ -81,7 +81,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/daniel_roe.jpg',
+      image: 'speakers/daniel_roe.jpg',
       title: 'Nuxt Core Team Member',
       name: 'Daniel Roe',
       twitterId: 'danielcroe',
@@ -101,7 +101,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/sapphi_red.png',
+      image: 'speakers/sapphi_red.png',
       title: 'Vite Core Team Member\n東工大デジタル創作同好会traP所属',
       name: '翠 / sapphi-red',
       twitterId: 'sapphi_red',
@@ -119,7 +119,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/ota-meshi.jpg',
+      image: 'speakers/ota-meshi.jpg',
       title: 'フューチャー株式会社\nTechnology Innovation Group シニアアーキテクト',
       name: '太田 洋介 / ota-meshi',
       twitterId: 'omoteota',
@@ -136,7 +136,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/wattanx.png',
+      image: 'speakers/wattanx.png',
       title: 'STORES 株式会社\nソフトウェアエンジニア',
       name: 'wattanx / ワッタン',
       twitterId: 'pontaxx',
@@ -153,7 +153,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/sorami.png',
+      image: 'speakers/sorami.png',
       title: '株式会社MIERUNE',
       name: 'sorami / ソラミ',
       twitterId: 'sorami',
@@ -170,7 +170,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/mizdra.png',
+      image: 'speakers/mizdra.png',
       title: '株式会社はてな\nWebアプリケーションエンジニア フロントエンドエキスパート',
       name: 'mizdra / ミズドラ',
       twitterId: 'mizdra',
@@ -187,7 +187,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/nozomu_ikuta.png',
+      image: 'speakers/nozomu_ikuta.png',
       title: 'グローバル・ブレイン株式会社\nUnJS Team Member / Vue.js-JP Core Staff',
       name: 'Nozomu Ikuta',
       twitterId: 'NozomuIkuta',
@@ -204,7 +204,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/yamanoku.png',
+      image: 'speakers/yamanoku.png',
       title:
         '株式会社クラウドワークス\nプロダクト本部プロダクト開発部プラットフォーム開発3グループ',
       name: 'やまのく',
@@ -223,7 +223,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/harlan_zw.jpg',
+      image: 'speakers/harlan_zw.jpg',
       title: 'Open-Source Developer',
       name: 'Harlan Wilton',
       twitterId: 'harlan_zw',
@@ -240,7 +240,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/chocodogmagic.jpg',
+      image: 'speakers/chocodogmagic.jpg',
       title: '株式会社TAMTO フロントエンドエンジニア',
       name: 'まぁし（知念）',
       twitterId: 'chocodogmagic',
@@ -256,7 +256,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/keima.jpg',
+      image: 'speakers/keima.jpg',
       title: 'STUDIO Inc. CPO / Founder',
       name: '甲斐 啓真 / Keima',
       twitterId: 'keima_studio',
@@ -273,7 +273,7 @@ export const speakers: Speaker[] = [
       type: 'main',
     },
     profile: {
-      image: './speakers/baseballyama.jpeg',
+      image: 'speakers/baseballyama.jpeg',
       title: '株式会社フライル ソフトウェアエンジニア\nSvelteコアチームメンバー',
       name: '山下 裕一朗',
       twitterId: 'baseballyama_',
@@ -292,7 +292,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/kira_puka.png',
+      image: 'speakers/kira_puka.png',
       title: '合同会社めもらば 代表',
       name: 'きらぷか',
       twitterId: 'kira_puka',
@@ -309,7 +309,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/northprint.png',
+      image: 'speakers/northprint.png',
       title: '株式会社MIERUNE',
       name: '楢山哲弘',
       twitterId: 'northprint',
@@ -326,7 +326,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/t0yohei.jpg',
+      image: 'speakers/t0yohei.jpg',
       title: '株式会社クラウドワークス\nweb エンジニア',
       name: 't0yohei / トヨヘイ',
       twitterId: 't0yohei',
@@ -343,7 +343,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/yud0uhu.jpg',
+      image: 'speakers/yud0uhu.jpg',
       title: '合同会社DMM.com 動画配信事業部所属\nフロントエンドエンジニア',
       name: '0yu / オユ',
       twitterId: 'yud0uhu',
@@ -360,7 +360,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/53able.png',
+      image: 'speakers/53able.png',
       title:
         '株式会社クラウドワークス\nプロダクト本部 プロダクト開発部\nプラットフォーム開発3グループ',
       name: '53able / ゴー',
@@ -378,7 +378,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/fuqda.png',
+      image: 'speakers/fuqda.png',
       title: 'ペイトナー株式会社\nフロントエンドエンジニア',
       name: 'fuqda / フクダ',
       twitterId: 'fuqda90',
@@ -396,7 +396,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/mew-ton.png',
+      image: 'speakers/mew-ton.png',
       title:
         '株式会社 hacomono フロントエンドテックリード\n基盤グループ Enabling チーム\nVRChat フロントエンドエンジニア集会主催',
       name: 'みゅーとん',
@@ -414,7 +414,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/hieu.png',
+      image: 'speakers/hieu.png',
       title: '株式会社ブレイン フロントエンドエンジニア',
       name: 'Hieu / グエンゴックヒエウ',
       twitterId: 'hieune_151',
@@ -431,7 +431,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
     },
     profile: {
-      image: './speakers/hitoki-wakugawa.jpg',
+      image: 'speakers/hitoki-wakugawa.jpg',
       title: '株式会社TENTIAL\nテクノロジー本部EC プラットフォーム部 マネージャー',
       name: '湧川 仁貴',
       twitterId: '_wakkn',

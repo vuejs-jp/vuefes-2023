@@ -166,10 +166,6 @@ describe('top', () => {
           cy.contains('a', '個人スポンサーチケット')
           // ネームカード
           cy.contains('button', 'ネームカードを作成')
-          // 当日ボランティア
-          // cy.contains('a', 'ボランティアに応募')
-          // cy.contains('応募期限:')
-          // cy.contains(/応募期限:.*2023\/8\/31（木）23:59:59.*まで/)
           // 託児サポート
           cy.contains('a', 'サポートを申し込む')
           // ハンズオン
@@ -182,11 +178,6 @@ describe('top', () => {
         .contains('スピーカー')
         .closest('section')
         .within(() => {
-          // cy.contains('Vue Fes Japan 2023 に登壇してみませんか？')
-          // cy.contains('h3', '募集スケジュール')
-          // cy.contains(/応募期限:.*2023\/7\/15（土）23:59:59.*まで/)
-          // cy.contains('a', '申し込みフォーム')
-          // cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
           cy.get('.speaker-card').should('have.length', 33)
         })
     })
@@ -222,18 +213,6 @@ describe('top', () => {
           cy.contains(
             /スポンサー募集は 2023\/8\/31（木）23:59:59 をもって締め切りました。応募いただいた企業におかれましては感謝申し上げます。/,
           )
-          // cy.contains(
-          //   'Vue.js に関わる人々が集まる Vue Fes Japan 2023 をより良いカンファレンスにするため、スポンサー募集をします',
-          // )
-          // cy.contains('a', '申し込みフォーム')
-          // cy.contains('a', 'スポンサー資料')
-          // cy.contains('a', 'Vue Fes Japan の Twitter').should(
-          //   'have.attr',
-          //   'href',
-          //   // 'https://twitter.com/vuefes',
-          //   'https://x.com/vuefes',
-          // )
-          // cy.contains(/詳細情報は、.*Vue Fes Japan の Twitter.*をご確認ください。/)
         })
     })
     it('teams', () => {

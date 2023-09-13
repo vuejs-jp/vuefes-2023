@@ -5,6 +5,10 @@
   "author": "jiyuujin <jiyuujinunite@gmail.com>",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.16.0",
+    "pnpm": ">=8"
+  },
   "scripts": {
     "prepare": "husky install",
     "dev": "nuxi dev",

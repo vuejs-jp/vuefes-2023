@@ -19,6 +19,14 @@ export type Path =
   | 'childcare'
   | 'handson'
   | 'faq'
+  | 'personal-sponsors-text1'
+  | 'personal-sponsors-caption'
+  | 'store'
+  | 'pre-order'
+  | 'current-day-sales'
+  | 'event'
+  | 'event-vuejs-clinic'
+  | 'event-panel-discussion'
   | 'privacy'
   | 'code-of-conduct'
   | string
@@ -156,11 +164,10 @@ export type Team = {
  * store
  */
 export type StoreMenu = {
-  imgAlt: string
   imgSrc: string
-  name: string
+  nameKey: string
   price: string
-  text: string
+  textKey: string
   color?: string
   size: string
 }

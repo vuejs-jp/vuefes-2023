@@ -6,7 +6,7 @@ import { ticketUrl } from '~/utils/constants'
 
 <template>
   <div class="handson">
-    <h3 id="handson">ハンズオン</h3>
+    <h3 id="handson">{{ $t('top.handson') }}</h3>
     <div class="explain">
       <MarkDownText path="handson" />
     </div>

@@ -13,7 +13,7 @@ const { handle, isShow } = useDialog()
 <template>
   <div class="namecard">
     <CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />
-    <h3>ネームカード</h3>
+    <h3>{{ $t('top.namecard') }}</h3>
     <div class="explain">
       <MarkDownText :path="canRegister ? 'namecard' : 'prepare-namecard'" />
     </div>

@@ -27,14 +27,14 @@ import { ticketUrl } from '~/utils/constants'
       </div>
     </div>
     <CommentTitle color="vue.green" title="お早めにご購入を！" />
-    <h3>チケット種別</h3>
+    <h3>{{ $t('top.ticket_type') }}</h3>
     <div class="process-wrapper">
       <TicketCard>
         <template #image>
           <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <a :href="ticketUrl" target="_blank" rel="noreferrer">一般チケット</a>
+          <a :href="ticketUrl" target="_blank" rel="noreferrer"> {{ $t('top.general_ticket') }}</a>
         </template>
         <template #default>
           <div class="price-list">
@@ -55,7 +55,9 @@ import { ticketUrl } from '~/utils/constants'
           <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <a :href="ticketUrl" target="_blank" rel="noreferrer">一般＋アフターパーティチケット</a>
+          <a :href="ticketUrl" target="_blank" rel="noreferrer">
+            {{ $t('top.after_party_ticket') }}</a
+          >
         </template>
         <template #default>
           <div class="price-list">
@@ -76,18 +78,17 @@ import { ticketUrl } from '~/utils/constants'
           <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <nuxt-link to="/#handson">ハンズオンチケット</nuxt-link>
+          <nuxt-link to="/#handson">{{ $t('top.handson_ticket') }}</nuxt-link>
         </template>
         <template #default>
           <div class="price">
             <strong>無料</strong>
           </div>
-          <p class="price-des">
-            ※ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは<nuxt-link
-              to="/#handson"
-              >ハンズオン</nuxt-link
-            >についてをご覧ください。
-          </p>
+          <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des">
+            <nuxt-link to="/#handson">
+              {{ $t('top.handson') }}
+            </nuxt-link>
+          </i18n-t>
         </template>
       </TicketCard>
       <TicketCard>
@@ -101,18 +102,19 @@ import { ticketUrl } from '~/utils/constants'
           />
         </template>
         <template #action>
-          <nuxt-link to="/#personal-sponsor">個人スポンサーチケット</nuxt-link>
+          <nuxt-link to="/#personal-sponsor">
+            {{ $t('top.personal_sponsor_ticket') }}
+          </nuxt-link>
         </template>
         <template #default>
           <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
             <strong>10,000</strong>
           </i18n-t>
-          <p class="price-des">
-            ※当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。<br />※詳しくは<nuxt-link
-              to="/#personal-sponsor"
-              >個人スポンサー</nuxt-link
-            >についてをご覧ください。
-          </p>
+          <i18n-t keypath="top.personal_sponsor_ticket_explain" tag="p" class="price-des">
+            <nuxt-link to="/#personal-sponsor">
+              {{ $t('top.personal_sponsor') }}
+            </nuxt-link>
+          </i18n-t>
         </template>
       </TicketCard>
     </div>

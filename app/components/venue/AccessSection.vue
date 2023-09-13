@@ -18,7 +18,7 @@ const imageWidth = 320
         <div class="images">
           <img
             class="image image-hall"
-            alt="イベントホールの写真"
+            alt="Event Hall"
             src="/venue/hall.jpeg"
             :width="imageWidth"
             :height="(imageWidth * 2) / 3"
@@ -26,7 +26,7 @@ const imageWidth = 320
           />
           <img
             class="image image-entrance"
-            alt="イベント入り口の写真"
+            alt="Entrance Photo"
             src="/venue/entrance.jpg"
             :width="imageWidth"
             :height="(imageWidth * 2) / 3"
@@ -34,9 +34,9 @@ const imageWidth = 320
           />
         </div>
         <div class="route">
-          <h3>会場: 中野セントラルパーク カンファレンス</h3>
+          <h3>{{ $t('top.access_place') }}</h3>
           <p>
-            東京都中野区中野 4-10-2 中野セントラルパークサウス 1F、B1F
+            {{ $t('top.access_address') }}
             <br />
             <a
               href="https://www.nakano-centralpark.jp/conference/"
@@ -47,16 +47,18 @@ const imageWidth = 320
             </a>
           </p>
           <p>
-            JR 中央線・総武線、東京メトロ東西線
+            {{ $t('top.access_detail_1') }}
             <br />
-            「中野」駅北口より徒歩5分
+            {{ $t('top.access_detail_2') }}
             <br />
-            <small>※JR新宿駅から中野駅まで中央線で1駅（約4分）です。</small>
+            <small>
+              {{ $t('top.access_detail_3') }}
+            </small>
           </p>
         </div>
       </div>
       <RoundButton href="https://goo.gl/maps/TBWRVrd3dthoe98s5" target="_blank">
-        Google マップで見る
+        {{ $t('top.check_google_map') }}
       </RoundButton>
     </div>
   </section>

@@ -16,20 +16,24 @@ import { storeUrl } from '~/utils/constants'
       </div>
 
       <div class="store-menu">
-        <div v-for="menu in storeMenu" :key="menu.name" class="store-card">
+        <div v-for="menu in storeMenu" :key="menu.nameKey" class="store-card">
           <img
             width="308"
             height="308"
-            :alt="`${menu.imgAlt}の写真`"
+            :alt="`${$t(`top.${menu.nameKey}Vue Fes `)}'s picture'`"
             :src="`${menu.imgSrc}`"
             decoding="async"
           />
-          <div class="name">{{ menu.name }}</div>
+          <div class="name">{{ $t(`top.${menu.nameKey}`) }}</div>
           <div class="price">{{ menu.price }}</div>
-          <div class="text">{{ menu.text }}</div>
+          <div class="text">{{ $t(`top.${menu.textKey}`) }}</div>
           <div class="supplement">
-            <div v-if="menu.color" class="color">カラー：{{ menu.color }}</div>
-            <div class="size">サイズ：{{ menu.size }}</div>
+            <i18n-t keypath="top.store_item_color" tag="div" class="color">
+              {{ menu.color }}
+            </i18n-t>
+            <i18n-t keypath="top.store_item_size" tag="div" class="size">
+              {{ menu.size }}
+            </i18n-t>
           </div>
         </div>
       </div>
@@ -37,8 +41,8 @@ import { storeUrl } from '~/utils/constants'
       <div class="store-info">
         <div class="store-purchase">
           <div class="sub-title">
-            <h6>購入方法</h6>
-            <p>購入方法は以下の2種類があります。</p>
+            <h6>{{ $t('top.payment_method') }}</h6>
+            <p>{{ $t('top.payment_method_explain') }}</p>
           </div>
           <div class="pre-order">
             <MarkDownText path="pre-order" />

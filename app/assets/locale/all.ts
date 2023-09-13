@@ -51,8 +51,53 @@ export default {
        */
       message_subtitle: '想い',
       /**
+       * event section
+       */
+      payment_method: '購入方法',
+      payment_method_explain: '購入方法は以下の2種類があります。',
+      refreshment: 'リフレッシュメントスペース',
+      refreshment_explain:
+        '喉が渇いたらお茶やコーヒーはいかがですか？ 小腹を満たすお菓子もご用意しています。もちろん無料です。',
+      creative_wall: 'クリエイティブウォール',
+      creative_wall_explain:
+        '自由に書き込みができるビッグなクリエイティブウォールを会場入口に設置します。自分の名前や、Vue.jsに対する熱い想いなど、なんでも書き込み OK。記念写真にもピッタリです。',
+      events_handson: 'ハンズオン',
+      events_handson_about: 'ハンズオンについて',
+      events_handson_explain:
+        '一緒に手を動かしながら Vue.js アプリケーション開発を体験できるハンズオンを実施します。詳しくはハンズオンについてをご覧ください。',
+      tattoo_space: 'タトゥースペース',
+      tattoo_space_explain:
+        '顔や手に Vue Fes Japan 特製タトゥーシールを貼り付けて、フェス気分を盛り上げましょう。おなじみの Vue.js や Nuxt などのロゴマークをその場ですぐに付けられます。',
+      tshirt: 'Tシャツ',
+      tshirt_detail:
+        'Vue Fes Japan 2023 のオリジナル T シャツです。サイズはS・M・L・XLの4種類。前面のみのプリントです。',
+      parka: 'パーカー',
+      parka_detail:
+        'Vue Fes Japan 2023 のオリジナルパーカーです。サイズは S、M、L、XL の4種類。前・背面プリントです。',
+      vue_badge: 'アクリルピンバッジ（Vue.js）',
+      vue_badge_detail: 'Vue.jsのロゴを使ったミニサイズのアクリルピンバッジです。',
+      nuxt_badge: 'アクリルピンバッジ（Nuxt）',
+      nuxt_badge_detail: 'Nuxtのロゴを使ったミニサイズのアクリルピンバッジです。',
+      vite_badge: 'アクリルピンバッジ（Vite）',
+      vite_badge_detail: 'Viteのロゴを使ったミニサイズのアクリルピンバッジです。',
+      sticker: 'ステッカー',
+      sticker_detail: 'Vue.js、Nuxt、Vite、Vue Fes Japanのロゴが集まった特製ステッカーです。',
+      cushion: 'クッション',
+      cushion_detail:
+        '表面Vue.js、裏面Vue Fes Japanのロゴのふかふかクッションです。素材は、触り心地が良いブランケットのような生地です。',
+      tape: 'マスキングテープ',
+      tape_detail: 'マスキングテープ(15mm幅)です。',
+      store_item_color: 'カラー： {0}',
+      store_item_size: 'サイズ： {0}',
+      events_vuejs_clinic: 'Vue.js クリニック',
+      scheduled_experts: '登壇予定のエキスパート',
+      events_panel_discussion: 'パネルディスカッション',
+      panelist: 'パネラー',
+      various_other_events: 'その他の各種イベント',
+      /**
        * namecard section
        */
+      namecard: 'ネームカード',
       namecard_infolink: '最新情報は、{0} をご確認ください。',
       tickets_schedule_limit: '応募期限: {0} まで',
       ticket_early_price: '早割： {0} 円',
@@ -60,12 +105,30 @@ export default {
       ticket_price: '通常： {0} 円',
       namecard_schedule_limit: '応募期限: {0} まで',
       handson_schedule_limit: '応募期限: {0} まで',
+      ticket_type: 'チケット種別',
+      general_ticket: '一般チケット',
+      after_party_ticket: '一般＋アフターパーティチケット',
+      handson_ticket: 'ハンズオンチケット',
+      handson_ticket_explain:
+        '※ ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。\n※ 詳しくは {0} についてをご覧ください。',
+      personal_sponsor_ticket: '個人スポンサーチケット',
+      personal_sponsor_ticket_explain:
+        '※ 当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。\n※ 詳しくは {0} についてをご覧ください。',
       /**
        * volunteer section
        */
+      apply_volunteer: '当日ボランティア募集',
       volunteer_schedule_limit: '応募期限: {0} まで',
       volunteer_schedule_over:
         '当日ボランティア募集は {0} をもって締め切りました。応募いただいた方々におかれましては感謝申し上げます。',
+      /**
+       * child care section
+       */
+      child_care: '託児サポート',
+      /**
+       * handson section
+       */
+      handson: 'ハンズオン',
       /**
        * speakers section
        */
@@ -77,6 +140,12 @@ export default {
        * access section
        */
       access_subtitle: 'アクセス',
+      access_place: '会場: 中野セントラルパーク カンファレンス',
+      access_address: '東京都中野区中野 4-10-2 中野セントラルパークサウス 1F、B1F',
+      access_detail_1: 'JR 中央線・総武線、東京メトロ東西線',
+      access_detail_2: '「中野」駅北口より徒歩5分',
+      access_detail_3: '※ JR新宿駅から中野駅まで中央線で1駅（約4分）です。',
+      check_google_map: 'Googleマップを見る',
       /**
        * sponsors section
        */
@@ -85,6 +154,7 @@ export default {
       sponsors_schedule_extend: 'スポンサー募集を延長しました。\n新しい応募期限: {0} まで',
       sponsors_schedule_over:
         'スポンサー募集は {0} をもって締め切りました。応募いただいた企業におかれましては感謝申し上げます。',
+      personal_sponsor: '個人スポンサー',
       personal_sponsor_price: '{0} 円',
       sponsors_toptext: '',
       sponsors_merit1: 'クレジット掲載',
@@ -146,6 +216,7 @@ export default {
       back_top: 'Back to Top',
       apply_personal_sponsor: 'Apply Personal Sponsor',
       personal_sponsor: 'Personal Sponsor',
+      pre_order: 'Pre-Order',
     },
     category: {
       platinum: 'Platinum',
@@ -174,8 +245,54 @@ export default {
        */
       message_subtitle: 'Thought',
       /**
+       * event section
+       */
+      payment_method: 'Payment Method',
+      payment_method_explain: 'There are two ways to purchase:',
+      refreshment: 'Refreshment Space',
+      refreshment_explain:
+        "How about some tea or coffee if you're thirsty? We also have sweets that fill your stomach. Of course it's free.",
+      creative_wall: 'Creative Wall',
+      creative_wall_explain:
+        "We will set up a big creative wall at the entrance of the venue where you can write freely. You can write your name, something such as your passion for it. It's also perfect for commemorative photos.",
+      events_handson: 'Handson',
+      events_handson_about: 'About Handson',
+      events_handson_explain:
+        'Working together with Vue.js handson experience of application development will be provided. Learn more about handson.',
+      tattoo_space: 'Tattoo Space',
+      tattoo_space_explain:
+        'Get into the festival mood by pasting Vue Fes Japan special tattoo stickers on your face or hands. You can add familiar logos such as Vue.js and Nuxt on the spot.',
+      tshirt: 'T-shirt',
+      tshirt_detail:
+        'Vue Fes Japan 2023 original T-shirt. There are four sizes: S, M, L, and XL. Print on the front only.',
+      parka: 'Parka',
+      parka_detail:
+        'This is an original hoodie for Vue Fes Japan 2023. There are four sizes: S, M, L, and XL. Printed on the front and back.',
+      vue_badge: 'Acrylic pin badge (Vue.js)',
+      vue_badge_detail: 'A mini-sized acrylic pin badge using the Vue.js logo.',
+      nuxt_badge: 'Acrylic pin badge (Nuxt)',
+      nuxt_badge_detail: 'A mini-sized acrylic pin badge using the Nuxt logo.',
+      vite_badge: 'Acrylic pin badge (Vite)',
+      vite_badge_detail: 'A mini-sized acrylic pin badge using the Vite logo.',
+      sticker: 'Sticker',
+      sticker_detail:
+        'A special sticker featuring the logos of Vue.js, Nuxt, Vite, and Vue Fes Japan.',
+      cushion: 'Cushion',
+      cushion_detail:
+        'A fluffy cushion with Vue.js on the front and the Vue Fes Japan logo on the back. The material is a blanket-like fabric that is comfortable to the touch.',
+      tape: 'Masking Tape',
+      tape_detail: 'Masking tape (15mm width).',
+      store_item_color: 'Color: {0}',
+      store_item_size: 'Size: {0}',
+      events_vuejs_clinic: 'Vue.js Clinic',
+      scheduled_experts: 'Scheduled Experts',
+      events_panel_discussion: 'Panel Discussion',
+      panelist: 'Panelist',
+      various_other_events: 'Various Other Events',
+      /**
        * namecard section
        */
+      namecard: 'Name Card',
       namecard_infolink: 'Confirm {0} in latest information.',
       tickets_schedule_limit: 'Tickets Deadline: Until {0}',
       ticket_early_price: 'Early Price: ¥ {0}',
@@ -183,12 +300,30 @@ export default {
       ticket_price: 'General Price: ¥ {0}',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',
+      ticket_type: 'Ticket Type',
+      general_ticket: 'General Ticket',
+      after_party_ticket: 'General Ticket with After Party',
+      handson_ticket: 'Handson Ticket',
+      handson_ticket_explain:
+        '* Purchase of a general or general with after party ticket is required for attending only handson. \n* For more information, please see {0}.',
+      personal_sponsor_ticket: 'Personal Sponsor Ticket',
+      personal_sponsor_ticket_explain:
+        '* Purchase of a General or General with After Party ticket is required for those attending on the day of the event. \n* For more information, please see {0}.',
       /**
        * volunteer section
        */
+      apply_volunteer: 'Apply volunteer',
       volunteer_schedule_limit: '応募期限: {0} まで',
       volunteer_schedule_over:
         'Volunteer opportunities have been closed as of {0} . We thank all people that applied.',
+      /**
+       * child care section
+       */
+      child_care: 'Child Care',
+      /**
+       * handson section
+       */
+      handson: 'Handson',
       /**
        * speakers section
        */
@@ -200,6 +335,13 @@ export default {
        * access section
        */
       access_subtitle: 'Access',
+      access_place: 'Place: Nakano Central Park Conference',
+      access_address: 'Nakano Central Park South 1F, B1F, 4-10-2 Nakano, Nakano-ku, Tokyo',
+      access_detail_1: 'JR Chuo and Sobu lines, Tokyo Metro Tozai line',
+      access_detail_2: '5 min. walk from "Nakano" station north exit',
+      access_detail_3:
+        '* It is one stop (about 4 minutes) from JR Shinjuku Station to Nakano Station on the Chuo Line.',
+      check_google_map: 'Check Google Map',
       /**
        * sponsors section
        */
@@ -209,6 +351,7 @@ export default {
         'We have extended the sponsorship period.\nSponsorship Deadline: Until {0}',
       sponsors_schedule_over:
         'Sponsorship opportunities have been closed as of {0} . We thank all companies that applied.',
+      personal_sponsor: 'Personal Sponsor',
       personal_sponsor_price: '¥ {0}',
       sponsors_toptext: '',
       sponsors_merit1: 'Posting credits',

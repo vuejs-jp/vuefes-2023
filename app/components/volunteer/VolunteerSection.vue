@@ -9,7 +9,9 @@ import { closedVolunteer } from '~/utils/status.constants'
 <template>
   <div class="volunteer">
     <CommentTitle color="vue.green" title="あなたも一緒に Vue Fes Japan を盛り上げませんか？" />
-    <h3><s>当日ボランティア募集</s></h3>
+    <h3>
+      <s>{{ $t('top.apply_volunteer') }}</s>
+    </h3>
     <i18n-t
       v-if="closedVolunteer"
       keypath="top.volunteer_schedule_over"

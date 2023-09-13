@@ -15,87 +15,96 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
 
     <div class="event-title">
       <CommentTitle color="vue.green" title="エキスパートに聞こう！" />
-      <h3 id="events-clinic">Vue.js クリニック</h3>
+      <h3 id="events-clinic">{{ $t('top.events_vuejs_clinic') }}</h3>
       <div class="explain"><MarkDownText path="event-vuejs-clinic" /></div>
     </div>
-    <h4 class="event-subtitle">登壇予定のエキスパート</h4>
+    <h4 class="event-subtitle">
+      {{ $t('top.scheduled_experts') }}
+    </h4>
     <div class="teams">
       <EventPanelerCard v-for="paneler in experts" :key="paneler.name" :team="paneler" />
     </div>
 
     <div class="event-title">
       <CommentTitle color="vue.green" title="なぜVueを選んだのか？" />
-      <h3 id="events-panel">パネルディスカッション</h3>
+      <h3 id="events-panel">
+        {{ $t('top.events_panel_discussion') }}
+      </h3>
       <div class="explain"><MarkDownText path="event-panel-discussion" /></div>
     </div>
-    <h4 class="event-subtitle">パネラー</h4>
+    <h4 class="event-subtitle">
+      {{ $t('top.panelist') }}
+    </h4>
     <div class="teams">
       <EventPanelerCard v-for="paneler in panelers" :key="paneler.name" :team="paneler" />
     </div>
 
     <div class="event-title">
-      <h3>その他の各種イベント</h3>
+      <h3>{{ $t('top.various_other_events') }}</h3>
     </div>
     <div class="event-menu">
       <div class="event-card">
         <img
           width="690"
           height="388"
-          :alt="'リフレッシュメントスペース supported by giftee'"
+          :alt="`${$t('top.refreshment')} supported by giftee, HENNGE, TAM`"
           :src="'event/refreshment_space.png'"
           decoding="async"
         />
-        <div class="title">リフレッシュメントスペース<br />supported by giftee, HENNGE, TAM</div>
+        <div class="title">
+          {{ $t('top.refreshment') }}
+          <br />
+          supported by giftee, HENNGE, TAM
+        </div>
         <div class="description">
-          喉が渇いたらお茶やコーヒーはいかがですか？
-          小腹を満たすお菓子もご用意しています。もちろん無料です。
+          {{ $t('top.refreshment_explain') }}
         </div>
       </div>
       <div class="event-card">
         <img
           width="690"
           height="388"
-          :alt="'クリエイティブウォール'"
+          :alt="$t('top.creative_wall')"
           :src="'event/creative_wall.png'"
           decoding="async"
         />
-        <div class="title">クリエイティブウォール</div>
+        <div class="title">
+          {{ $t('top.creative_wall') }}
+        </div>
         <div class="description">
-          自由に書き込みができるビッグなクリエイティブウォールを会場入口に設置します。自分の名前や、Vue.js
-          に対する熱い想いなど、なんでも書き込み OK。記念写真にもピッタリです。
+          {{ $t('top.creative_wall_explain') }}
         </div>
       </div>
       <div class="event-card">
         <img
           width="690"
           height="388"
-          :alt="'ハンズオン'"
+          :alt="$t('top.events_handson')"
           :src="'event/hands_on.png'"
           decoding="async"
         />
-        <div class="title">ハンズオン</div>
-        <div class="description">
-          一緒に手を動かしながら Vue.js
-          アプリケーション開発を体験できるハンズオンを実施します。詳しくは<nuxt-link
-            to="/#handson"
-            title="ハンズオンについて"
-            >ハンズオンについて</nuxt-link
-          >をご覧ください。
+        <div class="title">
+          {{ $t('top.events_handson') }}
         </div>
+        <i18n-t keypath="top.events_handson_explain" tag="div" class="description">
+          <nuxt-link to="/#handson" :title="$t('top.events_handson_about')">
+            {{ $t('top.events_handson_about') }}
+          </nuxt-link>
+        </i18n-t>
       </div>
       <div class="event-card">
         <img
           width="690"
           height="388"
-          :alt="'タトゥースペース'"
+          :alt="$t('top.tattoo_space')"
           :src="'event/tattoo_space.png'"
           decoding="async"
         />
-        <div class="title">タトゥースペース</div>
+        <div class="title">
+          {{ $t('top.tattoo_space') }}
+        </div>
         <div class="description">
-          顔や手に Vue Fes Japan
-          特製タトゥーシールを貼り付けて、フェス気分を盛り上げましょう。おなじみの Vue.js や Nuxt
-          などのロゴマークをその場ですぐに付けられます。
+          {{ $t('top.tattoo_space_explain') }}
         </div>
       </div>
     </div>

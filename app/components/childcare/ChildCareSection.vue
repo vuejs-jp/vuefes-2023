@@ -6,7 +6,7 @@ import { childCareUrl } from '~/utils/constants'
 
 <template>
   <div class="childcare">
-    <h3>託児サポート</h3>
+    <h3>{{ $t('top.child_care') }}</h3>
     <div class="explain">
       <MarkDownText path="childcare" />
     </div>

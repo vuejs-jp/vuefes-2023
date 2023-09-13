@@ -28,8 +28,13 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/i18n',
     '@nuxt/content',
-    '@nuxthq/studio',
     'nuxt-og-image',
+    /**
+     * NOTE:
+     *  一旦studioの設定無効にする
+     *  詳細スレ: https://vuejs-jp.slack.com/archives/C04G9G31VC2/p1694585132295609
+     */
+    // '@nuxthq/studio',
   ],
   pinceau: {
     configFileName: 'tokens.config',

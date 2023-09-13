@@ -196,7 +196,7 @@ describe('top', () => {
           )
           cy.contains('JR 中央線・総武線、東京メトロ東西線')
           cy.contains('「中野」駅北口より徒歩5分')
-          cy.contains('small', '※JR新宿駅から中野駅まで中央線で1駅（約4分）です。')
+          cy.contains('small', '※ JR新宿駅から中野駅まで中央線で1駅（約4分）です。')
           cy.contains('a', 'Google マップで見る').should(
             'have.attr',
             'href',

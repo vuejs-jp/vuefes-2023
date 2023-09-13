@@ -73,6 +73,8 @@ css({
     display: 'grid',
     gap: 'calc({space.8} * 3)',
     textAlign: 'center',
+    margin: 'calc({space-8} * 8) auto 0',
+    maxWidth: '760px',
     '::v-deep(h3)': {
       fontSize: '32px',
       fontWeight: 'bold',
@@ -80,10 +82,13 @@ css({
     },
   },
   '.explain': {
+    maxWidth: '760px',
     display: 'flex',
     justifyContent: 'center',
     '::v-deep(p)': {
+      lineHeight: '1.8',
       textAlign: 'left',
+      marginBottom: '2em',
     }
   },
 

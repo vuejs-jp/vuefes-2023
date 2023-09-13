@@ -164,3 +164,14 @@ export type StoreMenu = {
   color?: string
   size: string
 }
+
+/**
+ * paneler
+ */
+export type Paneler = {
+  image: string
+  name: string
+  snsLink: string
+  company: string
+  job: string
+}

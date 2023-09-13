@@ -7,6 +7,7 @@ describe('top', () => {
   }
   function loadPageWithAuth() {
     cy.intercept('/api/_supabase/session')
+    cy.intercept('GET', '**supabase.co/rest/v1/**')
     cy.visit('/?forcelogin=true')
     cy.checkPageIdle()
   }
@@ -19,7 +20,6 @@ describe('top', () => {
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
-      // cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
@@ -35,7 +35,6 @@ describe('top', () => {
     it('header (tablet)', () => {
       cy.viewport(769, 600)
       loadPage()
-      // cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
@@ -51,7 +50,6 @@ describe('top', () => {
     it('header (mobile)', () => {
       cy.viewport(375, 600)
       loadPage()
-      // cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
@@ -66,7 +64,6 @@ describe('top', () => {
     })
     it('header with auth', () => {
       loadPageWithAuth()
-      // cy.wait(1500)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('be.visible')
@@ -80,104 +77,75 @@ describe('top', () => {
       })
     })
   })
-  describe('header links', () => {
+  context('header links', () => {
     it('logo', () => {
       loadPage()
       cy.contains('h1', 'Vue Fes Japan 2023').find('a').click()
       cy.url().should('eq', 'http://localhost:3000/')
     })
-    it('at top', () => {
-      loadPage()
-      cy.contains('nav a', 'Message').click()
-      cy.url().should('eq', 'http://localhost:3000/#message')
 
-      loadPage()
-      cy.contains('nav a', 'Speakers').click()
-      cy.url().should('eq', 'http://localhost:3000/#speakers')
-
-      loadPage()
-      cy.contains('nav a', 'Ticket').click()
-      cy.url().should('eq', 'http://localhost:3000/#ticket')
-
-      loadPage()
-      cy.contains('nav a', 'Access').click()
-      cy.url().should('eq', 'http://localhost:3000/#access')
-
-      loadPage()
-      cy.contains('nav a', 'Sponsors').click()
-      cy.url().should('eq', 'http://localhost:3000/#sponsors')
-
-      loadPage()
-      cy.contains('nav a', 'Contact').click()
-      cy.url().should('eq', 'http://localhost:3000/#form')
+    describe('at top', () => {
+      ;[
+        ['Message', 'http://localhost:3000/#message'],
+        ['Speakers', 'http://localhost:3000/#speakers'],
+        ['Ticket', 'http://localhost:3000/#ticket'],
+        ['Access', 'http://localhost:3000/#access'],
+        ['Sponsors', 'http://localhost:3000/#sponsors'],
+        ['Contact', 'http://localhost:3000/#form'],
+      ].forEach(([label, expected]: any) => {
+        it(`at top click ${label}`, () => {
+          loadPage()
+          cy.contains('nav a', label).click()
+          cy.url().should('eq', expected)
+        })
+      })
     })
-    it('at privacy', () => {
-      loadPagePrivacy()
-      cy.contains('nav a', 'Message').click()
-      cy.url().should('eq', 'http://localhost:3000/#message')
-
-      loadPagePrivacy()
-      cy.contains('nav a', 'Speakers').click()
-      cy.url().should('eq', 'http://localhost:3000/#speakers')
-
-      loadPagePrivacy()
-      cy.contains('nav a', 'Ticket').click()
-      cy.url().should('eq', 'http://localhost:3000/#ticket')
-
-      loadPagePrivacy()
-      cy.contains('nav a', 'Access').click()
-      cy.url().should('eq', 'http://localhost:3000/#access')
-
-      loadPagePrivacy()
-      cy.contains('nav a', 'Sponsors').click()
-      cy.url().should('eq', 'http://localhost:3000/#sponsors')
-
-      loadPagePrivacy()
-      cy.contains('nav a', 'Contact').click()
-      cy.url().should('eq', 'http://localhost:3000/#form')
+    describe('at privacy', () => {
+      ;[
+        ['Message', 'http://localhost:3000/#message'],
+        ['Speakers', 'http://localhost:3000/#speakers'],
+        ['Ticket', 'http://localhost:3000/#ticket'],
+        ['Access', 'http://localhost:3000/#access'],
+        ['Sponsors', 'http://localhost:3000/#sponsors'],
+        ['Contact', 'http://localhost:3000/#form'],
+      ].forEach(([label, expected]: any) => {
+        it(`at privacy ${label}`, () => {
+          loadPagePrivacy()
+          cy.contains('nav a', label).click()
+          cy.url().should('eq', expected)
+        })
+      })
     })
-    it('at code of conduct', () => {
-      loadPageCodeOfConduct()
-      cy.contains('nav a', 'Message').click()
-      cy.url().should('eq', 'http://localhost:3000/#message')
-
-      loadPageCodeOfConduct()
-      cy.contains('nav a', 'Speakers').click()
-      cy.url().should('eq', 'http://localhost:3000/#speakers')
-
-      loadPageCodeOfConduct()
-      cy.contains('nav a', 'Ticket').click()
-      cy.url().should('eq', 'http://localhost:3000/#ticket')
-
-      loadPageCodeOfConduct()
-      cy.contains('nav a', 'Access').click()
-      cy.url().should('eq', 'http://localhost:3000/#access')
-
-      loadPageCodeOfConduct()
-      cy.contains('nav a', 'Sponsors').click()
-      cy.url().should('eq', 'http://localhost:3000/#sponsors')
-
-      loadPageCodeOfConduct()
-      cy.contains('nav a', 'Contact').click()
-      cy.url().should('eq', 'http://localhost:3000/#form')
+    describe('at code of conduct', () => {
+      ;[
+        ['Message', 'http://localhost:3000/#message'],
+        ['Speakers', 'http://localhost:3000/#speakers'],
+        ['Ticket', 'http://localhost:3000/#ticket'],
+        ['Access', 'http://localhost:3000/#access'],
+        ['Sponsors', 'http://localhost:3000/#sponsors'],
+        ['Contact', 'http://localhost:3000/#form'],
+      ].forEach(([label, expected]: any) => {
+        it(`at code of conduct ${label}`, () => {
+          loadPageCodeOfConduct()
+          cy.contains('nav a', label).click()
+          cy.url().should('eq', expected)
+        })
+      })
     })
   })
 
   describe('content', () => {
     it('main visual', () => {
       loadPage()
-      // cy.wait(1500)
       cy.contains('a', '最新情報はTwitterでCheck!').should(
         'have.attr',
         'href',
-        // 'https://twitter.com/vuefes',
         'https://x.com/vuefes',
       )
       cy.contains('Twitter ー @vuefes #vuefes')
     })
     it('message', () => {
       loadPage()
-      // cy.wait(1500)
       cy.contains('h2', 'Message')
         .contains('想い')
         .closest('section')
@@ -187,7 +155,6 @@ describe('top', () => {
     })
     it('ticket', () => {
       loadPage()
-      // cy.wait(1500)
       cy.contains('h2', 'Ticket')
         .closest('section')
         .within(() => {
@@ -211,7 +178,6 @@ describe('top', () => {
     })
     it('speakers', () => {
       loadPage()
-      // cy.wait(1500)
       cy.contains('h2', 'Speakers')
         .contains('スピーカー')
         .closest('section')
@@ -249,7 +215,6 @@ describe('top', () => {
     })
     it('sponsors', () => {
       loadPage()
-      // cy.wait(1500)
       cy.contains('h2', 'Sponsors')
         .contains('スポンサー')
         .closest('section')
@@ -286,7 +251,6 @@ describe('top', () => {
   describe('form', () => {
     it('contact', () => {
       loadPage()
-      // cy.wait(1500)
       cy.contains('h2', 'Contact')
         .contains('お問い合わせ')
         .closest('section')
@@ -330,7 +294,6 @@ describe('top', () => {
   describe('footer', () => {
     it('footer', () => {
       loadPage()
-      // cy.wait(1500)
       cy.get('.footer-section').within(() => {
         cy.get('.footer-vuefes-logo')
         cy.contains('a', 'Vue Fes Japan Online 2022').should(
@@ -358,7 +321,6 @@ describe('top', () => {
     it('render', () => {
       cy.viewport(769, 600)
       loadPage()
-      // cy.wait(2000)
       cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
@@ -381,7 +343,6 @@ describe('top', () => {
     it('render with Auth', () => {
       cy.viewport(769, 600)
       loadPageWithAuth()
-      // cy.wait(1500)
       cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')

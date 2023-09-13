@@ -40,6 +40,7 @@ Cypress.Commands.add('checkPageIdle', () => {
   cy.window().then((win: Window) => {
     return new Cypress.Promise((resolve) => {
       win.requestIdleCallback(() => {
+        cy.wait(500)
         resolve()
       })
     })

@@ -196,7 +196,13 @@ css({
   },
   '@mobile': {
     '.event': {
-      padding: '80px 20px',
+      padding: '0px 20px',
+    },
+    '.event-title': {
+      marginTop: 'calc({space.8} * 1)',
+      '::v-deep(h3)': {
+        fontSize: '24px',
+      }
     },
     '.explain': {
       maxWidth: '690px',
@@ -204,6 +210,12 @@ css({
     '.event-card': {
       '--img-size': '690px',
       maxWidth: '690px',
+      '.title': {
+        fontSize: '16px',
+      },
+      '.description': {
+        marginTop: 'calc({space.8} * 1)',
+      }
     },
   },
   '.teams': {

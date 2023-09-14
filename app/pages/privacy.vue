@@ -115,9 +115,16 @@ css({
       '--list-margin-left': '28px',
 
       padding: 'calc({space.8} * 10) calc({space.8} * 3)',
+      '::v-deep(.title)': {
+        marginBottom: 'calc({space.8} * 6)',
+      },
       '::v-deep(h2)': {
-        fontSize: '24px',
-      }
+        fontSize: '20px',
+      },
+      '::v-deep(p), ::v-deep(ol), ::v-deep(ul)': {
+        fontSize: '16px',
+      },
+
     },
   }
 })

@@ -54,6 +54,14 @@ css({
     },
   },
   '@mobile': {
+    'section': {
+      padding: 'calc({space.8} * 0) calc({space.8} * 3) calc({space.8} * 8)',
+    },
+    '.subtitle': {
+      '::v-deep(p)': {
+        fontSize: '16px',
+      }
+    },
     '.teams': {
       gap: '4vw',
     },

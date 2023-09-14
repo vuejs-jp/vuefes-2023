@@ -44,5 +44,11 @@ css({
   '.arrow': {
     margin: '0 auto'
   },
+  '@mobile': {
+    'section': {
+      padding: 'calc({space.8} * 6) 20px calc({space.8} * 6)',
+      backgroundColor: '#fff'
+    },
+  },
 })
 </style>

@@ -56,7 +56,8 @@ css({
     },
   },
   '.apply': {
-    width: '320px'
+    width: '320px',
+    textAlign: 'center',
   },
   '.deadline': {
     color: '{color.vue.blue}',
@@ -64,6 +65,16 @@ css({
     'em': {
       fontStyle: 'normal',
       fontWeight: 700,
+    },
+  },
+  '@mobile': {
+    '.childcare': {
+      '::v-deep(h3)': {
+        fontSize: 'calc(24*{fontSize.base})',
+      },
+      '::v-deep(p)': {
+        fontSize: 'calc(16*{fontSize.base})',
+      }
     },
   },
 })

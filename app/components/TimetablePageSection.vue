@@ -101,41 +101,44 @@ onMounted(() => {
 </style>
 <style lang="ts" scoped>
 css({
-'section': {
-  padding: '120px 20px 120px',
-  backgroundColor: '#eee'
-},
-'.timetable-root': {
-  display: 'flex',
-  flexDirection: 'column',
-  maxWidth: '1080px',
-  margin: '0 auto',
-},
-'.timetable-wrapper': {
-  marginTop: '2.5rem',
-  width: '100%',
-  overflowX: 'scroll',
-},
-'.timetable-info': {
-  marginTop: '8px',
-  fontSize: 'calc(11*{fontSize.base})',
-  lineHeight: '150%',
-  fontWeight: '700',
-  color: '{color.vue.blue}',
-},
-'.invisible-mobile': {
-  display: 'block',
-},
-'.visible-mobile': {
-  display: 'none',
-},
-'@mobile': {
-'invisible-mobile': {
-  display: 'none',
-},
-'visible-mobile': {
-  display: 'block',
-},
-},
+  'section': {
+    padding: '120px 20px 120px',
+    backgroundColor: '#eee'
+  },
+  '.timetable-root': {
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '1080px',
+    margin: '0 auto',
+  },
+  '.timetable-wrapper': {
+    marginTop: '2.5rem',
+    width: '100%',
+    overflowX: 'scroll',
+  },
+  '.timetable-info': {
+    marginTop: '8px',
+    fontSize: 'calc(11*{fontSize.base})',
+    lineHeight: '150%',
+    fontWeight: '700',
+    color: '{color.vue.blue}',
+  },
+  '.invisible-mobile': {
+    display: 'block',
+  },
+  '.visible-mobile': {
+    display: 'none',
+  },
+  '@mobile': {
+    'section': {
+      padding: '80px 20px 120px',
+    },
+    'invisible-mobile': {
+      display: 'none',
+    },
+    'visible-mobile': {
+      display: 'block',
+    },
+  },
 })
 </style>

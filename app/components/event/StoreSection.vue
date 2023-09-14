@@ -163,13 +163,19 @@ css({
   '@mobile': {
     '.store-root': {
       padding: '20px',
+      gap: 'calc({space.8} * 0)',
     },
     '.store-card': {
       '--img-size': '329px',
       maxWidth: '329px',
+      'img': {
+        display: 'block',
+        maxWidth: '80%',
+        margin: '0 auto',
+      }
     },
     '.text': {
-      width: '329px',
+      width: 'auto',
     },
   },
 });

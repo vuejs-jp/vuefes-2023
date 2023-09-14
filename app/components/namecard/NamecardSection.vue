@@ -75,7 +75,8 @@ css({
     },
   },
   '.apply': {
-    width: '320px'
+    width: '320px',
+    textAlign: 'center',
   },
   '.deadline': {
     color: '{color.vue.blue}',
@@ -88,6 +89,17 @@ css({
   '.ticket-img': {
     display: 'block',
     margin: '0 auto'
+  },
+  '@mobile': {
+    '.namecard': {
+      '::v-deep(h3)': {
+        fontSize: 'calc(28*{fontSize.base})',
+      }
+    },
+    '.deadline': {
+      fontSize: 'calc(20*{fontSize.base})',
+
+    }
   },
 })
 </style>

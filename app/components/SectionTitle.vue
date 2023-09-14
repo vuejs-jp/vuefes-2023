@@ -62,10 +62,10 @@ css({
   },
   '@mobile': {
     '.title-main': {
-      fontSize: 'calc(40*{fontSize.base})',
+      fontSize: '24px',
     },
     '.title-sub': {
-      fontSize: 'calc(20*{fontSize.base})',
+      fontSize: '20px',
     },
   },
 })

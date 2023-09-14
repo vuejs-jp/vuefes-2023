@@ -132,5 +132,15 @@ css({
       gap: '40px',
     },
   },
+  '@mobile': {
+    'section': {
+      padding: 'calc({space.8} * 10) calc({space.8} * 3) calc({space.8} * 8)',
+    },
+    '.subtitle': {
+      '::v-deep(p)': {
+        fontSize: '16px',
+      }
+    }
+  }
 })
 </style>

@@ -69,6 +69,7 @@ css({
   },
   '@mobile': {
     '.twitter-root': {
+      borderRadius: '16px',
       '&:hover': {
         transition: 'none',
       },

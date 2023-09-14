@@ -52,22 +52,9 @@ const { signIn } = useAuth()
 <style lang="ts" scoped>
 css({
   '.container': {
-    position: 'fixed',
-    zIndex: 9999,
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    margin: '0 auto',
-    padding: 'calc({space.8} * 2.5) calc({space.8} * 3.75)',
-    backgroundColor: '#fff',
-    boxShadow: '0 calc({space.8} * 0.25) calc({space.8} * 1) rgba(0, 0, 0, 0.33)',
     display: 'grid',
     placeItems: 'center',
-    gap: 'calc({space.8} * 5)',
-    borderRadius: 'calc({space.8} * 1)',
+    gap: 'calc({space.8} * 4)',
     '::v-deep(ul)': {
       display: 'grid',
       placeItems: 'center',
@@ -82,6 +69,7 @@ css({
   '.title': {
     fontSize: 'calc(32*{fontSize.base})',
     fontWeight: 700,
+    textAlign: 'center',
   },
   '.detail': {
     width: '100%',
@@ -111,5 +99,18 @@ css({
       height: '1px',
     },
   },
+  '@tablet': {
+    '.title': {
+      fontSize: 'calc(28*{fontSize.base})',
+    },
+  },
+  '@mobile': {
+    '.container': {
+      gap: 'calc({space.8} * 2)',
+    },
+    '.title': {
+      fontSize: 'calc(24*{fontSize.base})',
+    },
+  }
 })
 </style>

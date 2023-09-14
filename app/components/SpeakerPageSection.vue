@@ -89,5 +89,10 @@ css({
       padding: 'calc({space.8} * 15) 0',
     },
   },
+  '@mobile': {
+    '.speakers': {
+      gap: '4vw',
+    },
+  },
 })
 </style>

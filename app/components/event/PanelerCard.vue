@@ -43,19 +43,19 @@ css({
     },
   },
   '.team-company': {
-    fontSize: '14px',
+    fontSize: 'calc(14*{fontSize.base})',
     marginTop: '0.5em',
   },
   '.team-job': {
-    fontSize: '14px',
+    fontSize: 'calc(14*{fontSize.base})',
   },
   '.team-name': {
-      display: 'block',
-      color: '{color.vue.blue}',
-      fontSize: '18px',
-      fontWeight: 'bold',
-      lineHeight: '1.3',
-      marginTop: '0.2em',
+    display: 'block',
+    color: '{color.vue.blue}',
+    fontSize: 'calc(18*{fontSize.base})',
+    fontWeight: 'bold',
+    lineHeight: '1.3',
+    marginTop: '0.2em',
   },
   '@tablet': {
     '.team-card': {

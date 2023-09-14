@@ -74,31 +74,23 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 <style lang="ts" scoped>
 css({
   '.speaker-card': {
-    '--img-size': '308px',
+    width: 'calc((100% - 64px) / 3)',
     color: '{color.vue.blue}',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.5em',
+    textAlign: 'left',
     'img': {
+      width: '100%',
       borderRadius: '0.5em',
-      width: '{img.size}',
-      height: '{img.size}',
     },
   },
   '.speaker-title': {
     fontSize: 'calc(14*{fontSize.base})',
-    lineHeight: '14px',
-    display: 'flex',
-    alignItems: 'center',
-    width: '308px',
-    minHeight: '14px',
-    paddingBottom: 'calc({space.8} * 1)',
+    marginTop: '0.5em',
     whiteSpace: 'pre-wrap',
   },
   '.speaker-name': {
     fontSize: 'calc(22*{fontSize.base})',
+    marginTop: '0.5em',
     fontWeight: 700,
-    lineHeight: '22px',
   },
   '.speaker-sns': {
     display: 'flex',
@@ -113,23 +105,18 @@ css({
   },
   '@tablet': {
     '.speaker-card': {
-      '--img-size': '274px',
-    },
-    '.speaker-title': {
-      width: '274px',
+      width: 'calc((100% - 96px) / 3)',
     },
   },
   '@mobile': {
     '.speaker-card': {
-      '--img-size': '144px',
+      width: 'calc((100% - 8vw) / 2)',
     },
     '.speaker-title': {
       fontSize: 'calc(10*{fontSize.base})',
-      width: '144px',
     },
     '.speaker-name': {
       fontSize: 'calc(18*{fontSize.base})',
-      width: '144px',
     },
   },
 })

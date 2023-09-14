@@ -55,7 +55,7 @@ const all: Sponsor[] = [
     name: '株式会社hacomono',
     image: 'sponsors/hacomono.png',
     categories: ['gold', 'special-lunch'],
-    url: 'https://www.hacomono.jp/',
+    url: 'https://recruit.hacomono.jp/',
   },
   {
     id: 'plaid',

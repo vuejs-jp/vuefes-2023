@@ -125,6 +125,14 @@ css({
         border: 'none',
       },
     },
-  }
+  },
+  '@mobile': {
+    '.button': {
+      fontSize: '16px',
+      height: '56px',
+      maxWidth: '240px',
+      padding: '0 16px',
+    },
+  },
 })
 </style>

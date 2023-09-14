@@ -93,6 +93,15 @@ css({
     '.speakers': {
       gap: '4vw',
     },
+    'section': {
+      paddingTop: 'calc({space.8} * 10)',
+    },
+    '.speaker-session': {
+      gap: 'calc({space.8} * 2)',
+      'h3': {
+        fontSize: 'calc(24*{fontSize.base})',
+      },
+    },
   },
 })
 </style>

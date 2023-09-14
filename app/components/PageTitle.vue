@@ -60,13 +60,14 @@ css({
       width: '96px',
       height: '1px',
     },
+    overflow: 'hidden',
   },
   '@mobile': {
     '.title-main': {
-      fontSize: 'calc(40*{fontSize.base})',
+      fontSize: 'calc(32*{fontSize.base})',
     },
     '.title-sub': {
-      fontSize: 'calc(20*{fontSize.base})',
+      fontSize: 'calc(18*{fontSize.base})',
     },
   },
 })

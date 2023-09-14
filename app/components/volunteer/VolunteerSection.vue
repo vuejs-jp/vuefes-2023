@@ -65,7 +65,7 @@ css({
     },
   },
   '.apply': {
-    width: '320px'
+    width: '320px',
   },
   '.deadline': {
     color: '{color.vue.blue}',
@@ -73,6 +73,16 @@ css({
     'em': {
       fontStyle: 'normal',
       fontWeight: 700,
+    },
+  },
+  '@mobile': {
+    '.volunteer': {
+      '::v-deep(h3)': {
+        fontSize: 'calc(24*{fontSize.base})',
+      },
+      '::v-deep(p)': {
+        fontSize: 'calc(20*{fontSize.base})',
+      }
     },
   },
 })

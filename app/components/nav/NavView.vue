@@ -58,19 +58,19 @@ css({
     background: '{color.vue.blue}',
     color: '{color.white}',
     overflow: 'scroll',
+    padding: 'calc({space.8} * 6) 0 calc({space.8} * 8)',
     'ul': {
-      paddingTop: '80px',
       margin: '0 3vw',
       textAlign: 'center',
       'li': {
-        padding: '1.5rem 0',
+        padding: 'calc({space.8} * 2) 0',
         marginLeft: '40px',
         display: 'grid',
         justifyContent: 'flex-start',
         'a': {
           fontWeight: 700,
           fontSize: '24px',
-          lineHeight: '31px',
+          lineHeight: '1',
         },
       },
       '.other-links': {
@@ -85,8 +85,8 @@ css({
   },
   '.close': {
     position: 'fixed',
-    top: '32px',
-    right: '32px',
+    top: 'calc({space.8} * 4)',
+    right: 'calc({space.8} * 4)',
   },
 })
 </style>

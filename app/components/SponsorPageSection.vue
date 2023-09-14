@@ -128,8 +128,12 @@ css({
   },
   '@mobile': {
     'section': {
-      padding: '120px 20px',
+      padding: 'calc({space.8} * 10) calc({space.8} * 2) calc({space.8} * 8)',
     },
+    '.deadline, .deadline-extend': {
+      fontSize: '18px',
+      wordBreak: 'break-all'
+    }
   }
 })
 </style>

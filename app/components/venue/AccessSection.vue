@@ -126,6 +126,12 @@ css({
     },
   },
   '@mobile': {
+    'section': {
+      padding: 'calc({space.8} * 10) 0 calc({space.8} * 8)',
+    },
+    '.access-root': {
+      padding: 'calc({space.8} * 4) calc({space.8} * 2)',
+    },
     '.access-content': {
       flexDirection: 'column-reverse',
     },

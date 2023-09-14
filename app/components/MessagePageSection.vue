@@ -60,10 +60,24 @@ css({
     lineHeight: '1.8',
   },
   '@mobile': {
+    '.message': {
+      padding: '0px 0 80px',
+    },
     '.message-body': {
       paddingLeft: '20px',
       paddingRight: '20px',
-    }
+      padding: '24px  16px 24px',
+      borderRadius: '16px',
+    },
+    '.text': {
+      '::v-deep(p)': {
+        fontSize: '16px',
+      },
+    },
+    '::v-deep(.representative)': {
+      marginTop: '0px',
+      fontSize: '16px',
+    },
   }
 })
 </style>

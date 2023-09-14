@@ -5,10 +5,10 @@
     <div class="image">
       <slot name="image" />
     </div>
-    <slot />
     <div class="action">
       <slot name="action" />
     </div>
+    <slot />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ css({
     position: 'relative',
     display: 'grid',
     placeItems: 'center',
-    paddingBottom: 'calc({space.8} * 1)',
+    paddingBottom: 'calc({space.8} * 3)',
     width: '360px',
     background: '#F2F7FF',
     borderRadius: '0 0 calc({space.8} * 0.5) calc({space.8} * 0.5)',
@@ -47,8 +47,14 @@ css({
     '.process-root': {
       width: '100%',
     },
+    '.image': {
+      padding: '0',
+    },
     '.action': {
-      top: '191px',
+      position: 'static',
+      transform: 'none',
+      width: 'auto',
+      margin: 'calc({space.8} * 2) 0'
     },
   },
 })

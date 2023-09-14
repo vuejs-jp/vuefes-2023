@@ -80,5 +80,20 @@ css({
       paddingLeft: '1em',
     }
   },
+  '@mobile': {
+    '.personal-sponsor': {
+      padding: 'calc({space.8} * 2) 0',
+    },
+    'h3': {
+      fontSize: 'calc(24*{fontSize.base})',
+      marginBottom: 'calc({space.8} * 0)',
+    },
+    '::v-deep(p)': {
+      fontSize: 'calc(16*{fontSize.base})',
+    },
+    '.personal-sponsor-apply-btn': {
+      margin: '0',
+    },
+  },
 })
 </style>

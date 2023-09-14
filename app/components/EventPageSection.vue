@@ -36,8 +36,12 @@ css({
     },
   },
   '@mobile': {
+    '.event-wrapper': {
+      padding: 'calc({space.8} * 10) 0 calc({space.8} * 4)',
+    },
     '.event-root': {
       maxWidth: '730px',
+      fontSize: 'calc(16*{fontSize.base})',
     },
   },
 })

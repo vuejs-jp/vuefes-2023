@@ -151,7 +151,8 @@ css({
     },
   },
   '.apply': {
-    width: '320px'
+    width: '320px',
+    textAlign: 'center',
   },
   '.deadline': {
     color: '{color.vue.blue}',
@@ -176,7 +177,7 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 1)',
-    paddingBottom: 'calc({space.8} * 2)',
+    // paddingBottom: 'calc({space.8} * 2)',
   },
   '.price': {
     textAlign: 'right',
@@ -209,6 +210,19 @@ css({
         transition: '.2s',
       },
     },
+  },
+  '@mobile': {
+    '.ticket': {
+      '::v-deep(h3)': {
+        fontSize: '26px',
+      }
+    },
+    '.explain': {
+      fontSize: 'calc(16*{fontSize.base})',
+    },
+    '.price': {
+      textAlign: 'center',
+    }
   },
 })
 </style>

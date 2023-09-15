@@ -90,8 +90,9 @@ const updateReceiptId = (value: string) => {
             <!-- アバター-->
             <h3>アバター／Avatar</h3>
             <img
+              v-if="picture"
               alt=""
-              :src="picture && getFullAvatarUrl(picture)"
+              :src="getFullAvatarUrl(picture)"
               width="120"
               height="120"
               decoding="async"

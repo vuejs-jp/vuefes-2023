@@ -81,6 +81,7 @@ useHead({
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <RoundButton class="btn-update" :to="`/users/edit/${userId}`">再編集</RoundButton>
+      <!--
       <RoundButton
         class="btn-save"
         :href="`${linkUrl}users/${userId}/__og_image__/og.png`"
@@ -91,6 +92,7 @@ useHead({
       >
         画像を保存
       </RoundButton>
+      -->
       <RoundButton
         class="btn-calendar"
         :href="calendarUrl"

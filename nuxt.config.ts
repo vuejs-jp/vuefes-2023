@@ -109,8 +109,9 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    '/register/**': { ssr: false },
-    '/users/**': { ssr: false },
+    '/sessions/**': { ssr: true, prerender: true },
+    '/sponsor-sessions/**': { ssr: true, prerender: true },
+    '/sponsors/**': { ssr: true, prerender: true },
   },
   runtimeConfig: {
     public: {

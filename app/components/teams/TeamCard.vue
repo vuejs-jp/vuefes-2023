@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Team } from '~/types/app'
-import { urlBasePath } from '~/utils/constants'
 
+const urlBasePath = useRuntimeConfig().app.baseURL
 const props = defineProps({
   team: {
     type: Object as PropType<Team>,

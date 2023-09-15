@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
 import { Sponsor } from '~/types/app'
-import { urlBasePath } from '~/utils/constants'
 
+const urlBasePath = useRuntimeConfig().app.baseURL
 defineProps({
   sponsor: {
     type: Object as PropType<Sponsor>,

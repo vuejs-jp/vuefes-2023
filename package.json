@@ -17,6 +17,7 @@
     "generate:post-transpile": "node scripts/renameDir.cjs",
     "generate": "npm run generate:transpile && npm run generate:post-transpile",
     "preview": "nuxi preview",
+    "local:netlify": "rm -rf dist && pnpm generate && netlify serve --dir=dist",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,vue,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .prettierignore",
     "lint": "npm run eslint&& npm run htmllint",
     "lint:fix": "npm run eslint:fix && npm run htmllint:fix",

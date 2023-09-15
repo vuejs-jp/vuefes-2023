@@ -161,6 +161,9 @@ css({
     display: 'grid',
     gridTemplateColumns: 'auto 1fr',
     gap: 'calc({space.8} * 4)',
+    ':deep(.speaker-card)': {
+      maxWidth: '400px',
+    }
   },
   '.person-info': {
     '::v-deep(ul)': {
@@ -188,12 +191,17 @@ css({
   '@tablet': {
     'main': {
       '--head-img-width': '368px',
+      display: 'block',
+      '& > *': {
+        paddingBottom: 'calc({space.8} * 4)',
+      }
     }
   },
   '@mobile': {
     'main': {
       '--max-width': '100%',
       '--head-img-width': '100%',
+      paddingTop: 'calc({space.header} + {space.8} * 3)',
     },
     '.detailbody': {
       display: 'block',

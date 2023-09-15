@@ -83,6 +83,9 @@ css({
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '2em',
+    '& > div': {
+      width: 'calc((100% - 64px) / 3)',
+    }
   },
   '@tablet': {
     'section': {
@@ -91,7 +94,10 @@ css({
   },
   '@mobile': {
     '.speakers': {
-      gap: '4vw',
+      gap: 'calc({space.8} * 2)',
+      '& > div': {
+        width: 'calc(50% - calc({space.8} * 1))',
+      }
     },
     'section': {
       paddingTop: 'calc({space.8} * 10)',

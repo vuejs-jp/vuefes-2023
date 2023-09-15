@@ -74,7 +74,6 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
 <style lang="ts" scoped>
 css({
   '.speaker-card': {
-    width: 'calc((100% - 64px) / 3)',
     color: '{color.vue.blue}',
     textAlign: 'left',
     'img': {
@@ -103,14 +102,9 @@ css({
       transform: 'scale(-1,1)',
     }
   },
-  '@tablet': {
-    '.speaker-card': {
-      width: 'calc((100% - 96px) / 3)',
-    },
-  },
   '@mobile': {
     '.speaker-card': {
-      width: 'calc((100% - 8vw) / 2)',
+      maxWidth: '80%',
     },
     '.speaker-title': {
       fontSize: 'calc(10*{fontSize.base})',

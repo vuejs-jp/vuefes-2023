@@ -205,6 +205,9 @@ css({
     gridTemplateColumns: 'auto 1fr',
     gap: 'calc({space.8} * 4)',
     paddingBottom: 'calc({space.8} * 3)',
+    ':deep(.speaker-card)': {
+      maxWidth: '400px'
+    }
   },
   '.person-info': {
     '::v-deep(ul)': {
@@ -232,6 +235,7 @@ css({
   '@tablet': {
     'main': {
       '--head-img-width': '368px',
+      display: 'block',
     },
   },
   '@mobile': {

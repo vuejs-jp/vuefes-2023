@@ -17,7 +17,6 @@ css({
     width: '80%',
     maxWidth: ' 960px',
     transition: '.2s',
-    overflow: 'scroll',
     borderRadius: 'calc({space.8} * 1)',
     padding: 'calc({space.8} * 4) calc({space.8} * 8) calc({space.8} * 6)',
     backgroundColor: '#fff',

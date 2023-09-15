@@ -4,9 +4,13 @@ import CommentTitle from '~/components/CommentTitle.vue'
 import IntegrationCard from '~/components/namecard/IntegrationCard.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { useNamecard } from '~/composables/useNamecard'
+import { useUserStore } from '~/composables/useUserStore'
+import useAuth from '~/composables/useAuth'
 import { useDialog } from '~/composables/useDialog'
 
 const { canRegister } = useNamecard()
+const { signedUser } = useUserStore()
+const { hasAuth } = useAuth()
 const { handle, isShow } = useDialog()
 </script>
 
@@ -33,7 +37,11 @@ const { handle, isShow } = useDialog()
       -->
       <!-- ネームカードを作成 -->
       <div class="apply">
-        <RoundButton type="submit" :disabled="!canRegister" @click="() => handle(true)">
+        <RoundButton
+          type="submit"
+          :disabled="!canRegister"
+          @click="() => (!hasAuth ? handle(true) : navigateTo(`/users/${signedUser.user_id}`))"
+        >
           {{ $t('words.create_namecard') }}
         </RoundButton>
       </div>

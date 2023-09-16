@@ -107,6 +107,10 @@ export default defineNuxtConfig({
       clientDB: true, // https://github.com/nuxt/content/issues/2215#issuecomment-1713796864
     },
   },
+  routeRules: {
+    '/register/': { prerender: true },
+    '/passmarket-console/': { prerender: true },
+  },
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_GTAG_ID,

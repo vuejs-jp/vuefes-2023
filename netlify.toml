@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/2023/users/*"
-  to = "/2023/404.html"
+  to = "/2023/200.html"
   status = 200
 
 [[redirects]]

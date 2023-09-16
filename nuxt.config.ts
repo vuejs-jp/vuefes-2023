@@ -107,11 +107,6 @@ export default defineNuxtConfig({
       clientDB: true, // https://github.com/nuxt/content/issues/2215#issuecomment-1713796864
     },
   },
-  routeRules: {
-    '/sessions/**': { ssr: true, prerender: true },
-    '/sponsor-sessions/**': { ssr: true, prerender: true },
-    '/sponsors/**': { ssr: true, prerender: true },
-  },
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_GTAG_ID,

@@ -4,7 +4,6 @@ import { isProd } from './app/utils/environment.constants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
   srcDir: 'app/',
   app: {
     buildAssetsDir: '/_nuxt/',
@@ -109,9 +108,8 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    '/sessions/**': { ssr: true, prerender: true },
-    '/sponsor-sessions/**': { ssr: true, prerender: true },
-    '/sponsors/**': { ssr: true, prerender: true },
+    '/register/': { prerender: true },
+    '/passmarket-console/': { prerender: true },
   },
   runtimeConfig: {
     public: {

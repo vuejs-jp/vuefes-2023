@@ -5,14 +5,15 @@ interface PrivacyPolicyAndCocEmit {
   (e: 'on-click'): void
 }
 const emit = defineEmits<PrivacyPolicyAndCocEmit>()
+const urlBasePath = useRuntimeConfig().app.baseURL
 </script>
 
 <template>
   <div class="doc-root">
-    <TextButton href="/privacy" underline @click.stop="$emit('on-click')">{{
+    <TextButton :href="`${urlBasePath}privacy`" underline @click.stop="$emit('on-click')">{{
       $t('words.privacypolicy')
     }}</TextButton>
-    <TextButton href="/code-of-conduct" underline @click.stop="$emit('on-click')">{{
+    <TextButton :href="`${urlBasePath}code-of-conduct`" underline @click.stop="$emit('on-click')">{{
       $t('words.codeofconduct')
     }}</TextButton>
   </div>

@@ -7,6 +7,7 @@ const props = defineProps({
     required: true,
   },
 })
+const urlBasePath = useRuntimeConfig().app.baseURL
 </script>
 
 <template>

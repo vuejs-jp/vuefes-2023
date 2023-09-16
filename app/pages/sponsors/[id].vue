@@ -6,11 +6,12 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
-import { conferenceTitle, urlBasePath } from '~/utils/constants'
+import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
 import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
 import { useSponsor } from '~/composables/useSponsor'
 
+const urlBasePath = useRuntimeConfig().app.baseURL
 const emptySponsor: Sponsor = {
   id: '',
   name: '',

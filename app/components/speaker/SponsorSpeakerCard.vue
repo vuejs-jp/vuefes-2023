@@ -4,8 +4,9 @@ import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
 import { useSession } from '~/composables/useSession'
 import { SpeakerProfile } from '~/types/app'
-import { twitterDomainUrl, urlBasePath } from '~/utils/constants'
+import { twitterDomainUrl } from '~/utils/constants'
 
+const urlBasePath = useRuntimeConfig().app.baseURL
 const { showSpeakerInfo } = useSession()
 
 const props = defineProps({

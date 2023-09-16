@@ -102,7 +102,7 @@ const updateReceiptId = (value: string) => {
             <img
               v-if="picture || eventUser?.avatar_url"
               alt=""
-              :src="getFullAvatarUrl(picture) || eventUser?.avatar_url"
+              :src="picture ? getFullAvatarUrl(picture) : eventUser?.avatar_url"
               width="120"
               height="120"
               decoding="async"

@@ -1,4 +1,4 @@
-import { Team } from '~/types/app'
+import { Team, Volunteer } from '~/types/app'
 import { twitterDomainUrl } from '~/utils/constants'
 
 export const teams: Team[] = [
@@ -217,4 +217,45 @@ export const teams: Team[] = [
     name: '平野 雅一',
     snsLink: `${twitterDomainUrl}Hirano_Tech`,
   },
+]
+
+export const volunteers: Volunteer[] = [
+  { name: 'Shuntaro Miwa' },
+  { name: 'csy19' },
+  { name: 'ひな' },
+  { name: 'hiroko_ino' },
+  { name: 'よしぴー' },
+  { name: 'horiiiiii032929' },
+  { name: 'Naoyuki Yamada' },
+  { name: 'げんじ' },
+  { name: 'maru' },
+  { name: '日隈壮一郎' },
+  { name: 'Kota Fujishiro' },
+  { name: '福田繁之' },
+  { name: 'とよへい' },
+  { name: 'isamusuzuki' },
+  { name: 'Yuto NAGAI' },
+  { name: 'Arisa' },
+  { name: 'Marianna' },
+  { name: 'でろ' },
+  { name: 'kaeru_note' },
+  { name: 'Keisuke Sawa' },
+  { name: 'Midori Tanaka' },
+  { name: 'Tsuge' },
+  { name: 'Risa Okutani' },
+  { name: 'Shun Nakano' },
+  { name: 'Shunsuke Nakamura' },
+  { name: 'Charles Montgomery' },
+  { name: 'ubugeeei' },
+  { name: 'Kiyoshi Yamashita' },
+  { name: 'Hatsuki Saito' },
+  { name: 'Yosuke Ythe Sato' },
+  { name: 'tatsugooon' },
+  { name: '内藤 航介' },
+  { name: 'ryo-endo' },
+  { name: 'takeaship' },
+  { name: 'ponyoxa' },
+  { name: 'みーた' },
+  { name: 'くろきり' },
+  { name: 'ruka' },
 ]

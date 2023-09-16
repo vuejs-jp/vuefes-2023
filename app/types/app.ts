@@ -160,6 +160,10 @@ export type Team = {
   snsLink: string
 }
 
+export type Volunteer = {
+  name: string
+}
+
 /**
  * store
  */

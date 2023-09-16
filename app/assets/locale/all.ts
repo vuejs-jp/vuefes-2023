@@ -191,6 +191,8 @@ export default {
        * teams section
        */
       teams_subtitle: 'チーム',
+      teams_core_staff: 'コアスタッフ',
+      teams_volunteer: 'ボランティアスタッフ'
     },
   },
   en: {
@@ -389,6 +391,8 @@ export default {
        * teams section
        */
       teams_subtitle: 'Teams',
+      teams_core_staff: 'CORE STAFF',
+      teams_volunteer: 'VOLUNTEER STAFF',
     },
   },
   ja_basic: {

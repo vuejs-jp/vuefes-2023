@@ -23,26 +23,26 @@ const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
 const { eventUser } = await useUser(userId)
 
-defineOgImageWithoutCache({
+defineOgImage({
   component: 'OgTemplate',
   signedUser: {
-    full_name: eventUser?.display_name,
+    full_name: eventUser?.display_name || '参加者',
     avatar_url: eventUser?.avatar_url,
     role: eventUser?.role || 'attendee',
   },
 })
 
 useHead({
-  titleTemplate: (titleChunk) => `${eventUser?.display_name} | ${conferenceTitle}`,
+  titleTemplate: (titleChunk) => `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`,
   meta: [
     ...generalOg({
-      title: `${eventUser?.display_name} | ${conferenceTitle}`,
-      description: `${eventUser?.display_name} の参加者情報を掲載しています。`,
+      title: `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`,
+      description: `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`,
       url: `${linkUrl}users/${userId}`,
     }),
     ...twitterOg({
-      title: `${eventUser?.display_name} | ${conferenceTitle}`,
-      description: `${eventUser?.display_name} の参加者情報を掲載しています。`,
+      title: `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`,
+      description: `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`,
       url: `${linkUrl}users/${userId}`,
     }),
   ],

@@ -7,8 +7,6 @@ export async function useUser(userId: string) {
     return await client.from('event_users').select().eq('user_id', userId).single()
   })
   const { data, error } = eventUser.value as any
-  // console.log('ここのdataは', data)
-  // console.log('ここのerrorは', error.message)
 
   return { eventUser: data || createEmptyUser(), error }
 }

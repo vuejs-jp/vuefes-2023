@@ -74,8 +74,8 @@ useHead({
       <AvatarCard
         :signed-user="{
           ...signedUser,
-          full_name: eventUser?.display_name || eventUser?.full_name || '参加者',
-          avatar_url: eventUser?.avatar_url || signedUser.avatar_url,
+          full_name: eventUser?.display_name || '参加者',
+          avatar_url: eventUser?.avatar_url || '',
           role: eventUser?.role || 'attendee',
         }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"

@@ -31,12 +31,14 @@ export function useSupabase() {
 
   async function updateEventUser(
     displayName: string | undefined,
+    receiptId: string | undefined,
     avatarUrl: string,
     userId: string,
   ) {
     const userData = {
       // ...user,
       display_name: displayName,
+      receipt_id: receiptId,
       avatar_url: getFullAvatarUrl(avatarUrl),
     }
 

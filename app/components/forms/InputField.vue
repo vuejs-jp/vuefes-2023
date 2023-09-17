@@ -81,6 +81,7 @@ css({
     },
     '&:disabled': {
       pointerEvents: 'none',
+      background: '#E2E2E2',
     },
   },
   '.error': {

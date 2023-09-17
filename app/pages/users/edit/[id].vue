@@ -40,6 +40,7 @@ const onSubmit = (e: Event) => {
   e.preventDefault()
   updateEventUser(
     displayName.value || eventUser?.display_name,
+    receiptId.value,
     picture.value || eventUser?.avatar_url,
     signedUser.user_id,
   )
@@ -126,7 +127,7 @@ const updateReceiptId = (value: string) => {
               required
               :error="receiptIdError"
               :value="eventUser?.receipt_id"
-              disabled
+              :disabled="eventUser?.activated_at === ''"
               @input="updateReceiptId"
               @blur="validateReceiptId"
             />

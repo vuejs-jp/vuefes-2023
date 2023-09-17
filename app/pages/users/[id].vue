@@ -93,7 +93,8 @@ useHead({
         :detail="statusDetail"
         :has-error="cardStatus !== 'registered'"
       />
-      <h2>ネームカード</h2>
+      <!-- ネームカード -->
+      <h2>{{ $t('words.namecard') }}</h2>
       <AvatarCard
         :signed-user="{
           ...signedUser,
@@ -103,7 +104,10 @@ useHead({
         }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
-      <RoundButton class="btn-update" :to="`/users/edit/${userId}`">再編集</RoundButton>
+      <!-- 再編集 -->
+      <RoundButton class="btn-update" :to="`/users/edit/${userId}`">
+        {{ $t('words.re_edit') }}
+      </RoundButton>
       <!--
       <RoundButton
         class="btn-save"
@@ -116,6 +120,7 @@ useHead({
         画像を保存
       </RoundButton>
       -->
+      <!-- カレンダーに追加 -->
       <RoundButton
         class="btn-calendar"
         :href="calendarUrl"
@@ -123,7 +128,11 @@ useHead({
         rel="noreferrer"
         outline
       >
-        カレンダーに追加
+        {{ $t('words.add_to_calendar') }}
+      </RoundButton>
+      <!-- トップに戻る -->
+      <RoundButton to="/" outline>
+        {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
         <CommentTitle color="vue.green" title="ネームカードが完成したらSNSで参加表明しましょう！" />

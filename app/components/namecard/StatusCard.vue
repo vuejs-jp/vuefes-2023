@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const props = defineProps({
+  hasError: {
+    type: Boolean,
+    default: false,
+  },
   title: {
     type: String,
     required: true,
@@ -32,8 +36,8 @@ css({
     padding: 'calc({space.8} * 3)',
     maxWidth: '760px',
     background: '{color.white}',
-    color: (props) => props.status === 'registered' ? '{color.vue.green}' : '{color.sangosyo}',
-    border: (props) => props.status === 'registered' ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
+    color: (props) => !props.hasError  ? '{color.vue.green}' : '{color.sangosyo}',
+    border: (props) => !props.hasError  ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
     borderRadius: '8px',
   },
   '.title': {

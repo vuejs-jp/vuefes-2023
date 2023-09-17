@@ -88,7 +88,11 @@ useHead({
   </NavPageSection>
   <main>
     <section>
-      <StatusCard :title="statusTitle" :detail="statusDetail" />
+      <StatusCard
+        :title="statusTitle"
+        :detail="statusDetail"
+        :has-error="cardStatus !== 'registered'"
+      />
       <h2>ネームカード</h2>
       <AvatarCard
         :signed-user="{

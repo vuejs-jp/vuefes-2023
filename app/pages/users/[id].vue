@@ -19,6 +19,7 @@ definePageMeta({
 
 const route = useRoute()
 const userId = route.params.id as string
+const urlBasePath = useRuntimeConfig().app.baseURL
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
 const { eventUser, error } = await useUser(userId)
@@ -105,7 +106,7 @@ useHead({
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <!-- 再編集 -->
-      <RoundButton class="btn-update" :to="`/users/edit/${userId}`">
+      <RoundButton class="btn-update" :to="`/users/edit/${userId}`" :disabled="!hasAuth">
         {{ $t('words.re_edit') }}
       </RoundButton>
       <!--
@@ -131,7 +132,7 @@ useHead({
         {{ $t('words.add_to_calendar') }}
       </RoundButton>
       <!-- トップに戻る -->
-      <RoundButton to="/" outline>
+      <RoundButton :to="urlBasePath" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
@@ -173,7 +174,7 @@ useHead({
 <style lang="ts" scoped>
 css({
   'section': {
-    marginTop: '120px',
+    marginTop: '140px',
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
@@ -196,6 +197,9 @@ css({
     gap: 'calc({space.8} * 5)',
   },
   '@mobile': {
+    'section': {
+      marginTop: '120px',
+    },
     '.btn-update, .btn-save, .btn-calendar': {
       marginTop: 'calc({space.8} * 0)'
     },

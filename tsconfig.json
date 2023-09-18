@@ -2,6 +2,6 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "types": ["@nuxt/types", "@nuxtjs/i18n", "cypress", "node"]
+    "types": ["@nuxt/types", "@nuxtjs/i18n", "@nuxtjs/device", "cypress", "node"]
   }
 }

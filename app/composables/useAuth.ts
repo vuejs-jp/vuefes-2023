@@ -4,6 +4,12 @@ import { match } from 'ts-pattern'
 import { AuthProvider, FormUser } from '~/types/app'
 import { storeKey } from '~/atoms/user'
 
+export enum AuthChangeEvent {
+  INITIAL_SESSION = 'INITIAL_SESSION',
+  SIGNED_IN = 'SIGNED_IN',
+  SIGNED_OUT = 'SIGNED_OUT',
+}
+
 const initialUser = {
   user_id: '',
   full_name: '',
@@ -39,11 +45,15 @@ const useAuth = () => {
   })
 
   const store = inject(storeKey)
+  let _onAuthChanged: (evt: string) => void = () => {}
+  const onAuthChanged = (callback: (evt: string) => void) => {
+    _onAuthChanged = callback
+  }
 
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
     match(evt)
-      .with('INITIAL_SESSION', 'SIGNED_IN', () => {
+      .with(AuthChangeEvent.INITIAL_SESSION, AuthChangeEvent.SIGNED_IN, () => {
         if (session?.user) {
           const { user } = session
           signedUser.user_id = user.id || ''
@@ -57,8 +67,9 @@ const useAuth = () => {
           // signedUser.receipt_id = user?.receipt_id || ''
           store?.setUser(signedUser)
         }
+        _onAuthChanged(evt)
       })
-      .with('SIGNED_OUT', () => {
+      .with(AuthChangeEvent.SIGNED_OUT, () => {
         Object.entries(initialUser).forEach(([key, value]) => {
           signedUser[key as keyof FormUser] = value
         })
@@ -95,7 +106,7 @@ const useAuth = () => {
     return signedUser.user_id !== ''
   })
 
-  return { signOut, signIn, signedUser, hasAuth }
+  return { signOut, signIn, signedUser, hasAuth, onAuthChanged }
 }
 
 export function getClient() {

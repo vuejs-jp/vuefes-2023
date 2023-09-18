@@ -7,7 +7,7 @@ import UploadLogo from '~/assets/logo/upload_logo.svg'
 import TextButton from '~/components/button/TextButton.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
-import useAuth from '~/composables/useAuth'
+import useAuth, { AuthChangeEvent } from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useUser } from '~/composables/useUser'
 import { useSupabase } from '~/composables/useSupabase'
@@ -18,9 +18,20 @@ definePageMeta({
   middleware: ['error'],
 })
 
+const router = useRouter()
 const route = useRoute()
 const userId = route.params.id as string
-const { hasAuth, signOut } = useAuth()
+const { hasAuth, signOut, onAuthChanged } = useAuth()
+const userPagePath = `/users/${userId}`
+
+onAuthChanged((evt: string) => {
+  if (evt === AuthChangeEvent.INITIAL_SESSION) {
+    if (!hasAuth.value) {
+      router.push(userPagePath)
+    }
+  }
+})
+
 const { signedUser } = useUserStore()
 const { updateEventUser, uploadAvatar, getFullAvatarUrl } = useSupabase()
 const { eventUser } = await useUser(userId)
@@ -134,7 +145,7 @@ const updateReceiptId = (value: string) => {
 
             <div class="link-box">
               <!-- キャンセル -->
-              <RoundButton :to="`/users/${userId}`" outline> キャンセル </RoundButton>
+              <RoundButton :to="userPagePath" outline> キャンセル </RoundButton>
               <!-- 確定 -->
               <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
             </div>
@@ -162,7 +173,7 @@ const updateReceiptId = (value: string) => {
 <style lang="ts" scoped>
 css({
   'section': {
-    marginTop: '120px',
+    marginTop: '140px',
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
@@ -219,6 +230,11 @@ css({
     padding: '0 16px',
     justifyContent: 'center',
     gap: '40px'
+  },
+  '@mobile': {
+    'section': {
+      marginTop: '120px',
+    },
   },
 })
 </style>

@@ -5,7 +5,7 @@ import { match } from 'ts-pattern'
 import { AuthProvider, FormUser } from '~/types/app'
 import { storeKey } from '~/atoms/user'
 
-const initialUser = {
+const initialUser: FormUser = {
   user_id: '',
   full_name: '',
   avatar_url: '',
@@ -16,7 +16,7 @@ const initialUser = {
   receipt_id: '',
 }
 
-const dummyUser = {
+const dummyUser: FormUser = {
   user_id: 'dummy-user',
   full_name: 'ダミーユーザ',
   avatar_url: 'https://vuefes.jp/2022/speakers/evan.jpeg',

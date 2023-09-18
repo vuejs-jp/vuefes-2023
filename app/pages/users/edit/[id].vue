@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { AuthChangeEvent } from '@supabase/supabase-js'
 import InputField from '~/components/forms/InputField.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SubmitButton from '~/components/forms/SubmitButton.vue'
@@ -7,7 +8,7 @@ import UploadLogo from '~/assets/logo/upload_logo.svg'
 import TextButton from '~/components/button/TextButton.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
-import useAuth, { AuthChangeEvent } from '~/composables/useAuth'
+import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
 import { useUser } from '~/composables/useUser'
 import { useSupabase } from '~/composables/useSupabase'
@@ -24,8 +25,8 @@ const userId = route.params.id as string
 const { hasAuth, signOut, onAuthChanged } = useAuth()
 const userPagePath = `/users/${userId}`
 
-onAuthChanged((evt: string) => {
-  if (evt === AuthChangeEvent.INITIAL_SESSION) {
+onAuthChanged((evt: AuthChangeEvent) => {
+  if (evt === 'INITIAL_SESSION') {
     if (!hasAuth.value) {
       router.push(userPagePath)
     }

@@ -140,7 +140,7 @@ useHead({
         <div class="social-item">
           <a
             :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              `https://vuefes.jp/2023/users/${signedUser.user_id}`,
+              `https://vuefes.jp/2023/users/${userId}`,
             )}`"
             target="_blank"
             rel="noreferrer"
@@ -150,7 +150,7 @@ useHead({
           </a>
           <a
             :href="`${twitterDomainUrl}share?url=${encodeURIComponent(
-              `https://vuefes.jp/2023/users/${signedUser.user_id}`,
+              `https://vuefes.jp/2023/users/${userId}`,
             )}`"
             target="_blank"
             rel="noreferrer"

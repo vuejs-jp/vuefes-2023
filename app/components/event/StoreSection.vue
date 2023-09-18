@@ -20,7 +20,7 @@ import { storeUrl } from '~/utils/constants'
           <img
             width="308"
             height="308"
-            :alt="`${$t(`top.${menu.nameKey}Vue Fes `)}'s picture'`"
+            :alt="`Vue Fes ${$t(`top.${menu.nameKey}`)}'s picture'`"
             :src="`${menu.imgSrc}`"
             decoding="async"
           />

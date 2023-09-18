@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { AuthChangeEvent } from '@supabase/supabase-js'
 import InputField from '~/components/forms/InputField.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import SubmitButton from '~/components/forms/SubmitButton.vue'
@@ -18,9 +19,20 @@ definePageMeta({
   middleware: ['error'],
 })
 
+const router = useRouter()
 const route = useRoute()
 const userId = route.params.id as string
-const { hasAuth, signOut } = useAuth()
+const { hasAuth, signOut, onAuthChanged } = useAuth()
+const userPagePath = `/users/${userId}`
+
+onAuthChanged((evt: AuthChangeEvent) => {
+  if (evt === 'INITIAL_SESSION') {
+    if (!hasAuth.value) {
+      router.push(userPagePath)
+    }
+  }
+})
+
 const { signedUser } = useUserStore()
 const { updateEventUser, uploadAvatar, getFullAvatarUrl } = useSupabase()
 const { eventUser } = await useUser(userId)
@@ -134,7 +146,7 @@ const updateReceiptId = (value: string) => {
 
             <div class="link-box">
               <!-- キャンセル -->
-              <RoundButton :to="`/users/${userId}`" outline> キャンセル </RoundButton>
+              <RoundButton :to="userPagePath" outline> キャンセル </RoundButton>
               <!-- 確定 -->
               <SubmitButton :disabled="!isSubmitting"> 確定 </SubmitButton>
             </div>
@@ -162,7 +174,7 @@ const updateReceiptId = (value: string) => {
 <style lang="ts" scoped>
 css({
   'section': {
-    marginTop: '120px',
+    marginTop: '140px',
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
@@ -219,6 +231,11 @@ css({
     padding: '0 16px',
     justifyContent: 'center',
     gap: '40px'
+  },
+  '@mobile': {
+    'section': {
+      marginTop: '120px',
+    },
   },
 })
 </style>

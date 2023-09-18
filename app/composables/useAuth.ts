@@ -1,10 +1,11 @@
 import { onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
+import type { AuthChangeEvent } from '@supabase/supabase-js'
 import { match } from 'ts-pattern'
 import { AuthProvider, FormUser } from '~/types/app'
 import { storeKey } from '~/atoms/user'
 
-const initialUser = {
+const initialUser: FormUser = {
   user_id: '',
   full_name: '',
   avatar_url: '',
@@ -15,7 +16,7 @@ const initialUser = {
   receipt_id: '',
 }
 
-const dummyUser = {
+const dummyUser: FormUser = {
   user_id: 'dummy-user',
   full_name: 'ダミーユーザ',
   avatar_url: 'https://vuefes.jp/2022/speakers/evan.jpeg',
@@ -39,6 +40,10 @@ const useAuth = () => {
   })
 
   const store = inject(storeKey)
+  let _onAuthChanged: (evt: AuthChangeEvent) => void = () => {}
+  const onAuthChanged = (callback: (evt: AuthChangeEvent) => void) => {
+    _onAuthChanged = callback
+  }
 
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
@@ -57,6 +62,7 @@ const useAuth = () => {
           // signedUser.receipt_id = user?.receipt_id || ''
           store?.setUser(signedUser)
         }
+        _onAuthChanged(evt)
       })
       .with('SIGNED_OUT', () => {
         Object.entries(initialUser).forEach(([key, value]) => {
@@ -95,7 +101,7 @@ const useAuth = () => {
     return signedUser.user_id !== ''
   })
 
-  return { signOut, signIn, signedUser, hasAuth }
+  return { signOut, signIn, signedUser, hasAuth, onAuthChanged }
 }
 
 export function getClient() {

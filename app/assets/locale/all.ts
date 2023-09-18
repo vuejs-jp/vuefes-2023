@@ -23,6 +23,9 @@ export default {
       apply_personal_sponsor: 'チケットを購入',
       personal_sponsor: '個人スポンサー',
       pre_order: '事前注文する',
+      add_to_calendar: 'カレンダーに追加',
+      re_edit: '再編集',
+      namecard: 'ネームカード',
     },
     category: {
       platinum: 'Platinum',

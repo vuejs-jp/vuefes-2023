@@ -1,7 +1,24 @@
-import { FormUser } from '~/types/app'
+import { FormUser, User } from '~/types/app'
 
 type State = {
   user: FormUser
+}
+
+export function createEmptyUser(): User {
+  return {
+    activated_at: null,
+    avatar_url: '',
+    created_at: '',
+    display_name: '',
+    email: '',
+    full_name: '',
+    id: '',
+    provider: '',
+    receipt_id: '',
+    role: null,
+    updated_at: '',
+    user_id: '',
+  }
 }
 
 export function useStore() {

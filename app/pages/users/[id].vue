@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Status } from '~/types/app'
 import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import FacebookLogo from '~/assets/logo/facebook_logo.svg'
 import TwitterLogoBlue from '~/assets/logo/twitter_logo_blue.svg'
@@ -8,10 +9,9 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import useAuth from '~/composables/useAuth'
 import { useUserStore } from '~/composables/useUserStore'
+import { useNamecardStatus } from '~/composables/useNamecardStatus'
 import { useUser } from '~/composables/useUser'
 import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
-// import UserForDev from '~/components/UserForDev.vue'
-// import { isProd } from '~/utils/environment.constants'
 
 definePageMeta({
   middleware: ['error'],
@@ -21,7 +21,8 @@ const route = useRoute()
 const userId = route.params.id as string
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
-const { eventUser } = await useUser(userId)
+const { eventUser, error } = await useUser(userId)
+const errorMsg = error?.message || ''
 
 defineOgImage({
   component: 'OgTemplate',
@@ -32,18 +33,36 @@ defineOgImage({
   },
 })
 
+/**
+ * status card
+ */
+let cardStatus: Status = eventUser?.activated_at ? 'registered' : 'failed'
+if (errorMsg) cardStatus = 'nouser'
+const { message } = useNamecardStatus()
+const { title: statusTitle, detail: statusDetail } = message(cardStatus)
+
+/**
+ * meta
+ */
+const pageTitle = `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`
+let description = eventUser
+  ? `${eventUser?.display_name} の参加者情報を掲載しています。`
+  : 'チケット購入状況との照合に失敗しました'
+if (errorMsg) description = statusTitle
+const url = `${linkUrl}users/${userId}`
+
 useHead({
-  titleTemplate: (titleChunk) => `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`,
+  titleTemplate: (titleChunk) => pageTitle,
   meta: [
     ...generalOg({
-      title: `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`,
-      description: `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`,
-      url: `${linkUrl}users/${userId}`,
+      title: pageTitle,
+      description: description,
+      url,
     }),
     ...twitterOg({
-      title: `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`,
-      description: `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`,
-      url: `${linkUrl}users/${userId}`,
+      title: pageTitle,
+      description: description,
+      url,
     }),
   ],
 })
@@ -69,8 +88,13 @@ useHead({
   </NavPageSection>
   <main>
     <section>
-      <StatusCard :status="eventUser?.activated_at ? 'registered' : 'failed'" />
-      <h2>ネームカード</h2>
+      <StatusCard
+        :title="statusTitle"
+        :detail="statusDetail"
+        :has-error="cardStatus !== 'registered'"
+      />
+      <!-- ネームカード -->
+      <h2>{{ $t('words.namecard') }}</h2>
       <AvatarCard
         :signed-user="{
           ...signedUser,
@@ -80,7 +104,10 @@ useHead({
         }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
-      <RoundButton class="btn-update" :to="`/users/edit/${userId}`">再編集</RoundButton>
+      <!-- 再編集 -->
+      <RoundButton class="btn-update" :to="`/users/edit/${userId}`">
+        {{ $t('words.re_edit') }}
+      </RoundButton>
       <!--
       <RoundButton
         class="btn-save"
@@ -93,6 +120,7 @@ useHead({
         画像を保存
       </RoundButton>
       -->
+      <!-- カレンダーに追加 -->
       <RoundButton
         class="btn-calendar"
         :href="calendarUrl"
@@ -100,7 +128,11 @@ useHead({
         rel="noreferrer"
         outline
       >
-        カレンダーに追加
+        {{ $t('words.add_to_calendar') }}
+      </RoundButton>
+      <!-- トップに戻る -->
+      <RoundButton to="/" outline>
+        {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
         <CommentTitle color="vue.green" title="ネームカードが完成したらSNSで参加表明しましょう！" />
@@ -152,7 +184,7 @@ css({
     },
   },
   '.btn-update, .btn-save, .btn-calendar': {
-    marginTop: 'calc({space.8} * 4)'
+    marginTop: 'calc({space.8} * 2)'
   },
   '.social': {
     display: 'grid',
@@ -162,6 +194,11 @@ css({
   '.social-item': {
     display: 'flex',
     gap: 'calc({space.8} * 5)',
+  },
+  '@mobile': {
+    '.btn-update, .btn-save, .btn-calendar': {
+      marginTop: 'calc({space.8} * 0)'
+    },
   },
 })
 </style>

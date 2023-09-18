@@ -35,7 +35,7 @@ export type AuthProvider = 'github' | 'google'
 
 export type Role = 'staff' | 'speaker' | 'sponsor' | 'attendee' | 'attendee + party'
 
-export type Status = 'registered' | 'failed'
+export type Status = 'registered' | 'failed' | 'nouser'
 
 export interface FormUser {
   user_id: string
@@ -47,6 +47,21 @@ export interface FormUser {
   display_name: string
   receipt_id: string
   created_at: string
+}
+
+export interface User {
+  activated_at: string | null
+  avatar_url: string
+  created_at: string
+  display_name: string
+  email: string
+  full_name: string
+  id: string
+  provider: string
+  receipt_id: string
+  role: string | null
+  updated_at: string
+  user_id: string
 }
 
 /**

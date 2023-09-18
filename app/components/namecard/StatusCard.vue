@@ -1,36 +1,43 @@
 <script setup lang="ts">
-import { Status } from '~/types/app'
-import { useNamecardStatus } from '~/composables/useNamecardStatus'
-
 const props = defineProps({
-  status: {
-    type: String as PropType<Status>,
+  hasError: {
+    type: Boolean,
+    default: false,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  detail: {
+    type: String,
     required: true,
   },
 })
-
-const { message } = useNamecardStatus()
-const { title, detail } = message(props.status)
 </script>
 
 <template>
   <div class="root">
-    <div class="title">{{ title }}</div>
-    <div class="detail">{{ detail }}</div>
+    <div class="root-body">
+      <p class="title">{{ title }}</p>
+      <p class="detail">{{ detail }}</p>
+    </div>
   </div>
 </template>
 
 <style lang="ts" scoped>
 css({
   '.root': {
+    padding: '0 calc({space.8} * 3)'
+  },
+  '.root-body': {
     display: 'flex',
     flexDirection: 'column',
     gap: 'calc({space.8} * 1)',
     padding: 'calc({space.8} * 3)',
-    width: '760px',
+    maxWidth: '760px',
     background: '{color.white}',
-    color: (props) => props.status === 'registered' ? '{color.vue.green}' : '{color.sangosyo}',
-    border: (props) => props.status === 'registered' ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
+    color: (props) => !props.hasError  ? '{color.vue.green}' : '{color.sangosyo}',
+    border: (props) => !props.hasError  ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
     borderRadius: '8px',
   },
   '.title': {
@@ -43,7 +50,7 @@ css({
     whiteSpace: 'pre-wrap',
   },
   '@mobile': {
-    '.root': {
+    '.root-body': {
       width: '100%',
     },
   },

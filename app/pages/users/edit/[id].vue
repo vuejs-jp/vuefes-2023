@@ -149,11 +149,11 @@ const updateReceiptId = (value: string) => {
         </div>
       </div>
       <RoundButton v-if="hasAuth" class="btn-purchase" @click="onSubmit">purchase</RoundButton> -->
-    </section>
 
-    <div v-if="!isProd">
-      <UserForDev />
-    </div>
+      <div v-if="!isProd">
+        <UserForDev />
+      </div>
+    </section>
 
     <FooterPageSection has-auth />
   </main>
@@ -166,6 +166,7 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
+    padding: '0 calc({space.8} * 3)'
   },
   'h2': {
     color: '{color.vue.blue}',

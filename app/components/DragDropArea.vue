@@ -69,7 +69,7 @@ css({
     display: 'grid',
     margin: 'calc({space.8} * 5) auto',
     placeItems: 'center',
-    width: '760px',
+    width: '100%',
     height: '214px',
     borderRadius: 'calc({space.8} * 1.5)',
     border: 'dotted calc({space.8} * 0.5) {color.vue.blue}',

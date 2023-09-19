@@ -192,7 +192,7 @@ export default {
        */
       teams_subtitle: 'チーム',
       teams_core_staff: 'コアスタッフ',
-      teams_volunteer: 'ボランティアスタッフ'
+      teams_volunteer: 'ボランティアスタッフ',
     },
   },
   en: {

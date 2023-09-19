@@ -33,7 +33,7 @@ create or replace function public.handle_activate()
 begin
   update public.event_users
   set activated_at = now(), role = new.role
-  where receipt_id = new.receipt_id;
+  where receipt_id = new.receipt_id and activated_at is null;
   return new;
 end;
 $$ language plpgsql security definer;

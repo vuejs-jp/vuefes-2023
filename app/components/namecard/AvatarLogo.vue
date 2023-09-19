@@ -41,7 +41,7 @@ css({
     width: (props) => props.size === 'small' ? '40px' : '120px',
     height: (props) => props.size === 'small' ? '40px' : '120px',
     borderRadius: '50%',
-    boxShadow: '0px 0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
+    boxShadow: '0px 0px 0px calc({space.8} * 0.25) rgba(255, 255, 255, 1)',
   },
   '.sample-avatar': {
     display: 'grid',
@@ -50,7 +50,7 @@ css({
     height: (props) => props.size === 'small' ? '40px' : '120px',
     background: 'linear-gradient(#90B44B, #42B983)',
     borderRadius: '50%',
-    boxShadow: '0px 0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
+    boxShadow: '0px 0px 0px calc({space.8} * 0.25) rgba(255, 255, 255, 1)',
   },
 })
 </style>

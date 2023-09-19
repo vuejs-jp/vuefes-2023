@@ -31,7 +31,7 @@ import MarkDownText from '~/components/MarkDownText.vue'
   </section>
 </template>
 
-<style lang="ts" scoped>y
+<style lang="ts" scoped>
 css({
   'section': {
     padding: '120px 20px',

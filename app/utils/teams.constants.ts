@@ -223,6 +223,7 @@ export const volunteers: Volunteer[] = [
   { name: 'Shuntaro Miwa' },
   { name: 'csy19' },
   { name: 'ひな' },
+  { name: 'nabekura' },
   { name: 'hiroko_ino' },
   { name: 'よしぴー' },
   { name: 'horiiiiii032929' },
@@ -243,6 +244,7 @@ export const volunteers: Volunteer[] = [
   { name: 'Midori Tanaka' },
   { name: 'Tsuge' },
   { name: 'Risa Okutani' },
+  { name: 'すぎしお' },
   { name: 'Shun Nakano' },
   { name: 'Shunsuke Nakamura' },
   { name: 'Charles Montgomery' },
@@ -258,4 +260,5 @@ export const volunteers: Volunteer[] = [
   { name: 'みーた' },
   { name: 'くろきり' },
   { name: 'ruka' },
+  { name: 'Takatoshi Tenko' },
 ]

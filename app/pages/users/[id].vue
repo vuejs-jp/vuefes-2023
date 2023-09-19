@@ -47,7 +47,7 @@ const { title: statusTitle, detail: statusDetail } = message(cardStatus)
  */
 const pageTitle = `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`
 let description = eventUser
-  ? `${eventUser?.display_name} の参加者情報を掲載しています。`
+  ? `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`
   : 'チケット購入状況との照合に失敗しました'
 if (errorMsg) description = statusTitle
 const url = `${linkUrl}users/${userId}`
@@ -98,7 +98,6 @@ useHead({
       <h2>{{ $t('words.namecard') }}</h2>
       <AvatarCard
         :signed-user="{
-          ...signedUser,
           full_name: eventUser?.display_name || '参加者',
           avatar_url: eventUser?.avatar_url || '',
           role: eventUser?.role || 'attendee',

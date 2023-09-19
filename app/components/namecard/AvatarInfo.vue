@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import AvatarLogo from '~/components/namecard/AvatarLogo.vue'
 import { useUserRole } from '~/composables/useUserRole'
-import { FormUser, Role } from '~/types/app'
+import { Role } from '~/types/app'
 
 const props = defineProps({
   signedUser: {
-    type: Object as PropType<FormUser>,
+    type: Object as PropType<{
+      full_name: string
+      avatar_url: string
+      role: Role
+    }>,
     required: true,
   },
   useShare: {

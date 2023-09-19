@@ -7,11 +7,15 @@ import VueFesLogo from '@/assets/namecard/vuefes_logo.svg'
 import Hook from '@/assets/namecard/hook.svg'
 import Sponsor from '@/assets/namecard/sponsor.svg'
 import AvatarInfo from './AvatarInfo.vue'
-import { FormUser, Role } from '~/types/app'
+import { Role } from '~/types/app'
 
 const props = defineProps({
   signedUser: {
-    type: Object as PropType<FormUser>,
+    type: Object as PropType<{
+      full_name: string
+      avatar_url: string
+      role: Role
+    }>,
     required: true,
   },
   opacity: {

@@ -6,6 +6,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: '走りながらエンジンを交換する ~ 大規模プロダクトを成長させつつVue3にするには ~',
+      track: 'all',
       time: '11:05 - 11:25',
       type: 'main',
     },
@@ -25,6 +26,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'ユニークビジョンのフロントエンド開発における取り組み',
+      track: 'all',
       time: '11:25 - 11:45',
       type: 'main',
     },
@@ -44,6 +46,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue.jsを活用して開発リードタイムが1/3になった話',
+      track: 'all',
       time: '11:45 - 12:05',
       type: 'main',
     },
@@ -64,7 +67,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue2 の EOL まで二ヶ月ですが進捗どうですか？',
-      time: '',
+      track: 'medpeer',
+      time: '12:30 - 12:45',
       type: 'main',
     },
     profile: [
@@ -85,7 +89,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'OpenAI APIをNuxt.jsに入れてみた的な話',
-      time: '',
+      track: 'vue',
+      time: '12:30 - 12:40',
       type: 'main',
     },
     profile: [
@@ -103,7 +108,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: '「Youはなぜコントリビュータに？」論より動くもの.fm 出張版',
-      time: '',
+      track: 'cloudsign',
+      time: '12:25 - 12:45',
       type: 'main',
     },
     profile: [
@@ -130,7 +136,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue.jsプロジェクト設計のベストプラクティスを求めて',
-      time: '',
+      track: 'cloudsign',
+      time: '12:55 - 13:15',
       type: 'main',
     },
     profile: [

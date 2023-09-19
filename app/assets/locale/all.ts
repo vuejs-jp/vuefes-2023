@@ -43,9 +43,11 @@ export default {
       media: 'Media',
     },
     track: {
+      all: '全トラック',
       cloudsign: 'クラウドサイントラック',
       medpeer: 'メドピアトラック',
       m3: 'エムスリーやっていきトラック',
+      vue: 'Vueトラック',
     },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
@@ -237,9 +239,11 @@ export default {
       media: 'Media',
     },
     track: {
-      cloudsign: 'クラウドサイントラック',
-      medpeer: 'メドピアトラック',
-      m3: 'エムスリーやっていきトラック',
+      all: 'All track',
+      cloudsign: 'クラウドサイン track',
+      medpeer: 'メドピア track',
+      m3: 'エムスリーやっていき track',
+      vue: 'Vue track',
     },
     top: {
       check_twitter: 'Check information on Twitter!',

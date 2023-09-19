@@ -144,4 +144,24 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     ],
     sponsorId: 'mntsq',
   },
+  {
+    id: 'hacomono',
+    type: 'domestic',
+    session: {
+      title: 'Nuxt 3 ではじめるテスト導入戦略と初手',
+      track: 'm3',
+      time: '12:20 - 12:40',
+      type: 'main',
+    },
+    profile: [
+      {
+        id: 'saimon-nozaki',
+        image: 'sponsor-speakers/saimon-nozaki.jpg',
+        title: '株式会社 hacomono\nプロダクト開発本部 POS グループ',
+        name: '野崎 才門',
+        twitterId: 'serum_vision',
+      },
+    ],
+    sponsorId: 'hacomono',
+  },
 ]

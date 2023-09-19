@@ -207,7 +207,10 @@ css({
     paddingBottom: 'calc({space.8} * 3)',
     ':deep(.speaker-card)': {
       maxWidth: '400px'
-    }
+    },
+    '::v-deep(img)': {
+      width: '308px',
+    },
   },
   '.person-info': {
     '::v-deep(ul)': {
@@ -236,6 +239,11 @@ css({
     'main': {
       '--head-img-width': '368px',
       display: 'block',
+    },
+    '.detailbody-persons': {
+      '::v-deep(img)': {
+        width: '275px',
+      },
     },
   },
   '@mobile': {

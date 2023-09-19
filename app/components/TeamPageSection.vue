@@ -24,7 +24,9 @@ import MarkDownText from '~/components/MarkDownText.vue'
       <h3>{{ $t('top.teams_volunteer') }}</h3>
     </div>
     <div class="volunteers">
-      <span v-for="(volunteer, i) in volunteers" :key="volunteer.name">{{ volunteer.name }}<template v-if="i < volunteers.length - 1">、</template></span>
+      <span v-for="(volunteer, i) in volunteers" :key="volunteer.name"
+        >{{ volunteer.name }}<template v-if="i < volunteers.length - 1">、</template></span
+      >
     </div>
   </section>
 </template>

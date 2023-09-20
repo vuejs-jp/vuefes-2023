@@ -178,7 +178,7 @@ describe('top', () => {
         .contains('スピーカー')
         .closest('section')
         .within(() => {
-          cy.get('.speaker-card').should('have.length', 33)
+          cy.get('.speaker-card').should('have.length', 34)
         })
     })
     it('access', () => {

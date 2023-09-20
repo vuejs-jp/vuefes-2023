@@ -18,7 +18,6 @@ definePageMeta({
 
 const route = useRoute()
 const userId = route.params.id as string
-const urlBasePath = useRuntimeConfig().app.baseURL
 const { signOut, hasAuth } = useAuth()
 const { eventUser, error } = await useUser(userId)
 const errorMsg = error?.message || ''
@@ -129,7 +128,7 @@ useHead({
         {{ $t('words.add_to_calendar') }}
       </RoundButton>
       <!-- トップに戻る -->
-      <RoundButton :to="urlBasePath" outline>
+      <RoundButton to="/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">

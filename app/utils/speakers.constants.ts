@@ -7,6 +7,7 @@ export const speakers: Speaker[] = [
     type: 'evan',
     session: {
       title: 'キーノート',
+      track: 'all',
       time: '10:25 - 11:05',
       type: 'main',
     },

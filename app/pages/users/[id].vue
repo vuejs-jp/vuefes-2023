@@ -8,7 +8,6 @@ import AvatarCard from '~/components/namecard/AvatarCard.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import useAuth from '~/composables/useAuth'
-import { useUserStore } from '~/composables/useUserStore'
 import { useNamecardStatus } from '~/composables/useNamecardStatus'
 import { useUser } from '~/composables/useUser'
 import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
@@ -21,7 +20,6 @@ const route = useRoute()
 const userId = route.params.id as string
 const urlBasePath = useRuntimeConfig().app.baseURL
 const { signOut, hasAuth } = useAuth()
-const { signedUser } = useUserStore()
 const { eventUser, error } = await useUser(userId)
 const errorMsg = error?.message || ''
 

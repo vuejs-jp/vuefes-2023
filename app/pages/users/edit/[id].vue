@@ -35,7 +35,7 @@ onAuthChanged((evt: AuthChangeEvent) => {
 
 const { signedUser } = useUserStore()
 const { updateEventUser, uploadAvatar, getFullAvatarUrl } = useSupabase()
-const { eventUser } = await useUser(userId)
+const { eventUser } = await useUser()
 const { displayNameError, receiptIdError, validateDisplayName, validateReceiptId } = useFormError()
 
 const picture = ref()

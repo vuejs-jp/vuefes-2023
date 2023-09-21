@@ -22,7 +22,7 @@ const userId = route.params.id as string
 const urlBasePath = useRuntimeConfig().app.baseURL
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
-const { eventUser, error } = await useUser(userId)
+const { eventUser, error } = await useUser()
 const errorMsg = error?.message || ''
 
 defineOgImage({

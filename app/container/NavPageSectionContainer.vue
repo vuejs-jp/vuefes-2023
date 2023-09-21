@@ -16,10 +16,10 @@ const { canRegister } = useNamecard()
 </script>
 
 <template>
-  <div v-if="canRegister && hasAuth && activated">
+  <div v-if="canRegister && hasAuth && !activated">
     <AlertBar :user-id="eventUser?.user_id" />
   </div>
-  <NavPageSection :has-alert="canRegister && hasAuth && activated">
+  <NavPageSection :has-alert="canRegister && hasAuth && !activated">
     <template #avatar>
       <template v-if="canRegister && hasAuth">
         <button
@@ -35,7 +35,7 @@ const { canRegister } = useNamecard()
         <template v-if="isShow">
           <PopupArea
             :signed-user="signedUser"
-            :top="canRegister && !eventUser?.activated_at ? '80px' : '130px'"
+            :top="canRegister && !activated ? '80px' : '130px'"
             @sign-out="signOut"
           />
         </template>

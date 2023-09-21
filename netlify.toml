@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/2023/users/*/__og_image__/og.png"
+  to = "/2023/users/:splat/__og_image__/og.png"
+  status = 200
+
+[[redirects]]
   from = "/2023/users/*"
   to = "/2023/200.html"
   status = 200

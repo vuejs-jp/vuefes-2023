@@ -21,22 +21,14 @@ const cssTdClass = computed(
     'track-b': boolean
     'track-c': boolean
     'track-d': boolean
-    'sponsor-session': boolean
-    'sponsor-session-a': boolean
-    'sponsor-session-b': boolean
-    'sponsor-session-c': boolean
   } => {
-    const { track, sponsorSession } = props
+    const { track } = props
     return {
       track,
       'track-a': track === 'cloudsign',
       'track-b': track === 'medpeer',
       'track-c': track === 'm3',
       'track-d': track === 'vue',
-      'sponsor-session': sponsorSession !== undefined,
-      'sponsor-session-a': sponsorSession === 'cloudsign',
-      'sponsor-session-b': sponsorSession === 'medpeer',
-      'sponsor-session-c': sponsorSession === 'm3',
     }
   },
 )
@@ -80,6 +72,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         "
         class="title"
       >
+        <p v-if="session.category" class="category">{{ session.category }}</p>
         {{ session.title }}
       </component>
       <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>
@@ -115,39 +108,10 @@ css({
         backgroundPosition: 'center',
       },
     },
-    '&.sponsor-session': {
-      border: '1px solid',
-      '&.sponsor-session-a': {
-        borderColor: '{color.timetable.trackA}',
-        '.title': {
-          color: '{color.timetable.trackA}',
-        },
-        '.speaker': {
-          color: '{color.timetable.trackA}',
-        },
-      },
-      '&.sponsor-session-b': {
-        borderColor: '{color.timetable.trackB}',
-        '.title': {
-          color: '{color.timetable.trackB}',
-        },
-        '.speaker': {
-          color: '{color.timetable.trackB}',
-        },
-      },
-      '&.sponsor-session-c': {
-        borderColor: '{color.timetable.trackC}',
-        '.title': {
-          color: '{color.timetable.trackC}',
-        },
-        '.speaker': {
-          color: '{color.timetable.trackC}',
-        },
-      },
-    },
     '&.track': {
-        position: 'relative',
-        padding: '46px 16px 16px',
+      position: 'relative',
+      padding: '46px 16px 16px',
+      borderTop: '2px solid',
       '.headline': {
         position: 'absolute',
         top: '0',
@@ -161,48 +125,52 @@ css({
           color: '{color.white}',
         },
       },
-      '.info': {
-        marginBottom: 'calc(16*{fontSize.base})',
-        textAlign: 'left',
-        color: '{color.vue.blue}',
-        '.subtitle': {
-          marginBottom: 'calc(3*{fontSize.base})',
-          color: '{color.vue.blue}',
-          fontSize: 'calc(11*{fontSize.base})',
-          fontWeight: '500',
-        },
-        '.title': {
-          fontSize: 'calc(16*{fontSize.base})',
-          fontWeight: '700',
-          color: '{color.vue.blue}',
-        },
-        '.speaker': {
-          fontSize: 'calc(11*{fontSize.base})',
-          fontWeight: '500',
-        },
-        '&:last-child': {
-          marginBottom: '0',
-        },
-      },
       '&.track-a': {
+        borderColor: '{color.timetable.trackA}',
         '.place': {
           backgroundColor: '{color.timetable.trackA}',
         },
       },
       '&.track-b': {
+        borderColor: '{color.timetable.trackB}',
         '.place': {
           backgroundColor: '{color.timetable.trackB}',
         },
       },
       '&.track-c': {
+        borderColor: '{color.timetable.trackC}',
         '.place': {
           backgroundColor: '{color.timetable.trackC}',
         },
       },
       '&.track-d': {
+        borderColor: '{color.timetable.trackD}',
         '.place': {
           backgroundColor: '{color.timetable.trackD}',
         },
+      },
+    },
+    '.info': {
+      marginBottom: 'calc(16*{fontSize.base})',
+      textAlign: 'left',
+      color: '{color.vue.blue}',
+      '.subtitle': {
+        marginBottom: 'calc(3*{fontSize.base})',
+        color: '{color.vue.blue}',
+        fontSize: 'calc(11*{fontSize.base})',
+        fontWeight: '500',
+      },
+      '.title': {
+        fontSize: 'calc(16*{fontSize.base})',
+        fontWeight: '700',
+        color: '{color.vue.blue}',
+      },
+      '.speaker': {
+        fontSize: 'calc(11*{fontSize.base})',
+        fontWeight: '500',
+      },
+      '&:last-child': {
+        marginBottom: '0',
       },
     },
   },

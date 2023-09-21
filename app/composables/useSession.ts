@@ -8,6 +8,7 @@ export function useSession() {
 
   const getTrackColor = (track: Tracks) => {
     return match(track)
+      .with('all', () => 'vue.blue')
       .with('cloudsign', () => 'timetable.trackA')
       .with('medpeer', () => 'timetable.trackB')
       .with('m3', () => 'timetable.trackC')

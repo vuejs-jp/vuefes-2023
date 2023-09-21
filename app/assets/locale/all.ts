@@ -43,9 +43,11 @@ export default {
       media: 'Media',
     },
     track: {
+      all: '全トラック',
       cloudsign: 'クラウドサイントラック',
       medpeer: 'メドピアトラック',
       m3: 'エムスリーやっていきトラック',
+      vue: 'Vueトラック',
     },
     top: {
       check_twitter: '最新情報はTwitterでCheck!',
@@ -194,6 +196,8 @@ export default {
        * teams section
        */
       teams_subtitle: 'チーム',
+      teams_core_staff: 'コアスタッフ',
+      teams_volunteer: 'ボランティアスタッフ',
     },
   },
   en: {
@@ -237,9 +241,11 @@ export default {
       media: 'Media',
     },
     track: {
-      cloudsign: 'クラウドサイントラック',
-      medpeer: 'メドピアトラック',
-      m3: 'エムスリーやっていきトラック',
+      all: 'All track',
+      cloudsign: 'クラウドサイン track',
+      medpeer: 'メドピア track',
+      m3: 'エムスリーやっていき track',
+      vue: 'Vue track',
     },
     top: {
       check_twitter: 'Check information on Twitter!',
@@ -392,6 +398,8 @@ export default {
        * teams section
        */
       teams_subtitle: 'Teams',
+      teams_core_staff: 'CORE STAFF',
+      teams_volunteer: 'VOLUNTEER STAFF',
     },
   },
   ja_basic: {

@@ -6,11 +6,15 @@ import NamecardTitle2 from '@/assets/namecard/title2.svg'
 import VueFesLogo from '@/assets/namecard/vuefes_logo.svg'
 import Sponsor from '@/assets/namecard/sponsor.svg'
 import AvatarInfo from './AvatarInfo.vue'
-import { FormUser } from '~/types/app'
+import { Role } from '~/types/app'
 
 const props = defineProps({
   signedUser: {
-    type: Object as PropType<FormUser>,
+    type: Object as PropType<{
+      full_name: string
+      avatar_url: string
+      role: Role
+    }>,
     required: true,
   },
 })

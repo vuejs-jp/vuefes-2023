@@ -10,7 +10,7 @@ const { showSpeakerInfo } = useSession()
 
 // tdのclassを設定する
 const cssTdClass = (args: Track) => {
-  const { track, sponsorSession, isClose } = args
+  const { track, isClose } = args
   return {
     track,
     close: isClose,
@@ -18,10 +18,6 @@ const cssTdClass = (args: Track) => {
     'track-b': track === 'medpeer',
     'track-c': track === 'm3',
     'track-d': track === 'vue',
-    'sponsor-session': sponsorSession !== undefined,
-    'sponsor-session-a': sponsorSession === 'cloudsign',
-    'sponsor-session-b': sponsorSession === 'medpeer',
-    'sponsor-session-c': sponsorSession === 'm3',
   }
 }
 
@@ -42,13 +38,14 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         :is="session.id ? _nuxtLink : 'div'"
         :to="
           showSpeakerInfo && session.id
-            ? track.sponsorSession
+            ? session.sponsorSession
               ? `/sponsor-sessions/${session.id}`
               : `/sessions/${session.id}`
             : ''
         "
         class="title"
       >
+        <p v-if="session.category" class="category">{{ session.category }}</p>
         {{ session.title }}
       </component>
       <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>
@@ -65,6 +62,7 @@ css({
     textAlign: 'center',
     color: '{color.vue.blue}',
     backgroundColor: '{color.white}',
+    verticalAlign: 'top',
     '.info': {
       display: 'grid',
     },
@@ -94,35 +92,11 @@ css({
         backgroundPosition: 'center',
       },
     },
+    '.category': {
+      fontSize: 'calc(14*{fontSize.base})',
+    },
     '&.sponsor-session': {
       border: '1px solid',
-      '&.sponsor-session-a': {
-        borderColor: '{color.timetable.trackA}',
-        '.title': {
-          color: '{color.timetable.trackA}',
-        },
-        '.speaker': {
-          color: '{color.timetable.trackA}',
-        },
-      },
-      '&.sponsor-session-b': {
-        borderColor: '{color.timetable.trackB}',
-        '.title': {
-          color: '{color.timetable.trackB}',
-        },
-        '.speaker': {
-          color: '{color.timetable.trackB}',
-        },
-      },
-      '&.sponsor-session-c': {
-        borderColor: '{color.timetable.trackC}',
-        '.title': {
-          color: '{color.timetable.trackC}',
-        },
-        '.speaker': {
-          color: '{color.timetable.trackC}',
-        },
-      },
     },
     '&.track': {
       textAlign: 'left',
@@ -149,16 +123,16 @@ css({
       }
     },
     '&.track-a': {
-      borderTop: '1px solid {color.timetable.trackA}',
+      borderTop: '2px solid {color.timetable.trackA}',
     },
     '&.track-b': {
-      borderTop: '1px solid {color.timetable.trackB}',
+      borderTop: '2px solid {color.timetable.trackB}',
     },
     '&.track-c': {
-      borderTop: '1px solid {color.timetable.trackC}',
+      borderTop: '2px solid {color.timetable.trackC}',
     },
     '&.track-d': {
-      borderTop: '1px solid {color.timetable.trackD}',
+      borderTop: '2px solid {color.timetable.trackD}',
     },
   },
 })

@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import AvatarLogo from '~/components/namecard/AvatarLogo.vue'
 import { useUserRole } from '~/composables/useUserRole'
-import { FormUser, Role } from '~/types/app'
+import { Role } from '~/types/app'
 
 const props = defineProps({
   signedUser: {
-    type: Object as PropType<FormUser>,
+    type: Object as PropType<{
+      full_name: string
+      avatar_url: string
+      role: Role
+    }>,
     required: true,
   },
   useShare: {
@@ -22,7 +26,6 @@ const { backgroundColor, textColor } = useUserRole()
     <AvatarLogo :name="signedUser.full_name" :url="signedUser.avatar_url" size="large" />
     <h3>{{ signedUser.full_name }}</h3>
     <div
-      v-if="signedUser.user_id"
       class="role"
       :style="{
         background: backgroundColor(signedUser.role as Role),
@@ -49,7 +52,7 @@ css({
       width: '120px',
       height: '120px',
       borderRadius: '50%',
-      boxShadow: '0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
+      boxShadow: '0px 0px 0px calc({space.8} * 0.5) rgba(255, 255, 255, 1)',
     },
     '::v-deep(svg)': {
       width: '42px',

@@ -8,7 +8,6 @@ import AvatarCard from '~/components/namecard/AvatarCard.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import TextButton from '~/components/button/TextButton.vue'
 import useAuth from '~/composables/useAuth'
-import { useUserStore } from '~/composables/useUserStore'
 import { useNamecardStatus } from '~/composables/useNamecardStatus'
 import { useUser } from '~/composables/useUser'
 import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
@@ -19,7 +18,6 @@ definePageMeta({
 
 const route = useRoute()
 const userId = route.params.id as string
-const urlBasePath = useRuntimeConfig().app.baseURL
 const { signOut, hasAuth } = useAuth()
 const { signedUser } = useUserStore()
 const { eventUser, error } = await useUser()
@@ -47,7 +45,7 @@ const { title: statusTitle, detail: statusDetail } = message(cardStatus)
  */
 const pageTitle = `${eventUser?.display_name || '参加者'} | ${conferenceTitle}`
 let description = eventUser
-  ? `${eventUser?.display_name} の参加者情報を掲載しています。`
+  ? `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`
   : 'チケット購入状況との照合に失敗しました'
 if (errorMsg) description = statusTitle
 const url = `${linkUrl}users/${userId}`
@@ -98,7 +96,6 @@ useHead({
       <h2>{{ $t('words.namecard') }}</h2>
       <AvatarCard
         :signed-user="{
-          ...signedUser,
           full_name: eventUser?.display_name || '参加者',
           avatar_url: eventUser?.avatar_url || '',
           role: eventUser?.role || 'attendee',
@@ -132,7 +129,7 @@ useHead({
         {{ $t('words.add_to_calendar') }}
       </RoundButton>
       <!-- トップに戻る -->
-      <RoundButton :to="urlBasePath" outline>
+      <RoundButton to="/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
@@ -140,7 +137,7 @@ useHead({
         <div class="social-item">
           <a
             :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              `https://vuefes.jp/2023/users/${signedUser.user_id}`,
+              `https://vuefes.jp/2023/users/${userId}`,
             )}`"
             target="_blank"
             rel="noreferrer"
@@ -150,7 +147,7 @@ useHead({
           </a>
           <a
             :href="`${twitterDomainUrl}share?url=${encodeURIComponent(
-              `https://vuefes.jp/2023/users/${signedUser.user_id}`,
+              `https://vuefes.jp/2023/users/${userId}`,
             )}`"
             target="_blank"
             rel="noreferrer"

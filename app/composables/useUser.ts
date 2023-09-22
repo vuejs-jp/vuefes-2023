@@ -1,19 +1,12 @@
 import { Database } from '~/types/supabase'
 import { createEmptyUser } from '~/atoms/user'
 
-export async function useUser() {
-  const user = useSupabaseUser()
-  const userId = user.value?.id || ''
+export async function useUser(userId: string) {
   const client = useSupabaseClient<Database>()
-  const { data: res } = await useAsyncData('event_users', async () => {
+  const { data: eventUser } = await useAsyncData('event_users', async () => {
     return await client.from('event_users').select().eq('user_id', userId).single()
   })
-  const eventUser = res.value?.data || createEmptyUser()
-  const error = res.value?.error || null
+  const { data, error } = eventUser.value as any
 
-  const activated = computed(() => {
-    return Boolean(eventUser?.activated_at)
-  })
-
-  return { eventUser, error, activated }
+  return { eventUser: data || createEmptyUser(), error }
 }

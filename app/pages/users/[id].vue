@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Status } from '~/types/app'
+import { Role, Status } from '~/types/app'
 import LogoutLogo from '~/assets/logo/logout_logo.svg'
 import FacebookLogo from '~/assets/logo/facebook_logo.svg'
 import TwitterLogoBlue from '~/assets/logo/twitter_logo_blue.svg'
@@ -19,7 +19,7 @@ definePageMeta({
 const route = useRoute()
 const userId = route.params.id as string
 const { signOut, hasAuth } = useAuth()
-const { eventUser, error } = await useUser(userId)
+const { eventUser, error } = await useUser()
 const errorMsg = error?.message || ''
 
 defineOgImage({
@@ -97,7 +97,7 @@ useHead({
         :signed-user="{
           full_name: eventUser?.display_name || '参加者',
           avatar_url: eventUser?.avatar_url || '',
-          role: eventUser?.role || 'attendee',
+          role: (eventUser?.role || 'attendee') as Role,
         }"
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />

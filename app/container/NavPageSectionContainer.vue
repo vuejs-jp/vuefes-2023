@@ -10,16 +10,16 @@ import { useNamecard } from '~/composables/useNamecard'
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { eventUser, activated } = await useUser()
+const { eventUser } = await useUser(signedUser.user_id)
 const { handle, isShow } = useDialog()
 const { canRegister } = useNamecard()
 </script>
 
 <template>
-  <div v-if="canRegister && hasAuth && !activated">
+  <div v-if="canRegister && hasAuth && eventUser?.activated_at !== undefined">
     <AlertBar :user-id="eventUser?.user_id" />
   </div>
-  <NavPageSection :has-alert="canRegister && hasAuth && !activated">
+  <NavPageSection :has-alert="canRegister && hasAuth && eventUser?.activated_at !== undefined">
     <template #avatar>
       <template v-if="canRegister && hasAuth">
         <button
@@ -35,7 +35,7 @@ const { canRegister } = useNamecard()
         <template v-if="isShow">
           <PopupArea
             :signed-user="signedUser"
-            :top="canRegister && !activated ? '80px' : '130px'"
+            :top="canRegister && !eventUser?.activated_at ? '80px' : '130px'"
             @sign-out="signOut"
           />
         </template>

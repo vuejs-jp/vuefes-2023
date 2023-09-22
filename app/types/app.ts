@@ -42,7 +42,7 @@ export interface FormUser {
   full_name: string
   avatar_url: string
   provider: string
-  role?: Role
+  role?: string
   email: string
   display_name: string
   receipt_id: string
@@ -59,7 +59,7 @@ export interface User {
   id: string
   provider: string
   receipt_id: string
-  role: Role | null
+  role: string | null
   updated_at: string
   user_id: string
 }

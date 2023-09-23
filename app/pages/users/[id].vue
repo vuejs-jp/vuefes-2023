@@ -19,7 +19,7 @@ definePageMeta({
 const route = useRoute()
 const userId = route.params.id as string
 const { signOut, hasAuth } = useAuth()
-const { eventUser, error } = await useUser()
+const { eventUser, error } = await useUser(userId)
 const errorMsg = error?.message || ''
 
 defineOgImage({

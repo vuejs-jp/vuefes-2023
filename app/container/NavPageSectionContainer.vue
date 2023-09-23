@@ -10,7 +10,9 @@ import { useNamecard } from '~/composables/useNamecard'
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()
-const { eventUser, activated } = await useUser()
+const user = useSupabaseUser()
+const userId = user.value?.id || ''
+const { eventUser, activated } = await useUser(userId)
 const { handle, isShow } = useDialog()
 const { canRegister } = useNamecard()
 </script>

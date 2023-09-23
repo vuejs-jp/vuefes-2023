@@ -15,9 +15,5 @@ export async function useUser(userId: string) {
   eventUser = res.value?.data || createEmptyUser()
   error = res.value?.error || null
 
-  const activated = computed(() => {
-    return Boolean(eventUser?.activated_at)
-  })
-
-  return { eventUser, error, activated }
+  return { eventUser, error, activated: Boolean(eventUser?.activated_at) }
 }

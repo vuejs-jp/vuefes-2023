@@ -45,6 +45,14 @@ const useAuth = () => {
     _onAuthChanged = callback
   }
 
+  /**
+   * set userId before auth change
+   */
+  const user = useSupabaseUser()
+  if (!signedUser.user_id) {
+    store?.setUser({ ...signedUser, user_id: user.value?.id || '' })
+  }
+
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
     match(evt)

@@ -22,15 +22,6 @@ const { signOut, hasAuth } = useAuth()
 const { eventUser, error } = await useUser(userId)
 const errorMsg = error?.message || ''
 
-defineOgImage({
-  component: 'OgTemplate',
-  signedUser: {
-    full_name: eventUser?.display_name || '参加者',
-    avatar_url: eventUser?.avatar_url,
-    role: eventUser?.role || 'attendee',
-  },
-})
-
 /**
  * status card
  */
@@ -168,9 +159,9 @@ useHead({
   <OgImage
     component="OgTemplate"
     :signed-user="{
-      full_name: eventUser?.display_name,
+      full_name: eventUser?.display_name || '参加者',
       avatar_url: eventUser?.avatar_url,
-      role: eventUser?.role,
+      role: eventUser?.role || 'attendee',
     }"
   />
 </template>

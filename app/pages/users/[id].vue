@@ -165,6 +165,14 @@ useHead({
     -->
   </main>
   <FooterPageSection has-auth />
+  <OgImage
+    component="OgTemplate"
+    :signed-user="{
+      full_name: eventUser?.display_name,
+      avatar_url: eventUser?.avatar_url,
+      role: eventUser?.role,
+    }"
+  />
 </template>
 
 <style lang="ts" scoped>

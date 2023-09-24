@@ -1,6 +1,7 @@
 import svgLoader from 'vite-svg-loader'
 import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
+import { generalOg, twitterOg } from './app/utils/og.constants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -12,6 +13,8 @@ export default defineNuxtConfig({
       title: conferenceTitle,
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
+        ...generalOg(),
+        ...twitterOg(),
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
       htmlAttrs: {
@@ -110,6 +113,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/register/': { prerender: true },
     '/passmarket-console/': { prerender: true },
+    '/users/**': { prerender: true },
   },
   runtimeConfig: {
     public: {

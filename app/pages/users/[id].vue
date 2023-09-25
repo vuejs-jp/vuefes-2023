@@ -11,6 +11,7 @@ import useAuth from '~/composables/useAuth'
 import { useNamecardStatus } from '~/composables/useNamecardStatus'
 import { useUser } from '~/composables/useUser'
 import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
+import { generalOg, twitterOg } from '~/utils/og.constants'
 
 definePageMeta({
   middleware: ['error'],
@@ -156,7 +157,7 @@ useHead({
     -->
   </main>
   <FooterPageSection has-auth />
-  <OgImage
+  <OgImageWithoutCache
     component="OgTemplate"
     :signed-user="{
       full_name: eventUser?.display_name || '参加者',

@@ -173,7 +173,7 @@ import * as sponsors from '~/utils/sponsor.constants'
     <ul v-if="sponsors.individual.length !== 0" class="sponsor-list">
       <li>
         <SponsorCategoryTitle category="individual" />
-        <div class="personal-sponsor-list">
+        <div class="sponsors personal-sponsor-list">
           <span v-for="sponsor in sponsors.individual" :key="sponsor">
             {{ sponsor }}
           </span>
@@ -236,6 +236,7 @@ css({
   '.personal-sponsor-list': {
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'flex-start',
     color: '{color.sponsor.options}',
     fontSize: 'calc(24*{fontSize.base})',
     gap: 'calc({space.8} * 1) calc({space.8} * 2)',

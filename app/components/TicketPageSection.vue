@@ -7,6 +7,7 @@ import ChildCareSection from '~/components/childcare/ChildCareSection.vue'
 import HandsonSection from '~/components/handson/HandsonSection.vue'
 import PersonalSponsorSection from '~/components/sponsor/PersonalSponsorSection.vue'
 import FaqSection from '~/components/namecard/FaqSection.vue'
+import { closedVolunteer } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -15,6 +16,9 @@ import FaqSection from '~/components/namecard/FaqSection.vue'
       <TicketSection />
       <Arrow3 class="arrow" />
       <NamecardSection />
+      <template v-if="!closedVolunteer">
+        <VolunteerSection />
+      </template>
       <ChildCareSection />
       <HandsonSection />
       <PersonalSponsorSection />

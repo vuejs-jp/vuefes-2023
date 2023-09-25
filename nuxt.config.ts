@@ -77,10 +77,6 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       failOnError: false,
-      crawlLinks: true,
-      routes: [
-        '/users/',
-      ],
     },
   },
   build: {
@@ -117,7 +113,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/register/': { prerender: true },
     '/passmarket-console/': { prerender: true },
-    '/users/**': { prerender: true },
+    '/users/': { prerender: true },
   },
   runtimeConfig: {
     public: {

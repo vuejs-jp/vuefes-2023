@@ -158,6 +158,11 @@ export const teams: Team[] = [
     snsLink: `${twitterDomainUrl}takuan517`,
   },
   {
+    image: 'teams/taniiiiim.png',
+    name: 'taniiiiim',
+    snsLink: `${twitterDomainUrl}taniiiiim`,
+  },
+  {
     image: 'teams/tokuda.png',
     name: 'tokuda109',
     snsLink: `${twitterDomainUrl}tokuda109`,
@@ -188,6 +193,11 @@ export const teams: Team[] = [
     snsLink: `${twitterDomainUrl}watsuyo_2`,
   },
   {
+    image: 'teams/yamageji.png',
+    name: 'yamageji',
+    snsLink: `${twitterDomainUrl}yamageji`,
+  },
+  {
     image: 'teams/yuhei.jpg',
     name: 'Yuhei FUJITA',
     snsLink: `${twitterDomainUrl}Yuhei_FUJITA`,
@@ -201,6 +211,11 @@ export const teams: Team[] = [
     image: 'teams/yuuki.jpg',
     name: 'Yuuki Ishibashi',
     snsLink: `${twitterDomainUrl}Bassy3600`,
+  },
+  {
+    image: 'teams/4mdy.png',
+    name: '4mdy',
+    snsLink: `${twitterDomainUrl}__4mdy`,
   },
   {
     image: 'teams/nakamoto.png',

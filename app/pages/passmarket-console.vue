@@ -4,14 +4,13 @@ import { usePassMarket } from '~/composables/usePassMarket'
 import { usePassMarketUpload } from '~/composables/usePassMarketUpload'
 import { useSupabase } from '~/composables/useSupabase'
 import { useArray } from '~/composables/useArray'
-import { AdditionItem, ListMember, Role } from '~/types/app'
+import { ListMember, Role } from '~/types/app'
 
-const memberData = ref<ListMember[]>()
-const members = ref<AdditionItem[]>()
+const members = ref<ListMember[]>()
 const receiptIds = ref<{ role: Role; receipt_id: string }[]>([])
 
 const { getReceipts } = usePassMarket()
-const { convertMembers, fetchSheet } = usePassMarketUpload()
+const { fetchMembers } = usePassMarketUpload()
 const { updatePMReceipt } = useSupabase()
 const { unique } = useArray()
 
@@ -19,7 +18,7 @@ enum FileName {
   // 参加者一覧
   LIST_XLS = 'list.xls',
   // 購入者アンケート情報
-  ADDITION_CSV = 'addition.csv',
+  // ADDITION_CSV = 'addition.csv',
 }
 
 const checkFiles = async (files: File[]) => {
@@ -29,12 +28,9 @@ const checkFiles = async (files: File[]) => {
   const filename = file.name
 
   if (filename === FileName.LIST_XLS) {
-    memberData.value = await fetchSheet(file)
-    const _receiptIds = getReceipts(memberData.value)
+    members.value = await fetchMembers(file)
+    const _receiptIds = getReceipts(members.value)
     receiptIds.value = unique<{ role: Role; receipt_id: string }>(_receiptIds, 'receipt_id')
-  }
-  if (filename === FileName.ADDITION_CSV) {
-    members.value = await convertMembers(file)
   }
   alert(`this file is not acceptable -> ${filename}`)
 }
@@ -56,8 +52,10 @@ const onUpdate = () => {
       <p>
         <b>Upload one of them</b><br />
         list.xls
+        <!--
         <br />
         addition.csv
+        -->
       </p>
     </DragDropArea>
     <div class="update-button">
@@ -71,23 +69,7 @@ const onUpdate = () => {
           </li>
         </ul>
       </div>
-      <!--
-      <div v-if="memberData">
-        <ul>
-          <li v-for="(member, index) in memberData" :key="index">
-            {{ member }}
-          </li>
-        </ul>
-      </div>
-      <div v-if="members">
-        <ul>
-          <li v-for="(member, index) in members" :key="index">
-            {{ member }}
-          </li>
-        </ul>
-      </div>
-      -->
-      <div v-if="!memberData && !members" class="noresult">Upload your CSV file from the top</div>
+      <div v-if="!members" class="noresult">Upload your CSV file from the top</div>
     </div>
   </main>
 </template>

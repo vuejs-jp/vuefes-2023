@@ -1,11 +1,13 @@
 import * as XLSX from 'xlsx'
 import { useArray } from '~/composables/useArray'
+import { useUserRole } from '~/composables/useUserRole'
 import { AdditionItem, ListMember, ListRow } from '~/types/app'
 
 export function usePassMarketUpload() {
   const { valueFilter } = useArray()
+  const { getRole } = useUserRole()
 
-  async function fetchSheet(file: File): Promise<ListMember[]> {
+  async function fetchMembers(file: File): Promise<ListMember[]> {
     const workbook = XLSX.read(await file.arrayBuffer())
     const sheet = workbook.Sheets['Sheet1']
     const rows: ListRow[] = XLSX.utils.sheet_to_json(sheet)
@@ -23,7 +25,7 @@ export function usePassMarketUpload() {
       })
   }
 
-  async function convertMembers(file: File) {
+  async function fetchSurveys(file: File) {
     return new Promise(function (resolve: (items: AdditionItem[]) => void) {
       const reader = new FileReader()
 
@@ -40,21 +42,25 @@ export function usePassMarketUpload() {
             const tmp = row.split(',')
 
             return {
-              orderId: valueFilter(tmp[0]),
+              receiptId: valueFilter(tmp[0]),
               applyTime: valueFilter(tmp[1]),
-              orderBody: valueFilter(tmp[2]),
-              eventId: valueFilter(tmp[3]),
-              eventTitle: valueFilter(tmp[4]),
-              ticketId: valueFilter(tmp[5]),
-              password: valueFilter(tmp[6]),
+              role: getRole(valueFilter(tmp[2])),
+              fullName: `${valueFilter(tmp[6])} ${valueFilter(tmp[7])}`,
+              email: valueFilter(tmp[10]),
+              survey1: valueFilter(tmp[11]),
+              survey2: valueFilter(tmp[12]),
+              survey3: valueFilter(tmp[13]),
+              survey4: valueFilter(tmp[14]),
+              survey5: valueFilter(tmp[15]),
+              survey6: valueFilter(tmp[16]),
             }
           })
-          .filter((item: AdditionItem) => item.orderId)
+          .filter((item: AdditionItem) => item.receiptId)
         resolve(items)
       }
       reader.readAsText(file, 'Shift_JIS')
     })
   }
 
-  return { fetchSheet, convertMembers }
+  return { fetchMembers, fetchSurveys }
 }

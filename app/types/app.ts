@@ -70,13 +70,17 @@ export interface User {
 
 // addition.csv data
 export type AdditionItem = {
-  orderId: string
+  receiptId: string
   applyTime: string
-  orderBody: string
-  eventId: string
-  eventTitle: string
-  ticketId: string
-  password: string
+  role: Role
+  fullName: string
+  email: string
+  survey1: string
+  survey2: string
+  survey3: string
+  survey4: string
+  survey5: string
+  survey6: string
 }
 
 // list.xls colums

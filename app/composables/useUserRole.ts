@@ -17,5 +17,11 @@ export function useUserRole() {
       .with('staff', 'speaker', 'attendee', 'attendee + party', () => '#fff')
       .exhaustive()
 
-  return { backgroundColor, textColor }
+  const getRole = (target: string): Role => {
+    return target.indexOf('一般＋アフターパーティーチケット') !== -1
+      ? 'attendee + party'
+      : 'attendee'
+  }
+
+  return { backgroundColor, textColor, getRole }
 }

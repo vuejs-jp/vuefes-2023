@@ -79,7 +79,9 @@ import { ticketUrl } from '~/utils/constants'
           <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <a><s>{{ $t('top.handson_ticket') }}</s></a>
+          <a
+            ><s>{{ $t('top.handson_ticket') }}</s></a
+          >
         </template>
         <template #default>
           <div class="price">

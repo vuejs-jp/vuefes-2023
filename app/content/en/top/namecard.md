@@ -1,1 +1,1 @@
-After purchasing a ticket, if you register the necessary information, you will receive your avatar + name card with your name at the venue on the day! (Social login required)
+After purchasing a ticket, if you register the necessary information, you will receive your avatar + name card with your name at the venue on the day! (Social login required) Due to printing constraints, name card information registration will be accepted until 24:00 on October 3, 2023 (Tuesday).

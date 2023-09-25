@@ -65,7 +65,8 @@ import { ticketUrl } from '~/utils/constants'
               <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
                 <strong>10,000</strong>
               </i18n-t>
-              <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+              <p class="early-price">{{ $t('top.ticket_early_price_explain') }}</p>
+              <p class="early-price-notice">{{ $t('top.ticket_early_price_notice') }}</p>
             </div>
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>11,000</strong>
@@ -78,11 +79,11 @@ import { ticketUrl } from '~/utils/constants'
           <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <nuxt-link to="/#handson">{{ $t('top.handson_ticket') }}</nuxt-link>
+          <a><s>{{ $t('top.handson_ticket') }}</s></a>
         </template>
         <template #default>
           <div class="price">
-            <strong>無料</strong>
+            <s><strong>無料</strong></s>
           </div>
           <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des">
             <nuxt-link to="/#handson">
@@ -196,6 +197,11 @@ css({
     fontSize: 'calc(12*{fontSize.base})',
     fontWeight: 500,
     lineHeight: 1.8,
+  },
+  '.early-price-notice': {
+    color: '{color.sangosyo}',
+    fontSize: 'calc(12*{fontSize.base})',
+    fontWeight: 700,
   },
   '.price-des': {
     padding: '0 calc({space.8} * 6.25)',

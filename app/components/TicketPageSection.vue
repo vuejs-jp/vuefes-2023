@@ -15,7 +15,6 @@ import FaqSection from '~/components/namecard/FaqSection.vue'
       <TicketSection />
       <Arrow3 class="arrow" />
       <NamecardSection />
-      <VolunteerSection />
       <ChildCareSection />
       <HandsonSection />
       <PersonalSponsorSection />

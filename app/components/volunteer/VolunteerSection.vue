@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { volunteerUrl } from '~/utils/constants'

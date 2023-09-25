@@ -107,6 +107,7 @@ export default {
       tickets_schedule_limit: '応募期限: {0} まで',
       ticket_early_price: '早割： {0} 円',
       ticket_early_price_explain: '※ 9/30（土）23:59まで',
+      ticket_early_price_notice: '残席わずかです！',
       ticket_price: '通常： {0} 円',
       namecard_schedule_limit: '応募期限: {0} まで',
       handson_schedule_limit: '応募期限: {0} まで',
@@ -115,7 +116,7 @@ export default {
       after_party_ticket: '一般＋アフターパーティチケット',
       handson_ticket: 'ハンズオンチケット',
       handson_ticket_explain:
-        '※ ハンズオンのみでも、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。\n※ 詳しくは {0} についてをご覧ください。',
+        '※ 好評により全席完売しました。\n※ 詳しくは {0} についてをご覧ください。',
       personal_sponsor_ticket: '個人スポンサーチケット',
       personal_sponsor_ticket_explain:
         '※ 当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。\n※ 詳しくは {0} についてをご覧ください。',
@@ -306,6 +307,7 @@ export default {
       tickets_schedule_limit: 'Tickets Deadline: Until {0}',
       ticket_early_price: 'Early Price: ¥ {0}',
       ticket_early_price_explain: '※ Until 9/30 (Sat.) 23:59',
+      ticket_early_price_notice: 'Only a few seats remain!',
       ticket_price: 'General Price: ¥ {0}',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',

@@ -16,7 +16,7 @@ This is a special discount only for those who purchase tickets early. You can pu
 
 #### What is the timetable and session content?
 
-The timetable and session details will be posted on this website before tickets go on sale. Please note that some of the content may be released after tickets go on sale.
+Please see the [Time table](/#timetable) page.
 
 #### What do I need to enter the venue on the day of the event?
 
@@ -24,7 +24,7 @@ You will need the QR code that is included in the ticket purchase confirmation e
 
 #### What is a name card?
 
-If you register the necessary information after purchasing your ticket, you will receive a name card with your avatar and name on it at the venue on the day of the event! (Social login required).
+If you register the necessary information after purchasing your ticket, you will receive a name card with your avatar and name on it at the venue on the day of the event! (Social login required). Due to printing constraints, name card information registration will be accepted until 24:00 on October 3, 2023 (Tuesday).
 
 (Social login required) The name card is required to enter each venue, so please wear it around your neck at all times.
 

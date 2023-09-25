@@ -551,7 +551,7 @@
     "time": "18:00 - 19:30",
     "tracks": [
       {
-        "track": "cloudsign",
+        "colspan": 2,
         "sessions": [
           {
             "title": "アフターパーティー"

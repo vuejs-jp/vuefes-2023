@@ -113,7 +113,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/register/': { prerender: true },
     '/passmarket-console/': { prerender: true },
-    '/users/**': { prerender: true },
+    '/users/': { prerender: true },
   },
   runtimeConfig: {
     public: {

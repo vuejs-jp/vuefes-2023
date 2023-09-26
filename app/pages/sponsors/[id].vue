@@ -51,9 +51,7 @@ const { locale } = useI18n({ useScope: 'global' })
 
 // 2023/10/01 LINE fukuoka 商号変更に伴うリダイレクト対応
 if (sponsorId === 'line-fukuoka') {
-  throw navigateTo(
-    `/${locale.value !== 'ja' ? `${locale.value}/` : ''}sponsors/line-yahoo-communications`,
-  )
+  throw navigateTo('/sponsors/line-yahoo-communications')
 }
 
 if (!sponsorData.id) {

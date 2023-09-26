@@ -111,9 +111,13 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
+    '/': { prerender: true },
+    '/sessions/**': { prerender: true },
+    '/privacy/': { prerender: true },
     '/register/': { prerender: true },
+    '/sponsor-sessions/**': { prerender: true },
+    '/sponsors/**': { prerender: true },
     '/passmarket-console/': { prerender: true },
-    '/users/': { prerender: true },
   },
   runtimeConfig: {
     public: {

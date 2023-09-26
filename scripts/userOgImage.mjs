@@ -26,7 +26,13 @@ async function fetchUsers() {
     `export const users: User[] = ${JSON.stringify(data)}`,
   ].join('\n')
 
-  str = await prettier.format(str)
+  str = await prettier.format(str, {
+    semi: false,
+    trailingComma: 'all',
+    singleQuote: true,
+    printWidth: 100,
+    tabWidth: 2,
+  })
 
   try {
     fs.writeFileSync('app/utils/users.constants.ts', str)

@@ -1,3 +1,4 @@
+import { createClient } from '@supabase/supabase-js'
 import svgLoader from 'vite-svg-loader'
 import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
@@ -77,6 +78,24 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       failOnError: false,
+    },
+  },
+  hooks: {
+    async 'nitro:config'(nitroConfig) {
+      if (nitroConfig.dev) {
+        return
+      }
+
+      const supabaseUrl = process.env.SUPABASE_URL
+      const supabaseKey = process.env.SUPABASE_KEY
+      if (!supabaseUrl || !supabaseKey) return
+
+      const client = createClient(supabaseUrl, supabaseKey, {})
+      const { data, error } = await client.from('event_users').select()
+      if (error) return
+
+      const routes = data?.map((d) => `/users/${d.user_id}`)
+      nitroConfig.prerender?.routes?.push(...(routes || []))
     },
   },
   build: {

@@ -2,6 +2,7 @@ import svgLoader from 'vite-svg-loader'
 import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
 import { generalOg, twitterOg } from './app/utils/og.constants'
+import { users } from './app/utils/users.constants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -113,7 +114,9 @@ export default defineNuxtConfig({
   routeRules: {
     '/register/': { prerender: true },
     '/passmarket-console/': { prerender: true },
-    '/users/': { prerender: true },
+  },
+  generate: {
+    routes: users.map((u) => `/users/${u.user_id}`),
   },
   runtimeConfig: {
     public: {

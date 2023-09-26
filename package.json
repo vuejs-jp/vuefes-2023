@@ -14,6 +14,7 @@
     "prepare": "husky install",
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "ogp:user": "node scripts/userOgImage.mjs",
     "generate:transpile": "nuxi generate",
     "generate:post-transpile": "node scripts/renameDir.cjs",
     "generate": "npm run generate:transpile && npm run generate:post-transpile",

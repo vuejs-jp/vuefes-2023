@@ -66,8 +66,8 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         :to="
           showSpeakerInfo && session.id
             ? sponsorSession
-              ? `/sponsor-sessions/${session.id}`
-              : `/sessions/${session.id}`
+              ? `/2023/sponsor-sessions/${session.id}`
+              : `/2023/sessions/${session.id}`
             : ''
         "
         class="title"

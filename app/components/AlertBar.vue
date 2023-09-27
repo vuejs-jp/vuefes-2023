@@ -6,7 +6,7 @@ const props = defineProps({
   },
 })
 
-const nameCardUrl = computed(() => `/users/${props.userId}`)
+const nameCardUrl = computed(() => `/2023/users/${props.userId}`)
 </script>
 
 <template>

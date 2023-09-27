@@ -40,7 +40,7 @@ const { handle, isShow } = useDialog()
         <RoundButton
           type="submit"
           :disabled="!canRegister"
-          @click="() => (!hasAuth ? handle(true) : navigateTo(`/users/${signedUser.user_id}`))"
+          @click="() => (!hasAuth ? handle(true) : navigateTo(`/2023/users/${signedUser.user_id}`))"
         >
           {{ $t('words.create_namecard') }}
         </RoundButton>

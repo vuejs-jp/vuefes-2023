@@ -94,7 +94,7 @@ useHead({
         :opacity="eventUser?.activated_at ? 1 : 0.6"
       />
       <!-- 再編集 -->
-      <RoundButton class="btn-update" :to="`/users/edit/${userId}`" :disabled="!hasAuth">
+      <RoundButton class="btn-update" :to="`/2023/users/edit/${userId}`" :disabled="!hasAuth">
         {{ $t('words.re_edit') }}
       </RoundButton>
       <!--

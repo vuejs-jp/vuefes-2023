@@ -26,7 +26,7 @@ export function useSupabase() {
 
     onSuccess('登録しました', 3000)
 
-    await navigateTo(`/users/${user.user_id}`)
+    await navigateTo(`/2023/users/${user.user_id}`)
   }
 
   async function updateEventUser(
@@ -50,7 +50,7 @@ export function useSupabase() {
 
     onSuccess('編集しました', 3000)
 
-    await navigateTo(`/users/${user.user_id}`)
+    await navigateTo(`/2023/users/${user.user_id}`)
   }
 
   function getFullAvatarUrl(avatarUrl: string) {

@@ -23,7 +23,7 @@ const router = useRouter()
 const route = useRoute()
 const userId = route.params.id as string
 const { hasAuth, signOut, onAuthChanged } = useAuth()
-const userPagePath = `/users/${userId}`
+const userPagePath = `/2023/users/${userId}`
 
 onAuthChanged((evt: AuthChangeEvent) => {
   if (evt === 'INITIAL_SESSION') {

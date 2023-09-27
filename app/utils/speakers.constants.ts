@@ -374,7 +374,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Composition API時代のPub/Subパターンでの状態管理',
-      track: 'medpeer',
+      track: 'm3',
       time: '15:45 - 16:05',
       type: 'lt',
     },

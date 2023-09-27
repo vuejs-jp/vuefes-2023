@@ -321,7 +321,7 @@ describe('top', () => {
     it.only('render with Auth', () => {
       cy.viewport(769, 600)
       loadPageWithAuth()
-      cy.wait(1000)
+      cy.wait(2000)
       cy.get('.hamburger-menu').should('be.visible').click()
       cy.get('.mobile-menu')
         .should('be.visible')

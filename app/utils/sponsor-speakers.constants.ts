@@ -68,7 +68,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     session: {
       title: 'Vue2 の EOL まで二ヶ月ですが進捗どうですか？',
       track: 'medpeer',
-      time: '12:30 - 12:45',
+      time: '12:30 - 12:50',
       type: 'main',
     },
     profile: [

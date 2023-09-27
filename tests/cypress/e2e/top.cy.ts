@@ -3,13 +3,11 @@ describe('top', () => {
     cy.intercept('/api/_supabase/session')
     cy.intercept('GET', '**supabase.co/rest/v1/**')
     cy.visit('/')
-    cy.checkPageIdle()
   }
   function loadPageWithAuth() {
     cy.intercept('/api/_supabase/session')
     cy.intercept('GET', '**supabase.co/rest/v1/**')
     cy.visit('/?forcelogin=true')
-    cy.checkPageIdle()
   }
   function loadPagePrivacy() {
     cy.visit('/privacy')

@@ -92,7 +92,9 @@ const useAuth = () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: isProd ? 'https://vuefes.jp/2023/register' : 'http://localhost:3000/2023/register',
+        redirectTo: isProd
+          ? 'https://vuefes.jp/2023/register'
+          : 'http://localhost:3000/2023/register',
       },
     })
     if (error) {

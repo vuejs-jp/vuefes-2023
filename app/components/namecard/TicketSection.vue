@@ -52,7 +52,13 @@ import { ticketUrl } from '~/utils/constants'
       </TicketCard>
       <TicketCard>
         <template #image>
-          <img alt="" src="/2023/tickets/attendee+party.png" width="400" height="225" decoding="async" />
+          <img
+            alt=""
+            src="/2023/tickets/attendee+party.png"
+            width="400"
+            height="225"
+            decoding="async"
+          />
         </template>
         <template #action>
           <a :href="ticketUrl" target="_blank" rel="noreferrer">

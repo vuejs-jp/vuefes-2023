@@ -4,7 +4,7 @@ describe('sponsors detail', () => {
     cy.visit('/2023/')
     cy.checkPageIdle()
     cy.get(`.${section}-sponsors a[href="/2023/sponsors/${sponsorId}"]`).click({ force: true })
-    cy.url().should('eq', `http://localhost:3000/sponsors/${sponsorId}`)
+    cy.url().should('eq', `http://localhost:3000/2023/sponsors/${sponsorId}`)
   }
 
   describe('platinum sponsors', () => {

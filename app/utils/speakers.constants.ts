@@ -393,7 +393,7 @@ export const speakers: Speaker[] = [
       title:
         'Nuxt2 から 3 へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話',
       track: 'm3',
-      time: '15:45 - 16:05',
+      time: '12:45 - 13:15',
       type: 'lt',
     },
     profile: {

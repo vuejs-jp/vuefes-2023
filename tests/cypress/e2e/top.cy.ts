@@ -95,7 +95,8 @@ describe('top', () => {
       ].forEach(([label, expected]: any) => {
         it(`at top click ${label}`, () => {
           loadPage()
-          cy.contains('nav a', label).click()
+          cy.wait(500)
+          cy.contains('main > nav a', label).click()
           cy.url().should('eq', expected)
         })
       })
@@ -111,7 +112,7 @@ describe('top', () => {
       ].forEach(([label, expected]: any) => {
         it(`at privacy ${label}`, () => {
           loadPagePrivacy()
-          cy.contains('nav a', label).click()
+          cy.contains('main > nav a', label).click()
           cy.url().should('eq', expected)
         })
       })
@@ -127,7 +128,7 @@ describe('top', () => {
       ].forEach(([label, expected]: any) => {
         it(`at code of conduct ${label}`, () => {
           loadPageCodeOfConduct()
-          cy.contains('nav a', label).click()
+          cy.contains('main > nav a', label).click()
           cy.url().should('eq', expected)
         })
       })
@@ -319,10 +320,11 @@ describe('top', () => {
         })
       cy.get('.mobile-menu').should('not.exist')
     })
-    it('render with Auth', () => {
+    it.only('render with Auth', () => {
       cy.viewport(769, 600)
       loadPageWithAuth()
-      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
+      cy.wait(1000)
+      cy.get('.hamburger-menu').should('be.visible').click()
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

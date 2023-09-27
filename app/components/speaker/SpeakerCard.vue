@@ -22,7 +22,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
   <div class="speaker-card">
     <component
       :is="showSpeakerInfo ? _nuxtLink : 'div'"
-      :to="showSpeakerInfo ? `/sessions/${speaker.id}` : ''"
+      :to="showSpeakerInfo ? `/2023/sessions/${speaker.id}` : ''"
     >
       <img
         width="208"

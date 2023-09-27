@@ -86,7 +86,7 @@ css({
         transform: 'translateY(-50%)',
         width: '15px',
         height: '15px',
-        backgroundImage: 'url(/timetable/translation_logo.svg)',
+        backgroundImage: 'url(/2023/timetable/translation_logo.svg)',
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

@@ -77,7 +77,7 @@ const useAuth = () => {
           signedUser[key as keyof FormUser] = value
         })
         store?.setUser()
-        location.href = '/'
+        location.href = '/2023/'
       })
       .with(
         'MFA_CHALLENGE_VERIFIED',
@@ -92,7 +92,7 @@ const useAuth = () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: isProd ? 'https://vuefes.jp/2023/register' : 'http://localhost:3000/register',
+        redirectTo: isProd ? 'https://vuefes.jp/2023/register' : 'http://localhost:3000/2023/register',
       },
     })
     if (error) {

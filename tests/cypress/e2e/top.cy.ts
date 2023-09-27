@@ -1,21 +1,21 @@
 describe('top', () => {
   function loadPage() {
-    cy.intercept('/api/_supabase/session')
+    cy.intercept('/2023/api/_supabase/session')
     cy.intercept('GET', '**supabase.co/rest/v1/**')
-    cy.visit('/')
+    cy.visit('/2023/')
     cy.checkPageIdle()
   }
   function loadPageWithAuth() {
-    cy.intercept('/api/_supabase/session')
+    cy.intercept('/2023/api/_supabase/session')
     cy.intercept('GET', '**supabase.co/rest/v1/**')
-    cy.visit('/?forcelogin=true')
+    cy.visit('/2023/?forcelogin=true')
     cy.checkPageIdle()
   }
   function loadPagePrivacy() {
-    cy.visit('/privacy')
+    cy.visit('/2023/privacy')
   }
   function loadPageCodeOfConduct() {
-    cy.visit('/code-of-conduct')
+    cy.visit('/2023/code-of-conduct')
   }
   describe('header', () => {
     it('header (desktop)', () => {
@@ -86,12 +86,12 @@ describe('top', () => {
 
     describe('at top', () => {
       ;[
-        ['Message', 'http://localhost:3000/#message'],
-        ['Speakers', 'http://localhost:3000/#speakers'],
-        ['Ticket', 'http://localhost:3000/#ticket'],
-        ['Access', 'http://localhost:3000/#access'],
-        ['Sponsors', 'http://localhost:3000/#sponsors'],
-        ['Contact', 'http://localhost:3000/#form'],
+        ['Message', 'http://localhost:3000/2023/#message'],
+        ['Speakers', 'http://localhost:3000/2023/#speakers'],
+        ['Ticket', 'http://localhost:3000/2023/#ticket'],
+        ['Access', 'http://localhost:3000/2023/#access'],
+        ['Sponsors', 'http://localhost:3000/2023/#sponsors'],
+        ['Contact', 'http://localhost:3000/2023/#form'],
       ].forEach(([label, expected]: any) => {
         it(`at top click ${label}`, () => {
           loadPage()
@@ -102,12 +102,12 @@ describe('top', () => {
     })
     describe('at privacy', () => {
       ;[
-        ['Message', 'http://localhost:3000/#message'],
-        ['Speakers', 'http://localhost:3000/#speakers'],
-        ['Ticket', 'http://localhost:3000/#ticket'],
-        ['Access', 'http://localhost:3000/#access'],
-        ['Sponsors', 'http://localhost:3000/#sponsors'],
-        ['Contact', 'http://localhost:3000/#form'],
+        ['Message', 'http://localhost:3000/2023/#message'],
+        ['Speakers', 'http://localhost:3000/2023/#speakers'],
+        ['Ticket', 'http://localhost:3000/2023/#ticket'],
+        ['Access', 'http://localhost:3000/2023/#access'],
+        ['Sponsors', 'http://localhost:3000/2023/#sponsors'],
+        ['Contact', 'http://localhost:3000/2023/#form'],
       ].forEach(([label, expected]: any) => {
         it(`at privacy ${label}`, () => {
           loadPagePrivacy()
@@ -118,12 +118,12 @@ describe('top', () => {
     })
     describe('at code of conduct', () => {
       ;[
-        ['Message', 'http://localhost:3000/#message'],
-        ['Speakers', 'http://localhost:3000/#speakers'],
-        ['Ticket', 'http://localhost:3000/#ticket'],
-        ['Access', 'http://localhost:3000/#access'],
-        ['Sponsors', 'http://localhost:3000/#sponsors'],
-        ['Contact', 'http://localhost:3000/#form'],
+        ['Message', 'http://localhost:3000/2023/#message'],
+        ['Speakers', 'http://localhost:3000/2023/#speakers'],
+        ['Ticket', 'http://localhost:3000/2023/#ticket'],
+        ['Access', 'http://localhost:3000/2023/#access'],
+        ['Sponsors', 'http://localhost:3000/2023/#sponsors'],
+        ['Contact', 'http://localhost:3000/2023/#form'],
       ].forEach(([label, expected]: any) => {
         it(`at code of conduct ${label}`, () => {
           loadPageCodeOfConduct()
@@ -287,8 +287,8 @@ describe('top', () => {
         cy.contains('a', 'Vue Fes Japan 2020').should('have.attr', 'href', 'https://vuefes.jp/2020')
         cy.contains('a', 'Vue Fes Japan 2019').should('have.attr', 'href', 'https://vuefes.jp/2019')
         cy.contains('a', 'Vue Fes Japan 2018').should('have.attr', 'href', 'https://vuefes.jp/2018')
-        cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/privacy')
-        cy.contains('a', '行動規範').should('have.attr', 'href', '/code-of-conduct')
+        cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/2023/privacy')
+        cy.contains('a', '行動規範').should('have.attr', 'href', '/2023/code-of-conduct')
         cy.contains('© 2018-2023 Vue.js Japan User Group some rights reserved.')
         cy.contains(
           'Vue.js artworks by Evan You is licensed under a Creative Commons Attribution 4.0 International License.',
@@ -304,17 +304,17 @@ describe('top', () => {
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
-          cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
-          cy.contains('a', 'Access').should('have.attr', 'href', '/#access')
-          cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
-          cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')
+          cy.contains('a', 'Message').should('have.attr', 'href', '/2023/#message')
+          cy.contains('a', 'Access').should('have.attr', 'href', '/2023/#access')
+          cy.contains('a', 'Sponsors').should('have.attr', 'href', '/2023/#sponsors')
+          cy.contains('a', 'Contact').should('have.attr', 'href', '/2023/#form')
           cy.contains('Vue Fes Japan')
           cy.contains('a', '2022').should('have.attr', 'href', 'https://vuefes.jp/2022')
           cy.contains('a', '2020').should('have.attr', 'href', 'https://vuefes.jp/2020')
           cy.contains('a', '2019').should('have.attr', 'href', 'https://vuefes.jp/2019')
           cy.contains('a', '2018').should('have.attr', 'href', 'https://vuefes.jp/2018')
-          cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/privacy')
-          cy.contains('a', '行動規範').should('have.attr', 'href', '/code-of-conduct')
+          cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/2023/privacy')
+          cy.contains('a', '行動規範').should('have.attr', 'href', '/2023/code-of-conduct')
           cy.get('button.close').click()
         })
       cy.get('.mobile-menu').should('not.exist')
@@ -326,17 +326,17 @@ describe('top', () => {
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {
-          cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
-          cy.contains('a', 'Access').should('have.attr', 'href', '/#access')
-          cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
-          cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')
+          cy.contains('a', 'Message').should('have.attr', 'href', '/2023/#message')
+          cy.contains('a', 'Access').should('have.attr', 'href', '/2023/#access')
+          cy.contains('a', 'Sponsors').should('have.attr', 'href', '/2023/#sponsors')
+          cy.contains('a', 'Contact').should('have.attr', 'href', '/2023/#form')
           cy.contains('Vue Fes Japan')
           cy.contains('a', '2022').should('have.attr', 'href', 'https://vuefes.jp/2022')
           cy.contains('a', '2020').should('have.attr', 'href', 'https://vuefes.jp/2020')
           cy.contains('a', '2019').should('have.attr', 'href', 'https://vuefes.jp/2019')
           cy.contains('a', '2018').should('have.attr', 'href', 'https://vuefes.jp/2018')
-          cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/privacy')
-          cy.contains('a', '行動規範').should('have.attr', 'href', '/code-of-conduct')
+          cy.contains('a', 'プライバシーポリシー').should('have.attr', 'href', '/2023/privacy')
+          cy.contains('a', '行動規範').should('have.attr', 'href', '/2023/code-of-conduct')
           cy.get('button.close').click()
         })
       cy.get('.mobile-menu').should('not.exist')

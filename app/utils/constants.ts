@@ -6,22 +6,22 @@ export type NavLink = {
 }
 
 export const navLinks: NavLink[] = [
-  { text: 'Message', link: '/#message' },
-  { text: 'Speakers', link: '/#speakers' },
-  { text: 'Sponsors', link: '/#sponsors' },
-  { text: 'Contact', link: '/#form' },
+  { text: 'Message', link: '/2023/#message' },
+  { text: 'Speakers', link: '/2023/#speakers' },
+  { text: 'Sponsors', link: '/2023/#sponsors' },
+  { text: 'Contact', link: '/2023/#form' },
 ]
 
 export const navFullLinks = (showTimetable: boolean) =>
   [
-    { text: 'Message', link: '/#message' },
-    { text: 'Speakers', link: '/#speakers' },
-    ...[showTimetable ? { text: 'Time table', link: '/#timetable' } : undefined],
-    { text: 'Events', link: '/#events' },
-    { text: 'Ticket', link: '/#ticket' },
-    { text: 'Access', link: '/#access' },
-    { text: 'Sponsors', link: '/#sponsors' },
-    { text: 'Contact', link: '/#form' },
+    { text: 'Message', link: '/2023/#message' },
+    { text: 'Speakers', link: '/2023/#speakers' },
+    ...[showTimetable ? { text: 'Time table', link: '/2023/#timetable' } : undefined],
+    { text: 'Events', link: '/2023/#events' },
+    { text: 'Ticket', link: '/2023/#ticket' },
+    { text: 'Access', link: '/2023/#access' },
+    { text: 'Sponsors', link: '/2023/#sponsors' },
+    { text: 'Contact', link: '/2023/#form' },
   ].filter((l) => {
     return l !== undefined
   })

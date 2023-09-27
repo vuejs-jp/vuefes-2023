@@ -31,7 +31,7 @@ import { ticketUrl } from '~/utils/constants'
     <div class="process-wrapper">
       <TicketCard>
         <template #image>
-          <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
+          <img alt="" src="/2023/tickets/attendee.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
           <a :href="ticketUrl" target="_blank" rel="noreferrer"> {{ $t('top.general_ticket') }}</a>
@@ -52,7 +52,7 @@ import { ticketUrl } from '~/utils/constants'
       </TicketCard>
       <TicketCard>
         <template #image>
-          <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
+          <img alt="" src="/2023/tickets/attendee+party.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
           <a :href="ticketUrl" target="_blank" rel="noreferrer">
@@ -76,7 +76,7 @@ import { ticketUrl } from '~/utils/constants'
       </TicketCard>
       <TicketCard>
         <template #image>
-          <img alt="" src="/tickets/handson.png" width="400" height="225" decoding="async" />
+          <img alt="" src="/2023/tickets/handson.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
           <a
@@ -88,7 +88,7 @@ import { ticketUrl } from '~/utils/constants'
             <s><strong>無料</strong></s>
           </div>
           <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des">
-            <nuxt-link to="/#handson">
+            <nuxt-link to="/2023/#handson">
               {{ $t('top.handson') }}
             </nuxt-link>
           </i18n-t>
@@ -98,14 +98,14 @@ import { ticketUrl } from '~/utils/constants'
         <template #image>
           <img
             alt=""
-            src="/tickets/personal-sponsor.png"
+            src="/2023/tickets/personal-sponsor.png"
             width="400"
             height="225"
             decoding="async"
           />
         </template>
         <template #action>
-          <nuxt-link to="/#personal-sponsor">
+          <nuxt-link to="/2023/#personal-sponsor">
             {{ $t('top.personal_sponsor_ticket') }}
           </nuxt-link>
         </template>
@@ -114,7 +114,7 @@ import { ticketUrl } from '~/utils/constants'
             <strong>10,000</strong>
           </i18n-t>
           <i18n-t keypath="top.personal_sponsor_ticket_explain" tag="p" class="price-des">
-            <nuxt-link to="/#personal-sponsor">
+            <nuxt-link to="/2023/#personal-sponsor">
               {{ $t('top.personal_sponsor') }}
             </nuxt-link>
           </i18n-t>

@@ -89,7 +89,7 @@ useHead({
       </div>
     </section>
     <div class="back">
-      <RoundButton to="/" outline>
+      <RoundButton to="/2023/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
     </div>

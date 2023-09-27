@@ -1,9 +1,9 @@
 describe('sessions detail', () => {
   function loadPage(speakerId: string) {
-    cy.intercept('/api/_supabase/session')
-    cy.visit('/')
+    cy.intercept('/2023/api/_supabase/session')
+    cy.visit('/2023/')
     cy.checkPageIdle()
-    cy.get(`.speakers a[href="/sessions/${speakerId}"]`).click({ force: true })
+    cy.get(`.speakers a[href="/2023/sessions/${speakerId}"]`).click({ force: true })
     cy.url().should('eq', `http://localhost:3000/sessions/${speakerId}`)
   }
 

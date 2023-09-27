@@ -23,7 +23,7 @@ const { handle, isShow } = useDialog()
     </div>
     <img
       class="ticket-img"
-      src="/namecard/sample.png"
+      src="/2023/namecard/sample.png"
       alt=""
       width="592"
       height="395"

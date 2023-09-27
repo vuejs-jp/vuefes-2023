@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   srcDir: 'app/',
   app: {
     buildAssetsDir: '/_nuxt/',
-    baseURL: isProd ? '/2023/' : '/',
     head: {
       title: conferenceTitle,
       meta: [
@@ -56,7 +55,7 @@ export default defineNuxtConfig({
       {
         name: 'notosansjp-black',
         weight: 900,
-        path: '/fonts/NotoSansJP-Black.ttf',
+        path: '/2023/fonts/NotoSansJP-Black.ttf',
       },
     ],
   },
@@ -111,13 +110,13 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    '/': { prerender: true },
-    '/sessions/**': { prerender: true },
-    '/privacy/': { prerender: true },
-    '/register/': { prerender: true },
-    '/sponsor-sessions/**': { prerender: true },
-    '/sponsors/**': { prerender: true },
-    '/passmarket-console/': { prerender: true },
+    '/2023/': { prerender: true },
+    '/2023/sessions/**': { prerender: true },
+    '/2023/privacy/': { prerender: true },
+    '/2023/register/': { prerender: true },
+    '/2023/sponsor-sessions/**': { prerender: true },
+    '/2023/sponsors/**': { prerender: true },
+    '/2023/passmarket-console/': { prerender: true },
   },
   runtimeConfig: {
     public: {

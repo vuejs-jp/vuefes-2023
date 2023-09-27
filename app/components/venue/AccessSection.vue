@@ -19,7 +19,7 @@ const imageWidth = 320
           <img
             class="image image-hall"
             alt="Event Hall"
-            src="/venue/hall.jpeg"
+            src="/2023/venue/hall.jpeg"
             :width="imageWidth"
             :height="(imageWidth * 2) / 3"
             decoding="async"
@@ -27,7 +27,7 @@ const imageWidth = 320
           <img
             class="image image-entrance"
             alt="Entrance Photo"
-            src="/venue/entrance.jpg"
+            src="/2023/venue/entrance.jpg"
             :width="imageWidth"
             :height="(imageWidth * 2) / 3"
             decoding="async"

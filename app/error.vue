@@ -8,7 +8,7 @@ const props = defineProps<ErrorProps>()
 <template>
   <div class="error">
     <div class="error-modal">
-      <nuxt-link to="/" title="トップへ戻る">
+      <nuxt-link to="/2023/" title="トップへ戻る">
         <h2>Oooops, something is wrong \ {{ error.statusCode }} / error</h2>
         <h3>Please click here to return to the top of the website!</h3>
       </nuxt-link>
@@ -36,7 +36,7 @@ css({
       left: 0,
       width: '100%',
       height: 'auto',
-      backgroundImage: 'url(/og/top.png)',
+      backgroundImage: 'url(/2023/og/top.png)',
       backgroundColor: 'rgba(255, 255, 255, 0.6)',
       backgroundBlendMode: 'lighten',
       backgroundSize: 'cover',

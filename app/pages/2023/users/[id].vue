@@ -120,7 +120,7 @@ useHead({
         {{ $t('words.add_to_calendar') }}
       </RoundButton>
       <!-- トップに戻る -->
-      <RoundButton to="/" outline>
+      <RoundButton to="/2023/" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">

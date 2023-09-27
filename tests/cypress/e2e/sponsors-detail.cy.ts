@@ -1,9 +1,9 @@
 describe('sponsors detail', () => {
   function loadPage(sponsorId: string, section: string) {
-    cy.intercept('/api/_supabase/session')
-    cy.visit('/')
+    cy.intercept('/2023/api/_supabase/session')
+    cy.visit('/2023/')
     cy.checkPageIdle()
-    cy.get(`.${section}-sponsors a[href="/sponsors/${sponsorId}"]`).click({ force: true })
+    cy.get(`.${section}-sponsors a[href="/2023/sponsors/${sponsorId}"]`).click({ force: true })
     cy.url().should('eq', `http://localhost:3000/sponsors/${sponsorId}`)
   }
 

@@ -21,7 +21,7 @@ import { storeUrl } from '~/utils/constants'
             width="308"
             height="308"
             :alt="`Vue Fes ${$t(`top.${menu.nameKey}`)}'s picture'`"
-            :src="`${menu.imgSrc}`"
+            :src="`/${menu.imgSrc}`"
             decoding="async"
           />
           <div class="name">{{ $t(`top.${menu.nameKey}`) }}</div>

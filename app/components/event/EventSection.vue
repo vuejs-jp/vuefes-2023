@@ -87,7 +87,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           {{ $t('top.events_handson') }}
         </div>
         <i18n-t keypath="top.events_handson_explain" tag="div" class="description">
-          <nuxt-link to="/#handson" :title="$t('top.events_handson_about')">
+          <nuxt-link to="/2023/#handson" :title="$t('top.events_handson_about')">
             {{ $t('top.events_handson_about') }}
           </nuxt-link>
         </i18n-t>

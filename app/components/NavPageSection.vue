@@ -40,7 +40,7 @@ onMounted(function () {
   <nav ref="navRef" :style="{ top: hasAlert ? (isMobile ? '80px' : '50px') : '0px' }">
     <div class="nav-root">
       <h1>
-        <nuxt-link to="/" aria-label="top">
+        <nuxt-link to="/2023/" aria-label="top">
           <template v-if="!hasAuth">
             <VueFesLogo />
           </template>

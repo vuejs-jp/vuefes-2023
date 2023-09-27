@@ -3,6 +3,7 @@ describe('top', () => {
     cy.intercept('/api/_supabase/session')
     cy.intercept('GET', '**supabase.co/rest/v1/**')
     cy.visit('/')
+    cy.wait(500)
   }
   function loadPageWithAuth() {
     cy.intercept('/api/_supabase/session')

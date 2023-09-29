@@ -25,7 +25,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     id: 'unique-vision',
     type: 'domestic',
     session: {
-      title: 'ユニークビジョンのフロントエンド開発における取り組み',
+      title: '社内UIコンポーネントライブラリがエンジニアチームにもたらした本当の価値',
       track: 'all',
       time: '11:25 - 11:45',
       type: 'main',

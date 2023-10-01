@@ -5,6 +5,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { ticketUrl } from '~/utils/constants'
+import { closedEarlyPrice } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -37,12 +38,18 @@ import { ticketUrl } from '~/utils/constants'
           <a :href="ticketUrl" target="_blank" rel="noreferrer"> {{ $t('top.general_ticket') }}</a>
         </template>
         <template #default>
+          <div v-if="!closedEarlyPrice" class="price">
+            <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
+              <strong>7,000</strong>
+            </i18n-t>
+            <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+          </div>
           <div class="price-list">
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>8,000</strong>
             </i18n-t>
-            <div class="price">
-              <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+            <div v-if="closedEarlyPrice" class="price">
+              <span class="early-price">{{ $t('top.ticket_early_price_closed') }}</span>
             </div>
           </div>
         </template>
@@ -58,11 +65,18 @@ import { ticketUrl } from '~/utils/constants'
         </template>
         <template #default>
           <div class="price-list">
+            <div v-if="!closedEarlyPrice" class="price">
+              <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
+                <strong>10,000</strong>
+              </i18n-t>
+              <p class="early-price">{{ $t('top.ticket_early_price_explain') }}</p>
+              <p class="early-price-notice">{{ $t('top.ticket_early_price_notice') }}</p>
+            </div>
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>11,000</strong>
             </i18n-t>
-            <div class="price">
-              <p class="early-price">{{ $t('top.ticket_early_price_explain') }}</p>
+            <div v-if="closedEarlyPrice" class="price">
+              <p class="early-price">{{ $t('top.ticket_early_price_closed') }}</p>
             </div>
           </div>
         </template>

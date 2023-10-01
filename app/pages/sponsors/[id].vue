@@ -47,6 +47,13 @@ const sponsorData: Sponsor =
     return s.id === sponsorId
   }) || emptySponsor
 
+const { locale } = useI18n({ useScope: 'global' })
+
+// 2023/10/01 LINE fukuoka 商号変更に伴うリダイレクト対応
+if (sponsorId === 'line-fukuoka') {
+  throw navigateTo('/sponsors/line-yahoo-communications')
+}
+
 if (!sponsorData.id) {
   // https://nuxt.com/docs/getting-started/error-handling#showerror
   throw showError({

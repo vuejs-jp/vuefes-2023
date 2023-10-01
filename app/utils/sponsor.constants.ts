@@ -107,9 +107,9 @@ const all: Sponsor[] = [
     url: 'https://jobs.st.inc/engineer',
   },
   {
-    id: 'line-fukuoka',
-    name: 'LINE Fukuoka株式会社',
-    image: 'sponsors/line-fukuoka.png',
+    id: 'line-yahoo-communications',
+    name: 'LINEヤフーコミュニケーションズ株式会社',
+    image: 'sponsors/line-yahoo-communications.png',
     categories: ['silver'],
     url: 'https://linefukuoka.co.jp/ja/career/engineer',
   },

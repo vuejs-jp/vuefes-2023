@@ -35,7 +35,7 @@ css({
     textAlign: 'center',
     '::v-deep(a)': {
       display: 'block',
-      width: '300px',
+      width: '320px',
       margin: '0 auto',
       background: '{color.vue.blue}',
       color: '{color.white}',

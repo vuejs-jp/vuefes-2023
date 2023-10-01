@@ -38,15 +38,12 @@ import { ticketUrl } from '~/utils/constants'
         </template>
         <template #default>
           <div class="price-list">
-            <div class="price">
-              <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
-                <strong>7,000</strong>
-              </i18n-t>
-              <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
-            </div>
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>8,000</strong>
             </i18n-t>
+            <div class="price">
+              <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
+            </div>
           </div>
         </template>
       </TicketCard>
@@ -61,16 +58,12 @@ import { ticketUrl } from '~/utils/constants'
         </template>
         <template #default>
           <div class="price-list">
-            <div class="price">
-              <i18n-t keypath="top.ticket_early_price" tag="p" scope="global">
-                <strong>10,000</strong>
-              </i18n-t>
-              <p class="early-price">{{ $t('top.ticket_early_price_explain') }}</p>
-              <p class="early-price-notice">{{ $t('top.ticket_early_price_notice') }}</p>
-            </div>
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>11,000</strong>
             </i18n-t>
+            <div class="price">
+              <p class="early-price">{{ $t('top.ticket_early_price_explain') }}</p>
+            </div>
           </div>
         </template>
       </TicketCard>
@@ -183,7 +176,7 @@ css({
     // paddingBottom: 'calc({space.8} * 2)',
   },
   '.price': {
-    textAlign: 'right',
+    textAlign: 'center',
     color: '{color.vue.blue}',
     fontSize: 'calc(18*{fontSize.base})',
     fontWeight: 500,

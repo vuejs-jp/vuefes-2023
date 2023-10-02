@@ -67,63 +67,6 @@ describe('top', () => {
       })
     })
   })
-  context.skip('header links', () => {
-    it('logo', () => {
-      loadPage()
-      cy.contains('h1', 'Vue Fes Japan 2023').find('a').click()
-      cy.url().should('eq', 'http://localhost:3000/')
-    })
-
-    describe('at top', () => {
-      ;[
-        ['Message', 'http://localhost:3000/#message'],
-        ['Speakers', 'http://localhost:3000/#speakers'],
-        ['Ticket', 'http://localhost:3000/#ticket'],
-        ['Access', 'http://localhost:3000/#access'],
-        ['Sponsors', 'http://localhost:3000/#sponsors'],
-        ['Contact', 'http://localhost:3000/#form'],
-      ].forEach(([label, expected]: any) => {
-        it(`at top click ${label}`, () => {
-          loadPage()
-          cy.wait(500)
-          cy.contains('main > nav a', label).click()
-          cy.url().should('eq', expected)
-        })
-      })
-    })
-    describe('at privacy', () => {
-      ;[
-        ['Message', 'http://localhost:3000/#message'],
-        ['Speakers', 'http://localhost:3000/#speakers'],
-        ['Ticket', 'http://localhost:3000/#ticket'],
-        ['Access', 'http://localhost:3000/#access'],
-        ['Sponsors', 'http://localhost:3000/#sponsors'],
-        ['Contact', 'http://localhost:3000/#form'],
-      ].forEach(([label, expected]: any) => {
-        it(`at privacy ${label}`, () => {
-          loadPagePrivacy()
-          cy.contains('main > nav a', label).click()
-          cy.url().should('eq', expected)
-        })
-      })
-    })
-    describe('at code of conduct', () => {
-      ;[
-        ['Message', 'http://localhost:3000/#message'],
-        ['Speakers', 'http://localhost:3000/#speakers'],
-        ['Ticket', 'http://localhost:3000/#ticket'],
-        ['Access', 'http://localhost:3000/#access'],
-        ['Sponsors', 'http://localhost:3000/#sponsors'],
-        ['Contact', 'http://localhost:3000/#form'],
-      ].forEach(([label, expected]: any) => {
-        it(`at code of conduct ${label}`, () => {
-          loadPageCodeOfConduct()
-          cy.contains('main > nav a', label).click()
-          cy.url().should('eq', expected)
-        })
-      })
-    })
-  })
 
   describe('content', () => {
     it('main visual', () => {

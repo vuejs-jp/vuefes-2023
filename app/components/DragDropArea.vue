@@ -39,27 +39,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <label
-    for="fileupload"
+  <button
     draggable="true"
-    role="button"
-    tabindex="0"
-    class="uploadarea"
     :class="{ '-isDragEnter': isDragEnter }"
     @dragenter="() => (isDragEnter = true)"
     @dragleave="() => (isDragEnter = false)"
     @dragover.prevent
     @drop.prevent="onDropFile"
   >
-    <slot />
-    <input
-      id="fileupload"
-      type="file"
-      :name="fileName"
-      :accept="fileAccept"
-      @change="onFileInputChange"
-    />
-  </label>
+    <label for="fileupload" class="uploadarea">
+      <slot />
+      <input
+        id="fileupload"
+        type="file"
+        :name="fileName"
+        :accept="fileAccept"
+        @change="onFileInputChange"
+      />
+    </label>
+  </button>
 </template>
 
 <style lang="ts" scoped>

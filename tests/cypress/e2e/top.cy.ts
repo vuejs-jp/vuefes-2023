@@ -68,9 +68,11 @@ describe('top', () => {
     })
   })
 
-  describe('content', () => {
-    it('main visual', () => {
+  describe('content', { testIsolation: false }, () => {
+    before(() => {
       loadPage()
+    })
+    it('main visual', () => {
       cy.contains('a', '最新情報はTwitterでCheck!').should(
         'have.attr',
         'href',
@@ -79,7 +81,6 @@ describe('top', () => {
       cy.contains('Twitter ー @vuefes #vuefes')
     })
     it('message', () => {
-      loadPage()
       cy.contains('h2', 'Message')
         .contains('想い')
         .closest('section')
@@ -88,7 +89,6 @@ describe('top', () => {
         })
     })
     it('ticket', () => {
-      loadPage()
       cy.contains('h2', 'Ticket')
         .closest('section')
         .within(() => {
@@ -107,7 +107,6 @@ describe('top', () => {
         })
     })
     it('speakers', () => {
-      loadPage()
       cy.contains('h2', 'Speakers')
         .contains('スピーカー')
         .closest('section')
@@ -116,7 +115,6 @@ describe('top', () => {
         })
     })
     it('access', () => {
-      loadPage()
       cy.contains('h2', 'Access')
         .contains('アクセス')
         .closest('section')
@@ -139,7 +137,6 @@ describe('top', () => {
         })
     })
     it('sponsors', () => {
-      loadPage()
       cy.contains('h2', 'Sponsors')
         .contains('スポンサー')
         .closest('section')
@@ -150,7 +147,6 @@ describe('top', () => {
         })
     })
     it('teams', () => {
-      loadPage()
       cy.contains('h2', 'Teams')
         .contains('チーム')
         .closest('section')

@@ -11,29 +11,13 @@
   "rules": {
     "invalid-attr": {
       "options": {
-        "attrs": {
-          "colspan": {
-            "allowed": true,
-            "type": "Number"
-          },
-          "placeholder": {
-            "allowed": true,
-            "type": "String"
-          },
-          "required": {
-            "allowed": true,
-            "type": "Boolean"
-          },
-          "rowspan": {
-            "allowed": true,
-            "type": "Number"
-          }
-        }
+        /* v3.7.0 - attr の非推奨化に伴い allowAttrs の利用に変更 ref: https://github.com/markuplint/markuplint/releases/tag/v3.7.0 */
+        "allowAttrs": ["placeholder", "required"]
       }
     }
   },
   "excludeFiles": [
-    "app/components/DragDropArea.vue",
+    /* permitted-contents のルールに対応したい */
     "app/components/timetable/TimetableViewMobile.vue"
   ]
 }

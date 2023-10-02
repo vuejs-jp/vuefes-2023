@@ -27,7 +27,14 @@ export default defineNuxtConfig({
   modules: [
     'pinceau/nuxt',
     '@nuxt/devtools',
-    '@nuxtjs/device',
+    [
+      '@nuxtjs/device',
+      {
+        device: {
+          refreshOnResize: true,
+        },
+      },
+    ],
     '@nuxtjs/supabase',
     '@nuxtjs/i18n',
     '@nuxt/content',

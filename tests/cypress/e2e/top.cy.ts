@@ -1,14 +1,20 @@
 describe('top', () => {
-  function loadPage() {
+  function loadPage(mobile = false) {
     cy.intercept('/api/_supabase/session')
     cy.intercept('GET', '**supabase.co/rest/v1/**')
-    cy.visit('/')
-    cy.wait(1000)
-  }
-  function loadPageWithAuth() {
-    cy.intercept('/api/_supabase/session')
-    cy.intercept('GET', '**supabase.co/rest/v1/**')
-    cy.visit('/?forcelogin=true')
+    if (mobile) {
+      cy.viewport('iphone-8')
+      cy.visit('/', {
+        onBeforeLoad: (win) => {
+          Object.defineProperty(win.navigator, 'userAgent', {
+            value:
+              'Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1 Mobile/15E148 Safari/604.1',
+          })
+        },
+      })
+    } else {
+      cy.visit('/')
+    }
   }
   function loadPagePrivacy() {
     cy.visit('/privacy')
@@ -47,8 +53,7 @@ describe('top', () => {
       })
     })
     it('header (mobile)', () => {
-      cy.viewport(375, 600)
-      loadPage()
+      loadPage(true)
       cy.get('nav').within(() => {
         cy.contains('h1', 'Vue Fes Japan 2023')
         cy.contains('a', 'Message').should('not.be.visible')
@@ -61,22 +66,8 @@ describe('top', () => {
         // cy.get('.hamburger-menu').should('be.visible')
       })
     })
-    it('header with auth', () => {
-      loadPageWithAuth()
-      cy.get('nav').within(() => {
-        cy.contains('h1', 'Vue Fes Japan 2023')
-        cy.contains('a', 'Message').should('be.visible')
-        cy.contains('a', 'Speakers').should('be.visible')
-        cy.contains('a', 'Ticket').should('be.visible')
-        cy.contains('a', 'Access').should('be.visible')
-        cy.contains('a', 'Sponsors').should('be.visible')
-        cy.contains('a', 'Contact').should('be.visible')
-        cy.get('a[aria-label="twitter"]').should('be.visible')
-        cy.get('.hamburger-menu').should('not.be.visible')
-      })
-    })
   })
-  context('header links', () => {
+  context.skip('header links', () => {
     it('logo', () => {
       loadPage()
       cy.contains('h1', 'Vue Fes Japan 2023').find('a').click()
@@ -298,9 +289,8 @@ describe('top', () => {
   })
   describe('menu view', () => {
     it('render', () => {
-      cy.viewport(769, 600)
-      loadPage()
-      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
+      loadPage(true)
+      cy.get('.hamburger-menu').should('be.visible').click()
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

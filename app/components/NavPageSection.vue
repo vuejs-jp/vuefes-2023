@@ -28,12 +28,9 @@ const showMenu = ref(false)
 
 const toggleMenu = () => {
   showMenu.value = !showMenu.value
+  if (!htmlRef.value) htmlRef.value = document.querySelector('html')
   htmlRef.value.style.overflow = showMenu.value ? 'hidden' : ''
 }
-
-onMounted(function () {
-  htmlRef.value = document.querySelector('html')
-})
 </script>
 
 <template>

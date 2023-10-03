@@ -15,6 +15,7 @@ describe('top', () => {
     } else {
       cy.visit('/')
     }
+    cy.wait(1000)
   }
   function loadPagePrivacy() {
     cy.visit('/privacy')

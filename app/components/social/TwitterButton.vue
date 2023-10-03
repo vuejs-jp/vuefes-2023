@@ -33,7 +33,7 @@ css({
     justifyContent: 'space-between',
     padding: '24px 72px',
     background: 'rgba(35, 52, 69, 0.8)',
-    borderRadius: '70px',
+    borderRadius: '50px',
     '&:hover': {
       transition: '.2s',
     },
@@ -69,7 +69,7 @@ css({
   },
   '@mobile': {
     '.twitter-root': {
-      borderRadius: '16px',
+      borderRadius: '50px',
       '&:hover': {
         transition: 'none',
       },

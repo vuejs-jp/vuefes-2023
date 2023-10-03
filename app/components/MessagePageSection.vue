@@ -66,8 +66,8 @@ css({
     '.message-body': {
       paddingLeft: '20px',
       paddingRight: '20px',
-      padding: '24px  16px 24px',
-      borderRadius: '16px',
+      padding: '24px 16px 24px',
+      borderRadius: '32px',
     },
     '.text': {
       '::v-deep(p)': {

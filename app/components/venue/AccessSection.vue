@@ -19,7 +19,7 @@ const imageWidth = 320
           <img
             class="image image-hall"
             alt="Event Hall"
-            src="/venue/hall.jpeg"
+            src="/venue/hall.jpg"
             :width="imageWidth"
             :height="(imageWidth * 2) / 3"
             decoding="async"

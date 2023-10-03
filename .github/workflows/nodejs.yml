@@ -59,13 +59,12 @@ jobs:
 
   integration-test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.16.0]
+    container:
+      image: cypress/browsers:node18.12.0-chrome106-ff106
+      options: --user 1001
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install packages
         uses: ./.github/actions/install-packages

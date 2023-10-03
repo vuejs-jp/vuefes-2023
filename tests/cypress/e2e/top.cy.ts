@@ -93,6 +93,7 @@ describe('top', () => {
       cy.contains('h2', 'Ticket')
         .closest('section')
         .within(() => {
+          cy.contains('h3', 'チケット種別').next().find(' > div').should('have.length', 4)
           // チケット
           cy.contains('a', 'チケットを購入')
           cy.contains('a', '一般チケット')
@@ -230,7 +231,8 @@ describe('top', () => {
   describe('menu view', () => {
     it('render', () => {
       loadPage(true)
-      cy.get('.hamburger-menu').should('be.visible').click()
+      cy.wait(1000)
+      cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

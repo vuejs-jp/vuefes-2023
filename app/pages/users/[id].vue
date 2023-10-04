@@ -97,18 +97,14 @@ useHead({
       <RoundButton class="btn-update" :to="`/users/edit/${userId}`" :disabled="!hasAuth">
         {{ $t('words.re_edit') }}
       </RoundButton>
-      <!--
       <RoundButton
         class="btn-save"
         :href="`${linkUrl}users/${userId}/__og_image__/og.png`"
-        target="_blank"
-        rel="noreferrer"
         outline
         download
       >
         画像を保存
       </RoundButton>
-      -->
       <!-- カレンダーに追加 -->
       <RoundButton
         class="btn-calendar"

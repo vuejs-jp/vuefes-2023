@@ -5,7 +5,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { ticketUrl } from '~/utils/constants'
-import { closedEarlyPrice } from '~/utils/status.constants'
+import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -59,8 +59,8 @@ import { closedEarlyPrice } from '~/utils/status.constants'
           <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
-          <a :href="ticketUrl" target="_blank" rel="noreferrer">
-            {{ $t('top.after_party_ticket') }}</a
+          <a>
+            <s>{{ $t('top.after_party_ticket') }}</s></a
           >
         </template>
         <template #default>
@@ -73,10 +73,13 @@ import { closedEarlyPrice } from '~/utils/status.constants'
               <p class="early-price-notice">{{ $t('top.ticket_early_price_notice') }}</p>
             </div>
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
-              <strong>11,000</strong>
+              <strong><s>11,000</s></strong>
             </i18n-t>
-            <div v-if="closedEarlyPrice" class="price">
+            <div v-if="!closedPrice && closedEarlyPrice" class="price">
               <p class="early-price">{{ $t('top.ticket_early_price_closed') }}</p>
+            </div>
+            <div v-if="closedPrice" class="price">
+              <p class="early-price">{{ $t('top.after_party_ticket_explain') }}</p>
             </div>
           </div>
         </template>

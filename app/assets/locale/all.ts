@@ -116,6 +116,7 @@ export default {
       ticket_type: 'チケット種別',
       general_ticket: '一般チケット',
       after_party_ticket: '一般＋アフターパーティーチケット',
+      after_party_ticket_explain: '※ 好評により全席完売しました。',
       handson_ticket: 'ハンズオンチケット',
       handson_ticket_explain:
         '※ 好評により全席完売しました。\n※ 詳しくは {0} についてをご覧ください。',
@@ -318,6 +319,8 @@ export default {
       ticket_type: 'Ticket Type',
       general_ticket: 'General Ticket',
       after_party_ticket: 'General Ticket with After Party',
+      after_party_ticket_explain:
+        '※ General Ticket with After Party is required for those attending on the day of the event.',
       handson_ticket: 'Handson Ticket',
       handson_ticket_explain:
         '* Purchase of a general or general with after party ticket is required for attending only handson. \n* For more information, please see {0}.',

@@ -93,8 +93,8 @@ const useAuth = () => {
   const signIn = async (provider: AuthProvider) => {
     const redirectPath = closedRegister
       ? isProd
-        ? `https://vuefes.jp/2023/users/${signedUser.user_id}`
-        : `https://localhost:3000/users/${signedUser.user_id}`
+        ? 'https://vuefes.jp/2023'
+        : 'https://localhost:3000'
       : isProd
       ? 'https://vuefes.jp/2023/register'
       : 'http://localhost:3000/register'

@@ -1,4 +1,4 @@
-declare var global: typeof globalThis
+declare let global: typeof globalThis
 
 declare namespace Cypress {
   interface Chainable {

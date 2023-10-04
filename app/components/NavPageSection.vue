@@ -71,7 +71,12 @@ onMounted(function () {
         />
         <slot name="avatar" />
         <!-- hamburger-menu -->
-        <button v-if="!showMenu" class="hamburger-menu" @click="toggleMenu">
+        <button
+          v-if="!showMenu"
+          class="hamburger-menu"
+          aria-label="Mobile Menu"
+          @click="toggleMenu"
+        >
           <MenuLogo />
         </button>
         <NavView :visible="showMenu" @toggle="toggleMenu" />

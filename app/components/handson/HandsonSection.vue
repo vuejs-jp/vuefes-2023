@@ -76,7 +76,7 @@ css({
     '.handson': {
       paddingTop: 'calc({space.8} * 3)',
       '::v-deep(h3)': {
-        fontSize: 'calc(24*{fontSize.base})',
+        fontSize: 'calc(28*{fontSize.base})',
       },
       '::v-deep(p)': {
         fontSize: 'calc(16*{fontSize.base})',

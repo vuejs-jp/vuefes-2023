@@ -106,10 +106,9 @@ css({
         fontSize: 'calc(28*{fontSize.base})',
       }
     },
-    '.deadline': {
-      fontSize: 'calc(20*{fontSize.base})',
-
-    }
+    '.explain': {
+      fontSize: 'calc(16*{fontSize.base})',
+    },
   },
 })
 </style>

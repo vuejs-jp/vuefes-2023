@@ -18,7 +18,7 @@ css({
     position: 'relative',
     display: 'grid',
     placeItems: 'center',
-    paddingBottom: 'calc({space.8} * 3)',
+    paddingBottom: 'calc({space.8} * 1)',
     width: '360px',
     background: '#F2F7FF',
     borderRadius: '0 0 calc({space.8} * 0.5) calc({space.8} * 0.5)',
@@ -51,10 +51,7 @@ css({
       padding: '0',
     },
     '.action': {
-      position: 'static',
-      transform: 'none',
-      width: 'auto',
-      margin: 'calc({space.8} * 2) 0'
+      top: '177px',
     },
   },
 })

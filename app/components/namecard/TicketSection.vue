@@ -94,14 +94,16 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
           >
         </template>
         <template #default>
-          <div class="price">
-            <s><strong>無料</strong></s>
+          <div class="price-list">
+            <div class="price">
+              <s><strong>無料</strong></s>
+            </div>
+            <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des">
+              <nuxt-link to="/#handson">
+                {{ $t('top.handson') }}
+              </nuxt-link>
+            </i18n-t>
           </div>
-          <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des">
-            <nuxt-link to="/#handson">
-              {{ $t('top.handson') }}
-            </nuxt-link>
-          </i18n-t>
         </template>
       </TicketCard>
       <TicketCard>
@@ -120,14 +122,16 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
           </nuxt-link>
         </template>
         <template #default>
-          <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
-            <strong>10,000</strong>
-          </i18n-t>
-          <i18n-t keypath="top.personal_sponsor_ticket_explain" tag="p" class="price-des">
-            <nuxt-link to="/#personal-sponsor">
-              {{ $t('top.personal_sponsor') }}
-            </nuxt-link>
-          </i18n-t>
+          <div class="price-list">
+            <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
+              <strong>10,000</strong>
+            </i18n-t>
+            <i18n-t keypath="top.personal_sponsor_ticket_explain" tag="p" class="price-des">
+              <nuxt-link to="/#personal-sponsor">
+                {{ $t('top.personal_sponsor') }}
+              </nuxt-link>
+            </i18n-t>
+          </div>
         </template>
       </TicketCard>
     </div>
@@ -190,7 +194,6 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: 'calc({space.8} * 1)',
-    // paddingBottom: 'calc({space.8} * 2)',
   },
   '.price': {
     textAlign: 'center',
@@ -232,11 +235,14 @@ css({
   '@mobile': {
     '.ticket': {
       '::v-deep(h3)': {
-        fontSize: '26px',
+        fontSize: 'calc(28*{fontSize.base})',
       }
     },
     '.explain': {
       fontSize: 'calc(16*{fontSize.base})',
+    },
+    '.price-list': {
+      paddingTop: 'calc({space.8} * 4)',
     },
     '.price': {
       textAlign: 'center',

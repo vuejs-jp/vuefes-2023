@@ -102,7 +102,7 @@ useHead({
         :href="`${linkUrl}users/${userId}/__og_image__/og.png`"
         outline
         download
-        :downloadFileName="userId"
+        :download-file-name="userId"
       >
         画像を保存
       </RoundButton>

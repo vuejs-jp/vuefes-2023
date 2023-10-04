@@ -101,6 +101,7 @@ useHead({
         class="btn-save"
         :href="`${linkUrl}users/${userId}/__og_image__/og.png`"
         outline
+        :disabled="!eventUser?.id"
         download
         :download-file-name="userId"
       >

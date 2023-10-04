@@ -15,6 +15,7 @@ export type Path =
   | 'ticket'
   | 'prepare-namecard'
   | 'namecard'
+  | 'close-namecard'
   | 'volunteer'
   | 'childcare'
   | 'handson'

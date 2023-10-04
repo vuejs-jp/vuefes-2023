@@ -5,5 +5,8 @@ export function useNamecard() {
   const canPurchase = feature.registerTicket === 'true'
   const canRegister = feature.registerNamecard === 'true'
 
-  return { canPurchase, canRegister }
+  // 登録を終了する際に更新してください
+  const closedRegister = false
+
+  return { canPurchase, canRegister, closedRegister }
 }

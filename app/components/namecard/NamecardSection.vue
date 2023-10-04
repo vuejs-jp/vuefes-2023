@@ -8,10 +8,12 @@ import { useUserStore } from '~/composables/useUserStore'
 import useAuth from '~/composables/useAuth'
 import { useDialog } from '~/composables/useDialog'
 
-const { canRegister } = useNamecard()
+const { canRegister, closedRegister } = useNamecard()
 const { signedUser } = useUserStore()
 const { hasAuth } = useAuth()
 const { handle, isShow } = useDialog()
+
+const mdPath = canRegister ? 'namecard' : closedRegister ? 'close-namecard' : 'prepare-namecard'
 </script>
 
 <template>
@@ -19,7 +21,7 @@ const { handle, isShow } = useDialog()
     <CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />
     <h3>{{ $t('top.namecard') }}</h3>
     <div class="explain">
-      <MarkDownText :path="canRegister ? 'namecard' : 'prepare-namecard'" />
+      <MarkDownText :path="mdPath" />
     </div>
     <img
       class="ticket-img"
@@ -39,7 +41,7 @@ const { handle, isShow } = useDialog()
       <div class="apply">
         <RoundButton
           type="submit"
-          :disabled="!canRegister"
+          :disabled="!canRegister && closedRegister"
           @click="() => (!hasAuth ? handle(true) : navigateTo(`/users/${signedUser.user_id}`))"
         >
           {{ $t('words.create_namecard') }}

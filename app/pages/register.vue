@@ -8,6 +8,7 @@ import TextButton from '~/components/button/TextButton.vue'
 import DragDropArea from '~/components/DragDropArea.vue'
 import UserForDev from '~/components/UserForDev.vue'
 import useAuth from '~/composables/useAuth'
+import { useNamecard } from '~/composables/useNamecard'
 import { useUserStore } from '~/composables/useUserStore'
 import { useSupabase } from '~/composables/useSupabase'
 import { useFormError } from '~/composables/useFormError'
@@ -16,6 +17,12 @@ import { isProd } from '~/utils/environment.constants'
 definePageMeta({
   middleware: ['error'],
 })
+
+const { closedRegister } = useNamecard()
+
+if (closedRegister) {
+  throw createError({ statusCode: 404, statusMessage: 'Ended to Register Name Card' })
+}
 
 const { hasAuth, signOut } = useAuth()
 const { signedUser } = useUserStore()

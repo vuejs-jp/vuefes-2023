@@ -41,10 +41,10 @@ const mdPath = canRegister ? 'namecard' : closedRegister ? 'close-namecard' : 'p
       <div class="apply">
         <RoundButton
           type="submit"
-          :disabled="!canRegister && closedRegister"
+          :disabled="!canRegister"
           @click="() => (!hasAuth ? handle(true) : navigateTo(`/users/${signedUser.user_id}`))"
         >
-          {{ $t('words.create_namecard') }}
+          {{ closedRegister ? $t('words.check_created_namecard') : $t('words.create_namecard') }}
         </RoundButton>
       </div>
     </div>

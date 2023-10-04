@@ -53,6 +53,8 @@ const useAuth = () => {
     store?.setUser({ ...signedUser, user_id: user.value?.id || '' })
   }
 
+  const { closedRegister } = useNamecard()
+
   const supabase = getClient()
   supabase.auth.onAuthStateChange((evt, session) => {
     match(evt)
@@ -89,10 +91,17 @@ const useAuth = () => {
       .exhaustive()
   })
   const signIn = async (provider: AuthProvider) => {
+    const redirectPath = closedRegister
+      ? isProd
+        ? `https://vuefes.jp/2023/users/${signedUser.user_id}`
+        : `https://localhost:3000/users/${signedUser.user_id}`
+      : isProd
+      ? 'https://vuefes.jp/2023/register'
+      : 'http://localhost:3000/register'
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: isProd ? 'https://vuefes.jp/2023/register' : 'http://localhost:3000/register',
+        redirectTo: redirectPath,
       },
     })
     if (error) {

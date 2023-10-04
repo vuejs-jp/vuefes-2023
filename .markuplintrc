@@ -17,10 +17,7 @@
     }
   },
   "excludeFiles": [
-    /* 修正によって既存コードを破壊しないよう、一時的に退避している */
-    "app/components/timetable/TimetableViewMobile.vue",
-    "app/components/DragDropArea.vue",
-    "app/components/timetable/TimetableBodyRow.vue",
-    "app/components/forms/InputField.vue"
+    /* permitted-contents のルールに対応したい */
+    "app/components/timetable/TimetableViewMobile.vue"
   ]
 }

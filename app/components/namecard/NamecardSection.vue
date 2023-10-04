@@ -13,7 +13,7 @@ const { signedUser } = useUserStore()
 const { hasAuth } = useAuth()
 const { handle, isShow } = useDialog()
 
-const mdPath = canRegister ? 'namecard' : closedRegister ? 'close-namecard' : 'prepare-namecard'
+const mdPath = canRegister ? (closedRegister ? 'close-namecard' : 'namecard') : 'prepare-namecard'
 </script>
 
 <template>

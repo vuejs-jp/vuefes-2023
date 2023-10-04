@@ -58,7 +58,7 @@ function handleFocusOut(e: Event) {
       @input="handleInput"
       @blur="handleFocusOut"
     />
-    <p v-if="error" class="error">{{error}}</p>
+    <p v-if="error" class="error">{{ error }}</p>
   </label>
 </template>
 

@@ -32,7 +32,8 @@
     "cypress:open": "cypress open --project tests",
     "cypress:run": "cypress run --project tests --browser chrome",
     "cypress:dev": "IN_CYPRESS=true start-test dev http://127.0.0.1:3000/ cypress:open",
-    "cypress:ci": "IN_CYPRESS=true NUXT_ENABLE_REGISTER_TICKET=true NUXT_ENABLE_REGISTER_NAMECARD=true NUXT_ENABLE_SHOW_SPEAKER_INFO=true start-test dev http://127.0.0.1:3000/ cypress:run"
+    "cypress:ci": "IN_CYPRESS=true NUXT_ENABLE_REGISTER_TICKET=true NUXT_ENABLE_REGISTER_NAMECARD=true NUXT_ENABLE_SHOW_SPEAKER_INFO=true start-test dev http://127.0.0.1:3000/ cypress:run",
+    "cypress:debug": "IN_CYPRESS=true NUXT_ENABLE_REGISTER_TICKET=true NUXT_ENABLE_REGISTER_NAMECARD=true NUXT_ENABLE_SHOW_SPEAKER_INFO=true start-test dev http://127.0.0.1:3000/ 'cypress run --project tests --browser chrome --spec tests/cypress/e2e/top.cy.ts'"
   },
   "devDependencies": {
     "@markuplint/vue-parser": "3.10.0",

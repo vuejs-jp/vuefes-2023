@@ -187,6 +187,8 @@ describe('top', () => {
       cy.get('@section').click()
       cy.wait(1000)
 
+      cy.get('@section').debugnode()
+
       cy.contains('メールアドレスを入力してください')
       cy.contains('名前を入力してください')
       cy.contains('問い合わせ内容を入力してください')

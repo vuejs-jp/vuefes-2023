@@ -97,11 +97,11 @@ describe('top', () => {
           // チケット
           cy.contains('a', 'チケットを購入')
           cy.contains('a', '一般チケット')
-          cy.contains('a', '一般＋アフターパーティチケット')
+          cy.contains('a', '一般＋アフターパーティーチケット')
           cy.contains('a', 'ハンズオンチケット')
           cy.contains('a', '個人スポンサーチケット')
           // ネームカード
-          cy.contains('button', 'ネームカードを作成')
+          cy.contains('button', 'ネームカードを確認')
           // 託児サポート
           cy.contains('a', 'サポートを申し込む')
           // ハンズオン

@@ -183,6 +183,7 @@ describe('top', () => {
       cy.get('@input-name').type('a{backspace}', { force: true })
       cy.get('@input-mail').type('b{backspace}', { force: true })
       cy.get('@input-text').type('t{backspace}', { force: true }).blur()
+      cy.wait(1000)
       cy.get('@section').click()
       cy.wait(1000)
 

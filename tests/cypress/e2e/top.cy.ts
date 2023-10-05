@@ -180,14 +180,10 @@ describe('top', () => {
 
       // check validation errors
 
-      cy.get('@input-name').type('a{backspace}', { force: true }).blur()
-      cy.wait(1000)
-      cy.get('@input-mail').type('b{backspace}', { force: true }).blur()
-      cy.wait(1000)
-      cy.get('@input-text').type('t{backspace}', { force: true }).blur()
-      cy.wait(1000)
-      cy.get('@section').click()
-      cy.wait(5000)
+      cy.get('@input-name').type('abc{selectAll}{backspace}', { force: true }).blur()
+      cy.get('@input-mail').type('def{selectAll}{backspace}', { force: true }).blur()
+      cy.get('@input-text').type('ghi{selectAll}{backspace}', { force: true }).blur()
+      cy.wait(3000)
 
       cy.get('@section').debugnode()
 
@@ -198,6 +194,7 @@ describe('top', () => {
 
       // check activated
 
+      cy.wait(1000)
       cy.get('@input-name').type('やまだ', { force: true })
       cy.get('@input-mail').type('mymail@vue.com', { force: true })
       cy.get('@input-text').type('こめんと', { force: true }).blur()

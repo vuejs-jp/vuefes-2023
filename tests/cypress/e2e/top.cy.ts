@@ -184,7 +184,7 @@ describe('top', () => {
       cy.get('@input-mail').type('b{backspace}', { force: true })
       cy.get('@input-text').type('t{backspace}', { force: true }).blur()
       cy.get('@section').click()
-      cy.wait(500)
+      cy.wait(1000)
 
       cy.contains('メールアドレスを入力してください')
       cy.contains('名前を入力してください')
@@ -230,6 +230,7 @@ describe('top', () => {
   describe('menu view', () => {
     it('render', () => {
       loadPage(true)
+      cy.wait(3000)
       cy.get('.hamburger-menu').should('be.visible').click({ force: true })
       cy.wait(1500)
       cy.get('.mobile-menu')

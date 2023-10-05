@@ -181,11 +181,13 @@ describe('top', () => {
       // check validation errors
 
       cy.get('@input-name').type('a{backspace}', { force: true }).blur()
+      cy.wait(1000)
       cy.get('@input-mail').type('b{backspace}', { force: true }).blur()
+      cy.wait(1000)
       cy.get('@input-text').type('t{backspace}', { force: true }).blur()
       cy.wait(1000)
       cy.get('@section').click()
-      cy.wait(3000)
+      cy.wait(5000)
 
       cy.get('@section').debugnode()
 

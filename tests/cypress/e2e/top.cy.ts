@@ -180,19 +180,14 @@ describe('top', () => {
 
       // check validation errors
 
-      cy.get('@input-name').type('a', { force: true })
-      cy.wait(1000)
-      cy.get('@input-name').type('{backspace}', { force: true }).blur()
+      cy.get('@input-name').type('a{backspace}', { force: true })
+      cy.get('@input-mail').type('b{backspace}', { force: true })
+      cy.get('@input-text').type('t{backspace}', { force: true }).blur()
       cy.get('@section').click()
       cy.wait(500)
-      cy.contains('名前を入力してください')
-      cy.get('@input-mail').type('a', { force: true }).type('{backspace}', { force: true }).blur()
-      cy.get('@section').click()
-      cy.wait(500)
+
       cy.contains('メールアドレスを入力してください')
-      cy.get('@input-text').type('t', { force: true }).type('{backspace}', { force: true }).blur()
-      cy.get('@section').click()
-      cy.wait(1000)
+      cy.contains('名前を入力してください')
       cy.contains('問い合わせ内容を入力してください')
       cy.get('@btn-submit').should('have.attr', 'disabled')
 
@@ -235,8 +230,8 @@ describe('top', () => {
   describe('menu view', () => {
     it('render', () => {
       loadPage(true)
-      cy.wait(1500)
       cy.get('.hamburger-menu').should('be.visible').click({ force: true })
+      cy.wait(1500)
       cy.get('.mobile-menu')
         .should('be.visible')
         .within(() => {

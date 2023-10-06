@@ -28,10 +28,10 @@ import { storeUrl } from '~/utils/constants'
           <div class="price">{{ menu.price }}</div>
           <div class="text">{{ $t(`top.${menu.textKey}`) }}</div>
           <div class="supplement">
-            <i18n-t keypath="top.store_item_color" tag="div" class="color">
+            <i18n-t keypath="top.store_item_color" tag="div" class="color" scope="global">
               {{ menu.color }}
             </i18n-t>
-            <i18n-t keypath="top.store_item_size" tag="div" class="size">
+            <i18n-t keypath="top.store_item_size" tag="div" class="size" scope="global">
               {{ menu.size }}
             </i18n-t>
           </div>

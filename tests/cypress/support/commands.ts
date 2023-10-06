@@ -46,3 +46,11 @@ Cypress.Commands.add('checkPageIdle', () => {
     })
   })
 })
+
+Cypress.Commands.add('debuglog', (message: string) => {
+  cy.task('log', message)
+})
+
+Cypress.Commands.add('debugnode', { prevSubject: 'element' }, (subject) => {
+  cy.task('log', subject[0].outerHTML)
+})

@@ -98,7 +98,7 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
             <div class="price">
               <s><strong>無料</strong></s>
             </div>
-            <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des">
+            <i18n-t keypath="top.handson_ticket_explain" tag="p" class="price-des" scope="global">
               <nuxt-link to="/#handson">
                 {{ $t('top.handson') }}
               </nuxt-link>
@@ -126,7 +126,12 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
             <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
               <strong>10,000</strong>
             </i18n-t>
-            <i18n-t keypath="top.personal_sponsor_ticket_explain" tag="p" class="price-des">
+            <i18n-t
+              keypath="top.personal_sponsor_ticket_explain"
+              tag="p"
+              class="price-des"
+              scope="global"
+            >
               <nuxt-link to="/#personal-sponsor">
                 {{ $t('top.personal_sponsor') }}
               </nuxt-link>

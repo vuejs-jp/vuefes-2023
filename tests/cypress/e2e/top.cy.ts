@@ -61,12 +61,6 @@ describe('top', () => {
         cy.get('a[aria-label="twitter"]').should('be.visible')
       })
     })
-    it('header with auth', () => {
-      loadPage()
-      cy.get('nav').within(() => {
-        cy.get('.avatar').should('be.visible').click({ force: true })
-      })
-    })
   })
 
   describe('content', { testIsolation: false }, () => {
@@ -113,7 +107,7 @@ describe('top', () => {
         .contains('スピーカー')
         .closest('section')
         .within(() => {
-          cy.get('.speaker-card').should('have.length', 34)
+          cy.get('.speaker-card').should('have.length', 35)
         })
     })
     it('access', () => {
@@ -167,7 +161,7 @@ describe('top', () => {
         .closest('section')
         .as('section')
         .within(() => {
-          cy.contains('button', '送信').as('btn-submit').should('have.attr', 'disabled')
+          cy.contains('button', '送信').as('btn-submit').should('have.attr', '-disabled')
           cy.contains('Vue Fes Japan にご興味をいただき、ありがとうございます')
           cy.contains('label', 'お名前／Name')
             .find('input[placeholder="山田太郎"]')

@@ -78,18 +78,23 @@ if (sponsorData.length > 1) {
   })
 }
 
+const description =
+  sponsorData[0].name === 'gmo-internet-group'
+    ? `${sponsorData[0].name} のスポンサーLTを掲載しています。`
+    : `${sponsorData[0].name} のスポンサーセッションを掲載しています。`
+
 useHead({
   titleTemplate: (titleChunk) => `${sponsorData[0].name} | ${conferenceTitle}`,
   meta: [
     ...generalOg({
       title: `${sponsorData[0].name} | ${conferenceTitle}`,
-      description: `${sponsorData[0].name} のスポンサーセッションを掲載しています。`,
+      description: description,
       url: `${linkUrl}sponsor-sessions/${sponsorSpeakerData.id}`,
       image: `${linkUrl}og/sponsors/${sponsorSpeakerData.id}.png`,
     }),
     ...twitterOg({
       title: `${sponsorData[0].name} | ${conferenceTitle}`,
-      description: `${sponsorData[0].name} のスポンサーセッションを掲載しています。`,
+      description: description,
       url: `${linkUrl}sponsor-sessions/${sponsorSpeakerData.id}`,
       image: `${linkUrl}og/sponsors/${sponsorSpeakerData.id}.png`,
     }),

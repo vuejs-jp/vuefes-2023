@@ -171,4 +171,24 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     ],
     sponsorId: 'hacomono',
   },
+  {
+    id: 'gmo-internet-group',
+    type: 'domestic',
+    session: {
+      title: '「defineCustomElement」を活用したサービス共通のUIコンポーネントライブラリ',
+      track: 'all',
+      time: '',
+      type: 'lt',
+    },
+    profile: [
+      {
+        id: 'shohei-ogata',
+        image: 'speakers/shohei-ogata.png',
+        title: 'GMOペパボ株式会社\nEC事業部 エンジニア',
+        name: '尾形 将平',
+        githubId: 'piyoppi',
+      },
+    ],
+    sponsorId: 'gmo-internet-group',
+  },
 ]

@@ -17,12 +17,7 @@ describe('top', () => {
     }
     cy.wait(1000)
   }
-  function loadPagePrivacy() {
-    cy.visit('/privacy')
-  }
-  function loadPageCodeOfConduct() {
-    cy.visit('/code-of-conduct')
-  }
+
   describe('header', () => {
     it('header (desktop)', () => {
       loadPage()
@@ -64,7 +59,12 @@ describe('top', () => {
         cy.contains('a', 'Sponsors').should('not.be.visible')
         cy.contains('a', 'Contact').should('not.be.visible')
         cy.get('a[aria-label="twitter"]').should('be.visible')
-        // cy.get('.hamburger-menu').should('be.visible')
+      })
+    })
+    it('header with auth', () => {
+      loadPage()
+      cy.get('nav').within(() => {
+        cy.get('.avatar').should('be.visible').click({ force: true })
       })
     })
   })

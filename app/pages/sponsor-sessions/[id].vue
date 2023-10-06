@@ -79,7 +79,7 @@ if (sponsorData.length > 1) {
 }
 
 const description =
-  sponsorData[0].name === 'gmo-internet-group'
+  sponsorData[0].id === 'gmo-internet-group'
     ? `${sponsorData[0].name} のスポンサーLTを掲載しています。`
     : `${sponsorData[0].name} のスポンサーセッションを掲載しています。`
 

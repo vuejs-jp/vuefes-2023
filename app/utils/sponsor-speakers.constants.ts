@@ -177,7 +177,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     session: {
       title: '「defineCustomElement」を活用したサービス共通のUIコンポーネントライブラリ',
       track: 'all',
-      time: '18:30 - 19:00',
+      time: '',
       type: 'lt',
     },
     profile: [

@@ -51,7 +51,7 @@ css({
       padding: '0',
     },
     '.action': {
-      top: '177px',
+      top: '182px',
     },
   },
 })

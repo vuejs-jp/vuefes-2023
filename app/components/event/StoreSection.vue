@@ -4,6 +4,7 @@ import CommentTitle from '~/components/CommentTitle.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { storeMenu } from '~/utils/store.constants'
 import { storeUrl } from '~/utils/constants'
+import { closedPreOrder } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -48,7 +49,13 @@ import { storeUrl } from '~/utils/constants'
             <MarkDownText path="pre-order" />
           </div>
           <div class="button">
-            <RoundButton :href="storeUrl" target="_blank" rel="noreferrer" class="button">
+            <RoundButton
+              :href="storeUrl"
+              target="_blank"
+              rel="noreferrer"
+              class="button"
+              :disabled="closedPreOrder"
+            >
               {{ $t('words.pre_order') }}
             </RoundButton>
           </div>
@@ -72,7 +79,6 @@ css({
     gap: 'calc({space.8} * 10)',
     justifyContent: 'center',
   },
-
   '.store-title': {
     display: 'grid',
     gap: 'calc({space.8} * 3)',
@@ -164,6 +170,11 @@ css({
     '.store-root': {
       padding: '20px',
       gap: 'calc({space.8} * 0)',
+    },
+    '.store-title': {
+      '::v-deep(h3)': {
+        fontSize: '24px',
+      },
     },
     '.store-card': {
       '--img-size': '329px',

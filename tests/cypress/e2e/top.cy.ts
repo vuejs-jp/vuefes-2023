@@ -195,6 +195,7 @@ describe('top', () => {
       cy.get('@input-name').type('やまだ', { force: true })
       cy.get('@input-mail').type('mymail@vue.com', { force: true })
       cy.get('@input-text').type('こめんと', { force: true }).blur()
+      cy.wait(1000)
       cy.contains('button', '送信').should('have.attr', 'aria-disabled', 'false')
     })
   })

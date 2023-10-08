@@ -134,6 +134,7 @@ css({
       marginBottom: '0',
     },
     '::v-deep(a)': {
+      color: '{color.vue.green}',
       textDecoration: 'underline',
       '&:hover': {
         opacity: 0.4,
@@ -162,6 +163,7 @@ css({
     '.description': {
       fontSize: '16px',
       '::v-deep(a)': {
+        color: '{color.vue.green}',
         textDecoration: 'underline',
         '&:hover': {
           opacity: 0.4,

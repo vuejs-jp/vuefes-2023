@@ -62,6 +62,14 @@ css({
       lineHeight: '1.8',
       marginBottom: '1.5em',
     },
+    '::v-deep(a)': {
+      color: '{color.vue.green}',
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
+    },
     '::v-deep(h2)': {
       fontWeight: 700,
       fontSize: '32px',
@@ -88,7 +96,6 @@ css({
         paddingLeft: '{list.margin.left}',
         margin: 0,
       },
-
     },
     '::v-deep(li),::v-deep(p)': {
       'a': {
@@ -108,12 +115,14 @@ css({
   '.back': {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 'calc({space.8} * 10)'
+    marginTop: 'calc({space.8} * 10)',
+    'a': {
+      textDecoration: 'none',
+    },
   },
   '@mobile': {
     '.privacy-root': {
       '--list-margin-left': '28px',
-
       padding: 'calc({space.8} * 10) calc({space.8} * 3)',
       '::v-deep(.title)': {
         marginBottom: 'calc({space.8} * 6)',
@@ -124,7 +133,6 @@ css({
       '::v-deep(p), ::v-deep(ol), ::v-deep(ul)': {
         fontSize: '16px',
       },
-
     },
   }
 })

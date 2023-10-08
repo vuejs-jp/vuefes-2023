@@ -122,7 +122,12 @@ css({
       fontSize: 'calc(12*{fontSize.base})',
     },
     'a': {
+      color: '{color.vue.green}',
       textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
     },
   },
   '@mobile': {

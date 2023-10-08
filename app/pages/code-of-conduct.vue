@@ -50,9 +50,6 @@ css({
     padding: 'calc({space.8} * 10) 11.53%',
     color: '{color.vue.blue}',
     background: '{color.white}',
-    '::v-deep(a)': {
-      color: '{color.vue.green}',
-    },
     '::v-deep(.title)': {
       marginBottom: 'calc({space.8} * 10)',
     },
@@ -61,6 +58,14 @@ css({
       fontSize: '18px',
       lineHeight: '1.8',
       marginBottom: '1.5em',
+    },
+    '::v-deep(a)': {
+      color: '{color.vue.green}',
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
     },
     '::v-deep(h2)': {
       fontWeight: 700,
@@ -72,7 +77,10 @@ css({
   '.back': {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 'calc({space.8} * 10)'
+    marginTop: 'calc({space.8} * 10)',
+    'a': {
+      textDecoration: 'none',
+    },
   },
   '@mobile': {
     '.coc-root': {

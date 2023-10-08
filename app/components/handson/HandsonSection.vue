@@ -49,8 +49,10 @@ css({
     fontWeight: 500,
     lineHeight: 1.8,
     '::v-deep(a)': {
+      color: '{color.vue.green}',
       textDecoration: 'underline',
       '&:hover': {
+        opacity: 0.4,
         transition: '.2s',
       },
     },

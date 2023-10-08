@@ -119,6 +119,7 @@ css({
         textDecoration: 'underline',
         '&:hover': {
           transition: '.2s',
+          opacity: 0.4,
         },
       },
     },

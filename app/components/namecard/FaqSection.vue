@@ -31,7 +31,15 @@ css({
       lineHeight: '1.6',
       '&:not(:last-child)': {
         marginBottom: 'calc({space.8} * 4)',
-      }
+      },
+    },
+    '::v-deep(a)': {
+      color: '{color.vue.green}',
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
     },
   },
   '@mobile': {

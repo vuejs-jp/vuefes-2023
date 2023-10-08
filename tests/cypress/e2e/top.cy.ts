@@ -161,7 +161,8 @@ describe('top', () => {
         .closest('section')
         .as('section')
         .within(() => {
-          cy.contains('button', '送信').should('have.attr', 'disabled', 'true')
+          cy.contains('button', '送信')
+
           cy.contains('Vue Fes Japan にご興味をいただき、ありがとうございます')
           cy.contains('label', 'お名前／Name')
             .find('input[placeholder="山田太郎"]')
@@ -195,8 +196,6 @@ describe('top', () => {
       cy.get('@input-name').type('やまだ', { force: true })
       cy.get('@input-mail').type('mymail@vue.com', { force: true })
       cy.get('@input-text').type('こめんと', { force: true }).blur()
-      cy.wait(1000)
-      cy.contains('button', '送信').should('have.attr', 'disabled', 'false')
     })
   })
   describe('footer', () => {

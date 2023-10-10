@@ -17,7 +17,7 @@ export const panelers: Paneler[] = [
   },
   {
     image: 'event/panel-discussion/wattanx.png',
-    name: 'wattanx',
+    name: 'wattanx / ワッタン',
     snsLink: 'https://twitter.com/pontaxx',
     company: 'STORES 株式会社',
     job: 'ソフトウェアエンジニア',

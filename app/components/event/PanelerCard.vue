@@ -11,25 +11,26 @@ const urlBasePath = useRuntimeConfig().app.baseURL
 </script>
 
 <template>
-  <component
-    :is="team.snsLink ? 'a' : 'div'"
-    :href="team.snsLink"
-    :target="team.snsLink ? '_blank' : ''"
-    :rel="team.snsLink ? 'noreferrer' : ''"
-    class="team-card"
-  >
-    <img
-      width="172"
-      height="172"
-      :alt="`${team.name}の写真`"
-      :src="`${urlBasePath}${team.image}`"
-      loading="lazy"
-      decoding="async"
-    />
+  <div class="team-card">
+    <component
+      :is="team.snsLink ? 'a' : 'div'"
+      :href="team.snsLink"
+      :target="team.snsLink ? '_blank' : ''"
+      :rel="team.snsLink ? 'noreferrer' : ''"
+    >
+      <img
+        width="172"
+        height="172"
+        :alt="`${team.name}の写真`"
+        :src="`${urlBasePath}${team.image}`"
+        loading="lazy"
+        decoding="async"
+      />
+    </component>
     <p class="team-company">{{ team.company }}</p>
     <p class="team-job">{{ team.job }}</p>
     <p class="team-name">{{ team.name }}</p>
-  </component>
+  </div>
 </template>
 
 <style lang="ts" scoped>

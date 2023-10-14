@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/2023/en/*"
-  to = "/2023/en/200.html"
+  to = "/2023/en/index.html"
   status = 200
 
 [[redirects]]

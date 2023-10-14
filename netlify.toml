@@ -4,6 +4,11 @@
   status = 200
 
 [[redirects]]
+  from = "/en/*"
+  to = "/2023/en/:splat"
+  status = 301
+
+[[redirects]]
   from = "/2023/users/*"
   to = "/2023/200.html"
   status = 200

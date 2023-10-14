@@ -9,7 +9,7 @@
 <br>
 決済方法：
 
-各種クレジットカード、各種交通系電子マネー、iD、QUICPay、Apple Pay、UnionPay、Alipay+、WeChatPay、COIN+、au PAY、d払い、PayPay、楽天ペイ、J-Coin Pay、Smart Code™
+各種クレジットカード、各種交通系電子マネー、iD、QUICPay、Apple Pay、UnionPay、Alipay+、WeChatPay、COIN+、au PAY、d 払い、PayPay、楽天ペイ、J-Coin Pay、Smart Code™
 
 <br>
 ※ グッズ販売における利益は、すべて Vue Fes Japan の運営、または Vue.js 日本ユーザー<br>

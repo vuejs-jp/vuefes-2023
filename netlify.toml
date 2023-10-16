@@ -1,11 +1,11 @@
 [[redirects]]
   from = "/2023/en/*"
-  to = "/2023/en/index.html"
+  to = "/2023/en/:splat"
   status = 200
 
 [[redirects]]
-  from = "/en/*"
-  to = "/2023/en/:splat"
+  from = "/2023/en/*"
+  to = "/2023/:splat"
   status = 301
 
 [[redirects]]

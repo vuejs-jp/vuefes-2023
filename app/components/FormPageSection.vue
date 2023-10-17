@@ -103,7 +103,7 @@ css({
     maxWidth: '768px',
     margin: '0 auto',
     width: '100%',
-    'grid-template-columns': 'minmax(0, 1fr)'
+    'grid-template-columns': 'minmax(0, 1fr)',
   },
   '.subtitle': {
     display: 'grid',
@@ -125,7 +125,7 @@ css({
     },
   },
   '.form-button': {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   '.form': {
     'form': {
@@ -140,8 +140,8 @@ css({
     '.subtitle': {
       '::v-deep(p)': {
         fontSize: '16px',
-      }
-    }
-  }
+      },
+    },
+  },
 })
 </style>

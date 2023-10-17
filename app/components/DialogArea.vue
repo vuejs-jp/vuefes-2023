@@ -37,7 +37,7 @@ css({
     '.root': {
       padding: 'calc({space.8} * 4) calc({space.8} * 3)',
       width: '90%',
-    }
-  }
+    },
+  },
 })
 </style>

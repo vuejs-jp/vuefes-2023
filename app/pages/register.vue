@@ -194,10 +194,10 @@ css({
     maxWidth: '768px',
     margin: '0 auto',
     width: '100%',
-    'grid-template-columns': 'minmax(0, 1fr)'
+    'grid-template-columns': 'minmax(0, 1fr)',
   },
   '.form-button': {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   '.form': {
     'form': {
@@ -210,7 +210,7 @@ css({
     flexWrap: 'wrap',
     padding: '0 16px',
     justifyContent: 'center',
-    gap: '40px'
+    gap: '40px',
   },
 })
 </style>

@@ -56,7 +56,7 @@ css({
     textAlign: 'center',
   },
   '.personal-sponsor-apply': {
-     textAlign: 'center',
+    textAlign: 'center',
   },
   '.personal-sponsor-apply-btn': {
     margin: 'calc({space.8} *  5) 0',
@@ -70,15 +70,15 @@ css({
   },
   '.personal-sponsors-text2': {
     ':deep(a)': {
-        color: '{color.vue.green}',
-        textDecoration: 'underline',
+      color: '{color.vue.green}',
+      textDecoration: 'underline',
     },
   },
   '.personal-sponsor-cap': {
     ':deep(li)': {
       textIndent: '-1em',
       paddingLeft: '1em',
-    }
+    },
   },
   '@mobile': {
     '.personal-sponsor': {

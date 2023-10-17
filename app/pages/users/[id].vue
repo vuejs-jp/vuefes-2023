@@ -179,7 +179,7 @@ css({
     },
   },
   '.btn-update, .btn-save, .btn-calendar': {
-    marginTop: 'calc({space.8} * 2)'
+    marginTop: 'calc({space.8} * 2)',
   },
   '.social': {
     display: 'grid',
@@ -195,7 +195,7 @@ css({
       marginTop: '120px',
     },
     '.btn-update, .btn-save, .btn-calendar': {
-      marginTop: 'calc({space.8} * 0)'
+      marginTop: 'calc({space.8} * 0)',
     },
   },
 })

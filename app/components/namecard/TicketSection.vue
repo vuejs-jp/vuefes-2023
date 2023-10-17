@@ -241,7 +241,7 @@ css({
     '.ticket': {
       '::v-deep(h3)': {
         fontSize: 'calc(28*{fontSize.base})',
-      }
+      },
     },
     '.explain': {
       fontSize: 'calc(16*{fontSize.base})',
@@ -251,7 +251,7 @@ css({
     },
     '.price': {
       textAlign: 'center',
-    }
+    },
   },
 })
 </style>

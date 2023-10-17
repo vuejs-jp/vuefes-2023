@@ -163,7 +163,7 @@ css({
     gap: 'calc({space.8} * 4)',
     ':deep(.speaker-card)': {
       maxWidth: '400px',
-    }
+    },
   },
   '.person-info': {
     '::v-deep(ul)': {
@@ -194,8 +194,8 @@ css({
       display: 'block',
       '& > *': {
         paddingBottom: 'calc({space.8} * 4)',
-      }
-    }
+      },
+    },
   },
   '@mobile': {
     'main': {

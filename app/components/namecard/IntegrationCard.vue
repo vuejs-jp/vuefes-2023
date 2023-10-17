@@ -111,6 +111,6 @@ css({
     '.title': {
       fontSize: 'calc(24*{fontSize.base})',
     },
-  }
+  },
 })
 </style>

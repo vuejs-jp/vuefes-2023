@@ -74,7 +74,7 @@ import { closedSponsor } from '~/utils/status.constants'
 css({
   'section': {
     padding: '120px 40px',
-    background: '#EEEEEE'
+    background: '#EEEEEE',
   },
   '.sponsors-root': {
     display: 'grid',
@@ -91,7 +91,7 @@ css({
       color: '{color.vue.blue}',
       fontWeight: 500,
       fontSize: '18px',
-      lineHeight: '180%'
+      lineHeight: '180%',
     },
   },
   '.deadline, .deadline-extend': {
@@ -113,7 +113,7 @@ css({
     flexWrap: 'wrap',
     padding: '0 16px',
     justifyContent: 'center',
-    gap: '40px'
+    gap: '40px',
   },
   '.twitter-text': {
     fontSize: '18px',
@@ -132,8 +132,8 @@ css({
     },
     '.deadline, .deadline-extend': {
       fontSize: '18px',
-      wordBreak: 'break-all'
-    }
-  }
+      wordBreak: 'break-all',
+    },
+  },
 })
 </style>

@@ -81,7 +81,7 @@ css({
       },
       '::v-deep(p)': {
         fontSize: 'calc(20*{fontSize.base})',
-      }
+      },
     },
   },
 })

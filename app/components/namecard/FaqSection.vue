@@ -50,8 +50,8 @@ css({
       '::v-deep(p)': {
         marginBottom: 'calc({space.8} * 3)',
         fontSize: 'calc(16*{fontSize.base})',
-      }
-    }
-  }
+      },
+    },
+  },
 })
 </style>

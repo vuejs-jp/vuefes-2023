@@ -74,7 +74,7 @@ css({
       },
       '::v-deep(p)': {
         fontSize: 'calc(16*{fontSize.base})',
-      }
+      },
     },
   },
 })

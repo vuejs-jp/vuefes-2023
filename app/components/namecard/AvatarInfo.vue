@@ -45,7 +45,8 @@ css({
     gap: '8px',
     '::v-deep(h3)': {
       color: '{color.white}',
-      fontSize: (props) => props.useShare ? 'calc(48*{fontSize.base})' : 'calc(22*{fontSize.base})',
+      fontSize: (props) =>
+        props.useShare ? 'calc(48*{fontSize.base})' : 'calc(22*{fontSize.base})',
       fontWeight: 900,
     },
     '::v-deep(img)': {
@@ -62,7 +63,7 @@ css({
   '.role': {
     padding: 'calc({space.8} * 1) calc({space.8} * 3)',
     borderRadius: 'calc({space.8} * 6.25)',
-    fontSize: (props) => props.useShare ? 'calc(36*{fontSize.base})' : 'calc(24*{fontSize.base})',
+    fontSize: (props) => (props.useShare ? 'calc(36*{fontSize.base})' : 'calc(24*{fontSize.base})'),
     fontWeight: 700,
     textTransform: 'uppercase',
   },

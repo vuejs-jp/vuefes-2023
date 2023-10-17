@@ -27,7 +27,7 @@ const props = defineProps({
 <style lang="ts" scoped>
 css({
   '.root': {
-    padding: '0 calc({space.8} * 3)'
+    padding: '0 calc({space.8} * 3)',
   },
   '.root-body': {
     display: 'flex',
@@ -36,8 +36,9 @@ css({
     padding: 'calc({space.8} * 3)',
     maxWidth: '760px',
     background: '{color.white}',
-    color: (props) => !props.hasError  ? '{color.vue.green}' : '{color.sangosyo}',
-    border: (props) => !props.hasError  ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
+    color: (props) => (!props.hasError ? '{color.vue.green}' : '{color.sangosyo}'),
+    border: (props) =>
+      !props.hasError ? '4px solid {color.vue.green}' : '4px solid {color.sangosyo}',
     borderRadius: '8px',
   },
   '.title': {

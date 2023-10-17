@@ -98,13 +98,13 @@ css({
   },
   '.ticket-img': {
     display: 'block',
-    margin: '0 auto'
+    margin: '0 auto',
   },
   '@mobile': {
     '.namecard': {
       '::v-deep(h3)': {
         fontSize: 'calc(28*{fontSize.base})',
-      }
+      },
     },
     '.explain': {
       fontSize: 'calc(16*{fontSize.base})',

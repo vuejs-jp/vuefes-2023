@@ -32,7 +32,7 @@ import { closedVolunteer } from '~/utils/status.constants'
 css({
   'section': {
     padding: '120px 20px 120px',
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
   '.ticket-root': {
     display: 'grid',
@@ -45,12 +45,12 @@ css({
     'grid-template-columns': 'minmax(0, 1fr)',
   },
   '.arrow': {
-    margin: '0 auto'
+    margin: '0 auto',
   },
   '@mobile': {
     'section': {
       padding: 'calc({space.8} * 6) 20px calc({space.8} * 6)',
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
     },
   },
 })

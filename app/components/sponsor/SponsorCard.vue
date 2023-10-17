@@ -70,7 +70,7 @@ css({
     '&.options': {
       width: '140px',
       height: '77px',
-    }
+    },
   },
   '@tablet': {
     '.sponsor-card': {
@@ -99,7 +99,7 @@ css({
       '&.options': {
         width: '176px',
         height: '99px',
-      }
+      },
     },
   },
   '@mobile': {
@@ -128,6 +128,6 @@ css({
         aspectRatio: '216 / 121',
       },
     },
-  }
+  },
 })
 </style>

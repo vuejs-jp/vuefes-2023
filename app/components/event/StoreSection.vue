@@ -99,7 +99,7 @@ css({
       lineHeight: '1.8',
       textAlign: 'left',
       marginBottom: '2em',
-    }
+    },
   },
 
   '.store-menu': {
@@ -151,11 +151,11 @@ css({
     gap: 'calc({space.8} * 1)',
     '::v-deep(p)': {
       textAlign: 'left',
-    }
+    },
   },
   '.button': {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   '@tablet': {
     '.store-card': {
@@ -183,11 +183,11 @@ css({
         display: 'block',
         maxWidth: '80%',
         margin: '0 auto',
-      }
+      },
     },
     '.text': {
       width: 'auto',
     },
   },
-});
+})
 </style>

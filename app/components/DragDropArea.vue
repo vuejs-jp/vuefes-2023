@@ -75,8 +75,8 @@ css({
     color: '{color.vue.blue}',
     '&.-isDragEnter': {
       border: 'dotted calc({space.8} * 0.5) {color.vue.blue}',
-      color: '{color.vue.blue}'
-    }
+      color: '{color.vue.blue}',
+    },
   },
   '.uploadarea input': {
     display: 'none',

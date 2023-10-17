@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['vuejs-accessibility', '@typescript-eslint'],
   root: true,
   env: { node: true, es6: true },
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },

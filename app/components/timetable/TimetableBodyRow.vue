@@ -120,7 +120,7 @@ css({
         '&:last-child': {
           marginBottom: '0',
         },
-      }
+      },
     },
     '&.track-a': {
       borderTop: '2px solid {color.timetable.trackA}',

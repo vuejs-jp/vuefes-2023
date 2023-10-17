@@ -90,7 +90,7 @@ css({
     '.subtitle': {
       '::v-deep(p)': {
         fontSize: '16px',
-      }
+      },
     },
     '.teams': {
       gap: '4vw',

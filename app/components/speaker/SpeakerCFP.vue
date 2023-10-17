@@ -36,66 +36,66 @@ import { twitterDomainUrl } from '~/utils/constants'
 
 <style lang="ts" scoped>
 css({
-    '.speaker-cfp': {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '2.5em',
-    },
-    '.speaker-cfp-description': {
-        '::v-deep(p)': {
-            color: '{color.vue.blue}',
-            fontWeight: 500,
-            fontSize: '18px',
-            lineHeight: '1.8',
+  '.speaker-cfp': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2.5em',
+  },
+  '.speaker-cfp-description': {
+    '::v-deep(p)': {
+      color: '{color.vue.blue}',
+      fontWeight: 500,
+      fontSize: '18px',
+      lineHeight: '1.8',
 
-            'a': {
-                color: '{color.vue.green}',
-                textDecoration: 'underline',
-                '&:hover': {
-                    transition: '.2s',
-                },
-            },
+      'a': {
+        color: '{color.vue.green}',
+        textDecoration: 'underline',
+        '&:hover': {
+          transition: '.2s',
         },
-        '::v-deep(p + p)': {
-          marginTop: '2em',
-        }
+      },
     },
-    '.speaker-cfp-schedule': {
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        gap: '1.5em',
-        textAlign: 'center',
-        'h3': {
-            color: '{color.vue.blue}',
-            fontWeight: 700,
-            fontSize: '32px',
-        },
-        '.deadline': {
-            color: '{color.vue.blue}',
-            fontSize: '24px',
-
-            'em': {
-                fontStyle: 'normal',
-                fontWeight: 700,
-            }
-        },
-        '.apply-button': {
-            margin: '0',
-        },
-        '.twitter-text': {
-            fontSize: '18px',
-            color: '{color.vue.blue}',
-            margin: '0 auto',
-        },
-        '.twitter-link': {
-            color: '{color.vue.green}',
-            textDecoration: 'underline',
-
-            '&:hover': {
-                transition: '.2s',
-            },
-        },
+    '::v-deep(p + p)': {
+      marginTop: '2em',
     },
+  },
+  '.speaker-cfp-schedule': {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    gap: '1.5em',
+    textAlign: 'center',
+    'h3': {
+      color: '{color.vue.blue}',
+      fontWeight: 700,
+      fontSize: '32px',
+    },
+    '.deadline': {
+      color: '{color.vue.blue}',
+      fontSize: '24px',
+
+      'em': {
+        fontStyle: 'normal',
+        fontWeight: 700,
+      },
+    },
+    '.apply-button': {
+      margin: '0',
+    },
+    '.twitter-text': {
+      fontSize: '18px',
+      color: '{color.vue.blue}',
+      margin: '0 auto',
+    },
+    '.twitter-link': {
+      color: '{color.vue.green}',
+      textDecoration: 'underline',
+
+      '&:hover': {
+        transition: '.2s',
+      },
+    },
+  },
 })
 </style>

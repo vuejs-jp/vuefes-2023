@@ -178,7 +178,7 @@ css({
     display: 'grid',
     placeItems: 'center',
     gap: '40px',
-    padding: '0 calc({space.8} * 3)'
+    padding: '0 calc({space.8} * 3)',
   },
   'h2': {
     color: '{color.vue.blue}',
@@ -214,10 +214,10 @@ css({
     maxWidth: '768px',
     margin: '0 auto',
     width: '100%',
-    'grid-template-columns': 'minmax(0, 1fr)'
+    'grid-template-columns': 'minmax(0, 1fr)',
   },
   '.form-button': {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   '.form': {
     'form': {
@@ -230,7 +230,7 @@ css({
     flexWrap: 'wrap',
     padding: '0 16px',
     justifyContent: 'center',
-    gap: '40px'
+    gap: '40px',
   },
   '@mobile': {
     'section': {

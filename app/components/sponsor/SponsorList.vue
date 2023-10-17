@@ -215,8 +215,8 @@ css({
       textAlign: 'center',
       '& > div': {
         margin: '0 auto',
-      }
-    }
+      },
+    },
   },
   '.platinum-sponsors': {
     gap: '24px 24px',
@@ -266,7 +266,7 @@ css({
       gap: '32px 18px',
     },
     '.options-sponsors': {
-      gap: '32px 18px'
+      gap: '32px 18px',
     },
   },
   '@mobile': {
@@ -288,6 +288,6 @@ css({
     '.options-sponsors': {
       gap: '20px',
     },
-  }
+  },
 })
 </style>

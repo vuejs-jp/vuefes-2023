@@ -30,7 +30,7 @@ css({
     fontSize: 'calc(24*{fontSize.base})',
     fontWeight: 800,
     lineHeight: 1,
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
   },
 })
 </style>

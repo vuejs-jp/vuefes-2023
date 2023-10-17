@@ -78,6 +78,6 @@ css({
       marginTop: '0px',
       fontSize: '16px',
     },
-  }
+  },
 })
 </style>

@@ -112,7 +112,7 @@ css({
     },
     '.merit-id': {
       fontSize: 'calc(14*{fontSize.base})',
-     },
+    },
     '.polygon': {
       '::v-deep(svg)': {
         width: '48px',
@@ -127,12 +127,12 @@ css({
     '.merit-item': {
       '::v-deep(h4)': {
         fontSize: 'calc(18*{fontSize.base})',
-        lineHeight: '1.3'
+        lineHeight: '1.3',
       },
       '::v-deep(p)': {
         fontSize: 'calc(14*{fontSize.base})',
         lineHeight: '1.5',
-        marginTop: 'calc({space.8} * 1)'
+        marginTop: 'calc({space.8} * 1)',
       },
     },
   },

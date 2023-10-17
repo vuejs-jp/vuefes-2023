@@ -170,7 +170,7 @@ css({
           transition: '.2s',
         },
       },
-    }
+    },
   },
   '.event-title': {
     display: 'grid',
@@ -204,7 +204,7 @@ css({
       marginTop: 'calc({space.8} * 1)',
       '::v-deep(h3)': {
         fontSize: '24px',
-      }
+      },
     },
     '.explain': {
       maxWidth: '690px',
@@ -217,7 +217,7 @@ css({
       },
       '.description': {
         marginTop: 'calc({space.8} * 1)',
-      }
+      },
     },
   },
   '.teams': {
@@ -233,5 +233,5 @@ css({
       gap: '4vw',
     },
   },
-});
+})
 </style>

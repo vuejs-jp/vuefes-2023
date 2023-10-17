@@ -47,7 +47,7 @@ css({
     gap: 'calc({space.8} * 4)',
   },
   '@mobile': {
-    border: 'solid 1px red'
-  }
+    border: 'solid 1px red',
+  },
 })
 </style>

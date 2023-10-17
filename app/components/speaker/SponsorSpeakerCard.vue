@@ -101,7 +101,7 @@ css({
     },
     '.flip-horizontal': {
       transform: 'scale(-1,1)',
-    }
+    },
   },
   '@mobile': {
     '.speaker-card': {

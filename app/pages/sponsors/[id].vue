@@ -205,12 +205,12 @@ css({
     height: 'auto',
     aspectRatio: '690 / 388',
     boxShadow: '0px 4px 4px 0px #00000040',
-    borderRadius: 'calc({space.8} * 1)'
+    borderRadius: 'calc({space.8} * 1)',
   },
   '.detailhead-img img': {
     maxWidth: '60%',
     maxHeight: '60%',
-    objectFit: 'contain'
+    objectFit: 'contain',
   },
   '.detailhead-sponsorname': {
     display: 'inline-block',
@@ -248,7 +248,7 @@ css({
   '@tablet': {
     'main': {
       '--head-img-width': '368px',
-    }
+    },
   },
   '@mobile': {
     'main': {

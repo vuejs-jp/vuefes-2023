@@ -134,6 +134,6 @@ css({
         fontSize: '16px',
       },
     },
-  }
+  },
 })
 </style>

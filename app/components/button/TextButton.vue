@@ -94,7 +94,7 @@ css({
     gap: 'calc({space.8} * 1)',
     fontSize: 'calc(16*{fontSize.base})',
     cursor: 'pointer',
-    textDecoration: (props) => props.underline ? 'underline' : 'none',
+    textDecoration: (props) => (props.underline ? 'underline' : 'none'),
     color: '{color.white}',
     '&:hover': {
       color: '{color.vue.green}',

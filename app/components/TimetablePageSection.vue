@@ -103,7 +103,7 @@ onMounted(() => {
 css({
   'section': {
     padding: '120px 20px 120px',
-    backgroundColor: '#eee'
+    backgroundColor: '#eee',
   },
   '.timetable-root': {
     display: 'flex',

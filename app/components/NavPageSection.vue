@@ -124,7 +124,7 @@ css({
       },
     },
   },
-  '.hamburger-menu':{
+  '.hamburger-menu': {
     display: 'none',
   },
   '.sr-only': {
@@ -136,12 +136,12 @@ css({
     overflow: 'hidden',
   },
   '@tablet': {
-     '.nav-root': {
+    '.nav-root': {
       padding: '16px 24px',
     },
   },
   '@mobile': {
-    '.twitter':{
+    '.twitter': {
       display: 'block',
     },
     '.links': {
@@ -152,9 +152,9 @@ css({
         padding: 0,
       },
     },
-    '.hamburger-menu':{
+    '.hamburger-menu': {
       display: 'block',
     },
-  }
+  },
 })
 </style>

@@ -27,17 +27,17 @@ css({
   '.user-info': {
     display: 'flex',
     alignItems: 'center',
-    fontSize: '24px'
+    fontSize: '24px',
   },
   '.user-icon': {
     width: '80px',
     height: '80px',
     borderRadius: '50%',
-    marginRight: '20px'
+    marginRight: '20px',
   },
   '.user-debug': {
     color: '#ccc',
-    marginTop: '16px'
-  }
+    marginTop: '16px',
+  },
 })
 </style>

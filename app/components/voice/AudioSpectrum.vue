@@ -68,7 +68,6 @@ css({
     bottom: 0,
     left: 0,
     width: '100%',
-
   },
   '.bar': {
     display: 'block',
@@ -76,7 +75,7 @@ css({
     height: '0px',
     width: '5px',
     mixBlendMode: 'multiply', // for Safari
-    flex: '0 0 auto'
+    flex: '0 0 auto',
   },
   '.bar p': {
     width: '5px',
@@ -97,11 +96,9 @@ css({
     },
     '70%': {
       height: '80%',
-
     },
     '90%': {
       height: '{height.peak2}',
-
     },
     '100%': {
       height: '100%',
@@ -120,6 +117,6 @@ css({
     '100%': {
       height: '0%',
     },
-  }
+  },
 })
 </style>

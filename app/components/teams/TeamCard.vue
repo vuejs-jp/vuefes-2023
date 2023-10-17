@@ -40,12 +40,12 @@ css({
     },
   },
   '.team-name': {
-      display: 'block',
-      color: '{color.vue.blue}',
-      textAlign: 'center',
-      fontSize: '14px',
-      lineHeight: '1.3',
-      marginTop: '0.5em',
+    display: 'block',
+    color: '{color.vue.blue}',
+    textAlign: 'center',
+    fontSize: '14px',
+    lineHeight: '1.3',
+    marginTop: '0.5em',
   },
   '@tablet': {
     '.team-card': {

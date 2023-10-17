@@ -211,7 +211,7 @@ css({
     gap: 'calc({space.8} * 4)',
     paddingBottom: 'calc({space.8} * 3)',
     ':deep(.speaker-card)': {
-      maxWidth: '400px'
+      maxWidth: '400px',
     },
     '::v-deep(img)': {
       width: '308px',

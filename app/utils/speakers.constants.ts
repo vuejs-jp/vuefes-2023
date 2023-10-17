@@ -357,7 +357,7 @@ export const speakers: Speaker[] = [
     session: {
       title: 'SOLID 原則に基づくSFC 実装',
       track: 'medpeer',
-      time: '15:45 - 16:05',
+      time: '15:45 - 16:15',
       type: 'lt',
     },
     profile: {
@@ -375,7 +375,7 @@ export const speakers: Speaker[] = [
     session: {
       title: 'Composition API時代のPub/Subパターンでの状態管理',
       track: 'm3',
-      time: '15:45 - 16:05',
+      time: '15:45 - 16:15',
       type: 'lt',
     },
     profile: {

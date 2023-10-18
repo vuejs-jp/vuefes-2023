@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { useSession } from '~/composables/useSession'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import { Track } from '~/types/timetable'
 
 const props = defineProps<{
   tracks: Track[]
 }>()
 
+const { locale } = useLocaleCurrent()
 const { showSpeakerInfo } = useSession()
 
 // tdのclassを設定する
@@ -39,8 +41,8 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         :to="
           showSpeakerInfo && session.id
             ? session.sponsorSession
-              ? `/sponsor-sessions/${session.id}`
-              : `/sessions/${session.id}`
+              ? `${locale === 'ja' ? '/' : `/${locale}/`}sponsor-sessions/${session.id}`
+              : `${locale === 'ja' ? '/' : `/${locale}/`}sessions/${session.id}`
             : ''
         "
         class="title"

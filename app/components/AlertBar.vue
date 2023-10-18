@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
+
 const props = defineProps({
   userId: {
     type: String,
@@ -6,7 +8,11 @@ const props = defineProps({
   },
 })
 
-const nameCardUrl = computed(() => `/users/${props.userId}`)
+const { locale } = useLocaleCurrent()
+
+const nameCardUrl = computed(
+  () => `${locale.value === 'ja' ? '/' : `/${locale.value}/`}users/${props.userId}`,
+)
 </script>
 
 <template>

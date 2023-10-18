@@ -7,7 +7,9 @@ import { useNamecard } from '~/composables/useNamecard'
 import { useUserStore } from '~/composables/useUserStore'
 import useAuth from '~/composables/useAuth'
 import { useDialog } from '~/composables/useDialog'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 
+const { locale } = useLocaleCurrent()
 const { canRegister, closedRegister } = useNamecard()
 const { signedUser } = useUserStore()
 const { hasAuth } = useAuth()
@@ -42,7 +44,12 @@ const mdPath = canRegister ? (closedRegister ? 'close-namecard' : 'namecard') : 
         <RoundButton
           type="submit"
           :disabled="!canRegister"
-          @click="() => (!hasAuth ? handle(true) : navigateTo(`/users/${signedUser.user_id}`))"
+          @click="
+            () =>
+              !hasAuth
+                ? handle(true)
+                : navigateTo(`${locale === 'ja' ? '/' : `/${locale}/`}users/${signedUser.user_id}`)
+          "
         >
           {{ closedRegister ? $t('words.check_created_namecard') : $t('words.create_namecard') }}
         </RoundButton>

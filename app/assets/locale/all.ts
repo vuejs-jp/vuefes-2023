@@ -24,6 +24,7 @@ export default {
       apply_personal_sponsor: 'チケットを購入',
       personal_sponsor: '個人スポンサー',
       pre_order: '事前注文する',
+      save_image: '画像を保存',
       add_to_calendar: 'カレンダーに追加',
       re_edit: '再編集',
       namecard: 'ネームカード',
@@ -139,6 +140,15 @@ export default {
       personal_sponsor_ticket: '個人スポンサーチケット',
       personal_sponsor_ticket_explain:
         '※ 当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。\n※ 詳しくは {0} についてをご覧ください。',
+      announce_your_participate: 'ネームカードが完成したらSNSで参加表明しましょう！',
+      succeed_register: 'ネームカードの情報登録が完了しました！',
+      succeed_register_detail:
+        'あなたのネームカードは、当日受付にてお渡しいたします。開催を楽しみにお待ちください 😍',
+      failed_register: 'チケット購入状況との照合に失敗しました。',
+      failed_register_detail:
+        'ネームカードを新しく作成した場合、チケット購入状況との照合に失敗することがあります。追って運営がチケット情報との紐付けを進めておりますため、1日ほど間をおいて再度照合をお試しください。正しい情報を入力しているにも関わらず、何度もこのエラーが表示される場合は、チケット購入時の注文番号とお名前を添えて、お問い合わせフォームよりお問い合わせください。',
+      nouser: 'ユーザーが見つかりませんでした。',
+      nouser_detail: 'このURLにひもづくユーザーが見つかりませんでした。',
       /**
        * volunteer section
        */
@@ -245,6 +255,10 @@ export default {
       apply_personal_sponsor: 'Apply Personal Sponsor',
       personal_sponsor: 'Personal Sponsor',
       pre_order: 'Pre-Order',
+      save_image: 'Save Image',
+      add_to_calendar: 'Add to Calendar',
+      re_edit: 'Re-Edit',
+      namecard: 'Name Card',
     },
     category: {
       platinum: 'Platinum',
@@ -359,6 +373,16 @@ export default {
       personal_sponsor_ticket: 'Personal Sponsor Ticket',
       personal_sponsor_ticket_explain:
         '* Purchase of a General or General with After Party ticket is required for those attending on the day of the event. \n* For more information, please see {0}.',
+      announce_your_participate:
+        'Once you have completed your name card, announce your participation on social networking sites!',
+      succeed_register: 'Name card information registration has been completed!',
+      succeed_register_detail:
+        'Your name card will be handed out at the registration desk on the day of the event. Please look forward to the event 😍',
+      failed_register: 'Failed to match ticket purchase status.',
+      failed_register_detail:
+        'If you have created a new name card, it may fail to be matched with your ticket purchase status. Please wait a day or so and try again. If this error message appears again and again even though you have entered the correct information, please contact us using the Contact Us form with the order number and name of the person who purchased the ticket.',
+      nouser: 'User not found.',
+      nouser_detail: 'No user found for this URL.',
       /**
        * volunteer section
        */

@@ -10,7 +10,9 @@ import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
 import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
 import { useSponsor } from '~/composables/useSponsor'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 
+const { locale } = useLocaleCurrent()
 const urlBasePath = useRuntimeConfig().app.baseURL
 const emptySponsor: Sponsor = {
   id: '',
@@ -149,8 +151,7 @@ useHead({
       </div>
     </section>
     <div class="back">
-      <!-- トップにもどる -->
-      <RoundButton to="/" outline>
+      <RoundButton :to="locale === 'ja' ? '/' : `/${locale}/`" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
     </div>

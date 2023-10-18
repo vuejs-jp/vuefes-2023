@@ -13,17 +13,19 @@ import { useUserStore } from '~/composables/useUserStore'
 import { useUser } from '~/composables/useUser'
 import { useSupabase } from '~/composables/useSupabase'
 import { useFormError } from '~/composables/useFormError'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import { isProd } from '~/utils/environment.constants'
 
 definePageMeta({
   middleware: ['error'],
 })
 
+const { locale } = useLocaleCurrent()
 const router = useRouter()
 const route = useRoute()
 const userId = route.params.id as string
 const { hasAuth, signOut, onAuthChanged } = useAuth()
-const userPagePath = `/users/${userId}`
+const userPagePath = `${locale.value === 'ja' ? '/' : `/${locale.value}/`}users/${userId}`
 
 onAuthChanged((evt: AuthChangeEvent) => {
   if (evt === 'INITIAL_SESSION') {

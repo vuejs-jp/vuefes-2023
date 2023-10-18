@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useSession } from '~/composables/useSession'
 import { Session } from '~/types/timetable'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
+
+const { locale } = useLocaleCurrent()
 
 type Props = {
   track?: string
@@ -66,8 +69,8 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         :to="
           showSpeakerInfo && session.id
             ? sponsorSession
-              ? `/sponsor-sessions/${session.id}`
-              : `/sessions/${session.id}`
+              ? `${locale === 'ja' ? '/' : `/${locale}/`}sponsor-sessions/${session.id}`
+              : `${locale === 'ja' ? '/' : `/${locale}/`}sessions/${session.id}`
             : ''
         "
         class="title"

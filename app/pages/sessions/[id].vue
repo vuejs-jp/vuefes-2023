@@ -4,10 +4,12 @@ import SpeakerCard from '~/components/speaker/SpeakerCard.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 import { useSession } from '~/composables/useSession'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { speakers } from '~/utils/speakers.constants'
 
+const { locale } = useLocaleCurrent()
 const { showSpeakerInfo, getTrackColor } = useSession()
 
 if (!showSpeakerInfo) {
@@ -89,7 +91,7 @@ useHead({
       </div>
     </section>
     <div class="back">
-      <RoundButton to="/" outline>
+      <RoundButton :to="locale === 'ja' ? '/' : `/${locale}/`" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
     </div>

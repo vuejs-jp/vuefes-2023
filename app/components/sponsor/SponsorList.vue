@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import SponsorCategoryTitle from './SponsorCategoryTitle.vue'
 import SponsorCard from './SponsorCard.vue'
 import * as sponsors from '~/utils/sponsor.constants'
+
+const { locale } = useLocaleCurrent()
 </script>
 
 <template>
@@ -13,7 +16,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="platinumSponsor in sponsors.platinumSponsors"
             :key="platinumSponsor.name"
-            :to="`/sponsors/${platinumSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${platinumSponsor.id}`"
           >
             <SponsorCard :sponsor="platinumSponsor" category="platinum" />
           </NuxtLink>
@@ -25,7 +28,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="goldSponsor in sponsors.goldSponsors"
             :key="goldSponsor.name"
-            :to="`/sponsors/${goldSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${goldSponsor.id}`"
           >
             <SponsorCard :sponsor="goldSponsor" category="gold" />
           </NuxtLink>
@@ -37,7 +40,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="silverSponsor in sponsors.silverSponsors"
             :key="silverSponsor.name"
-            :to="`/sponsors/${silverSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${silverSponsor.id}`"
           >
             <SponsorCard :sponsor="silverSponsor" category="silver" />
           </NuxtLink>
@@ -49,7 +52,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="bronzeSponsor in sponsors.bronzeSponsors"
             :key="bronzeSponsor.name"
-            :to="`/sponsors/${bronzeSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${bronzeSponsor.id}`"
           >
             <SponsorCard :sponsor="bronzeSponsor" category="bronze" />
           </NuxtLink>
@@ -63,7 +66,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="namingRightSponsor in sponsors.namingRightSponsors"
             :key="namingRightSponsor.name"
-            :to="`/sponsors/${namingRightSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${namingRightSponsor.id}`"
           >
             <SponsorCard :sponsor="namingRightSponsor" use-column-layout category="options" />
           </NuxtLink>
@@ -75,7 +78,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="specialLunchSponsor in sponsors.specialLunchSponsors"
             :key="specialLunchSponsor.name"
-            :to="`/sponsors/${specialLunchSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${specialLunchSponsor.id}`"
           >
             <SponsorCard :sponsor="specialLunchSponsor" use-column-layout category="options" />
           </NuxtLink>
@@ -89,7 +92,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="lunchSponsor in sponsors.lunchSponsors"
             :key="lunchSponsor.name"
-            :to="`/sponsors/${lunchSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${lunchSponsor.id}`"
           >
             <SponsorCard :sponsor="lunchSponsor" category="options" />
           </NuxtLink>
@@ -101,7 +104,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="afterPartySponsor in sponsors.afterPartySponsors"
             :key="afterPartySponsor.name"
-            :to="`/sponsors/${afterPartySponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${afterPartySponsor.id}`"
           >
             <SponsorCard :sponsor="afterPartySponsor" category="options" />
           </NuxtLink>
@@ -113,7 +116,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="namecardSponsor in sponsors.namecardSponsors"
             :key="namecardSponsor.name"
-            :to="`/sponsors/${namecardSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${namecardSponsor.id}`"
           >
             <SponsorCard :sponsor="namecardSponsor" category="options" />
           </NuxtLink>
@@ -125,7 +128,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="refreshmentSponsor in sponsors.refreshmentSponsors"
             :key="refreshmentSponsor.name"
-            :to="`/sponsors/${refreshmentSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${refreshmentSponsor.id}`"
           >
             <SponsorCard :sponsor="refreshmentSponsor" category="options" />
           </NuxtLink>
@@ -137,7 +140,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="interpretationSponsor in sponsors.interpretationSponsors"
             :key="interpretationSponsor.name"
-            :to="`/sponsors/${interpretationSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${interpretationSponsor.id}`"
           >
             <SponsorCard :sponsor="interpretationSponsor" category="options" />
           </NuxtLink>
@@ -149,7 +152,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="handsonSponsor in sponsors.handsonSponsors"
             :key="handsonSponsor.name"
-            :to="`/sponsors/${handsonSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${handsonSponsor.id}`"
           >
             <SponsorCard :sponsor="handsonSponsor" category="options" />
           </NuxtLink>
@@ -163,7 +166,7 @@ import * as sponsors from '~/utils/sponsor.constants'
           <NuxtLink
             v-for="mediaSponsor in sponsors.mediaSponsors"
             :key="mediaSponsor.name"
-            :to="`/sponsors/${mediaSponsor.id}`"
+            :to="`${locale === 'ja' ? '/' : `/${locale}/`}sponsors/${mediaSponsor.id}`"
           >
             <SponsorCard :sponsor="mediaSponsor" category="options" />
           </NuxtLink>

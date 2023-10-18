@@ -10,6 +10,7 @@ import TextButton from '~/components/button/TextButton.vue'
 import useAuth from '~/composables/useAuth'
 import { useNamecardStatus } from '~/composables/useNamecardStatus'
 import { useUser } from '~/composables/useUser'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import { calendarUrl, twitterDomainUrl } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
@@ -17,6 +18,7 @@ definePageMeta({
   middleware: ['error'],
 })
 
+const { locale } = useLocaleCurrent()
 const route = useRoute()
 const userId = route.params.id as string
 const { signOut, hasAuth } = useAuth()
@@ -38,7 +40,6 @@ const pageTitle = `${eventUser?.display_name || '参加者'} | ${conferenceTitle
 let description = eventUser
   ? `${eventUser?.display_name || '参加者'} の参加者情報を掲載しています。`
   : 'チケット購入状況との照合に失敗しました'
-if (errorMsg) description = statusTitle
 const url = `${linkUrl}users/${userId}`
 
 useHead({
@@ -79,8 +80,8 @@ useHead({
   <main>
     <section>
       <StatusCard
-        :title="statusTitle"
-        :detail="statusDetail"
+        :title="$t(statusTitle)"
+        :detail="$t(statusDetail)"
         :has-error="cardStatus !== 'registered'"
       />
       <!-- ネームカード -->
@@ -105,7 +106,7 @@ useHead({
         download
         :download-file-name="userId"
       >
-        画像を保存
+        {{ $t('words.save_image') }}
       </RoundButton>
       <!-- カレンダーに追加 -->
       <RoundButton
@@ -117,12 +118,11 @@ useHead({
       >
         {{ $t('words.add_to_calendar') }}
       </RoundButton>
-      <!-- トップに戻る -->
-      <RoundButton to="/" outline>
+      <RoundButton :to="locale === 'ja' ? '/' : `/${locale}/`" outline>
         {{ $t('words.back_top') }}
       </RoundButton>
       <div v-if="eventUser?.activated_at" class="social">
-        <CommentTitle color="vue.green" title="ネームカードが完成したらSNSで参加表明しましょう！" />
+        <CommentTitle color="vue.green" :title="$t('top.announce_your_participate')" />
         <div class="social-item">
           <a
             :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(

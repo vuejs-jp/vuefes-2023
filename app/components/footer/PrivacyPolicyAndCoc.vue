@@ -1,26 +1,26 @@
 <script setup lang="ts">
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import TextButton from '~/components/button/TextButton.vue'
 
 interface PrivacyPolicyAndCocEmit {
   (e: 'on-click'): void
 }
 const emit = defineEmits<PrivacyPolicyAndCocEmit>()
-const urlBasePath = useRuntimeConfig().app.baseURL
 
-const { locale } = useI18n({ useScope: 'global' })
+const { locale } = useLocaleCurrent()
 </script>
 
 <template>
   <div class="doc-root">
     <TextButton
-      :to="`${urlBasePath}${locale === 'ja' ? '' : `${locale}/`}privacy`"
+      :to="`${locale === 'ja' ? '/' : `/${locale}/`}privacy`"
       underline
       @click.stop="$emit('on-click')"
     >
       {{ $t('words.privacypolicy') }}
     </TextButton>
     <TextButton
-      :to="`${urlBasePath}${locale === 'ja' ? '' : `${locale}/`}code-of-conduct`"
+      :to="`${locale === 'ja' ? '/' : `/${locale}/`}code-of-conduct`"
       underline
       @click.stop="$emit('on-click')"
     >

@@ -3,8 +3,11 @@ import GithubLogo from '~/assets/logo/github_logo.svg'
 import TwitterLogo from '~/assets/logo/twitter_logo.svg'
 import MastodonLogo from '~/assets/logo/mastodon_logo.svg'
 import { useSession } from '~/composables/useSession'
+import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import { SpeakerProfile } from '~/types/app'
 import { twitterDomainUrl } from '~/utils/constants'
+
+const { locale } = useLocaleCurrent()
 
 const urlBasePath = useRuntimeConfig().app.baseURL
 const { showSpeakerInfo } = useSession()
@@ -27,7 +30,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
   <div class="speaker-card">
     <component
       :is="showSpeakerInfo ? _nuxtLink : 'div'"
-      :to="showSpeakerInfo ? `/sponsor-sessions/${id}` : ''"
+      :to="showSpeakerInfo ? `${locale === 'ja' ? '/' : `/${locale}/`}sponsor-sessions/${id}` : ''"
     >
       <img
         width="208"

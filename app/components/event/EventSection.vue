@@ -48,7 +48,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           width="690"
           height="388"
           :alt="`${$t('top.refreshment')} supported by giftee, HENNGE, TAM`"
-          :src="'event/refreshment_space.png'"
+          src="/event/refreshment_space.png"
           decoding="async"
         />
         <div class="title">
@@ -65,7 +65,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           width="690"
           height="388"
           :alt="$t('top.creative_wall')"
-          :src="'event/creative_wall.png'"
+          src="/event/creative_wall.png"
           decoding="async"
         />
         <div class="title">
@@ -80,7 +80,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           width="690"
           height="388"
           :alt="$t('top.events_handson')"
-          :src="'event/hands_on.png'"
+          src="/event/hands_on.png"
           decoding="async"
         />
         <div class="title">
@@ -97,7 +97,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           width="690"
           height="388"
           :alt="$t('top.tattoo_space')"
-          :src="'event/tattoo_space.png'"
+          src="/event/tattoo_space.png"
           decoding="async"
         />
         <div class="title">

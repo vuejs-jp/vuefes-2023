@@ -55,7 +55,7 @@
     "eslint-plugin-vuejs-accessibility": "2.2.0",
     "husky": "8.0.3",
     "markuplint": "3.13.0",
-    "nuxt": "3.6.2",
+    "nuxt": "3.6.5",
     "nuxt-og-image": "2.0.20",
     "pinceau": "0.18.0",
     "prettier": "3.0.3",
@@ -85,5 +85,10 @@
     "@supabase/supabase-js": "2.33.2",
     "chrome-aws-lambda": "10.1.0",
     "xlsx": "^0.18.5"
+  },
+  "resolutions": {
+    "mlly": "1.4.0",
+    "nitropack": "2.5.0",
+    "unstorage": "1.4.1"
   }
 }

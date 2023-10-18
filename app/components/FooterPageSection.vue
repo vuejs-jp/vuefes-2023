@@ -11,6 +11,8 @@ const props = defineProps({
     required: false,
   },
 })
+
+const { isMobile } = useDevice()
 </script>
 
 <template>
@@ -19,8 +21,7 @@ const props = defineProps({
       <VueFesLogo />
     </div>
     <div v-if="!hasAuth" class="footer-info">
-      <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
-      <div v-if="!$device.isMobile" class="footer-info-links">
+      <div v-if="!isMobile" class="footer-info-links">
         <div class="contacts">
           <ContactLinks />
         </div>
@@ -29,16 +30,14 @@ const props = defineProps({
         </div>
         <PrivacyPolicyAndCoc />
       </div>
-      <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
-      <div v-if="!$device.isMobile" class="footer-copyright">
+      <div v-if="!isMobile" class="footer-copyright">
         <CopyrightText />
       </div>
     </div>
     <div v-if="hasAuth" class="footer-info">
       <CopyrightText />
     </div>
-    <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
-    <div v-if="!hasAuth && $device.isMobile" class="footer-copyright">
+    <div v-if="!hasAuth && isMobile" class="footer-copyright">
       <CopyrightText />
     </div>
   </section>

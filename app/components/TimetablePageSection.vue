@@ -4,6 +4,8 @@ import TimetableView from '~/components/timetable/TimetableView.vue'
 import ScrollHint from 'scroll-hint'
 import 'scroll-hint/css/scroll-hint.css'
 
+const { isMobile } = useDevice()
+
 onMounted(() => {
   new ScrollHint('.timetable-wrapper', {
     suggestiveShadow: true,
@@ -22,8 +24,7 @@ onMounted(() => {
         :title="'Time table'"
         :yamato-title="$t('top.timetable_subtitle')"
       />
-      <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
-      <div v-if="$device.isMobile" class="timetable-wrapper">
+      <div v-if="isMobile" class="timetable-wrapper">
         <TimetableViewMobile />
       </div>
       <div v-else class="timetable-wrapper">

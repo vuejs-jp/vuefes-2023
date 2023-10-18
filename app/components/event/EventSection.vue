@@ -8,13 +8,18 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
 
 <template>
   <div class="event">
-    <SectionTitle id="events" color="vue.blue" :title="'Events'" yamato-title="イベント" />
+    <SectionTitle
+      id="events"
+      color="vue.blue"
+      :title="'Events'"
+      :yamato-title="$t('top.event_subtitle')"
+    />
     <div class="explain">
       <MarkDownText path="event" />
     </div>
 
     <div class="event-title">
-      <CommentTitle color="vue.green" title="エキスパートに聞こう！" />
+      <CommentTitle color="vue.green" :title="$t('top.lets_listen_to_experts')" />
       <h3 id="events-clinic">{{ $t('top.events_vuejs_clinic') }}</h3>
       <div class="explain"><MarkDownText path="event-vuejs-clinic" /></div>
     </div>
@@ -26,7 +31,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
     </div>
 
     <div class="event-title">
-      <CommentTitle color="vue.green" title="なぜVueを選んだのか？" />
+      <CommentTitle color="vue.green" :title="$t('top.why_do_you_select_vuejs')" />
       <h3 id="events-panel">
         {{ $t('top.events_panel_discussion') }}
       </h3>

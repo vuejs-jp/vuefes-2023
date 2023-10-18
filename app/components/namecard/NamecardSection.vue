@@ -18,7 +18,7 @@ const mdPath = canRegister ? (closedRegister ? 'close-namecard' : 'namecard') : 
 
 <template>
   <div class="namecard">
-    <CommentTitle color="vue.green" title="アバター＋名前入りがもらえる！" />
+    <CommentTitle color="vue.green" :title="$t('top.receive_your_avatar_and_name')" />
     <h3>{{ $t('top.namecard') }}</h3>
     <div class="explain">
       <MarkDownText :path="mdPath" />

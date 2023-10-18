@@ -6,16 +6,26 @@ interface PrivacyPolicyAndCocEmit {
 }
 const emit = defineEmits<PrivacyPolicyAndCocEmit>()
 const urlBasePath = useRuntimeConfig().app.baseURL
+
+const { locale } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
   <div class="doc-root">
-    <TextButton :href="`${urlBasePath}privacy`" underline @click.stop="$emit('on-click')">{{
-      $t('words.privacypolicy')
-    }}</TextButton>
-    <TextButton :href="`${urlBasePath}code-of-conduct`" underline @click.stop="$emit('on-click')">{{
-      $t('words.codeofconduct')
-    }}</TextButton>
+    <TextButton
+      :to="`${urlBasePath}${locale === 'ja' ? '' : `${locale}/`}privacy`"
+      underline
+      @click.stop="$emit('on-click')"
+    >
+      {{ $t('words.privacypolicy') }}
+    </TextButton>
+    <TextButton
+      :to="`${urlBasePath}${locale === 'ja' ? '' : `${locale}/`}code-of-conduct`"
+      underline
+      @click.stop="$emit('on-click')"
+    >
+      {{ $t('words.codeofconduct') }}
+    </TextButton>
   </div>
 </template>
 

@@ -57,8 +57,18 @@ export default {
        */
       message_subtitle: '想い',
       /**
+       * timetable section
+       */
+      timetable_subtitle: 'タイムテーブル',
+      timetable_caution:
+        '※ 各セッションの開始・終了時間は多少前後する可能性がありますので、あらかじめご了承ください。',
+      /**
        * event section
        */
+      event_subtitle: 'イベント',
+      lets_listen_to_experts: 'エキスパートに聞こう！',
+      why_do_you_select_vuejs: 'なぜVueを選んだのか？',
+      do_again_this_year: '今年もやります',
       payment_method: '購入方法',
       payment_method_explain: '購入方法は以下の2種類があります。',
       refreshment: 'リフレッシュメントスペース',
@@ -101,8 +111,14 @@ export default {
       panelist: 'パネラー',
       various_other_events: 'その他の各種イベント',
       /**
+       * ticket section
+       */
+      ticket_subtitle: 'チケット',
+      purchase_early: 'お早めにご購入を！',
+      /**
        * namecard section
        */
+      receive_your_avatar_and_name: 'アバター＋名前入りがもらえる！',
       namecard: 'ネームカード',
       namecard_infolink: '最新情報は、{0} をご確認ください。',
       tickets_schedule_limit: '応募期限: {0} まで',
@@ -259,8 +275,18 @@ export default {
        */
       message_subtitle: 'Thought',
       /**
+       * timetable section
+       */
+      timetable_subtitle: 'Time Table',
+      timetable_caution:
+        '※ Please note that the start and end times of each session may be slightly different.',
+      /**
        * event section
        */
+      event_subtitle: 'Event',
+      lets_listen_to_experts: "Let's listen to experts!",
+      why_do_you_select_vuejs: 'Why do you select Vue.js?',
+      do_again_this_year: "We'll do it again this year.",
       payment_method: 'Payment Method',
       payment_method_explain: 'There are two ways to purchase:',
       refreshment: 'Refreshment Space',
@@ -304,8 +330,14 @@ export default {
       panelist: 'Panelist',
       various_other_events: 'Various Other Events',
       /**
+       * ticket section
+       */
+      ticket_subtitle: 'Ticket',
+      purchase_early: 'Purchase Early!',
+      /**
        * namecard section
        */
+      receive_your_avatar_and_name: "You'll receive your avatar and name.",
       namecard: 'Name Card',
       namecard_infolink: 'Confirm {0} in latest information.',
       tickets_schedule_limit: 'Tickets Deadline: Until {0}',

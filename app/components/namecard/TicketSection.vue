@@ -10,7 +10,12 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
 
 <template>
   <div class="ticket">
-    <SectionTitle id="ticket" color="vue.blue" :title="'Ticket'" yamato-title="チケット" />
+    <SectionTitle
+      id="ticket"
+      color="vue.blue"
+      :title="'Ticket'"
+      :yamato-title="$t('top.ticket_subtitle')"
+    />
     <div class="explain">
       <MarkDownText path="ticket" />
     </div>
@@ -27,7 +32,7 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
         </RoundButton>
       </div>
     </div>
-    <CommentTitle color="vue.green" title="お早めにご購入を！" />
+    <CommentTitle color="vue.green" :title="$t('top.purchase_early')" />
     <h3>{{ $t('top.ticket_type') }}</h3>
     <div class="process-wrapper">
       <TicketCard>

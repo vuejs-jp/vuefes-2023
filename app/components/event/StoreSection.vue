@@ -11,7 +11,7 @@ import { closedPreOrder } from '~/utils/status.constants'
   <section>
     <div class="store-root">
       <div class="store-title">
-        <CommentTitle color="vue.green" title="今年もやります" />
+        <CommentTitle color="vue.green" :title="$t('top.do_again_this_year')" />
         <h3 id="store">Vue Fes Store</h3>
         <div class="explain"><MarkDownText path="store" /></div>
       </div>

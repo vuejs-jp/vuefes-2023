@@ -20,7 +20,7 @@ onMounted(() => {
         id="timetable"
         color="vue.blue"
         :title="'Time table'"
-        yamato-title="タイムテーブル"
+        :yamato-title="$t('top.timetable_subtitle')"
       />
       <!-- @vue-expect-error TODO: 何か @nuxtjs/module-device の型がうまく推論されていないので一端回避 -->
       <div v-if="$device.isMobile" class="timetable-wrapper">
@@ -30,7 +30,7 @@ onMounted(() => {
         <TimetableView />
       </div>
       <p class="timetable-info">
-        ※各セッションの開始・終了時間は多少前後する可能性がありますので、あらかじめご了承ください。
+        {{ $t('top.timetable_caution') }}
       </p>
     </div>
   </section>

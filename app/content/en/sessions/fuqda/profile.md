@@ -1,1 +1,1 @@
-I am a front-end engineer with a back-end background, and I was an organizer of a local Ruby community called Tama.rb in the past. Currently, I am developing the front-end for a product called Paytoner Invoices at Paytoner, Inc.
+I am a front-end engineer with a back-end background, and I was an organizer of a local Ruby community called Tama.rb in the past. Currently, I am developing the front-end for a product called Paytner Invoices at Paytner, Inc.

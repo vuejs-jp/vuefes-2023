@@ -132,6 +132,7 @@ export type SpeakerProfile = {
   id?: string // SponsorSpeaker に限って id を必須とする
   image: string
   title: string
+  titleKey?: string
   name: string
   githubId?: string
   twitterId?: string
@@ -158,6 +159,7 @@ export type OptionCategory =
 export type Sponsor = {
   id: string
   name: string
+  nameKey: string
   image: string
   categories: Array<SponsorCategory | OptionCategory>
   url: string
@@ -203,6 +205,6 @@ export type Paneler = {
   image: string
   name: string
   snsLink: string
-  company: string
-  job: string
+  title: string
+  titleKey?: string
 }

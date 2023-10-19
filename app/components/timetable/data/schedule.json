@@ -44,7 +44,7 @@
           {
             "isTranslation": true,
             "id": "yyx990803",
-            "title": "キーノート",
+            "title": "Keynote / キーノート",
             "speaker": "Evan You"
           }
         ]
@@ -116,7 +116,7 @@
             "subTitle": "12:25 - 12:45",
             "category": "【スペシャルランチセッション】",
             "title": "「You はなぜコントリビュータに？」論より動くもの.fm 出張版",
-            "speaker": "STORES 株式会社 藤村大介、wattanx / ワッタン",
+            "speaker": "STORES株式会社 藤村大介、wattanx / ワッタン",
             "sponsorSession": "cloudsign"
           },
           {
@@ -124,7 +124,7 @@
             "subTitle": "12:55 - 13:15",
             "category": "【スペシャルランチセッション】",
             "title": "Vue.js プロジェクト設計のベストプラクティスを求めて",
-            "speaker": "MNTSQ 株式会社 安積 洋",
+            "speaker": "MNTSQ株式会社 安積 洋",
             "sponsorSession": "cloudsign"
           }
         ]
@@ -156,14 +156,14 @@
             "subTitle": "12:20 - 12:40",
             "category": "【スペシャルランチセッション】",
             "title": "Nuxt 3 ではじめるテスト導入戦略と初手",
-            "speaker": "株式会社 hacomono 野崎 才門",
+            "speaker": "株式会社hacomono 野崎 才門",
             "sponsorSession": "m3"
           },
           {
             "id": "mew-ton",
             "subTitle": "12:45 - 13:15",
             "title": "Nuxt 2 から 3 へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話",
-            "speaker": "みゅーとん"
+            "speaker": "みゅーとん / mew-ton"
           }
         ]
       },
@@ -224,7 +224,7 @@
           {
             "id": "kira-puka",
             "title": "Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう",
-            "speaker": "きらぷか"
+            "speaker": "きらぷか / kira-puka"
           },
           {
             "id": "yud0uhu",
@@ -404,7 +404,7 @@
           {
             "id": "hitoki-wakugawa",
             "title": "フルスクラッチECの基盤であるNuxt2を3に移行し、開発の効率性とパフォーマンスを高める",
-            "speaker": "湧川 仁貴"
+            "speaker": "湧川 仁貴 / Hitoki Wakugawa"
           }
         ]
       },

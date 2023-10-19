@@ -36,7 +36,8 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         decoding="async"
       />
     </component>
-    <p v-if="speaker.profile.title" class="speaker-title">{{ speaker.profile.title }}</p>
+    <p v-if="speaker.profile.titleKey" class="speaker-title">{{ $t(speaker.profile.titleKey) }}</p>
+    <p v-else class="speaker-title">{{ speaker.profile.title }}</p>
     <p class="speaker-name">{{ speaker.profile.name }}</p>
     <div class="speaker-sns">
       <a

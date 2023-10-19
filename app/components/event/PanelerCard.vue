@@ -27,8 +27,8 @@ const urlBasePath = useRuntimeConfig().app.baseURL
         decoding="async"
       />
     </component>
-    <p class="team-company">{{ team.company }}</p>
-    <p class="team-job">{{ team.job }}</p>
+    <p v-if="team.titleKey" class="team-job">{{ $t(team.titleKey) }}</p>
+    <p v-else class="team-job">{{ team.title }}</p>
     <p class="team-name">{{ team.name }}</p>
   </div>
 </template>
@@ -44,12 +44,10 @@ css({
       borderRadius: '0.5em',
     },
   },
-  '.team-company': {
-    fontSize: 'calc(14*{fontSize.base})',
-    marginTop: '0.5em',
-  },
   '.team-job': {
     fontSize: 'calc(14*{fontSize.base})',
+    marginTop: '0.5em',
+    whiteSpace: 'pre-wrap',
   },
   '.team-name': {
     display: 'block',

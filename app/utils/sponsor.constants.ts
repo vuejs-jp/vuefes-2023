@@ -4,6 +4,7 @@ const all: Sponsor[] = [
   {
     id: 'cloudsign',
     name: 'クラウドサイン（弁護士ドットコム株式会社）',
+    nameKey: 'sponsors.cloudsign',
     image: 'sponsors/cloudsign.png',
     categories: ['platinum', 'session-room-naming-rights'],
     url: 'https://www.cloudsign.jp/',
@@ -11,6 +12,7 @@ const all: Sponsor[] = [
   {
     id: 'unique-vision',
     name: 'ユニークビジョン株式会社',
+    nameKey: 'sponsors.unique_vision',
     image: 'sponsors/unique-vision.png',
     categories: ['platinum'],
     url: 'https://www.uniquevision.co.jp/',
@@ -18,6 +20,7 @@ const all: Sponsor[] = [
   {
     id: 'link-and-motivation-group',
     name: '株式会社リンクアンドモチベーション',
+    nameKey: 'sponsors.link_and_motivation_group',
     image: 'sponsors/link-and-motivation-group.png',
     categories: ['platinum'],
     url: 'https://www.lmi.ne.jp/',
@@ -25,6 +28,7 @@ const all: Sponsor[] = [
   {
     id: 'yappli',
     name: '株式会社ヤプリ',
+    nameKey: 'sponsors.yappli',
     image: 'sponsors/yappli.png',
     categories: ['gold'],
     url: 'https://yappli.co.jp/',
@@ -32,6 +36,7 @@ const all: Sponsor[] = [
   {
     id: 'future-architect',
     name: 'フューチャーアーキテクト株式会社',
+    nameKey: 'sponsors.future_architect',
     image: 'sponsors/future-architect.png',
     categories: ['gold'],
     url: 'https://www.future.co.jp/architect/',
@@ -39,6 +44,7 @@ const all: Sponsor[] = [
   {
     id: 'jetbrains',
     name: 'JetBrains s.r.o.',
+    nameKey: 'jetbrains',
     image: 'sponsors/jetbrains.png',
     categories: ['gold'],
     url: 'https://jb.gg/vuefes2023-webstorm',
@@ -46,6 +52,7 @@ const all: Sponsor[] = [
   {
     id: 'medpeer',
     name: 'メドピア株式会社',
+    nameKey: 'sponsors.medpeer',
     image: 'sponsors/medpeer.png',
     categories: ['gold', 'session-room-naming-rights', 'special-lunch'],
     url: 'https://medpeer.co.jp/',
@@ -53,6 +60,7 @@ const all: Sponsor[] = [
   {
     id: 'hacomono',
     name: '株式会社hacomono',
+    nameKey: 'sponsors.hacomono',
     image: 'sponsors/hacomono.png',
     categories: ['gold', 'special-lunch'],
     url: 'https://recruit.hacomono.jp/',
@@ -60,6 +68,7 @@ const all: Sponsor[] = [
   {
     id: 'plaid',
     name: '株式会社プレイド',
+    nameKey: 'sponsors.plaid',
     image: 'sponsors/plaid.svg',
     categories: ['gold'],
     url: 'https://plaid.co.jp/',
@@ -67,6 +76,7 @@ const all: Sponsor[] = [
   {
     id: 'base',
     name: 'BASE株式会社',
+    nameKey: 'sponsors.base',
     image: 'sponsors/base.png',
     categories: ['silver'],
     url: 'https://thebase.com',
@@ -74,6 +84,7 @@ const all: Sponsor[] = [
   {
     id: 'cybozu',
     name: 'サイボウズ株式会社',
+    nameKey: 'sponsors.cybozu',
     image: 'sponsors/cybozu.png',
     categories: ['silver'],
     url: 'https://tech.cybozu.io/',
@@ -81,6 +92,7 @@ const all: Sponsor[] = [
   {
     id: 'mntsq',
     name: 'MNTSQ株式会社',
+    nameKey: 'sponsors.mntsq',
     image: 'sponsors/mntsq.png',
     categories: ['silver', 'special-lunch'],
     url: 'https://www.mntsq.co.jp/',
@@ -88,6 +100,7 @@ const all: Sponsor[] = [
   {
     id: 'mierune',
     name: '株式会社MIERUNE',
+    nameKey: 'sponsors.mierune',
     image: 'sponsors/mierune.svg',
     categories: ['silver'],
     url: 'https://www.mierune.co.jp',
@@ -95,6 +108,7 @@ const all: Sponsor[] = [
   {
     id: 'visasq',
     name: '株式会社ビザスク',
+    nameKey: 'sponsors.visasq',
     image: 'sponsors/visasq.svg',
     categories: ['silver'],
     url: 'https://service.visasq.com/',
@@ -102,6 +116,7 @@ const all: Sponsor[] = [
   {
     id: 'stores',
     name: 'STORES株式会社',
+    nameKey: 'sponsors.stores',
     image: 'sponsors/stores.png',
     categories: ['silver', 'special-lunch'],
     url: 'https://jobs.st.inc/engineer',
@@ -109,6 +124,7 @@ const all: Sponsor[] = [
   {
     id: 'line-yahoo-communications',
     name: 'LINEヤフーコミュニケーションズ株式会社',
+    nameKey: 'sponsors.line_yahoo_communications',
     image: 'sponsors/line-yahoo-communications.png',
     categories: ['silver'],
     url: 'https://linefukuoka.co.jp/ja/career/engineer',
@@ -116,6 +132,7 @@ const all: Sponsor[] = [
   {
     id: 'raksul',
     name: 'ラクスル株式会社',
+    nameKey: 'sponsors.raksul',
     image: 'sponsors/raksul.jpg',
     categories: ['silver'],
     url: 'https://corp.raksul.com/',
@@ -123,6 +140,7 @@ const all: Sponsor[] = [
   {
     id: 'lapras',
     name: 'LAPRAS株式会社',
+    nameKey: 'sponsors.lapras',
     image: 'sponsors/lapras.png',
     categories: ['silver'],
     url: 'https://lapras.com/person',
@@ -130,6 +148,7 @@ const all: Sponsor[] = [
   {
     id: 'giftee',
     name: '株式会社ギフティ',
+    nameKey: 'sponsors.giftee',
     image: 'sponsors/giftee.png',
     categories: ['silver', 'refreshment'],
     url: 'https://giftee.co.jp/',
@@ -137,6 +156,7 @@ const all: Sponsor[] = [
   {
     id: 'tanomu',
     name: '株式会社タノム',
+    nameKey: 'sponsors.tanomu',
     image: 'sponsors/tanomu.png',
     categories: ['bronze', 'name-card'],
     url: 'https://lp.tano.mu',
@@ -144,6 +164,7 @@ const all: Sponsor[] = [
   {
     id: 'studist',
     name: '株式会社スタディスト',
+    nameKey: 'sponsors.studist',
     image: 'sponsors/studist.png',
     categories: ['bronze'],
     url: 'https://studist.jp/',
@@ -151,6 +172,7 @@ const all: Sponsor[] = [
   {
     id: 'coco',
     name: '株式会社coco',
+    nameKey: 'sponsors.coco',
     image: 'sponsors/coco.png',
     categories: ['bronze'],
     url: 'https://thecoco.jp/',
@@ -158,6 +180,7 @@ const all: Sponsor[] = [
   {
     id: 'tential',
     name: '株式会社TENTIAL',
+    nameKey: 'sponsors.tential',
     image: 'sponsors/tential.svg',
     categories: ['bronze'],
     url: 'https://corp.tential.jp/',
@@ -165,6 +188,7 @@ const all: Sponsor[] = [
   {
     id: 'mercari',
     name: '株式会社メルカリ',
+    nameKey: 'sponsors.mercari',
     image: 'sponsors/mercari.svg',
     categories: ['bronze'],
     url: 'https://jp.merpay.com',
@@ -172,6 +196,7 @@ const all: Sponsor[] = [
   {
     id: 'm3',
     name: 'エムスリー株式会社',
+    nameKey: 'sponsors.m3',
     image: 'sponsors/m3.svg',
     categories: ['session-room-naming-rights'],
     url: 'https://jobs.m3.com/engineer/',
@@ -179,6 +204,7 @@ const all: Sponsor[] = [
   {
     id: 'coconala',
     name: '株式会社ココナラ',
+    nameKey: 'sponsors.coconala',
     image: 'sponsors/coconala.png',
     categories: ['lunch'],
     url: 'https://coconala.co.jp/',
@@ -186,6 +212,7 @@ const all: Sponsor[] = [
   {
     id: 'gmo-internet-group',
     name: 'GMOインターネットグループ株式会社',
+    nameKey: 'sponsors.gmo_internet_group',
     image: 'sponsors/gmo-internet-group.svg',
     categories: ['after-party'],
     url: 'https://gmo.jp',
@@ -193,13 +220,15 @@ const all: Sponsor[] = [
   {
     id: 'crowdworks',
     name: '株式会社クラウドワークス',
+    nameKey: 'sponsors.crowdworks',
     image: 'sponsors/crowdworks.svg',
     categories: ['simultaneous-interpretation'],
     url: 'https://crowdworks.co.jp/',
   },
   {
     id: 'newt',
-    name: 'Newt',
+    name: 'Newt株式会社',
+    nameKey: 'sponsors.newt',
     image: 'sponsors/newt.png',
     categories: ['media'],
     url: 'https://www.newt.so/',
@@ -207,6 +236,7 @@ const all: Sponsor[] = [
   {
     id: 'gihyojp',
     name: '株式会社技術評論社',
+    nameKey: 'sponsors.gihyojp',
     image: 'sponsors/gihyojp.svg',
     categories: ['media'],
     url: 'https://gihyo.jp',
@@ -214,6 +244,7 @@ const all: Sponsor[] = [
   {
     id: 'yuzuriha',
     name: '株式会社YUZURIHA',
+    nameKey: 'sponsors.yuzuriha',
     image: 'sponsors/yuzuriha.png',
     categories: ['bronze'],
     url: 'https://yzrh.jp',
@@ -221,6 +252,7 @@ const all: Sponsor[] = [
   {
     id: 'attelu',
     name: '株式会社アッテル',
+    nameKey: 'sponsors.attelu',
     image: 'sponsors/attelu.svg',
     categories: ['bronze'],
     url: 'https://attelu.jp',
@@ -228,6 +260,7 @@ const all: Sponsor[] = [
   {
     id: 'algorithms',
     name: '株式会社アルゴリズム',
+    nameKey: 'sponsors.algorithms',
     image: 'sponsors/algorithms.png',
     categories: ['bronze'],
     url: 'https://algorithms.co.jp',
@@ -235,6 +268,7 @@ const all: Sponsor[] = [
   {
     id: 'interfirm',
     name: 'KATIX（株式会社インターファーム）',
+    nameKey: 'sponsors.interfirm',
     image: 'sponsors/interfirm.png',
     categories: ['bronze'],
     url: 'https://www.interfirm.jp',
@@ -242,6 +276,7 @@ const all: Sponsor[] = [
   {
     id: 'tabian',
     name: 'タビアン株式会社',
+    nameKey: 'sponsors.tabian',
     image: 'sponsors/tabian.png',
     categories: ['handson'],
     url: 'https://tabian.co.jp',
@@ -249,6 +284,7 @@ const all: Sponsor[] = [
   {
     id: 'hennge',
     name: 'HENNGE株式会社',
+    nameKey: 'sponsors.hennge',
     image: 'sponsors/hennge.png',
     categories: ['bronze', 'refreshment'],
     url: 'https://hennge.com',
@@ -256,6 +292,7 @@ const all: Sponsor[] = [
   {
     id: 'tam',
     name: '株式会社TAM',
+    nameKey: 'sponsors.tam',
     image: 'sponsors/tam.png',
     categories: ['refreshment'],
     url: 'https://www.tam-tam.co.jp',

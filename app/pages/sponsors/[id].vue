@@ -17,6 +17,7 @@ const urlBasePath = useRuntimeConfig().app.baseURL
 const emptySponsor: Sponsor = {
   id: '',
   name: '',
+  nameKey: '',
   image: '',
   categories: ['lunch'],
   url: '',

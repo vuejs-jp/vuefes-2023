@@ -1,0 +1,2 @@
+Unique Vision is a developer and provider of the Beluga series of SNS marketing tools that provide connections between companies and consumers through SNS account management, CRM, and SNS campaigns.
+In this session, we will present a case study of how the in-house UI component library, which is developed and maintained across teams for the purpose of unifying the UI/UX of the Beluga series and improving quality and development productivity, has also contributed to improving the technical capabilities of the entire company.

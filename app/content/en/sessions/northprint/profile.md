@@ -1,0 +1,1 @@
+Resident of Asahikawa City, Hokkaido. I am back in Hokkaido for various reasons and belong to a company that specializes in location information and visualization. I used to work with a lot of people who liked Flash. I like front-end development.

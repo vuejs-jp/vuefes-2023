@@ -1,0 +1,1 @@
+As a software engineer at a venture capital firm called Global Brain Corporation, I develop internal investment management systems and internal portals. As for OSS activities, I have been a member of the Vue.js Japan User Group since 2022, organizing various events, and contributing to Nuxt-related repositories, I also contribute to Nuxt related repositories.

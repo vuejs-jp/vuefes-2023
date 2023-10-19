@@ -1,0 +1,1 @@
+There is a tool called Vue Language Server to make editor completion and other features work in `.vue`. The core is actually carved out of an OSS called Volar.js, a framework for "any embedded language" that is versatile enough to be used outside of Vue.js. In this session, we will discuss what Volar.js is all about and how its versatility opens up a world of possibilities.

@@ -1,0 +1,1 @@
+I am a father of one child, owner of three cats and a large dog. I work as a front-end designer in areas related to front-end development and design, and I am always thinking about how to improve usability using web technologies.

@@ -1,0 +1,1 @@
+giftee is an e-gifting company whose mission is "to create a society connected by better relationships by promoting the circulation of feelings", and with the help of Vue.js, we provide e-gift products that deliver feelings without meeting in person. As a gift company, we continue to be an organization that "gives knowledge to each other" to the technology community.

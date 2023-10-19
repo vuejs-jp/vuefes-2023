@@ -1,0 +1,1 @@
+My name is mew-ton. It's nice to meet you in real life, as I was speaking as an avatar at vue-fes 2022. My hobbies are front-end, VR, and playing the electric organ, and I organize a monthly social gathering for front-end engineers on VRChat.

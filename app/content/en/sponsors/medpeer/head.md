@@ -1,0 +1,2 @@
+MedPeer Group is an IT company run by active physicians. Centered on the "MedPeer" doctor platform, in which about half of Japan's physicians participate, the company is developing businesses that support a variety of medical fields, from preventive medicine to primary care and nursing care support. Many of its products are developed with Vue.js and Nuxt.js. For more information, please visit our developer blog!
+https://tech.medpeer.co.jp/entry/nuxt-monorepo

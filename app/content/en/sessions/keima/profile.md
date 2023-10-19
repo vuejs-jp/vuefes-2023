@@ -1,0 +1,1 @@
+I am the Chief Product Officer (CPO) of STUDIO, Inc. I am good at interaction design and implementation of complex GUI. Recently, I am challenging PMF in North America for products in the web design field.

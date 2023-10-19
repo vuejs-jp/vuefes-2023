@@ -1,0 +1,1 @@
+I have over 15 years of experience as a software developer, focusing on back-end and front-end development. In addition to writing code, I have experience in team building, hiring, and technical strategy development as a manager.

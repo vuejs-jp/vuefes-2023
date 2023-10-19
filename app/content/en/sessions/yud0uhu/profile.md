@@ -1,0 +1,1 @@
+A new engineer from Hokkaido, I joined DMM.com as a new graduate in 2011 and am involved in the development of the front-end team for DMM TV, which was released last December. Recently, he is into B-movies and abura soba (fried noodle soup).

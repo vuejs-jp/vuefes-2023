@@ -1,0 +1,1 @@
+A person who discovered the joy of front-end development after encountering Vue.js. After joining a SIer as a new graduate, he moved to CrowdWorks, Inc. Since then, he has been developing web applications using Rails + Vue.js and promoting Vue.js within the company. Recently, he is an implementer of design systems.

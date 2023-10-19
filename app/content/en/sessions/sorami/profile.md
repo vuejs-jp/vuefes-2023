@@ -1,0 +1,1 @@
+I do data visualization and map production. Originally, I was doing research and development of natural language processing. I am interested in "tools for thinking" including languages and maps, etc. I moved to Hokkaido in the spring of 2022. I like asparagus.

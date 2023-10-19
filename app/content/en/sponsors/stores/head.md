@@ -1,0 +1,1 @@
+With the mission of "Just for Fun," STORES provides comprehensive support services for the digitalization of stores, including online stores, POS cash registers, cashless payment, online reservation systems, and store app creation. We look forward to meeting you at the event. Please come visit us at our booth!

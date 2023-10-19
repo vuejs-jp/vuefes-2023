@@ -258,7 +258,7 @@ export const speakers: Speaker[] = [
     },
     profile: {
       image: 'speakers/keima.jpg',
-      title: 'STUDIO Inc. CPO / Founder',
+      title: 'STUDIO, Inc. CPO / Founder',
       name: '甲斐 啓真 / Keima',
       twitterId: 'keima_studio',
       githubId: 'keimakai',

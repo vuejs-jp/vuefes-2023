@@ -1,0 +1,1 @@
+I'm a developer of websites and web apps for major companies, and also works as a trainer of new engineers and technical director. I'm a member of PWA Night and v-okinawa, a technical community, and loves Pokemon and Splatoon.

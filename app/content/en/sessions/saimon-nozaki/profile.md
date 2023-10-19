@@ -1,0 +1,1 @@
+I work for hacomono, Inc. a provider of membership, reservation, and payment management systems focused on the wellness industry. I am interested in designing and creating experiences that are easy for humans to handle.

@@ -1,0 +1,1 @@
+Core team member of Vite, master student of Information and Communication at Tokyo Institute of Technology. I was the leader of the SysAd group in traP, a digital creation club at Tokyo Tech, which develops and operates tools used in the club. Currently, he contributes to Vite and works as a web engineer at Pocket Signs, Inc.

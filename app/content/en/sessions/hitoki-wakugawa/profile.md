@@ -1,0 +1,1 @@
+After studying hardware and software at a technical college, he worked as a software engineer for 5 years. After that, he worked as a full-scratch EC developer at TENTIAL. He has launched payment and logistics infrastructures, and is currently passionate about engineering organization and performance improvement.

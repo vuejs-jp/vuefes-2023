@@ -1,0 +1,1 @@
+Plaid is developing a service called KARTE, a "customer experience (CX) platform" that analyzes user behavior on websites and apps in real time to provide the best experience for end users. React and Svelte are also used internally, but most of the key features are implemented in Vue.js.

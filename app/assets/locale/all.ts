@@ -128,6 +128,7 @@ export default {
       ticket_early_price_closed: '※ 早割は9/30（土）までで終了しました。',
       ticket_early_price_notice: '残席わずかです！',
       ticket_price: '{0} 円',
+      ticket_explain: '※ 販売を終了しました。',
       namecard_schedule_limit: '応募期限: {0} まで',
       handson_schedule_limit: '応募期限: {0} まで',
       ticket_type: 'チケット種別',
@@ -139,7 +140,7 @@ export default {
         '※ 好評により全席完売しました。\n※ 詳しくは {0} についてをご覧ください。',
       personal_sponsor_ticket: '個人スポンサーチケット',
       personal_sponsor_ticket_explain:
-        '※ 当日来場される方は、別途、一般もしくは一般＋アフターパーティーチケットの購入が必要です。\n※ 詳しくは {0} についてをご覧ください。',
+        '※ 販売を終了しました。\n※ 詳しくは {0} についてをご覧ください。',
       announce_your_participate: 'ネームカードが完成したらSNSで参加表明しましょう！',
       succeed_register: 'ネームカードの情報登録が完了しました！',
       succeed_register_detail:
@@ -440,6 +441,7 @@ export default {
       ticket_early_price_closed: '※ Early price ended on 9/30 (Sat.)',
       ticket_early_price_notice: 'Only a few seats remain!',
       ticket_price: '¥ {0}',
+      ticket_explain: '※ Tickets sales ended.',
       namecard_schedule_limit: 'Name card Deadline: Until {0}',
       handson_schedule_limit: 'Hands-on Deadline: Until {0}',
       ticket_type: 'Ticket Type',
@@ -452,7 +454,7 @@ export default {
         '* Purchase of a general or general with after party ticket is required for attending only handson. \n* For more information, please see {0}.',
       personal_sponsor_ticket: 'Personal Sponsor Ticket',
       personal_sponsor_ticket_explain:
-        '* Purchase of a General or General with After Party ticket is required for those attending on the day of the event. \n* For more information, please see {0}.',
+        '* Tickets sales ended. \n* For more information, please see {0}.',
       announce_your_participate:
         'Once you have completed your name card, announce your participation on social networking sites!',
       succeed_register: 'Name card information registration has been completed!',

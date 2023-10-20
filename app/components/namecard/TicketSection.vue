@@ -27,7 +27,7 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
       -->
       <!-- チケットを購入 -->
       <div class="apply">
-        <RoundButton :href="ticketUrl" target="_blank" rel="noreferrer">
+        <RoundButton :href="ticketUrl" target="_blank" rel="noreferrer" :disabled="closedPrice">
           {{ $t('words.buy_ticket') }}
         </RoundButton>
       </div>
@@ -40,7 +40,12 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
           <img alt="" src="/tickets/attendee.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
+          <!--
           <a :href="ticketUrl" target="_blank" rel="noreferrer"> {{ $t('top.general_ticket') }}</a>
+          -->
+          <a>
+            <s>{{ $t('top.general_ticket') }}</s>
+          </a>
         </template>
         <template #default>
           <div v-if="!closedEarlyPrice" class="price">
@@ -50,11 +55,19 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
             <span class="early-price">{{ $t('top.ticket_early_price_explain') }}</span>
           </div>
           <div class="price-list">
+            <!--
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong>8,000</strong>
             </i18n-t>
-            <div v-if="closedEarlyPrice" class="price">
+            -->
+            <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
+              <strong><s>8,000</s></strong>
+            </i18n-t>
+            <div v-if="!closedPrice && closedEarlyPrice" class="price">
               <span class="early-price">{{ $t('top.ticket_early_price_closed') }}</span>
+            </div>
+            <div v-if="closedPrice" class="price">
+              <p class="early-price">{{ $t('top.ticket_explain') }}</p>
             </div>
           </div>
         </template>
@@ -64,9 +77,12 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
           <img alt="" src="/tickets/attendee+party.png" width="400" height="225" decoding="async" />
         </template>
         <template #action>
+          <!--
+          <a :href="ticketUrl" target="_blank" rel="noreferrer"> {{ $t('top.after_party_ticket') }}</a>
+          -->
           <a>
-            <s>{{ $t('top.after_party_ticket') }}</s></a
-          >
+            <s>{{ $t('top.after_party_ticket') }}</s>
+          </a>
         </template>
         <template #default>
           <div class="price-list">
@@ -77,6 +93,11 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
               <p class="early-price">{{ $t('top.ticket_early_price_explain') }}</p>
               <p class="early-price-notice">{{ $t('top.ticket_early_price_notice') }}</p>
             </div>
+            <!--
+            <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
+              <strong>11,000</strong>
+            </i18n-t>
+            -->
             <i18n-t keypath="top.ticket_price" tag="p" class="price" scope="global">
               <strong><s>11,000</s></strong>
             </i18n-t>

@@ -8,7 +8,7 @@ const props = defineProps<{
 }>()
 
 const { locale } = useLocaleCurrent()
-const { showSpeakerInfo } = useSession()
+const { showSpeakerInfo, getCategory } = useSession()
 
 // tdのclassを設定する
 const cssTdClass = (args: Track) => {
@@ -34,7 +34,9 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
     :rowspan="track.rowspan"
   >
     <div v-for="session in track.sessions" :key="session.title" class="info">
-      <div v-if="session.isTranslation" class="translate">同時通訳あり</div>
+      <div v-if="session.isTranslation" class="translate">
+        {{ $t('words.simultaneous_interpretation') }}
+      </div>
       <p v-if="session.subTitle" class="subtitle">{{ session.subTitle }}</p>
       <component
         :is="session.id ? _nuxtLink : 'div'"
@@ -47,10 +49,24 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         "
         class="title"
       >
-        <p v-if="session.category" class="category">{{ session.category }}</p>
-        {{ session.title }}
+        <i18n-t
+          v-if="session.category"
+          keypath="words.bracket"
+          tag="p"
+          class="category"
+          scope="global"
+        >
+          {{
+            `${$t(getCategory(session.category as 'platinum' | 'special-lunch' | 'lunch'))} ${$t(
+              'words.sponsorsession',
+            )}`
+          }}
+        </i18n-t>
+        {{ session.titleKey ? $t(session.titleKey) : session.title }}
       </component>
-      <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>
+      <div v-if="session.speaker" class="speaker">
+        {{ session.speakerKey ? $t(session.speakerKey) : session.speaker }}
+      </div>
     </div>
   </td>
 </template>
@@ -73,6 +89,7 @@ css({
       backgroundColor: '{color.timetable.close.background}',
     },
     '.translate': {
+      textAlign: 'left',
       display: 'inline-block',
       position: 'relative',
       marginBottom: '16px',

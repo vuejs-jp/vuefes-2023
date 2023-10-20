@@ -1,6 +1,7 @@
 import { match } from 'ts-pattern'
 import { Tracks } from '~/types/timetable'
 import { useFeature } from '~/composables/useFeature'
+import { OptionCategory, SponsorCategory } from '~/types/app'
 
 export function useSession() {
   const feature = useFeature()
@@ -16,5 +17,11 @@ export function useSession() {
       .exhaustive()
   }
 
-  return { showSpeakerInfo, getTrackColor }
+  const getCategory = (
+    category: Extract<SponsorCategory | OptionCategory, 'platinum' | 'special-lunch' | 'lunch'>,
+  ) => {
+    return `category['${category}']`
+  }
+
+  return { showSpeakerInfo, getTrackColor, getCategory }
 }

@@ -5,7 +5,9 @@ export interface Session {
   id?: string
   category?: string
   title: string
+  titleKey?: string
   speaker?: string
+  speakerKey?: string
   subTitle?: string
   sponsorSession?: string
   isTranslation?: boolean

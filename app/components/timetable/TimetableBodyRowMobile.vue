@@ -14,7 +14,7 @@ type Props = {
 
 const props = defineProps<Props>()
 
-const { showSpeakerInfo } = useSession()
+const { showSpeakerInfo, getCategory } = useSession()
 
 // tdのclassを設定する
 const cssTdClass = computed(
@@ -75,10 +75,24 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         "
         class="title"
       >
-        <p v-if="session.category" class="category">{{ session.category }}</p>
-        {{ session.title }}
+        <i18n-t
+          v-if="session.category"
+          keypath="words.bracket"
+          tag="p"
+          class="category"
+          scope="global"
+        >
+          {{
+            `${$t(getCategory(session.category as 'platinum' | 'special-lunch' | 'lunch'))} ${$t(
+              'words.sponsorsession',
+            )}`
+          }}
+        </i18n-t>
+        {{ session.titleKey ? $t(session.titleKey) : session.title }}
       </component>
-      <div v-if="session.speaker" class="speaker">{{ session.speaker }}</div>
+      <div v-if="session.speaker" class="speaker">
+        {{ session.speakerKey ? $t(session.speakerKey) : session.speaker }}
+      </div>
     </div>
   </td>
 </template>

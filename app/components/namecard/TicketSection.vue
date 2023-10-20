@@ -143,14 +143,24 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
           />
         </template>
         <template #action>
+          <!--
           <nuxt-link to="/#personal-sponsor">
             {{ $t('top.personal_sponsor_ticket') }}
           </nuxt-link>
+          -->
+          <a>
+            <s>{{ $t('top.personal_sponsor_ticket') }}</s>
+          </a>
         </template>
         <template #default>
           <div class="price-list">
+            <!--
             <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
               <strong>10,000</strong>
+            </i18n-t>
+            -->
+            <i18n-t keypath="top.personal_sponsor_price" tag="p" class="price" scope="global">
+              <strong><s>10,000</s></strong>
             </i18n-t>
             <i18n-t
               keypath="top.personal_sponsor_ticket_explain"

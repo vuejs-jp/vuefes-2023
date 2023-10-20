@@ -3,6 +3,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import SponsorMerits from '~/components/sponsor/SponsorMerits.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import { ticketUrl } from '~/utils/constants'
+import { closedPersonalSponsor } from '~/utils/status.constants'
 </script>
 
 <template>
@@ -26,6 +27,7 @@ import { ticketUrl } from '~/utils/constants'
         target="_blank"
         rel="noreferrer"
         class="personal-sponsor-apply-btn"
+        :disabled="closedPersonalSponsor"
       >
         {{ $t('words.apply_personal_sponsor') }}
       </RoundButton>

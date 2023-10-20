@@ -1,5 +1,6 @@
 export const closedSession = true
 export const closedSponsor = true
+export const closedPersonalSponsor = true
 export const closedVolunteer = true
 export const closedHandson = true
 export const closedEarlyPrice = true

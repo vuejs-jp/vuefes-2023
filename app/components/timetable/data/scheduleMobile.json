@@ -221,7 +221,8 @@
         "track": "medpeer",
         "sessions": [
           {
-            "title": "words.lightning_talks"
+            "title": "ライトニングトーク",
+            "titleKey": "words.lightning_talks"
           },
           {
             "id": "t0yohei",

@@ -121,6 +121,11 @@ import { closedEarlyPrice, closedPrice } from '~/utils/status.constants'
         </template>
         <template #default>
           <div class="price-list">
+            <!--
+            <div class="price">
+              <strong>無料</strong>
+            </div>
+            -->
             <div class="price">
               <s><strong>無料</strong></s>
             </div>

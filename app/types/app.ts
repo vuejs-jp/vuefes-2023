@@ -134,6 +134,7 @@ export type SpeakerProfile = {
   title: string
   titleKey?: string
   name: string
+  nameKey?: string
   githubId?: string
   twitterId?: string
   mastodonUrl?: string

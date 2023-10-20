@@ -264,19 +264,59 @@ export default {
       mew_ton:
         '株式会社hacomono\nフロントエンドテックリード 基盤グループ Enabling チーム\nVRChat フロントエンドエンジニア集会主催',
       hieu: '株式会社ブレイン フロントエンドエンジニア',
-      hitoki_wakugawa: '株式会社TENTIAL\nテクノロジー本部 ECプラットフォーム部 マネージャー',
-      takahiro_shinoda:
-        '弁護士ドットコム株式会社\nクラウドサイン事業本部 ProductEngineering部 エンジニア',
-      kazumasa_yamamoto: 'ユニークビジョン株式会社\nエンジニア',
-      yoshihide_unoki:
-        '株式会社リンクアンドモチベーション\nプロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
-      kazuhiro_kobayashi:
-        'メドピア株式会社\nプライマリケアプラットフォーム事業部 サービス開発部 フロント・モバイルグループ\nフロントエンドテックリード',
-      yuta_ichihara: '株式会社ココナラ\nフロントエンドエンジニア',
-      daisuke_fujimura: 'STORES株式会社\nCTO',
-      hiroshi_azumi: 'MNTSQ株式会社\nエンジニア（フロントエンド担当）',
-      saimon_nozaki: '株式会社 hacomono\nプロダクト開発本部 POS グループ',
-      shohei_ogata: 'GMOペパボ株式会社\nEC事業部 エンジニア',
+      hitoki_wakugawa: {
+        nameOnly: '湧川 仁貴',
+        name: '株式会社TENTIAL 湧川 仁貴',
+        position: '株式会社TENTIAL\nテクノロジー本部 ECプラットフォーム部 マネージャー',
+      },
+      takahiro_shinoda: {
+        nameOnly: '篠田 貴大',
+        name: 'クラウドサイン（弁護士ドットコム株式会社） 篠田 貴大',
+        position:
+          '弁護士ドットコム株式会社\nクラウドサイン事業本部 ProductEngineering部 エンジニア',
+      },
+      kazumasa_yamamoto: {
+        nameOnly: '山本 一将',
+        name: 'ユニークビジョン株式会社 山本 一将',
+        position: 'ユニークビジョン株式会社\nエンジニア',
+      },
+      yoshihide_unoki: {
+        nameOnly: '鵜木 義秀',
+        name: '株式会社リンクアンドモチベーション 鵜木 義秀',
+        position:
+          '株式会社リンクアンドモチベーション\nプロダクトデザイン室 Developer Productivityユニット イネーブリンググループ',
+      },
+      kazuhiro_kobayashi: {
+        nameOnly: '小林 和弘',
+        name: 'メドピア株式会社 小林 和弘',
+        position:
+          'メドピア株式会社\nプライマリケアプラットフォーム事業部 サービス開発部 フロント・モバイルグループ\nフロントエンドテックリード',
+      },
+      yuta_ichihara: {
+        nameOnly: '市原 雄太',
+        name: '株式会社ココナラ 市原 雄太',
+        position: '株式会社ココナラ\nフロントエンドエンジニア',
+      },
+      daisuke_fujimura: {
+        name: '藤村 大介',
+        position: 'STORES株式会社\nCTO',
+        with_wattanx: 'STORES株式会社 藤村大介、wattanx / ワッタン',
+      },
+      hiroshi_azumi: {
+        nameOnly: '安積 洋',
+        name: 'MNTSQ株式会社 安積 洋',
+        position: 'MNTSQ株式会社\nエンジニア（フロントエンド担当）',
+      },
+      saimon_nozaki: {
+        nameOnly: '野崎 才門',
+        name: '株式会社hacomono 野崎 才門',
+        position: '株式会社 hacomono\nプロダクト開発本部 POS グループ',
+      },
+      shohei_ogata: {
+        name: '尾形 将平',
+        position: 'GMOペパボ株式会社\nEC事業部 エンジニア',
+      },
+      tetsuhiro_narayama: '楢山 哲弘',
     },
     panelers: {
       takanorip: 'Ubie株式会社\nデザインエンジニア',
@@ -599,19 +639,59 @@ export default {
       mew_ton:
         'Front-End Tech Lead, Enabling Team, Infrastructure Group, hacomono Inc.\nOrganizer, Front-end Engineer Gathering, VRChat',
       hieu: 'Front-End Engineer, Brain Corporation',
-      hitoki_wakugawa: 'Manager, EC Platform Department, Technology Division, TENTIAL Inc.',
-      takahiro_shinoda:
-        'Engineer, ProductEngineering Department, CloudSign Business Division, Bengo4.com Inc.',
-      kazumasa_yamamoto: 'Engineer, Unique Vision Company, Japan.',
-      yoshihide_unoki:
-        'Enabling Group, Developer Productivity Unit, Product Design Office, Link and Motivation Inc.',
-      kazuhiro_kobayashi:
-        'Front-End Tech Lead, Front & Mobile Group, Service Development Department, Primary Care Platform Division, MedPeer Inc.',
-      yuta_ichihara: 'Front-End Engineer, coconala Inc.',
-      daisuke_fujimura: 'CTO, STORES Inc.',
-      hiroshi_azumi: 'Engineer (in charge of front-end), MNTSQ LTD.',
-      saimon_nozaki: 'POS Group, Product Development Division, hacomono Inc.',
-      shohei_ogata: 'Engineer, EC Business Department, GMO Pepabo Inc.',
+      hitoki_wakugawa: {
+        nameOnly: 'Hitoki Wakugawa',
+        name: 'Hitoki Wakugawa, TENTIAL Inc.',
+        position: 'Manager, EC Platform Department, Technology Division, TENTIAL Inc.',
+      },
+      takahiro_shinoda: {
+        nameOnly: 'Takahiro Shinoda',
+        name: 'Takahiro Shinoda, CloudSign (Bengo4.com, Inc.)',
+        position:
+          'Engineer, ProductEngineering Department, CloudSign Business Division, Bengo4.com Inc.',
+      },
+      kazumasa_yamamoto: {
+        nameOnly: 'Kazumasa Yamamoto',
+        name: 'Kazumasa Yamamoto, Unique Vision Company, Japan.',
+        position: 'Engineer, Unique Vision Company, Japan.',
+      },
+      yoshihide_unoki: {
+        nameOnly: 'Yoshihide Unoki',
+        name: 'Yoshihide Unoki, Link and Motivation, Inc.',
+        position:
+          'Enabling Group, Developer Productivity Unit, Product Design Office, Link and Motivation Inc.',
+      },
+      kazuhiro_kobayashi: {
+        nameOnly: 'Kazuhiro Kobayashi',
+        name: 'Kazuhiro Kobayashi, MedPeer, Inc.',
+        position:
+          'Front-End Tech Lead, Front & Mobile Group, Service Development Department, Primary Care Platform Division, MedPeer Inc.',
+      },
+      yuta_ichihara: {
+        nameOnly: 'Yuta Ichihara',
+        name: 'Yuta Ichihara, coconala Inc.',
+        position: 'Front-End Engineer, coconala Inc.',
+      },
+      daisuke_fujimura: {
+        name: 'Daisuke Fujimura',
+        position: 'CTO, STORES Inc.',
+        with_wattanx: 'Daisuke Fujimura, wattanx / ワッタン, STORES Inc.',
+      },
+      hiroshi_azumi: {
+        nameOnly: 'Hiroshi Azumi',
+        name: 'Hiroshi Azumi, MNTSQ, LTD.',
+        position: 'Engineer (in charge of front-end), MNTSQ LTD.',
+      },
+      saimon_nozaki: {
+        nameOnly: 'Saimon Nozaki',
+        name: 'Saimon Nozaki, hacomono, Inc.',
+        position: 'POS Group, Product Development Division, hacomono Inc.',
+      },
+      shohei_ogata: {
+        name: 'Shohei Ogata',
+        position: 'Engineer, EC Business Department, GMO Pepabo Inc.',
+      },
+      tetsuhiro_narayama: 'Tetsuhiro Narayama',
     },
     panelers: {
       takanorip: 'Design Engineer, Ubie Inc.',

@@ -66,6 +66,7 @@
             "category": "platinum",
             "title": "走りながらエンジンを交換する ~ 大規模プロダクトを成長させつつVue3にするには ~",
             "speaker": "クラウドサイン（弁護士ドットコム株式会社） 篠田 貴大",
+            "speakerKey": "speakers.takahiro_shinoda.name",
             "sponsorSession": "cloudsign"
           }
         ]
@@ -83,6 +84,7 @@
             "category": "platinum",
             "title": "社内UIコンポーネントライブラリがエンジニアチームにもたらした本当の価値",
             "speaker": "ユニークビジョン株式会社 山本 一将",
+            "speakerKey": "speakers.kazumasa_yamamoto.name",
             "sponsorSession": "cloudsign"
           }
         ]
@@ -100,6 +102,7 @@
             "category": "platinum",
             "title": "Vue.jsを活用して開発リードタイムが1/3になった話",
             "speaker": "株式会社リンクアンドモチベーション 鵜木 義秀",
+            "speakerKey": "speakers.yoshihide_unoki.name",
             "sponsorSession": "cloudsign"
           }
         ]
@@ -122,6 +125,7 @@
             "category": "special-lunch",
             "title": "「You はなぜコントリビュータに？」論より動くもの.fm 出張版",
             "speaker": "STORES株式会社 藤村大介、wattanx / ワッタン",
+            "speakerKey": "speakers.daisuke_fujimura.with_wattanx",
             "sponsorSession": "cloudsign"
           },
           {
@@ -130,6 +134,7 @@
             "category": "special-lunch",
             "title": "Vue.js プロジェクト設計のベストプラクティスを求めて",
             "speaker": "MNTSQ株式会社 安積 洋",
+            "speakerKey": "speakers.hiroshi_azumi.name",
             "sponsorSession": "cloudsign"
           }
         ]
@@ -147,6 +152,7 @@
             "category": "special-lunch",
             "title": "Vue 2 の EOL まで二ヶ月ですが進捗どうですか？",
             "speaker": "メドピア株式会社 小林 和弘",
+            "speakerKey": "speakers.kazuhiro_kobayashi.name",
             "sponsorSession": "medpeer"
           }
         ]
@@ -164,6 +170,7 @@
             "category": "special-lunch",
             "title": "Nuxt 3 ではじめるテスト導入戦略と初手",
             "speaker": "株式会社hacomono 野崎 才門",
+            "speakerKey": "speakers.saimon_nozaki.name",
             "sponsorSession": "m3"
           },
           {
@@ -189,6 +196,7 @@
             "category": "lunch",
             "title": "OpenAI API を Nuxt.js に入れてみた的な話",
             "speaker": "株式会社ココナラ 市原 雄太",
+            "speakerKey": "speakers.yuta_ichihara.name",
             "sponsorSession": "vue"
           },
           {
@@ -228,7 +236,8 @@
           {
             "id": "northprint",
             "title": "WebGISとVue.jsの親和性について",
-            "speaker": "楢山 哲弘"
+            "speaker": "楢山 哲弘",
+            "speakerKey": "speakers.tetsuhiro_narayama"
           },
           {
             "id": "kira-puka",
@@ -416,7 +425,8 @@
           {
             "id": "hitoki-wakugawa",
             "title": "フルスクラッチECの基盤であるNuxt2を3に移行し、開発の効率性とパフォーマンスを高める",
-            "speaker": "湧川 仁貴 / Hitoki Wakugawa"
+            "speaker": "湧川 仁貴 / Hitoki Wakugawa",
+            "speakerKey": "speakers.hitoki_wakugawa.name"
           }
         ]
       },

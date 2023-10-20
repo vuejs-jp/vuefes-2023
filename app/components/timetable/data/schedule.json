@@ -226,7 +226,7 @@
         "track": "medpeer",
         "sessions": [
           {
-            "title": "ライトニングトーク"
+            "title": "words.lightning_talks"
           },
           {
             "id": "t0yohei",
@@ -297,7 +297,8 @@
           {
             "id": "baseballyama",
             "title": "18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法",
-            "speaker": "山下 裕一朗"
+            "speaker": "山下 裕一朗",
+            "speakerKey": "speakers.baseballyama.name"
           }
         ]
       },
@@ -405,7 +406,7 @@
         "track": "m3",
         "sessions": [
           {
-            "title": "ライトニングトーク"
+            "title": "words.lightning_talks"
           },
           {
             "id": "53able",

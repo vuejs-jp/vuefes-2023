@@ -28,13 +28,13 @@ import { closedSession } from '~/utils/status.constants'
         <SpeakerCard v-for="speaker in sessionSpeakers" :key="speaker.id" :speaker="speaker" />
       </div>
 
-      <h3>Lightning Talk</h3>
+      <h3>{{ $t('words.lightning_talks') }}</h3>
 
       <div class="speakers">
         <SpeakerCard v-for="speaker in ltSpeakers" :key="speaker.id" :speaker="speaker" />
       </div>
 
-      <h3>Sponsor Session</h3>
+      <h3>{{ $t('words.sponsorsession') }}</h3>
 
       <div class="speakers">
         <template v-for="(speaker, index) in sponsorSpeakers" :key="index">

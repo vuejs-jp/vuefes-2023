@@ -8,10 +8,10 @@ import timeTables from './data/schedule.json'
     <thead>
       <tr>
         <th aria-label="cell" />
-        <th class="trackA">クラウドサイントラック</th>
-        <th class="trackB">メドピアトラック</th>
-        <th class="trackC">エムスリーやっていきトラック</th>
-        <th class="trackD">Vueトラック</th>
+        <th class="trackA">{{ $t('track.cloudsign') }}</th>
+        <th class="trackB">{{ $t('track.medpeer') }}</th>
+        <th class="trackC">{{ $t('track.m3') }}</th>
+        <th class="trackD">{{ $t('track.vue') }}</th>
       </tr>
     </thead>
     <tbody>

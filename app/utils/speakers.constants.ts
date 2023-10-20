@@ -283,8 +283,9 @@ export const speakers: Speaker[] = [
     profile: {
       image: 'speakers/baseballyama.jpeg',
       title: '株式会社フライル ソフトウェアエンジニア\nSvelteコアチームメンバー',
-      titleKey: 'speakers.baseballyama',
+      titleKey: 'speakers.baseballyama.position',
       name: '山下 裕一朗 / Yuichiro Yamashita',
+      nameKey: 'speakers.baseballyama.name',
       twitterId: 'baseballyama_',
       githubId: 'baseballyama',
     },

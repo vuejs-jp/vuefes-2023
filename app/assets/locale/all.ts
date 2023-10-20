@@ -38,6 +38,7 @@ export default {
       vuejs_clinic: 'Vue.js クリニック',
       panel_discussion: 'パネルディスカッション',
       handson: 'ハンズオン',
+      lightning_talks: 'ライトニングトーク',
       remodeling: '転換',
       lunch_time: 'ランチタイム',
       after_party: 'アフターパーティー',
@@ -254,7 +255,10 @@ export default {
       yamanoku:
         '株式会社クラウドワークス\nプロダクト本部プロダクト開発部プラットフォーム開発3グループ',
       chocodogmagic: '株式会社TAMTO\nフロントエンドエンジニア',
-      baseballyama: '株式会社フライル\nソフトウェアエンジニア\nSvelteコアチームメンバー',
+      baseballyama: {
+        name: '山下 裕一朗',
+        position: '株式会社フライル\nソフトウェアエンジニア\nSvelteコアチームメンバー',
+      },
       kira_puka: '合同会社めもらば 代表',
       t0yohei: '株式会社クラウドワークス\nWebエンジニア',
       yud0uhu: '合同会社DMM.com\n動画配信事業部所属 フロントエンドエンジニア',
@@ -405,6 +409,7 @@ export default {
       vuejs_clinic: 'Vue.js Clinic',
       panel_discussion: 'Panel Discussion',
       handson: 'Handson',
+      lightning_talks: 'Lightning Talks',
       remodeling: 'Remodeling',
       lunch_time: 'Lunch Time',
       after_party: 'After Party',
@@ -427,10 +432,10 @@ export default {
     },
     track: {
       all: 'All track',
-      cloudsign: 'クラウドサイン track',
-      medpeer: 'メドピア track',
-      m3: 'エムスリーやっていき track',
-      vue: 'Vue track',
+      cloudsign: 'クラウドサイントラック',
+      medpeer: 'メドピアトラック',
+      m3: 'エムスリーやっていきトラック',
+      vue: 'Vueトラック',
     },
     top: {
       check_twitter: 'Check information on Twitter!',
@@ -629,7 +634,10 @@ export default {
       yamanoku:
         'Platform Development 3 Group, Product Development Department, Product Division, CrowdWorks Inc.',
       chocodogmagic: 'Front-End Engineer, TAMTO Inc.',
-      baseballyama: 'Software Engineer, Flyle Inc.\nSvelte Core Team Member',
+      baseballyama: {
+        name: 'Yuichiro Yamashita',
+        position: 'Software Engineer, Flyle Inc.\nSvelte Core Team Member',
+      },
       kira_puka: 'Representative, Memoraba LLC',
       t0yohei: 'Web Engineer, CrowdWorks Inc.',
       yud0uhu: 'Front-End Engineer, Video Distribution Division, DMM.com LLC',

@@ -425,7 +425,8 @@
         "track": "m3",
         "sessions": [
           {
-            "title": "words.lightning_talks"
+            "title": "ライトニングトーク",
+            "titleKey": "words.lightning_talks"
           },
           {
             "id": "53able",

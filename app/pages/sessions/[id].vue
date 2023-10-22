@@ -78,7 +78,11 @@ useHead({
     </section>
     <section class="detailbody">
       <h2 class="detailbody-title">
-        {{ speakerData.session.title || 'セッション' }}
+        {{
+          speakerData.session.titleKey
+            ? $t(speakerData.session.titleKey)
+            : speakerData.session.title || 'セッション'
+        }}
       </h2>
       <div class="detailbody-explain">
         <MarkDownText :path="`sessions/${speakerData.id}/head`" />

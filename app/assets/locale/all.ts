@@ -245,6 +245,37 @@ export default {
       teams_core_staff: 'コアスタッフ',
       teams_volunteer: 'ボランティアスタッフ',
     },
+    sessions: {
+      sapphi_red: 'マルチスレッドフレンドリーなJavaScriptを求めて',
+      ota_meshi: 'eslint-plugin-vueの現状と今後',
+      wattanx: 'Demystifying Nuxt Bridge 〜 あなたがまだ見ぬ可能性とその活用法 〜',
+      mizdra: 'Vue Language Serverから生まれたVolar.jsと、それが秘める可能性',
+      yamanoku: '画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法',
+      chocodogmagic: 'Nuxt 3でJamstackテンプレートを作るときの考え方',
+      baseballyama: '18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法',
+      kira_puka: 'Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう',
+      t0yohei: 'Vueを使ってGrid Systemを実装した話',
+      yud0uhu: 'Vue 3/Electronで自作したマークダウンエディタをVue 3/Tauriにリプレイスした話',
+      _53able: 'SOLID原則に基づくSFC実装',
+      fuqda: 'Composition API時代のPub/Subパターンでの状態管理',
+      mew_ton:
+        'Nuxt 2から3へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話',
+      hitoki_wakugawa:
+        'フルスクラッチECの基盤であるNuxt 2を3に移行し、開発の効率性とパフォーマンスを高める',
+      cloudsign: '走りながらエンジンを交換する 〜 大規模プロダクトを成長させつつVue 3にするには 〜',
+      unique_vision: '社内UIコンポーネントライブラリがエンジニアチームにもたらした本当の価値',
+      link_and_motivation_group: 'Vue.jsを活用して開発リードタイムが1/3になった話',
+      stores: '「Youはなぜコントリビュータに？」論より動くもの.fm 出張版',
+      mntsq: 'Vue.jsプロジェクト設計のベストプラクティスを求めて',
+      medpeer: 'Vue 2のEOLまで二ヶ月ですが進捗どうですか？',
+      hacomono: 'Nuxt 3ではじめるテスト導入戦略と初手',
+      coconala: 'OpenAI APIをNuxt.jsに入れてみた的な話',
+      gmo_internet_group:
+        '「defineCustomElement」を活用したサービス共通のUIコンポーネントライブラリ',
+      tetsuhiro_narayama: 'WebGISとVue.jsの親和性について',
+      sorami: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
+      keima: 'STUDIOの作り方 2023 ver.',
+    },
     speakers: {
       kazuya_kawaguchi: '川口 和也',
       sapphi_red: 'Vite Core Team Member\n東工大デジタル創作同好会traP所属',
@@ -622,6 +653,42 @@ export default {
       teams_core_staff: 'CORE STAFF',
       teams_volunteer: 'VOLUNTEER STAFF',
     },
+    sessions: {
+      sapphi_red: 'Seeking Multi-threaded friendly JavaScript',
+      ota_meshi: 'Current and future of eslint-plugin-vue',
+      wattanx: 'Demystifying Nuxt Bridge ~ Our Potential and How to Use It',
+      mizdra: 'Volar.js, born from Vue Language Server and its hidden potential',
+      yamanoku: 'How to make Nuxt applications Accessible based on Screen Transitions',
+      chocodogmagic: 'Ideas for creating a Jamstack template in Nuxt 3',
+      baseballyama:
+        'How to Implement a Design System for a 350-component Vue app in 18 business days',
+      kira_puka:
+        'Is Nuxt 3 Module Development Easier Than You Think? Take a look at the Module Author Guide',
+      t0yohei: 'A Story about the Implementation of Grid System using Vue',
+      yud0uhu: 'A Story of replacing the Markdown Editor created by Vue 3/Electron to Vue 3/Tauri',
+      _53able: 'SFC Implementation based on SOLID Principles',
+      fuqda: 'State Management in the Pub/Sub Pattern in the Composition API era',
+      mew_ton:
+        'Thinking about how to Migrate from Nuxt 2 to 3, and the Story is about a Micro Front-end Framework.',
+      hitoki_wakugawa:
+        'Migrate Nuxt 2, the Foundation for Full-scratch EC, to 3 to increase Development Efficiency and Performance',
+      cloudsign:
+        'Replacing the Engine While Running ~ How to Vue 3 while growing a large product ~',
+      unique_vision: 'Real value brought to Engineering Teams by in-house UI Component Library',
+      link_and_motivation_group:
+        'A Story about how Development Lead Time was reduced to 1/3 by utilizing Vue.js',
+      stores:
+        '"Why You Are a Contributor?" The things that work better than arguments .fm ~ Business Trip edition',
+      mntsq: 'Seeking Best Practices for Vue.js Project Design',
+      medpeer: "Two months to EOL for Vue 2, how's the progress?",
+      hacomono: 'Test Implementation Strategies and First Steps in Nuxt 3',
+      coconala: 'A Story about putting OpenAI API into Nuxt.js.',
+      gmo_internet_group:
+        'UI Component Library common to all services utilizing "defineCustomElement"',
+      tetsuhiro_narayama: 'Affinity between WebGIS and Vue.js',
+      sorami: 'Vue.js and 3D Visualization - AIST\'s OSS "AIST 3DDB Client" as an example',
+      keima: 'How to make STUDIO 2023 ver.',
+    },
     speakers: {
       kazuya_kawaguchi: 'Kazuya Kawaguchi',
       sapphi_red:
@@ -754,6 +821,7 @@ export default {
     category: {},
     track: {},
     top: {},
+    sessions: {},
     speakers: {},
     panelers: {},
     sponsors: {},

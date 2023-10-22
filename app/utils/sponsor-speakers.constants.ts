@@ -6,6 +6,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: '走りながらエンジンを交換する ~ 大規模プロダクトを成長させつつVue3にするには ~',
+      titleKey: 'sessions.cloudsign',
       track: 'all',
       time: '11:05 - 11:25',
       type: 'main',
@@ -28,6 +29,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: '社内UIコンポーネントライブラリがエンジニアチームにもたらした本当の価値',
+      titleKey: 'sessions.unique_vision',
       track: 'all',
       time: '11:25 - 11:45',
       type: 'main',
@@ -50,6 +52,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue.jsを活用して開発リードタイムが1/3になった話',
+      titleKey: 'sessions.link_and_motivation_group',
       track: 'all',
       time: '11:45 - 12:05',
       type: 'main',
@@ -72,7 +75,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     id: 'medpeer',
     type: 'domestic',
     session: {
-      title: 'Vue2 の EOL まで二ヶ月ですが進捗どうですか？',
+      title: 'Vue2のEOLまで二ヶ月ですが進捗どうですか？',
+      titleKey: 'sessions.medpeer',
       track: 'medpeer',
       time: '12:30 - 12:50',
       type: 'main',
@@ -97,6 +101,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'OpenAI APIをNuxt.jsに入れてみた的な話',
+      titleKey: 'sessions.coconala',
       track: 'vue',
       time: '12:30 - 12:40',
       type: 'main',
@@ -118,6 +123,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: '「Youはなぜコントリビュータに？」論より動くもの.fm 出張版',
+      titleKey: 'sessions.stores',
       track: 'cloudsign',
       time: '12:25 - 12:45',
       type: 'main',
@@ -149,6 +155,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue.jsプロジェクト設計のベストプラクティスを求めて',
+      titleKey: 'sessions.mntsq',
       track: 'cloudsign',
       time: '12:55 - 13:15',
       type: 'main',
@@ -170,7 +177,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     id: 'hacomono',
     type: 'domestic',
     session: {
-      title: 'Nuxt 3 ではじめるテスト導入戦略と初手',
+      title: 'Nuxt3ではじめるテスト導入戦略と初手',
+      titleKey: 'sessions.hacomono',
       track: 'm3',
       time: '12:20 - 12:40',
       type: 'main',
@@ -193,6 +201,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
     type: 'domestic',
     session: {
       title: '「defineCustomElement」を活用したサービス共通のUIコンポーネントライブラリ',
+      titleKey: 'sessions.gmo_internet_group',
       track: 'all',
       time: '',
       type: 'lt',

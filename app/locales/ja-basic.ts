@@ -6,6 +6,7 @@ export default defineI18nLocale(async (locale) => {
     top: all.ja_basic.top,
     category: all.ja_basic.category,
     track: all.ja_basic.track,
+    sessions: all.ja_basic.sessions,
     speakers: all.ja_basic.speakers,
     panelers: all.ja_basic.panelers,
     sponsors: all.ja_basic.sponsors,

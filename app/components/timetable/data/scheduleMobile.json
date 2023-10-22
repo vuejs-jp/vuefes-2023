@@ -56,6 +56,7 @@
             "id": "cloudsign",
             "category": "platinum",
             "title": "走りながらエンジンを交換する ~ 大規模プロダクトを成長させつつVue3にするには ~",
+            "titleKey": "sessions.cloudsign",
             "speaker": "クラウドサイン（弁護士ドットコム株式会社） 篠田 貴大",
             "speakerKey": "speakers.takahiro_shinoda.name",
             "sponsorSession": "cloudsign"
@@ -75,6 +76,7 @@
             "id": "unique-vision",
             "category": "platinum",
             "title": "社内UIコンポーネントライブラリがエンジニアチームにもたらした本当の価値",
+            "titleKey": "sessions.unique_vision",
             "speaker": "ユニークビジョン株式会社 山本 一将",
             "speakerKey": "speakers.kazumasa_yamamoto.name",
             "sponsorSession": "cloudsign"
@@ -94,6 +96,7 @@
             "id": "link-and-motivation-group",
             "category": "platinum",
             "title": "Vue.jsを活用して開発リードタイムが1/3になった話",
+            "titleKey": "sessions.link_and_motivation_group",
             "speaker": "株式会社リンクアンドモチベーション 鵜木 義秀",
             "speakerKey": "speakers.yoshihide_unoki.name",
             "sponsorSession": "cloudsign"
@@ -117,7 +120,8 @@
             "id": "stores",
             "subTitle": "12:25 - 12:45",
             "category": "special-lunch",
-            "title": "「You はなぜコントリビュータに？」論より動くもの.fm 出張版",
+            "title": "「Youはなぜコントリビュータに？」論より動くもの.fm 出張版",
+            "titleKey": "sessions.stores",
             "speaker": "STORES株式会社 藤村大介、wattanx / ワッタン",
             "speakerKey": "speakers.daisuke_fujimura.with_wattanx",
             "sponsorSession": "cloudsign"
@@ -127,6 +131,7 @@
             "subTitle": "12:55 - 13:15",
             "category": "special-lunch",
             "title": "Vue.js プロジェクト設計のベストプラクティスを求めて",
+            "titleKey": "sessions.mntsq",
             "speaker": "MNTSQ株式会社 安積 洋",
             "speakerKey": "speakers.hiroshi_azumi.name",
             "sponsorSession": "cloudsign"
@@ -145,7 +150,8 @@
             "id": "medpeer",
             "subTitle": "12:30 - 12:50",
             "category": "special-lunch",
-            "title": "Vue 2 の EOL まで二ヶ月ですが進捗どうですか？",
+            "title": "Vue2のEOLまで二ヶ月ですが進捗どうですか？",
+            "titleKey": "sessions.medpeer",
             "speaker": "メドピア株式会社 小林 和弘",
             "speakerKey": "speakers.kazuhiro_kobayashi.name",
             "sponsorSession": "medpeer"
@@ -163,7 +169,8 @@
             "id": "hacomono",
             "subTitle": "12:20 - 12:40",
             "category": "special-lunch",
-            "title": "Nuxt 3 ではじめるテスト導入戦略と初手",
+            "title": "Nuxt3ではじめるテスト導入戦略と初手",
+            "titleKey": "sessions.hacomono",
             "speaker": "株式会社hacomono 野崎 才門",
             "speakerKey": "speakers.saimon_nozaki.name",
             "sponsorSession": "m3"
@@ -171,7 +178,8 @@
           {
             "id": "mew-ton",
             "subTitle": "12:45 - 13:15",
-            "title": "Nuxt2 から 3 へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話",
+            "title": "Nuxt2から3へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話",
+            "titleKey": "sessions.mew_ton",
             "speaker": "みゅーとん / mew-ton"
           }
         ]
@@ -188,7 +196,8 @@
             "id": "coconala",
             "subTitle": "12:30 - 12:40",
             "category": "lunch",
-            "title": "OpenAI API を Nuxt.js に入れてみた的な話",
+            "title": "OpenAI APIをNuxt.jsに入れてみた的な話",
+            "titleKey": "sessions.coconala",
             "speaker": "株式会社ココナラ 市原 雄太",
             "speakerKey": "speakers.yuta_ichihara.name",
             "sponsorSession": "vue"
@@ -226,23 +235,27 @@
           },
           {
             "id": "t0yohei",
-            "title": "Vue を使って Grid System を実装した話",
+            "title": "Vueを使ってGrid Systemを実装した話",
+            "titleKey": "sessions.t0yohei",
             "speaker": "t0yohei / トヨヘイ"
           },
           {
             "id": "northprint",
             "title": "WebGISとVue.jsの親和性について",
+            "titleKey": "sessions.tetsuhiro_narayama",
             "speaker": "楢山 哲弘",
             "speakerKey": "speakers.tetsuhiro_narayama"
           },
           {
             "id": "kira-puka",
             "title": "Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう",
+            "titleKey": "sessions.kira_puka",
             "speaker": "きらぷか / kira-puka"
           },
           {
             "id": "yud0uhu",
             "title": "Vue3/Electronで自作したマークダウンエディタをVue3/Tauriにリプレイスした話",
+            "titleKey": "sessions.yud0uhu",
             "speaker": "0yu / オユ"
           }
         ]
@@ -252,7 +265,8 @@
         "sessions": [
           {
             "id": "yamanoku",
-            "title": "画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法",
+            "title": "画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法",
+            "titleKey": "sessions.yamanoku",
             "speaker": "やまのく"
           }
         ]
@@ -294,6 +308,7 @@
           {
             "id": "baseballyama",
             "title": "18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法",
+            "titleKey": "sessions.baseballyama",
             "speaker": "山下 裕一朗",
             "speakerKey": "speakers.baseballyama.name"
           }
@@ -305,6 +320,7 @@
           {
             "id": "chocodogmagic",
             "title": "Nuxt 3でJamstackテンプレートを作るときの考え方",
+            "titleKey": "sessions.chocodogmagic",
             "speaker": "まぁし（知念）"
           }
         ]
@@ -345,7 +361,8 @@
         "sessions": [
           {
             "id": "wattanx",
-            "title": "Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜",
+            "title": "Demystifying Nuxt Bridge 〜 あなたがまだ見ぬ可能性とその活用法 〜",
+            "titleKey": "sessions.wattanx",
             "speaker": "wattanx / ワッタン"
           }
         ]
@@ -355,7 +372,8 @@
         "sessions": [
           {
             "id": "mizdra",
-            "title": "Vue Language Server から生まれた Volar.js と、それが秘める可能性",
+            "title": "Vue Language Serverから生まれたVolar.jsと、それが秘める可能性",
+            "titleKey": "sessions.mizdra",
             "speaker": "mizdra / ミズドラ"
           }
         ]
@@ -409,12 +427,14 @@
           },
           {
             "id": "53able",
-            "title": "SOLID 原則に基づくSFC 実装",
+            "title": "SOLID原則に基づくSFC実装",
+            "titleKey": "sessions._53able",
             "speaker": "53able / ゴー"
           },
           {
             "id": "fuqda",
             "title": "Composition API時代のPub/Subパターンでの状態管理",
+            "titleKey": "sessions.fuqda",
             "speaker": "fuqda / フクダ"
           },
           {
@@ -424,7 +444,8 @@
           },
           {
             "id": "hitoki-wakugawa",
-            "title": "フルスクラッチECの基盤であるNuxt2を3に移行し、開発の効率性とパフォーマンスを高める",
+            "title": "フルスクラッチECの基盤であるNuxt 2を3に移行し、開発の効率性とパフォーマンスを高める",
+            "titleKey": "sessions.hitoki_wakugawa",
             "speaker": "湧川 仁貴 / Hitoki Wakugawa",
             "speakerKey": "speakers.hitoki_wakugawa.name"
           }
@@ -478,6 +499,7 @@
           {
             "id": "sapphi-red",
             "title": "マルチスレッドフレンドリーなJavaScriptを求めて",
+            "titleKey": "sessions.sapphi_red",
             "speaker": "翠 / sapphi-red"
           }
         ]
@@ -488,6 +510,7 @@
           {
             "id": "sorami",
             "title": "Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に",
+            "titleKey": "sessions.sorami",
             "speaker": "sorami / ソラミ"
           }
         ]
@@ -544,7 +567,8 @@
         "sessions": [
           {
             "id": "ota-meshi",
-            "title": "eslint-plugin-vue の現状と今後",
+            "title": "eslint-plugin-vueの現状と今後",
+            "titleKey": "sessions.ota_meshi",
             "speaker": "太田 洋介 / ota-meshi"
           }
         ]
@@ -555,6 +579,7 @@
           {
             "id": "keima",
             "title": "STUDIOの作り方 2023 ver.",
+            "titleKey": "sessions.keima",
             "speaker": "甲斐 啓真 / Keima"
           }
         ]

@@ -123,6 +123,7 @@ export type Speaker = {
 
 export type Session = {
   title: string
+  titleKey?: string
   type: 'main' | 'lt'
   track?: Tracks
   time: string

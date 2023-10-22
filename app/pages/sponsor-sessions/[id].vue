@@ -129,7 +129,11 @@ useHead({
     </section>
     <section class="detailbody">
       <h2 class="detailbody-title">
-        {{ sponsorSpeakerData.session.title || 'セッション' }}
+        {{
+          sponsorSpeakerData.session.titleKey
+            ? $t(sponsorSpeakerData.session.titleKey)
+            : sponsorSpeakerData.session.title || 'セッション'
+        }}
       </h2>
       <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/head`" />

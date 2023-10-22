@@ -97,6 +97,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'マルチスレッドフレンドリーなJavaScriptを求めて',
+      titleKey: 'sessions.sapphi_red',
       track: 'medpeer',
       time: '16:30 - 17:00',
       type: 'main',
@@ -115,7 +116,8 @@ export const speakers: Speaker[] = [
     id: 'ota-meshi',
     type: 'domestic',
     session: {
-      title: 'eslint-plugin-vue の現状と今後',
+      title: 'eslint-plugin-vueの現状と今後',
+      titleKey: 'sessions.ota_meshi',
       track: 'medpeer',
       time: '17:15 - 17:45',
       type: 'main',
@@ -133,7 +135,8 @@ export const speakers: Speaker[] = [
     id: 'wattanx',
     type: 'domestic',
     session: {
-      title: 'Demystifying Nuxt Bridge〜あなたがまだ見ぬ可能性とその活用法〜',
+      title: 'Demystifying Nuxt Bridge 〜 あなたがまだ見ぬ可能性とその活用法 〜',
+      titleKey: 'sessions.wattanx',
       track: 'medpeer',
       time: '15:00 - 15:30',
       type: 'main',
@@ -152,6 +155,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue.jsと3D可視化 - 産総研のOSS「AIST 3DDB Client」を例に',
+      titleKey: 'sessions.sorami',
       track: 'm3',
       time: '16:30 - 17:00',
       type: 'main',
@@ -169,7 +173,8 @@ export const speakers: Speaker[] = [
     id: 'mizdra',
     type: 'domestic',
     session: {
-      title: 'Vue Language Server から生まれた Volar.js と、それが秘める可能性',
+      title: 'Vue Language Serverから生まれたVolar.jsと、それが秘める可能性',
+      titleKey: 'sessions.mizdra',
       track: 'm3',
       time: '15:00 - 15:30',
       type: 'main',
@@ -205,7 +210,8 @@ export const speakers: Speaker[] = [
     id: 'yamanoku',
     type: 'domestic',
     session: {
-      title: '画面遷移から考える Nuxt アプリケーションをアクセシブルにする方法',
+      title: '画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法',
+      titleKey: 'sessions.yamanoku',
       track: 'm3',
       time: '13:30 - 14:00',
       type: 'main',
@@ -242,6 +248,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Nuxt 3でJamstackテンプレートを作るときの考え方',
+      titleKey: 'sessions.chocodogmagic',
       track: 'm3',
       time: '14:15 - 14:45',
       type: 'main',
@@ -259,6 +266,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'STUDIOの作り方 2023 ver.',
+      titleKey: 'sessions.keima',
       track: 'm3',
       time: '17:15 - 17:45',
       type: 'main',
@@ -276,6 +284,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: '18営業日で350コンポーネント規模のVueアプリにデザインシステムを導入する方法',
+      titleKey: 'sessions.baseballyama',
       track: 'medpeer',
       time: '14:15 - 14:45',
       type: 'main',
@@ -297,6 +306,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Nuxt3のモジュール開発は意外と簡単？ Module Author Guideをのぞいてみよう',
+      titleKey: 'sessions.kira_puka',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -315,6 +325,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'WebGISとVue.jsの親和性について',
+      titleKey: 'sessions.tetsuhiro_narayama',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -333,7 +344,8 @@ export const speakers: Speaker[] = [
     id: 't0yohei',
     type: 'domestic',
     session: {
-      title: 'Vue を使って Grid System を実装した話',
+      title: 'Vueを使ってGrid Systemを実装した話',
+      titleKey: 'sessions.t0yohei',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -352,6 +364,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Vue3/Electronで自作したマークダウンエディタをVue3/Tauriにリプレイスした話',
+      titleKey: 'sessions.yud0uhu',
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
@@ -369,7 +382,8 @@ export const speakers: Speaker[] = [
     id: '53able',
     type: 'domestic',
     session: {
-      title: 'SOLID 原則に基づくSFC 実装',
+      title: 'SOLID原則に基づくSFC実装',
+      titleKey: 'sessions._53able',
       track: 'medpeer',
       time: '15:45 - 16:15',
       type: 'lt',
@@ -389,6 +403,7 @@ export const speakers: Speaker[] = [
     type: 'domestic',
     session: {
       title: 'Composition API時代のPub/Subパターンでの状態管理',
+      titleKey: 'sessions.fuqda',
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',
@@ -408,6 +423,7 @@ export const speakers: Speaker[] = [
     session: {
       title:
         'Nuxt2 から 3 へマイグレーションする方法考えてたら、マイクロフロントエンドのフレームワークができた話',
+      titleKey: 'sessions.mew_ton',
       track: 'm3',
       time: '12:45 - 13:15',
       type: 'lt',
@@ -444,7 +460,8 @@ export const speakers: Speaker[] = [
     id: 'hitoki-wakugawa',
     type: 'domestic',
     session: {
-      title: 'フルスクラッチECの基盤であるNuxt2を3に移行し、開発の効率性とパフォーマンスを高める',
+      title: 'フルスクラッチECの基盤であるNuxt 2を3に移行し、開発の効率性とパフォーマンスを高める',
+      titleKey: 'sessions.hitoki_wakugawa',
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',

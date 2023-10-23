@@ -376,6 +376,8 @@ const individual: string[] = [
   'みっちー',
   'うめのこ',
   'kzhrk',
+  'kobeshanks',
+  'Zeals',
 ]
 
 export {

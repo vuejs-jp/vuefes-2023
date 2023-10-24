@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EventCard from '~/components/event/EventCard.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import MarkDownText from '~/components/MarkDownText.vue'
 import CommentTitle from '~/components/CommentTitle.vue'
@@ -48,70 +49,47 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
       <h3>{{ $t('top.various_other_events') }}</h3>
     </div>
     <div class="event-menu">
-      <div class="event-card">
-        <img
-          width="690"
-          height="388"
-          :alt="`${$t('top.refreshment')} supported by giftee, HENNGE, TAM`"
-          src="/event/refreshment_space.png"
-          decoding="async"
-        />
-        <div class="title">
+      <EventCard
+        src="/event/refreshment_space.png"
+        :alt="`${$t('top.refreshment')} supported by giftee, HENNGE, TAM`"
+      >
+        <template #title>
           {{ $t('top.refreshment') }}
           <br />
           supported by giftee, HENNGE, TAM
-        </div>
-        <div class="description">
+        </template>
+        <template #description>
           {{ $t('top.refreshment_explain') }}
-        </div>
-      </div>
-      <div class="event-card">
-        <img
-          width="690"
-          height="388"
-          :alt="$t('top.creative_wall')"
-          src="/event/creative_wall.png"
-          decoding="async"
-        />
-        <div class="title">
+        </template>
+      </EventCard>
+      <EventCard src="/event/creative_wall.png" :alt="$t('top.creative_wall')">
+        <template #title>
           {{ $t('top.creative_wall') }}
-        </div>
-        <div class="description">
+        </template>
+        <template #description>
           {{ $t('top.creative_wall_explain') }}
-        </div>
-      </div>
-      <div class="event-card">
-        <img
-          width="690"
-          height="388"
-          :alt="$t('top.events_handson')"
-          src="/event/hands_on.png"
-          decoding="async"
-        />
-        <div class="title">
+        </template>
+      </EventCard>
+      <EventCard src="/event/hands_on.png" :alt="`${$t('top.events_handson')}`">
+        <template #title>
           {{ $t('top.events_handson') }}
-        </div>
-        <i18n-t keypath="top.events_handson_explain" tag="div" class="description" scope="global">
-          <nuxt-link to="/#handson" :title="$t('top.events_handson_about')">
-            {{ $t('top.events_handson_about') }}
-          </nuxt-link>
-        </i18n-t>
-      </div>
-      <div class="event-card">
-        <img
-          width="690"
-          height="388"
-          :alt="$t('top.tattoo_space')"
-          src="/event/tattoo_space.png"
-          decoding="async"
-        />
-        <div class="title">
+        </template>
+        <template #description>
+          <i18n-t keypath="top.events_handson_explain" tag="div" scope="global">
+            <nuxt-link to="/#handson" :title="$t('top.events_handson_about')">
+              {{ $t('top.events_handson_about') }}
+            </nuxt-link>
+          </i18n-t>
+        </template>
+      </EventCard>
+      <EventCard src="/event/tattoo_space.png" :alt="`${$t('top.tattoo_space')}`">
+        <template #title>
           {{ $t('top.tattoo_space') }}
-        </div>
-        <div class="description">
+        </template>
+        <template #description>
           {{ $t('top.tattoo_space_explain') }}
-        </div>
-      </div>
+        </template>
+      </EventCard>
     </div>
   </div>
 </template>
@@ -153,30 +131,6 @@ css({
     gap: '2em',
     justifyContent: 'center',
   },
-  '.event-card': {
-    '--img-size': '475px',
-    maxWidth: '475px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.6em',
-    '.title': {
-      fontWeight: 'bold',
-      fontSize: '22px',
-      whiteSpace: 'pre-wrap',
-      lineHeight: '1.2',
-    },
-    '.description': {
-      fontSize: '16px',
-      '::v-deep(a)': {
-        color: '{color.vue.green}',
-        textDecoration: 'underline',
-        '&:hover': {
-          opacity: 0.4,
-          transition: '.2s',
-        },
-      },
-    },
-  },
   '.event-title': {
     display: 'grid',
     gap: 'calc({space.8} * 3)',
@@ -192,13 +146,25 @@ css({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  '.teams': {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '32px',
+    maxWidth: '988px',
+    margin: '0 auto',
+    '@tablet': {
+      maxWidth: '760px',
+    },
+    '@mobile': {
+      gap: '4vw',
+    },
+  },
   '@tablet': {
     '.explain': {
       maxWidth: '730px',
     },
-    '.event-card': {
-      '--img-size': '368px',
-      maxWidth: '368px',
+    '.teams': {
+      maxWidth: '760px',
     },
   },
   '@mobile': {
@@ -214,27 +180,7 @@ css({
     '.explain': {
       maxWidth: '690px',
     },
-    '.event-card': {
-      '--img-size': '690px',
-      maxWidth: '690px',
-      '.title': {
-        fontSize: '16px',
-      },
-      '.description': {
-        marginTop: 'calc({space.8} * 1)',
-      },
-    },
-  },
-  '.teams': {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '32px',
-    maxWidth: '988px',
-    margin: '0 auto',
-    '@tablet': {
-      maxWidth: '760px',
-    },
-    '@mobile': {
+    '.teams': {
       gap: '4vw',
     },
   },

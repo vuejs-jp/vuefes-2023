@@ -130,7 +130,7 @@ export default {
       various_other_events: 'その他の各種イベント',
       medpeer_hacomono_mntsq_event_title: 'kazuponさん登壇！Vue Fes Japan 2023 After Meetup',
       medpeer_hacomono_mntsq_event_detail:
-        'Vue.js 日本ユーザーグループ代表の kazupon さんを特別ゲストとして迎え、セッションやパネルディスカッションを行います。',
+        'Vue Fes Japan 2023 のアフターイベントとして、メドピア株式会社、MNTSQ株式会社、及び株式会社hacomonoが合同でイベントを開催します。 Vue.js 日本ユーザーグループ代表の kazupon さんを特別ゲストとして迎え、セッションやパネルディスカッションを行います。 5年ぶりのオフラインでの開催となる Vue Fes Japan 2023 の感想や思い出を語り合いましょう！',
       /**
        * ticket section
        */
@@ -539,7 +539,7 @@ export default {
       medpeer_hacomono_mntsq_event_title:
         'kazupon will be speaking at Vue Fes Japan 2023 After Meetup!',
       medpeer_hacomono_mntsq_event_detail:
-        'We will have a session and panel discussion with kazupon, the representative of Vue.js Japan User Group, as a special guest.',
+        "Medpeer, Inc., MNTSQ, LTD. and hacomono, Inc. will hold a joint event as an after event of Vue Fes Japan 2023. Vue.js Japan User Group Representative, Mr. Kazupon, will be a special guest at the event, which will include sessions and panel discussions. Let's discuss your thoughts and memories of Vue Fes Japan 2023, the first offline event in 5 years!",
       /**
        * ticket section
        */

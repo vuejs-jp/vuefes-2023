@@ -1,1 +1,1 @@
-Medpeer, Inc., MNTSQ, LTD. and hacomono, Inc. will hold a joint event as an after event of Vue Fes Japan 2023. Vue.js Japan User Group Representative, Mr. Kazupon, will be a special guest at the event, which will include sessions and panel discussions. Let's discuss your thoughts and memories of Vue Fes Japan 2023, the first offline event in 5 years!
+Only sponsors are possible to hold events related to Vue Fes Japan 2023.

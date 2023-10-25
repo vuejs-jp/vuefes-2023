@@ -36,11 +36,13 @@ useHead({
       <div class="event-menu">
         <EventCard
           src="/event/after-event/medpeer-hacomono-mntsq.png"
-          :alt="`Vue Fes Japan 2023 After Meetup`"
+          :alt="$t('top.medpeer_hacomono_mntsq_event_title')"
           register-url="https://medpeer.connpass.com/event/297734/"
           :register-text="$t('words.attendee_register')"
         >
-          <template #title> Vue Fes Japan 2023 After Meetup </template>
+          <template #title>
+            {{ $t('top.medpeer_hacomono_mntsq_event_title') }}
+          </template>
           <template #description>
             {{ $t('top.medpeer_hacomono_mntsq_event_detail') }}
           </template>

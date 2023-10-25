@@ -128,6 +128,7 @@ export default {
       events_panel_discussion: 'パネルディスカッション',
       panelist: 'パネラー',
       various_other_events: 'その他の各種イベント',
+      medpeer_hacomono_mntsq_event_title: 'kazuponさん登壇！Vue Fes Japan 2023 After Meetup',
       medpeer_hacomono_mntsq_event_detail:
         'Vue.js 日本ユーザーグループ代表の kazupon さんを特別ゲストとして迎え、セッションやパネルディスカッションを行います。',
       /**
@@ -535,6 +536,8 @@ export default {
       events_panel_discussion: 'Panel Discussion',
       panelist: 'Panelist',
       various_other_events: 'Various Other Events',
+      medpeer_hacomono_mntsq_event_title:
+        'kazupon will be speaking at Vue Fes Japan 2023 After Meetup!',
       medpeer_hacomono_mntsq_event_detail:
         'We will have a session and panel discussion with kazupon, the representative of Vue.js Japan User Group, as a special guest.',
       /**

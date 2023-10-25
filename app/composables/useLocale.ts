@@ -29,6 +29,7 @@ export function useLocale(path: Path) {
       .with('volunteer', () => `/${locale.value}/top/volunteer`)
       .with('childcare', () => `/${locale.value}/top/childcare`)
       .with('handson', () => `/${locale.value}/top/handson`)
+      .with('related-events', () => `/${locale.value}/top/related-events`)
       .with('privacy', () => `/${locale.value}/privacy`)
       .with('code-of-conduct', () => `/${locale.value}/code-of-conduct`)
       .with('personal-sponsors-text1', () => `/${locale.value}/top/personal-sponsors-text1`)

@@ -29,6 +29,8 @@ export default {
       save_image: '画像を保存',
       add_to_calendar: 'カレンダーに追加',
       re_edit: '再編集',
+      attendee_register: '参加者登録',
+      events: '関連イベント',
       namecard: 'ネームカード',
       start_registration: '開場・受付',
       opening: 'オープニング',
@@ -126,6 +128,8 @@ export default {
       events_panel_discussion: 'パネルディスカッション',
       panelist: 'パネラー',
       various_other_events: 'その他の各種イベント',
+      medpeer_hacomono_mntsq_event_detail:
+        'Vue.js 日本ユーザーグループ代表の kazupon さんを特別ゲストとして迎え、セッションやパネルディスカッションを行います。',
       /**
        * ticket section
        */
@@ -431,6 +435,8 @@ export default {
       save_image: 'Save Image',
       add_to_calendar: 'Add to Calendar',
       re_edit: 'Re-Edit',
+      attendee_register: 'Attendee Register',
+      events: 'Related Events',
       namecard: 'Name Card',
       start_registration: 'Doors Open, Registration Begins',
       opening: 'Opening',
@@ -529,6 +535,8 @@ export default {
       events_panel_discussion: 'Panel Discussion',
       panelist: 'Panelist',
       various_other_events: 'Various Other Events',
+      medpeer_hacomono_mntsq_event_detail:
+        'We will have a session and panel discussion with kazupon, the representative of Vue.js Japan User Group, as a special guest.',
       /**
        * ticket section
        */

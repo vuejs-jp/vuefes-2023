@@ -31,7 +31,9 @@ const props = defineProps({
       <slot name="description" />
     </div>
     <div v-if="registerUrl && registerText" class="register">
-      <RoundButton :href="registerUrl">{{ registerText }}</RoundButton>
+      <RoundButton :href="registerUrl" target="_blank" rel="noreferrer">
+        {{ registerText }}
+      </RoundButton>
     </div>
   </div>
 </template>

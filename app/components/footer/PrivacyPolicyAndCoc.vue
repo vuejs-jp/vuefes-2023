@@ -13,6 +13,13 @@ const { locale } = useLocaleCurrent()
 <template>
   <div class="doc-root">
     <TextButton
+      :to="`${locale === 'ja' ? '/' : `/${locale}/`}events`"
+      underline
+      @click.stop="$emit('on-click')"
+    >
+      {{ $t('words.events') }}
+    </TextButton>
+    <TextButton
       :to="`${locale === 'ja' ? '/' : `/${locale}/`}privacy`"
       underline
       @click.stop="$emit('on-click')"

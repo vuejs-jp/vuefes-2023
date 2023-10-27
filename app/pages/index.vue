@@ -20,17 +20,17 @@ useHead({
   <main>
     <NavPageSectionContainer />
     <TopPageSection />
-    <MessagePageSection />
-    <SpeakerPageSection />
     <template v-if="showTimetable">
       <TimetablePageSection />
     </template>
+    <SpeakerPageSection />
     <EventPageSection />
     <template v-if="canPurchase">
-      <TicketPageSection />
       <AccessSection />
+      <TicketPageSection />
     </template>
     <SponsorPageSection />
+    <MessagePageSection />
     <FormPageSection />
     <TeamPageSection />
     <FooterPageSection />

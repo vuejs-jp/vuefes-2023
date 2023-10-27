@@ -81,6 +81,7 @@ const components = computed<ImageList>(() => getImageListByDevice(device.value))
       <TwitterButton />
     </div>
   </div>
+  <VoiceAudioSpectrum />
 </template>
 
 <style lang="ts" scoped>

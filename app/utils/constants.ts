@@ -6,21 +6,21 @@ export type NavLink = {
 }
 
 export const navLinks: NavLink[] = [
-  { text: 'Message', link: '/#message' },
   { text: 'Speakers', link: '/#speakers' },
   { text: 'Sponsors', link: '/#sponsors' },
+  { text: 'Message', link: '/#message' },
   { text: 'Contact', link: '/#form' },
 ]
 
 export const navFullLinks = (showTimetable: boolean) =>
   [
-    { text: 'Message', link: '/#message' },
-    { text: 'Speakers', link: '/#speakers' },
     ...[showTimetable ? { text: 'Time table', link: '/#timetable' } : undefined],
+    { text: 'Speakers', link: '/#speakers' },
     { text: 'Events', link: '/#events' },
-    { text: 'Ticket', link: '/#ticket' },
     { text: 'Access', link: '/#access' },
+    { text: 'Ticket', link: '/#ticket' },
     { text: 'Sponsors', link: '/#sponsors' },
+    { text: 'Message', link: '/#message' },
     { text: 'Contact', link: '/#form' },
   ].filter((l) => {
     return l !== undefined

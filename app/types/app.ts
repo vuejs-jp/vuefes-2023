@@ -28,6 +28,7 @@ export type Path =
   | 'event'
   | 'event-vuejs-clinic'
   | 'event-panel-discussion'
+  | 'related-events'
   | 'privacy'
   | 'code-of-conduct'
   | string

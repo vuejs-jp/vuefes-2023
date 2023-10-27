@@ -29,6 +29,8 @@ export default {
       save_image: '画像を保存',
       add_to_calendar: 'カレンダーに追加',
       re_edit: '再編集',
+      attendee_register: '参加者登録',
+      events: '関連イベント',
       namecard: 'ネームカード',
       start_registration: '開場・受付',
       opening: 'オープニング',
@@ -126,6 +128,9 @@ export default {
       events_panel_discussion: 'パネルディスカッション',
       panelist: 'パネラー',
       various_other_events: 'その他の各種イベント',
+      medpeer_hacomono_mntsq_event_title: 'kazuponさん登壇！Vue Fes Japan 2023 After Meetup',
+      medpeer_hacomono_mntsq_event_detail:
+        'Vue Fes Japan 2023 のアフターイベントとして、メドピア株式会社、MNTSQ株式会社、及び株式会社hacomonoが合同でイベントを開催します。 Vue.js 日本ユーザーグループ代表の kazupon さんを特別ゲストとして迎え、セッションやパネルディスカッションを行います。 5年ぶりのオフラインでの開催となる Vue Fes Japan 2023 の感想や思い出を語り合いましょう！',
       /**
        * ticket section
        */
@@ -431,6 +436,8 @@ export default {
       save_image: 'Save Image',
       add_to_calendar: 'Add to Calendar',
       re_edit: 'Re-Edit',
+      attendee_register: 'Attendee Register',
+      events: 'Related Events',
       namecard: 'Name Card',
       start_registration: 'Doors Open, Registration Begins',
       opening: 'Opening',
@@ -529,6 +536,10 @@ export default {
       events_panel_discussion: 'Panel Discussion',
       panelist: 'Panelist',
       various_other_events: 'Various Other Events',
+      medpeer_hacomono_mntsq_event_title:
+        'kazupon will be speaking at Vue Fes Japan 2023 After Meetup!',
+      medpeer_hacomono_mntsq_event_detail:
+        "Medpeer, Inc., MNTSQ, LTD. and hacomono, Inc. will hold a joint event as an after event of Vue Fes Japan 2023. Vue.js Japan User Group Representative, Mr. Kazupon, will be a special guest at the event, which will include sessions and panel discussions. Let's discuss your thoughts and memories of Vue Fes Japan 2023, the first offline event in 5 years!",
       /**
        * ticket section
        */

@@ -60,6 +60,7 @@ css({
   },
   '@mobile': {
     '.doc-root': {
+      flexDirection: 'column',
       'a': {
         textDecoration: 'none',
       },

@@ -73,5 +73,10 @@ css({
     width: '40px',
     height: '40px',
   },
+  '@mobile': {
+    '.contact-root': {
+      padding: 'calc({space.8} * 2) 0'
+    },
+  },
 })
 </style>

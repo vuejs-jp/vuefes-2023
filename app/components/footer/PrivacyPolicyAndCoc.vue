@@ -60,6 +60,8 @@ css({
   },
   '@mobile': {
     '.doc-root': {
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
       flexDirection: 'column',
       'a': {
         textDecoration: 'none',

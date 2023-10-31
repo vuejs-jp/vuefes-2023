@@ -183,6 +183,14 @@ css({
     marginTop: 'calc({space.8} * 4)',
     color: '#292C33',
     gap: 'calc({space.8} * 5)',
+    '::v-deep(a)': {
+      color: '{color.vue.green}',
+      textDecoration: 'underline',
+      '&:hover': {
+        opacity: 0.4,
+        transition: '.2s',
+      },
+    },
   },
   '.detailhead-left': {
     position: 'relative',

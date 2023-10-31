@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import IconButton from '~/components/social/IconButton.vue'
 import { useSession } from '~/composables/useSession'
-import { Session } from '~/types/timetable'
 import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
+import { Session } from '~/types/timetable'
+import SlideSvg from '~/assets/logo/slide_logo.svg'
+import YouTubeSvg from '~/assets/logo/youtube_logo.svg'
 
 const { locale } = useLocaleCurrent()
 
@@ -92,6 +95,22 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
       </component>
       <div v-if="session.speaker" class="speaker">
         {{ session.speakerKey ? $t(session.speakerKey) : session.speaker }}
+      </div>
+      <div class="archives">
+        <IconButton v-if="session.archives?.slide" :url="session.archives?.slide" title="Slide URL">
+          <div class="slide">
+            <SlideSvg />
+          </div>
+        </IconButton>
+        <IconButton
+          v-if="session.archives?.youtube"
+          :url="session.archives?.youtube"
+          title="YouTube URL"
+        >
+          <div class="youtube">
+            <YouTubeSvg />
+          </div>
+        </IconButton>
       </div>
     </div>
   </td>
@@ -188,6 +207,35 @@ css({
       },
       '&:last-child': {
         marginBottom: '0',
+      },
+    },
+  },
+  '.archives': {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    gap: 'calc({space.8} * 1)',
+    fontSize: 'calc(11*{fontSize.base})',
+    fontWeight: '500',
+  },
+  '.slide': {
+    width: '40px',
+    height: '40px',
+    '::v-deep(svg)': {
+      fill: '{color.vue.blue}',
+      '&:hover': {
+        opacity: 0.6,
+        transition: '.2s',
+      },
+    },
+  },
+  '.youtube': {
+    width: '40px',
+    height: '35.46px',
+    '::v-deep(svg)': {
+      fill: '{color.vue.blue}',
+      '&:hover': {
+        opacity: 0.6,
+        transition: '.2s',
       },
     },
   },

@@ -8,6 +8,7 @@ export interface Session {
   titleKey?: string
   speaker?: string
   speakerKey?: string
+  archives?: Archive
   subTitle?: string
   sponsorSession?: string
   isTranslation?: boolean
@@ -19,4 +20,9 @@ export interface Track {
   rowspan?: number
   isClose?: boolean
   sessions?: Session[]
+}
+
+export interface Archive {
+  slide?: string
+  youtube?: string
 }

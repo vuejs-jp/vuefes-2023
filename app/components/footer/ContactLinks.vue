@@ -75,7 +75,7 @@ css({
   },
   '@mobile': {
     '.contact-root': {
-      padding: 'calc({space.8} * 2) 0'
+      padding: 'calc({space.8} * 2) 0',
     },
   },
 })

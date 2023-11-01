@@ -128,6 +128,7 @@ export type Session = {
   type: 'main' | 'lt'
   track?: Tracks
   time: string
+  archives?: Archive
 }
 
 export type SpeakerProfile = {
@@ -140,6 +141,11 @@ export type SpeakerProfile = {
   githubId?: string
   twitterId?: string
   mastodonUrl?: string
+}
+
+export interface Archive {
+  slide?: string
+  youtube?: string
 }
 
 /**

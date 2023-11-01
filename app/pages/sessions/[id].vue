@@ -8,6 +8,7 @@ import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { speakers } from '~/utils/speakers.constants'
+import SlideSvg from '~/assets/logo/slide_logo.svg'
 
 const { locale } = useLocaleCurrent()
 const { showSpeakerInfo, getTrackColor } = useSession()
@@ -87,6 +88,17 @@ useHead({
       <div class="detailbody-explain">
         <MarkDownText :path="`sessions/${speakerData.id}/head`" />
       </div>
+      <NuxtLink
+        v-if="speakerData.session.archives?.slide"
+        :to="speakerData.session.archives?.slide"
+        target="_blank"
+        class="detailbody-slide"
+      >
+        <span class="slide-icon">
+          <SlideSvg />
+        </span>
+        <span class="slide-title">発表資料</span>
+      </NuxtLink>
       <div class="detailbody-persons">
         <SpeakerCard :speaker="speakerData" />
         <div class="person-info">
@@ -161,6 +173,28 @@ css({
         },
       },
     },
+  },
+  '.detailbody-slide': {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 'calc({space.8} * 1)',
+    width: 'fit-content',
+    margin: '-40px 0 calc({space.8} * 8)',
+    '&:hover': {
+      opacity: 0.8,
+      transition: '.2s',
+    },
+  },
+  '.slide-icon': {
+    width: '40px',
+    height: '40px',
+    '::v-deep(svg)': {
+      fill: '{color.vue.blue}',
+    },
+  },
+  '.slide-title': {
+    color: '{color.vue.blue}',
+    textDecoration: 'underline',
   },
   '.detailbody-persons': {
     fontSize: 'calc(18*{fontSize.base})',

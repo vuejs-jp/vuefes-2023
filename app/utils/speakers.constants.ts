@@ -101,6 +101,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '16:30 - 17:00',
       type: 'main',
+      archives: {
+        slide: 'https://vue-fes-japan-2023-multithread-slide.sapphi.red/1',
+      },
     },
     profile: {
       image: 'speakers/sapphi_red.png',
@@ -121,6 +124,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '17:15 - 17:45',
       type: 'main',
+      archives: {
+        slide: 'https://ota-meshi.github.io/vue-fes-japan-2023-slide/1',
+      },
     },
     profile: {
       image: 'speakers/ota-meshi.jpg',
@@ -140,6 +146,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '15:00 - 15:30',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/wattanx/demystifying-nuxt-bridge',
+      },
     },
     profile: {
       image: 'speakers/wattanx.png',
@@ -159,6 +168,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '16:30 - 17:00',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/sorami/vue-fes-japan-2023',
+      },
     },
     profile: {
       image: 'speakers/sorami.png',
@@ -178,6 +190,10 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '15:00 - 15:30',
       type: 'main',
+      archives: {
+        slide:
+          'https://speakerdeck.com/mizdra/vue-language-server-karasheng-mareta-volar-dot-js-to-soregami-meruke-neng-xing',
+      },
     },
     profile: {
       image: 'speakers/mizdra.png',
@@ -196,6 +212,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '15:45 - 16:15',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/nozomuikuta/deep-dive-to-unjs-and-nuxt-3',
+      },
     },
     profile: {
       image: 'speakers/nozomu_ikuta.png',
@@ -215,6 +234,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '13:30 - 14:00',
       type: 'main',
+      archives: {
+        slide: 'https://yamanoku.net/vuefes-japan-2023/ja/',
+      },
     },
     profile: {
       image: 'speakers/yamanoku.png',
@@ -252,6 +274,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '14:15 - 14:45',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/chinen/vue-fes-japan-2023',
+      },
     },
     profile: {
       image: 'speakers/chocodogmagic.jpg',
@@ -270,6 +295,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '17:15 - 17:45',
       type: 'main',
+      archives: {
+        slide: 'https://docs.google.com/presentation/d/1sVPisJofs18G8WUitn4l53s-mXFLRTs2Q4F0hqFqS5A/edit#slide=id.p',
+      },
     },
     profile: {
       image: 'speakers/keima.jpg',
@@ -288,6 +316,10 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '14:15 - 14:45',
       type: 'main',
+      archives: {
+        slide:
+          'https://speakerdeck.com/baseballyama/vue-fes-2023-18ying-ye-ri-de350konponentogui-mo-novueapurinidezainsisutemuwodao-ru-surufang-fa',
+      },
     },
     profile: {
       image: 'speakers/baseballyama.jpeg',
@@ -310,6 +342,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
+      archives: {
+        slide: 'https://www.docswell.com/s/kira_puka/ZRXM6E-2023-10-25-064822',
+      },
     },
     profile: {
       image: 'speakers/kira_puka.png',
@@ -329,6 +364,10 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
+      archives: {
+        slide:
+          'https://docs.google.com/presentation/d/1KwLPyFLE0J3W9BwFmROHtgG0qQbGdYCnbEXjuJTYpJ4/edit#slide=id.g24fad336807_0_0',
+      },
     },
     profile: {
       image: 'speakers/northprint.png',
@@ -349,6 +388,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
+      archives: {
+        slide: 'https://speakerdeck.com/t0yohei/vue-woshi-tute-grid-system-woshi-zhuang-sitahua',
+      },
     },
     profile: {
       image: 'speakers/t0yohei.jpg',
@@ -368,6 +410,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '13:30 - 14:00',
       type: 'lt',
+      archives: {
+        slide: 'https://speakerdeck.com/yud0uhu/tauriniripureisusitahua',
+      },
     },
     profile: {
       image: 'speakers/yud0uhu.jpg',
@@ -387,6 +432,9 @@ export const speakers: Speaker[] = [
       track: 'medpeer',
       time: '15:45 - 16:15',
       type: 'lt',
+      archives: {
+        slide: 'https://slides-one.vercel.app/1?clicks=1',
+      },
     },
     profile: {
       image: 'speakers/53able.png',
@@ -407,6 +455,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',
+      archives: {
+        slide: 'https://speakerdeck.com/fuqda/subpatandenozhuang-tai-guan-li',
+      },
     },
     profile: {
       image: 'speakers/fuqda.png',
@@ -427,6 +478,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '12:45 - 13:15',
       type: 'lt',
+      archives: {
+        slide: 'https://tome.app/mewton-8cb/vue-fes-2023-clnjmh8ez0044l77dwardvtga',
+      },
     },
     profile: {
       image: 'speakers/mew-ton.png',
@@ -465,6 +519,10 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',
+      archives: {
+        slide:
+          'https://speakerdeck.com/wakkn/hurusukuratutiecnoji-pan-dearunuxt-2wo3niyi-xing-si-kai-fa-noxiao-lu-xing-topahuomansuwogao-meru',
+      },
     },
     profile: {
       image: 'speakers/hitoki-wakugawa.jpg',

@@ -9,6 +9,7 @@ import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
 import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
+import SlideSvg from '~/assets/logo/slide_logo.svg'
 
 const emptySponsorSpeaker: SponsorSpeaker = {
   id: '',
@@ -138,6 +139,17 @@ useHead({
       <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/head`" />
       </div>
+      <NuxtLink
+        v-if="sponsorSpeakerData.session.archives?.slide"
+        :to="sponsorSpeakerData.session.archives?.slide"
+        target="_blank"
+        class="detailbody-slide"
+      >
+        <span class="slide-icon">
+          <SlideSvg />
+        </span>
+        <span class="slide-title">発表資料</span>
+      </NuxtLink>
       <div
         v-for="(profile, index) in sponsorSpeakerData.profile"
         :key="index"
@@ -209,6 +221,28 @@ css({
         },
       },
     },
+  },
+  '.detailbody-slide': {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 'calc({space.8} * 1)',
+    width: 'fit-content',
+    margin: '-40px 0 calc({space.8} * 8)',
+    '&:hover': {
+      opacity: 0.8,
+      transition: '.2s',
+    },
+  },
+  '.slide-icon': {
+    width: '40px',
+    height: '40px',
+    '::v-deep(svg)': {
+      fill: '{color.vue.blue}',
+    },
+  },
+  '.slide-title': {
+    color: '{color.vue.blue}',
+    textDecoration: 'underline',
   },
   '.detailbody-persons': {
     fontSize: 'calc(18*{fontSize.base})',

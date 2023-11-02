@@ -139,17 +139,18 @@ useHead({
       <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/head`" />
       </div>
-      <NuxtLink
+      <a
         v-if="sponsorSpeakerData.session.archives?.slide"
-        :to="sponsorSpeakerData.session.archives?.slide"
+        :href="sponsorSpeakerData.session.archives?.slide"
         target="_blank"
+        rel="noopener noreferrer"
         class="detailbody-slide"
       >
         <span class="slide-icon">
           <SlideSvg />
         </span>
         <span class="slide-title">発表資料</span>
-      </NuxtLink>
+      </a>
       <div
         v-for="(profile, index) in sponsorSpeakerData.profile"
         :key="index"

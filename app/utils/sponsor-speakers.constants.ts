@@ -37,7 +37,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       time: '11:25 - 11:45',
       type: 'main',
       archives: {
-        slide: 'https://twitter.com/kyamamoto9120/status/1718138625882476906',
+        slide: '',
       },
     },
     profile: [

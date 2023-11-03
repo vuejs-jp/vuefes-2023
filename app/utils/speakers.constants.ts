@@ -63,6 +63,9 @@ export const speakers: Speaker[] = [
       track: 'cloudsign',
       time: '15:00 - 15:30',
       type: 'main',
+      archives: {
+        slide: 'https://antfu.me/posts/roads-to-oss-set-theory-vuefesjapan-2023',
+      },
     },
     profile: {
       image: 'speakers/antfu.png',

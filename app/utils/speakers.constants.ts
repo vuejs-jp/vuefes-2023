@@ -296,7 +296,8 @@ export const speakers: Speaker[] = [
       time: '17:15 - 17:45',
       type: 'main',
       archives: {
-        slide: 'https://docs.google.com/presentation/d/1sVPisJofs18G8WUitn4l53s-mXFLRTs2Q4F0hqFqS5A/edit#slide=id.p',
+        slide:
+          'https://docs.google.com/presentation/d/1sVPisJofs18G8WUitn4l53s-mXFLRTs2Q4F0hqFqS5A/edit#slide=id.p',
       },
     },
     profile: {

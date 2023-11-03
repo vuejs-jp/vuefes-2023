@@ -172,7 +172,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       time: '12:55 - 13:15',
       type: 'main',
       archives: {
-        slide: 'https://speakerdeck.com/cyber_snufkin/28-vue-fes-tokyo-vue-dot-js-puroziekutoshe-ji-nobesutopurakuteisuwoqiu-mete',
+        slide:
+          'https://speakerdeck.com/cyber_snufkin/28-vue-fes-tokyo-vue-dot-js-puroziekutoshe-ji-nobesutopurakuteisuwoqiu-mete',
       },
     },
     profile: [

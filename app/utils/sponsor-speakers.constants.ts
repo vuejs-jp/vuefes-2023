@@ -10,6 +10,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'all',
       time: '11:05 - 11:25',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/bengo4com/20231028',
+      },
     },
     profile: [
       {
@@ -33,6 +36,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'all',
       time: '11:25 - 11:45',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: [
       {
@@ -56,6 +62,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'all',
       time: '11:45 - 12:05',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/lmi/vuefes2023-link-and-motivation',
+      },
     },
     profile: [
       {
@@ -80,6 +89,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'medpeer',
       time: '12:30 - 12:50',
       type: 'main',
+      archives: {
+        slide: 'https://www.slideshare.net/KazuhiroKobayashikzh/vue-2-eol-2',
+      },
     },
     profile: [
       {
@@ -159,6 +171,10 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'cloudsign',
       time: '12:55 - 13:15',
       type: 'main',
+      archives: {
+        slide:
+          'https://speakerdeck.com/cyber_snufkin/28-vue-fes-tokyo-vue-dot-js-puroziekutoshe-ji-nobesutopurakuteisuwoqiu-mete',
+      },
     },
     profile: [
       {
@@ -182,6 +198,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'm3',
       time: '12:20 - 12:40',
       type: 'main',
+      archives: {
+        slide: 'https://speakerdeck.com/hacomono/nuxt-3dehazimerutesutodao-ru-zhan-lue-tochu-shou',
+      },
     },
     profile: [
       {

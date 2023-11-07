@@ -90,7 +90,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       time: '12:30 - 12:50',
       type: 'main',
       archives: {
-        slide: 'https://www.slideshare.net/KazuhiroKobayashikzh/vue-2-eol-2',
+        slide: 'https://speakerdeck.com/kzhrk/vue-2-no-eol-made-2-keyue-desugajin-bu-doudesuka',
       },
     },
     profile: [

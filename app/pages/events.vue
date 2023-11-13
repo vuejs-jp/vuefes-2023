@@ -47,6 +47,19 @@ useHead({
             {{ $t('top.medpeer_hacomono_mntsq_event_detail') }}
           </template>
         </EventCard>
+        <EventCard
+          src="/event/after-event/line-yahoo-communications.png"
+          :alt="$t('top.line_yahoo_communications_event_title')"
+          register-url="https://fukuokajs.connpass.com/event/302013/"
+          :register-text="$t('words.attendee_register')"
+        >
+          <template #title>
+            {{ $t('top.line_yahoo_communications_event_title') }}
+          </template>
+          <template #description>
+            {{ $t('top.line_yahoo_communications_event_detail') }}
+          </template>
+        </EventCard>
       </div>
 
       <div class="back">

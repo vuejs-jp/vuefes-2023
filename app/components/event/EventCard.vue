@@ -87,11 +87,11 @@ css({
     '.event-card': {
       '--img-size': '690px',
       maxWidth: '690px',
+      '.img-wrapper': {
+        height: '100%',
+      },
       '.title': {
         fontSize: '16px',
-      },
-      '.description': {
-        marginTop: 'calc({space.8} * 1)',
       },
     },
   },

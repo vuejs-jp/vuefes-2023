@@ -47,6 +47,19 @@ useHead({
             {{ $t('top.medpeer_hacomono_mntsq_event_detail') }}
           </template>
         </EventCard>
+        <EventCard
+          src="/event/after-event/line-yahoo-communications.png"
+          :alt="$t('top.line_yahoo_communications_event_title')"
+          register-url="https://fukuokajs.connpass.com/event/302013/"
+          :register-text="$t('words.attendee_register')"
+        >
+          <template #title>
+            {{ $t('top.line_yahoo_communications_event_title') }}
+          </template>
+          <template #description>
+            {{ $t('top.line_yahoo_communications_event_detail') }}
+          </template>
+        </EventCard>
       </div>
 
       <div class="back">
@@ -80,9 +93,6 @@ css({
     padding: 'calc({space.8} * 10) 11.53%',
     color: '{color.vue.blue}',
     background: '{color.white}',
-    '::v-deep(.title)': {
-      marginBottom: 'calc({space.8} * 10)',
-    },
     '::v-deep(p)': {
       fontWeight: 500,
       fontSize: '18px',
@@ -120,9 +130,6 @@ css({
     },
     '.events-root': {
       padding: 'calc({space.8} * 10) calc({space.8} * 3)',
-      '::v-deep(.title)': {
-        marginBottom: 'calc({space.8} * 6)',
-      },
       '::v-deep(h2)': {
         fontSize: '20px',
       },

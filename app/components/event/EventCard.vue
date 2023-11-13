@@ -23,7 +23,9 @@ const props = defineProps({
 
 <template>
   <div class="event-card">
-    <img width="690" height="388" :alt="alt" :src="src" decoding="async" />
+    <div class="img-wrapper">
+      <img width="690" height="388" :alt="alt" :src="src" decoding="async" />
+    </div>
     <div class="title">
       <slot name="title" />
     </div>
@@ -43,9 +45,11 @@ css({
   '.event-card': {
     '--img-size': '475px',
     maxWidth: '475px',
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'grid',
     gap: '0.6em',
+    '.img-wrapper': {
+      height: '280px',
+    },
     '.title': {
       fontWeight: 'bold',
       fontSize: '22px',
@@ -83,11 +87,11 @@ css({
     '.event-card': {
       '--img-size': '690px',
       maxWidth: '690px',
+      '.img-wrapper': {
+        height: '100%',
+      },
       '.title': {
         fontSize: '16px',
-      },
-      '.description': {
-        marginTop: 'calc({space.8} * 1)',
       },
     },
   },

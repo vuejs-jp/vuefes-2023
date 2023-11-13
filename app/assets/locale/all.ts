@@ -131,6 +131,10 @@ export default {
       medpeer_hacomono_mntsq_event_title: 'kazuponさん登壇！Vue Fes Japan 2023 After Meetup',
       medpeer_hacomono_mntsq_event_detail:
         'Vue Fes Japan 2023 のアフターイベントとして、メドピア株式会社、MNTSQ株式会社、及び株式会社hacomonoが合同でイベントを開催します。 Vue.js 日本ユーザーグループ代表の kazupon さんを特別ゲストとして迎え、セッションやパネルディスカッションを行います。 5年ぶりのオフラインでの開催となる Vue Fes Japan 2023 の感想や思い出を語り合いましょう！',
+      line_yahoo_communications_event_title:
+        '【福岡開催】Vue Fes Japan 2023 After Meetup in Fukuoka',
+      line_yahoo_communications_event_detail:
+        'Vue Fes Japan 2023 の報告会を、LINEヤフーコミュニケーションズのカフェスペースでオフラインにて開催いたします。 この報告会では Vue Fes Japan 2023 でも取り上げられていた、今後のVueとRustの関係について、kazuponさんにお話しいただきます。 また、ブーススポンサーを務めたLINEヤフーコミュニケーションズのエンジニアの方も登壇予定です。',
       /**
        * ticket section
        */
@@ -540,6 +544,10 @@ export default {
         'kazupon will be speaking at Vue Fes Japan 2023 After Meetup!',
       medpeer_hacomono_mntsq_event_detail:
         "Medpeer, Inc., MNTSQ, LTD. and hacomono, Inc. will hold a joint event as an after event of Vue Fes Japan 2023. Vue.js Japan User Group Representative, Mr. Kazupon, will be a special guest at the event, which will include sessions and panel discussions. Let's discuss your thoughts and memories of Vue Fes Japan 2023, the first offline event in 5 years!",
+      line_yahoo_communications_event_title:
+        '[Held in Fukuoka] Vue Fes Japan 2023 After Meetup in Fukuoka',
+      line_yahoo_communications_event_detail:
+        'Vue Fes Japan 2023 debriefing will be held offline at the LINE Yahoo Communications café space. In this debriefing session, kazupon will talk about the future relationship between Vue and Rust, which was also covered at Vue Fes Japan 2023. Also, an engineer from LINE Yahoo Communications, who was a booth sponsor, will be speaking at the event.',
       /**
        * ticket section
        */

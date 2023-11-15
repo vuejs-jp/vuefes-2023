@@ -6,7 +6,6 @@ import { useFeature } from '~/composables/useFeature'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import TimetablePageSection from '~/components/TimetablePageSection.vue'
-import PhotosPageSection from '~/components/PhotosPageSection.vue'
 
 const { canPurchase } = useNamecard()
 const { showTimetable } = useFeature()
@@ -21,7 +20,7 @@ useHead({
   <main>
     <NavPageSectionContainer />
     <TopPageSection />
-    <PhotosPageSection />
+    <NewsPageSection />
     <template v-if="showTimetable">
       <TimetablePageSection />
     </template>

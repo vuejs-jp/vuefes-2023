@@ -1,10 +1,12 @@
-<script setup lang="ts">
-import SectionTitle from '~/components/SectionTitle.vue'
-import TimetableView from '~/components/timetable/TimetableView.vue'
-</script>
-
 <template>
   <section class="photos">
+    <SectionTitle
+        id="news"
+        class="photos_title"
+        color="vue.blue"
+        title="News"
+        yamato-title="お知らせ"
+    />
     <p>
       Vue Fes Japan 2023 にご参加いただいたみなさん、ありがとうございました。
     </p>
@@ -78,6 +80,9 @@ css({
     maxWidth: '1080px',
     margin: '0 auto',
     fontSize: 'calc(16*{fontSize.base})',
+  },
+  '.photos_title': {
+    marginBottom: '40px',
   },
   '.photos p': {
     margin: '0 0 16px',

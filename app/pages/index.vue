@@ -20,6 +20,7 @@ useHead({
   <main>
     <NavPageSectionContainer />
     <TopPageSection />
+    <NewsPageSection />
     <template v-if="showTimetable">
       <TimetablePageSection />
     </template>

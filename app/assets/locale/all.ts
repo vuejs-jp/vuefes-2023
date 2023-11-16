@@ -75,6 +75,12 @@ export default {
        */
       message_subtitle: '想い',
       /**
+       * news section
+       */
+      news_subtitle1: 'Vue Fes Japan 2023 にご参加いただいたみなさん、ありがとうございました。',
+      news_subtitle2:
+        '当日撮影された写真を CC0 ライセンスにて公開しますので、ブログや SNS などにご自由にお使いください。',
+      /**
        * timetable section
        */
       timetable_subtitle: 'タイムテーブル',
@@ -485,6 +491,12 @@ export default {
        * message section
        */
       message_subtitle: 'Thought',
+      /**
+       * news section
+       */
+      news_subtitle1: 'Thank you to everyone who attended Vue Fes Japan 2023.',
+      news_subtitle2:
+        'Photos taken on the day will be released under a CC0 license, so please feel free to use them on your blogs, social networking sites, etc.',
       /**
        * timetable section
        */

@@ -95,6 +95,9 @@ css({
     color: '{color.primary.500}',
     textDecoration: 'underline',
   },
+  '.photos a:hover': {
+    textDecoration: 'none',
+  },
   '@mobile': {
     'section': {
       padding: '80px 20px 120px',

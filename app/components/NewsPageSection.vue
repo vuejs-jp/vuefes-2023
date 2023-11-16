@@ -1,18 +1,14 @@
 <template>
   <section class="photos">
     <SectionTitle
-        id="news"
-        class="photos_title"
-        color="vue.blue"
-        title="News"
-        yamato-title="お知らせ"
+      id="news"
+      class="photos_title"
+      color="vue.blue"
+      title="News"
+      yamato-title="お知らせ"
     />
-    <p>
-      Vue Fes Japan 2023 にご参加いただいたみなさん、ありがとうございました。
-    </p>
-    <p>
-      当日撮影された写真を CC0 ライセンスにて公開しますので、ブログや SNS などにご自由にお使いください。
-    </p>
+    <p>{{ $t('top.news_subtitle1') }}</p>
+    <p>{{ $t('top.news_subtitle2') }}</p>
     <ul>
       <li>
         <NuxtLink to="https://photos.app.goo.gl/fKbJAQRuzGBA8GAz7" target="_blank">
@@ -35,9 +31,7 @@
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="https://photos.app.goo.gl/crd4ftGMSNUPPkjF6" target="_blank">
-          受付
-        </NuxtLink>
+        <NuxtLink to="https://photos.app.goo.gl/crd4ftGMSNUPPkjF6" target="_blank"> 受付 </NuxtLink>
       </li>
       <li>
         <NuxtLink to="https://photos.app.goo.gl/QsxLYZq4hQVd6oa59" target="_blank">

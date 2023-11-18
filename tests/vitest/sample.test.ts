@@ -4,8 +4,8 @@ export function add(...args: number[]) {
 }
 
 // in-source test suites
-if (import.meta.vitest) {
-  const { it, expect } = import.meta.vitest
+if (import.meta.env.vitest) {
+  const { it, expect } = import.meta.env.vitest
   it('add', () => {
     expect(add()).toBe(0)
     expect(add(1)).toBe(1)

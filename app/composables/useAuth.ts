@@ -96,8 +96,8 @@ const useAuth = () => {
         ? 'https://vuefes.jp/2023'
         : 'https://localhost:3000'
       : isProd
-      ? 'https://vuefes.jp/2023/register'
-      : 'http://localhost:3000/register'
+        ? 'https://vuefes.jp/2023/register'
+        : 'http://localhost:3000/register'
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {

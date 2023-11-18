@@ -1,12 +1,10 @@
 <script setup lang="ts">
-interface DragDropAreaProps {
+type DragDropAreaProps = {
   fileName: string
   fileAccept: string
 }
 
-interface DragDropAreaEmit {
-  (e: 'check-files', value: File[]): void
-}
+type DragDropAreaEmit = (e: 'check-files', value: File[]) => void
 
 const props = defineProps<DragDropAreaProps>()
 const isDragEnter = ref(false)

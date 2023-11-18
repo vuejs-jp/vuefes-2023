@@ -6,9 +6,7 @@ import RoundButton from '~/components/button/RoundButton.vue'
 import useAuth from '~/composables/useAuth'
 import { ticketUrl } from '~/utils/constants'
 
-interface IntegrationCardEmit {
-  (e: 'on-close'): void
-}
+type IntegrationCardEmit = (e: 'on-close') => void
 const emit = defineEmits<IntegrationCardEmit>()
 
 const { signIn } = useAuth()

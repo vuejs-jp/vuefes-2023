@@ -1,5 +1,5 @@
 <script setup lang="ts">
-interface ErrorProps {
+type ErrorProps = {
   error: { statusCode: string }
 }
 const props = defineProps<ErrorProps>()

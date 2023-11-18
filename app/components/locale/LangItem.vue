@@ -13,9 +13,7 @@ const props = defineProps({
   },
 })
 
-interface LangItemEmit {
-  (e: 'on-click'): void
-}
+type LangItemEmit = (e: 'on-click') => void
 
 const emit = defineEmits<LangItemEmit>()
 

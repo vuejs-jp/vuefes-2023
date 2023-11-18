@@ -26,7 +26,7 @@ const route = useRoute()
 const speakerId = route.params.id as string
 const speakerData: Speaker = speakers.find((s: Speaker) => {
   return s.id === speakerId
-}) as Speaker
+})!
 
 if (!speakerData.id) {
   // https://nuxt.com/docs/getting-started/error-handling#showerror

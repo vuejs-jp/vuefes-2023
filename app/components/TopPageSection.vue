@@ -13,9 +13,9 @@ import TwitterButton from '~/components/social/TwitterButton.vue'
 
 type Device = 'pc' | 'md' | 'sp'
 type ImageList = {
-  wave: typeof PcBg | typeof MdBg | typeof SpBg
-  block: typeof PcBlock | typeof MdBlock | typeof SpBlock
-  title: typeof PcTitle | typeof MdTitle | typeof SpTitle
+  wave: typeof PcBg
+  block: typeof PcBlock
+  title: typeof PcTitle
 }
 
 const device = ref<Device>('pc')

@@ -2,9 +2,7 @@
 import { useLocaleCurrent } from '~/composables/useLocaleCurrent'
 import TextButton from '~/components/button/TextButton.vue'
 
-interface PrivacyPolicyAndCocEmit {
-  (e: 'on-click'): void
-}
+type PrivacyPolicyAndCocEmit = (e: 'on-click') => void
 const emit = defineEmits<PrivacyPolicyAndCocEmit>()
 
 const { locale } = useLocaleCurrent()

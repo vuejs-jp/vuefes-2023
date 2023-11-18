@@ -1,7 +1,7 @@
 export type Sponsors = 'cloudsign' | 'medpeer' | 'm3'
 export type Tracks = Sponsors | 'vue' | 'all'
 
-export interface Session {
+export type Session = {
   id?: string
   category?: string
   title: string
@@ -14,7 +14,7 @@ export interface Session {
   isTranslation?: boolean
 }
 
-export interface Track {
+export type Track = {
   track?: string
   colspan?: number
   rowspan?: number
@@ -22,7 +22,7 @@ export interface Track {
   sessions?: Session[]
 }
 
-export interface Archive {
+export type Archive = {
   slide?: string
   youtube?: string
 }

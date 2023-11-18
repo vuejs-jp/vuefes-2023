@@ -2,15 +2,15 @@
 import { TextareaHTMLAttributes } from 'vue'
 
 type _TextareaFieldProps = Omit<TextareaHTMLAttributes, 'onInput' | 'onBlur'>
-interface TextareaFieldProps extends /* @vue-ignore */ _TextareaFieldProps {
+type TextareaFieldProps = {
   titleLabel: string
   error: string
   /**
    * FIXME 削除したい (削除できなさそう)
    */
   placeholder?: string
-}
-interface TextareaFieldEmit {
+} & _TextareaFieldProps
+type TextareaFieldEmit = {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void
 }

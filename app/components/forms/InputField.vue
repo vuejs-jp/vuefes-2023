@@ -2,7 +2,7 @@
 import { InputHTMLAttributes } from 'vue'
 
 type _InputFieldProps = Omit<InputHTMLAttributes, 'onInput' | 'onBlur'>
-interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
+type InputFieldProps = {
   titleLabel: string
   error: string
   value?: string
@@ -11,8 +11,8 @@ interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
    */
   placeholder?: string
   disabled?: boolean
-}
-interface InputFieldEmit {
+} & _InputFieldProps
+type InputFieldEmit = {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void
 }

@@ -14,9 +14,7 @@ const props = defineProps({
   },
 })
 
-interface PopupAreaEmit {
-  (e: 'sign-out'): void
-}
+type PopupAreaEmit = (e: 'sign-out') => void
 const emit = defineEmits<PopupAreaEmit>()
 </script>
 

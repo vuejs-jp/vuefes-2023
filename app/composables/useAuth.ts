@@ -27,7 +27,7 @@ const dummyUser: FormUser = {
   receipt_id: 'dummydummy',
 }
 
-let signedUser = reactive<FormUser>({ ...initialUser })
+const signedUser = reactive<FormUser>({ ...initialUser })
 
 const useAuth = () => {
   // for dev

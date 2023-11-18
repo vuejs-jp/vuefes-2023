@@ -39,7 +39,7 @@ export type Role = 'staff' | 'speaker' | 'sponsor' | 'attendee' | 'attendee + pa
 
 export type Status = 'registered' | 'failed' | 'nouser'
 
-export interface FormUser {
+export type FormUser = {
   user_id: string
   full_name: string
   avatar_url: string
@@ -51,7 +51,7 @@ export interface FormUser {
   created_at: string
 }
 
-export interface User {
+export type User = {
   activated_at: string | null
   avatar_url: string
   created_at: string
@@ -143,7 +143,7 @@ export type SpeakerProfile = {
   mastodonUrl?: string
 }
 
-export interface Archive {
+export type Archive = {
   slide?: string
   youtube?: string
 }
@@ -170,7 +170,7 @@ export type Sponsor = {
   name: string
   nameKey: string
   image: string
-  categories: Array<SponsorCategory | OptionCategory>
+  categories: (SponsorCategory | OptionCategory)[]
   url: string
 }
 

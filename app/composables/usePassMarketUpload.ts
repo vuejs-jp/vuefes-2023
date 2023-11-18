@@ -9,7 +9,7 @@ export function usePassMarketUpload() {
 
   async function fetchMembers(file: File): Promise<ListMember[]> {
     const workbook = XLSX.read(await file.arrayBuffer())
-    const sheet = workbook.Sheets['Sheet1']
+    const sheet = workbook.Sheets.Sheet1
     const rows: ListRow[] = XLSX.utils.sheet_to_json(sheet)
 
     return rows

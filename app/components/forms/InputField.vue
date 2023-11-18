@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { InputHTMLAttributes } from 'vue'
 
+/* eslint-disable-next-line vue/prop-name-casing */
 type _InputFieldProps = Omit<InputHTMLAttributes, 'onInput' | 'onBlur'>
 type InputFieldProps = {
   titleLabel: string

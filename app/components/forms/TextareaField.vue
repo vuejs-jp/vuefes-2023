@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { TextareaHTMLAttributes } from 'vue'
 
+/* eslint-disable-next-line vue/prop-name-casing */
 type _TextareaFieldProps = Omit<TextareaHTMLAttributes, 'onInput' | 'onBlur'>
 type TextareaFieldProps = {
   titleLabel: string

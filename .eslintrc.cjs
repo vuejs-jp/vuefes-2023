@@ -41,7 +41,6 @@ module.exports = {
       },
     ],
     'vue/multiline-html-element-content-newline': 'off',
-    'vue/prop-name-casing': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     // v6 更新時に無効化

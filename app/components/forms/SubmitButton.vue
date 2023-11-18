@@ -2,6 +2,7 @@
 import { ButtonHTMLAttributes } from 'vue'
 import RoundButton from '~/components/button/RoundButton.vue'
 
+/* eslint-disable-next-line vue/prop-name-casing */
 type _SubmitButtonProps = Omit<ButtonHTMLAttributes, 'disabled' | 'onClick'>
 type SubmitButtonProps = {
   /**

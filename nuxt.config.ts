@@ -131,6 +131,7 @@ export default defineNuxtConfig({
         exclude: [1, 2, 3, 4, 5, 6],
       },
     },
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     experimental: {
       clientDB: true, // https://github.com/nuxt/content/issues/2215#issuecomment-1713796864

@@ -44,7 +44,6 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     // v6 更新時に無効化
-    '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-explicit-any': 'off',

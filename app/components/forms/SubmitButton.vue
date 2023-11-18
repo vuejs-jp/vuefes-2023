@@ -4,12 +4,13 @@ import RoundButton from '~/components/button/RoundButton.vue'
 
 /* eslint-disable-next-line vue/prop-name-casing */
 type _SubmitButtonProps = Omit<ButtonHTMLAttributes, 'disabled' | 'onClick'>
-type SubmitButtonProps = {
+/* eslint-disable-next-line @typescript-eslint/consistent-type-definitions */
+interface SubmitButtonProps extends /* @vue-ignore */ _SubmitButtonProps {
   /**
    * Booleanish ではなく boolean として型定義をしなおす
    */
   disabled?: boolean
-} & _SubmitButtonProps
+}
 type SubmitButtonEmit = (e: 'on-click') => void
 const props = defineProps<SubmitButtonProps>()
 const { disabled = false } = toRefs(props)

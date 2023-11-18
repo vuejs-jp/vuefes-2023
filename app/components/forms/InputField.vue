@@ -3,7 +3,8 @@ import { InputHTMLAttributes } from 'vue'
 
 /* eslint-disable-next-line vue/prop-name-casing */
 type _InputFieldProps = Omit<InputHTMLAttributes, 'onInput' | 'onBlur'>
-type InputFieldProps = {
+/* eslint-disable-next-line @typescript-eslint/consistent-type-definitions */
+interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
   titleLabel: string
   error: string
   value?: string
@@ -12,7 +13,7 @@ type InputFieldProps = {
    */
   placeholder?: string
   disabled?: boolean
-} & _InputFieldProps
+}
 type InputFieldEmit = {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void

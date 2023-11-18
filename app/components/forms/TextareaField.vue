@@ -3,14 +3,15 @@ import { TextareaHTMLAttributes } from 'vue'
 
 /* eslint-disable-next-line vue/prop-name-casing */
 type _TextareaFieldProps = Omit<TextareaHTMLAttributes, 'onInput' | 'onBlur'>
-type TextareaFieldProps = {
+/* eslint-disable-next-line @typescript-eslint/consistent-type-definitions */
+interface TextareaFieldProps extends /* @vue-ignore */ _TextareaFieldProps {
   titleLabel: string
   error: string
   /**
    * FIXME 削除したい (削除できなさそう)
    */
   placeholder?: string
-} & _TextareaFieldProps
+}
 type TextareaFieldEmit = {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void

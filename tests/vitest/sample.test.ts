@@ -4,8 +4,12 @@ export function add(...args: number[]) {
 }
 
 // in-source test suites
-if (import.meta.env.vitest) {
-  const { it, expect } = import.meta.env.vitest
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+if (import.meta.vitest) {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { it, expect } = import.meta.vitest
   it('add', () => {
     expect(add()).toBe(0)
     expect(add(1)).toBe(1)

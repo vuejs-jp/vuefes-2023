@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 
 type ImportMetaVitest = {
-  readonly it: Function
-  readonly expect: Function
+  readonly it: unknown
+  readonly expect: unknown
 }
 
 type ImportMeta = {

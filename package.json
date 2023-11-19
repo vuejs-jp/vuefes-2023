@@ -38,8 +38,8 @@
   "devDependencies": {
     "@markuplint/vue-parser": "3.10.0",
     "@markuplint/vue-spec": "3.11.0",
-    "@nuxt/content": "2.7.0",
-    "@nuxt/devtools": "0.2.5",
+    "@nuxt/content": "2.9.0",
+    "@nuxt/devtools": "1.0.2",
     "@nuxt/types": "^2.17.0",
     "@nuxthq/studio": "^0.13.4",
     "@nuxtjs/device": "3.1.0",
@@ -55,8 +55,8 @@
     "eslint-plugin-vuejs-accessibility": "2.2.0",
     "husky": "8.0.3",
     "markuplint": "3.13.0",
-    "nuxt": "3.6.5",
-    "nuxt-og-image": "2.0.20",
+    "nuxt": "3.8.1",
+    "nuxt-og-image": "2.2.4",
     "pinceau": "0.18.0",
     "prettier": "3.1.0",
     "scroll-hint": "^1.2.5",
@@ -87,6 +87,7 @@
     "xlsx": "^0.18.5"
   },
   "resolutions": {
+    "chalk": "2.4.2",
     "mlly": "1.4.0",
     "nitropack": "2.5.0",
     "unstorage": "1.4.1"

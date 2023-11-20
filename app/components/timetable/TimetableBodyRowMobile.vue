@@ -8,7 +8,7 @@ import YouTubeSvg from '~/assets/logo/youtube_logo.svg'
 
 const { locale } = useLocaleCurrent()
 
-type Props = {
+interface Props {
   track?: string
   sponsorSession?: string
   isTranslation?: boolean

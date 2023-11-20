@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
 
-type ImportMetaVitest = {
+interface ImportMetaVitest {
   readonly it: unknown
   readonly expect: unknown
 }
 
-type ImportMeta = {
+interface ImportMeta {
   readonly vitest: ImportMetaVitest
 }

@@ -1,12 +1,12 @@
 import { conferenceTitle, ogDescription, linkUrl, vuefesTwitterID } from './constants'
 
-export type OGProp = {
+export interface OGProp {
   title?: string // タイトル
   description?: string // 説明文
   url?: string // URL
   image?: string // 画像
 }
-export type Meta = {
+export interface Meta {
   hid: string
   name: string
   content: string

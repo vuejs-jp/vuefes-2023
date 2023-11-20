@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type DragDropAreaProps = {
+interface DragDropAreaProps {
   fileName: string
   fileAccept: string
 }

@@ -1,6 +1,6 @@
 import { FormUser, User } from '~/types/app'
 
-type State = {
+interface State {
   user: FormUser
 }
 

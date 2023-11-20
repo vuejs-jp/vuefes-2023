@@ -39,7 +39,7 @@ export type Role = 'staff' | 'speaker' | 'sponsor' | 'attendee' | 'attendee + pa
 
 export type Status = 'registered' | 'failed' | 'nouser'
 
-export type FormUser = {
+export interface FormUser {
   user_id: string
   full_name: string
   avatar_url: string
@@ -51,7 +51,7 @@ export type FormUser = {
   created_at: string
 }
 
-export type User = {
+export interface User {
   activated_at: string | null
   avatar_url: string
   created_at: string
@@ -71,7 +71,7 @@ export type User = {
  */
 
 // addition.csv data
-export type AdditionItem = {
+export interface AdditionItem {
   receiptId: string
   applyTime: string
   role: Role
@@ -86,7 +86,7 @@ export type AdditionItem = {
 }
 
 // list.xls colums
-export type ListRow = {
+export interface ListRow {
   __EMPTY: string // "チケットID"
   __EMPTY_1: string // "参加者名"
   __EMPTY_10: string // "受付状況"
@@ -103,7 +103,7 @@ export type ListRow = {
 }
 
 // list.xls data
-export type ListMember = {
+export interface ListMember {
   ticketId: string
   ticketName: string
   userName: string
@@ -115,14 +115,14 @@ export type ListMember = {
  * speaker
  */
 
-export type Speaker = {
+export interface Speaker {
   id: string
   type: 'evan' | 'foreign' | 'domestic'
   session: Session
   profile: SpeakerProfile
 }
 
-export type Session = {
+export interface Session {
   title: string
   titleKey?: string
   type: 'main' | 'lt'
@@ -131,7 +131,7 @@ export type Session = {
   archives?: Archive
 }
 
-export type SpeakerProfile = {
+export interface SpeakerProfile {
   id?: string // SponsorSpeaker に限って id を必須とする
   image: string
   title: string
@@ -143,7 +143,7 @@ export type SpeakerProfile = {
   mastodonUrl?: string
 }
 
-export type Archive = {
+export interface Archive {
   slide?: string
   youtube?: string
 }
@@ -165,7 +165,7 @@ export type OptionCategory =
   | 'handson'
   | 'media'
 
-export type Sponsor = {
+export interface Sponsor {
   id: string
   name: string
   nameKey: string
@@ -174,7 +174,7 @@ export type Sponsor = {
   url: string
 }
 
-export type SponsorSpeaker = {
+export interface SponsorSpeaker {
   id: string
   type: 'evan' | 'foreign' | 'domestic'
   session: Session
@@ -185,20 +185,20 @@ export type SponsorSpeaker = {
 /**
  * team
  */
-export type Team = {
+export interface Team {
   image: string
   name: string
   snsLink: string
 }
 
-export type Volunteer = {
+export interface Volunteer {
   name: string
 }
 
 /**
  * store
  */
-export type StoreMenu = {
+export interface StoreMenu {
   imgSrc: string
   nameKey: string
   price: string
@@ -210,7 +210,7 @@ export type StoreMenu = {
 /**
  * paneler
  */
-export type Paneler = {
+export interface Paneler {
   image: string
   name: string
   snsLink: string

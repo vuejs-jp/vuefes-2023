@@ -12,7 +12,7 @@ interface TextareaFieldProps extends /* @vue-ignore */ _TextareaFieldProps {
    */
   placeholder?: string
 }
-type TextareaFieldEmit = {
+interface TextareaFieldEmit {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void
 }

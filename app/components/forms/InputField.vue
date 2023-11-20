@@ -14,7 +14,7 @@ interface InputFieldProps extends /* @vue-ignore */ _InputFieldProps {
   placeholder?: string
   disabled?: boolean
 }
-type InputFieldEmit = {
+interface InputFieldEmit {
   (e: 'input', value: string): void
   (e: 'blur', value: string): void
 }

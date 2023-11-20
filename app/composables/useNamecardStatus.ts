@@ -1,7 +1,7 @@
 import { match } from 'ts-pattern'
 import { Status } from '~/types/app'
 
-type Result = {
+interface Result {
   title: string
   detail: string
 }

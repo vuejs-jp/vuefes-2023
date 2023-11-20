@@ -1,6 +1,6 @@
 import { isProd } from './environment.constants'
 
-export type NavLink = {
+export interface NavLink {
   text: string
   link: string
 }

@@ -12,7 +12,7 @@ import SpBg from '@/assets/top/sp/wave.svg'
 import TwitterButton from '~/components/social/TwitterButton.vue'
 
 type Device = 'pc' | 'md' | 'sp'
-type ImageList = {
+interface ImageList {
   wave: typeof PcBg
   block: typeof PcBlock
   title: typeof PcTitle

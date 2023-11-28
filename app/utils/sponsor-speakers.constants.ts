@@ -12,6 +12,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/bengo4com/20231028',
+        youtube: '',
       },
     },
     profile: [
@@ -38,6 +39,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
+        youtube: '',
       },
     },
     profile: [
@@ -64,6 +66,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/lmi/vuefes2023-link-and-motivation',
+        youtube: '',
       },
     },
     profile: [
@@ -91,6 +94,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/kzhrk/vue-2-no-eol-made-2-keyue-desugajin-bu-doudesuka',
+        youtube: '',
       },
     },
     profile: [
@@ -119,6 +123,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
+        youtube: '',
       },
     },
     profile: [
@@ -144,6 +149,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
+        youtube: '',
       },
     },
     profile: [
@@ -180,6 +186,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       archives: {
         slide:
           'https://speakerdeck.com/cyber_snufkin/28-vue-fes-tokyo-vue-dot-js-puroziekutoshe-ji-nobesutopurakuteisuwoqiu-mete',
+        youtube: '',
       },
     },
     profile: [
@@ -206,6 +213,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/hacomono/nuxt-3dehazimerutesutodao-ru-zhan-lue-tochu-shou',
+        youtube: '',
       },
     },
     profile: [
@@ -233,6 +241,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       archives: {
         slide:
           'https://speakerdeck.com/piyoppi/definecustomelement-wohuo-yong-sita-sabisugong-tong-nouikonponentoraiburari',
+        youtube: '',
       },
     },
     profile: [

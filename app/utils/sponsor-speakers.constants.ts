@@ -225,7 +225,8 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       time: '',
       type: 'lt',
       archives: {
-        slide: 'https://speakerdeck.com/piyoppi/definecustomelement-wohuo-yong-sita-sabisugong-tong-nouikonponentoraiburari',
+        slide:
+          'https://speakerdeck.com/piyoppi/definecustomelement-wohuo-yong-sita-sabisugong-tong-nouikonponentoraiburari',
       },
     },
     profile: [

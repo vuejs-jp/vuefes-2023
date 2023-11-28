@@ -10,6 +10,9 @@ export const speakers: Speaker[] = [
       track: 'all',
       time: '10:25 - 11:05',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: {
       image: 'speakers/evan.jpg',
@@ -29,6 +32,9 @@ export const speakers: Speaker[] = [
       track: 'cloudsign',
       time: '13:30 - 14:00',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: {
       image: 'speakers/sebastien.jpg',
@@ -46,6 +52,9 @@ export const speakers: Speaker[] = [
       track: 'cloudsign',
       time: '15:45 - 16:15',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: {
       image: 'speakers/matias.jpg',
@@ -83,6 +92,9 @@ export const speakers: Speaker[] = [
       track: 'cloudsign',
       time: '14:15 - 14:45',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: {
       image: 'speakers/daniel_roe.jpg',
@@ -259,6 +271,9 @@ export const speakers: Speaker[] = [
       track: 'cloudsign',
       time: '16:30 - 17:00',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: {
       image: 'speakers/harlan_zw.jpg',
@@ -504,6 +519,9 @@ export const speakers: Speaker[] = [
       track: 'm3',
       time: '15:45 - 16:15',
       type: 'lt',
+      archives: {
+        slide: '',
+      },
     },
     profile: {
       image: 'speakers/hieu.png',

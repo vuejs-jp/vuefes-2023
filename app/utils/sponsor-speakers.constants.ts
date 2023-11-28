@@ -117,6 +117,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'vue',
       time: '12:30 - 12:40',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: [
       {
@@ -139,6 +142,9 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       track: 'cloudsign',
       time: '12:25 - 12:45',
       type: 'main',
+      archives: {
+        slide: '',
+      },
     },
     profile: [
       {

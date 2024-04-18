@@ -50,7 +50,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
     </div>
     <div class="event-menu">
       <EventCard
-        src="/event/refreshment_space.png"
+        src="event/refreshment_space.png"
         :alt="`${$t('top.refreshment')} supported by giftee, HENNGE, TAM`"
       >
         <template #title>
@@ -62,7 +62,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           {{ $t('top.refreshment_explain') }}
         </template>
       </EventCard>
-      <EventCard src="/event/creative_wall.png" :alt="$t('top.creative_wall')">
+      <EventCard src="event/creative_wall.png" :alt="$t('top.creative_wall')">
         <template #title>
           {{ $t('top.creative_wall') }}
         </template>
@@ -70,7 +70,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           {{ $t('top.creative_wall_explain') }}
         </template>
       </EventCard>
-      <EventCard src="/event/hands_on.png" :alt="`${$t('top.events_handson')}`">
+      <EventCard src="event/hands_on.png" :alt="`${$t('top.events_handson')}`">
         <template #title>
           {{ $t('top.events_handson') }}
         </template>
@@ -82,7 +82,7 @@ import { panelers } from '~/utils/events-panel-discussion.constants'
           </i18n-t>
         </template>
       </EventCard>
-      <EventCard src="/event/tattoo_space.png" :alt="`${$t('top.tattoo_space')}`">
+      <EventCard src="event/tattoo_space.png" :alt="`${$t('top.tattoo_space')}`">
         <template #title>
           {{ $t('top.tattoo_space') }}
         </template>

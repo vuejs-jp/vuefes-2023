@@ -123,7 +123,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=VOEMhfmVVrY',
       },
     },
     profile: [

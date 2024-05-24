@@ -10,6 +10,7 @@ import { conferenceTitle } from '~/utils/constants'
 import { all } from '~/utils/sponsor.constants'
 import { sponsorSpeakers } from '~/utils/sponsor-speakers.constants'
 import SlideSvg from '~/assets/logo/slide_logo.svg'
+import YouTubeSvg from '~/assets/logo/youtube_logo.svg'
 
 const emptySponsorSpeaker: SponsorSpeaker = {
   id: '',
@@ -139,18 +140,36 @@ useHead({
       <div class="detailbody-explain">
         <MarkDownText :path="`sponsor-sessions/${sponsorSpeakerData.id}/head`" />
       </div>
-      <a
-        v-if="sponsorSpeakerData.session.archives?.slide"
-        :href="sponsorSpeakerData.session.archives?.slide"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="detailbody-slide"
-      >
-        <span class="slide-icon">
-          <SlideSvg />
-        </span>
-        <span class="slide-title">発表資料</span>
-      </a>
+      <div class="detailbody-archives">
+        <a
+          v-if="sponsorSpeakerData.session.archives?.slide"
+          :href="sponsorSpeakerData.session.archives?.slide"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="detailbody-slide"
+        >
+          <span class="slide-icon">
+            <SlideSvg />
+          </span>
+          <span class="slide-title">
+            {{ $t('words.presentation_slide') }}
+          </span>
+        </a>
+        <a
+          v-if="sponsorSpeakerData.session.archives?.youtube"
+          :href="sponsorSpeakerData.session.archives?.youtube"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="detailbody-youtube"
+        >
+          <span class="youtube-icon">
+            <YouTubeSvg />
+          </span>
+          <span class="youtube-title">
+            {{ $t('words.archive_video') }}
+          </span>
+        </a>
+      </div>
       <div
         v-for="(profile, index) in sponsorSpeakerData.profile"
         :key="index"
@@ -223,7 +242,7 @@ css({
       },
     },
   },
-  '.detailbody-slide': {
+  '.detailbody-slide, .detailbody-youtube': {
     display: 'flex',
     alignItems: 'center',
     gap: 'calc({space.8} * 1)',
@@ -234,16 +253,20 @@ css({
       transition: '.2s',
     },
   },
-  '.slide-icon': {
+  '.slide-icon, .youtube-icon': {
     width: '40px',
     height: '40px',
     '::v-deep(svg)': {
       fill: '{color.vue.blue}',
     },
   },
-  '.slide-title': {
+  '.slide-title, .youtube-title': {
     color: '{color.vue.blue}',
     textDecoration: 'underline',
+  },
+  '.detailbody-archives': {
+    display: 'flex',
+    gap: 'calc({space.8} * 4)',
   },
   '.detailbody-persons': {
     fontSize: 'calc(18*{fontSize.base})',

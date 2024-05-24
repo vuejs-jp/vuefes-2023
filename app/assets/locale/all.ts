@@ -45,6 +45,8 @@ export default {
       lunch_time: 'ランチタイム',
       after_party: 'アフターパーティー',
       simultaneous_interpretation: '同時通訳あり',
+      presentation_slide: '発表資料',
+      archive_video: '発表動画',
     },
     category: {
       platinum: 'Platinum',
@@ -462,6 +464,8 @@ export default {
       lunch_time: 'Lunch Time',
       after_party: 'After Party',
       simultaneous_interpretation: 'Simultaneous interpretation available',
+      presentation_slide: 'Presentation Slide',
+      archive_video: 'Archive Video',
     },
     category: {
       platinum: 'Platinum',

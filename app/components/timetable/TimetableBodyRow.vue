@@ -71,7 +71,11 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         {{ session.speakerKey ? $t(session.speakerKey) : session.speaker }}
       </div>
       <div class="archives">
-        <IconButton v-if="session.archives?.slide" :url="session.archives?.slide" title="Slide URL">
+        <IconButton
+          v-if="session.archives?.slide"
+          :url="session.archives?.slide"
+          :title="$t('words.presentation_slide')"
+        >
           <div class="slide">
             <SlideSvg />
           </div>
@@ -79,7 +83,7 @@ const _nuxtLink = computed(() => resolveComponent('NuxtLink'))
         <IconButton
           v-if="session.archives?.youtube"
           :url="session.archives?.youtube"
-          title="YouTube URL"
+          :title="$t('words.archive_video')"
         >
           <div class="youtube">
             <YouTubeSvg />

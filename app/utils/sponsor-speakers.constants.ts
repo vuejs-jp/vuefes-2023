@@ -12,7 +12,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/bengo4com/20231028',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=cqptdLnRAjA',
       },
     },
     profile: [
@@ -39,7 +39,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=QxHMs-G3VFs',
       },
     },
     profile: [
@@ -66,7 +66,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/lmi/vuefes2023-link-and-motivation',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=ZPJAFrQHAQY',
       },
     },
     profile: [
@@ -94,7 +94,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/kzhrk/vue-2-no-eol-made-2-keyue-desugajin-bu-doudesuka',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=xU_btgAg-s8',
       },
     },
     profile: [
@@ -123,7 +123,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=VOEMhfmVVrY',
       },
     },
     profile: [
@@ -149,7 +149,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=oWmaKKIq-ac',
       },
     },
     profile: [
@@ -186,7 +186,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       archives: {
         slide:
           'https://speakerdeck.com/cyber_snufkin/28-vue-fes-tokyo-vue-dot-js-puroziekutoshe-ji-nobesutopurakuteisuwoqiu-mete',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=9rEHxtDQIAY',
       },
     },
     profile: [
@@ -213,7 +213,7 @@ export const sponsorSpeakers: SponsorSpeaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/hacomono/nuxt-3dehazimerutesutodao-ru-zhan-lue-tochu-shou',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=QyiVQXiR61M',
       },
     },
     profile: [

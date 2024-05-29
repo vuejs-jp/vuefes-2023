@@ -43,7 +43,7 @@
             "speaker": "Evan You",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=QkhLzoEwvwM"
             }
           }
         ]
@@ -67,7 +67,7 @@
             "sponsorSession": "cloudsign",
             "archives": {
               "slide": "https://speakerdeck.com/bengo4com/20231028",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=cqptdLnRAjA"
             }
           }
         ]
@@ -91,7 +91,7 @@
             "sponsorSession": "cloudsign",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=QxHMs-G3VFs"
             }
           }
         ]
@@ -115,7 +115,7 @@
             "sponsorSession": "cloudsign",
             "archives": {
               "slide": "https://speakerdeck.com/lmi/vuefes2023-link-and-motivation",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=ZPJAFrQHAQY"
             }
           }
         ]
@@ -141,7 +141,11 @@
             "titleKey": "sessions.stores",
             "speaker": "STORES株式会社 藤村大介、wattanx / ワッタン",
             "speakerKey": "speakers.daisuke_fujimura.with_wattanx",
-            "sponsorSession": "cloudsign"
+            "sponsorSession": "cloudsign",
+            "archives": {
+              "slide": "",
+              "youtube": "https://www.youtube.com/watch?v=oWmaKKIq-ac"
+            }
           },
           {
             "id": "mntsq",
@@ -154,7 +158,7 @@
             "sponsorSession": "cloudsign",
             "archives": {
               "slide": "https://speakerdeck.com/cyber_snufkin/28-vue-fes-tokyo-vue-dot-js-puroziekutoshe-ji-nobesutopurakuteisuwoqiu-mete",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=9rEHxtDQIAY"
             }
           }
         ]
@@ -178,7 +182,7 @@
             "sponsorSession": "medpeer",
             "archives": {
               "slide": "https://speakerdeck.com/kzhrk/vue-2-no-eol-made-2-keyue-desugajin-bu-doudesuka",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=xU_btgAg-s8"
             }
           }
         ]
@@ -201,7 +205,7 @@
             "sponsorSession": "m3",
             "archives": {
               "slide": "https://speakerdeck.com/hacomono/nuxt-3dehazimerutesutodao-ru-zhan-lue-tochu-shou",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=QyiVQXiR61M"
             }
           },
           {
@@ -212,7 +216,7 @@
             "speaker": "みゅーとん / mew-ton",
             "archives": {
               "slide": "https://tome.app/mewton-8cb/vue-fes-2023-clnjmh8ez0044l77dwardvtga",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=_0dGI35KEwc"
             }
           }
         ]
@@ -236,7 +240,7 @@
             "sponsorSession": "vue",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=VOEMhfmVVrY"
             }
           },
           {
@@ -262,7 +266,7 @@
             "speaker": "Sebastien Chopin",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=7DVZsQDlLRQ"
             }
           }
         ]
@@ -281,7 +285,7 @@
             "speaker": "t0yohei / トヨヘイ",
             "archives": {
               "slide": "https://speakerdeck.com/t0yohei/vue-woshi-tute-grid-system-woshi-zhuang-sitahua",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=fKdP6y9DtZQ"
             }
           },
           {
@@ -292,7 +296,7 @@
             "speakerKey": "speakers.tetsuhiro_narayama",
             "archives": {
               "slide": "https://docs.google.com/presentation/d/1KwLPyFLE0J3W9BwFmROHtgG0qQbGdYCnbEXjuJTYpJ4/edit?usp=sharing",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=RpUDNRdP7Y0"
             }
           },
           {
@@ -302,7 +306,7 @@
             "speaker": "きらぷか / kira-puka",
             "archives": {
               "slide": "https://www.docswell.com/s/kira_puka/ZRXM6E-2023-10-25-064822",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=xaXvwYF9Wl0"
             }
           },
           {
@@ -312,7 +316,7 @@
             "speaker": "0yu / オユ",
             "archives": {
               "slide": "https://speakerdeck.com/yud0uhu/tauriniripureisusitahua",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=II_M6JQgh9Q"
             }
           }
         ]
@@ -327,7 +331,7 @@
             "speaker": "やまのく",
             "archives": {
               "slide": "https://yamanoku.net/vuefes-japan-2023/ja/",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=FmggsMDMqh0"
             }
           }
         ]
@@ -362,7 +366,7 @@
             "speaker": "Daniel Roe",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=M48iEFch-6s"
             }
           }
         ]
@@ -378,7 +382,7 @@
             "speakerKey": "speakers.baseballyama.name",
             "archives": {
               "slide": "https://speakerdeck.com/baseballyama/vue-fes-2023-18ying-ye-ri-de350konponentogui-mo-novueapurinidezainsisutemuwodao-ru-surufang-fa",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=PuMzWv7gFYE"
             }
           }
         ]
@@ -393,7 +397,7 @@
             "speaker": "まぁし（知念）",
             "archives": {
               "slide": "https://speakerdeck.com/chinen/vue-fes-japan-2023",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=b-nGPOF_YwY"
             }
           }
         ]
@@ -428,7 +432,7 @@
             "speaker": "Anthony Fu",
             "archives": {
               "slide": "https://antfu.me/posts/roads-to-oss-set-theory-vuefesjapan-2023",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=8z2ZZFEsnQk"
             }
           }
         ]
@@ -443,7 +447,7 @@
             "speaker": "wattanx / ワッタン",
             "archives": {
               "slide": "https://speakerdeck.com/wattanx/demystifying-nuxt-bridge",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=LzxmM358HHQ"
             }
           }
         ]
@@ -458,7 +462,7 @@
             "speaker": "mizdra / ミズドラ",
             "archives": {
               "slide": "https://speakerdeck.com/mizdra/vue-language-server-karasheng-mareta-volar-dot-js-to-soregami-meruke-neng-xing",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=hHNne1xIDeM"
             }
           }
         ]
@@ -490,7 +494,11 @@
             "isTranslation": true,
             "id": "patak-dev",
             "title": "Vite: Stories of collaboration",
-            "speaker": "Matias Capeletto"
+            "speaker": "Matias Capeletto",
+            "archives": {
+              "slide": "",
+              "youtube": "https://www.youtube.com/watch?v=nEmxYeQfHAU"
+            }
           }
         ]
       },
@@ -503,7 +511,7 @@
             "speaker": "Nozomu Iluta",
             "archives": {
               "slide": "https://speakerdeck.com/nozomuikuta/deep-dive-to-unjs-and-nuxt-3",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=mFFdy4t1ywU"
             }
           }
         ]
@@ -522,7 +530,7 @@
             "speaker": "53able / ゴー",
             "archives": {
               "slide": "https://slides-one.vercel.app/1?clicks=1",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=zVQYyIodG1M"
             }
           },
           {
@@ -532,7 +540,7 @@
             "speaker": "fuqda / フクダ",
             "archives": {
               "slide": "https://speakerdeck.com/fuqda/subpatandenozhuang-tai-guan-li",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=Hyymf4wgDzU"
             }
           },
           {
@@ -541,7 +549,7 @@
             "speaker": "Hieu / グエンゴックヒエウ",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=gFxc6EDRW6k"
             }
           },
           {
@@ -552,7 +560,7 @@
             "speakerKey": "speakers.hitoki_wakugawa.name",
             "archives": {
               "slide": "https://speakerdeck.com/wakkn/hurusukuratutiecnoji-pan-dearunuxt-2wo3niyi-xing-si-kai-fa-noxiao-lu-xing-topahuomansuwogao-meru",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=nQe7GZZ0EDA"
             }
           }
         ]
@@ -598,7 +606,7 @@
             "speaker": "Harlan Wilton",
             "archives": {
               "slide": "",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=gwYFwUcxia8"
             }
           }
         ]
@@ -613,7 +621,7 @@
             "speaker": "翠 / sapphi-red",
             "archives": {
               "slide": "https://vue-fes-japan-2023-multithread-slide.sapphi.red/1",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=ojraqqNtVWk"
             }
           }
         ]
@@ -628,7 +636,7 @@
             "speaker": "sorami / ソラミ",
             "archives": {
               "slide": "https://speakerdeck.com/sorami/vue-fes-japan-2023",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=J2caM7RdiXs"
             }
           }
         ]
@@ -690,7 +698,7 @@
             "speaker": "太田 洋介 / ota-meshi",
             "archives": {
               "slide": "https://ota-meshi.github.io/vue-fes-japan-2023-slide/1",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=ubclxC2CvyA"
             }
           }
         ]
@@ -705,7 +713,7 @@
             "speaker": "甲斐 啓真 / Keima",
             "archives": {
               "slide": "https://docs.google.com/presentation/d/1sVPisJofs18G8WUitn4l53s-mXFLRTs2Q4F0hqFqS5A/edit?usp=sharing",
-              "youtube": ""
+              "youtube": "https://www.youtube.com/watch?v=HNTjseUxpMA"
             }
           }
         ]

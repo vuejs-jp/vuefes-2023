@@ -12,7 +12,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=QkhLzoEwvwM',
       },
     },
     profile: {
@@ -35,7 +35,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=7DVZsQDlLRQ',
       },
     },
     profile: {
@@ -56,7 +56,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=nEmxYeQfHAU',
       },
     },
     profile: {
@@ -77,7 +77,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://antfu.me/posts/roads-to-oss-set-theory-vuefesjapan-2023',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=8z2ZZFEsnQk',
       },
     },
     profile: {
@@ -98,7 +98,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=M48iEFch-6s',
       },
     },
     profile: {
@@ -123,7 +123,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://vue-fes-japan-2023-multithread-slide.sapphi.red/1',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=ojraqqNtVWk',
       },
     },
     profile: {
@@ -147,7 +147,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://ota-meshi.github.io/vue-fes-japan-2023-slide/1',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=ubclxC2CvyA',
       },
     },
     profile: {
@@ -170,7 +170,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/wattanx/demystifying-nuxt-bridge',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=LzxmM358HHQ',
       },
     },
     profile: {
@@ -193,7 +193,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/sorami/vue-fes-japan-2023',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=J2caM7RdiXs',
       },
     },
     profile: {
@@ -217,7 +217,7 @@ export const speakers: Speaker[] = [
       archives: {
         slide:
           'https://speakerdeck.com/mizdra/vue-language-server-karasheng-mareta-volar-dot-js-to-soregami-meruke-neng-xing',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=hHNne1xIDeM',
       },
     },
     profile: {
@@ -239,7 +239,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/nozomuikuta/deep-dive-to-unjs-and-nuxt-3',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=mFFdy4t1ywU',
       },
     },
     profile: {
@@ -262,7 +262,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://yamanoku.net/vuefes-japan-2023/ja/',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=FmggsMDMqh0',
       },
     },
     profile: {
@@ -285,7 +285,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=gwYFwUcxia8',
       },
     },
     profile: {
@@ -307,7 +307,7 @@ export const speakers: Speaker[] = [
       type: 'main',
       archives: {
         slide: 'https://speakerdeck.com/chinen/vue-fes-japan-2023',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=b-nGPOF_YwY',
       },
     },
     profile: {
@@ -330,7 +330,7 @@ export const speakers: Speaker[] = [
       archives: {
         slide:
           'https://docs.google.com/presentation/d/1sVPisJofs18G8WUitn4l53s-mXFLRTs2Q4F0hqFqS5A/edit#slide=id.p',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=HNTjseUxpMA',
       },
     },
     profile: {
@@ -353,7 +353,7 @@ export const speakers: Speaker[] = [
       archives: {
         slide:
           'https://speakerdeck.com/baseballyama/vue-fes-2023-18ying-ye-ri-de350konponentogui-mo-novueapurinidezainsisutemuwodao-ru-surufang-fa',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=PuMzWv7gFYE',
       },
     },
     profile: {
@@ -379,7 +379,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: 'https://www.docswell.com/s/kira_puka/ZRXM6E-2023-10-25-064822',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=xaXvwYF9Wl0',
       },
     },
     profile: {
@@ -403,7 +403,7 @@ export const speakers: Speaker[] = [
       archives: {
         slide:
           'https://docs.google.com/presentation/d/1KwLPyFLE0J3W9BwFmROHtgG0qQbGdYCnbEXjuJTYpJ4/edit#slide=id.g24fad336807_0_0',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=RpUDNRdP7Y0',
       },
     },
     profile: {
@@ -427,7 +427,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: 'https://speakerdeck.com/t0yohei/vue-woshi-tute-grid-system-woshi-zhuang-sitahua',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=fKdP6y9DtZQ',
       },
     },
     profile: {
@@ -450,7 +450,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: 'https://speakerdeck.com/yud0uhu/tauriniripureisusitahua',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=II_M6JQgh9Q',
       },
     },
     profile: {
@@ -473,7 +473,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: 'https://slides-one.vercel.app/1?clicks=1',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=zVQYyIodG1M',
       },
     },
     profile: {
@@ -497,7 +497,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: 'https://speakerdeck.com/fuqda/subpatandenozhuang-tai-guan-li',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=Hyymf4wgDzU',
       },
     },
     profile: {
@@ -521,7 +521,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: 'https://tome.app/mewton-8cb/vue-fes-2023-clnjmh8ez0044l77dwardvtga',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=_0dGI35KEwc',
       },
     },
     profile: {
@@ -544,7 +544,7 @@ export const speakers: Speaker[] = [
       type: 'lt',
       archives: {
         slide: '',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=gFxc6EDRW6k',
       },
     },
     profile: {
@@ -568,7 +568,7 @@ export const speakers: Speaker[] = [
       archives: {
         slide:
           'https://speakerdeck.com/wakkn/hurusukuratutiecnoji-pan-dearunuxt-2wo3niyi-xing-si-kai-fa-noxiao-lu-xing-topahuomansuwogao-meru',
-        youtube: '',
+        youtube: 'https://www.youtube.com/watch?v=nQe7GZZ0EDA',
       },
     },
     profile: {

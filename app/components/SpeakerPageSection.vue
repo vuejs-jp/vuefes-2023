@@ -22,7 +22,7 @@ import { closedSession } from '~/utils/status.constants'
     </template>
 
     <div class="speaker-session">
-      <h3>Session</h3>
+      <h3>Sessions</h3>
 
       <div class="speakers">
         <SpeakerCard v-for="speaker in sessionSpeakers" :key="speaker.id" :speaker="speaker" />

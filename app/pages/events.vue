@@ -35,7 +35,7 @@ useHead({
 
       <div class="event-menu">
         <EventCard
-          src="/event/after-event/medpeer-hacomono-mntsq.png"
+          src="event/after-event/medpeer-hacomono-mntsq.png"
           :alt="$t('top.medpeer_hacomono_mntsq_event_title')"
           register-url="https://medpeer.connpass.com/event/297734/"
           :register-text="$t('words.attendee_register')"
@@ -48,7 +48,7 @@ useHead({
           </template>
         </EventCard>
         <EventCard
-          src="/event/after-event/line-yahoo-communications.png"
+          src="event/after-event/line-yahoo-communications.png"
           :alt="$t('top.line_yahoo_communications_event_title')"
           register-url="https://fukuokajs.connpass.com/event/302013/"
           :register-text="$t('words.attendee_register')"

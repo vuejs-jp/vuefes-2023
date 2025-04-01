@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         ...generalOg(),
         ...twitterOg(),
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/2023/favicon.ico' }],
       htmlAttrs: {
         lang: 'ja',
       },

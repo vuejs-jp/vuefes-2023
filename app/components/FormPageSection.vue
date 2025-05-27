@@ -7,6 +7,8 @@ import MarkDownText from '~/components/MarkDownText.vue'
 
 import { useForm } from '~/composables/useForm'
 
+import { isNewtShutdown } from '~/utils/constants'
+
 const {
   name,
   email,
@@ -85,7 +87,7 @@ const updateDetail = (value: string) => {
             <SubmitButton :disabled="!isSubmitting"> {{ $t('words.submit') }} </SubmitButton>
           </div>
           <!-- メッセージ送信に成功しました -->
-          <div v-if="isSent">{{ $t('top.contact_submit_done') }}</div>
+          <div v-if="!isNewtShutdown && isSent">{{ $t('top.contact_submit_done') }}</div>
         </form>
       </div>
     </div>

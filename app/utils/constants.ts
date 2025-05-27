@@ -54,6 +54,9 @@ export const calendarUrl =
 
 export const storeUrl = 'https://vuejs-jp.stores.jp'
 
+// Whether the Newt is over
+export const isNewtShutdown = true
+
 export const vuefesTwitterID = '@vuefes'
 
 export const networkLinks = [

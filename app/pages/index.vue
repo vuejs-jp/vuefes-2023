@@ -32,7 +32,6 @@ useHead({
     </template>
     <SponsorPageSection />
     <MessagePageSection />
-    <FormPageSection />
     <TeamPageSection />
     <FooterPageSection />
   </main>

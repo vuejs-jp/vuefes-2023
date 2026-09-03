@@ -10,7 +10,6 @@ describe('others detail', () => {
       ['Ticket', 'http://localhost:3000/#ticket'],
       ['Access', 'http://localhost:3000/#access'],
       ['Sponsors', 'http://localhost:3000/#sponsors'],
-      ['Contact', 'http://localhost:3000/#form'],
     ].forEach(([label, expected]: any) => {
       it(`privacy ${label}`, () => {
         loadOtherPage('privacy')
@@ -26,7 +25,6 @@ describe('others detail', () => {
       ['Ticket', 'http://localhost:3000/#ticket'],
       ['Access', 'http://localhost:3000/#access'],
       ['Sponsors', 'http://localhost:3000/#sponsors'],
-      ['Contact', 'http://localhost:3000/#form'],
     ].forEach(([label, expected]: any) => {
       it(`code of conduct ${label}`, () => {
         loadOtherPage('code-of-conduct')

@@ -63,11 +63,9 @@
     "start-server-and-test": "2.0.1",
     "ts-pattern": "5.0.1",
     "typescript": "5.2.2",
-    "vee-validate": "4.9.6",
     "vite-svg-loader": "4.0.0",
     "vitest": "0.34.5",
     "vue-gtag": "2.0.2-beta.0",
-    "vue-recaptcha-v3": "2.0.1",
     "vue-toastification": "2.0.0-rc.5",
     "vue-tsc": "1.7.14"
   },

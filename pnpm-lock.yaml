@@ -102,9 +102,6 @@ devDependencies:
   typescript:
     specifier: 5.2.2
     version: 5.2.2
-  vee-validate:
-    specifier: 4.9.6
-    version: 4.9.6
   vite-svg-loader:
     specifier: 4.0.0
     version: 4.0.0
@@ -114,9 +111,6 @@ devDependencies:
   vue-gtag:
     specifier: 2.0.2-beta.0
     version: 2.0.2-beta.0
-  vue-recaptcha-v3:
-    specifier: 2.0.1
-    version: 2.0.1
   vue-toastification:
     specifier: 2.0.0-rc.5
     version: 2.0.0-rc.5
@@ -10617,10 +10611,6 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /recaptcha-v3@1.10.0:
-    resolution: {integrity: sha512-aGTxYSk3FFNKnXeKDbLpgRDRyIHRZNBF5HyaXXAN1Aj4TSyyZvmoAn9CylvpqLV3pYpIQavwc+2rzhNFn5SsLQ==}
-    dev: true
-
   /recast@0.22.0:
     resolution: {integrity: sha512-5AAx+mujtXijsEavc5lWXBPQqrM4+Dl5qNH96N2aNeuJFUzpiiToKPsxQD/zAIJHspz7zz0maX0PCtCTFVlixQ==}
     engines: {node: '>= 4'}
@@ -11989,11 +11979,6 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /type-fest@3.13.1:
-    resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
-    engines: {node: '>=14.16'}
-    dev: true
-
   /type-fest@4.3.1:
     resolution: {integrity: sha512-pphNW/msgOUSkJbH58x8sqpq8uQj6b0ZKGxEsLKMUnGorRcDjrUaLS+39+/ub41JNTwrrMyJcUB8+YZs3mbwqw==}
     engines: {node: '>=16'}
@@ -12573,18 +12558,6 @@ packages:
       builtins: 5.0.1
     dev: true
 
-  /vee-validate@4.9.6:
-    resolution: {integrity: sha512-2WYuetx76nH1UXUNM/OBvh9W0kGrr37xo9PgroHcDEbfpxum4MMMb4TjIkYdmrosE2YU54SoUnJrchYegmV2Kg==}
-    peerDependencies:
-      vue: ^3.3.0
-    peerDependenciesMeta:
-      vue:
-        optional: true
-    dependencies:
-      '@vue/devtools-api': 6.5.0
-      type-fest: 3.13.1
-    dev: true
-
   /verror@1.10.0:
     resolution: {integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=}
     engines: {'0': node >=0.6.0}
@@ -13067,17 +13040,6 @@ packages:
       '@intlify/shared': 9.3.0-beta.22
       '@intlify/vue-devtools': 9.3.0-beta.22
       '@vue/devtools-api': 6.5.0
-    dev: true
-
-  /vue-recaptcha-v3@2.0.1:
-    resolution: {integrity: sha512-isEDtOfHU4wWRrZZuxciAELtQmPOeEEdicPNa0f1AOyLPy3sCcBEcpFt+FOcO3RQv5unJ3Yn5NlsWtXv9rXqjg==}
-    peerDependencies:
-      vue: ^3.0.11
-    peerDependenciesMeta:
-      vue:
-        optional: true
-    dependencies:
-      recaptcha-v3: 1.10.0
     dev: true
 
   /vue-router@4.2.5(vue@3.3.4):

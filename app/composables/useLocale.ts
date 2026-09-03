@@ -18,7 +18,6 @@ export function useLocale(path: Path) {
   const docPath = computed(() => {
     let m = match(path)
       .with('message', () => `/${locale.value}/top/message`)
-      .with('form', () => `/${locale.value}/top/contact`)
       .with('sponsor', () => `/${locale.value}/top/sponsors`)
       .with('teams', () => `/${locale.value}/top/teams`)
       .with('speaker', () => `/${locale.value}/top/speakers`)

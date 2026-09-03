@@ -238,23 +238,11 @@ export default {
         '各トラック会場の最前列に優先席をご用意いたします。\n※セッション開始後、空席になっている場合は一般参加者にも開放されます。',
       sponsors_infolink: '詳細情報は、{0} をご確認ください。',
       sponsors_personal_limit: '登録期限: {0} まで',
-      /**
-       * contact section
-       */
-      contact_subtitle: 'お問い合わせ',
-      contact_toptext: '',
-      contact_toptext_linklabel: 'Twitter',
-      contact_form_name_label: 'お名前／Name',
-      contact_form_name_placeholder: '山田太郎',
-      contact_form_mail_label: 'メールアドレス／Mail',
       /* register page */
       register_form_display_name_label: 'お名前／Name　全角12文字（半角24文字）以内',
       register_form_avatar_label: 'アバター／Avatar',
       register_form_secret_word_label: 'あいことば',
       register_form_receipt_id_label: '注文番号',
-      /* prettier-ignore */
-      contact_form_text_label: 'お問い合わせ内容／Content',
-      contact_submit_done: 'メッセージ送信に成功しました。',
       /**
        * teams section
        */
@@ -664,23 +652,11 @@ export default {
         'Priority seats will be available in the front row of each track venue. \n * After the session starts, if there are vacant seats, they will be open to general participants.',
       sponsors_infolink: 'For more information, please check {0}',
       sponsors_personal_limit: 'Sponsorship Deadline: Until: {0}',
-      /**
-       * contact section
-       */
-      contact_subtitle: 'Inquiry',
-      contact_toptext: '',
-      contact_toptext_linklabel: 'Twitter',
-      contact_form_name_label: 'Name',
-      contact_form_name_placeholder: 'Yamada Taro',
-      contact_form_mail_label: 'Mail',
       /* register page */
       register_form_name_label: 'Name  12 characters max.',
       register_form_avatar_label: 'Avatar',
       register_form_watchword_label: 'Watchword',
       register_form_order_number_label: 'Order Number',
-      /* prettier-ignore */
-      contact_form_text_label: 'Content',
-      contact_submit_done: 'Message sent successfully.',
       /**
        * teams section
        */

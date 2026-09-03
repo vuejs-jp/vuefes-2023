@@ -9,7 +9,6 @@ export const navLinks: NavLink[] = [
   { text: 'Speakers', link: '/#speakers' },
   { text: 'Sponsors', link: '/#sponsors' },
   { text: 'Message', link: '/#message' },
-  { text: 'Contact', link: '/#form' },
 ]
 
 export const navFullLinks = (showTimetable: boolean) =>
@@ -21,7 +20,6 @@ export const navFullLinks = (showTimetable: boolean) =>
     { text: 'Ticket', link: '/#ticket' },
     { text: 'Sponsors', link: '/#sponsors' },
     { text: 'Message', link: '/#message' },
-    { text: 'Contact', link: '/#form' },
   ].filter((l) => {
     return l !== undefined
   })

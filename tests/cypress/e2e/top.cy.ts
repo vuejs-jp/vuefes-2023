@@ -236,7 +236,6 @@ describe('top', () => {
           cy.contains('a', 'Message').should('have.attr', 'href', '/#message')
           cy.contains('a', 'Access').should('have.attr', 'href', '/#access')
           cy.contains('a', 'Sponsors').should('have.attr', 'href', '/#sponsors')
-          cy.contains('a', 'Contact').should('have.attr', 'href', '/#form')
           cy.contains('Vue Fes Japan')
           cy.contains('a', '2022').should('have.attr', 'href', 'https://vuefes.jp/2022')
           cy.contains('a', '2020').should('have.attr', 'href', 'https://vuefes.jp/2020')
